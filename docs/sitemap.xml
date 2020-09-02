@@ -3,27 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>https://julitiux.github.io/julitiux/</loc>
     <lastmod>2020-09-01T21:55:55-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/posts/</loc>
+    <loc>https://julitiux.github.io/julitiux/posts/</loc>
     <lastmod>2020-09-01T21:55:55-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/posts/swift/</loc>
+    <loc>https://julitiux.github.io/julitiux/posts/swift/</loc>
     <lastmod>2020-09-01T21:55:55-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://julitiux.github.io/julitiux/tags/</loc>
     <lastmod>2020-09-01T21:55:55-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/tags/untagged/</loc>
+    <loc>https://julitiux.github.io/julitiux/tags/untagged/</loc>
     <lastmod>2020-09-01T21:55:55-05:00</lastmod>
   </url>
   

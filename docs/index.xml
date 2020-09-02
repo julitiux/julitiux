@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Julio&#39;z Blog</title>
-    <link>http://example.org/</link>
+    <link>https://julitiux.github.io/julitiux/</link>
     <description>Recent content on Julio&#39;z Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
     <lastBuildDate>Tue, 01 Sep 2020 21:55:55 -0500</lastBuildDate>
     
-	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://julitiux.github.io/julitiux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Swift</title>
-      <link>http://example.org/posts/swift/</link>
+      <link>https://julitiux.github.io/julitiux/posts/swift/</link>
       <pubDate>Tue, 01 Sep 2020 21:55:55 -0500</pubDate>
       
-      <guid>http://example.org/posts/swift/</guid>
+      <guid>https://julitiux.github.io/julitiux/posts/swift/</guid>
       <description>Getting Started First, download and install Xcode, its available on the App Store. Make sure to download Xcode 8 or higher.
 Get started with a playground and Create a new Xcode Project. Playsground were released in Xcode6. They provide an interactive enviroment for rapidly developing and evaluating Swift code. A playground does not require that you compile and run a complete project. Instead, playgrouunds evaluate your Swift code on the fly, so its udeal for testing and experimenting with the Swift languaje in a lightweght enviroment.</description>
     </item>

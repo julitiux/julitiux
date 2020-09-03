@@ -38,12 +38,53 @@ How to know the version that you has, type something like this:
 <span class="n">Type</span> <span class="s2">&#34;help&#34;</span><span class="p">,</span> <span class="s2">&#34;copyright&#34;</span><span class="p">,</span> <span class="s2">&#34;credits&#34;</span> <span class="ow">or</span> <span class="s2">&#34;license&#34;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
 <span class="o">&gt;&gt;&gt;</span>
 </code></pre></div><p>To install Python 3, go on your terminal and run the following command:</p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">~</span> <span class="err">»</span> <span class="n">brew</span> <span class="n">install</span> <span class="n">python3</span>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">~ » brew install python3
+</code></pre></div><h2 id="how-to-install-pyenv">How To Install PyEnv</h2>
+<h3 id="build-build-dependencies">Build Build Dependencies</h3>
+<p>pyenv builds Python from source, which means you will need build dependencies to actually use pyenv.</p>
+<p>This command relies on Homebrew and installs the few dependencies for macOS users.</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">brew install openssl readline sqlite3 xz zlib
+</code></pre></div><h3 id="using-the-pyenv-installer">Using the pyenv-installer</h3>
+<p>After you have installed the build dependencies, you are ready to install pyenv itself.</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">curl https://pyenv.run <span class="p">|</span> bash
+</code></pre></div><p>This command will install pyenv along with a few plugins that are useful:</p>
+<ul>
+<li><em>pyenv</em>: The actual pyenv application</li>
+<li><em>pyenv-virtualenv</em>: Plugin for pyenv and virtual environments</li>
+<li><em>pyenv-update</em>: Plugin for updating pyenv</li>
+<li><em>pyenv-doctor</em>: Plugin to verify that pyenv and build dependencies are installed</li>
+<li><em>pyenv-which-ext</em>: Plugin to automatically lookup system commands</li>
+</ul>
+<p>At the end of the run, you should see something like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">WARNING: seems you still have not added <span class="s1">&#39;pyenv&#39;</span> to the load path.
+
+<span class="c1"># Load pyenv automatically by adding</span>
+<span class="c1"># the following to ~/.bashrc:</span>
+
+<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/.pyenv/bin:</span><span class="nv">$PATH</span><span class="s2">&#34;</span>
+<span class="nb">eval</span> <span class="s2">&#34;</span><span class="k">$(</span>pyenv init -<span class="k">)</span><span class="s2">&#34;</span>
+<span class="nb">eval</span> <span class="s2">&#34;</span><span class="k">$(</span>pyenv virtualenv-init -<span class="k">)</span><span class="s2">&#34;</span>
+</code></pre></div><p>Once you have done this, you need to reload your shell:</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">soruce .zshrc
+</code></pre></div><h2 id="using-pyenv">Using pyenv.</h2>
+<h3 id="list-all-pythons-availables">List all pythons availables.</h3>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">pyenv install --list
+pyenv install --list <span class="p">|</span> grep <span class="s2">&#34;jython&#34;</span>
+pyenv install --list <span class="p">|</span> grep <span class="s2">&#34; 3\.[678]&#34;</span>
+</code></pre></div><h3 id="install-a-version-of-python">Install a version of python.</h3>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">pyenv install -v 3.7.2
+pyenv install 3.8-dev
+</code></pre></div><h3 id="installation-location">Installation Location.</h3>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">ls ~/.pyenv/versions/
+</code></pre></div><h3 id="uninstall-a-version-of-python">Uninstall a version of python.</h3>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">rm -rf ~/.pyenv/versions/2.7.15
+</code></pre></div><p>or</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">pyenv uninstall 2.7.15
 </code></pre></div><h2 id="running-python-programs-from-a-terminal">Running Python Programs from a terminal</h2>
 <p>To start your first program, make a file called hello_world.py and enter the following line:</p>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">print</span><span class="p">(</span><span class="s2">&#34;Hello Python world!&#34;</span><span class="p">)</span>
 </code></pre></div><p>Open a terminal and then, run the file using the command python, like this:</p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">~</span> <span class="err">»</span> <span class="n">python</span> <span class="n">hello_world</span><span class="o">.</span><span class="n">py</span>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">python hello_world.py
 </code></pre></div><h1 id="variables-and-simple-data-types">VARIABLES AND SIMPLE DATA TYPES</h1>
 <h2 id="naming-and-using-variables">Naming and Using Variables</h2>
 <p>In the same file, we are going to do something like this:</p>

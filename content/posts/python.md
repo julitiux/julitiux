@@ -21,7 +21,6 @@ How to know the version that you has, type something like this:
 Python 2.7.16
 ```
 
-
 Python comes with an interpreter that runs a terminal. For launch the interpreter, open a terminal and write something like this:
 ```python
 ~ » python
@@ -40,9 +39,97 @@ Type "help", "copyright", "credits" or "license" for more information.
 To install Python 3, go on your terminal and run the following command:
 
 
-```python
+```shell
 ~ » brew install python3
 ```
+
+## How To Install PyEnv
+
+### Build Build Dependencies
+
+pyenv builds Python from source, which means you will need build dependencies to actually use pyenv.
+
+This command relies on Homebrew and installs the few dependencies for macOS users.
+
+```shell
+brew install openssl readline sqlite3 xz zlib
+```
+
+### Using the pyenv-installer
+
+After you have installed the build dependencies, you are ready to install pyenv itself.
+
+```shell
+curl https://pyenv.run | bash
+```
+
+This command will install pyenv along with a few plugins that are useful:
+
+* *pyenv*: The actual pyenv application
+* *pyenv-virtualenv*: Plugin for pyenv and virtual environments
+* *pyenv-update*: Plugin for updating pyenv
+* *pyenv-doctor*: Plugin to verify that pyenv and build dependencies are installed
+* *pyenv-which-ext*: Plugin to automatically lookup system commands
+
+At the end of the run, you should see something like this:
+
+```shell
+WARNING: seems you still have not added 'pyenv' to the load path.
+
+# Load pyenv automatically by adding
+# the following to ~/.bashrc:
+
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+```
+
+Once you have done this, you need to reload your shell:
+
+```shell
+soruce .zshrc
+```
+
+## Using pyenv.
+
+### List all pythons availables.
+
+```shell
+pyenv install --list
+pyenv install --list | grep "jython"
+pyenv install --list | grep " 3\.[678]"
+```
+
+### Install a version of python.
+
+```shell
+pyenv install -v 3.7.2
+pyenv install 3.8-dev
+```
+
+### Installation Location.
+
+```shell
+ls ~/.pyenv/versions/
+```
+
+### Uninstall a version of python.
+```shell
+rm -rf ~/.pyenv/versions/2.7.15
+```
+
+or
+
+```shell
+pyenv uninstall 2.7.15
+```
+
+
+
+
+
+
+
 
 
 ## Running Python Programs from a terminal
@@ -57,11 +144,9 @@ print("Hello Python world!")
 Open a terminal and then, run the file using the command python, like this:
 
 
-```python
-~ » python hello_world.py
+```shell
+python hello_world.py
 ```
-
-
 
 # VARIABLES AND SIMPLE DATA TYPES
 

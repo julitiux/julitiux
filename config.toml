@@ -1,7 +1,7 @@
 baseURL = "https://julitiux.github.io/"
 languageCode = "en-us"
 title = "Julio'z Blog"
-theme = "hermit"
+theme = "ananke"
 
 # enableGitInfo = true
 pygmentsCodefences  = true

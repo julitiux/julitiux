@@ -393,3 +393,202 @@ print(len(cars))
 ```
 
 # Working with Lists
+
+## Looping an entire List
+
+In a file magicians.py
+
+```python
+magicians = ['alice', 'davis', 'carolina']
+for magician in magicians:
+	print(magician)
+```
+
+### Do something after a for loop
+
+```python
+magicians = ['alice', 'davis', 'carolina']
+for magician in magicians:
+	print(magician)
+print("Thank you, everyone. That was a great magic show!")      
+```
+
+### Forgetting to ident additional lines
+
+```python
+magicians = ['alice', 'davis', 'carolina']
+for magician in magicians:
+	print(magician)
+print("The last magician is " + magician)
+```
+
+### Identing unnecessarily
+
+```python
+message = "Hello Python world"
+	print(message)
+```
+
+### Identing unnecessarily after the loop
+
+```python
+magicians = ['alice', 'davis', 'carolina']
+for magician in magicians:
+	print(magician)
+
+	print("Thank you, everyone. That was a great magic show!")      
+```
+
+### Forgetting the colon
+
+```python
+magicians = ['alice', 'davis', 'carolina']
+for magician in magicians
+	print(magician)
+```
+
+
+# Making numerical lists
+
+## Using the range() function
+
+In a file numbers.py
+
+In this example, range() prints only the numbers 1 through 4.
+
+```python
+for value in range(1,5):
+	print(value)
+```
+
+## Using range() to make a list of numbers
+
+```python
+numbers = list(range(1,5))
+print(numbers)
+```
+
+using a increment
+
+```python
+pairs_numbers = list(range(2,11,2))
+print(pairs_numbers)
+```
+
+You can create almost any set of numbers you want to using the range() function
+
+```python
+squares = []
+for value in range(1,11)
+	square = value**2
+	squares.append(square)
+
+print(squares)
+```
+
+To write this code more concisely, omit the temporary variable square and append each new value directly to the list:
+
+```python
+squares = []
+for value in range(1,11)
+	squares.append(value**2)
+
+print(squares)
+```
+
+or better
+
+```python
+squares = [value**2 for value in range(1,11)] 
+print(squares)
+```
+
+### Simple statistics with a list of number 
+
+```python
+digits = list(range(1,11))
+
+print(min(digits))
+print(max(digits))
+print(sum(digits))
+```
+
+# Working with part of a list
+
+In a file players.py
+
+```python
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+print(players[0:3])
+print(players[1:4])
+print(players[:4])
+print(players[2:])
+print(players[-3:])
+```
+
+### Looping through a slice
+
+```python
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+
+print("Here are the first three players on my team:")
+
+for player in players[:3]:
+	print(player)
+```
+
+### Copyiing a list
+
+```python
+my_foods = ['pizza', 'falafel', 'carrot cake']
+
+friend_foods = my_foods[:]
+
+print("My favorite foods are:")
+print(my_foods)
+
+print("My friend's favorite foods are:") 
+print(friend_foods)
+```
+
+This does not work 
+
+```python
+friend_foods = my_foods
+```
+
+# Tuples
+
+List of items that cannot change. Python refers to values that cannot change as immutable, and an immutable list is called a tuple.
+
+### Defining a Tuple
+
+```python
+dimensions = (200, 50)
+print(dimensions[0])
+print(dimensions[1])
+```
+
+### Looping through all values in a tupla
+
+```python
+dimensions = (200, 50)
+for dimension in dimensions:
+	print(dimension)
+```
+
+You can not modify a tuple, you can assign a new value to a variable that holds a tuple
+
+```python
+dimensions = (200, 50)
+for dimension in dimensions:
+	print(dimension)
+
+dimensions = (400, 100)
+print("Modified dimensions")
+for dimension in dimensions:
+	print(dimension)
+```
+
+
+

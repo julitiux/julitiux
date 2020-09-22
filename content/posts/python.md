@@ -410,7 +410,7 @@ for magician in magicians:
 magicians = ['alice', 'davis', 'carolina']
 for magician in magicians:
 	print(magician)
-print("Thank you, everyone. That was a great magic show!")      
+print("Thank you, everyone. That was a great magic show!")
 ```
 
 ### Forgetting to ident additional lines
@@ -436,7 +436,7 @@ magicians = ['alice', 'davis', 'carolina']
 for magician in magicians:
 	print(magician)
 
-	print("Thank you, everyone. That was a great magic show!")      
+	print("Thank you, everyone. That was a great magic show!")
 ```
 
 ### Forgetting the colon
@@ -499,11 +499,11 @@ print(squares)
 or better
 
 ```python
-squares = [value**2 for value in range(1,11)] 
+squares = [value**2 for value in range(1,11)]
 print(squares)
 ```
 
-### Simple statistics with a list of number 
+### Simple statistics with a list of number
 
 ```python
 digits = list(range(1,11))
@@ -547,11 +547,11 @@ friend_foods = my_foods[:]
 print("My favorite foods are:")
 print(my_foods)
 
-print("My friend's favorite foods are:") 
+print("My friend's favorite foods are:")
 print(friend_foods)
 ```
 
-This does not work 
+This does not work
 
 ```python
 friend_foods = my_foods
@@ -590,5 +590,73 @@ for dimension in dimensions:
 	print(dimension)
 ```
 
+# if statements
 
+### A simple example
 
+In a file cars.py
+
+```python
+cars = ['audi', 'bmw', 'subaru', 'toyota']
+
+for car in cars:
+  if car == 'bmw':
+    print(car.upper())
+  else:
+    print(car.title())
+```
+
+## Checking for Equality
+
+The _equality_ operator checks whether the value of car is 'Audi' using a double equal sign (==)
+
+```python
+car = 'Audi'
+car == 'Audi'
+True
+```
+
+### Ignoring case when checking for equality
+
+Testing for equality is case sensitive in Python. For example, two values with different capitalization are not considered equal.
+
+```python
+car = 'Audi'
+car == 'audi'
+False
+```
+
+## Checking for Inequality
+
+When you want to determine whether two values are not equal, ypu can combine an exclamation point and an equal sigh (!=).
+
+In a file topping.py
+
+```python
+requested_topping = 'mushrooms'
+
+if requested_topping != 'anchovies'
+  print('Hold the anchovies')
+```
+
+## Numerical Comparisons
+
+```python
+age = 19
+age < 21
+True
+age <= 21
+True
+age > 21
+False
+age >= 21
+False
+```
+
+## Checking mmultiple conditions
+
+Using _and_ or _or_ conditions
+
+```python
+
+```

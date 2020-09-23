@@ -384,8 +384,44 @@ pyenv install 3.8-dev
 <span class="bp">False</span>
 </code></pre></div><h2 id="checking-mmultiple-conditions">Checking mmultiple conditions</h2>
 <p>Using <em>and</em> or <em>or</em> conditions</p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python">
-</code></pre></div>]]></content>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">age_0</span> <span class="o">=</span> <span class="mi">22</span>
+<span class="n">age_1</span> <span class="o">=</span> <span class="mi">18</span>
+<span class="n">age_0</span> <span class="o">&gt;=</span> <span class="mi">21</span> <span class="ow">and</span> <span class="n">age_1</span> <span class="o">&gt;=</span> <span class="mi">21</span>
+<span class="bp">False</span>
+
+<span class="n">age_0</span> <span class="o">&gt;=</span> <span class="mi">21</span> <span class="ow">or</span> <span class="n">age_1</span> <span class="o">&gt;=</span> <span class="mi">21</span>
+<span class="bp">True</span>
+</code></pre></div><h2 id="checking-whether-a-value-is-in-a-list">Checking whether a value is in a list</h2>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">requested_topping</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;mushrooms&#39;</span><span class="p">,</span> <span class="s1">&#39;onions&#39;</span><span class="p">,</span> <span class="s1">&#39;pineaple&#39;</span><span class="p">]</span>
+<span class="s1">&#39;mushrooms&#39;</span> <span class="ow">in</span> <span class="n">requested_topping</span>
+<span class="bp">True</span>
+<span class="s1">&#39;pepperoni&#39;</span> <span class="ow">in</span> <span class="n">requested_topping</span>
+<span class="bp">False</span>
+</code></pre></div><h2 id="if-statement">If Statement</h2>
+<p>The simple kind of if statement has one test and one action:</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">if</span> <span class="n">_conditional_test_</span><span class="p">:</span>
+  <span class="n">_do</span> <span class="n">something_</span>
+</code></pre></div><p>by example, in a file voting.py</p>
+<pre><code class="language-pyhton" data-lang="pyhton">age = 19
+if age &gt;= 18:
+  print(&quot;You are old enough to vote!&quot;)
+</code></pre><h2 id="if-else-statements">if-else statements</h2>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">age</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s2">&#34;You are old enough to vote!&#34;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s2">&#34;You are too young to vote&#34;</span><span class="p">)</span>
+</code></pre></div><h2 id="the-if-elif-else-chain">The if-elif-else chain</h2>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">age</span> <span class="o">=</span> <span class="mi">12</span>
+
+<span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Your admission cost is $0.&#34;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Yout admission cost is $5.&#34;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Yout admission cost is $10.&#34;</span><span class="p">)</span>
+</code></pre></div><p>In summary, if you wnat only execute one block of code to run, use an if-elif-else chain. If more than one block of code needs to run, use a series of independent if statement,</p>
+]]></content>
 		</item>
 		
 		<item>

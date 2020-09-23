@@ -658,5 +658,62 @@ False
 Using _and_ or _or_ conditions
 
 ```python
+age_0 = 22
+age_1 = 18
+age_0 >= 21 and age_1 >= 21
+False
 
+age_0 >= 21 or age_1 >= 21
+True
 ```
+
+## Checking whether a value is in a list
+
+```python
+requested_topping = ['mushrooms', 'onions', 'pineaple']
+'mushrooms' in requested_topping
+True
+'pepperoni' in requested_topping
+False
+```
+
+## If Statement
+
+The simple kind of if statement has one test and one action:
+
+```python
+if _conditional_test_:
+  _do something_
+```
+by example, in a file voting.py
+
+```pyhton
+age = 19
+if age >= 18:
+  print("You are old enough to vote!")
+```
+
+## if-else statements
+
+```python
+age = 20
+if age >= 18:
+  print("You are old enough to vote!")
+else:
+  print("You are too young to vote")
+```
+
+## The if-elif-else chain
+
+```python
+age = 12
+
+if age < 4:
+  print("Your admission cost is $0.")
+elif age < 18:
+  print("Yout admission cost is $5.")
+else:
+  print("Yout admission cost is $10.")
+```
+
+In summary, if you wnat only execute one block of code to run, use an if-elif-else chain. If more than one block of code needs to run, use a series of independent if statement,

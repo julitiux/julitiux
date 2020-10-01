@@ -420,8 +420,24 @@ if age &gt;= 18:
   <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Yout admission cost is $5.&#34;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
   <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Yout admission cost is $10.&#34;</span><span class="p">)</span>
-</code></pre></div><p>In summary, if you wnat only execute one block of code to run, use an if-elif-else chain. If more than one block of code needs to run, use a series of independent if statement,</p>
-]]></content>
+</code></pre></div><p>In summary, if you want only execute one block of code to run, use an if-elif-else chain. If more than one block of code needs to run, use a series of independent if statement,</p>
+<h1 id="dictionaries">Dictionaries</h1>
+<p>Python&rsquo;s dictionaries , which allow you to connect pieces of related information.</p>
+<h3 id="a-simple-dictionary">A simple dictionary</h3>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">alien</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;points&#39;</span><span class="p">:</span><span class="mi">10</span><span class="p">}</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">alien</span><span class="p">[</span><span class="s1">&#39;color&#39;</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">alien</span><span class="p">[</span><span class="s1">&#39;points&#39;</span><span class="p">])</span>
+</code></pre></div><h3 id="add-new-key-value-pairs">Add new key-value pairs</h3>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">alien</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;points&#39;</span><span class="p">:</span><span class="mi">10</span><span class="p">}</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">alien</span><span class="p">)</span>
+
+<span class="n">alien</span><span class="p">[</span><span class="s1">&#39;x_position&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">alien</span><span class="p">[</span><span class="s1">&#39;y_position&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">50</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">alien</span><span class="p">)</span>
+</code></pre></div>]]></content>
 		</item>
 		
 		<item>

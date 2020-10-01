@@ -716,4 +716,31 @@ else:
   print("Yout admission cost is $10.")
 ```
 
-In summary, if you wnat only execute one block of code to run, use an if-elif-else chain. If more than one block of code needs to run, use a series of independent if statement,
+In summary, if you want only execute one block of code to run, use an if-elif-else chain. If more than one block of code needs to run, use a series of independent if statement,
+
+
+# Dictionaries
+
+Python's dictionaries , which allow you to connect pieces of related information.
+
+### A simple dictionary
+
+```python
+alien = {'color':'green', 'points':10}
+
+print(alien['color'])
+print(alien['points'])
+```
+
+### Add new key-value pairs
+
+```python
+alien = {'color':'green', 'points':10}
+
+print(alien)
+
+alien['x_position'] = 20
+alien['y_position'] = 50
+
+print(alien)
+```

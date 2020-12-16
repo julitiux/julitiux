@@ -736,11 +736,24 @@ print(alien['points'])
 
 ```python
 alien = {'color':'green', 'points':10}
-
 print(alien)
-
 alien['x_position'] = 20
 alien['y_position'] = 50
-
 print(alien)
+```
+
+### Removing a key-value pairs
+
+```python
+alien = {'color':'green', 'points':10}
+print(alien)
+del alien ['color']
+print(alien)
+```
+
+### A Dictionary of similar Objects
+```python
+any_dictionary.keys()   #Get a keys of a dictionary
+any_dictionary.values()  #Get a values of a dictionary
+any_dictionary.items()   #Get a items of a dictionary
 ```

@@ -430,13 +430,19 @@ if age &gt;= 18:
 <span class="k">print</span><span class="p">(</span><span class="n">alien</span><span class="p">[</span><span class="s1">&#39;points&#39;</span><span class="p">])</span>
 </code></pre></div><h3 id="add-new-key-value-pairs">Add new key-value pairs</h3>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">alien</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;points&#39;</span><span class="p">:</span><span class="mi">10</span><span class="p">}</span>
-
 <span class="k">print</span><span class="p">(</span><span class="n">alien</span><span class="p">)</span>
-
 <span class="n">alien</span><span class="p">[</span><span class="s1">&#39;x_position&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="n">alien</span><span class="p">[</span><span class="s1">&#39;y_position&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">50</span>
-
 <span class="k">print</span><span class="p">(</span><span class="n">alien</span><span class="p">)</span>
+</code></pre></div><h3 id="removing-a-key-value-pairs">Removing a key-value pairs</h3>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">alien</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;points&#39;</span><span class="p">:</span><span class="mi">10</span><span class="p">}</span>
+<span class="k">print</span><span class="p">(</span><span class="n">alien</span><span class="p">)</span>
+<span class="k">del</span> <span class="n">alien</span> <span class="p">[</span><span class="s1">&#39;color&#39;</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">alien</span><span class="p">)</span>
+</code></pre></div><h3 id="a-dictionary-of-similar-objects">A Dictionary of similar Objects</h3>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">any_dictionary</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>   <span class="c1">#Get a keys of a dictionary</span>
+<span class="n">any_dictionary</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>  <span class="c1">#Get a values of a dictionary</span>
+<span class="n">any_dictionary</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>   <span class="c1">#Get a items of a dictionary</span>
 </code></pre></div>]]></content>
 		</item>
 		

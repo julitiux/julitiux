@@ -7,3 +7,6 @@
 [submodule "public"]
   path = public
   url = git@github.com:julitiux/julitiux.github.io.git
+[submodule "python_exercises"]
+  path = python_exercises
+  url = git@github.com:julitiux/python_exercises.git

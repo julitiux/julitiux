@@ -758,4 +758,45 @@ any_dictionary.values()  #Get a values of a dictionary
 any_dictionary.items()   #Get a items of a dictionary
 ```
 
-Add new line
+# User Input and While Loops
+
+### How the input Function Works
+
+The input() funtion pauses your program and waits for the user to enter some text. Obe Python receives the use's input, it store it in a variable to make convenient for you to work with.
+
+```python
+message = input("Tell me something, and I will repeat it back to you: ")
+print(message)
+```
+
+### Using int() to Accept numerical input
+
+```python
+>>> age = input("How old are u? ")
+How old are u? 21
+>>> are = int(are)
+>>> are >= 18
+True
+```
+
+## The modulo operator
+
+```python
+>>> 4 % 3
+1
+>>> 5 % 3
+2
+>>> 6 % 3
+0
+```
+
+## The while Loop
+
+You can use a while loop to count up through a series number.
+
+```python
+current_number = 1
+while current_number <= 5:
+  print(current_number)
+  current_number += 1
+```

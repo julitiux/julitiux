@@ -800,3 +800,245 @@ while current_number <= 5:
   print(current_number)
   current_number += 1
 ```
+
+# FUNCTIONS
+
+### Defining a Function
+
+Here is a example function named greet_user()
+
+```python
+def greet_user():
+  """Display a simple greeting"""
+  print("hello")
+
+greet_user()
+```
+
+### Passing Information to a function
+
+```python
+def greet_user(username):
+  """Display a simple greeting"""
+  print("hello " + username)
+
+greet_user()
+```
+
+### Arguments and Parameters.
+
+People sometimes speak of arguments and parameters interchangeably. Do not be surprised if you see the variable in a funtion definition refered to as arguments or the variables in a function calla referred to as parameters.
+
+
+### Positional Arguments
+
+When you call a function. Python must match each argument in the function call with a parameter in the function definition.
+
+```python
+def describe_pet(animal_type,pet_name):
+  --snip--
+
+describe_pet('hamster','harry')
+```
+
+### Keyword arguments
+
+A keyword argument is a name-value pair that you pass to a function. You directly associate the name and the value within the argument, so when you pass the argument to the function, there is no confusion, like this:
+
+```python
+#after
+describe_pet('hamster','harry')
+#before
+describe_pet(animal_type='hamster',pet_name='harry')
+```
+
+### Default value
+
+You can define a default value for each parameter
+
+```python
+def describe_pet(pet_name, animal_type=''):
+--snip--
+def describe_pet(pet_name, animal_type='dog'):
+--snip--
+```
+
+### Returning a simple value
+
+A function does not always have to desplay its output directly. Instead, it can process some data and then return a value or set of value, like this example:
+
+```python
+def get_formatted_name(first_name,last_name):
+  """Resturn a full name, neatly formatted"""
+  full_name = first_name + ' ' + last_name
+  return full_name.title()
+
+musican = get_formatted_name('Hanna', 'Montana')
+print(musican)
+```
+
+### Returning a Dictionary
+
+A function can return any kind of value you need it to.including more complicated data structures like list and dictionaries.
+
+```python
+def build_person(first_name, last_name):
+  """REturn a dictionary of information about a person"""
+  person = {'first':first_name,'last':last_name}
+  return person
+
+musican = build_person('kimi','hendrix')
+print(musican)
+```
+
+### Passing a list
+
+You will often find it useful to pass a list to a function, whether it's a list of names, numbers, or more complex objects, such a dictionary.
+
+```python
+def greet_users(names):
+  """Print a simple greeting to each user in the list."""
+  for name in names:
+    msg = "hello " + name.title() + "!"
+    print(msg)
+
+username = ['sabas','ty','margot']
+greet_users(username)
+```
+
+### Passing an arbitrary number of arguments
+
+Sometimes you wont know ahead of time how many arguments a function needs to accept. Fortunately, Python allows a function to collect an arbitrary number of arguments form the calling statement.
+
+```python
+def make_pizza(*toppings):
+  """Print the list of toppings that have been requested"""
+  print(toppings)
+
+make_pizza('pepperoni')
+make_pizza('pepperoni','green peppers','extra cheese')
+```
+
+### Mixing positional and arbitrary arguments
+
+If you want a function to accept several different kind of argument, the parameter that accepts an arbitrary number of arguments must be placed last in the function definition, like this way:
+
+```python
+def make_pizza(size,*toppings):
+  """Print the list of toppings that have been requested"""
+  print("\nMaking a " + int(size) + "-inch pizza with the following toppings!:")
+  for topping in toppings:
+    print("- " + topping)
+
+make_pizza(16,'pepperoni')
+make_pizza(12,'pepperoni','green peppers','extra cheese')
+```
+
+## Storing your functions in modules
+
+One advantage of functions is the way they separate blocks of code from your main program.
+
+### Importing an entire module
+
+To start importing functions, we first need to create a module. A _module_ is a file ending in _.py_ that contains the code you want to impor into your program:
+
+```python
+#pizza.py
+
+def make_pizza(size,*toppings):
+  """Print the list of toppings that have been requested"""
+  print("\nMaking a " + int(size) + "-inch pizza with the following toppings!:")
+  for topping in toppings:
+    print("- " + topping)
+```
+
+```python
+#making_pizza.py
+
+import pizza
+
+pizza.make_pizza(16,'pepperoni')
+pizza.make_pizza(12,'pepperoni','green peppers','extra cheese')
+```
+
+### Import specific functions
+
+You can also import a specific function from a module. Here is genera sintaxis for this approach:
+
+```python
+from module_name import function_name
+```
+
+You can import as many functions as you want from a module by separating each function's name with a comma:
+
+```python
+from module_name import function_0, function_1, function_2
+```
+
+like this:
+
+```python
+#making_pizza.py and pizza.py
+
+from pizza import make_pizza
+
+make_pizza(16,'pepperoni')
+make_pizza(12,'pepperoni','green peppers','extra cheese')
+```
+
+### Using _as_ to give a function an alias
+
+If the name a function you are importing might conflict with an existing name in your program of if the function name is long, you can use a short, unique _alias_
+
+```python
+#making_pizza.py and pizza.py
+
+from pizza import make_pizza mp
+
+mp(16,'pepperoni')
+mp(12,'pepperoni','green peppers','extra cheese')
+```
+
+The general sintanxis for providing an alias is:
+
+```python
+from module_name import function_name as fn
+```
+
+### Using as to give a module an alias
+
+You can also provide an alias for a module name.
+
+```python
+#making_pizza.py and pizza.py
+
+import pizza p
+
+p.make_pizza(16,'pepperoni')
+p.make_pizza(12,'pepperoni','green peppers','extra cheese')
+```
+
+The general sintaxis fot this approach is:
+
+```python
+import module_name as mn
+```
+
+## Importing all functions in a module
+
+You can tell Python to import every function a module by using the asterisk ( * ) operator:
+
+```python
+#making_pizza.py and pizza.py
+
+from pizza import *
+
+make_pizza(16,'pepperoni')
+make_pizza(12,'pepperoni','green peppers','extra cheese')
+```
+
+The best approach is to import the function or functions you want, or import the entire module and use the dot notation. This lead to clear code that is easy to read and understand, like this:
+
+```python
+from module_name import *
+```

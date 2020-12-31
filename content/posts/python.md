@@ -1042,3 +1042,70 @@ The best approach is to import the function or functions you want, or import the
 ```python
 from module_name import *
 ```
+
+# Classes 9
+
+_Object-oriented programming_ is one of the most effective approaches to writting software.
+
+### Creating ans Using a Class
+
+You can model almost anything using classes. Let's start by writing a simple class _Dog_.
+
+## Creating a class Dog Class
+
+Each instance created from the Dog class will store a name and an age, and  we will give each dog the ability to sit() and roll()
+
+```python
+class Dog():
+  """A simple attempt to model a dog."""
+
+  def __init__(self, name, age):
+  """Initialize name and age attributes."""
+  self.name = name self.age = age
+
+  def sit(self):
+  """Simulate a dog sitting in response to a command."""
+  print(self.name.title() + " is now sitting.")
+
+  def roll_over(self):
+    """Simulate rolling over in response to a command."""
+    print(self.name.title() + " rolled over!")
+```
+
+## The __init__() Method
+
+The __init__() method is a special method Python runs automatically whenever we create a new instance based on the Dog Class. This method has two leading underscores and two trailing underscores, a convention that helps prevent Python's default methods name fro conflicting with your method name.
+
+## Making an Instance from a Class
+
+Think of a class as a set of instruction fro how to make an instance
+
+```python
+class Dog():
+--snip--
+
+my_dog = Dog('willie', 6)
+print("My dog's name is " + my_dog.name.title() + ".")
+print("My dog is " + str(my_dog.age) + " years old.")
+```
+
+## Accessing Attributes
+
+To access the attributes of an instance, you use dot notation like this:
+
+```python
+my_dog.name
+```
+
+## Calling Methods
+
+After created an instance from the class Dog, we can use dot notation to call any method defined in Dog. Let's make our dog sit and roll over:
+
+```python
+class Dog():
+--snip--
+
+my_dog = Dog('willie', 6)
+my_dog.sit()
+my_dog.roll_over()
+```

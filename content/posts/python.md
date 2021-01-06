@@ -1109,3 +1109,138 @@ my_dog = Dog('willie', 6)
 my_dog.sit()
 my_dog.roll_over()
 ```
+
+## Creating Multiple Instances
+
+```python
+class Dog():
+--snip--
+
+my_dog = Dog('Baby Drogon', 2)
+your_dog = Dog('other dog', ?)
+```
+
+### Working with classes and instances
+
+You can use classes to represent many real-world stitations. Once write a class, you will spend most of your time working with instances created for that class.
+
+```python
+class Car():
+  """A simple attempt to represent a car."""
+
+  def __init__(self, make, model, year):
+    """Initialize attributes to describe a car.""" self.make = make
+    self.model = model
+    self.year = year
+
+  def get_descriptive_name(self):
+    """Return a neatly formatted descriptive name."""
+    long_name = str(self.year) + ' ' + self.make + ' ' + self.model
+    return long_name.title()
+
+my_new_car = Car('audi', 'a4', 2016)
+print(my_new_car.get_descriptive_name())
+```
+
+## Setting a default value for an attribute
+
+Every attribute in a class needs an initial value, even if a 0 or a empty string.
+
+```python
+class Car():
+  def __init__(self, make, model, year):
+    """Initialize attributes to describe a car."""
+    self.make = make
+    self.model = model
+    self.year = year
+    self.odometer_reading = 0 def
+
+  get_descriptive_name(self):
+    --snip--
+
+  def read_odometer(self):
+    """Print a statement showing the car's mileage."""
+    print("This car has " + str(self.odometer_reading) + " miles on it.")
+
+my_new_car = Car('audi', 'a4', 2016)
+print(my_new_car.get_descriptive_name())
+my_new_car.read_odometer()
+```
+
+## Modifying Attribute Value
+
+### Modifying an attribute's value directly
+
+The simple way to modify the value of an attribute is to access the attribute directly through an instance. We use the _dot_ anotatuon to access the car's odometer_reading attribute and set this value directly.
+
+```python
+class Car():
+  --snip--
+
+my_new_car = Car('audi', 'a4', 2016)
+print(my_new_car.get_descriptive_name())
+
+umy_new_car.odometer_reading = 23 my_new_car.read_odometer()
+```
+
+### Modifying and Attribute's value through a Method
+
+It can be helpful to have method that update certain attributes for you. Instead of accesing the attribute directly , you pass the new value to a method that handly the updating internally.
+
+```python
+class Car():
+  --snip--
+
+  def update_odometer(self, mileage):
+    """Set the odometer reading to the given value."""
+    self.odometer_reading = mileage
+
+my_new_car = Car('audi', 'a4', 2016)
+print(my_new_car.get_descriptive_name())
+my_new_car.update_odometer(23) my_new_car.read_odometer()
+```
+
+## Inheritance
+
+You don't always have to start from scratch when writing a class. If the class  you are writing is specialized version of another class you wrote, you can us inheritance. When one class inherits from another, it automatically takes on all of attributes and methods of the first class. The original class is called _parent class_, and the new class is the _child class_. The child class inherits every attribute and method from its parent class but is also free to define new attibutes and methods of its own.
+
+```python
+class Car():
+  """A simple attempt to represent a car."""
+
+  def __init__(self, make, model, year):
+     self.make = make
+     self.model = model
+     self.year = year
+     self.odometer_reading = 0
+
+  def get_descriptive_name(self):
+     long_name = str(self.year) + ' ' + self.make + ' ' + self.model
+     return long_name.title()
+
+  def read_odometer(self):
+     print("This car has " + str(self.odometer_reading) + " miles on it.")
+
+  def update_odometer(self, mileage):
+     if mileage >= self.odometer_reading:
+       self.odometer_reading = mileage
+     else:
+       print("You can't roll back an odometer!")
+
+  def increment_odometer(self, miles):
+     self.odometer_reading += miles
+
+
+class ElectricCar(Car):
+  """Represent aspects of a car, specific to electric vehicles."""
+
+  def __init__(self, make, model, year):
+    """Initialize attributes of the parent class."""
+     super().__init__(make, model, year)
+
+my_tesla = ElectricCar('tesla', 'model s', 2016)
+print(my_tesla.get_descriptive_name())
+```
+
+# Files and Exceptions
+

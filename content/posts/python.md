@@ -1285,3 +1285,18 @@ with open(filename) as object_file:
   for line in object_file:
     print(line)
 ```
+
+## Making a List of Lines from a File
+
+The following example store the lines of po_digits_txt in a list inside the with block and then prints thelines outside the with block:
+
+```python
+
+filename = 'pi_digits.txt'
+
+with open(filename) as file_object:
+  lines = file_object.readlines()
+
+for line in lines:
+  print(line.rstrip())
+```

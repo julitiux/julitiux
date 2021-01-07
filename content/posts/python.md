@@ -1244,3 +1244,44 @@ print(my_tesla.get_descriptive_name())
 
 # Files and Exceptions
 
+## Reading from a file
+
+To begin, we need a file with a few text in it. Lets start with a file that contains _pi_ to 30 decimals places per line, like the next file:
+
+```python
+pi_digits.py
+
+3.1415926535
+  8979323846
+  264338327
+```
+
+Here's a program that opens this file, reads it, and prints the contents of file to the screen:
+
+```python
+with open('pi_digits.txt') as file_object:
+    contents = file_object.read()
+    print(contents)
+```
+
+## File Path
+
+```python
+
+with open('text_files/filename.txt') as file_object:
+
+file_path = 'home/ehmatters/other_files/filename.txt'
+with open(file_path) as file_object:
+```
+
+
+## Reading Line by Line
+
+```python
+
+filename = 'pi_digits.txt'
+
+with open(filename) as object_file:
+  for line in object_file:
+    print(line)
+```

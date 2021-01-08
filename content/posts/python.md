@@ -1300,3 +1300,6 @@ with open(filename) as file_object:
 for line in lines:
   print(line.rstrip())
 ```
+
+## Working with a File's contents
+

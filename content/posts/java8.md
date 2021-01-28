@@ -223,9 +223,41 @@ public Double attributesStaticVariables(Double number1, Double number2){
 }
 ```
 
-
-
 # Interface Default Methods
+
+Before Java 8, interfaces could have only abstract methods. The implementation of these methods has to be provided in a separate class. So, if a new method is to be added in an interface, then its implementation code has to be provided in the class implementing the same interface. To overcome this issue, Java 8 has introduced the concept of default methods which allow the interfaces to have methods with implementation without affecting the classes that implement the interface.
+
+Add the default keyword just for turn the method default.
+
+Given a interface:
+
+```java
+public interface DefaultMethodService {
+  public void holaMundo();
+
+  default public void defaulHolaMundo(){
+    System.out.println("Hola Inmundo");
+  }
+
+}
+```
+
+And the implementation it could be like:
+
+```java
+public class DefaultMethodServiceImpl implements DefaultMethodService {
+
+  @Override
+  public void holaMundo() {
+    System.out.println("Hola Inmundo");
+  }
+
+}
+```
+
+But without the method defaulHolaMundo.
+
+
 # Functional Interfaces
 # Method References
 # Colections -> forEach, removeIf, sort

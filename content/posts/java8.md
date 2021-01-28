@@ -97,9 +97,134 @@ public class LambdaServiceImpl {
 }
 ```
 
-
 # Lambda Sintaxis
+
+Given a interface:
+```java
+public interface LambdaSintaxisService {
+  public Double calculateAverage(Double num1, Double num2);
+}
+```
+
+Diferent type of Lambda sintaxis.
+
+Sintaxis 1:
+```java
+  public Double sintaxis1(Double number1, Double number2){
+    LambdaSintaxisService instance = new LambdaSintaxisService(){
+      @Override
+      public Double calculateAverage(Double num1, Double num2) {
+        return (num1 + num2) / 2;
+      }
+    };
+    return instance.calculateAverage(number1,number2);
+  }
+```
+
+Sintaxis 2:
+```java
+  public Double sintaxis2(Double number1, Double number2){
+    LambdaSintaxisService instance = (Double num1, Double num2) -> (num1 + num2) / 2;
+    return instance.calculateAverage(number1,number2);
+  }
+```
+
+Sintaxis 3:
+```java
+  public Double sintaxis3(Double number1, Double number2){
+    LambdaSintaxisService instance = (Double num1, Double num2) -> { return (num1 + num2) / 2;};
+    return instance.calculateAverage(number1,number2);
+  }
+```
+
+Sintaxis 4:
+```java
+  public Double sintaxis4(Double number1, Double number2){
+    LambdaSintaxisService instance = (Double num1, Double num2) -> {
+      System.out.println(num1);
+      System.out.println(num2);
+      return (num1 + num2) / 2;
+    };
+    return instance.calculateAverage(number1,number2);
+  }
+```
+
+Sintaxis 5:
+```java
+  public Double sintaxis5(Double number1, Double number2){
+    LambdaSintaxisService instance = (num1, num2) ->  (num1 + num2) / 2;
+    return instance.calculateAverage(number1,number2);
+  }
+```
+
 # Lambda Scopes
+
+Given a interface
+
+```java
+public interface ScopeService {
+  public Double calculateAverage(Double number1, Double number2);
+}
+```
+
+Diferent types of scopes inside of the method:
+
+By local variable:
+
+```java
+public Double localVariable1(Double number1, Double number2){
+
+  final double number3 = 0;
+
+  ScopeService instance = new ScopeService(){
+    @Override
+    public Double calculateAverage(Double n1, Double n2) {
+      //number3 = (n1 + n2) / 2; YOU USE IT BUT YOU CANT CHANGE HIS VALUE
+      return (n1 + n2) / 2;
+    }
+  };
+
+  return instance.calculateAverage(number1, number2);
+}
+```
+By local variable but with lambdas:
+
+```java
+public Double localVariable2(Double number1, Double number2){
+
+  final double number3 = 0;
+
+  ScopeService instance = (n1,n2) -> {
+    //number3 = (n1 + n2) / 2; YOU USE IT BUT YOU CANT CHANGE HIS VALUE
+    return (n1 + n2) / 2;
+  };
+
+  return instance.calculateAverage(number1, number2);
+}
+```
+
+By attributes statics and privates:
+
+```java
+private static double attribute1;
+private double attribute2;
+```
+
+```java
+public Double attributesStaticVariables(Double number1, Double number2){
+
+  ScopeService instance = (n1,n2) -> {
+    attribute1 = (n1 + n2) / 2;
+    attribute2 = attribute1;
+    return attribute2;
+  };
+
+  return instance.calculateAverage(number1, number2);
+}
+```
+
+
+
 # Interface Default Methods
 # Functional Interfaces
 # Method References

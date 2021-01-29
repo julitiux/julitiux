@@ -259,6 +259,35 @@ But without the method defaulHolaMundo.
 
 
 # Functional Interfaces
+
+A functional interface is an interface that contains only one abstract method. They can have only one functionality to exhibit. From Java 8 onwards, lambda expressions can be used to represent the instance of a functional interface. A functional interface can have any number of default methods. Runnable, ActionListener, Comparable are some of the examples of functional interfaces.
+Before Java 8, we had to create anonymous inner class objects or implement these interfaces.
+
+All functional interfaces are recommended to have an informative @FunctionalInterface annotation. This not only clearly communicates the purpose of this interface, but also allows a compiler to generate an error if the annotated interface does not satisfy the conditions.
+
+Given a interface:
+
+```java
+@FunctionalInterface
+public interface FunctionalInterfaceService {
+  // A Functiona interface, Java is represented with the annotation @FunctionaInterface. Basically, you can not write two methods in the same interface.
+  public void process();
+}
+```
+
+with a implementation:
+
+```java
+public class FunctionalInterfaceServiceImpl implements FunctionalInterfaceService{
+
+  @Override
+  public void process() {
+    System.out.println("Estas clases estan limitadas hacer referencia a un solo metodo ");
+  }
+
+}
+```
+
 # Method References
 # Colections -> forEach, removeIf, sort
 # Streams

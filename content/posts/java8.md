@@ -394,6 +394,82 @@ public class MethodReferenceServiceImpl {
 ```
 
 
+## Reference to a constructor.
+
+Given a class User:
+
+```java
+public class User {
+
+  Long id;
+  String username;
+
+  public User(Long id, String username) {
+    this.id = id;
+    this.username = username;
+  }
+
+  public Long getId() {
+    return id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  public String getUsername() {
+    return username;
+  }
+
+  public void setUsername(String username) {
+    this.username = username;
+  }
+
+}
+```
+
+and a functional interface:
+
+```java
+@FunctionalInterface
+public interface UserService {
+  public User crear(Long id, String username);
+}
+```
+
+
+## Anonymous Function
+```java
+public User referenceConstructor1(Long id, String username) {
+  UserService interfaceUser = new UserService() {
+    @Override
+    public User crear(Long id, String username) {
+      return new User(id, username);
+    }
+  };
+  return interfaceUser.crear(id, username);
+}
+```
+
+## Expresion lambda
+```java
+public User referenceConstructor2(Long id, String username) {
+  UserService interfaceUser = (x, y) -> new User(x, y);
+  return interfaceUser.crear(id, username);
+}
+```
+
+## With a method reference
+```java
+public User referenceConstructor3(Long id, String username) {
+  UserService interfaceUser = User::new;
+  return interfaceUser.crear(id, username);
+}
+```
+
+
+
+
 # Colections -> forEach, removeIf, sort
 # Streams
 # StreamParallels

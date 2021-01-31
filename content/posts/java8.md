@@ -467,6 +467,8 @@ public User referenceConstructor3(Long id, String username) {
 }
 ```
 
+ And remember folks, the Method Reference can not carry parameters.
+
 
 
 

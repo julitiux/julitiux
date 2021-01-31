@@ -289,6 +289,46 @@ public class FunctionalInterfaceServiceImpl implements FunctionalInterfaceServic
 ```
 
 # Method References
+
+Java provides a new feature called method reference in Java 8. Method reference is used to refer method of functional interface. It is compact and easy form of lambda expression. Each time when you are using lambda expression to just referring a method, you can replace your lambda expression with method reference.
+
+There are following types of method references in java:
+
+1. Reference to a static method.
+2. Reference to an instance method.
+3. Reference to a constructor.
+
+## Reference to a static method.
+
+Given a Functional Interface:
+
+```java
+@FunctionalInterface
+public interface MethodReferenceService {
+  public void saidHello();
+}
+```
+
+With a expresion lambda:
+```java
+public void example1ReferenceMethodStatic() {
+  //Name of the class . name of the method
+  MethodReferenceService instance = () -> MethodReferenceServiceImpl.referenceMethodStatic();
+  instance.saidHello();
+}
+```
+
+With a method reference and deleting the expression lambda
+```java
+public void example2ReferenceMethodStatic() {
+  //Name of the class :: name of the method
+  MethodReferenceService instance = MethodReferenceServiceImpl::referenceMethodStatic;
+  instance.saidHello();
+}
+```
+
+
+
 # Colections -> forEach, removeIf, sort
 # Streams
 # StreamParallels

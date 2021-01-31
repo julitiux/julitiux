@@ -309,7 +309,19 @@ public interface MethodReferenceService {
 }
 ```
 
-With a expresion lambda:
+and a method static in the class MethodReferenceServiceImpl::
+```java
+public class MethodReferenceServiceImpl {
+
+  public static void referenceMethodStatic() {
+    System.out.println("I just said Hello");
+  }
+
+}
+```
+
+
+### With a expresion lambda:
 ```java
 public void example1ReferenceMethodStatic() {
   //Name of the class . name of the method
@@ -318,7 +330,7 @@ public void example1ReferenceMethodStatic() {
 }
 ```
 
-With a method reference and deleting the expression lambda
+### With a method reference and deleting the expression lambda
 ```java
 public void example2ReferenceMethodStatic() {
   //Name of the class :: name of the method
@@ -327,6 +339,59 @@ public void example2ReferenceMethodStatic() {
 }
 ```
 
+
+## Reference to an instance method.
+
+### Anonymous Function
+```java
+public String[] referenceMethodInstanceObjectRandom1() {
+  String[] numbers = {"uno", "dos", "tres"};
+  Arrays.sort(numbers, new Comparator<String>() {
+    @Override
+    public int compare(String o1, String o2) {
+      return o1.compareTo(o2);
+    }
+  });
+  return numbers;
+}
+```
+
+### Expresion lambda
+```java
+public String[] referenceMethodInstanceObjectRandom2() {
+  String[] numbers = {"uno", "dos", "tres"};
+  Arrays.sort(numbers, (o1, o2) -> o1.compareTo(o2));
+  return numbers;
+}
+```
+
+### With method reference
+```java
+public String[] referenceMethodInstanceObjectRandom3() {
+  String[] numbers = {"uno", "dos", "tres"};
+  Arrays.sort(numbers, String::compareTo);
+  return numbers;
+}
+```
+
+### Instance Object
+
+
+```java
+public class MethodReferenceServiceImpl {
+
+  public void sayHi() {
+    System.out.println("Hola INHUMAN");
+  }
+
+  public void referenceMethodInstanceObjectSingular() {
+    MethodReferenceServiceImpl instance = new MethodReferenceServiceImpl();
+    MethodReferenceService inst = instance::sayHi;
+    inst.saidHello();
+  }
+
+}
+```
 
 
 # Colections -> forEach, removeIf, sort

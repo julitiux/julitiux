@@ -559,11 +559,22 @@ public List<String> useSortJava8(List<String> list) {
   return list;
 }
 ```
-
-
-
-
 # Streams
+
+Introduced in Java 8, the Stream API is used to process collections of objects. A stream is a sequence of objects that supports various methods which can be pipelined to produce the desired result.
+
+Given a interface:
+```java
+public interface StreamService {
+  public List<String> filter(List<String> list);
+  public List<String> sorter(List<String> list);
+  public List<String> transformer(List<String> list);
+  public List<String> limiter(List<String> list);
+  public Long counter(List<String> list);
+}
+```
+
+
 # StreamParallels
 # Map
 # Annotations

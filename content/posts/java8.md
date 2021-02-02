@@ -650,6 +650,14 @@ public void orElseThrow(String value) {
   optional.orElseThrow(NumberFormatException::new);
 }
 ```
+Implementation Optional with a _isPresent_
+```java
+@Override
+public Boolean isPresent(String value) {
+  Optional<String> optional = Optional.ofNullable(value);
+  return optional.isPresent();
+}
+```
 
 
 # StreamParallels

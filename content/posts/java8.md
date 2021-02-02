@@ -642,8 +642,14 @@ public String orElse(String value) {
   return optional.orElse("Sin valor");
 }
 ```
-
-
+Implementation Optional with a _orElseThrow_
+```java
+@Override
+public void orElseThrow(String value) {
+  Optional<String> optional = Optional.ofNullable(value);
+  optional.orElseThrow(NumberFormatException::new);
+}
+```
 
 
 # StreamParallels

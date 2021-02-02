@@ -588,7 +588,13 @@ public List<String> sorter(List<String> list) {
   return list.stream().sorted().collect(Collectors.toList());
 }
 ```
-
+Map
+```java
+@Override
+public List<String> transformer(List<String> list) {
+  return list.stream().map(x -> Integer.parseInt(x) +1).map(Object::toString).collect(Collectors.toList());
+}
+```
 
 
 # StreamParallels

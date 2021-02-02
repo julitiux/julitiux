@@ -595,6 +595,14 @@ public List<String> transformer(List<String> list) {
   return list.stream().map(x -> Integer.parseInt(x) +1).map(Object::toString).collect(Collectors.toList());
 }
 ```
+Limit
+```java
+@Override
+public List<String> limiter(List<String> list) {
+  return list.stream().limit(2).collect(Collectors.toList());
+}
+```
+
 
 
 # StreamParallels

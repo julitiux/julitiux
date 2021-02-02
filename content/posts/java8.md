@@ -574,6 +574,14 @@ public interface StreamService {
 }
 ```
 
+Filter
+```java
+@Override
+public List<String> filter(List<String> list) {
+  return list.stream().filter(x -> x.startsWith("M")).collect(Collectors.toList());
+}
+```
+
 
 # StreamParallels
 # Map

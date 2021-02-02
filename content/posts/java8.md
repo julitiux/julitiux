@@ -626,7 +626,7 @@ public interface OptionalService {
 }
 ```
 
-Implementation Optional givena a empty and get method:
+Implementation Optional with a _empty_ and _get_ method:
 ```java
 @Override
 public void test(String value) {
@@ -634,6 +634,16 @@ public void test(String value) {
   optional.get();
 }
 ```
+Implementation Optional with a _ofNullable_ and _orElse_
+```java
+@Override
+public String orElse(String value) {
+  Optional<String> optional = Optional.ofNullable(value);
+  return optional.orElse("Sin valor");
+}
+```
+
+
 
 
 # StreamParallels

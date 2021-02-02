@@ -559,6 +559,7 @@ public List<String> useSortJava8(List<String> list) {
   return list;
 }
 ```
+
 # Streams
 
 Introduced in Java 8, the Stream API is used to process collections of objects. A stream is a sequence of objects that supports various methods which can be pipelined to produce the desired result.
@@ -610,6 +611,29 @@ public Long counter(List<String> list) {
 }
 ```
 
+# Optional
+
+The Optional class that was introduced in Java 8. The purpose of the class is to provide a type-level solution for representing optional values instead of null references.
+
+
+Given a interface:
+```java
+public interface OptionalService {
+  public void test(String value);
+  public String orElse(String value);
+  public void orElseThrow(String value);
+  public Boolean isPresent(String value);
+}
+```
+
+Implementation Optional givena a empty and get method:
+```java
+@Override
+public void test(String value) {
+  Optional<String> optional = Optional.empty();
+  optional.get();
+}
+```
 
 
 # StreamParallels

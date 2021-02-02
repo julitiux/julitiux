@@ -489,7 +489,7 @@ public interface CollectionService {
 }
 ```
 
-Implementation forEach
+## Implementation forEach
 
 Java 7
 ```java
@@ -513,7 +513,7 @@ public void forEachJava8_1(List<String> list) {
 }
 ```
 
-Implementation removeIf
+## Implementation removeIf
 
 Java7
 ```java
@@ -527,7 +527,6 @@ public List<String> useRemoveIfJava7(List<String> list, String elementRemove) {
   return list;
 }
 ```
-
 Java8
 ```java
 @Override
@@ -537,10 +536,29 @@ public List<String> useRemoveIfJava8(List<String> list, String elementRemove) {
 }
 ```
 
+## Implementation sort
 
-
-
-
+Java7
+```java
+@Override
+public List<String> useSortJava7(List<String> list) {
+  Collections.sort(list, new Comparator<String>() {
+    @Override
+    public int compare(String o1, String o2) {
+      return o1.compareTo(o2);
+    }
+  });
+  return list;
+}
+```
+Java8
+```java
+@Override
+public List<String> useSortJava8(List<String> list) {
+  Collections.sort(list, ((o1, o2) -> o1.compareTo(o2)));
+  return list;
+}
+```
 
 
 

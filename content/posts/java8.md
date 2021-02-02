@@ -469,10 +469,82 @@ public User referenceConstructor3(Long id, String username) {
 
  And remember folks, the Method Reference can not carry parameters.
 
-
-
-
 # Colections -> forEach, removeIf, sort
+
+Given a interface
+
+```java
+import java.util.List;
+
+public interface CollectionService {
+  public void forEachJava7(List<String> list);
+  public void forEachJava8(List<String> list);
+  public void forEachJava8_1(List<String> list);
+
+  public List<String> useRemoveIfJava7(List<String> list, String elementRemove);
+  public List<String> useRemoveIfJava8(List<String> list, String elementRemove);
+
+  public List<String> useSortJava7(List<String> list);
+  public List<String> useSortJava8(List<String> list);
+}
+```
+
+Implementation forEach
+
+Java 7
+```java
+@Override
+public void forEachJava7(List<String> list) {
+  for (String element : list) {
+    System.out.println(element);
+  }
+}
+```
+Java8
+```java
+@Override
+public void forEachJava8(List<String> list) {
+  list.forEach(it -> System.out.println(it));
+}
+
+@Override
+public void forEachJava8_1(List<String> list) {
+  list.forEach(System.out::println);
+}
+```
+
+Implementation removeIf
+
+Java7
+```java
+@Override
+public List<String> useRemoveIfJava7(List<String> list, String elementRemove) {
+  Iterator<String> iterator = list.iterator();
+  while (iterator.hasNext()) {
+    if (iterator.next().equalsIgnoreCase(elementRemove))
+      iterator.remove();
+  }
+  return list;
+}
+```
+
+Java8
+```java
+@Override
+public List<String> useRemoveIfJava8(List<String> list, String elementRemove) {
+  list.removeIf(x -> x.equalsIgnoreCase(elementRemove));
+  return list;
+}
+```
+
+
+
+
+
+
+
+
+
 # Streams
 # StreamParallels
 # Map

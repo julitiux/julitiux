@@ -581,6 +581,14 @@ public List<String> filter(List<String> list) {
   return list.stream().filter(x -> x.startsWith("M")).collect(Collectors.toList());
 }
 ```
+Sort
+```java
+@Override
+public List<String> sorter(List<String> list) {
+  return list.stream().sorted().collect(Collectors.toList());
+}
+```
+
 
 
 # StreamParallels

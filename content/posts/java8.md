@@ -602,6 +602,13 @@ public List<String> limiter(List<String> list) {
   return list.stream().limit(2).collect(Collectors.toList());
 }
 ```
+Count
+```java
+@Override
+public Long counter(List<String> list) {
+  return list.stream().count();
+}
+```
 
 
 

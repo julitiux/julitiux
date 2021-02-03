@@ -740,6 +740,15 @@ public Map<Integer, String> insertIfAbsent(Map<Integer, String> map, Integer key
 }
 ```
 
+Get or return default value
+
+```java
+@Override
+public String getOrDefault(Map<Integer, String> map, Integer key) {
+  return map.getOrDefault(key, "Don't has value");
+}
+```
+
 
 
 

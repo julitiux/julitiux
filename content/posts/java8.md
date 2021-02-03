@@ -685,11 +685,61 @@ public void testParallelStream(List<String> list) {
   list.parallelStream().forEach(System.out::println);
 }
 ```
-
-
-
-
 # Map
+
+The Map interface present in java.util package represents a mapping between a key and a value. The Map interface is not a subtype of the Collection interface. Therefore it behaves a bit differently from the rest of the collection types. A map contains unique keys.
+
+Given a interface:
+```java
+public interface MapService {
+  public void printJava7(Map<Integer, String> map);
+  public Map<Integer, String> printJava8(Map<Integer, String> map);
+  public Map<Integer, String> collect(Map<Integer, String> map);
+  public Map<Integer, String> insertIfAbsent(Map<Integer, String> map);
+  public Map<Integer, String> operateIfPresent();
+}
+```
+
+Print a Map
+
+Java7
+```java
+@Override
+public void printJava7(Map<Integer, String> map) {
+  for (Map.Entry<Integer, String> entry : map.entrySet()) {
+    System.out.println("key: " + entry.getKey() + " Value: " + entry.getValue());
+  }
+}
+```
+
+Java 8
+
+With a _BiConsumer_
+```java
+@Override
+public void printJava8(Map<Integer, String> map) {
+  map.forEach((k, v) -> System.out.println("key: " + k + " Value:" + v));
+}
+```
+
+With a _Consumer_
+```java
+@Override
+public void printJava8_1(Map<Integer, String> map) {
+  map.entrySet().forEach(System.out::println);
+}
+```
+
+
+
+
+
+
+
+
+
+
+
 # Annotations
 # Date API
 # High Order Functions

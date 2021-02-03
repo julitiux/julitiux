@@ -730,7 +730,15 @@ public void printJava8_1(Map<Integer, String> map) {
 }
 ```
 
+Insert a element If Absent
 
+```java
+@Override
+public Map<Integer, String> insertIfAbsent(Map<Integer, String> map, Integer key, String value) {
+  map.putIfAbsent(key,value);
+  return map;
+}
+```
 
 
 

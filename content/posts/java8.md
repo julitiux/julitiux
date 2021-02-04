@@ -749,7 +749,25 @@ public String getOrDefault(Map<Integer, String> map, Integer key) {
 }
 ```
 
+Return a subMap (in the case) with a filter
 
+```java
+@Override
+public Map<Integer, String> collect_v1(Map<Integer, String> map, String value) {
+  return map.entrySet().stream()
+    .filter( entry -> entry.getValue().contains(value) )
+    .collect(Collectors.toMap(p -> p.getKey(), p -> p.getValue()));
+}
+```
+
+```java
+@Override
+public Map<Integer, String> collect_v2(Map<Integer, String> map, String value) {
+  return map.entrySet().stream()
+    .filter( entry -> entry.getValue().contains(value) )
+    .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+}
+```
 
 
 

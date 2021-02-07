@@ -822,7 +822,7 @@ public void dateJava7() {
 }
 ```
 
-Java8
+Java8, Compare two LocalDates
 ```java
 @Override
 public Boolean comparteTwoDatesInJava8(LocalDate startDate, LocalDate endDate) {
@@ -830,10 +830,28 @@ public Boolean comparteTwoDatesInJava8(LocalDate startDate, LocalDate endDate) {
 }
 ```
 
+Java8, Compare two LocalTimes
 ```java
 @Override
 public Boolean comparteTwoTimesInJava8(LocalTime startTime, LocalTime endTime) {
   return startTime.isBefore(endTime);
+}
+```
+
+## Count years
+
+Java7
+```java
+@Override
+public Integer countYearsJava7(Calendar starCalendar, Calendar endCalendar) {
+  Integer anios = 0;
+  while (starCalendar.before(endCalendar)) {
+    starCalendar.add(Calendar.YEAR, 1);
+    if (starCalendar.before(endCalendar)) {
+      anios++;
+    }
+  }
+  return anios;
 }
 ```
 

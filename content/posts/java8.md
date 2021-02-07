@@ -782,9 +782,7 @@ Date class has even become obsolete. The new classes intended to replace Date cl
 3. The LocalDateTime class represents a date-time. There is no representation of a time-zone.
 
 
-## Comparte two Dates
-
-Java7
+Now, given a interface
 ```java
 import java.text.ParseException;
 import java.time.LocalDate;
@@ -809,8 +807,24 @@ public interface DateService {
   public LocalDate convertStringToDateJava8(String dateString) throws ParseException;
   public String formatDateJava8(String dateString, String patterDate, String formatter);
 }
-
 ```
+
+## Compare two Dates
+
+Java7
+```java
+@Override
+public void dateJava7() {
+  Calendar fecha1 = Calendar.getInstance();
+  Calendar fecha2 = Calendar.getInstance();
+  fecha1.set(1990, 5, 19);
+  System.out.println(fecha1.after(fecha2));
+}
+```
+
+
+
+
 
 
 

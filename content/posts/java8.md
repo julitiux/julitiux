@@ -863,6 +863,25 @@ public Period countYearsJava8(LocalDate dateStart, LocalDate dateEnd) {
 }
 ```
 
+## Convert String to Date
+
+Java7
+```java7
+@Override
+public Date convertStringToDateJava7(String dateString) throws ParseException {
+  DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+  return dateFormat.parse(dateString);
+}
+```
+
+Java8
+```java
+@Override
+public LocalDate convertStringToDateJava8(String dateString) throws ParseException {
+  DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+  return LocalDate.parse(dateString, dateTimeFormatter);
+}
+```
 
 
 

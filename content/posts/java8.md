@@ -822,7 +822,13 @@ public void dateJava7() {
 }
 ```
 
-
+Java8
+```java
+@Override
+public Boolean comparteTwoDatesInJava8(LocalDate startDate, LocalDate endDate) {
+  return startDate.isBefore(endDate);
+}
+```
 
 
 

@@ -769,14 +769,31 @@ public Map<Integer, String> collect_v2(Map<Integer, String> map, String value) {
 }
 ```
 
-
-
-
-
-
-
 # Annotations
 # Date API
+
+
+The new Date and Time APIs/classes (JSR-310), also called as ThreeTen, which have simply change the way you have been handling dates in java applications.
+
+Date class has even become obsolete. The new classes intended to replace Date class are LocalDate, LocalTime and LocalDateTime.
+
+1. The LocalDate class represents a date. There is no representation of a time or time-zone.
+2. The LocalTime class represents a time. There is no representation of a date or time-zone.
+3. The LocalDateTime class represents a date-time. There is no representation of a time-zone.
+
+
+## Comparte two Dates
+
+Java7
+```java
+
+
+```
+
+
+
+
+
 # High Order Functions
 # RXJava
 # Nashom

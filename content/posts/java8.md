@@ -830,6 +830,13 @@ public Boolean comparteTwoDatesInJava8(LocalDate startDate, LocalDate endDate) {
 }
 ```
 
+```java
+@Override
+public Boolean comparteTwoTimesInJava8(LocalTime startTime, LocalTime endTime) {
+  return startTime.isBefore(endTime);
+}
+```
+
 
 
 

@@ -855,6 +855,14 @@ public Integer countYearsJava7(Calendar starCalendar, Calendar endCalendar) {
 }
 ```
 
+Java8
+```java
+@Override
+public Period countYearsJava8(LocalDate dateStart, LocalDate dateEnd) {
+  return Period.between(dateStart, dateEnd);
+}
+```
+
 
 
 

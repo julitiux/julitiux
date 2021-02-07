@@ -883,8 +883,27 @@ public LocalDate convertStringToDateJava8(String dateString) throws ParseExcepti
 }
 ```
 
+## Format a Date
 
+Java7
+```java
+@Override
+public String formatDateJava7(Date date) {
+  DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss a");
+  return dateFormat.format(date);
+}
+```
 
+Java8
+```java
+@Override
+public String formatDateJava8(String dateString, String patterDate, String formatter) {
+  DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+  LocalDate localDate = LocalDate.parse(dateString, dateTimeFormatter);
+  dateTimeFormatter = DateTimeFormatter.ofPattern("ddMMyyyy");
+  return dateTimeFormatter.format(localDate);
+}
+```
 
 
 

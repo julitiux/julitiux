@@ -922,7 +922,7 @@ public interface HighOrderService {
 
 Implementing a Function.
 
-The first parameter is a IN String and return a
+The first parameter is a IN String and return a OUT String
 
 ```java
 public Function<String, String> convertToUpperCase = String::toUpperCase;

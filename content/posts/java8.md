@@ -937,5 +937,28 @@ public void print(Function<String, String> function, String string) {
 }
 ```
 
+A method that return a _Function_, ask for a String and return a String. This method you can apply the 'apply'  and send another String like a parameter.
+```java
+@Override
+public Function<String, String> printWithFunction(String string) {
+  return (String it) -> string + " " + it;
+}
+//service.printWithFunction(string).apply(otherString)
+```
+
+The principal function of _High Order Functions_ is send method like parameters. In this example, I send Consumers with type String values. For this example for _Groovy_ a _Consumer_ it could be considered like a _Closure_.
+```java
+@Override
+public List<String> filter(List<String> list, String string, Consumer<String> consumer) {
+  list.stream().filter(filterString(string)).forEach(consumer);
+  return list;
+}
+
+private Predicate<String> filterString(String string){
+  return it -> it.contains(string);
+}
+```
+
+
 # RXJava
 # Nashom

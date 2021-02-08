@@ -905,8 +905,37 @@ public String formatDateJava8(String dateString, String patterDate, String forma
 }
 ```
 
-
-
 # High Order Functions
+
+A higher order function is a function that either takes a function (method) as parameter, or returns a function after its execution.
+
+
+Given a interface:
+
+```java
+import java.util.function.Function;
+
+public interface HighOrderService {
+  public void print(Function<String, String> function, String string);
+}
+```
+
+Implementing a Function.
+
+The first parameter is a IN String and return a
+
+```java
+public Function<String, String> convertToUpperCase = String::toUpperCase;
+public Function<String, String> convertToLowerCase = String::toLowerCase;
+```
+
+This method want a paramter Function like the previous Function:
+```java
+@Override
+public void print(Function<String, String> function, String string) {
+  System.out.println(function.apply(string));
+}
+```
+
 # RXJava
 # Nashom

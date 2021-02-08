@@ -929,7 +929,7 @@ public Function<String, String> convertToUpperCase = String::toUpperCase;
 public Function<String, String> convertToLowerCase = String::toLowerCase;
 ```
 
-This method want a paramter Function like the previous Function:
+This method want a parameter Function like the previous Function:
 ```java
 @Override
 public void print(Function<String, String> function, String string) {

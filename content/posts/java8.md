@@ -1060,4 +1060,13 @@ public NashornServiceImpl() {
   }
 ```
 
+Implementing a method, that make a call to JS.
+```java
+@Override
+public void callFunctions() throws Exception {
+  scriptEngine.eval("print('JS desde Java')");
+}
+```
+
+
 

@@ -1030,7 +1030,7 @@ public List<String> observableRxWithLambdas(List<String> firstList, List<String>
 }
 ```
 
-# Nashom
+# Nashorn
 
 The Nashorn engine is an implementation of the ECMAScript Edition 5.1 Language Specification. It also implements many new features introduced in ECMAScript 6 including template strings; let, const, and block scope; iterators and for..of loops; Map, Set, WeakMap, and WeakSet data types; symbols; and binary and octal literals.
 

@@ -1037,3 +1037,14 @@ The Nashorn engine is an implementation of the ECMAScript Edition 5.1 Language S
 It was fully developed in the Java language as part of the Nashorn Project. The code is based on the new features of the Da Vinci Machine, which is the reference implementation of Java Specification Request (JSR) 292: Supporting Dynamically Typed Languages on the Java Platform.
 
 The Nashorn engine is included in the Java SE Development Kit (JDK). You can invoke Nashorn from a Java application using the Java Scripting API to interpret embedded scripts, or you can pass the script to the jjs or jrunscript tool.
+
+
+For this example, we have to declare a Interface like:
+
+```java
+public interface NashornService {
+  public void callFunctions() throws Exception;
+  public void implementInterface() throws Exception;
+}
+```
+

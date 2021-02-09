@@ -1048,3 +1048,16 @@ public interface NashornService {
 }
 ```
 
+Declare our variables ScriptEngineManager and ScriptEngine in Constructor class and privates.
+
+```java
+private ScriptEngineManager scriptEngineManager;
+private ScriptEngine scriptEngine;
+
+public NashornServiceImpl() {
+  scriptEngineManager = new ScriptEngineManager();
+  scriptEngine = scriptEngineManager.getEngineByName("nashorn");
+  }
+```
+
+

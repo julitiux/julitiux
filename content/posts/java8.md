@@ -1030,5 +1030,10 @@ public List<String> observableRxWithLambdas(List<String> firstList, List<String>
 }
 ```
 
-
 # Nashom
+
+The Nashorn engine is an implementation of the ECMAScript Edition 5.1 Language Specification. It also implements many new features introduced in ECMAScript 6 including template strings; let, const, and block scope; iterators and for..of loops; Map, Set, WeakMap, and WeakSet data types; symbols; and binary and octal literals.
+
+It was fully developed in the Java language as part of the Nashorn Project. The code is based on the new features of the Da Vinci Machine, which is the reference implementation of Java Specification Request (JSR) 292: Supporting Dynamically Typed Languages on the Java Platform.
+
+The Nashorn engine is included in the Java SE Development Kit (JDK). You can invoke Nashorn from a Java application using the Java Scripting API to interpret embedded scripts, or you can pass the script to the jjs or jrunscript tool.

@@ -965,5 +965,70 @@ RxJava is a Java VM implementation of Reactive Extensions: a library for composi
 
 It extends the observer pattern to support sequences of data/events and adds operators that allow you to compose sequences together declaratively while abstracting away concerns about things like low-level threading, synchronization, thread-safety and concurrent data structures.
 
+The ReactiveX Observable model allows you to treat streams of asynchronous events with the same sort of simple, composable operations that you use for collections of data items like arrays. It frees you from tangled webs of callbacks, and thereby makes your code more readable and less prone to bugs.
+
+Given a interface.
+```java
+public interface JavaRxService {
+  public void observableRx(List<String> list);
+  public List<String> observableRx(List<String> firstList, List<String> secondList, String string);
+  public List<String> observableRxWithLambdas(List<String> firstList, List<String> secondList, String string);
+}
+```
+
+Now the implementation:
+
+```java
+@Override
+public void observableRx(List<String> list) {
+  Observable<String> observable = Observable.fromIterable(list);
+
+  observable.subscribe(new Consumer<String>() {
+    @Override
+    public void accept(String s) throws Exception {
+      System.out.println(s);
+    }
+  });
+
+}
+```
+
+```java
+@Override
+public List<String> observableRx(List<String> firstList, List<String> secondList, String string) {
+  Observable<String> observable1 = Observable.fromIterable(firstList);
+  Observable<String> observable2 = Observable.fromIterable(secondList);
+
+  List<String> returnList = new ArrayList<>();
+
+  Observable.merge(observable1, observable2).subscribe(new Consumer<String>() {
+    @Override
+    public void accept(String s) throws Exception {
+      if(s.contains(string))
+        returnList.add(s);
+    }
+  });
+
+  return returnList;
+}
+```
+
+```java
+@Override
+public List<String> observableRxWithLambdas(List<String> firstList, List<String> secondList, String string) {
+  Observable<String> observable1 = Observable.fromIterable(firstList);
+  Observable<String> observable2 = Observable.fromIterable(secondList);
+
+  List<String> returnList = new ArrayList<>();
+
+  Observable.merge(observable1, observable2).subscribe(it -> {
+    if(it.contains(string))
+      returnList.add(it);
+  });
+
+  return returnList;
+}
+```
+
 
 # Nashom

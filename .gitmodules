@@ -10,3 +10,6 @@
 [submodule "python_exercises"]
   path = python_exercises
   url = git@github.com:julitiux/python_exercises.git
+[submodule "code/java"]
+	path = code/java
+	url = git@github.com:julitiux/spring-mvc.git

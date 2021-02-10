@@ -1068,5 +1068,35 @@ public void callFunctions() throws Exception {
 }
 ```
 
+Implemening a method, that make a call to File JS.
+```java
+@Override
+public void callFunctionsWithFileJs() throws Exception {
+  scriptEngine.eval(new FileReader("src/main/resources/js/exampleJS.js"));
+}
+```
+
+This is the content of File exampleJS.js
+```javascript
+print('Hola desde archivo JS');
+```
+
+Now, we can get a function of Js like this.
+```java
+@Override
+public Double callFunctionsWithFile() throws Exception {
+  scriptEngine.eval(new FileReader("src/main/resources/js/exampleJS.js"));
+  return (Double) invocable.invokeFunction("calcular", 10, 30);
+}
+```
+
+and inside of file exampleJS.js we have to implement a function calcular.
+```javascript
+function calcular(firstNumber, secondNumber){
+  return firstNumber + secondNumber;
+}
+```
+
+
 
 

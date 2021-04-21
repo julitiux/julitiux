@@ -60,6 +60,39 @@ tags:
 ### [Identing unnecessarily after the loop](#identing-unnecessarily-after-the-loop)
 ### [Forgetting the colon](#forgetting-the-colon)
 
+# [Making numerical lists](#making-numerical-lists)
+## [Using the range() function](#using-the-range-function)
+## [Using range() to make a list of numbers](#using-range-to-make-a-list-of-numbers)
+### [Simple statistics with a list of number](#simple-statistics-with-a-list-of-number)
+
+# [Working with part of a list](#working-with-part-of-a-list)
+### [Looping through a slice](#looping-through-a-slice)
+### [Copyiing a list](#copyiing-a-list)
+
+# [Tuples](#tuples)
+### [Defining a Tuple](#defining-a-tuple)
+### [Looping through all values in a tupla](#looping-through-all-values-in-a-tupla)
+
+# [if statements](#if-statements)
+### [A simple example](#a-simple-example)
+## [Checking for Equality](#checking-for-equality)
+### [Ignoring case when checking for equality](#ignoring-case-when-checking-for-equality)
+## [Checking for Inequality](#checking-for-inequality)
+## [Numerical Comparisons](#numerical-comparisons)
+## [Checking mmultiple conditions](#checking-mmultiple-conditions)
+## [Checking whether a value is in a list](#checking-whether-a-value-is-in-a-list)
+## [If Statement](#if-statement)
+## [if-else statements](#if-else-statements)
+## [The if-elif-else chain](#the-if-elif-else-chain)
+
+# [Dictionaries](#dictionaries)
+### [Add new key-value pairs](#add-new-key-value-pairs)
+### [Removing a key-value pairs](#removing-a-key-value-pairs)
+### [A Dictionary of similar Objects](#a-dictionary-of-similar-objects)
+
+
+
+
 
 # GETTING STARTED
 

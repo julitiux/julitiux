@@ -130,6 +130,13 @@ tags:
 ### [Modifying and Attribute's value through a Method](#modifying-and-attributes-value-through-a-method)
 ## [Inheritance](#inheritance)
 
+# [Files and Exceptions](#files-and-exceptions)
+## [Reading from a file](#reading-from-a-file)
+## [File Path](#file-path)
+## [Reading Line by Line](#reading-line-by-line)
+## [Making a List of Lines from a File](#making-a-list-of-lines-from-a-file)
+## [Working with a File's contents](#working-with-a-files-contents)
+
 
 # GETTING STARTED
 

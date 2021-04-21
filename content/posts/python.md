@@ -96,6 +96,25 @@ tags:
 ## [The modulo operator](#the-modulo-operator)
 ## [The while Loop](#the-while-loop)
 
+# [FUNCTIONS](#functions)
+### [Defining a Function](#defining-a-function)
+### [Passing Information to a function](#passing-information-to-a-function)
+### [Arguments and Parameters.](#arguments-and-parameters)
+### [Positional Arguments](#positional-arguments)
+### [Keyword arguments](#keyword-arguments)
+### [Default value](#default-value)
+### [Returning a simple value](#returning-a-simple-value)
+### [Returning a Dictionary](#returning-a-dictionary)
+### [Passing a list](#passing-a-list)
+### [Passing an arbitrary number of arguments](#passing-an-arbitrary-number-of-arguments)
+### [Mixing positional and arbitrary arguments](#mixing-positional-and-arbitrary-arguments)
+## [Storing your functions in modules](#storing-your-functions-in-modules)
+### [Importing an entire module](#importing-an-entire-module)
+### [Import specific functions](#import-specific-functions)
+### [Using _as_ to give a function an alias](#using-_as_-to-give-a-function-an-alias)
+### [Using as to give a module an alias](#using-as-to-give-a-module-an-alias)
+## [Importing all functions in a module](#importing-all-functions-in-a-module)
+
 
 
 

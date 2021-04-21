@@ -23,7 +23,18 @@ tags:
 ### [Uninstall a version of python.](#uninstall-a-version-of-python.)
 ## [Running Python Programs from a terminal](#running-python-programs-from-a-terminal)
 
-
+# [VARIABLES AND SIMPLE DATA TYPES](#variables-and-simple-data-types)
+## [Naming and Using Variables](#naming-and-using-variables)
+## [Strings](#strings)
+### [Changing Case in a String with Methods](#changing-case-in-a-string-with-methods)
+### [Combining or Concatenating Strings](#combining-or-concatenating-strings)
+### [Adding Whitespace to String with Tabs or Newlines](#adding-whitespace-to-string-with-tabs-or-newlines)
+### [Stripping Whitespace](#stripping-whitespace)
+## [Numbers](#numbers)
+### [Integers](#integers)
+### [Floats](#floats)
+### [Avoid Type Errors with the str() Function](#avoid-type-errors-with-the-str-function)
+### [Comments](#comments)
 
 # GETTING STARTED
 

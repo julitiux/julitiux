@@ -115,7 +115,20 @@ tags:
 ### [Using as to give a module an alias](#using-as-to-give-a-module-an-alias)
 ## [Importing all functions in a module](#importing-all-functions-in-a-module)
 
-
+# [Classes 9](#classes-9)
+### [Creating ans Using a Class](#creating-ans-using-a-class)
+## [Creating a class Dog Class](#creating-a-class-dog-class)
+## [The __init__() Method](#the-__init__-method)
+## [Making an Instance from a Class](#making-an-instance-from-a-class)
+## [Accessing Attributes](#accessing-attributes)
+## [Calling Methods](#calling-methods)
+## [Creating Multiple Instances](#creating-multiple-instances)
+### [Working with classes and instances](#working-with-classes-and-instances)
+## [Setting a default value for an attribute](#setting-a-default-value-for-an-attribute)
+## [Modifying Attribute Value](#modifying-attribute-value)
+### [Modifying an attribute's value directly](#modifying-an-attributes-value-directly)
+### [Modifying and Attribute's value through a Method](#modifying-and-attributes-value-through-a-method)
+## [Inheritance](#inheritance)
 
 
 # GETTING STARTED

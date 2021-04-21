@@ -52,6 +52,14 @@ tags:
 ### [Printing a List in reverse order](#printing-a-list-in-reverse-order)
 ### [Finding the length of a List](#finding-the-length-of-a-list)
 
+# [Working with Lists](#working-with-lists)
+## [Looping an entire List](#looping-an-entire-list)
+### [Do something after a for loop](#do-something-after-a-for-loop)
+### [Forgetting to ident additional lines](#forgetting-to-ident-additional-lines)
+### [Identing unnecessarily](#identing-unnecessarily)
+### [Identing unnecessarily after the loop](#identing-unnecessarily-after-the-loop)
+### [Forgetting the colon](#forgetting-the-colon)
+
 
 # GETTING STARTED
 

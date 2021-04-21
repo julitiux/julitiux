@@ -36,6 +36,23 @@ tags:
 ### [Avoid Type Errors with the str() Function](#avoid-type-errors-with-the-str-function)
 ### [Comments](#comments)
 
+# [Introducing List](#introducing-list)
+### [Accessing Elements in a List](#accessing-elements-in-a-list)
+## [Changing, Adding, and Removing Elements](#changing-adding-and-removing-elements)
+### [Modifying Elements in a List.](#modifying-elements-in-a-list)
+### [Adding Elements to a List](#adding-elements-to-a-list)
+### [Inserting Elements into a List](#inserting-elements-into-a-list)
+### [Removing Elements from a List using the _del_ Statement](#removing-elements-from-a-list-using-the-_del_-statement)
+### [Removing Elements from a List using the _pop()_ method](#removing-elements-from-a-list-using-the-_pop_-method)
+### [Popping items from any Position in a list](#popping-items-from-any-position-in-a-list)
+### [Removing Items by Value](#removing-items-by-value)
+## [Organizing a List](#organizing-a-list)
+### [Sorting a List permanently with the sort() method](#sorting-a-list-permanently-with-the-sort-method)
+### [Sorting a List temporarily with the sorted() function](#sorting-a-list-temporarily-with-the-sorted-function)
+### [Printing a List in reverse order](#printing-a-list-in-reverse-order)
+### [Finding the length of a List](#finding-the-length-of-a-list)
+
+
 # GETTING STARTED
 
 ## How To Install

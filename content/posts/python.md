@@ -8,6 +8,23 @@ tags:
   - untagged
 ---
 
+
+# **INDEX**
+
+# [GETTING STARTED](#getting-started) 
+## [How To Install](#how-to-install)
+## [How To Install PyEnv](#how-to-install-pyenv)
+### [Build Build Dependencies](#build-build-dependencies)
+### [Using the pyenv-installer](#using-the-pyenv-installer)
+## [Using pyenv.](#using-pyenv.)
+### [List all pythons availables.](#list-all-pythons-availables.)
+### [Install a version of python.](#install-a-version-of-python.)
+### [Installation Location.](#installation-location.)
+### [Uninstall a version of python.](#uninstall-a-version-of-python.)
+## [Running Python Programs from a terminal](#running-python-programs-from-a-terminal)
+
+
+
 # GETTING STARTED
 
 ## How To Install

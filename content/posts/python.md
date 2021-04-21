@@ -90,6 +90,11 @@ tags:
 ### [Removing a key-value pairs](#removing-a-key-value-pairs)
 ### [A Dictionary of similar Objects](#a-dictionary-of-similar-objects)
 
+# [User Input and While Loops](#user-input-and-while-loops)
+### [How the input Function Works](#how-the-input-function-works)
+### [Using int() to Accept numerical input](#using-int-to-accept-numerical-input)
+## [The modulo operator](#the-modulo-operator)
+## [The while Loop](#the-while-loop)
 
 
 

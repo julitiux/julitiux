@@ -8,6 +8,20 @@ tags:
   - untagged
 ---
 
+
+# **INDEX**
+
+
+# [Getting Started](#getting-started)
+# [Types, Constants, and Variables](#types-constants-and-variables)
+## [Types, Strings](#types-strings)
+## [Numerical Type](#numerical-type)
+## [Constants](#constants)
+## [String interpolation](#string-interpolation)
+# [Conditional](#conditional)
+
+
+
 # Getting Started
 
 First, download and install Xcode, its available on the App Store. Make sure to download Xcode 8 or higher.

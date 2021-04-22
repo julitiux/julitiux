@@ -8,6 +8,49 @@ tags:
   - untagged
 ---
 
+# **INDEX**
+
+# [Functional programming](#functional-programming)
+## [Imperative and declarative programming](#imperative-and-declarative-programming)
+### [Imperative programming:](#imperative-programming)
+### [Declarative programming:](#declarative-programming)
+# [Java 8 and Lambdas.](#java-8-and-lambdas)
+# [Lambda](#lambda)
+# [Lambda Sintaxis](#lambda-sintaxis)
+# [Lambda Scopes](#lambda-scopes)
+# [Interface Default Methods](#interface-default-methods)
+# [Functional Interfaces](#functional-interfaces)
+# [Method References](#method-references)
+## [Reference to a static method.](#reference-to-a-static-method)
+### [With a expresion lambda:](#with-a-expresion-lambda)
+### [With a method reference and deleting the expression lambda](#with-a-method-reference-and-deleting-the-expression-lambda)
+## [Reference to an instance method.](#reference-to-an-instance-method)
+### [Anonymous Function](#anonymous-function)
+### [Expresion lambda](#expresion-lambda)
+### [With method reference](#with-method-reference)
+### [Instance Object](#instance-object)
+## [Reference to a constructor.](#reference-to-a-constructor)
+## [Anonymous Function](#anonymous-function)
+## [Expresion lambda](#expresion-lambda)
+## [With a method reference](#with-a-method-reference)
+# [Colections -> forEach, removeIf, sort](#colections---foreach-removeif-sort)
+## [Implementation forEach](#implementation-foreach)
+## [Implementation removeIf](#implementation-removeif)
+## [Implementation sort](#implementation-sort)
+# [Streams](#streams)
+# [Optional](#optional)
+# [StreamParallels](#streamparallels)
+# [Map](#map)
+# [Annotations](#annotations)
+# [Date API](#date-api)
+## [Compare two Dates](#compare-two-dates)
+## [Count years](#count-years)
+## [Convert String to Date](#convert-string-to-date)
+## [Format a Date](#format-a-date)
+# [High Order Functions](#high-order-functions)
+# [RXJava](#rxjava)
+# [Nashorn](#nashorn)
+
 # Functional programming
 
 Functional Programming is a programming paradigm where the programs are constructed by applying and composing functions.

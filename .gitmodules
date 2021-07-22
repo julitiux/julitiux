@@ -13,3 +13,6 @@
 [submodule "code/python"]
 	path = code/python
 	url = git@github.com:julitiux/python_exercises.git
+[submodule "themes/cayman-hugo-theme"]
+	path = themes/cayman-hugo-theme
+	url = https://github.com/zwbetz-gh/cayman-hugo-theme.git

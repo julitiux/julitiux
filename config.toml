@@ -1,59 +1,73 @@
 baseURL = "https://julitiux.github.io/"
 languageCode = "en-us"
-title = "Julio'z Blog"
+title = "Blogs"
 theme = "cayman-hugo-theme"
 
-# enableGitInfo = true
-pygmentsCodefences  = true
-pygmentsUseClasses  = true
-# hasCJKLanguage = true  # If Chinese/Japanese/Korean is your main content language, enable this to make wordCount works right.
-rssLimit = 10  # Maximum number of items in the RSS feed.
-copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
-enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/functions/emojify/
-# googleAnalytics = "UA-123-45"
-# disqusShortname = "yourdiscussshortname"
+# Google analytics
+googleAnalytics = "UA-123456789-1"
 
-[author]
-  name = "Julio Ramírez"
+# Disqus comments
+disqusShortname = "yourdiscussshortname"
 
-[blackfriday]
-  # hrefTargetBlank = true
-  # noreferrerLinks = true
-  # nofollowLinks = true
+# Syntax highlighting
+pygmentsCodefences = true
+pygmentsStyle = "pygments"
 
 [taxonomies]
   tag = "tags"
-  # Categories are disabled by default.
+
+[permalinks]
+  post = "/:filename/"
 
 [params]
-  dateform        = "Jan 2, 2006"
+  # Header text, can be markdown
+  project_name = "Julio's Blog"
+  project_tagline = "Try it again. ..."
+
+  # Date format for post list and single pages
+  # For more date formats see https://gohugo.io/functions/format/
+  #cdateFormat = "02 01 2006"
+  dateformat      = "Jan 2, 2006"
   dateformShort   = "Jan 2"
   dateformNum     = "2006-01-02"
   dateformNumTime = "2006-01-02 15:04 -0700"
 
-  # Metadata mostly used in document's head
-  # description = ""
-  # images = [""]
-  themeColor = "#494f5c"
+  # Footer text, can be markdown
+  footer = "Made with [Hugo](https://gohugo.io/). Themed by [Cayman](https://github.com/zwbetz-gh/cayman-hugo-theme). Deployed to [Netlify](https://www.netlify.com/)."
 
-  #homeSubtitle = "A minimal and fast theme for Hugo."
-  #footerCopyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
-  # bgImg = ""  # Homepage background-image URL
+  # If true, the CSS/JS for Katex math typesetting are enabled
+  katex = true
 
-  # Prefix of link to the git commit detail page. GitInfo must be enabled.
-  # gitUrl = "https://github.com/username/repository/commit/"
+  # Breakpoints
+  large_breakpoint = "64em"
+  medium_breakpoint = "42em"
 
-  # Toggling this option needs to rebuild SCSS, requires Hugo extended version
-  justifyContent = false  # Set "text-align: justify" to `.content`.
+  # Header colors
+  header_heading_color = "#fff"
+  header_background_color = "#159957"
+  header_background_color_secondary = "#155799"
 
-  relatedPosts = false  # Add a related content section to all single posts page
+  # Text colors
+  section_headings_color = "#159957"
+  body_text_color = "#606c71"
+  body_link_color = "#1e6bb8"
+  blockquote_text_color = "#819198"
 
-  code_copy_button = true # Turn on/off the code-copy-button for code-fields
+  # Code colors
+  code_background_color = "#f3f6fa"
+  code_text_color = "#567482"
 
+  # Border colors
+  border_color = "#dce6f0"
+  table_border_color = "#e9ebec"
+  hr_border_color = "#eff0f1"
 
 [menu]
-
-  [[menu.main]]
-    name = "Posts"
-    url = "posts/"
-    weight = 10
+  [[menu.nav]]
+    name = "Blogs"
+    url = "/"
+    weight = 1
+  [[menu.nav]]
+    name = "About"
+    url = "/about/"
+    weight = 3

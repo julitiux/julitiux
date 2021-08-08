@@ -35,3 +35,17 @@ docker run -it --rm elixir bash
 * kiex - install and manage different Elixir versions.
 * kerl - install and manage different Elixir versions.
 
+## Basic types
+
+Some basic types are:
+
+```elixir
+iex> 1              # integer
+iex> 0x1F           # integer
+iex> 1.0            # float
+iex> true           # boolean
+iex> :atom          # atom / symbol
+iex> "elixir"       # string
+iex> [1,2,3]        # list
+iex> {1,2,3}        # tuple
+```

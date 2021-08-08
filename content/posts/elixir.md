@@ -7,3 +7,31 @@ tags:
 ---
 
 # **INDEX**
+
+
+# Install
+## macOS
+* Using Homebrew
+```shell
+brew install elixir
+```
+* Using Macports (I dont use it)
+```shell
+sudo port install elixir
+```
+
+## Docker
+```shell
+docker run -it --rm elixir
+```
+Enter bash within container with installed _elixir_
+```shell
+docker run -it --rm elixir bash
+```
+
+## To install and manage multiple Erlang and Elixir version
+* asdf - install and manage different Elixir and Erlang versions,
+* exenv -  install and manage different Elixir versions.
+* kiex - install and manage different Elixir versions.
+* kerl - install and manage different Elixir versions.
+

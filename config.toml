@@ -21,7 +21,7 @@ pygmentsStyle = "pygments"
 
 [params]
   # Header text, can be markdown
-  project_name = "Julio's Blog"
+  project_name = "Julito's Blog"
   project_tagline = "Try it again. ..."
 
   # Date format for post list and single pages

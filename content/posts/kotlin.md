@@ -25,3 +25,10 @@ tags:
   val firstOdd = numbers.find { it % 2 == 0 }
   val firstLast = numbers.findLast { it % 2 == 0 }
 ```
+
+```kotlin
+  val strings : List<String> = listOf("12a", "45", "", "3")
+  val ints: List<Int> = strings.mapNotNull { it.toIntOrNull() }
+  println(ints) // [45, 3]
+  println(ints.sum()) // 48
+```

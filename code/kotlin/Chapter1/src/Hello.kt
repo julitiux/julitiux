@@ -2,6 +2,8 @@ fun main(args: Array<String>) {
   println("Hello World")
 
 //  -----------------------------
+
+  println("any")
   val emptyList = emptyList<Int>()
   println("emptyList.any() is ${emptyList.any()}")
 
@@ -9,11 +11,19 @@ fun main(args: Array<String>) {
   println("nonEmptyList.any() is ${nonEmptyList.any()}")
 
 //  -----------------------------
+
+  println("find - findLast")
   val numbers = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 0)
   val firstOdd = numbers.find { it % 2 == 0 }
   val firstLast = numbers.findLast { it % 2 == 0 }
-
   println(firstOdd)
   println(firstLast)
 
+//  -----------------------------
+  println("mapNotNull")
+
+  val strings : List<String> = listOf("12a", "45", "", "3")
+  val ints: List<Int> = strings.mapNotNull { it.toIntOrNull() }
+  println(ints) // [45, 3]
+  println(ints.sum()) // 48
 }

@@ -26,4 +26,14 @@ fun main(args: Array<String>) {
   val ints: List<Int> = strings.mapNotNull { it.toIntOrNull() }
   println(ints) // [45, 3]
   println(ints.sum()) // 48
+
+
+//  -----------------------------
+  println("mapNotNull with Map")
+
+  val map = mapOf("Alice" to 20, "Tom" to 13, "Bob" to 18 )
+  val adults = map.mapNotNull { (name, age) -> name.takeIf { age >= 18 } }
+
+  println(adults) // [Alice, Bob]
+
 }

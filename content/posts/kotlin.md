@@ -62,6 +62,65 @@ Press the Shift key twice to open the Search Everywhere dialog. Begin entering "
 
 You can also open the tool window with Tools => Kotlin => Show Kotlin Bytecode.
 
+# 3. Conditionals
+
+This lenguage feature is called _control flow_, and it allows yoy yo describe the conditions for when specific portions of your program should run.
+
+Tip: Add a **main** entry point function to _program_kt_ by typing "main" and pressing the Tab key. Your function should look like this:
+
+
+```kotlin
+fun main(args: Array<String>){
+	...
+}
+```
+
+You express this with the == _structural equality operator_. It can be read as "is equal to", so this statement reads "if healthPoint is equals to 100".
+
+Using the addition operator (+) to append a value to a string is called _string concatenation_. It is an easy way to customize what is printed to the conole based on the value of variable.
+
+## Comparison operator
+
+|Operator|Description|
+|---|---|
+|< |Evaluates whether the value on the left is less than the value on the right|
+|<=|Evaluates whether the value on the left is less than or equal to the value on the right|
+|> |Evaluates whether the value on the left is greater than the value on the right|
+|>=|Evaluates whether the value on the left is greater than or equal to the value on the right|
+|==|Evaluates whether the value on the left is equal to the value on the right|
+|!=|Evaluates whether the value on the left is not equal to the value on the right|
+|===|Evaluates whether the two instances point to the same reference|
+|!==|Evaluates whether the two instances do not point to the same reference|
+
+Back to business. Run Game.tk by clicking the run button to the left of the **main** function.
+
+You can included a code _comment_, indicated by //
+
+```kotlin
+// This is a comment
+```
+
+Anything to the right of // is included in the comment and is ignored by the compiler, so you can use any syntaxys you want there.
+
+## Kotlin Logical operator
+
+|Operator|Description|
+|---|---|
+|&&|Logical 'and' : true if and only if both are true (false otherwise)|
+|'||'|Logical 'or' : true if either is true (false only if both are false)|
+|!|Logical 'not' : true becomes false, false becomes true|
+
+Incidentall, if you tired of keeping your code nicely indented as you make changes. IntelliJ is here to help. Select Code => Auto-Ident Lines and enjoy the simple pleasure of clean idents.
+
+
+
+
+
+
+
+
+
+
 
 
 ```kotlin

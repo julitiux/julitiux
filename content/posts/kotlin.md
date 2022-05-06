@@ -157,6 +157,49 @@ This special symbol indicates to Kotlin that you would be like to template a val
 
 Kotlin also allow you to evaluate an expression within a string and _interpolate_ the result -- that is, to insert the result into to string. Any expression that you add within the curl braces after a dollar-sign character (${}) will be evaluated as a part of the string. Add a report of the player's blessedness and aura color to the player status display to see how this works.
 
+# 4. Functions
+
+A _function_ is a reausable portion of code that accomplishes a specific task.
+
+Control-click (click-right) on the code you selected and choose Refactor -> Extract -> Function...
+
+## Anatomy of a Function
+
+A function consist of a function header and function body
+
+
+```kotlin
+private fun formatHealthStatus(healhPoints: Int, isBlessed: Boolean): String {
+	return healthStatus
+}
+```
+
+## Function header
+
+This first part of function is the function header. The function header is made up of five parts. the visibility modifier, function declaration keyword, function name , function parametert, and return type
+
+
+```kotlin
+// visibility modifier
+private
+
+// function declatartion keyword
+fun
+
+// function name 
+formatHealthStatus
+
+// function parameters
+healthPoint: Int, isBlessed Boolean
+
+//return type
+String
+```
+
+
+
+
+
 
 
 

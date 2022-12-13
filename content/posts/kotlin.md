@@ -88,14 +88,11 @@ fun main(args: Array<String>) {
 }
 ```
 
-
-
-
 You express this with the == _structural equality operator_. It can be read as "is equal to", so this statement reads "if healthPoint is equals to 100".
 
 Using the addition operator (+) to append a value to a string is called _string concatenation_. It is an easy way to customize what is printed to the conole based on the value of variable.
 
-## Comparison operator
+## Table 3.1 Comparison operators
 
 |Operator|Description|
 |---|---|

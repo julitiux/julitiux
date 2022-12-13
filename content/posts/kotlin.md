@@ -169,6 +169,25 @@ val isBlessed = true
 }
 ```
 
+## Listing 3.5 Using logical operators in a conditional (Game.kt)
+```kotlin
+fun main(args: Array<String>) {
+    val name = "Madrigal"
+    var healthPoints = 89
+    val isBlessed = true
+    val isImmortal = false
+    // Aura
+    if (isBlessed && healthPoints > 50 || isImmortal) {
+        println("GREEN")
+    } else {
+        println("NONE")
+    }
+    if (healthPoints == 100) {
+    ... 
+    }
+}
+```
+
 ## Kotlin Logical operator
 
 |Operator|Description|

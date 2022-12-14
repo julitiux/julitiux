@@ -268,6 +268,33 @@ The .. operator, as in in 1..5, signals a range. A range includes all values fro
 
 You use the _in_ keyword to check whether a value is within a range.
 
+## Listing3.9 RefactoringhealthStatuswithranges(Game.kt)
+
+```kotlin
+fun main(args: Array<String>) {
+    ...
+    val healthStatus = if (healthPoints == 100) {
+            "is in excellent condition!"
+        } else if (healthPoints >= 90) {
+        } else if (healthPoints in 90..99) {
+            "has a few scratches."
+        } else if (healthPoints >= 75) {
+        } else if (healthPoints in 75..89) {
+            if (isBlessed) {
+                "has some minor wounds but is healing quite quickly!"
+} else {
+                "has some minor wounds."
+            }
+        } else if (healthPoints >= 15) {
+        } else if (healthPoints in 15..74) {
+            "looks pretty hurt."
+        } else {
+            "is in awful condition!"
+        }
+}
+```
+
+
 ## when Expressions
 
 Then when espression is another control flow mechanism available in Kotlin. Like if/else, the when expression allows you to write conditions to check for and will execute corresponding code when the condition evaluates as true. when provides a more concise syntaxis and is an especially good fit for conditionals with three or more branches.

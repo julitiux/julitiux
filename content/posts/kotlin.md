@@ -198,6 +198,23 @@ fun main(args: Array<String>) {
 
 Incidentally, if you tired of keeping your code nicely indented as you make changes. IntelliJ is here to help. Select Code => Auto-Ident Lines and enjoy the simple pleasure of clean idents.
 
+
+## Listing 3.6 Using logical operators in the declaration of a variable (Game.kt)
+```kotlin
+fun main(args: Array<String>) {
+    ...
+    // Aura
+    if (isBlessed && healthPoints > 50 || isImmortal) {
+    val auraVisible = isBlessed && healthPoints > 50 || isImmortal
+    if (auraVisible) {
+        println("GREEN")
+    } else {
+        println("NONE")
+    }
+    ... 
+}
+```
+
 ## Ranges
 
 Kotlin provides _ranges_ to represent a lineas seriesof values.

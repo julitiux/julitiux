@@ -373,10 +373,23 @@ fun main(args: Array<String>) {
 }
 ```
 
-
 This special symbol indicates to Kotlin that you would be like to template a val o var within a string you define, and it is provided as a convenience. Note that these templated values appeat inside the quotation marks that define the string.
 
 Kotlin also allow you to evaluate an expression within a string and _interpolate_ the result -- that is, to insert the result into to string. Any expression that you add within the curl braces after a dollar-sign character (${}) will be evaluated as a part of the string. Add a report of the player's blessedness and aura color to the player status display to see how this works.
+
+## Listing 3.12 Formatting the isBlessed status with a string expression (Game.kt)
+```kotlin
+fun main(args: Array<String>) {
+    ...
+// Aura
+val auraVisible = isBlessed && healthPoints > 50 || isImmortal val auraColor = if (auraVisible) "GREEN" else "NONE" print(auraColor)
+...
+// Player status
+println("(Aura: $auraColor) " +
+            "(Blessed: ${if (isBlessed) "YES" else "NO"})")
+    println("$name $healthStatus")
+}
+```
 
 # 4. Functions
 

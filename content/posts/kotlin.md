@@ -362,6 +362,18 @@ println (name + " " + otherVariable)
 println ("$name $otherVariable")
 ```
 
+## Listing 3.11 Using a string template (Game.kt)
+
+```kotlin
+fun main(args: Array<String>) {
+    ...
+    // Player status
+    println(name + " " + healthStatus)
+    println("$name $healthStatus")
+}
+```
+
+
 This special symbol indicates to Kotlin that you would be like to template a val o var within a string you define, and it is provided as a convenience. Note that these templated values appeat inside the quotation marks that define the string.
 
 Kotlin also allow you to evaluate an expression within a string and _interpolate_ the result -- that is, to insert the result into to string. Any expression that you add within the curl braces after a dollar-sign character (${}) will be evaluated as a part of the string. Add a report of the player's blessedness and aura color to the player status display to see how this works.

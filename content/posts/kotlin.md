@@ -75,16 +75,16 @@ fun main(args: Array<String>){
 }
 ```
 
-## Listing 3.1 Printing the player’s health condition (Game.kt)
+### Listing 3.1 Printing the player’s health condition (Game.kt)
 ```kotlin
 fun main(args: Array<String>) {
-    val name = "Madrigal"
-    var healthPoints = 100
-    if (healthPoints == 100) {
-        println(name + " is in excellent condition!")
-} else {
-        println(name + " is in awful condition!")
-    }
+>>    val name = "Madrigal"
+>>    var healthPoints = 100
+>>    if (healthPoints == 100) {
+>>        println(name + " is in excellent condition!")
+>>    } else {
+>>        println(name + " is in awful condition!")
+>>    }
 }
 ```
 
@@ -92,7 +92,7 @@ You express this with the == _structural equality operator_. It can be read as "
 
 Using the addition operator (+) to append a value to a string is called _string concatenation_. It is an easy way to customize what is printed to the conole based on the value of variable.
 
-## Table 3.1 Comparison operators
+### Table 3.1 Comparison operators
 
 |Operator|Description|
 |---|---|
@@ -115,80 +115,85 @@ You can included a code _comment_, indicated by //
 
 Anything to the right of // is included in the comment and is ignored by the compiler, so you can use any syntaxys you want there.
 
-## Listing 3.2 Modifying healthPoints (Game.kt)
+### Listing 3.2 Modifying healthPoints (Game.kt)
 ```kotlin
-fun main(args: Array<String>) { val name = "Madrigal"
-~~~var healthPoints = 100~~~
-var healthPoints = 89
+fun main(args: Array<String>) { 
+    val name = "Madrigal"
+<<  var healthPoints = 100
+>>  var healthPoints = 89
     if (healthPoints == 100) {
         println(name + " is in excellent condition!")
-} else {
+    } else {
         println(name + " is in awful condition!")
     }
 }
 ```
 
-## Listing 3.3 Checking for more player conditions (Game.kt)
+### Listing 3.3 Checking for more player conditions (Game.kt)
 ```kotlin
 fun main(args: Array<String>) {
     val name = "Madrigal"
     var healthPoints = 89
     if (healthPoints == 100) {
         println(name + " is in excellent condition!")
-} else if (healthPoints >= 90) { println(name + " has a few scratches.")
-    } else if (healthPoints >= 75) {
-        println(name + " has some minor wounds.")
-    } else if (healthPoints >= 15) {
-        println(name + " looks pretty hurt.")
-} else {
+>>  } else if (healthPoints >= 90) { println(name + " has a few scratches.")
+>>  } else if (healthPoints >= 75) {
+>>      println(name + " has some minor wounds.")
+>>  } else if (healthPoints >= 15) {
+>>      println(name + " looks pretty hurt.")
+    } else {
         println(name + " is in awful condition!")
     }
 }
 ```
 
-## Listing 3.4 Checking for blessedness (Game.kt)
+### Listing 3.4 Checking for blessedness (Game.kt)
 ```kotlin
-fun main(args: Array<String>) { val name = "Madrigal"
-var healthPoints = 89
-val isBlessed = true
-    if (healthPoints == 100) {
-        println(name + "is in excellent condition!")
-    } else if (healthPoints >= 90) {
-        println(name + " has a few scratches.")
-    } else if (healthPoints >= 75) {
-        if (isBlessed) {
-            println(name + " has some minor wounds but is healing quite quickly!")
-} else {
-            println(name + " has some minor wounds.")
-}
-    } else if (healthPoints >= 15) {
-        println(name + " looks pretty hurt.")
-} else {
-        println(name + " is in awful condition!")
-    }
+fun main(args: Array<String>) {
+    val name = "Madrigal"
+    var healthPoints = 89
+>>  val isBlessed = true
+
+        if (healthPoints == 100) {
+            println(name + "is in excellent condition!")
+        } else if (healthPoints >= 90) {
+            println(name + " has a few scratches.")
+        } else if (healthPoints >= 75) {
+>>          if (isBlessed) {
+>>              println(name + " has some minor wounds but is healing quite quickly!")
+>>          } else {
+                println(name + " has some minor wounds.")
+            }
+        } else if (healthPoints >= 15) {
+            println(name + " looks pretty hurt.")
+        } else {
+            println(name + " is in awful condition!")
+        }
 }
 ```
 
-## Listing 3.5 Using logical operators in a conditional (Game.kt)
+### Listing 3.5 Using logical operators in a conditional (Game.kt)
 ```kotlin
 fun main(args: Array<String>) {
     val name = "Madrigal"
     var healthPoints = 89
     val isBlessed = true
-    val isImmortal = false
-    // Aura
-    if (isBlessed && healthPoints > 50 || isImmortal) {
-        println("GREEN")
-    } else {
-        println("NONE")
-    }
+>>  val isImmortal = false
+
+>>  // Aura
+>>  if (isBlessed && healthPoints > 50 || isImmortal) {
+>>      println("GREEN")
+>>  } else {
+>>      println("NONE")
+>>  }
+
     if (healthPoints == 100) {
-    ... 
+        ...
     }
 }
 ```
 
-## Table 3.2 Logical operator
+### Table 3.2 Logical operator
 
 |Operator|Description|
 |---|---|
@@ -199,14 +204,14 @@ fun main(args: Array<String>) {
 Incidentally, if you tired of keeping your code nicely indented as you make changes. IntelliJ is here to help. Select Code => Auto-Ident Lines and enjoy the simple pleasure of clean idents.
 
 
-## Listing 3.6 Using logical operators in the declaration of a variable (Game.kt)
+### Listing 3.6 Using logical operators in the declaration of a variable (Game.kt)
 ```kotlin
 fun main(args: Array<String>) {
     ...
     // Aura
-    if (isBlessed && healthPoints > 50 || isImmortal) {
-    val auraVisible = isBlessed && healthPoints > 50 || isImmortal
-    if (auraVisible) {
+<<  if (isBlessed && healthPoints > 50 || isImmortal) {
+>>  val auraVisible = isBlessed && healthPoints > 50 || isImmortal
+>>  if (auraVisible) {
         println("GREEN")
     } else {
         println("NONE")
@@ -215,48 +220,50 @@ fun main(args: Array<String>) {
 }
 ```
 
-## Listing 3.7 Using a conditional expression (Game.kt)
+### Listing 3.7 Using a conditional expression (Game.kt)
 ```kotlin
 fun main(args: Array<String>) {
     ...
-    if (healthPoints == 100) {
-    val healthStatus = if (healthPoints == 100) {
-        println(name + "is in excellent condition!")
+<<  if (healthPoints == 100) {
+>>    val healthStatus = if (healthPoints == 100) {
+>>        println(name + "is in excellent condition!")
         "is in excellent condition!"
     } else if (healthPoints >= 90) {
-        println(name + " has a few scratches.")
-        "has a few scratches."
+<<      println(name + " has a few scratches.")
+>>      "has a few scratches."
     } else if (healthPoints >= 75) {
-        if (isBlessed) {
-            println(name + " has some minor wounds but is healing quite quickly!")
-            "has some minor wounds but is healing quite quickly!"
+    if (isBlessed) {
+<<      println(name + " has some minor wounds but is healing quite quickly!")
+>>      "has some minor wounds but is healing quite quickly!"
         } else {
-            println(name + " has some minor wounds.")
-            "has some minor wounds."
+<<          println(name + " has some minor wounds.")
+>>          "has some minor wounds."
         }
     } else if (healthPoints >= 15) {
-        println(name + " looks pretty hurt.")
-        "looks pretty hurt."
+<<      println(name + " looks pretty hurt.")
+>>      "looks pretty hurt."
     } else {
-        println(name + " is in awful condition!")
-        "is in awful condition!"
+<<      println(name + " is in awful condition!")
+>>      "is in awful condition!"
     }
-    // Player status
-    println(name + " " + healthStatus)
+>>  // Player status
+>>  println(name + " " + healthStatus)
 }
 ```
 
 
-## Listing 3.8 Improving aura code with a conditional expression (Game.kt)
+### Listing 3.8 Improving aura code with a conditional expression (Game.kt)
 ```kotlin
 ...
 // Aura
-val auraVisible = isBlessed && healthPoints > 50 || isImmortal if (auraVisible) {
-    println("GREEN")
-} else {
-    println("NONE")
-}
-val auraColor = if (auraVisible) "GREEN" else "NONE" println(auraColor)
+val auraVisible = isBlessed && healthPoints > 50 || isImmortal 
+<<  if (auraVisible) {
+<<      println("GREEN")
+<<  } else {
+<<      println("NONE")
+<<  }
+>>  val auraColor = if (auraVisible) "GREEN" else "NONE" 
+>>  println(auraColor)
 ...
 ```
 
@@ -268,25 +275,24 @@ The .. operator, as in in 1..5, signals a range. A range includes all values fro
 
 You use the _in_ keyword to check whether a value is within a range.
 
-## Listing3.9 RefactoringhealthStatuswithranges(Game.kt)
-
+### Listing 3.9 Refactoring healthStatus with ranges(Game.kt)
 ```kotlin
 fun main(args: Array<String>) {
     ...
     val healthStatus = if (healthPoints == 100) {
             "is in excellent condition!"
-        } else if (healthPoints >= 90) {
-        } else if (healthPoints in 90..99) {
+<<      } else if (healthPoints >= 90) {
+>>      } else if (healthPoints in 90..99) {
             "has a few scratches."
-        } else if (healthPoints >= 75) {
-        } else if (healthPoints in 75..89) {
+<<      } else if (healthPoints >= 75) {
+>>      } else if (healthPoints in 75..89) {
             if (isBlessed) {
                 "has some minor wounds but is healing quite quickly!"
-} else {
+            } else {
                 "has some minor wounds."
             }
-        } else if (healthPoints >= 15) {
-        } else if (healthPoints in 15..74) {
+<<      } else if (healthPoints >= 15) {
+>>      } else if (healthPoints in 15..74) {
             "looks pretty hurt."
         } else {
             "is in awful condition!"
@@ -322,32 +328,33 @@ By the way, were you wondering abut the nested if/else in one branch of your whe
 ```kotlin
 fun main(args: Array<String>) {
     ...
-    val healthStatus = if (healthPoints == 100) {
-            "is in excellent condition!"
-        } else if (healthPoints in 90..99) {
-            "has a few scratches."
-        } else if (healthPoints in 75..89) {
-            if (isBlessed) {
-                "has some minor wounds but is healing quite quickly!"
-            } else {
-                "has some minor wounds."
-            }
-        } else if (healthPoints in 15..74) {
-            "looks pretty hurt."
-} else {
-            "is in awful condition!"
-        }
-    val healthStatus = when (healthPoints) {
-        100 -> "is in excellent condition!"
-        in 90..99 -> "has a few scratches."
-        in 75..89 -> if (isBlessed) {
-            "has some minor wounds but is healing quite quickly!"
-        } else {
-            "has some minor wounds."
-        }
-        in 15..74 -> "looks pretty hurt."
-        else -> "is in awful condition!"
-    }
+<<  val healthStatus = if (healthPoints == 100) {
+<<          "is in excellent condition!"
+<<      } else if (healthPoints in 90..99) {
+<<          "has a few scratches."
+<<      } else if (healthPoints in 75..89) {
+<<          if (isBlessed) {
+<<              "has some minor wounds but is healing quite quickly!"
+<<          } else {
+<<              "has some minor wounds."
+<<          }
+<<      } else if (healthPoints in 15..74) {
+<<          "looks pretty hurt."
+<<      } else {
+<<          "is in awful condition!"
+<<      }
+
+>>    val healthStatus = when (healthPoints) {
+>>        100 -> "is in excellent condition!"
+>>        in 90..99 -> "has a few scratches."
+>>        in 75..89 -> if (isBlessed) {
+>>            "has some minor wounds but is healing quite quickly!"
+>>        } else {
+>>            "has some minor wounds."
+>>        }
+>>        in 15..74 -> "looks pretty hurt."
+>>        else -> "is in awful condition!"
+>>    }
 }
 ```
 
@@ -368,8 +375,8 @@ println ("$name $otherVariable")
 fun main(args: Array<String>) {
     ...
     // Player status
-    println(name + " " + healthStatus)
-    println("$name $healthStatus")
+<<  println(name + " " + healthStatus)
+>>  println("$name $healthStatus")
 }
 ```
 
@@ -381,13 +388,15 @@ Kotlin also allow you to evaluate an expression within a string and _interpolate
 ```kotlin
 fun main(args: Array<String>) {
     ...
-// Aura
-val auraVisible = isBlessed && healthPoints > 50 || isImmortal val auraColor = if (auraVisible) "GREEN" else "NONE" print(auraColor)
-...
-// Player status
-println("(Aura: $auraColor) " +
-            "(Blessed: ${if (isBlessed) "YES" else "NO"})")
-    println("$name $healthStatus")
+    // Aura
+    val auraVisible = isBlessed && healthPoints > 50 || isImmortal 
+    val auraColor = if (auraVisible) "GREEN" else "NONE" 
+<<  print(auraColor)
+    ...
+    // Player status
+>>  println("(Aura: $auraColor) " +
+>>          "(Blessed: ${if (isBlessed) "YES" else "NO"})")
+        println("$name $healthStatus")
 }
 ```
 

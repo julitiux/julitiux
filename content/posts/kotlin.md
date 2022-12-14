@@ -246,6 +246,20 @@ fun main(args: Array<String>) {
 }
 ```
 
+
+## Listing 3.8 Improving aura code with a conditional expression (Game.kt)
+```kotlin
+...
+// Aura
+val auraVisible = isBlessed && healthPoints > 50 || isImmortal if (auraVisible) {
+    println("GREEN")
+} else {
+    println("NONE")
+}
+val auraColor = if (auraVisible) "GREEN" else "NONE" println(auraColor)
+...
+```
+
 ## Ranges
 
 Kotlin provides _ranges_ to represent a lineas seriesof values.

@@ -317,6 +317,40 @@ A when expression work similarly to an if/else expression in that you define con
 
 By the way, were you wondering abut the nested if/else in one branch of your when expression? This pattern is not very common, but Kotlin's when expression gives you all of flexibility that you need to implement it.
 
+## Listing 3.10 Refactoring healthStatus with when (Game.kt)
+
+```kotlin
+fun main(args: Array<String>) {
+    ...
+    val healthStatus = if (healthPoints == 100) {
+            "is in excellent condition!"
+        } else if (healthPoints in 90..99) {
+            "has a few scratches."
+        } else if (healthPoints in 75..89) {
+            if (isBlessed) {
+                "has some minor wounds but is healing quite quickly!"
+            } else {
+                "has some minor wounds."
+            }
+        } else if (healthPoints in 15..74) {
+            "looks pretty hurt."
+} else {
+            "is in awful condition!"
+        }
+    val healthStatus = when (healthPoints) {
+        100 -> "is in excellent condition!"
+        in 90..99 -> "has a few scratches."
+        in 75..89 -> if (isBlessed) {
+            "has some minor wounds but is healing quite quickly!"
+        } else {
+            "has some minor wounds."
+        }
+        in 15..74 -> "looks pretty hurt."
+        else -> "is in awful condition!"
+    }
+}
+```
+
 
 ## String Templates
 

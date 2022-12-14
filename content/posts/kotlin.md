@@ -188,7 +188,7 @@ fun main(args: Array<String>) {
 }
 ```
 
-## Kotlin Logical operator
+## Table 3.2 Logical operator
 
 |Operator|Description|
 |---|---|

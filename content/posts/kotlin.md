@@ -471,6 +471,22 @@ fun main(args: Array<String>) {
 } ...
 ```
 
+## Listing 4.3 Adding a numFireballs parameter (Game.kt)
+```kotlin
+fun main(args: Array<String>) {
+    ...
+    // Player status
+    printPlayerStatus(auraColor, isBlessed, name, healthStatus)
+<<  castFireball()
+>>  castFireball(5)
+}
+...
+<<  private fun castFireball() {
+>>  private fun castFireball(numFireballs: Int) {
+<<      println("A glass of Fireball springs into existence.")
+>>        println("A glass of Fireball springs into existence. (x$numFireballs)")
+}
+```
 
 
 

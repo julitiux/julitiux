@@ -487,9 +487,23 @@ fun main(args: Array<String>) {
 >>        println("A glass of Fireball springs into existence. (x$numFireballs)")
 }
 ```
+### Default Arguments
 
+## Listing 4.4 Giving the numFireballs parameter a default value(Game.kt)
 
-
+```kotlin
+fun main(args: Array<String>) {
+    ...
+    // Player status
+    printPlayerStatus(auraColor, isBlessed, name, healthStatus)
+    castFireball(5)
+}
+...
+<<  private fun castFireball(numFireballs: Int) {
+>>  private fun castFireball(numFireballs: Int = 2) {
+        println("A glass of Fireball springs into existence. (x$numFireballs)")
+    }
+```
 
 
 ```kotlin

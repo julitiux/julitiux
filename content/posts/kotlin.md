@@ -461,7 +461,15 @@ String
 >>  }
 ```
 
-
+## Listing 4.2 Calling castFireball (Game.kt)
+```kotlin
+fun main(args: Array<String>) {
+    ...
+    // Player status
+    printPlayerStatus(auraColor, isBlessed, name, healthStatus)
+>>  castFireball()
+} ...
+```
 
 
 

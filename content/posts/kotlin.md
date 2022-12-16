@@ -423,6 +423,11 @@ This first part of function is the function header. The function header is made 
 
 
 ```kotlin
+
+private fun formatHealthStatus(healthPoint: Int, isBlessed Boolean); String{
+    return healthStatus
+}
+
 // visibility modifier
 private
 
@@ -439,7 +444,22 @@ healthPoint: Int, isBlessed Boolean
 String
 ```
 
+## Listing4.1 Adding a castFireball function (Game.kt)
 
+```kotlin
+...
+    private fun auraColor(isBlessed: Boolean,
+                        healthPoints: Int,
+                        isImmortal: Boolean): String {
+        val auraVisible = isBlessed && healthPoints > 50 || isImmortal
+        val auraColor = if (auraVisible) "GREEN" else "NONE"
+        return auraColor
+    }
+
+>>  private fun castFireball() {
+>>      println("A glass of Fireball springs into existence.")
+>>  }
+```
 
 
 

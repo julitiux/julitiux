@@ -487,9 +487,9 @@ fun main(args: Array<String>) {
 >>        println("A glass of Fireball springs into existence. (x$numFireballs)")
 }
 ```
-### Default Arguments
+## Default Arguments
 
-## Listing 4.4 Giving the numFireballs parameter a default value(Game.kt)
+### Listing 4.4 Giving the numFireballs parameter a default value(Game.kt)
 ```kotlin
 fun main(args: Array<String>) {
     ...
@@ -505,7 +505,7 @@ fun main(args: Array<String>) {
 ```
 
 
-## Listing 4.5 Using castFireball’s default argument value (Game.kt)
+### Listing 4.5 Using castFireball’s default argument value (Game.kt)
 ```kotlin
 fun main(args: Array<String>) {
     ...
@@ -519,7 +519,7 @@ fun main(args: Array<String>) {
 ```
 
 
-## Listing 4.6 Using optional single-expression function syntax (Game.kt)
+### Listing 4.6 Using optional single-expression function syntax (Game.kt)
 ```kotlin
     ...
 <<  private fun formatHealthStatus(healthPoints: Int, isBlessed: Boolean): String {
@@ -545,7 +545,9 @@ fun main(args: Array<String>) {
 <<  }
 ```
 
+## Unit Functions
 
+Kotlin uses the _Unit_ return type to signify exactly this: a a function that returns no value. If the return keyword is not used, it is implicit that the return type for that function is Unit.
 
 
 ```kotlin

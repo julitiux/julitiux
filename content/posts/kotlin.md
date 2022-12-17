@@ -62,6 +62,35 @@ Press the Shift key twice to open the Search Everywhere dialog. Begin entering "
 
 You can also open the tool window with Tools => Kotlin => Show Kotlin Bytecode.
 
+## Common functions in Kotlin
+
+```kotlin
+  val emptyList = emptyList<Int>()
+  println("emptyList.any() is ${emptyList.any()}")
+
+  val nonEmptyList = listOf<Int>(1, 2, 3)
+  println("nonEmptyList.any() is ${nonEmptyList.any()}")
+```
+
+```kotlin
+  val numbers = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 0)
+  val firstOdd = numbers.find { it % 2 == 0 }
+  val firstLast = numbers.findLast { it % 2 == 0 }
+```
+
+```kotlin
+  val strings : List<String> = listOf("12a", "45", "", "3")
+  val ints: List<Int> = strings.mapNotNull { it.toIntOrNull() }
+  println(ints) // [45, 3]
+  println(ints.sum()) // 48
+```
+
+```kotlin
+  val map = mapOf("Alice" to 20, "Tom" to 13, "Bob" to 18 )
+  val adults = map.mapNotNull { (name, age) -> name.takeIf { age >= 18 } }
+  println(adults) // [Alice, Bob]
+```
+
 # 3. Conditionals
 
 This lenguage feature is called _control flow_, and it allows yoy yo describe the conditions for when specific portions of your program should run.
@@ -548,32 +577,3 @@ fun main(args: Array<String>) {
 ## Unit Functions
 
 Kotlin uses the _Unit_ return type to signify exactly this: a a function that returns no value. If the return keyword is not used, it is implicit that the return type for that function is Unit.
-
-
-```kotlin
-  val emptyList = emptyList<Int>()
-  println("emptyList.any() is ${emptyList.any()}")
-
-  val nonEmptyList = listOf<Int>(1, 2, 3)
-  println("nonEmptyList.any() is ${nonEmptyList.any()}")
-```
-
-
-```kotlin
-  val numbers = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 0)
-  val firstOdd = numbers.find { it % 2 == 0 }
-  val firstLast = numbers.findLast { it % 2 == 0 }
-```
-
-```kotlin
-  val strings : List<String> = listOf("12a", "45", "", "3")
-  val ints: List<Int> = strings.mapNotNull { it.toIntOrNull() }
-  println(ints) // [45, 3]
-  println(ints.sum()) // 48
-```
-
-```kotlin
-  val map = mapOf("Alice" to 20, "Tom" to 13, "Bob" to 18 )
-  val adults = map.mapNotNull { (name, age) -> name.takeIf { age >= 18 } }
-  println(adults) // [Alice, Bob]
-```

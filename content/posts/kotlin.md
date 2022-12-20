@@ -576,4 +576,11 @@ fun main(args: Array<String>) {
 
 ## Unit Functions
 
-Kotlin uses the _Unit_ return type to signify exactly this: a a function that returns no value. If the return keyword is not used, it is implicit that the return type for that function is Unit.
+Not all functions return a value. Some use side effects instead to do their work, like modifying the state of a variable or calling other functions that yield system output.
+
+```kotlin
+private fun castFireball(numFireballs: Int = 2) = 
+    println("A glass of Fireball springs into existence. (x$numFireballs)")
+```
+
+Kotlin uses the _Unit_ return type to signify exactly this: a function that returns no value. If the return keyword is not used, it is implicit that the return type for that function is Unit.

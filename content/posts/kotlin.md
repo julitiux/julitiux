@@ -584,3 +584,29 @@ private fun castFireball(numFireballs: Int = 2) =
 ```
 
 Kotlin uses the _Unit_ return type to signify exactly this: a function that returns no value. If the return keyword is not used, it is implicit that the return type for that function is Unit.
+
+## Named Function Aguments
+
+Take a look at how you call the printPlayerStatus function, passing arguments as parameters:
+
+```kotling
+printPlayerStatus("NONE", true, "Mandrigal", status)
+```
+
+Another way you could call the same function is:
+
+```kotlin
+printPlayerStatus(auraColor = "NONE",
+                  isBlessed = true,
+                  name = "Mandrigal",
+                  healthStatus = status)
+```
+
+This optional syntax uses a _named function arguments_ and is an alternative way to provide arguments to a function. Using named arguments frees you to pass the argument to the function in whatever order you would like. For example, you could also call *printPlayerStatus like this:
+
+```kotlin
+printPlayerStatus(healthStatus = status,
+                  auraColor = "NONE",
+                  name = "Mandrigal",
+                  isBlessed = true)
+```

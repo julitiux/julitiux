@@ -664,4 +664,12 @@ fun main(args: Array<String>) {
 <<  })()
     println(greetingFunction())
 }
+```
+
+## Figure 5.1 Function type sintaxis
 ```kotlin
+    fun greetingFunction():   String
+                        v       v
+                        () -> String 
+```
+A function type definition consists of two parts: the function's parameters, in parentheses, followed by its return type, delimited by the arrow (->), as show in Figure 5.1

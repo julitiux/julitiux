@@ -648,3 +648,20 @@ fun main(args: Array<String>) {
 ```
 
 Outside the anonymous function's closing brace, you call function with a pair of empty parentheses.
+
+## The function type
+
+Anonymous functions also have a type, called the __function type__. Variables of the function type can hold an anonymous function as their value, and the function can then be passed around your code like any other variable.
+
+## Listing 5.2 Assigning the anonymous function to a variable (SimVillage.kt)
+```kotlin
+fun main(args: Array<String>) {
+<<  println({
+>>  val greetingFunction: () -> String = {
+>>      val currentYear = 2018
+>>      "Welcome to SimVillage, Mayor! (copyright $currentYear)"
+>>  }
+<<  })()
+    println(greetingFunction())
+}
+```kotlin

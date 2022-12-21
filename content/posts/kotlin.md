@@ -774,3 +774,30 @@ fun main(args: Array<String>) {
 >>      println(greetingFunction(playerName, numBuildings))
 >>  } 
 ```
+
+## Shorthand syntaxis
+When a function accepts a function type for its last parameter, you can also aomit the parenthesesaroung the lambda argument.
+
+```kotlin
+"Mississippi".count({it == 's'})
+```
+Can also written this way
+```kotlin
+"Mississippi".count {it == 's'}
+```
+### Listing 5.8 Passing a lambda with the shorthand syntax (SimVillage.kt)
+```kotlin
+fun main(args: Array<String>) {
+<<  val greetingFunction = { playerName: String, numBuildings: Int ->
+>>  runSimulation("Guyal") { playerName, numBuildings ->
+        val currentYear = 2018
+        println("Adding $numBuildings houses")
+        "Welcome to SimVillage, $playerName! (copyright $currentYear)"
+    }
+}
+
+fun runSimulation(playerName: String, greetingFunction: (String, Int) -> String) {
+   val numBuildings = (1..3).shuffled().last()   // Randomly selects 1, 2, or 3
+   println(greetingFunction(playerName, numBuildings))
+}
+```

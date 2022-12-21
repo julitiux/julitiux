@@ -653,7 +653,7 @@ Outside the anonymous function's closing brace, you call function with a pair of
 
 Anonymous functions also have a type, called the __function type__. Variables of the function type can hold an anonymous function as their value, and the function can then be passed around your code like any other variable.
 
-## Listing 5.2 Assigning the anonymous function to a variable (SimVillage.kt)
+### Listing 5.2 Assigning the anonymous function to a variable (SimVillage.kt)
 ```kotlin
 fun main(args: Array<String>) {
 <<  println({
@@ -666,10 +666,21 @@ fun main(args: Array<String>) {
 }
 ```
 
-## Figure 5.1 Function type sintaxis
+### Figure 5.1 Function type sintaxis
 ```kotlin
     fun greetingFunction():   String
                         v       v
                         () -> String 
 ```
 A function type definition consists of two parts: the function's parameters, in parentheses, followed by its return type, delimited by the arrow (->), as show in Figure 5.1
+
+## Implicit returns
+
+Maybe you have noticed that there is no return keyword within the anonymous function you defined:
+```kotlin
+    val greeetingFunction: () -> String = {
+        val currentYear = 2018
+        "Welcome to SimVillage, Mayor (copyrigth $currentYear)"
+    }
+```
+

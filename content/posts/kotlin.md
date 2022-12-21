@@ -858,3 +858,58 @@ inline fun runSimulation(playerName: String,
         println("construction cost: ${cost * numBuildings}")
     }
 ```
+
+to obtain a function reference, you use the :: operator with the function name you would like a reference for.
+
+### Listing 5.12 Passing a function reference (SimVillage.kt)
+```kotlin
+fun main(args: Array<String>) {
+<<  runSimulation("Guyal") { playerName, numBuildings ->
+>>  runSimulation("Guyal", ::printConstructionCost) { playerName, numBuildings ->
+        val currentYear = 2018
+        println("Adding $numBuildings houses")
+        "Welcome to SimVillage, $playerName! (copyright $currentYear)"
+    } 
+}
+...
+```
+
+## Function Type as return type
+
+Like any other type, the function type is also a valid return type, meaning you can define a function that returns a function
+
+### Listing5.13 Adding the configureGreetingFunction function (SimVillage.kt)
+
+```kotling
+fun main(args: Array<String>) {
+<<  runSimulation("Guyal", ::printContructionCost) { playerName, numBuildings ->
+<<      val currentYear = 2018
+<<      println("Adding $numBuildings houses")
+<<      "Welcome to SimVillage, $playerName! (copyright $currentYear)"
+<<  }
+>>  runSimulation()
+}
+
+<<inline fun runSimulation(playerName: String,
+<<                        costPrinter: (Int) -> Unit,
+<<                        greetingFunction: (String, Int) -> String) {
+<<    val numBuildings = (1..3).shuffled().last()   // Randomly selects 1, 2, or 3
+<<    costPrinter(numBuildings)
+<<    println(greetingFunction(playerName, numBuildings))
+>>fun runSimulation() {
+>>    val greetingFunction = configureGreetingFunction()
+>>    println(greetingFunction("Guyal"))
+}
+
+>>fun configureGreetingFunction(): (String) -> String {
+>>    val structureType = "hospitals"
+>>    var numBuildings = 5
+>>    return { playerName: String ->
+>>        val currentYear = 2018
+>>        numBuildings += 1
+>>        println("Adding $numBuildings $structureType")
+>>        "Welcome to SimVillage, $playerName! (copyright $currentYear)"
+>>    } 
+>>}
+
+```

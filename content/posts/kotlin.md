@@ -801,3 +801,22 @@ fun runSimulation(playerName: String, greetingFunction: (String, Int) -> String)
    println(greetingFunction(playerName, numBuildings))
 }
 ```
+
+## Function Inlining
+
+Lambda are useful because they enable a high degree of felxibility in how your programs can be written. However, that flexibility comes at a cost.
+
+When you define a lambda, it is represented as an object instancce on the JVM. The JVM alse performs memory allocations for all variables accesible to the lambda, and this behavior comes with associated memory costs. As a result, lambdas introduce memory overhead that can in turn cause a performance impact - and such performance impacts are to be avoided.
+
+The inline a lambda, you mark the function that accpets the lambda using the _inline_ keyword.
+
+### Listing5.9 Using the inline keyword (SimVillage.kt)
+
+```kotlin
+...
+inline fun runSimulation(playerName: String,
+                         greetingFunction: (String, Int) -> String) {
+    val numBuildings = (1..3).shuffled().last()   // Randomly selects 1, 2, or 3
+    println(greetingFunction(playerName, numBuildings))
+}
+```

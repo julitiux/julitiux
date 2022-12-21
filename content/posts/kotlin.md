@@ -610,3 +610,29 @@ printPlayerStatus(healthStatus = status,
                   name = "Mandrigal",
                   isBlessed = true)
 ```
+
+# 5. Anonymous Functions and the Function Type
+
+Functions defined without a name, called _anonymous functions_, are similar, with two major differences: Anonymous functions have no name as part of their definition, an they interact with the rest of your code a little different in that they are commonly passed to or returned from other functions.
+
+## Anonymous Functions
+
+An anonymous function lets you describe additional rules for a standar library function so that you can customize its behavior.
+
+One of meny functions in teh standard library is __count__. When called on a string, __count__ return the total number of letters in the string. The following code counts the letters in the string "Mississippi"
+
+```kotlin
+val numLetters = "Mississippi".count()
+println(numLetters)
+// Prints 11
+```
+
+But what if you wanted to count only a specific character in "Mississippi, say the letter "s". the kotlin standard library allows you to provide rules to the __count__ function to determine whether a letter should be counted. You describe the rules for the function by providing an anonymous function as an argument:
+
+```kotlin
+val numLetters = "Mississippi".count({ letter ->
+    letter == 's'
+})
+println(numLetters)
+// Prints 4
+```

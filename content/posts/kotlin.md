@@ -684,3 +684,37 @@ Maybe you have noticed that there is no return keyword within the anonymous func
     }
 ```
 
+## Function arguments
+
+Like a named function, an anonymous function can accept zero, one or multiple argument of any type. The parameters an anonymous function accepts are indicated by type in the function type definition and then named in the anonymous functions's definition.
+
+### Listing5.3 Adding a playerName parameter to the anonymous function (SimVillage.kt)
+```kotlin
+fun main(args: Array<String>) {
+<<  val greetingFunction: () -> String = {
+>>  val greetingFunction: (String) -> String = { playerName ->
+        val currentYear = 2018
+<<      "Welcome to SimVillage, Mayor! (copyright $currentYear)"
+>>      "Welcome to SimVillage, $playerName! (copyright $currentYear)"
+    }
+<<  println(greetingFunction())
+>>  println(greetingFunction("Guyal"))
+}
+```
+
+## The it keyword
+
+When defining anonymous functions that accept exactly one argument, the it keyword is available as a convenient alternative to specifying the parameter name.
+
+### Listing 5.4 Using the it keyword (SimVillage.kt)
+```kotlin
+fun main(args: Array<String>) {
+<<  val greetingFunction: (String) -> String = { playerName ->
+>>  val greetingFunction: (String) -> String = {
+        val currentYear = 2018
+<<      "Welcome to SimVillage, $playerName! (copyright $currentYear)"
+>>      "Welcome to SimVillage, $it! (copyright $currentYear)"
+    }
+    println(greetingFunction("Guyal"))
+}
+```

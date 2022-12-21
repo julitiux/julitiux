@@ -752,3 +752,25 @@ fun main() {
     println(greetingFunction("Guyal", 2))
 }
 ```
+
+## Defining a Function that accpets a function
+
+The book refers to anonymous functions as lambdas and their definitions as lambda expressions.
+
+### Listing 5.7 Adding the runSimulation function (SimVillage.kt)
+```kotlin
+fun main(args: Array<String>) {
+    val greetingFunction = { playerName: String, numBuildings: Int ->
+        val currentYear = 2018
+        println("Adding $numBuildings houses")
+        "Welcome to SimVillage, $playerName! (copyright $currentYear)"
+    }
+<<  println(greetingFunction("Guyal", 2))
+>>  runSimulation("Guyal", greetingFunction)
+}
+
+>>  fun runSimulation(playerName: String, greetingFunction: (String, Int) -> String) {
+>>      val numBuildings = (1..3).shuffled().last()   // Randomly selects 1, 2, or 3
+>>      println(greetingFunction(playerName, numBuildings))
+>>  } 
+```

@@ -718,3 +718,21 @@ fun main(args: Array<String>) {
     println(greetingFunction("Guyal"))
 }
 ```
+
+## Acceptig multiple arguments
+While the _it_ syntaxis is available for an anonymous function that accept one argument, it is not allowed when there is more than one argument, However, anonymous functions can certainly accept multiplen named arguments.
+
+### Listing 5.5 Accepting a second argument (SimVillage.kt)
+```kotlin
+fun main(args: Array<String>) {
+<<  val greetingFunction: (String) -> String = {
+>>  val greetingFunction: (String, Int) -> String = { playerName, numBuildings ->
+        val currentYear = 2018
+>>      println("Adding $numBuildings houses")
+<<      "Welcome to SimVillage, $it! (copyright $currentYear)"
+>>      "Welcome to SimVillage, $playerName! (copyright $currentYear)"
+    }
+<<  println(greetingFunction("Guyal"))
+>>  println(greetingFunction("Guyal", 2))
+}
+```

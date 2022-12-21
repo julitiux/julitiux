@@ -636,3 +636,15 @@ val numLetters = "Mississippi".count({ letter ->
 println(numLetters)
 // Prints 4
 ```
+
+### Listing 5.1 Defining an anonymous greeting function (SimVillage.kt)
+```kotlin
+fun main(args: Array<String>) {
+    println({
+        val currentYear = 2018
+        "Welcome to SimVillage, Mayor! (copyright $currentYear)"
+    }())
+}
+```
+
+Outside the anonymous function's closing brace, you call function with a pair of empty parentheses.

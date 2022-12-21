@@ -736,3 +736,19 @@ fun main(args: Array<String>) {
 >>  println(greetingFunction("Guyal", 2))
 }
 ```
+
+## Type inference Support
+Kotlin's type inference rules behave exactly the same with function types as they do with the types you met earlier in thie book: If a variabe is given an anonymous function as its value when it is declared no explicit tyoe definition is needed.
+
+### Listing 5.6 Using type inference for greetingFunction (SimVillage.kt)
+```kotlin
+fun main() {
+<<  val greetingFunction: (String, Int) -> String = { playerName, numBuildings ->
+>>  val greetingFunction = { playerName: String, numBuildings: Int ->
+        val currentYear = 2018
+        println("Adding $numBuildings houses")
+        "Welcome to SimVillage, $playerName! (copyright $currentYear)"
+    }
+    println(greetingFunction("Guyal", 2))
+}
+```

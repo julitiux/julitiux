@@ -820,3 +820,41 @@ inline fun runSimulation(playerName: String,
     println(greetingFunction(playerName, numBuildings))
 }
 ```
+
+## Function References
+
+So far, you have defined lambdas to provide a function as an argument to another function. There is another way to do so: by passing a —function reference_. A function reference converts a named function (a function defined using the fun keyword) to a value that can be passed as an argument. Tou can use a function reference anywhere you use a lamnda expresion.
+
+### Listing 5.10 Defining the printConstructionCost function (SimVillage.kt)
+```kotlin
+...
+inline fun runSimulation(playerName: String,
+                        greetingFunction: (String, Int) -> String) {
+    val numBuildings = (1..3).shuffled().last()   // Randomly selects 1, 2, or 3
+    println(greetingFunction(playerName, numBuildings))
+}
+
+>>  fun printConstructionCost(numBuildings: Int) {
+>>      val cost = 500
+>>      println("construction cost: ${cost * numBuildings}")
+>>  }
+```
+
+### Listing 5.11 Adding a costPrinter parameter (SimVillage.kt)
+```kotlin
+...
+<<  inline fun runSimulation(playerName: String,
+<<                           greetingFunction: (String, Int) -> String) {
+>>  inline fun runSimulation(playerName: String,
+>>                           costPrinter: (Int) -> Unit,
+                             greetingFunction: (String, Int) -> String) {
+        val numBuildings = (1..3).shuffled().last()   // Randomly selects 1, 2, or 3
+        costPrinter(numBuildings)
+        println(greetingFunction(playerName, numBuildings))
+    }
+    
+    fun printConstructionCost(numBuildings: Int) {
+        val cost = 500
+        println("construction cost: ${cost * numBuildings}")
+    }
+```

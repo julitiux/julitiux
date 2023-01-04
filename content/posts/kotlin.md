@@ -911,5 +911,20 @@ fun main(args: Array<String>) {
 >>        "Welcome to SimVillage, $playerName! (copyright $currentYear)"
 >>    } 
 >>}
+```
 
+# 6. Null safety and exceptions
+
+Null is a especial value that indicates that the value of a var does not exists
+
+## Nullability
+
+Some elements in Kotlin can be assigned a value of null, and some cannot. We say thta the former are _nullable_ and the latter are _non-nullable_
+
+### Listing 6.1 Reassigning a var’s value to null (Tavern.kt)
+```kotlin
+fun main(args: Array<String>) {
+    var signatureDrink = "Buttered Ale"
+    signatureDrink = null
+}
 ```

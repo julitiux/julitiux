@@ -956,3 +956,14 @@ fun main(args: Array<String>) {
     println(beverage)
 }
 ```
+
+### Listing 6.4 Restoring service (Tavern.kt)
+```kotlin
+fun main(args: Array<String>) { 
+    var beverage = readLine() 
+<<  beverage = null
+>>  // beverage = null
+   
+    println(beverage)
+}
+```

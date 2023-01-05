@@ -1004,3 +1004,23 @@ fun main(args: Array<String>) {
     println(beverage)
 }
 ```
+
+## Using safe calls with let
+
+
+### Listing 6.7 Using __let__ with the safe call operator(Tavern.kt)
+
+```kotlin
+fun main(args: Array<String>) {
+<<  var beverage = readLine()?.capitalize()
+>>  var beverage = readLine()?.let {
+>>      if (it.isNotBlank()) {
+>>          it.capitalize()
+>>      } else {
+>>          "Buttered Ale"
+>>      }
+>>  }
+//  beverage = null
+println(beverag
+
+```

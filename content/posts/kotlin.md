@@ -1026,3 +1026,25 @@ println(beverag
 ```
 
 This time you assign its value to the result of safely calling let on it. When bevereage is not null and __let__ is invoked, everything withit the anonymous function passed to __let__ is evaluated: The input from __readline__ is checkef to see whether it is blank; if it is not blank it is capitalized, and if it is blank, then a fallback beverage name, "Buttered Ale", is returned instead. Both __isNotBlank__  and __capitalize__ require the beverage name to be non-null, which is guaranteed by __let__
+
+## Option two: the double-bang operator
+
+The double-bang operator (!!.) can be used to call a function on a nullable type . But be forewarned. This is a much drastic option than the safe call operator and should generally not be used. If you use !!., you are proclaming tot he compiler: "If I ask nonexistent thing to do something, I DEMAND that you throw a null pointer exception!!"
+
+By the way, its official name is the _non-null assertion operator_, but is more often called the double-bang operator.
+
+Listing 6.8 Using the double-bang operator (Tavern.kt)
+```kotlin
+fun main(args: Array<String>) {
+<<  var beverage = readLine()?.let {
+<<      if (it.isNotBlank()) {
+<<          it.capitalize()
+<<      } else {
+<<          "Buttered Ale"
+<<      }
+<<  }
+
+>>  var beverage = readLine()!!.capitalize()
+    // beverage = null
+    println(beverage)
+```

@@ -975,3 +975,18 @@ Kotlin is a _compiler language_, meaning that your program is translated into ma
 Errors caught at compiler time are called _compile-time errors_, and they are one of the adventages of working with kotlin.
 
 On the other hand, a _runtime error_ us a mistake that happends after the program has compiled and is already running, because the compuler was unable to dicovery it.
+
+## Null Safety
+
+Because Kotlin distinguishes between multiple nullable and non-nullable types, the compiler is aware of the possibly dangerous situation of asking a variable defined as a nullable type to do something when the variable might not exists.
+
+Listing 6.5 Using a nullable variable (Tavern.kt)
+```kotlin
+fun main(args: Array<String>) {
+<<  var beverage = readLine()
+>>  var beverage = readLine().capitalize()
+//   beverage = null
+    
+    println(beverage)
+}
+```

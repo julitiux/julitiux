@@ -980,13 +980,27 @@ On the other hand, a _runtime error_ us a mistake that happends after the progra
 
 Because Kotlin distinguishes between multiple nullable and non-nullable types, the compiler is aware of the possibly dangerous situation of asking a variable defined as a nullable type to do something when the variable might not exists.
 
-Listing 6.5 Using a nullable variable (Tavern.kt)
+### Listing 6.5 Using a nullable variable (Tavern.kt)
 ```kotlin
 fun main(args: Array<String>) {
 <<  var beverage = readLine()
 >>  var beverage = readLine().capitalize()
 //   beverage = null
     
+    println(beverage)
+}
+```
+
+Option one: the safe call operator
+
+Sometimes, nothing but a nullable type will do. For example, when you are working with a variable from code you do not control, you cannot be sure that it eill not return null. In cases like that, your first option is to use the _safe call operator_ __(?.)__ in your function call.
+
+### Listing 6.6 Using the safe call operator (Tavern.kt)
+```kotlin
+fun main(args: Array<String>) {
+<<  var beverage = readLine().capitalize()
+>>  var beverage = readLine()?.capitalize()
+//   beverage = null
     println(beverage)
 }
 ```

@@ -967,3 +967,11 @@ fun main(args: Array<String>) {
     println(beverage)
 }
 ```
+
+## Compile Time vs Runtime
+
+Kotlin is a _compiler language_, meaning that your program is translated into machine-language instructions prior to execution by a special program, called the compiler. During this step, the compiler ensures that certain requirements are met by you code before the instructions are generated
+
+Errors caught at compiler time are called _compile-time errors_, and they are one of the adventages of working with kotlin.
+
+On the other hand, a _runtime error_ us a mistake that happends after the program has compiled and is already running, because the compuler was unable to dicovery it.

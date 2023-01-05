@@ -991,7 +991,7 @@ fun main(args: Array<String>) {
 }
 ```
 
-Option one: the safe call operator
+## Option one: the safe call operator
 
 Sometimes, nothing but a nullable type will do. For example, when you are working with a variable from code you do not control, you cannot be sure that it eill not return null. In cases like that, your first option is to use the _safe call operator_ __(?.)__ in your function call.
 
@@ -1007,6 +1007,7 @@ fun main(args: Array<String>) {
 
 ## Using safe calls with let
 
+__Let__ provides its own function scope, you can use a safe call with __let__ to scope multiple expressions that each require the variable that they are called on to be non-null.
 
 ### Listing 6.7 Using __let__ with the safe call operator(Tavern.kt)
 
@@ -1022,5 +1023,6 @@ fun main(args: Array<String>) {
 >>  }
 //  beverage = null
 println(beverag
-
 ```
+
+This time you assign its value to the result of safely calling let on it. When bevereage is not null and __let__ is invoked, everything withit the anonymous function passed to __let__ is evaluated: The input from __readline__ is checkef to see whether it is blank; if it is not blank it is capitalized, and if it is blank, then a fallback beverage name, "Buttered Ale", is returned instead. Both __isNotBlank__  and __capitalize__ require the beverage name to be non-null, which is guaranteed by __let__

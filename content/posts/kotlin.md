@@ -944,3 +944,15 @@ fun main(args: Array<String>) {
 >>  println(beverage)
 }
 ```
+
+This means that assigning beverage to a null value will indeed compile
+
+### Listing 6.3 Reassigning a variable to null (Tavern.kt)
+```kotlin
+fun main(args: Array<String>) { 
+    var beverage = readLine() 
+>>  beverage = null
+    
+    println(beverage)
+}
+```

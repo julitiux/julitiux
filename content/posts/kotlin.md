@@ -928,3 +928,19 @@ fun main(args: Array<String>) {
     signatureDrink = null
 }
 ```
+
+Null can not be a value of a non-null type String
+
+## Kotlin's Explicit null type
+
+NullPointerExceptions like the one that you say above should be avoided ata ll costs.
+
+### Listing 6.2 Defining a nullable variable (Tavern.kt)
+```kotlin
+fun main(args: Array<String>) {
+<<  var signatureDrink = "Buttered Ale"
+<<  signatureDrink = null
+>>  var beverage = readLine()
+>>  println(beverage)
+}
+```

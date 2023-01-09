@@ -1206,3 +1206,35 @@ fun proficiencyCheck(swordsJuggling: Int?) {
 class UnskilledSwordJugglerException() :
         IllegalStateException("Player cannot juggle swords")
 ```
+
+## Preconditions
+
+Unexpected values can cause your program to behave in unintended way. As a developer, you will spend plenty of time validating input to endure you are working with the calues you intend. some sources of exceptions are common, like unexpected null values.
+
+These functions are called _precondition functions_, because they allow you to define preconditions - conditions that must be true before some piece of code is executed.
+
+### Listing 6.17 Using a precondition function (SwordJuggler.kt)
+```kotlin
+fun main(args: Array<String>) {
+    var swordsJuggling: Int? = null
+    val isJugglingProficient = (1..3).shuffled().last() == 3
+    if (isJugglingProficient) {
+        swordsJuggling = 2
+    }
+    try {
+        proficiencyCheck(swordsJuggling)
+        swordsJuggling = swordsJuggling!!.plus(1)
+    } catch (e: Exception) {
+        println(e) 
+    }
+    println("You juggle $swordsJuggling swords!")
+
+}
+fun proficiencyCheck(swordsJuggling: Int?) {
+<<  swordsJuggling ?: throw UnskilledSwordJugglerException()
+>>  checkNotNull(swordsJuggling, { "Player cannot juggle swords" })
+}
+
+class UnskilledSwordJugglerException() :
+        IllegalStateException("Player cannot juggle swords")
+```

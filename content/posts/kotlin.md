@@ -1048,3 +1048,26 @@ fun main(args: Array<String>) {
     // beverage = null
     println(beverage)
 ```
+
+I don't care whether beverage is null; capitalize it anyway!. If beverage is indeed null, a KotlinNullPointerException us thrown.
+
+## Option three: checking whether a value is null with if
+
+A third option for working safely with null values is to check whether a value is null a condition for executing an __if__ branch
+
+Listing 6.9 Using != null for null checking (Tavern.kt)
+```kotlin
+fun main(args: Array<String>) {
+<<  var beverage = readLine()!!.capitalize()
+>>  var beverage = readLine()
+    // beverage = null
+>>  if (beverage != null) {
+>>      beverage = beverage.capitalize()
+>>  } else {
+>>      println("I can't do that without crashing - beverage was null!")
+>>  }
+  
+    println(beverage)
+    
+}
+```

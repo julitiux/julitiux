@@ -1163,4 +1163,17 @@ You have now seen how to use the throw operator  to signal that an exception has
 
 >> class UnskilledSwordJugglerException() :
 >>         IllegalStateException("Player cannot juggle swords")
+```
+
+### Listing 6.15 Throwing a custom exception (SwordJuggler.kt)
 ```kotlin
+    fun main(args: Array<String>) {
+        ... 
+    }
+    fun proficiencyCheck(swordsJuggling: Int?) {
+<<      swordsJuggling ?: throw IllegalStateException("Player cannot juggle swords")
+>>      swordsJuggling ?: throw UnskilledSwordJugglerException()
+    }
+    class UnskilledSwordJugglerException() :
+        IllegalStateException("Player cannot juggle swords")
+```

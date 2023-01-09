@@ -1068,6 +1068,26 @@ fun main(args: Array<String>) {
 >>  }
   
     println(beverage)
-    
+
 }
 ```
+## The null coalescing operator
+
+Another way to check for null values is to use kotlin's _null coalescing operator_ __?:__ also know as the "Elvis operator". this operator says: "If the thing on the lefthand side of me is null, do the thing on the righthand side instead".
+
+Listing 6.10 Using the null coalescing operator (Tavern.kt)
+```kotlin
+fun main(args: Array<String>) {
+    var beverage = readLine()
+    // beverage = null
+    if (beverage != null) {
+        beverage = beverage.capitalize()
+    } else {
+        println("I can't do that without crashing - beverage was null!")
+    }
+
+<<  println(beverage)
+>>  val beverageServed: String = beverage ?: "Buttered Ale"
+>>  println(beverageServed)
+}
+```kotlin

@@ -1033,7 +1033,8 @@ The double-bang operator (!!.) can be used to call a function on a nullable type
 
 By the way, its official name is the _non-null assertion operator_, but is more often called the double-bang operator.
 
-Listing 6.8 Using the double-bang operator (Tavern.kt)
+### Listing 6.8 Using the double-bang operator (Tavern.kt)
+
 ```kotlin
 fun main(args: Array<String>) {
 <<  var beverage = readLine()?.let {
@@ -1055,7 +1056,8 @@ I don't care whether beverage is null; capitalize it anyway!. If beverage is ind
 
 A third option for working safely with null values is to check whether a value is null a condition for executing an __if__ branch
 
-Listing 6.9 Using != null for null checking (Tavern.kt)
+### Listing 6.9 Using != null for null checking (Tavern.kt)
+
 ```kotlin
 fun main(args: Array<String>) {
 <<  var beverage = readLine()!!.capitalize()
@@ -1075,7 +1077,8 @@ fun main(args: Array<String>) {
 
 Another way to check for null values is to use kotlin's _null coalescing operator_ __?:__ also know as the "Elvis operator". this operator says: "If the thing on the lefthand side of me is null, do the thing on the righthand side instead".
 
-Listing 6.10 Using the null coalescing operator (Tavern.kt)
+### Listing 6.10 Using the null coalescing operator (Tavern.kt)
+
 ```kotlin
 fun main(args: Array<String>) {
     var beverage = readLine()
@@ -1090,4 +1093,35 @@ fun main(args: Array<String>) {
 >>  val beverageServed: String = beverage ?: "Buttered Ale"
 >>  println(beverageServed)
 }
+```
+
+## Exceptions
+
+Like many others languages, kotlin laso includes _exceptions_ to indicate that something went wrong in you program
+
+### Listing 6.11 Adding sword juggling logic (SwordJuggler.kt)
+
 ```kotlin
+fun main(args: Array<String>) {
+    var swordsJuggling: Int? = null
+    val isJugglingProficient = (1..3).shuffled().last() == 3
+    if (isJugglingProficient) {
+        swordsJuggling = 2
+    }
+    println("You juggle $swordsJuggling swords!")
+}
+```
+
+### Listing 6.12 Adding a third sword (SwordJuggler.kt)
+
+```kotlin
+fun main(args: Array<String>) {
+    var swordsJuggling: Int? = null
+    val isJugglingProficient = (1..3).shuffled().last() == 3
+    if (isJugglingProficient) {
+        swordsJuggling = 2
+    }
+    swordsJuggling = swordsJuggling!!.plus(1)
+    println("You juggle $swordsJuggling swords!")
+}
+```

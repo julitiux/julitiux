@@ -1248,3 +1248,8 @@ Table 6.1 Kotlin precondition functions
 | requireNotNull | Throws an IllegalArgumentException if argument is null, Otherwise returns the non-null value. |
 | error | Throw an IllegalArgumentException with a provided message if argument is null,. Otherwise return the non-null value. |
 | assert | Throws an AssertionError if argument is false and the assertion compiler flag is enabled |
+
+
+# 7. Strings
+
+In programming, textual data is represented by _strings_ -ordered sequences of characteres.

@@ -1148,3 +1148,19 @@ fun main(args: Array<String>) {
 >>  }
 ```
 
+## Custom exceptions
+
+You have now seen how to use the throw operator  to signal that an exception has occurred. The exception you just threw, IllegalStateException, indicates that an illegal state has ocurres and gives  you the opportunity to add more information by passing a string to be printed when the exception is thrown.
+
+### Listing 6.14 Defining a custom exception (SwordJuggler.kt)
+```kotlin
+  fun main(args: Array<String>) {
+  ...   
+  }
+  fun proficiencyCheck(swordsJuggling: Int?) {
+      swordsJuggling ?: throw IllegalStateException("Player cannot juggle swords")
+  }
+
+>> class UnskilledSwordJugglerException() :
+>>         IllegalStateException("Player cannot juggle swords")
+```kotlin

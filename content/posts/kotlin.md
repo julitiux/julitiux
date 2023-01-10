@@ -1253,3 +1253,30 @@ Table 6.1 Kotlin precondition functions
 # 7. Strings
 
 In programming, textual data is represented by _strings_ -ordered sequences of characteres.
+
+## Extracting Substrings
+
+### Substrings
+
+### Listing 7.1 Extracting the tavern master’s name (Tavern.kt)
+```kotlin
+>>  const val TAVERN_NAME = "Taernyl's Folly"
+
+fun main(args: Array<String>) {
+<<  var beverage = readLine()
+<<  // beverage = null
+<<  if (beverage != null) {
+<<      beverage = beverage.capitalize()
+<<  } else {
+<<      println("I can't do that without crashing - beverage was null!")
+<<  }
+<<  val beverageServed: String = beverage ?: "Buttered Ale"
+<<  println(beverageServed)
+    placeOrder()
+}
+>>  private fun placeOrder() {
+>>     val indexOfApostrophe = TAVERN_NAME.indexOf('\'')
+>>     val tavernMaster = TAVERN_NAME.substring(0 until indexOfApostrophe)
+>>     println("Madrigal speaks with $tavernMaster about their order.")
+>>  }
+```

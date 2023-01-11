@@ -1469,3 +1469,29 @@ private fun placeOrder(menuData: String) {
     println(phrase)
 }
 ```
+
+## Decimal numbers
+
+Numeric calues with decimal places are represented with the Float od Double type. 
+
+### Listing 8.2 Passing the price information (Tavern.kt) 
+```kotlin
+const val TAVERN_NAME = "Taernyl's Folly"
+...
+fun performPurchase(price: Double) { 
+    displayBalance()
+>>  println("Purchasing item for $price")
+} 
+...
+
+private fun placeOrder(menuData: String) {
+    ...
+    
+    val (type, name, price) = menuData.split(',')
+    val message = "Madrigal buys a $name ($type) for $price."
+    println(message)
+    
+    performPurchase(price)
+    ... 
+}
+```

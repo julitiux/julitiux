@@ -1407,3 +1407,17 @@ Referential comparison is not usually what you want. You generally donot care wh
 
 Kotlin has a variety of types for dealing with numbers and numeric computations. Multiple types are available for each of two main varieties of numbers that Kotlin can work with: whole-number integers and numbers with decimals. 
 
+## Numeric Types
+
+All numeric types in kotlin, as in Java , are _signed_, meaning they can represent both positive and negative number. In addition to whether they support decimal values, the numeric types differ in the number of bits they are allocated in memory and, consequently, their minimum and maximum values.
+
+Table 8.1 Commonly used numeric types.
+
+| Type | Bits | Max Value | Min Value |
+|---|---|---|---|
+| Byte | 8 | 127 | -128 |
+| Short | 16 | 32767 | -32768 |
+| Int | 32 | 2147483647 | -2147483648 |
+| Long | 64 | 9223372036854775807 | -9223372036854775808 |
+| Float | 32 | 3.4028235E38 | 1.4E-45 |
+| Double | 64 | 1.7976931348623157E308 | 4.9E-324 |

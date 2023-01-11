@@ -1396,3 +1396,9 @@ private fun placeOrder(menuData: String) {
 Whether they are defined with _var_ or _val_, all strings in Kotlin are actually immutable (as they are in Java). Though the variables that hold the value for the String can be reassigned if the string is a var, the string instance itself an never be changed. Any function that appears to change teh value of a string (like replace) actually creates a new string with the change applied to it.
 
 ## String Comparison
+
+You checked the _structural equality_ of name and "Dragon's Breath" using the strucutral equality operator, ==. You have seen this operator before, used with numeric values. When used with strings, it checks that the characters in each string match one another and are in the same order.
+
+There is another way to check the equality of two variables: _comparing referential equality_, wich means checking that two variables share the same reference to a type instance - in other words, that two variables point to same object on the heap. Referential equality is checked using ===.
+
+Referential comparison is not usually what you want. You generally donot care whether strings are different instances, only that they have the same characters in the same sequences 

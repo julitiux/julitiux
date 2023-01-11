@@ -1421,3 +1421,51 @@ Table 8.1 Commonly used numeric types.
 | Long | 64 | 9223372036854775807 | -9223372036854775808 |
 | Float | 32 | 3.4028235E38 | 1.4E-45 |
 | Double | 64 | 1.7976931348623157E308 | 4.9E-324 |
+
+## Integers
+
+You learned in the Chapter 2 that an integer is a number that does not have a decimal point - a whole number - and is represented in kotlin with the _Int_ type. Int is good for representing a quantity od count of "things": the remaining points of mead, the number of tavern patrons, or the count of gold and silver coins a player possesses.
+
+### Listing 8.1 Setting up the player’s purse (Tavern.kt)
+```kotlin
+const val TAVERN_NAME = "Taernyl's Folly"
+
+var playerGold = 10
+var playerSilver = 10
+
+fun main(args: Array<String>) {
+    placeOrder("shandy,Dragon's Breath,5.91")
+ << placeOrder("elixir,Shirley's Temple,4.12")
+}
+
+>>  fun performPurchase() {
+>>      displayBalance()
+>>  }
+
+>>  private fun displayBalance() {
+>>      println("Player's purse balance: Gold: $playerGold , Silver: $playerSilver")
+>>  }
+
+private fun toDragonSpeak(phrase: String) =
+    ...
+}
+
+private fun placeOrder(menuData: String) {
+    val indexOfApostrophe = TAVERN_NAME.indexOf('\'')
+    val tavernMaster = TAVERN_NAME.substring(0 until indexOfApostrophe)
+    println("Madrigal speaks with $tavernMaster about their order.")
+ 
+    val (type, name, price) = menuData.split(',')
+    val message = "Madrigal buys a $name ($type) for $price."
+    println(message)
+
+>>  performPurchase()
+
+    val phrase = if (name == "Dragon's Breath") {
+        "Madrigal exclaims ${toDragonSpeak("Ah, delicious $name!")}"
+    } else {
+        "Madrigal says: Thanks for the $name."
+    }
+    println(phrase)
+}
+```

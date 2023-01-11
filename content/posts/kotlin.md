@@ -1600,3 +1600,18 @@ fun performPurchase(price: Double) {
 ```
 
 Here you use the _modulus operator_ (%, also known as the _remainder operator_), which finds the remainder when one number is divided by another.
+
+Kotlin includes functions for performing operations on the binary representations of valuem called bitwise operations - including operations you may be familiar from other languages, suchs as Java 
+
+### Table 8.2 Binary operations
+
+| Function | Description | Example |
+|---|---|---|
+| Integer.toBinaryString | Converts an integer to binary representation. | Integer.toBinaryString(42)  // 101010 |
+| shl(bitcount) | Shifts bits left by bitcount | 42.shl(2) // 10101000 |
+| shr(bitcount) | Shifts bits right by bitcount | 42.shr(2) // 1010 |
+| inv() | Invert bits | 42.inv() // 11111111111111111111111111010101 |
+| xor(number) | Compares two binary representations and performs a logical ‘exclusive or’ operation on the corresponding bit positions, returning 1 for each bit position that has a 1 in one input but not the other. | 42.xor(33) // 001011 |
+| and(number) | Compares two binary representations and performs
+a logical ‘and’ operation
+on the corresponding bit positions, returning 1 for each bit position that has a 1 in both inputs. | 42.and(10) // 1010 |

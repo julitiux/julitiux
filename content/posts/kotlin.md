@@ -1532,3 +1532,71 @@ private fun placeOrder(menuData: String) {
 }
 ```
 
+## Converting an Int to a Double
+
+### Listing 8.4 Subtracting the price from the player’s purse (Tavern.kt)
+```kotlin
+...
+fun performPurchase(price: Double) {
+    displayBalance()
+>>  val totalPurse = playerGold + (playerSilver / 100.0) 
+>>  println("Total purse: $totalPurse") 
+    println("Purchasing item for $price")
+
+>>  val remainingBalance = totalPurse - price
+} 
+...
+```
+
+## Formatting a Double
+
+Rather than working with 4.1899999999999995 pieces of goldm you will round the value up to 4.19. String's __format__ function can be used to round a double to a precision that you define. 
+
+### Listing 8.5 Formatting a double (Tavern.kt)
+```kotlin
+...
+fun performPurchase(price: Double) {
+    displayBalance()
+    val totalPurse = playerGold + (playerSilver / 100.0)
+    println("Total purse: $totalPurse")
+    println("Purchasing item for $price")
+    
+    val remainingBalance = totalPurse - price
+>>  println("Remaining balance: ${"%.2f".format(remainingBalance)}")
+} ...
+```
+
+The gold remaining the purse is interpolated into the string using $, as you have seen before, But wht follows the $ is not simply the name of the variable - it is an expression in curly braces. Within th braces is a call to __format__with remainingBalance passed in as the argument.
+
+The call to __format__ also specifies a format string "%.2f". A format string uses a special sequences if characters to define how you want to format data. The particular format string you defined specifies that you want to round the floating point number up to the second decimal place. Then you pass the value or values to format as an argument to the __format__ function. 
+
+## Converting a Double to an Int
+
+Here, you used two conversions functions available on Double. Calling __toInt__ on a Double results in dropping any fractional value from the double. Another term for this is _loss of precision_. Some portion of the original data is lost, because you asked for an interger representation of a double that included a fractional quantity, and the integer representation is less precise.
+
+### Listing 8.6 Converting to silver and gold (Tavern.kt)
+
+```kotlin
+>>imports kotlin.math.roundToInt
+const val TAVERN_NAME = "Taernyl's Folly"
+...
+
+fun performPurchase(price: Double) {
+    displayBalance()
+    val totalPurse = playerGold + (playerSilver / 100.0)
+    println("Total purse: $totalPurse")
+    println("Purchasing item for $price")
+
+    val remainingBalance = totalPurse - price
+    println("Remaining balance: ${"%.2f".format(remainingBalance)}")
+
+>>  val remainingGold = remainingBalance.toInt()
+>>  val remainingSilver = (remainingBalance % 1 * 100).roundToInt()
+>>  playerGold = remainingGold
+>>  playerSilver = remainingSilver
+>>  displayBalance()
+}
+...
+```
+
+Here you use the _modulus operator_ (%, also known as the _remainder operator_), which finds the remainder when one number is divided by another.

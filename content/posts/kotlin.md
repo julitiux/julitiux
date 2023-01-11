@@ -1354,3 +1354,39 @@ private fun placeOrder(menuData: String) {
     println(message)
 }
 ```
+## String Manipulation
+
+### Replace
+
+The version of the __replace__ function you used accepts two arguments. The first argument is a __regular expression__ that determines which characteres you want to replace, A regular expression, or __regex__, defines a search pattern for characters you want to look for.
+
+__Regex__ accpets a pattern argument, "[aeiou]", that defines the characters you want to match and replace. Kotlin uses tha same regular expression patterns as Java
+
+### Listing 7.5 Defining the __toDragonSpeak__ function (Tavern.kt)
+```kotlin
+const val TAVERN_NAME = "Taernyl's Folly"
+
+fun main(args: Array<String>) {
+    placeOrder("shandy,Dragon's Breath,5.91")
+}
+
+>>private fun toDragonSpeak(phrase: String) =
+>>    phrase.replace(Regex("[aeiou]")) {
+>>        when (it.value) {
+>>            "a" -> "4"
+>>            "e" -> "3"
+>>            "i" -> "1"
+>>            "o" -> "0"
+>>            "u" -> "|_|"
+>>            else -> it.value
+>>        } 
+>>    }
+
+private fun placeOrder(menuData: String) {
+    ...
+    println(message)
+
+>>  val phrase = "Ah, delicious $name!"
+>>  println("Madrigal exclaims: ${toDragonSpeak(phrase)}")
+}
+```

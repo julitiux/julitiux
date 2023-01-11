@@ -1495,3 +1495,40 @@ private fun placeOrder(menuData: String) {
     ... 
 }
 ```
+
+## Converting a String to a Numeric Type
+
+Kotlin includes functions that convert strings to different types - including numbers. Some of the most commonly used of these conversion functions are:
+
+* toFloat 
+* toDouble
+* toDoubleOrNull
+* toIntOrNull
+* toLong
+* toBigDecimal
+
+Attempting to convert a string of the wrong format will thrown an exception.
+
+Kotlin also provides the safe conversion functions __toDoubleOrNull__ and __toIntOrNull__. When the number does not convert correctly, a null values is returned instead of an exception. You could use the null coalescing operator with __toIntOrNull__, for example, to provide a default value:
+
+```kotlin
+    val gold: Int =  "5.91".toIntOrNull() ?: 0
+```
+
+### Listing 8.3 Converting the price argument to a double (Tavern.kt)
+```kotlin
+...
+private fun placeOrder(menuData: String) {
+    val indexOfApostrophe = TAVERN_NAME.indexOf('\'')
+    val tavernMaster = TAVERN_NAME.substring(0 until indexOfApostrophe)
+    println("Madrigal speaks with $tavernMaster about their order.")
+    
+    val (type, name, price) = menuData.split(',')
+    val message = "Madrigal buys a $name ($type) for $price."
+    println(message)
+    
+    performPurchase(price.toDouble())
+    ... 
+}
+```
+

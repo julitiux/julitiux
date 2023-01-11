@@ -1280,3 +1280,77 @@ fun main(args: Array<String>) {
 >>     println("Madrigal speaks with $tavernMaster about their order.")
 >>  }
 ```
+
+The list of sdiferents escapes sequences (consisting of \ abd the character being escaped) and their meaning to the compiler.
+
+### Table 7.1 Escape sequences
+| Escape sequence | Meaning |
+|---|---|
+| \t | Tab character |
+| \b | Backspace character |
+| \n | Newline character |
+| \r | Carrier return |
+| \" | Double quotation mark |
+| \' | Single quotation mark/apostrophe |
+| \\ | Backslash |
+| \$ | Dollar sign |
+| \u | Unicode character |
+
+## split
+
+Creates a series of substrings using a delimiter you provide. Accepts a delimiter character to look for and retuns a list of the resulting substrings with the delimiter omitted, in this case , split, returns a list of strings in the order it found them. You use indices in square brackets. 
+
+
+### Listing7.2 Passing tavern data to placeOrder (Tavern.kt)
+```kotlin
+const val TAVERN_NAME = "Taernyl's Folly"
+
+fun main(args: Array<String>) {
+    placeOrder("shandy,Dragon's Breath,5.91") 
+}
+
+private fun placeOrder(menuData: String) {
+    val indexOfApostrophe = TAVERN_NAME.indexOf('\'')
+    val tavernMaster = TAVERN_NAME.substring(0 until indexOfApostrophe) 
+    println("Madrigal speaks with $tavernMaster about their order.")
+}
+```
+
+### Listing 7.3 Splitting the menu data (Tavern.kt)
+```kotlin
+...
+private fun placeOrder(menuData: String) {
+    val indexOfApostrophe = TAVERN_NAME.indexOf('\'')
+    val tavernMaster = TAVERN_NAME.substring(0 until indexOfApostrophe)
+    println("Madrigal speaks with $tavernMaster about their order.")
+
+>>  val data = menuData.split(',')
+>>  val type = data[0]
+>>  val name = data[1]
+>>  val price = data[2]
+>>  val message = "Madrigal buys a $name ($type) for $price."
+>>  println(message)
+}
+```
+
+Because __split__ returns a list, it also supports simplified syntax called _destructuring_ - a feature that allows you to declare and assign multiple variables in a single expression.
+
+### Listing 7.4 Destructuring the menu data (Tavern.kt)
+```kotlin
+...
+
+private fun placeOrder(menuData: String) {
+    val indexOfApostrophe = TAVERN_NAME.indexOf('\'')
+    val tavernMaster = TAVERN_NAME.substring(0 until indexOfApostrophe)
+    println("Madrigal speaks with $tavernMaster about their order.")
+
+<<  val data = menuData.split(',')
+<<  val type = data[0]
+<<  val name = data[1]
+<<  val price = data[2]
+
+    val (type, name, price) = menuData.split(',')
+    val message = "Madrigal buys a $name ($type) for $price."
+    println(message)
+}
+```

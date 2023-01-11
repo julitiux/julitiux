@@ -1402,3 +1402,8 @@ You checked the _structural equality_ of name and "Dragon's Breath" using the st
 There is another way to check the equality of two variables: _comparing referential equality_, wich means checking that two variables share the same reference to a type instance - in other words, that two variables point to same object on the heap. Referential equality is checked using ===.
 
 Referential comparison is not usually what you want. You generally donot care whether strings are different instances, only that they have the same characters in the same sequences 
+
+# 8. Numbers
+
+Kotlin has a variety of types for dealing with numbers and numeric computations. Multiple types are available for each of two main varieties of numbers that Kotlin can work with: whole-number integers and numbers with decimals. 
+

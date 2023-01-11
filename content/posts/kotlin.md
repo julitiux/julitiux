@@ -1390,3 +1390,9 @@ private fun placeOrder(menuData: String) {
 >>  println("Madrigal exclaims: ${toDragonSpeak(phrase)}")
 }
 ```
+
+## Strings are immutable
+
+Whether they are defined with _var_ or _val_, all strings in Kotlin are actually immutable (as they are in Java). Though the variables that hold the value for the String can be reassigned if the string is a var, the string instance itself an never be changed. Any function that appears to change teh value of a string (like replace) actually creates a new string with the change applied to it.
+
+## String Comparison

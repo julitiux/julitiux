@@ -1612,6 +1612,4 @@ Kotlin includes functions for performing operations on the binary representation
 | shr(bitcount) | Shifts bits right by bitcount | 42.shr(2) // 1010 |
 | inv() | Invert bits | 42.inv() // 11111111111111111111111111010101 |
 | xor(number) | Compares two binary representations and performs a logical ‘exclusive or’ operation on the corresponding bit positions, returning 1 for each bit position that has a 1 in one input but not the other. | 42.xor(33) // 001011 |
-| and(number) | Compares two binary representations and performs
-a logical ‘and’ operation
-on the corresponding bit positions, returning 1 for each bit position that has a 1 in both inputs. | 42.and(10) // 1010 |
+| and(number) | Compares two binary representations and performs a logical ‘and’ operation on the corresponding bit positions, returning 1 for each bit position that has a 1 in both inputs. | 42.and(10) // 1010 |

@@ -1613,3 +1613,10 @@ Kotlin includes functions for performing operations on the binary representation
 | inv() | Invert bits | 42.inv() // 11111111111111111111111111010101 |
 | xor(number) | Compares two binary representations and performs a logical ‘exclusive or’ operation on the corresponding bit positions, returning 1 for each bit position that has a 1 in one input but not the other. | 42.xor(33) // 001011 |
 | and(number) | Compares two binary representations and performs a logical ‘and’ operation on the corresponding bit positions, returning 1 for each bit position that has a 1 in both inputs. | 42.and(10) // 1010 |
+
+# 9. Starndard Functions
+
+Standard functions are general utility functions in the kotlin standard library that accept lambdas to specify their work.
+
+In this chapter we will refer to an instance of a tyoe using the term _receiver_. This is because Kotlin's standard functions are _extension functions_ under the hood, an _receiver_ is the term for the subject of an extension function.
+

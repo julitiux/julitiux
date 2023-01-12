@@ -1620,3 +1620,37 @@ Standard functions are general utility functions in the kotlin standard library 
 
 In this chapter we will refer to an instance of a tyoe using the term _receiver_. This is because Kotlin's standard functions are _extension functions_ under the hood, an _receiver_ is the term for the subject of an extension function.
 
+## apply
+
+First on out tour of the standard functions is __apply__. __apply__ can be thought of as a configuration function: It allows you to call a series of functions on a receiver to configure it for use. After the lambda provided to __apply__ executes, __apply__ returns the configured receiver.
+
+__apply__ can be used to reduce tha mount of repetition when configuring an object for use.
+
+Without __apply__:
+```kotlin
+val menuFile = Filer("menu-file.txt")
+menuFile.setReadable(true)
+menuFile.setWritable(true)
+menuFile.setExecutable(false)
+```
+
+Using __apply__:
+```kotlin
+val menuFile = File("menu-file.txt").apply{
+    setReadable(true)
+    setWritable(true)
+    setExecutable(false)
+}
+```
+
+__apply__ allows you do to drop the variable name from every function call performed to configure the receiver. This is because __apply__ scopes each function call withon the lambda to the receiver it is called on.
+
+This behavior is sometimes referred to as __relative scoping__, because all the function calls within the lambda are now called relative to the receiver. Another way to say this us that they are __implicitly called_ on the receiver.
+
+```kotlin
+val menuFile = File("menu-file.txt").apply {
+        setReadable(true)  // Implicitly, menuFile.setReadable(true)
+        setWritable(true)  // Implicitly, menuFile.setWritable(true)
+        setExecutable(false)  // Implicitly, menuFile.setExecutable(false)
+}
+```

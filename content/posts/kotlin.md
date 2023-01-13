@@ -1675,3 +1675,49 @@ __let__ can be called on any kind of receiver and returns the result of evaluati
 
 Standard functions like __let__ can also be used to reduce the risk of accidentally changing a variable, because the argument __let__ passes to the lambda is a read-only function parameter.
 
+## __run__
+
+__run__ is similar to __apply__ in that it provides the same relative scoping behavior. However, unlike __apply__, __run__ does not return the receiver.
+
+```kotlin
+fun nameIsLong(name: String) = name.length >= 20
+
+"Mandrigal".run(::nameIsLong)  // false
+"Polarcubis, Supreme Master of NyetHack".run(::nameIsLong)  // true
+```
+
+While the code like this is equivalen to nameIsLong("Mandrigal"), the benefits of using __run__ become clear when there are multiple functions calls: Chained calls using __run__ are easier to read and follow then nested function calls like the next example:
+
+```kotlin
+fun nameIsLong(name: String) = name.length >= 20
+
+fun playerCreateMessage(nameTooLong: Boolean): String {
+    return if (nameTooLong) {
+        "Name is too long. Please choose another name."
+    } else {
+        "Welcome, adventurer"
+    }
+}
+
+...
+
+"Polarcubis, Supreme Master of NyetHack"
+    .run(::nameIsLong)
+    .run(::playerCreateMessage)
+    .run(::println)
+
+```
+
+Compare the calls chined with __run__ calling the three functions nested syntax
+
+```kotlin
+println(playerCreateMessage(nameIsLong("Polarcubis, Supreme Master of NyetHack")))
+```
+
+Note that there is a second flavor of __run__ that is not called on a receiver. This form is far less commonly seen, but we include it here for completeness:
+
+```kotlin
+var status = run {
+    if(healthPoints == 100) "perfect health" else "has injuries"
+}
+```

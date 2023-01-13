@@ -1654,3 +1654,24 @@ val menuFile = File("menu-file.txt").apply {
         setExecutable(false)  // Implicitly, menuFile.setExecutable(false)
 }
 ```
+
+## let
+
+__let__ scopes a variable to the lambda provided and makes the keyword __it__.
+
+Using __let__:
+```kotlin
+var firstItemsquared = listOf(1,2,3).first().let{
+    it * it
+}
+```
+Without __let__:
+```kotlin
+val firstElement = listOf(1,2,3).first()
+val firstItemSquared = firstElement * firstElement
+```
+
+__let__ can be called on any kind of receiver and returns the result of evaluating the lambda you provided. the lambda passed to __let__ accpets the receiver it is called on as its only argumetns. You therefore access the arguent using the it keyword.
+
+Standard functions like __let__ can also be used to reduce the risk of accidentally changing a variable, because the argument __let__ passes to the lambda is a read-only function parameter.
+

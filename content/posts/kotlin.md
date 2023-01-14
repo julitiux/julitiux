@@ -1855,7 +1855,7 @@ Recall from you work with the split function in Chapter 7 that you can access an
 
 ### Listing 10.4 Accessing the first patron (Tavern.kt) 
 ```kotlin
-import kotlin.math.roundToInt
+imports kotlin.math.roundToInt
 const val TAVERN_NAME = "Taernyl's Folly"
 
     var playerGold = 10
@@ -1871,3 +1871,15 @@ const val TAVERN_NAME = "Taernyl's Folly"
 
 ...
 ```
+
+## Index boundaries and safe index access
+
+Accessing an element by index requires care, because attempting to access an element at an index that does not exits - say, the fourth item a list that contains only three - causes an ArrayIndexOutOfBoundsException exception.
+
+### Listing 10.5 Accessing a nonexistent index (REPL)
+```kotlin
+val patronList = listOf("Eli", "Mordoc", "Sophie")
+patronList[4]
+```
+
+The result is java.lang.ArrayIndexOutOfBoundsException: 4

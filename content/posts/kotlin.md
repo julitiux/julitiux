@@ -1803,3 +1803,29 @@ Table 9.1 Standard functions
 | also | Yes | No | Receiver |
 | takeIf | Yes | No | Nullable version of receiver |
 | takeUnless | Yes | No | Nullable version of receiver |
+
+
+# 10.List and Sets
+
+Working with a group of related values is an essential part of many programs. For example, your program might manage list of books, travel destinations, menu items, or tavern patron check balances. _Collections_ allow you to coveniently work with those groups of values and pass them as arguments to functions.
+
+## List
+
+Lists hold an ordered collection of values and allow duplicate values.
+
+__listOf__ function returns a read-only list (more on that shortly) populated with the elements you provide for the argument 
+
+### Listing 10.1 Creating a list of patrons (Tavern.kt) import kotlin.math.roundToInt
+```kotlin
+const val TAVERN_NAME = "Taernyl's Folly"
+
+    var playerGold = 10
+    var playerSilver = 10
+>>  val patronList: List<String> = listOf("Eli", "Mordoc", "Sophie")
+
+    fun main(args: Array<String>) {
+        placeOrder("shandy,Dragon's Breath,5.91")
+>>      println(patronList)
+    } 
+...
+```

@@ -1733,3 +1733,19 @@ val nameTooLong  = with("Polarcubis, Supreme Master of NyeHack"){
 ```
 
 Instead of calling __with__ on the string, as in "Polarcubis, Supreme Master of NyeHack".run, the string is passed as the first (in this case, only) argument to __with__.
+
+## __also__
+
+The __also__ function works very similarly to the __let__ function. Just like __let__, __also__ passes the receiver you call it on as an argument to a lambda you provide. But there is one major difference between __let__ and __also__: __also__ returns the receiver, rather than the result of the lambda.
+
+```kotlin
+var fileContents: List<String>
+File("file.txt")
+    .also{
+        print(it.name)
+    }.also{
+        fileContents = it.readLines()
+    }
+```
+
+Sinse __also__ returns the receiver instead of the result of the lambda, you can continue the chain additional function calls on to the original receiver.

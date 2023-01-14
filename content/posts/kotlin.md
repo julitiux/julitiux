@@ -1848,3 +1848,26 @@ IntelliJ warns you that the integer does not conform to the expected type, Strin
 >>  var patronList: List<String> = listOf("Eli", "Mordoc", "Sophie")
 ...
 ```
+
+## Accessing a list's elements
+
+Recall from you work with the split function in Chapter 7 that you can access any element of a list using the element's index and the [] operator.
+
+### Listing 10.4 Accessing the first patron (Tavern.kt) 
+```kotlin
+import kotlin.math.roundToInt
+const val TAVERN_NAME = "Taernyl's Folly"
+
+    var playerGold = 10
+    var playerSilver = 10
+ << val patronList: List<String> = listOf("Eli", "Mordoc", "Sophie")
+ >> val patronList = listOf("Eli", "Mordoc", "Sophie")
+    
+    fun main(args: Array<String>) {
+        placeOrder("shandy,Dragon's Breath,5.91")
+        
+        println(patronList[0]) 
+    }
+
+...
+```

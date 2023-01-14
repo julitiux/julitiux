@@ -1749,3 +1749,29 @@ File("file.txt")
 ```
 
 Sinse __also__ returns the receiver instead of the result of the lambda, you can continue the chain additional function calls on to the original receiver.
+
+## __takeIf__
+
+__takeIf works a bit differently than the other standard functions: It evaluates a condition provided in a lambda, called a _predicate_, that returns either true or false depending on the conditions defines. If the condition evaluates as true, the receiver is returned from takeIf. If the condition is false, null is returned instead.
+
+Consider the following example, which reads a file and only if it is readable and writable.
+
+```kotlin
+val fileContents = File("myfile.txt")
+    .takeIf { it.canRead() && it.canWrite() }
+    ?.readText()
+```
+
+Without __takeIf__, this would be more verbose:
+
+```kotlin
+val file = File("myfile.txt")
+val fileContents = if(file.canRead() && file.canWrite()){
+    file.readText()
+} else {
+    null
+}
+```
+
+The __takeIf__ version does not require the temporary variable fíle, nor does it need to specify teh possibility of a null return. __takeIf__ is useful for checking that some condition required for assigning a variable or proceeding with work is true before continuing. Conceptuallym __takeIf__ is similar to an _if_ statement, but with the advantage of begin directly callable on an instance, often allowing you remove a temporary variable assigment.
+

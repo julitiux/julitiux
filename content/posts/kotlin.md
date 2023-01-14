@@ -1883,3 +1883,21 @@ patronList[4]
 ```
 
 The result is java.lang.ArrayIndexOutOfBoundsException: 4
+
+The safe index access functions: __getOrElse__. takes two arguments: The first is the requested index (in parentheses, not square brackets). the second is a lambda that generates a default value, instead if an exception, if the requested index does no exist.
+
+### Listing 10.6 Testing getOrElse (REPL)
+```kotlin
+val patronList = listOf("Eli", "Mordoc", "Sophie")
+patronList.getOrElse(4) { "Unknown Patron" }
+```
+
+This time, the result is Unknow Patron. The anonymous function was used to provide a default value, since the requested index does not exist.
+
+Another safe index access function, __getOrNull__, returns null instead of throwing an exception. When you use __getOrNull__, you must decide what to do with the null value. One option is to coalesce the null value to a default. Try using __getOrNull__ with the null coalescing operator.
+
+### Listing 10.7 Testing getOrNull (REPL)
+```kotlin
+val fifthPatron = patronList.getOrNull(4) ?: "Unknown Patron"
+fifthPatron
+```

@@ -1620,7 +1620,7 @@ Standard functions are general utility functions in the kotlin standard library 
 
 In this chapter we will refer to an instance of a tyoe using the term _receiver_. This is because Kotlin's standard functions are _extension functions_ under the hood, an _receiver_ is the term for the subject of an extension function.
 
-## apply
+## __apply__
 
 First on out tour of the standard functions is __apply__. __apply__ can be thought of as a configuration function: It allows you to call a series of functions on a receiver to configure it for use. After the lambda provided to __apply__ executes, __apply__ returns the configured receiver.
 
@@ -1655,7 +1655,7 @@ val menuFile = File("menu-file.txt").apply {
 }
 ```
 
-## let
+## __let__
 
 __let__ scopes a variable to the lambda provided and makes the keyword __it__.
 
@@ -1721,3 +1721,15 @@ var status = run {
     if(healthPoints == 100) "perfect health" else "has injuries"
 }
 ```
+
+## __with__
+
+__with__ is a variant of run. It behaves identically, but it uses a different calling convention. Unlike the standard functions you have seen so far, __with__ requires its argument to be accepted as the first parameter ratherthan calling the standard function on reveiver type:
+
+```kotlin
+val nameTooLong  = with("Polarcubis, Supreme Master of NyeHack"){
+    length >= 20
+}
+```
+
+Instead of calling __with__ on the string, as in "Polarcubis, Supreme Master of NyeHack".run, the string is passed as the first (in this case, only) argument to __with__.

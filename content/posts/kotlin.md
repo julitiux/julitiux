@@ -1775,3 +1775,17 @@ val fileContents = if(file.canRead() && file.canWrite()){
 
 The __takeIf__ version does not require the temporary variable fíle, nor does it need to specify teh possibility of a null return. __takeIf__ is useful for checking that some condition required for assigning a variable or proceeding with work is true before continuing. Conceptuallym __takeIf__ is similar to an _if_ statement, but with the advantage of begin directly callable on an instance, often allowing you remove a temporary variable assigment.
 
+## __takeUnless__
+
+There is a complementary function to __takeIf__ that we should mention. of only to warn you away from it: __takeUnless__. The __takeUnless__ function is exactly like __takeIf__ except that it returns the original value if the condition you define is _false_.
+
+This example reads the file if it is no hidden (and return null otherwise)
+
+```kotlin
+val fileContents = File("myfile.txt").takeUnless {it.isHidden}?.readText()
+```
+
+the book recommend that you limit the use of __takeUnless__, especially for more complicated condition-checking, because it takes longer for human readers of your program to interpret. Compaare the "understandability" of these two phrases:
+
+* "Return the value if the condition is true" - __takeIf__
+* "Return the value unless the condition is true" - __takeUnless__

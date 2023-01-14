@@ -1829,3 +1829,22 @@ const val TAVERN_NAME = "Taernyl's Folly"
     } 
 ...
 ```
+
+Though type inference does work with list, you included the type information - val patronList: List<String> - to make it invisible for discussion. Notice the diamond braces in List<String>. <String> is known as a _parameterized type_, and it tells the compiler about the type that teh contents of the list will be - in this case, Strings.
+
+### Listing 10.2 Adding an integer to a list of strings (Tavern.kt)
+```kotlin
+...
+var patronList: List<String> = listOf("Eli", "Mordoc", "Sophie", 1)
+...
+```
+
+IntelliJ warns you that the integer does not conform to the expected type, String. Type parameters are used with List because List is a _generic type_. This means that a list can hold any tyoe of data, including textual data like strings or characters, numeric data like integer or doubles, or even a new type that you define.
+
+### Listing 10.3 Correcting the list contents (Tavern.kt)
+```kotlin
+...
+<<  var patronList: List<String> = listOf("Eli", "Mordoc", "Sophie", 1)
+>>  var patronList: List<String> = listOf("Eli", "Mordoc", "Sophie")
+...
+```

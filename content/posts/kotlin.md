@@ -1789,3 +1789,17 @@ the book recommend that you limit the use of __takeUnless__, especially for more
 
 * "Return the value if the condition is true" - __takeIf__
 * "Return the value unless the condition is true" - __takeUnless__
+
+## Using Standard Library Functions
+
+Table 9.1 Standard functions
+
+| Function | Passes receiver to lambda as argument? | Provides relative scoping? | Returns |
+|---|---|---|---|
+| let | Yes | No | Lambda result |
+| apply | No | Yes | Receiver |
+| run | No | Yes | Lambda result |
+| with | No | Yes | Lambda result |
+| also | Yes | No | Receiver |
+| takeIf | Yes | No | Nullable version of receiver |
+| takeUnless | Yes | No | Nullable version of receiver |

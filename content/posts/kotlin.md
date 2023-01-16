@@ -2022,3 +2022,30 @@ Table 10.1 Mutable list mutator funtions
 | -= (minus assign operator) | Removes an element of collection of the elements from the list | mutableListOf("Eli","Mordoc","Sophie") -= "Eli" -- [Mordoc, Sophie] -- val patronList = mutableListOf("Eli","Mordoc","Sophie") -- patronList -= listOf("Eli", Mordoc") -- [Sophie] |
 | __clear__ | Removes all the elements from the list | mutableListOf("Eli", "Mordoc", Sophie").clear() -- [] |
 | __removeIf__ | Removes elements from the list based on a predicate lambda | val patronList = mutableListOf("Eli","Mordoc","Sophie") -- patronList.removeIf { it.contains("o") } -- [Eli] |
+
+## Iteration
+
+List include built-in support for a variety of functions that allow you to perform an action for each element og their contents. This concept is called _iteration_
+
+One way to iterate through a list is a _for_ loop. Its logic is, "for each element in the list, do something"
+
+### Listing 10.13 Iterating over the patronList with for(Tavern.kt)
+```kotlin
+...
+fun main(args: Array<String>) {
+    ...
+    placeOrder("shandy,Dragon's Breath,5.91")
+
+<<  println(patronList)
+<<  patronList.remove("Eli")
+<<  patronList.add("Alex")
+<<  patronList.add(0, "Alex")
+<<  patronList[0] = "Alexis"
+<<  println(patronList)
+
+>>  for (patron in patronList) {
+>>      println("Good evening, $patron")
+>>  }
+} 
+...
+```

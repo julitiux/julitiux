@@ -2027,6 +2027,8 @@ Table 10.1 Mutable list mutator funtions
 
 List include built-in support for a variety of functions that allow you to perform an action for each element og their contents. This concept is called _iteration_
 
+## __for__
+
 One way to iterate through a list is a _for_ loop. Its logic is, "for each element in the list, do something"
 
 ### Listing 10.13 Iterating over the patronList with for(Tavern.kt)
@@ -2046,6 +2048,29 @@ fun main(args: Array<String>) {
 >>  for (patron in patronList) {
 >>      println("Good evening, $patron")
 >>  }
+} 
+...
+```
+
+## __forEach__
+
+The __forEach__ function trsverses each element in teh list  -- one by one, from the left to right -- and passes each element to the anonymous function you provide as an argument.
+
+### Listing 10.14 Iterating over the patronList with forEach (Tavern.kt)
+```kotlin
+...
+fun main(args: Array<String>) {
+    ...
+    placeOrder("shandy,Dragon's Breath,5.91")
+   
+<<  for (patron in patronList) {
+<<      println("Good evening, $patron")
+<<  }
+   
+>>  patronList.forEach { patron ->
+>>      println("Good evening, $patron")
+>>  }
+
 } 
 ...
 ```

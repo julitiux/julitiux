@@ -1929,7 +1929,7 @@ fun main(args: Array<String>) {
     } else {
         println("The tavern master says: Eli isn't here.")
     }
-    
+
 >>  if (patronList.containsAll(listOf("Sophie", "Mordoc"))) {
 >>      println("The tavern master says: Yea, they're seated by the stew kettle.")
 >>  } else {
@@ -1938,5 +1938,27 @@ fun main(args: Array<String>) {
     
     placeOrder("shandy,Dragon's Breath,5.91")
 }
+...
+```
+
+## Changing a list's contens
+
+In kotlin, a modifiable list is known as a _mutable list_, and use the __mutableListOf__function to create one.
+
+### Listing 10.10 Making the patron list mutable (Tavern.kt)
+```kotlin
+...
+<<  val patronList = listOf("Eli", "Mordoc", "Sophie")
+>>  val patronList = mutableListOf("Eli", "Mordoc", "Sophie")
+
+fun main(args: Array<String>) {
+    ...
+    placeOrder("shandy,Dragon's Breath,5.91")
+
+>>  println(patronList)
+>>  patronList.remove("Eli")
+>>  patronList.add("Alex")
+>>  println(patronList)
+} 
 ...
 ```

@@ -1962,3 +1962,20 @@ fun main(args: Array<String>) {
 } 
 ...
 ```
+
+### Listing 10.11 Adding another Alex (Tavern.kt) 
+```kotlin
+...
+val patronList = mutableListOf("Eli", "Mordoc", "Sophie")
+fun main(args: Array<String>) {
+    ...
+    placeOrder("shandy,Dragon's Breath,5.91")
+
+    println(patronList) 
+    patronList.remove("Eli") 
+    patronList.add("Alex") 
+>>  patronList.add(0, "Alex") 
+    println(patronList)
+} 
+...
+```

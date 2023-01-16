@@ -2007,3 +2007,18 @@ Run Tavern.kt. You will see that patronList has been updated with Alexis’ pref
 [Eli, Mordoc, Sophie]
 [Alexis, Mordoc, Sophie, Alex]
 ```
+
+
+Table 10.1 Mutable list mutator funtions
+
+
+| Function | Description | Example(s) |
+|---|---|---|
+| []= (set operator) | Sets the value at the inex, throws an exception if the index does not exists | val patronList = mutableListOf("Eli", "Mordoc", "Sophie") -- patronList[4] = "Reggie" -- _IndexOutOfBoundsException_ |  
+| __add__ | Adds an element to the end of the list, resizing it by one element | val patronList = mutableListOf("Eli", "Mordoc", "Sophie") -- patronList.add("Reggie") -- [Eli, Mordoc, Sophie, Reggie] -- patronList.size -- 4 |
+| __add__ (at index) | Adds an element to the list at a particular index, resizing the list by one element. Throwns an exception if the index does not exist. | val patronList = mutableListOf("Eli", "Mordoc","Sophie") -- patronList.add(0, "Reggie") -- [Reggie, Eli, Mordoc, Sophie] -- patronList.add(5, "Sophie") -- IndexOutOfBoundsException |
+| __addAll__ | Adds all of another collection with contents of the same type to the list | val patronList = mutableListOf("Eli", "Mordoc","Sophie") -- patronList.addAll(listOf("Reginald", "Alex")) -- [Eli, Mordoc, Sophie, Reginald, Alex] |
+| += (plus assign operator) | Adds an element or collection of elements to the list | mutableListOf("Eli", "Mordoc", "Sophie") += "Reginald" -- [Eli, Mordoc, Sophie, Reginald] -- mutableListOf("Eli","Mordoc","Sophie") += listOf("Alex", "Shruti") -- [Eli, Mordoc, Sophie, Alex, Shruti] |
+| -= (minus assign operator) | Removes an element of collection of the elements from the list | mutableListOf("Eli","Mordoc","Sophie") -= "Eli" -- [Mordoc, Sophie] -- val patronList = mutableListOf("Eli","Mordoc","Sophie") -- patronList -= listOf("Eli", Mordoc") -- [Sophie] |
+| __clear__ | Removes all the elements from the list | mutableListOf("Eli", "Mordoc", Sophie").clear() -- [] |
+| __removeIf__ | Removes elements from the list based on a predicate lambda | val patronList = mutableListOf("Eli","Mordoc","Sophie") -- patronList.removeIf { it.contains("o") } -- [Eli] |

@@ -2000,3 +2000,10 @@ fun main(args: Array<String>) {
 >>  patronList[0] = "Alexis" 
     println(patronList)
 } ...
+
+Run Tavern.kt. You will see that patronList has been updated with Alexis’ preferred name.
+```
+...
+[Eli, Mordoc, Sophie]
+[Alexis, Mordoc, Sophie, Alex]
+```

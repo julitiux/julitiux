@@ -1901,3 +1901,19 @@ Another safe index access function, __getOrNull__, returns null instead of throw
 val fifthPatron = patronList.getOrNull(4) ?: "Unknown Patron"
 fifthPatron
 ```
+## Checking the contents of a list
+
+### Listing 10.8 Checking for a patron (Tavern.kt)
+```kotlin
+...
+fun main(args: Array<String>) {
+    if (patronList.contains("Eli")) {
+        println("The tavern master says: Eli's in the back playing cards.")
+    } else {
+        println("The tavern master says: Eli isn't here.")
+    }
+    placeOrder("shandy,Dragon's Breath,5.91")
+    println(patronList[0])
+}
+...
+```

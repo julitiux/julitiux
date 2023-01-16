@@ -1979,3 +1979,10 @@ fun main(args: Array<String>) {
 } 
 ...
 ```
+
+Run Tavern.kt again. You will see the following printed:
+```
+...
+[Eli, Mordoc, Sophie]
+[Alex, Mordoc, Sophie, Alex]
+```

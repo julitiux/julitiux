@@ -2074,3 +2074,20 @@ fun main(args: Array<String>) {
 } 
 ...
 ```
+
+## __forEachIndexed__
+
+Kotlin's __for__ loop and __foreach__ function handle indexing behind the scenes, If you also want access to the index of each element in a list as you iterate, use __forEachIndexed__.
+
+### Listing 10.15 Displaying line position with __forEachIndexed__ (Tavern.kt)
+```kotlin
+...
+fun main(args: Array<String>) {
+    ...
+    placeOrder("shandy,Dragon's Breath,5.91")
+    patronList.forEachIndexed { index, patron ->
+        println("Good evening, $patron - you're #${index + 1} in line.") 
+    }
+} 
+...
+```

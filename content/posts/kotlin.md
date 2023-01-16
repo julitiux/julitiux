@@ -1903,6 +1903,8 @@ fifthPatron
 ```
 ## Checking the contents of a list
 
+The __contains__ function performs a structural comparison for the elements in the list, like the structural equality operator.
+
 ### Listing 10.8 Checking for a patron (Tavern.kt)
 ```kotlin
 ...
@@ -1914,6 +1916,27 @@ fun main(args: Array<String>) {
     }
     placeOrder("shandy,Dragon's Breath,5.91")
     println(patronList[0])
+}
+...
+```
+
+### Listing 10.9 Checking for multiple patrons (Tavern.kt)
+```kotlin
+...
+fun main(args: Array<String>) {
+    if (patronList.contains("Eli")) {
+        println("The tavern master says: Eli's in the back playing cards. ")
+    } else {
+        println("The tavern master says: Eli isn't here.")
+    }
+    
+>>  if (patronList.containsAll(listOf("Sophie", "Mordoc"))) {
+>>      println("The tavern master says: Yea, they're seated by the stew kettle.")
+>>  } else {
+>>      println("The tavern master says: Nay, they departed hours ago.")
+>>  }
+    
+    placeOrder("shandy,Dragon's Breath,5.91")
 }
 ...
 ```

@@ -1986,3 +1986,17 @@ Run Tavern.kt again. You will see the following printed:
 [Eli, Mordoc, Sophie]
 [Alex, Mordoc, Sophie, Alex]
 ```
+
+### Listing 10.12 Modifying a mutable list using the set operator (Tavern.kt) 
+...
+val patronList = mutableListOf("Eli", "Mordoc", "Sophie")
+fun main(args: Array<String>) {
+    ...
+    placeOrder("shandy,Dragon's Breath,5.91")
+    println(patronList) 
+    patronList.remove("Eli") 
+    patronList.add("Alex") 
+    patronList.add(0, "Alex") 
+>>  patronList[0] = "Alexis" 
+    println(patronList)
+} ...

@@ -2124,3 +2124,16 @@ fun main(args: Array<String>) {
 } 
 ...
 ```
+
+## Destructuring
+Alist offers the ability to destructure up to the first five elements it contains. Destructuring, allow you to declare an assign multiple variables in a single expression. You are using this destructuring declaration to separate the elements of the menu data:
+
+```kotlin
+val (type, name , price) = menuData.split(',')
+```
+
+By the way, you can also selectively destructure elements from a list by using the symbol _ to skip un wanted elements. Say, from example, that the tavern master would like to hand out medals to the best sword jugglers in the realm but gas misplaced the silver medal. If you wanted to destructure only the firts and third value in the result from splitting the patron list, you could do so with:
+
+```kotlin
+val (goldMedal, _, bronzeMedal) = patronList
+```

@@ -2154,3 +2154,10 @@ val planets = setOf("Mercury", "Venus", "Earth")
 planets
 ["Mercury", "Venus", "Earth"]
 ```
+
+### Listing 10.21 Trying to create a set with a duplicate (REPL)
+```kotlin
+val planets = setOf("Mercury", "Venus", "Earth", "Earth") 
+planets
+["Mercury", "Venus", "Earth"]
+```

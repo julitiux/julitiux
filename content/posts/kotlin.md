@@ -2106,3 +2106,21 @@ The __forEach__ and __forEachIndexed__ functions are also available on certain o
 >>                     .split("\n")
 ...
 ```
+
+### Listing 10.18 Printing the diversified menu (Tavern.kt)
+```kotlin
+...
+fun main(args: Array<String>) {
+    ...
+    patronList.forEachIndexed { index, patron ->
+        println("Good evening, $patron - you're #${index + 1} in line.")
+        placeOrder(patron, "shandy,Dragon's Breath,5.91")
+    }
+    
+>>  menuList.forEachIndexed { index, data ->
+>>      println("$index : $data")
+>>  }
+
+} 
+...
+```

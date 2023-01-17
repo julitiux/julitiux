@@ -2091,3 +2091,18 @@ fun main(args: Array<String>) {
 } 
 ...
 ```
+
+The __forEach__ and __forEachIndexed__ functions are also available on certain other types in kotlin.this category of types is called _Iterable_, and _List_, _Set_, _Map_, _IntRange_, and other collections type belong to the Iterable category. An iterable supports iteration - in other wotds, it allows trversing the elements it holds, performing some action for each element.
+
+## Reading a File into a List.
+
+### Listing 10.17 Reading menu data from a file (Tavern.kt)
+```kotlin
+>>  import java.io.File
+    ...
+    val patronList = mutableListOf("Eli", "Mordoc", "Sophie") 
+>>  val menuList = File("data/tavern-menu-items.txt")
+>>                     .readText()
+>>                     .split("\n")
+...
+```

@@ -2168,4 +2168,13 @@ planets.contains("Earth")
 >> true
 planets.contains("Pluto")
 >> false
+```
+
+Set does not index its contests - meaning it provides no built-in [] operator to access alements using an index. However, you can still request an element at a particular index, using function that use iteration to accomplish the task.
+
+### Listing 10.23 Finding the third planet (REPL)
 ```kotlin
+val planets = setOf("Mercury", "Venus", "Earth") 
+planets.elementAt(2)
+Earth
+```

@@ -2137,3 +2137,9 @@ By the way, you can also selectively destructure elements from a list by using t
 ```kotlin
 val (goldMedal, _, bronzeMedal) = patronList
 ```
+
+## Sets
+
+List, as you have seen, allow deplicate elements (and are ordered, so duplicates - and other elements - can be identifies by their position). but sometimes you want a collection that guarantees that its items are unique.
+
+But there are two major differences between lists and sets: The elements of a set are unique, and a set does not provided index. based mutators, because the iterms in a set not guarenteed to be in any particular order.

@@ -2161,3 +2161,11 @@ val planets = setOf("Mercury", "Venus", "Earth", "Earth")
 planets
 ["Mercury", "Venus", "Earth"]
 ```
+
+### Listing 10.22 Checking planets (REPL)
+```kotlin
+planets.contains("Earth")
+>> true
+planets.contains("Pluto")
+>> false
+```kotlin

@@ -2240,3 +2240,24 @@ Table 10.2 Mutable set mutator functions
 | __remove__ | Removes the element from the set | mutableSetOf(1,2,3).remove(1) -- [2,3] |
 | __removeAll__ | Removes all elements in another collection from the set | mutableSetOF(1,2).removeAll(listOf(1,5,6)) -- [2] |
 | __clear__ | Removes all elemtns from the set |  mutableSetOf(1,2).clear() -- [] |
+
+## While Loops.
+
+A while loop's logic is "While some condition is truem execute the code in this block". 
+
+### Listing 10.26 Unique patrons placing random orders (Tavern.kt)
+```kotlin
+...
+fun main(args: Array<String>) {
+    ...
+    println(uniquePatrons)
+
+>>  var orderCount = 0
+>>  while (orderCount <= 9) {
+>>      placeOrder(uniquePatrons.shuffled().first(),
+>>              menuList.shuffled().first())
+>>      orderCount++
+>>  }
+} 
+...
+```

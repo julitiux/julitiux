@@ -2208,3 +2208,23 @@ fun main(args: Array<String>) {
 } 
 ...
 ```
+
+### Listing 10.25 Ensuring uniqueness using a set (Tavern.kt)
+```kotlin
+...
+    val lastName = listOf("Ironfoot", "Fernsworth", "Baggins") 
+>>  val uniquePatrons = mutableSetOf<String>()
+    val menuList = File("data/tavern-menu-items.txt")
+                                    .readText()
+                                    .split("\n")
+fun main(args: Array<String>) {
+    ...
+(0..9).forEach {
+    val first = patronList.shuffled().first() val last = lastName.shuffled().first() val name = "$first $last"
+<<  println(name)
+>>  uniquePatrons += name
+}
+>>  println(uniquePatrons)
+} 
+...
+```

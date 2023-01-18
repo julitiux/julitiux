@@ -2300,3 +2300,7 @@ Eli Baggins
 ```
 
 Set are useful for representing series of data where each element is unique.
+
+## 11. Maps
+
+Where Map is defferent from List and Set is that its elements consist of key-value pairs that you define and instead of index-based access using an intenger, a map provides key-based acces using a type that you specify. Keys are unique and identify the values in the map; the values, on the other hand, do not need to be unique. In this way, Map shares another feature with Set; The keys of a mao are guaranteed to be unique, just like elements of a set.

@@ -2268,3 +2268,35 @@ A while loop requires you to maintain your own counter manager its state. You st
 ## The break Expression
 
 One way to exit a white loop es by changing the state it depeneds on. Another way to break out of a loop is the break expression.
+
+## Collection Conversion
+
+You can also convert a list to a set, or vise versa, using the __toSet__ and __toList__ functions (or their mutabke cousins: to __MutableSet__ and __toMutableList__).
+
+### Listing 10.27 Converting a list to a set (REPL)
+```kotlin
+listOf("Eli Baggins", "Eli Baggins", "Eli Ironfoot").toSet()
+[Eli Baggins, Eli Ironfoot]
+```
+
+### Listing 10.28 Converting a set back to a list (REPL)
+```kotlin
+val patrons = listOf("Eli Baggins", "Eli Baggins", "Eli Ironfoot")
+            .toSet()
+            .toList()
+[Eli Baggins, Eli Ironfoot]
+patrons[0]
+Eli Baggins
+```
+
+the need to remove duplicates and resume index-based access is so common that kotlin provides a function on List called __distinct__ that calls __toSet__ and __toList__ internally
+
+### Listing 10.29 Calling __distinct__ (REPL)
+```kotlin
+val patrons = listOf("Eli Baggins", "Eli Baggins", "Eli Ironfoot").distinct()
+[Eli Baggins, Eli Ironfoot]
+patrons[0]
+Eli Baggins
+```
+
+Set are useful for representing series of data where each element is unique.

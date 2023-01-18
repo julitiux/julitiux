@@ -2338,4 +2338,11 @@ While teh keys in a map must all be of the same tyoe, and the values must be of 
 val patronGold: Map<String, Double>
 ```
 
-You used __to__ to define each entry (key am value) in the map
+You used __to__ to define each entry (key am value) in the map.
+
+### Listing11.2 Defining a map using the Pair type (REPL)
+```kotlin
+val patronGold = mapOf(Pair("Eli", 10.75),
+    Pair("Mordoc", 8.00),
+    Pair("Sophie", 5.50))
+```

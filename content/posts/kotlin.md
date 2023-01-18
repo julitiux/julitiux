@@ -2261,3 +2261,10 @@ fun main(args: Array<String>) {
 } 
 ...
 ```
+The _increment operator_ (++) adds 1 to the calue of orderCount during each iteration. 
+
+A while loop requires you to maintain your own counter manager its state. You start with an orderCount calue of 0 and increment time that you loop. white loops are more flexible than for loops in that they can represent state that is not purely based on iteration.
+
+## The break Expression
+
+One way to exit a white loop es by changing the state it depeneds on. Another way to break out of a loop is the break expression.

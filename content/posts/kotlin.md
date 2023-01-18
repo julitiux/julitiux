@@ -2228,3 +2228,15 @@ fun main(args: Array<String>) {
 } 
 ...
 ```
+
+Table 10.2 Mutable set mutator functions
+
+| Function | Description | Example(s) |
+|---|---|---|
+| __add__ | Adds the value to the set | mutableSetOf(1,2).add(3) -- [1,2,3] |
+| __addAll__ | Adds all elements from another collections to set | mutableSetOf(1,2).addAll(listOf(1,5,6)) -- [1,2,3] |
+| += (plus assign operator) | Add the value(s) to the set | mutableSetOf(1,2) -= 3 -- [1,2,3] |
+| -= (minus assign operator) | Removes the value to the set | mutableSetOf((1,2,3)) -= 3 -- [1,2] -- mutableSetOf(1,2,3) -= listOf(2,3) -- [1] |
+| __remove__ | Removes the element from the set | mutableSetOf(1,2,3).remove(1) -- [2,3] |
+| __removeAll__ | Removes all elements in another collection from the set | mutableSetOF(1,2).removeAll(listOf(1,5,6)) -- [2] |
+| __clear__ | Removes all elemtns from the set |  mutableSetOf(1,2).clear() -- [] |

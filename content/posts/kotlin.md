@@ -2178,3 +2178,33 @@ val planets = setOf("Mercury", "Venus", "Earth")
 planets.elementAt(2)
 Earth
 ```
+
+## Add elements to a set
+
+### Listing 10.24 Generating 10 random patrons (Tavern.kt)
+```kotlin
+...
+    val patronList = mutableListOf("Eli", "Mordoc", "Sophie") 
+>>  val lastName = listOf("Ironfoot", "Fernsworth", "Baggins") 
+    val menuList = File("data/tavern-menu-items.txt")
+                                    .readText()
+                                    .split("\n")
+fun main(args: Array<String>) {
+    ...
+<<    patronList.forEachIndexed { index, patron ->
+<<        println("Good evening, $patron - you're #${index + 1} in line.")
+<<        placeOrder(patron, menuList.shuffled().first())
+<<    }
+<<    menuList.forEachIndexed { index, data ->
+<<        println("$index : $data")
+<<    }
+
+>>   (0..9).forEach {
+>>        val first = patronList.shuffled().first()
+>>        val last = lastName.shuffled().first()
+>>        val name = "$first $last"
+>>        println(name)
+}
+} 
+...
+```

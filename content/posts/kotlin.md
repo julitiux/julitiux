@@ -2304,3 +2304,38 @@ Set are useful for representing series of data where each element is unique.
 ## 11. Maps
 
 Where Map is defferent from List and Set is that its elements consist of key-value pairs that you define and instead of index-based access using an intenger, a map provides key-based acces using a type that you specify. Keys are unique and identify the values in the map; the values, on the other hand, do not need to be unique. In this way, Map shares another feature with Set; The keys of a mao are guaranteed to be unique, just like elements of a set.
+
+## Creating a Map
+
+Like list and sets, maps are created using functions: __mapOf__ and __mutableMapOf__
+
+### Listing 11.1 Creating a read-only map (Tavern.kt)
+```kotlin
+...
+    var uniquePatrons = mutableSetOf<String>()
+    val menuList = File("data/tavern-menu-items.txt")
+                                    .readText()
+                                    .split("\n")
+>>  val patronGold = mapOf("Eli" to 10.5, "Mordoc" to 8.0, "Sophie" to 5.5)
+    
+    fun main(args: Array<String>) {
+        ...
+        println(uniquePatrons)
+        var orderCount = 0
+        while (orderCount <= 9) {
+            placeOrder(uniquePatrons.shuffled().first(),
+                    menuList.shuffled().first())
+            orderCount++
+        }
+>>  println(patronGold)
+} 
+...
+```
+
+While teh keys in a map must all be of the same tyoe, and the values must be of the same type, the keys and values can be of different types. Here you have a map with string keys and double values. You are using type onference, but if you had wanted to include explicit type information, it would look like this:
+
+```kotlin
+val patronGold: Map<String, Double>
+```
+
+You used __to__ to define each entry (key am value) in the map

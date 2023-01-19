@@ -2389,3 +2389,45 @@ fun main(args: Array<String>) {
 | __getValue__ | Gets the value for a key; throwsan exception if the key provided is not in the map | patronGold.getValue("Reggie") -- NoSuchElementException |
 | __getOrElse__ | Gets the value for the key or return a default using an anonymous function | patronGold.getOrElse("Reggie") {"No such patron"} -- No such patron |
 | __getOrDefault__ | Gets the value for the key or return a default using a value you provide | patronGold.getOrDefault("Reginald", 0.0) -- 0.0 |
+
+## Adding entries to a map
+
+### Listing 11.5 Populating the mutable map (Tavern.kt)
+```kotlin
+    import java.io.File
+    import kotlin.math.roundToInt
+    const val TAVERN_NAME: String = "Taernyl's Folly"
+
+    var playerGold = 10
+    var playerSilver = 10
+    val patronList = mutableListOf("Eli", "Mordoc", "Sophie")
+    val lastName = listOf("Ironfoot", "Fernsworth", "Baggins")
+    val uniquePatrons = mutableSetOf<String>()
+    val menuList = File("data/tavern-menu-items.txt")
+            .readText()
+            .split("\n")
+
+<<  val patronGold = mapOf("Eli" to 10.5, "Mordoc" to 8.0, "Sophie" to 5.5)
+>>  val patronGold = mutableMapOf<String, Double>()
+
+    fun main(args: Array<String>) {
+        ...
+<<      println(uniquePatrons)
+>>      uniquePatrons.forEach {
+>>          patronGold[it] = 6.0
+>>      }
+
+        var orderCount = 0
+        while (orderCount <= 9) {
+            placeOrder(uniquePatrons.shuffled().first(),
+                    menuList.shuffled().first())
+            orderCount++
+        }
+
+<<      println(patronGold)
+<<      println(patronGold["Eli"])
+<<      println(patronGold["Mordoc"])
+<<      println(patronGold["Sophie"])
+} 
+...
+```

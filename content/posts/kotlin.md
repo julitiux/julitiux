@@ -2380,3 +2380,12 @@ fun main(args: Array<String>) {
 >>  println(patronGold["Sophie"])
 }
 ```
+
+### Table 11.1 Map access functions
+
+| Function | Description | Example |
+|---|---|---|
+| [] (get/index operator) | Gets  the value for a key; returns null if the key does not exists | patronGold["Reginald"] -- null |
+| __getValue__ | Gets the value for a key; throwsan exception if the key provided is not in the map | patronGold.getValue("Reggie") -- NoSuchElementException |
+| __getOrElse__ | Gets the value for the key or return a default using an anonymous function | patronGold.getOrElse("Reggie") {"No such patron"} -- No such patron |
+| __getOrDefault__ | Gets the value for the key or return a default using a value you provide | patronGold.getOrDefault("Reginald", 0.0) -- 0.0 |

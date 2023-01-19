@@ -2346,3 +2346,37 @@ val patronGold = mapOf(Pair("Eli", 10.75),
     Pair("Mordoc", 8.00),
     Pair("Sophie", 5.50))
 ```
+
+However, building a map using the __to__ function is cleaner than this sintax
+
+### Listing 11.3 Adding a duplicate key (REPL)
+```kotlin
+val patronGold = mutableMapOf("Eli" to 5.0, "Sophie" to 1.0) patronGold += "Sophie" to 6.0
+println(patronGold)
+{Eli=5.0, Sophie=6.0}
+```
+
+## Accessing Map Values
+
+You acceess a value in a map using its key. For the partronGold map, you will use the string key to access the patron's gold balances
+
+### Listing 11.4 Accessing individual gold balances (Tavern.kt)
+```kotlin
+...
+fun main(args: Array<String>) {
+    ...
+    println(uniquePatrons)
+    
+    var orderCount = 0
+    while (orderCount <= 9) {
+        placeOrder(uniquePatrons.shuffled().first(),
+                menuList.shuffled().first())
+        orderCount++
+    }
+
+    println(patronGold)
+>>  println(patronGold["Eli"])
+>>  println(patronGold["Mordoc"])
+>>  println(patronGold["Sophie"])
+}
+```

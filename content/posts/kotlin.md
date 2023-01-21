@@ -2569,3 +2569,44 @@ fun main(args: Array<String>) {
 }
 ...
 ```
+
+When you start a new game, the __main__ function is called, and one of the first things that you will want to do is create a player character to play the game.
+
+You called __Player's__ _primary constructor_ by suffixing the __Player__ class name with parentheses. The player variable is now said to "contains an instance of the __Player__ class"
+
+## Class Function
+
+Class definition can be specify two types of content: _behavior_ and _data_
+
+### Listing 12.3 Defining a class function (Player.kt)
+```kotlin
+class Player {
+    fun castFireball(numFireballs: Int = 2) = println("A glass of Fireball springs into existence. (x$numFireballs)") 
+}
+```
+
+Here you define a _class body_ for __Player__ with curly braces. The class body holds definitions for the class's behavior and data, much like the actions of a function are defines within the function body.
+
+### Listing 12.4 Calling a class function (Game.kt)
+```kotlin
+fun main(args: Array<String>) {
+    var healthPoints = 89
+    val isBlessed = true
+    val isImmortal = false
+    
+    val player = Player()
+>>  player.castFireball()
+
+    // Aura
+    val auraColor = auraColor(isBlessed, healthPoints, isImmortal)
+
+    // Player status
+    val healthStatus = formatHealthStatus(healthPoints, isBlessed)
+    printPlayerStatus(auraColor, isBlessed, player.name, healthStatus)
+
+<<  castFireball()
+}
+...
+<<  private fun castFireball(numFireballs: Int = 2) =
+<<              println("A glass of Fireball springs into existence. (x$numFireballs)")
+```

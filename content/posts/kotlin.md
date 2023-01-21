@@ -2610,3 +2610,16 @@ fun main(args: Array<String>) {
 <<  private fun castFireball(numFireballs: Int = 2) =
 <<              println("A glass of Fireball springs into existence. (x$numFireballs)")
 ```
+
+## Visibility and Encapsulation
+
+Encapsulation says that a class should selectively expose funtions and properties to define how other objects interact with it. Anything that is not essential to expose, including implementations details of exposed functions and properties, should be kept private.
+
+### Table 12.2 Visibility modifiers.
+
+| Modifier | Description |
+|---|---|
+| public (default) | The function or property will be accessible by code outside of the class, By default, functions and properties without  a visibility modifier are public |
+| private | The function or property will be accessible only within the same class |
+| protected | The function or property will be accessible only within the same class ot its subclass |
+| internal | The function or property will be accessible within the same module  |

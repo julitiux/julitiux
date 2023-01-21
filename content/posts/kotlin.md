@@ -2542,3 +2542,30 @@ A class can be deined in its own file or alongside other elements, like function
 ```kotlin
 class Player
 ```
+
+You can define multiple classes in the same file - and you may want to if you have multiple classes usedfor a similiar purpose.
+
+
+## Constructing Instances
+
+### Listing 12.2 Instantiating a Player (Game.kt)
+```kotlin
+fun main(args: Array<String>) {
+    val name = "Madrigal"
+    var healthPoints = 89
+    val isBlessed = true
+    val isImmortal = false
+
+>>  val player = Player()
+
+    // Aura
+    val auraColor = auraColor(isBlessed, healthPoints, isImmortal)
+    
+    // Player status
+    val healthStatus = formatHealthStatus(healthPoints, isBlessed)
+    printPlayerStatus(auraColor, isBlessed, name, healthStatus)
+   
+    castFireball()
+}
+...
+```

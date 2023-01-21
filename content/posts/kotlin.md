@@ -2528,3 +2528,17 @@ Table 11.3 Kotlin Collections summary
 | List | Yes | No | Elements | Yes |
 | Set | No | Yes | Elements | No |
 | Map | No | Keys | Key-value pairs | No |
+
+
+# 12. Defining Classes
+
+The object-oriented programming paradigm has been around since the 1960s and continues to be popular because it provides a set of useful tools for simplifying the structure of a program. Central to the object-oriented style are _clasess_, definitions of the unique categories of "things" your code represents.
+
+## Defining a Class
+
+A class can be deined in its own file or alongside other elements, like functions or variables
+
+###Listing 12.1 Defining the Playerclass (Player.kt) 
+```kotlin
+class Player
+```

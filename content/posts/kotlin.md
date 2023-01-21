@@ -2445,3 +2445,55 @@ fun main(args: Array<String>) {
 | - (minus operator) | Returns a new map, excluding the entries specified | val newPatrons = mutableMapOf("Mordoc" to 6.0,"Jebediah" to 1.0) - "Mordoc" -- {Jebediah=1.0} |
 | -= (minus assign operator) | Removes antry or map of entries from the map | mutableMapOf("Mordoc" to 6.0,"Jebediah" to 1.0) -= "Mordoc" -- {Jebediah=1.0} |
 | __clear__ | Removes all entries from the map | mutableMapOf("Mordoc" to 6.0,"Jebediah" to 1.0).clear() -- {} |
+
+## Modifying Map Values
+
+### Listing 11.6 Updating the values in patronGold (Tavern.kt)
+```kotlin
+importx java.io.File
+importx kotlin.math.roundToInt
+const val TAVERN_NAME: String = "Taernyl's Folly"
+
+<<  var playerGold = 10
+<<  var playerSilver = 10
+    val patronList = mutableListOf("Eli", "Mordoc", "Sophie") 
+    ...
+
+<<  fun performPurchase(price: Double) {
+<<      displayBalance()
+<<      val totalPurse = playerGold + (playerSilver / 100.0)
+<<      println("Total purse: $totalPurse")
+<<      println("Purchasing item for $price")
+<<      val remainingBalance = totalPurse - price
+<<      println("Remaining balance: ${"%.2f".format(remainingBalance)}")
+<<      val remainingGold = remainingBalance.toInt()
+<<      val remainingSilver = (remainingBalance % 1 * 100).roundToInt()
+<<      playerGold = remainingGold
+<<      playerSilver = remainingSilver
+<<      displayBalance()
+<<  }
+    
+<<  private fun displayBalance() {
+<<      println("Player's purse balance: Gold: $playerGold , Silver: $playerSilver")
+<<  }
+    
+>>  fun performPurchase(price: Double, patronName: String) {
+>>      val totalPurse = patronGold.getValue(patronName)
+>>      patronGold[patronName] = totalPurse - price
+>>  }
+    
+    private fun toDragonSpeak(phrase: String) =
+        ...
+    }
+    
+    private fun placeOrder(patronName: String, menuData: String) {
+        ...
+    println(message)
+<<      // performPurchase(price.toDouble(), patronName)
+>>      performPurchase(price.toDouble(), patronName)
+
+        val phrase = if (name == "Dragon's Breath") {
+        ... 
+        }
+    ...
+```

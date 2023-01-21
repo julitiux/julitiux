@@ -2623,3 +2623,16 @@ Encapsulation says that a class should selectively expose funtions and propertie
 | private | The function or property will be accessible only within the same class |
 | protected | The function or property will be accessible only within the same class ot its subclass |
 | internal | The function or property will be accessible within the same module  |
+
+## Class Properties
+
+Class function definitions describe the behavior associated with a class, Data definitions, better known as _class properties_, are the attribbutes required to represent the specific state or characteristics of a class.
+
+### Listing 12.5 Defining the name property (Player.kt) 
+```kotlin
+class Player {
+>>  val name = "madrigal"
+    fun castFireball(numFireballs: Int = 2) =
+            println("A glass of Fireball springs into existence. (x$numFireballs)")
+}
+```

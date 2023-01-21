@@ -2394,8 +2394,8 @@ fun main(args: Array<String>) {
 
 ### Listing 11.5 Populating the mutable map (Tavern.kt)
 ```kotlin
-    import java.io.File
-    import kotlin.math.roundToInt
+    importx java.io.File
+    importx kotlin.math.roundToInt
     const val TAVERN_NAME: String = "Taernyl's Folly"
 
     var playerGold = 10
@@ -2431,3 +2431,17 @@ fun main(args: Array<String>) {
 } 
 ...
 ```
+
+### Table 11.2 Mutable map mutator functions
+
+| Function | Description | Example |
+|---|---|---|
+| = (assigment operator) | Adds or updates the value in the map for the key specified | val patronGold = mutableMapOf("Mordoc" to 6.0) -- patronGold["Mordoc"] = 5.0 -- {Mordoc=5.0} |
+| += (plus assign operator) | Adds or updates an entry or entries in the map based on the entry or map specified | val patronGold = mutableMapOf("Mordoc" to 6.0) -- patronGold += "Eli" to 5.0 -- {Mordoc=6.0, Eli=5.0} -- val patronGold = mutableMapOf("Mordoc" to 6.0) -- patronGold += mapOf("Eli" to 7.0,"Mordoc" to 1.0,"Jebediah" to 4.5) -- {Mordoc=1.0, Eli=7.0, Jebediah=4.5} |
+| __put__ | Adds or update the value in the map for the key specifies | val patronGold = mutableMapOf("Mordoc" to 6.0) -- patronGold.put("Mordoc", 5.0) -- {Mordoc=5.0} |
+| __putAll__ | Adds all of the key-value pairs provided to the map |  val patronGold = mutableMapOf("Mordoc" to 6.0) -- patronGold.putAll(listOf("Jebediah" to 5.0,"Sahara" to 6.0)) -- patronGold["Jebediah"] -- 5.0 -- patronGold["Sahara"] -- 6.0 |
+| __getOrPut__ | Adds an entry for the key if it does not exist already and returns the result; otherwise returns the existing entry | val patronGold = mutableMapOf<String, Double>() -- patronGold.getOrPut("Randy"){5.0} -- 5.0 --patronGold.getOrPut("Randy"){10.0} -- 5.0 |
+| __remove__ | Removes an entry from the map and returns the value. | val patronGold = mutableMapOf("Mordoc" to 5.0) -- val mordocBalance = patronGold.remove("Mordoc") -- {} -- print(mordocBalance) -- 5.0 |
+| - (minus operator) | Returns a new map, excluding the entries specified | val newPatrons = mutableMapOf("Mordoc" to 6.0,"Jebediah" to 1.0) - "Mordoc" -- {Jebediah=1.0} |
+| -= (minus assign operator) | Removes antry or map of entries from the map | mutableMapOf("Mordoc" to 6.0,"Jebediah" to 1.0) -= "Mordoc" -- {Jebediah=1.0} |
+| __clear__ | Removes all entries from the map | mutableMapOf("Mordoc" to 6.0,"Jebediah" to 1.0).clear() -- {} |

@@ -2520,3 +2520,11 @@ fun main(args: Array<String>) {
 >>  }
 ...
 ```
+
+Table 11.3 Kotlin Collections summary
+
+| Collection Type | Ordered? | Unique? | Store | Support destructuring? |
+|---|---|---|---|---|
+| List | Yes | No | Elements | Yes |
+| Set | No | Yes | Elements | No |
+| Map | No | Keys | Key-value pairs | No |

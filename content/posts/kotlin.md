@@ -2497,3 +2497,26 @@ const val TAVERN_NAME: String = "Taernyl's Folly"
         }
     ...
 ```
+
+
+### Listing 11.7 Displaying patron balances (Tavern.kt)
+```kotlin
+...
+fun main(args: Array<String>) {
+    ...
+    var orderCount = 0
+    while (orderCount <= 9) {
+        placeOrder(uniquePatrons.shuffled().first(),
+                menuList.shuffled().first())
+        orderCount++
+    }
+>>  displayPatronBalances()
+}
+
+>>  private fun displayPatronBalances() {
+>>      patronGold.forEach { patron, balance ->
+>>          println("$patron, balance: ${"%.2f".format(balance)}")
+>>      }
+>>  }
+...
+```

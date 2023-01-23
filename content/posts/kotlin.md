@@ -2636,3 +2636,14 @@ class Player {
             println("A glass of Fireball springs into existence. (x$numFireballs)")
 }
 ```
+
+### Listing 12.7 Resolving the reference to Player’s name property (Game.kt) 
+```kotlin
+fun main(args: Array<String>) {
+...
+    // Player status
+<<  printPlayerStatus(auraColor, isBlessed, player, healthStatus) 
+>>  printPlayerStatus(auraColor, isBlessed, player.name, healthStatus) 
+}
+...
+```

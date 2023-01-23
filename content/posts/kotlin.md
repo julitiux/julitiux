@@ -2647,3 +2647,19 @@ fun main(args: Array<String>) {
 }
 ...
 ```
+
+## Property getters and setters
+
+For eache property you define, kotlin will generate a _field_, a _getter_, and, if needed, a setter. A field is where the data for a proeprty is stored, you cannot directly define a filed on a class. Kotlin encapsulates the field for you, protecting the data in the field and exposing it via getters and setters. A property's getter specifies how the property is read. Getter are generated for every property.
+
+### Listing 12.8 Defining a custom getter (Player.kt)
+```kotlin
+class Player {
+    val name = "madrigal"
+>>      get() = field.capitalize()
+    
+    fun castFireball(numFireballs: Int = 2) =
+            println("A glass of Fireball springs into existence. (x$numFireballs)")
+            
+}
+```

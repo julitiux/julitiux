@@ -2660,6 +2660,20 @@ class Player {
     
     fun castFireball(numFireballs: Int = 2) =
             println("A glass of Fireball springs into existence. (x$numFireballs)")
-            
+
+}
+```
+
+### Listing 12.9 Defining a custom setter (Player.kt)
+```kotlin
+class Player {
+    val name = "madrigal"
+        get() = field.capitalize()
+>>      set(value) {
+>>          field = value.trim()
+>>      }
+
+    fun castFireball(numFireballs: Int = 2) =
+            println("A glass of Fireball springs into existence. (x$numFireballs)")
 }
 ```

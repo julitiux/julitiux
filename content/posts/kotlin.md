@@ -2677,3 +2677,23 @@ class Player {
             println("A glass of Fireball springs into existence. (x$numFireballs)")
 }
 ```
+
+## Property visibility
+
+Properties are different from variables defined locally within a function. When a property is defined, it is defined at the class level. As such, it may be accessible to other classes, it its visibility allows.
+
+The peroperties provide fine-grained control around reading and modifying data through their getters and setters. All properties have getters - and all var properties have setters - whether you define custom behavior for them or not.
+
+### Listing 12.12 Hiding name’ssetter (Player.kt)
+```kotlin
+class Player {
+    var name = "madrigal"
+    get() = field.capitalize() 
+    private set(value) {
+        field = value.trim()
+    }
+    
+    fun castFireball(numFireballs: Int = 2) =
+            println("A glass of Fireball springs into existence. (x$numFireballs)")
+}
+```

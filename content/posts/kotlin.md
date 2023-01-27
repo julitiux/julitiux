@@ -2697,3 +2697,44 @@ class Player {
             println("A glass of Fireball springs into existence. (x$numFireballs)")
 }
 ```
+
+## Computed properties
+
+Earlier, we said that when you define a property,a field is always generated to store the value the property encapsulates. That is true... except in a particular case: _computer properties_. A computed property is a property that is specified with an overridden __get__ and /or __set__ operator in a way that makes a field unnecessary.
+
+### Listing 12.13 Defining a computed property (REPL)
+```kotlin
+class Dice() {
+    val rolledValue
+        get() = (1..6).shuffled().first()
+}
+```
+
+### Listing 12.14 Accessing the computed property (REPL)
+```kotlin
+val myD6 = Dice() 
+myD6.rolledValue 
+6 
+myD6.rolledValue 
+1 
+myD6.rolledValue 
+4
+```
+
+### Listing 12.16 Adding properties to Player (Player.kt)
+```kotlin
+class Player {
+    var name = "madrigal"
+        get() = field.capitalize()
+        private set(value) {
+            field = value.trim()
+        }
+
+>>  var healthPoints = 89
+>>  val isBlessed = true
+>>  val isImmortal = false
+    
+    fun castFireball(numFireballs: Int = 2) =
+            println("A glass of Fireball springs into existence. (x$numFireballs)")
+}
+```

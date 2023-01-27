@@ -2832,3 +2832,31 @@ class Player {
             println("A glass of Fireball springs into existence. (x$numFireballs)")
 }
 ```
+
+### Listing 12.21 Making class functions public (Player.kt)
+```kotlin
+class Player {
+    var name = "madrigal"
+        get() = field.capitalize()
+        private set(value) {
+            field = value.trim()
+        }
+    
+    var healthPoints = 89
+    val isBlessed = true
+    private val isImmortal = false
+    
+<<  private fun auraColor(): String {
+>>  fun auraColor(): String {
+        ...
+    }
+    
+<<  private fun formatHealthStatus() = when (healthPoints) {
+>>  fun formatHealthStatus() = when (healthPoints) {
+        ...
+    }
+    
+    fun castFireball(numFireballs: Int = 2) =
+            println("A glass of Fireball springs into existence. (x$numFireballs)")
+}
+```

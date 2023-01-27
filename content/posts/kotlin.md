@@ -2738,3 +2738,21 @@ class Player {
             println("A glass of Fireball springs into existence. (x$numFireballs)")
 }
 ```
+
+### Listing 12.17 Encapsulating isImmortal within Player (Player.kt)
+```kotlin
+class Player {
+    var name = "madrigal"
+        get() = field.capitalize()
+        private set(value) {
+            field = value.trim()
+        }
+    
+    var healthPoints = 89
+    val isBlessed = true
+>>  private val isImmortal = false
+
+    fun castFireball(numFireballs: Int = 2) =
+            println("A glass of Fireball springs into existence. (x$numFireballs)")
+}
+```

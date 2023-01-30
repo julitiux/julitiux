@@ -2893,4 +2893,31 @@ fun main(args: Array<String>) {
 
  When yoy initialize a variable, property, or class instancem you assign it an initial value to make it ready for use.
 
- An object is _instantiated_ when memory is allocated for it, and it is _initialized_ when it is assigned a value. However, in practice the terms are often used slightly differently. Often, _initialization_ is used to mean "everything required to amke a variable, property, or class instance ready to use" while _instatiation_ tends to be limited to "creating an instance of a class"
+ An object is _instantiated_ when memory is allocated for it, and it is _initialized_ when it is assigned a value. However, in practice the terms are often used slightly differently. Often, _initialization_ is used to mean "everything required to amke a variable, property, or class instance ready to use" while _instatiation_ tends to be limited to "creating an instance of a class".
+
+
+ ## Constructors
+
+ A constructor allows its caller to specify the initial calues that an instance of a class will require in order to be constructed, Those values are then available for assignment to the properties defined within the class.
+
+ ## Primary Contrsuctors
+
+Like a function, a contructor defines expected parameters that must be provided as argument.
+
+### Listing 13.1 Defining a primary constructor (Player.tk)
+```kotlin
+class Player(_name: String,
+             _healthPoints: Int,
+             _isBlessed: Boolean,
+             _isImmortal: Boolean){
+    var name = _name
+        get() = field.capitalize()
+        private set(value){
+            field = value.trim()
+        }
+
+    var healthPoints = _healthPoints
+    val isBlessed = _isBlessed
+    private val isImmortal = _isImmortal
+}
+```

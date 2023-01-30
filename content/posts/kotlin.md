@@ -2946,9 +2946,39 @@ class Player(_name: String,
         private set(value){
             field = value.trim()
         }
+
 <<  var healthPoints = _healthPoints
 <<  val isBlessed = _isBlessed
 <<  private val isImmortal = _isImmortal
 }
-
 ```
+
+
+## Secondary constructors
+
+Constructors come in two flavors: primary and secondary. When you specify a primary constructor, you say, "These parameters are required for any instance of this class". When you specify a secondary constructor, you provide alternative ways to construct the class (while still meeting the requirements of the primary constructor)
+
+A secondary constructor must either call the primary constructor, providing it all of the arguments it requires, or call through to another secondary constructor.
+
+### Listing 13.4 Defining a secondary constructor (Player.kt)
+```kotlin
+class Player(_name: String,
+             var healthPoints: Int,
+             val isBlessed: Boolean,
+             private val isImmortal: Boolean){
+
+    var name = _name
+        get() = field.capitalize()
+        private set(value){
+            field = value.trim()
+        }
+
+    constructor(name: String) : this(namem,
+                                     healthPoints = 100,
+                                     isBlessed = true,
+                                     isImmortal = false)
+    ...
+}
+```
+
+You can define multiple secondary constructors for different combinations of parameters.

@@ -2981,4 +2981,37 @@ class Player(_name: String,
 }
 ```
 
-You can define multiple secondary constructors for different combinations of parameters.
+You can define multiple secondary constructors for different combinations of parameters. This secondary constructor calls through to the primary constructor with a certain set of paramters. The _this_ keyword in this case refers to the instance of the class for which this constructor is defined, Specifically, _this_ is calling into another constructor defined in the class - the primary constructor.
+
+### Listing 13.5 Calling a secondary constructor (Game.tk)
+```kotlin
+fun main(args: Array<String>){
+<<  val player = Player("Mandrigal", 89, true, false)
+>>  val player = Player("Mandrigal")
+    ...
+}
+```
+
+You can also use a secondary constructor to define initialization logic - code that will run when your class is instantied. 
+
+### Listing  13.6 Adding logic to a secondary constructor (Player.kt)
+```kotlin
+class Player(_name: String,
+             var healthPoints: Int,
+             val isBlessed: Boolean,
+             private val isImmortal: Boolean){
+
+    var name = _name
+        get() = field.capitalize()
+        private set(value){
+            field = value.trim()
+        }
+
+    constructor(name: String) : this(namem,
+                                     healthPoints = 100,
+                                     isBlessed = true,
+                                     isImmortal = false) {
+        if(name.toLowerCase() == "kar") healthPoints = 40
+    }
+    ...
+```

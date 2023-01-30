@@ -2888,3 +2888,9 @@ fun main(args: Array<String>) {
     println("${player.name} ${player.formatHealthStatus()}")
 }
 ```
+
+# 13. Initialization.
+
+ When yoy initialize a variable, property, or class instancem you assign it an initial value to make it ready for use.
+
+ An object is _instantiated_ when memory is allocated for it, and it is _initialized_ when it is assigned a value. However, in practice the terms are often used slightly differently. Often, _initialization_ is used to mean "everything required to amke a variable, property, or class instance ready to use" while _instatiation_ tends to be limited to "creating an instance of a class"

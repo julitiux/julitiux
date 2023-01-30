@@ -2921,3 +2921,10 @@ class Player(_name: String,
     private val isImmortal = _isImmortal
 }
 ```
+
+### Listing 13.2 Calling the primary constructor (Game.tk)
+```kotlin
+fun main(args: Array<String>){
+    val player = Player("Madrigal", 89, true, false)
+}
+```

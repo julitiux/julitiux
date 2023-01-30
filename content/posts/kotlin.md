@@ -2928,3 +2928,27 @@ fun main(args: Array<String>){
     val player = Player("Madrigal", 89, true, false)
 }
 ```
+
+## Defining properties in a primery constructor
+
+### Listing 13.3 Defining properties in the primery constructor (Player.tk)
+```kotlin
+class Player(_name: String,
+<<           _healthPoints: Int,
+>>           var healthPoints: Int,
+<<           _isBlessed: Boolean,
+>>           val isBlessed: Boolean,
+<<           _isImmortal: Boolean
+>>           private val isImmortal: Boolean){
+
+    var name = _name
+        get() = field.capitalize()
+        private set(value){
+            field = value.trim()
+        }
+<<  var healthPoints = _healthPoints
+<<  val isBlessed = _isBlessed
+<<  private val isImmortal = _isImmortal
+}
+
+```

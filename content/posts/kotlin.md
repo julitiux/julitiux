@@ -3041,3 +3041,50 @@ class Player(_name: String,
     }
     ...
 ```
+
+## Named arguments
+
+The more default arguments you use, the more options you have for calling your contructor, More options can open the door for more ambiguity, si kotlin provides named constructor arguments, just like the named arguments that you have used to call functions.
+
+You may have notice that the secondary constructor you wrote for Player used named arguments.
+
+```kotlin
+constructor(name: String) :  this(name,
+                                  healthPoints = 100,
+                                  isBlessed = true,
+                                  isImmortal = false)
+```
+
+When you have more than a few arguments to provide to a constructor or function, we recommend using named paramters.
+
+## Initializer Blocks
+
+In addition to the primary and secondary constructors you can also specify an _initializer block_ for a class in kotlin. The initializer block is a way to set up variables or calues as well as perform validation - like checking to make sure that the argument to the constructor are valid ones.
+
+Use an initializer block, denoted by the __init__ keyword, to enforce there requirements with preconditions.
+
+### Listing 13.8 Defining an initializar block (Player.kt)
+```kotlin
+class Player(_name: String,
+             var healthPoints: Int = 100,
+             val isBlessed: Boolean,
+             private val isImmortal: Boolean){
+
+    var name = _name
+        get() = field.capitalize()
+        private set(value){
+            field = value.trim()
+        }
+
+>>  init{
+>>      require(healthPoints > 0, {"healthPoints must be greater than zero."})
+>>      require(name.usNotBlank(), {"Player must have a name."})
+>>  }
+
+    constructor(name: String) : this(namem,
+                                     isBlessed = true,
+                                     isImmortal = false) {
+        if(name.toLowerCase() == "kar") healthPoints = 40
+    }
+    ...
+```

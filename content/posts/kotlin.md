@@ -3088,3 +3088,38 @@ class Player(_name: String,
     }
     ...
 ```
+
+## Property initialization.
+
+ So far, you have seen a property initialized in two ways  - either assigned to a value passed as an argument, or defined _inline_in a primary constructor.
+
+ A property can (and must) be initialized with any value of its type, including function return values.
+
+ ### Listing 13.9 Defining the hometown property (Player.kt)
+ ```kotlin
+ class Player(_name: String,
+             var healthPoints: Int = 100,
+             val isBlessed: Boolean,
+             private val isImmortal: Boolean){
+
+    var name = _name
+        get() = field.capitalize()
+        private set(value){
+            field = value.trim()
+        }
+    val hometown : String
+
+    init{
+        require(healthPoints > 0, {"healthPoints must be greater than zero."})
+        require(name.usNotBlank(), {"Player must have a name."})
+    }
+
+    constructor(name: String) : this(namem,
+                                     isBlessed = true,
+                                     isImmortal = false) {
+        if(name.toLowerCase() == "kar") healthPoints = 40
+    }
+    ...
+ ```
+
+ In this case you have defined hometown, but you not yet satisfied the kotlin compiler. You must assign an initial value when defining a property.

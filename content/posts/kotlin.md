@@ -3193,3 +3193,23 @@ class Player(_name: String,
         .first()
     ...
  ```
+
+ ## Late Initialization
+
+ _late initialization_ becomes importan - and more than just a simple bending of kotlin's rule on initializacion
+
+ Any _var_ property declaration can be appendedwith the __lateinit__ keyword, and the kotlin compiler will let you put off initializing the property until you assign it.
+
+ ```kotlin
+ class Player{
+    lateinit var aligment: String
+
+    fun determineFate(){
+        aligment = "Good"
+    }
+
+    fun proclaimFate(){
+        if(::aligment.isInitialized) println(aligment)
+    }
+ }
+ ```

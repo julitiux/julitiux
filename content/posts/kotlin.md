@@ -3158,3 +3158,38 @@ class Player(_name: String,
         .first()
     ...
  ```
+
+ ### Listing 13.11 Using the hometown property (Player.kt)
+```kotlin
+ importz java.io.File
+
+ class Player(_name: String,
+             var healthPoints: Int = 100,
+             val isBlessed: Boolean,
+             private val isImmortal: Boolean){
+
+    var name = _name
+        get() = "${field.capitalize()} of $hometown"
+        private set(value){
+            field = value.trim()
+        }
+    val hometown : String
+
+    init{
+        require(healthPoints > 0, {"healthPoints must be greater than zero."})
+        require(name.usNotBlank(), {"Player must have a name."})
+    }
+
+    constructor(name: String) : this(namem,
+                                     isBlessed = true,
+                                     isImmortal = false) {
+        if(name.toLowerCase() == "kar") healthPoints = 40
+    }
+
+    private fun selectHometown() = File("data/towns.txt")
+        .readText()
+        .split("\n")
+        .shuffled()
+        .first()
+    ...
+ ```

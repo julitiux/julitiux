@@ -3123,3 +3123,38 @@ class Player(_name: String,
  ```
 
  In this case you have defined hometown, but you not yet satisfied the kotlin compiler. You must assign an initial value when defining a property.
+
+ ### Listing 13.10 Defining the __selectHometown__ function (Player.kt)
+ ```kotlin
+ importz java.io.File
+
+ class Player(_name: String,
+             var healthPoints: Int = 100,
+             val isBlessed: Boolean,
+             private val isImmortal: Boolean){
+
+    var name = _name
+        get() = field.capitalize()
+        private set(value){
+            field = value.trim()
+        }
+    val hometown : String
+
+    init{
+        require(healthPoints > 0, {"healthPoints must be greater than zero."})
+        require(name.usNotBlank(), {"Player must have a name."})
+    }
+
+    constructor(name: String) : this(namem,
+                                     isBlessed = true,
+                                     isImmortal = false) {
+        if(name.toLowerCase() == "kar") healthPoints = 40
+    }
+
+    private fun selectHometown() = File("data/towns.txt")
+        .readText()
+        .split("\n")
+        .shuffled()
+        .first()
+    ...
+ ```

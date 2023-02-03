@@ -3247,3 +3247,13 @@ class Player(_name: String,
             .first()
 }
 ```
+
+In this lambda, the result of __selectHometown__ is implicity returned and assigned to hometown.
+
+hometown remains unitialized until it is reference for the first time. At that point, all of the code in __lazy__'s lambda is executed. Importantly, this code is only execute once - on the first time that the delefate property (hometown, here) us accessed in name's getter. Future access to the lazy property will use a cached result instead of performing the expinsuce computation again.
+
+Late initialization is useful, but it can be a bit verbose, so stick to using lazy initializacion for more computationally need tasks.
+
+# 14. Inhertance
+
+_Inheritance_ is an object-oriented principle you can use to define hierarchical relation ships between types.

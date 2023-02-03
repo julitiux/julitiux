@@ -3213,3 +3213,37 @@ class Player(_name: String,
     }
  }
  ```
+
+The _lateinit_ keywordfunctions as acontract that you make with yourself: "I take the responsibility for initializing this variable before it is accessed". You can check __isInitialized__ when there is any uncertainty about whether the lateinit variable is initialized to avoid an _UnitializedPropertyAccessException_.
+
+## Lazy initialization
+
+Lazy initialization is implemented in kotlin using a mechanism known as a _delegate_. Delegate define templates for how a property is initialized.
+
+You use a delegate with the keyboard. The kotlin standard library includes some delegates that are alredy implemented for you, and __lazy__is one of them.
+
+Lazy initialization takes a lambda in wich you define any code that you wish to execute when your property is initialized.
+
+
+### Listing 13.12 Lazily initializing hometown (Player.kt)
+```kotlin
+class Player(_name: String,
+            var healthPoints: Int = 100
+            val isBlessed: Boolean
+            private val isImmortal: Boolean) {
+    var name = _name
+        get() = "${field.capitalize()} of $hometown"
+        private set(value) {
+            field = value.trim()
+        }
+<<  val hometown = selectHometown()
+>>  val hometown by lazy { selectHometown() }
+    
+    ...
+    private fun selectHometown() = File("towns.txt")
+            .readText()
+            .split("\n")
+            .shuffled()
+            .first()
+}
+```

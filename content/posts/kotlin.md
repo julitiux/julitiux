@@ -3264,7 +3264,23 @@ _Inheritance_ is an object-oriented principle you can use to define hierarchical
 ```kotlin
 class Room(val name: String) {
     fun description() = "Room: $name"
-    
+
     fun load() = "Nothing much to see here..."
 }
+```
+
+### Listing 14.2 Printing the room description (Game.kt)
+```kotlin
+fun main(args: Array<String>) {
+    val player = Player("Madrigal")
+    player.castFireball()
+
+    var currentRoom = Room("Foyer")
+    println(currentRoom.description())
+    println(currentRoom.load())
+    
+    // Player status
+    printPlayerStatus(player)
+}
+...
 ```

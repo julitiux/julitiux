@@ -3257,3 +3257,14 @@ Late initialization is useful, but it can be a bit verbose, so stick to using la
 # 14. Inhertance
 
 _Inheritance_ is an object-oriented principle you can use to define hierarchical relation ships between types.
+
+## Defining the Room Class
+
+### Listing 14.1 Declaring the Room class (Room.kt)
+```kotlin
+class Room(val name: String) {
+    fun description() = "Room: $name"
+    
+    fun load() = "Nothing much to see here..."
+}
+```

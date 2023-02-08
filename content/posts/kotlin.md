@@ -3295,7 +3295,18 @@ Add open keyword to __Room__ so that can be subclassed
 ```kotlin
 open class Room(val name: String) { 
     fun description() = "Room: $name"
-    
+
     fun load() = "Nothing much to see here..."
 }
+```
+
+### Listing 14.4 Declaring the TownSquare class (Room.kt) 
+```kotlin
+open class Room(val name: String) { 
+    fun description() = "Room: $name"
+
+    fun load() = "Nothing much to see here..."
+}
+
+class TownSquare : Room("Town Square")
 ```

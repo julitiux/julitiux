@@ -3278,9 +3278,24 @@ fun main(args: Array<String>) {
     var currentRoom = Room("Foyer")
     println(currentRoom.description())
     println(currentRoom.load())
-    
+
     // Player status
     printPlayerStatus(player)
 }
 ...
+```
+
+## Creating a Subclass
+
+A _subclass_ share all properties wuth the class it inherits from, commonly known as the parent class or _superclass_
+
+Add open keyword to __Room__ so that can be subclassed
+
+### Listing 14.3 Making the Room class open for subclassing (Room.kt)
+```kotlin
+open class Room(val name: String) { 
+    fun description() = "Room: $name"
+    
+    fun load() = "Nothing much to see here..."
+}
 ```

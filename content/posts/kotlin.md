@@ -3310,3 +3310,25 @@ open class Room(val name: String) {
 
 class TownSquare : Room("Town Square")
 ```
+
+The class declaration includes the class name to the left : __operator__ and constructor invocation to the right.
+
+Override load in the class using the override keyword
+
+### Listing 14.5 Declaring the TownSquare class (Room.kt)
+```kotlin
+open class Room(val name: String) {
+    fun description() = "Room: $name"
+
+    fun load() = "Nothing much to see here..."
+}
+
+class TownSquare : Room("Town Square") {
+    override fun load() = "The villagers rally and cheer as you enter!"
+}
+```
+
+Listing 14.6 Declaring an open function (Room.kt)
+open class Room(val name: String) {
+    fun description() = "Room: $name"
+open fun load() = "Nothing much to see here..." }

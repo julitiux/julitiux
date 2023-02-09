@@ -3328,7 +3328,14 @@ class TownSquare : Room("Town Square") {
 }
 ```
 
-Listing 14.6 Declaring an open function (Room.kt)
+### Listing 14.6 Declaring an open function (Room.kt)
+```kotlin
 open class Room(val name: String) {
     fun description() = "Room: $name"
-open fun load() = "Nothing much to see here..." }
+    open fun load() = "Nothing much to see here..." 
+}
+
+class TownSquare : Room("Town Square") {
+>>  override fun load() = "The villagers rally and cheer as you enter!"
+}
+```

@@ -3413,3 +3413,5 @@ fun main(args: Array<String>) {
 }
 ...
 ```
+
+Polymorphism is a strategy for simplifying the structure of your program. It allows you to reuse functions for common sets of features across groups of classes and also to customize the behavior for unique needs of a class.

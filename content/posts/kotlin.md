@@ -3340,15 +3340,40 @@ class TownSquare : Room("Town Square") {
 }
 ```
 
+Protected visibility is a third option the restricts visibility to the class in which property or function is defined or to any subclasses of that class.
 
 ### Listing 14.7 Declaring a protected property (Room.kt)
 ```kotlin
 open class Room(val name: String) {
+>>  protected open val dangerLevel = 5
+    
+    fun description() = "Room: $name\n" + 
+>>                      "Danger level: $dangerLevel"
+    
+    open fun load() = "Nothing much to see here..."
+}
+
+class TownSquare : Room("Town Square") {
+    override fun load() = "The villagers rally and cheer as you enter!"
+}
+```
+This scenario is perfect for the _protected_ keyword: you want to expose a property only to the class where the property is defined and its subclasses.
+
+You can reference a class's superclass using the __super__ keyword. From therem you have access to any public or protected properties or functions, including, in this case, _dangerLevel_.
+
+### Listing 14.8 Overriding dangerLevel (Room.kt) 
+```kotlin
+open class Room(val name: String) {
     protected open val dangerLevel = 5
-fun description() = "Room: $name\n" + "Danger level: $dangerLevel"
+    
+    fun description() = "Room: $name\n" +
+            "Danger level: $dangerLevel"
+    
     open fun load() = "Nothing much to see here..."
 }
 class TownSquare : Room("Town Square") {
+>>  override val dangerLevel = super.dangerLevel - 3
+    
     override fun load() = "The villagers rally and cheer as you enter!"
 }
 ```

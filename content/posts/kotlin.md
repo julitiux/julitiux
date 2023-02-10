@@ -3396,3 +3396,20 @@ class TownSquare : Room("Town Square") {
 >>  private fun ringBell() = "The bell tower announces your arrival. $bellSound"
 }
 ```
+
+### Listing 14.10 Calling subclass function implementation (Game.kt)
+```kotlin
+fun main(args: Array<String>) {
+    val player = Player("Madrigal")
+    player.castFireball()
+
+<<  var currentRoom: Room = Room("Foyer")
+>>  var currentRoom: Room = TownSquare() 
+    println(currentRoom.description()) 
+    println(currentRoom.load())
+    
+    // Player status
+    printPlayerStatus(player)
+}
+...
+```

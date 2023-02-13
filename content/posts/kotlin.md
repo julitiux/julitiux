@@ -3438,6 +3438,14 @@ open class Room(val name: String) {
 }
 ```
 
+## The kotlin Type Hierarchy
+
+Every class in kotlin descends from a common superclass, known as __Any__, without ypu having to explicitly subclass it in your code
+
+```kotlin
+    Any -> Room -> TownSquare
+```
+
 ## Type casting
 
 Type casting allows you to treat an object as if it were an instance of a different type. This gives you the power to do anything with an object that you would of the type ypu specify (such as call functions on it).

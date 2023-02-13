@@ -3438,6 +3438,33 @@ open class Room(val name: String) {
 }
 ```
 
+## Type Checking
+
+### Listing 14.12 Instantiating a Room (REPL)
+```kotlin
+var room = Room("Foyer")
+room is Room
+true
+```
+
+### Listing 14.14 Checking room is TownSquare (REPL)
+```kotlin
+room is TownSquare
+false
+```
+
+### Listing 14.15 Checking townSquare is TownSquare (REPL)
+```kotlin
+var townSquare = TownSquare() townSquare is TownSquare
+true
+```
+
+### Listing 14.16 Checking townSquare is Room (REPL)
+```kotlin
+townSquare is Room
+true
+```
+
 ## The kotlin Type Hierarchy
 
 Every class in kotlin descends from a common superclass, known as __Any__, without ypu having to explicitly subclass it in your code

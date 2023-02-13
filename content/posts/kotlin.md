@@ -3465,6 +3465,17 @@ townSquare is Room
 true
 ```
 
+### Listing 14.17 Type checking as a branching condition (REPL)
+```kotlin
+var townSquare = TownSquare()
+var className = when(townSquare) {
+    is TownSquare -> "TownSquare"
+    is Room -> "Room"
+    else -> throw IllegalArgumentException()
+}
+print(className)
+```
+
 ## The kotlin Type Hierarchy
 
 Every class in kotlin descends from a common superclass, known as __Any__, without ypu having to explicitly subclass it in your code

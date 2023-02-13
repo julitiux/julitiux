@@ -3437,3 +3437,20 @@ open class Room(val name: String) {
     private fun ringBell() = "The bell tower announces your arrival. $bellSound"
 }
 ```
+
+## Type casting
+
+Type casting allows you to treat an object as if it were an instance of a different type. This gives you the power to do anything with an object that you would of the type ypu specify (such as call functions on it).
+
+```kotlin
+fun printIsSourceOfBlessings(any: Any) {
+    val isSourceOfBlessings = if (any is Player) {
+        any.isBlessed
+    } else {
+>>      (any as Room).name == "Fount of Blessings"
+    }
+    println("$any is a source of blessings: $isSourceOfBlessings")
+}
+```
+
+The __as__ operator denotes a type cast. This cast says, "Treat any as if it were of type __Room__ for the purpose of this expression".

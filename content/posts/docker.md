@@ -16,5 +16,12 @@ draft: false
 ```docker
 sudo service docker start
 ```
-
 Docker gets started via systemctl as indecated by the OK message.
+
+## Finding the Docker Service Status.
+
+To verify the status of the Docker service run the following command.
+
+```docker
+sudo service docker status
+```

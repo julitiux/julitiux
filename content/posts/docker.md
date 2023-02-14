@@ -7,3 +7,4 @@ draft: false
 # Chapter 1
 
 ## Setting the Environment
+## Installing Docker on Red Hat 7

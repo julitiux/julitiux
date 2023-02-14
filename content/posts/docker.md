@@ -41,6 +41,12 @@ When we ran the hello-world application using the docker run command, the Docker
 
 The docker pull command is used to download a Docker image.
 
-```docker
+```shell
 sudo docker pull tutum/hello-world
+```
+
+List the downloaded Docker images using the following command.
+
+```shell
+sudo docker images
 ```

@@ -11,3 +11,10 @@ draft: false
 ## Uninstalling Docker 
 ## Installing a Specific Docker Version
 ## Installing Docker on Ubuntu
+## Starting the Docker Service
+
+```docker
+sudo service docker start
+```
+
+Docker gets started via systemctl as indecated by the OK message.

@@ -19,9 +19,18 @@ sudo service docker start
 Docker gets started via systemctl as indecated by the OK message.
 
 ## Finding the Docker Service Status.
-
 To verify the status of the Docker service run the following command.
 
 ```docker
 sudo service docker status
 ```
+
+## Running a Docker Hello World Application
+
+To test Docker, run the Hello World application with th following docker __run__ command.
+
+```docker
+sudo docker run hello-world
+```
+
+The "Hello from Docker" message gets output  

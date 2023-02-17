@@ -75,3 +75,20 @@ The `-p` option used to specify a port the process running in the container.
 sudo docker run -d -p 80 --name helloapp tutum/hello-world
 ```
 In this example, start a Docker container for the `tutum/hello-world` image in detached mode using the `-d` parameter, with container name as helloapp and port on which the application runs as 80 using the `-p` parameter.
+
+## Listing Running Docker Containers.
+
+To list Docker container run the following command.
+```docker
+sudo docker ps
+```
+
+The external port may also be listed using the docker port command.
+```docker
+sudo docker port 5c97f1633fb3
+```
+
+To list all Docker containers, running or exited, run the following command.
+```docker
+sudo docker ps -a
+```

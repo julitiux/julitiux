@@ -97,3 +97,10 @@ To list all Docker containers, running or exited, run the following command.
 ```docker
 sudo docker ps -a
 ```
+
+## Accessing the Application Output on Command Line.
+
+The `curl` tool may be used to connect to the host and port on which the helloapp is running.
+```docker
+curl http://localhost:50733
+```

@@ -85,6 +85,11 @@ sudo docker ps
 
 The external port may also be listed using the docker port command.
 ```docker
+sudo docker port [CONTAINER ID | CONTAINER NAME]
+```
+
+by example 
+```docker
 sudo docker port 5c97f1633fb3
 ```
 

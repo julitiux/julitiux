@@ -65,12 +65,13 @@ A Docker container may be started in a detached mode (or background) or foregrou
 
 To start a container in detached mode set `-d=true` or just `-d`
 
-The default mode is the foreground mode in which the container starts in the foreground, and _stdin_, _stdout_ and _stderr_ streams are attached to the host command line console. 
+The default mode is the foreground mode in which the container starts in the foreground, and `stdin`, `stdout` and `stderr` streams are attached to the host command line console. 
  
-The `_-name_` option may be used to specify a name for the Docker container.
+The `-name` option may be used to specify a name for the Docker container.
 
 The `-p` option used to specify a port the process running in the container.
 
 ```docker
 sudo docker run -d -p 80 --name helloapp tutum/hello-world
 ```
+In this example, start a Docker container for the `tutum/hello-world` image in detached mode using the `-d` parameter, with container name as helloapp and port on which the application runs as 80 using the `-p` parameter.

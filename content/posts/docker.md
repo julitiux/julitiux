@@ -104,3 +104,10 @@ The `curl` tool may be used to connect to the host and port on which the helloap
 ```docker
 curl http://localhost:50733
 ```
+
+## Accessing the Application Output in a Browser
+
+Put the next url in the browser
+```url
+http://localhost:50733
+```

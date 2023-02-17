@@ -150,3 +150,18 @@ All such dangling images may be removed with the following command
 ```docker
 sudo docker rmi $(sudo docker images -f "dangling=true" -p)
 ```
+
+## Stopping the Docker Service
+```docker
+sudo service docker stop
+```
+
+The Docker service may be started again with the following command.
+```docker
+sudo service docker start
+```
+
+Alternatively, a running Docker service may be restarted with the following command
+```docker
+sudo service docker restart
+```

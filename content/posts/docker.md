@@ -115,5 +115,20 @@ http://localhost:50733
 ## Stopping a Docker Container
 
 ```docker
-sudo docker stop 
+sudo docker stop [CONTAINER ID | CONTAINER NAME]
+```
+
+by example
+```docker
+sudo docker stop helloapp
+```
+
+## Removing a Docker Container
+```docker
+sudo docker rm [CONTAINER ID | CONTAINER NAME]
+```
+
+by example
+```docker
+sudo docker rm helloapp
 ```

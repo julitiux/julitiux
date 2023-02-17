@@ -111,3 +111,9 @@ Put the next url in the browser
 ```url
 http://localhost:50733
 ```
+
+## Stopping a Docker Container
+
+```docker
+sudo docker stop 
+```

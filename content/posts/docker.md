@@ -132,3 +132,21 @@ by example
 ```docker
 sudo docker rm helloapp
 ```
+
+## Removing a Docker Image
+
+```docker
+sudo docker rmi [IMAGE NAME]
+```
+
+by example 
+```docker
+sudo docker rmi tutum/hello-world
+```
+
+All containers accessing a Docker image must be stopped and removed before a Docker image can be removed. Sometimes some incompletely downloaded Docker imahes could get listed with the docker images command. Such Docker images do not have a name assigned to them and instead are listed as <>.
+
+All such dangling images may be removed with the following command
+```docker
+sudo docker rmi $(sudo docker images -f "dangling=true" -p)
+```

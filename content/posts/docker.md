@@ -169,3 +169,16 @@ sudo service docker restart
 # Chapter 2
 
 ## Setting the Enviroment
+
+## Downloading the Docker Image
+
+```docker
+sudo docker pull oraclelinux
+# doesn't work
+```
+
+To download the oraclelinux 7 version: 
+
+```docker
+sudo docker pull oraclelinux:7
+```

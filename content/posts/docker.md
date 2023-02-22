@@ -165,3 +165,7 @@ Alternatively, a running Docker service may be restarted with the following comm
 ```docker
 sudo service docker restart
 ```
+
+# Chapter 2
+
+## Setting the Enviroment

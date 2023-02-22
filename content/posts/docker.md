@@ -211,3 +211,7 @@ by example
 ```docker
 sudo docker run -i -t --rm --name oraclelinux7 oraclelinux:7
 ```
+
+In attached mode, a container process is started and attached to all standard streams (STDIN, STDOUT and STDERR). The `-name` option may also be used in attached mode to specufy a container name. To start an interative terminal, use the `-i` and `-t` options, which allocates a tty to the container process.
+
+The `--rm` option if specified cleans up the container resources including the filesystem allocated the container after the conteiner has exited.

@@ -182,3 +182,9 @@ To download the oraclelinux 7 version:
 ```docker
 sudo docker pull oraclelinux:7
 ```
+
+## Listing Docker Images
+
+```docker
+sudo docker images
+```

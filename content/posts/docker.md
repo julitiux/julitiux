@@ -227,3 +227,103 @@ To list all containers running or exitedm run the following command:
 ```docker
 sudo docker ps -a
 ```
+
+## Finding Oracle Linux Container Information
+
+Information about a container can be listed with the docker inspect command.
+```docker
+sudo docker inspect oraclelinux
+```
+
+The container detail gets listed in JSON format as follow:
+```json
+[
+    {
+        "Id": "sha256:48b64326b7043de97d375308dc36b346ef0d4b2491eef0ffb5a3ec9b3b3d0faf",
+        "RepoTags": [
+            "oraclelinux:7"
+        ],
+        "RepoDigests": [
+            "oraclelinux@sha256:871e5763f5d28e8adecb37e05d0b9034cf4c1f4d2be72d4e5388256e06717107"
+        ],
+        "Parent": "",
+        "Comment": "",
+        "Created": "2023-01-27T22:41:18.00110776Z",
+        "Container": "1a7a310b518805886737a2921877c1ad73320ff744dea0c7ef2272c314a254fc",
+        "ContainerConfig": {
+            "Hostname": "1a7a310b5188",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "/bin/sh",
+                "-c",
+                "#(nop) ",
+                "CMD [\"/bin/bash\"]"
+            ],
+            "Image": "sha256:94f81eafe18aa033f89cd1c804efd1d99ce8e672307764e61d1b8417b6b88b5e",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {}
+        },
+        "DockerVersion": "20.10.17",
+        "Author": "",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "/bin/bash"
+            ],
+            "Image": "sha256:94f81eafe18aa033f89cd1c804efd1d99ce8e672307764e61d1b8417b6b88b5e",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": null
+        },
+        "Architecture": "arm64",
+        "Variant": "v8",
+        "Os": "linux",
+        "Size": 313518060,
+        "VirtualSize": 313518060,
+        "GraphDriver": {
+            "Data": {
+                "MergedDir": "/var/lib/docker/overlay2/642b6f2d6b80ecc112b38ddff652f31387e6c60ebf424ccff1b8fbc0d30ba606/merged",
+                "UpperDir": "/var/lib/docker/overlay2/642b6f2d6b80ecc112b38ddff652f31387e6c60ebf424ccff1b8fbc0d30ba606/diff",
+                "WorkDir": "/var/lib/docker/overlay2/642b6f2d6b80ecc112b38ddff652f31387e6c60ebf424ccff1b8fbc0d30ba606/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:82c78198c1ef3deba67e2901362d56562286f8df676809862fdbb74fddfa22c6"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]
+
+```

@@ -193,7 +193,7 @@ sudo docker run -d --name <container-name> <image-name>
 
 by example 
 ```docker
-sudo docker run -i -t -d --name oraclelinux6 oraclelinux:6
+sudo docker run -d --name oraclelinux6 oraclelinux:6
 ```
 
 The `-i` `-t` options if specified with the `-d` option do not start an interactive terminal or shell. Even though the -i and -t options are apecified, the container runs in deteached mode.

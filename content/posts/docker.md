@@ -171,20 +171,31 @@ sudo service docker restart
 ## Setting the Enviroment
 
 ## Downloading the Docker Image
-
 ```docker
 sudo docker pull oraclelinux
 # doesn't work
 ```
 
 To download the oraclelinux 7 version: 
-
 ```docker
 sudo docker pull oraclelinux:7
 ```
 
 ## Listing Docker Images
-
 ```docker
 sudo docker images
 ```
+
+## Running a Container in Detached Mode
+```docker
+sudo docker run -d --name <container-name> <image-name>
+```
+
+by example 
+```docker
+sudo docker run -i -t -d --name oraclelinux6 oraclelinux:6
+```
+
+The `-i` `-t` options if specified with the `-d` option do not start an interactive terminal or shell. Even though the -i and -t options are apecified, the container runs in deteached mode.
+
+In deteachd mode, the Docker container is detached from the STDIN, STDOUT and STDERR streams. the `-rm` option cannot be used in the detached mode. 

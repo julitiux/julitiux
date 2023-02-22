@@ -199,3 +199,15 @@ sudo docker run -d --name oraclelinux6 oraclelinux:6
 The `-i` `-t` options if specified with the `-d` option do not start an interactive terminal or shell. Even though the -i and -t options are apecified, the container runs in deteached mode.
 
 In deteachd mode, the Docker container is detached from the STDIN, STDOUT and STDERR streams. the `-rm` option cannot be used in the detached mode. 
+
+## Running a Container in Foreground
+
+To run a Docker container in attached mode, omit the -d option
+```docker
+sudo docker run <image-run>
+```
+
+by example 
+```docker
+sudo docker run -i -t --rm --name oraclelinux7 oraclelinux:7
+```

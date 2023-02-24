@@ -334,3 +334,25 @@ List the processes that a container is running with the docker top command.
 ```docker
 sudo docker top oraclelinux:7
 ```
+
+## Starting an Interactive Shell
+
+The interactive shell or tty may be started when the container process is started with the docker run command using the attached mode and the `-i` `-t` options to indeicate an indicate an interactive terminal.
+```docker
+sudo docker run -i -t --rm <docker-image>
+```
+
+by example
+```docker
+sudo docker run -i -t --rm --name oraclelinux8.7 oraclelinux:8.7
+```
+
+If a container process has already been started in detached mode using the `-d` option, the interactive terminal may be started with the following command syntax 
+```docker
+docker exec -i -t <container> bash
+```
+
+The -i and -t options could be combined into -it. Run the following command to start a tty for the oraclelinux:8.7 container.
+```docker
+sudo docker exec -it oraclelinux8.7 bash
+```

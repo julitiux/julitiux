@@ -327,3 +327,10 @@ The container detail gets listed in JSON format as follow:
 ]
 
 ```
+
+## Listing the Container Processes
+
+List the processes that a container is running with the docker top command.
+```docker
+sudo docker top oraclelinux:7
+```

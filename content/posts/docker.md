@@ -384,3 +384,9 @@ by example
 ```docker
 sudo docker stop orcl7
 ```
+
+## Removing a Container
+
+```docker
+sudo docker rm orcl7
+```

@@ -352,7 +352,24 @@ If a container process has already been started in detached mode using the `-d` 
 docker exec -i -t <container> bash
 ```
 
-The -i and -t options could be combined into -it. Run the following command to start a tty for the oraclelinux:8.7 container.
+The `-i` and `-t` options could be combined into `-it`. Run the following command to start a tty for the oraclelinux:8.7 container.
 ```docker
 sudo docker exec -it oraclelinux8.7 bash
+```
+
+## Create a Container
+
+The `docker create` command is used to create a container.
+```docker
+docker create --name <CONTAINER-NAME> <IMAGE:TAG> <SHELL>
+```
+
+by example
+```docker
+docker create --name orcl7 oraclelinux:7 /bin/bash
+```
+
+To start the Docker container `orcl7` and an interactive shell for the `orcl7` container, run the `docker start` command. The `-a` and `-i` options attach the current shell's standard input, standard output and standard error streams to those of the container.
+```docker
+sudo docker start -a -i orcl7
 ```

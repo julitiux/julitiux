@@ -373,3 +373,14 @@ To start the Docker container `orcl7` and an interactive shell for the `orcl7` c
 ```docker
 sudo docker start -a -i orcl7
 ```
+
+## Stop a Container
+
+```socker
+sudo docker stop <CONTAINER-NAME>
+```
+
+by example
+```docker
+sudo docker stop orcl7
+```

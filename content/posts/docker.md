@@ -375,7 +375,6 @@ sudo docker start -a -i orcl7
 ```
 
 ## Stop a Container
-
 ```socker
 sudo docker stop <CONTAINER-NAME>
 ```
@@ -386,7 +385,11 @@ sudo docker stop orcl7
 ```
 
 ## Removing a Container
-
 ```docker
 sudo docker rm orcl7
+```
+
+## Remove all stopped container
+```docker
+docker rm $(docker ps --filter status=exited -q)
 ```

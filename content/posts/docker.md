@@ -393,3 +393,13 @@ sudo docker rm orcl7
 ```docker
 docker rm $(docker ps --filter status=exited -q)
 ```
+
+# Chapter 3
+
+## Setting the Environment
+## Starting Oracle Database
+## Listing Container Logs
+## Starting SQL* Plus
+## Creating a User
+## Creating a Database Table
+## Removing Oracle Database

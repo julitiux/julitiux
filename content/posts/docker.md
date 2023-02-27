@@ -408,8 +408,34 @@ List the Docker images.
 sudo docker images
 ```
 
-
 ## Starting Oracle Database
+
+Start a Oracle Database instance in a Docker container with the docker `docker run` commmand. Specify the 8080 port for the Oracle Application Express admin console and the 1521 port for the Oracle Database listener.
+
+```docker
+docker run --name orcldb -d -p 8080:8080 -p 1521:1521 oracleinanutshell/oracle-xe-11g
+```
+
+reponse 
+```docker
+WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+6b865c22a80b8fb8a2f18d53e504252074edd8e02f7ad836eaa3cd628c13c9d1
+```
+
+List the Docker containers with the following command.
+```docker
+sudo docker ps
+```
+
+The Oracle Database hostname, port, SID, user name and password are as follow.
+```properties
+hostname: localhost
+port: 1521
+sid: xe
+password: oracle
+```
+
+
 ## Listing Container Logs
 ## Starting SQL* Plus
 ## Creating a User

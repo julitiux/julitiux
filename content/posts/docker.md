@@ -397,6 +397,18 @@ docker rm $(docker ps --filter status=exited -q)
 # Chapter 3
 
 ## Setting the Environment
+
+Download the oracleinanutshell/oracle-xe-11g Docker image
+```docker
+sudo docker pull oracleinanutshell/oracle-xe-11g
+```
+
+List the Docker images.
+```docker
+sudo docker images
+```
+
+
 ## Starting Oracle Database
 ## Listing Container Logs
 ## Starting SQL* Plus

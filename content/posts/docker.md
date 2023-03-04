@@ -449,6 +449,22 @@ sudo docker logs -g 0a14ce7e70bf
 ```
 
 ## Starting SQL* Plus
+
+Start an interactive shell using the following command. The container ID would most likely be different
+
+```docker
+sudo docker exec -it <CONTAINER-ID> <TERMINAL>
+or
+sudo docker exec -it <CONTAINER-NAME> <TERMINAL>
+```
+
+by example
+```docker
+sudo docker exec -it 0a14ce7e70bf bash
+OR
+sudo docker exec -it orcldb bash
+```
+
 ## Creating a User
 ## Creating a Database Table
 ## Removing Oracle Database

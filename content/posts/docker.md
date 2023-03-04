@@ -481,6 +481,15 @@ sudo docker rmi oracleinanutshell/oracle-xe-11g
 # Chapter 4
 
 ## Setting the Enviroment
+```docker
+sudo docker pull mysql
+```
+
+List the Docker images with the following command.
+```docker
+sudo docker images
+```
+
 ## Starting MySQL CLI Shell
 ## Setting the Database tu Use
 ## Creating a Database Table

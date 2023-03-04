@@ -466,5 +466,14 @@ sudo docker exec -it orcldb bash
 ```
 
 ## Creating a User
+To create a user called OE with unlimited quota on SYSTEM tablespace and password as "OE", run the following command
+
+```sql
+CREATE USER OE QUOTA UNLIMITED ON SYSTEM IDENTIFIED BY OE;
+Grant the CONNECT and RESOURCE roles to the OE user.
+GRANT CONNECT, RESOURCE TO OE;
+```
+
+
 ## Creating a Database Table
 ## Removing Oracle Database

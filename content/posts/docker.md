@@ -26,7 +26,6 @@ sudo service docker status
 ```
 
 ## Running a Docker Hello World Application
-
 To test Docker, run the Hello World application with th following docker __run__ command.
 
 ```docker
@@ -36,7 +35,6 @@ sudo docker run hello-world
 The "Hello from Docker" message gets output
 
 ## Downloading a Docker Image
-
 When we ran the hello-world application using the docker run command, the Docker image hello-world got downloaded and a Docker container for the HelloWorld application started. A Docker image may be downloaded automatically when a Docker container for the Docker image is started, or the Docker image may be downloaded separately.
 
 The docker pull command is used to download a Docker image:
@@ -52,7 +50,6 @@ sudo docker images
 ```
 
 ## Running an Application in a Docker Container.
-
 The Docker run command is used to run a process , which is another term for an application, in a separate container. The syntax for the docker  run command is as follows:
 
 ```docker
@@ -77,7 +74,6 @@ sudo docker run -d -p 80 --name helloapp tutum/hello-world
 In this example, start a Docker container for the `tutum/hello-world` image in detached mode using the `-d` parameter, with container name as helloapp and port on which the application runs as 80 using the `-p` parameter.
 
 ## Listing Running Docker Containers.
-
 To list Docker container run the following command.
 ```docker
 sudo docker ps
@@ -99,21 +95,18 @@ sudo docker ps -a
 ```
 
 ## Accessing the Application Output on Command Line.
-
 The `curl` tool may be used to connect to the host and port on which the helloapp is running.
 ```docker
 curl http://localhost:50733
 ```
 
 ## Accessing the Application Output in a Browser
-
 Put the next url in the browser
 ```url
 http://localhost:50733
 ```
 
 ## Stopping a Docker Container
-
 ```docker
 sudo docker stop [CONTAINER ID | CONTAINER NAME]
 ```
@@ -134,7 +127,6 @@ sudo docker rm helloapp
 ```
 
 ## Removing a Docker Image
-
 ```docker
 sudo docker rmi [IMAGE NAME]
 ```
@@ -201,7 +193,6 @@ The `-i` `-t` options if specified with the `-d` option do not start an interact
 In deteachd mode, the Docker container is detached from the STDIN, STDOUT and STDERR streams. the `-rm` option cannot be used in the detached mode. 
 
 ## Running a Container in Foreground
-
 To run a Docker container in attached mode, omit the -d option
 ```docker
 sudo docker run <image-run>
@@ -217,7 +208,6 @@ In attached mode, a container process is started and attached to all standard st
 The `--rm` option if specified cleans up the container resources including the filesystem allocated the container after the conteiner has exited.
 
 ## Listing Docker Containers
-
 Docker container can be running or not running. Run the following command to list Docker containers that are running:
 ```docker
 sudo doker ps
@@ -229,7 +219,6 @@ sudo docker ps -a
 ```
 
 ## Finding Oracle Linux Container Information
-
 Information about a container can be listed with the docker inspect command.
 ```docker
 sudo docker inspect oraclelinux
@@ -329,14 +318,12 @@ The container detail gets listed in JSON format as follow:
 ```
 
 ## Listing the Container Processes
-
 List the processes that a container is running with the docker top command.
 ```docker
 sudo docker top oraclelinux:7
 ```
 
 ## Starting an Interactive Shell
-
 The interactive shell or tty may be started when the container process is started with the docker run command using the attached mode and the `-i` `-t` options to indeicate an indicate an interactive terminal.
 ```docker
 sudo docker run -i -t --rm <docker-image>
@@ -358,7 +345,6 @@ sudo docker exec -it oraclelinux8.7 bash
 ```
 
 ## Create a Container
-
 The `docker create` command is used to create a container.
 ```docker
 docker create --name <CONTAINER-NAME> <IMAGE:TAG> <SHELL>
@@ -397,7 +383,6 @@ docker rm $(docker ps --filter status=exited -q)
 # Chapter 3
 
 ## Setting the Environment
-
 Download the oracleinanutshell/oracle-xe-11g Docker image
 ```docker
 sudo docker pull oracleinanutshell/oracle-xe-11g
@@ -409,7 +394,6 @@ sudo docker images
 ```
 
 ## Starting Oracle Database
-
 Start a Oracle Database instance in a Docker container with the docker `docker run` commmand. Specify the 8080 port for the Oracle Application Express admin console and the 1521 port for the Oracle Database listener.
 
 ```docker
@@ -436,7 +420,6 @@ password: oracle
 ```
 
 ## Listing Container Logs
-
 To list the container logs, run the `docker logs` command
 
 ```docker
@@ -449,7 +432,6 @@ sudo docker logs -g 0a14ce7e70bf
 ```
 
 ## Starting SQL* Plus
-
 Start an interactive shell using the following command. The container ID would most likely be different
 
 ```docker
@@ -495,3 +477,16 @@ To remove the Docker image oracleinanutshell/oracle-xe-11g, run the following co
 ```docker
 sudo docker rmi oracleinanutshell/oracle-xe-11g
 ```
+
+# Chapter 4
+
+## Setting the Enviroment
+## Starting MySQL CLI Shell
+## Setting the Database tu Use
+## Creating a Database Table
+## Adding Table Data
+## Querying A Table
+## Listing Databases and Tables
+## Existing TTY Terminal 
+## Starting Another MySQL Server Instance
+## Listing Docker Container Log

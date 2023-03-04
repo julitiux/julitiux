@@ -474,6 +474,15 @@ Grant the CONNECT and RESOURCE roles to the OE user.
 GRANT CONNECT, RESOURCE TO OE;
 ```
 
-
 ## Creating a Database Table
+Create a database called "Catalog" in the "OE" schema with the following SQL statement
+```sql
+CREATE TABLE OE.Catalog(CatalogId INTEGER PRIMARY KEY,Journal VARCHAR2(25),Publisher
+VARCHAR2(25),Edition VARCHAR2(25),Title VARCHAR2(45),Author VARCHAR2(25));
+```
+
+adding data
+```sql
+INSERT INTO OE.Catalog VALUES('1','Oracle Magazine','Oracle Publishing','November December 2013','Engineering as a Service','David A. Kelly');
+```
 ## Removing Oracle Database

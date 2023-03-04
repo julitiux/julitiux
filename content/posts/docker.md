@@ -435,8 +435,19 @@ sid: xe
 password: oracle
 ```
 
-
 ## Listing Container Logs
+
+To list the container logs, run the `docker logs` command
+
+```docker
+sudo docker logs -f <CONTAINER-ID>
+```
+
+by example
+```docker
+sudo docker logs -g 0a14ce7e70bf
+```
+
 ## Starting SQL* Plus
 ## Creating a User
 ## Creating a Database Table

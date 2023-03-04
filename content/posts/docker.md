@@ -486,3 +486,12 @@ adding data
 INSERT INTO OE.Catalog VALUES('1','Oracle Magazine','Oracle Publishing','November December 2013','Engineering as a Service','David A. Kelly');
 ```
 ## Removing Oracle Database
+To remove the container running the Oracle Database instance, run the following `docker rm` command 
+```docker
+sudo docker rm 0a14ce7e70bf
+```
+
+To remove the Docker image oracleinanutshell/oracle-xe-11g, run the following command
+```docker
+sudo docker rmi oracleinanutshell/oracle-xe-11g
+```

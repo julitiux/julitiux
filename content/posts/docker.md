@@ -569,5 +569,16 @@ SELECT * FROM Catalog;
 show databases;
 ```
 ## Existing TTY Terminal 
+```shell
+mysql> exit
+Bye
+```
+
+Exit with the interactive shell ot tty with the `exit` command.
+```shell
+root@969088c84a4f:/# exit
+exit
+```
+
 ## Starting Another MySQL Server Instance
 ## Listing Docker Container Log

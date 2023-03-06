@@ -637,6 +637,16 @@ sudo doeker logs -f mysqldb
 # Chapter 5
 
 ## Setting the Enviroment
+Download the official Docker image for MongoDB datanase
+```docker
+sudo docker pull mongo:lastest
+```
+
+List docker images
+```docker
+sudo docker images
+```
+
 ## Starting MongoDB
 ## Starting an Interactive Terminal
 ## Starting a Mongo Shell

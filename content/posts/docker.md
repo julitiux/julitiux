@@ -549,6 +549,11 @@ ERROR 1049 (42000): Unknow database 'test'
 ```
 
 ## Creating a Database Table
+Create a database table called `Catalog` with columns CatalogId, Journal, Publisher, Edition, Ttile and Author.
+```sql
+CREATE TABLE Catalog(CatalogId INTEGER PRIMARY KEY,Journal VARCHAR(25),Publisher VARCHAR(25),Edition VARCHAR(25),Title VARCHAR(45),Author VARCHAR(25));
+```
+
 ## Adding Table Data
 ## Querying A Table
 ## Listing Databases and Tables

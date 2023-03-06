@@ -555,6 +555,10 @@ CREATE TABLE Catalog(CatalogId INTEGER PRIMARY KEY,Journal VARCHAR(25),Publisher
 ```
 
 ## Adding Table Data
+Add data to the Catalog tanle with the folloeing INSERT statement
+```sql
+INSERT INTO Catalog VALUES('1','Oracle Magazine','Oracle Publishing','November December 2013','Engineering as a Service','David A. Kelly');
+```
 ## Querying A Table
 ## Listing Databases and Tables
 ## Existing TTY Terminal 

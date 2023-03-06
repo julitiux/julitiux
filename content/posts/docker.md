@@ -580,5 +580,19 @@ root@969088c84a4f:/# exit
 exit
 ```
 
+## Stopping a Docker Container
+```docker
+sudo docker stop <CONTAINER-ID>
+or
+sudo docker stop <CONTAINER-NAME>
+```
+
+by example
+```docker
+sudo docker stop 6a9205d835fe
+```
+
+By this task remove the prevous container because the book prefers do a new following task.
+
 ## Starting Another MySQL Server Instance
 ## Listing Docker Container Log

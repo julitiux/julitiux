@@ -491,6 +491,47 @@ sudo docker images
 ```
 
 ## Starting MySQL CLI Shell
+
+In this section we shall run MySQL database in a Docker container, MySQL uses the `/var/lib/mysql` directory by default for storing data, but another directory may also be used. We shall use the `/mysql/data` directory for storing MySQL data. Create the `/mysql/data` directory and set its permissions to global (777).
+
+```shell
+sudo mkdir -p /mysql/data
+sudo chmod -R 777 /mysql/data
+```
+
+When the Docker `run` command is run to start MySQL in a Docker container, certain enviroment variables may be specified as discussed in the following table.
+
+| __Env Variable__ | __Description__ | __Required__ |
+|---|---|---|
+| MYSQL_ROOT_PASSWORD | Password for the "root" user | Yes |
+| MYSQL_DATABASE | Ceates a database | No |
+| MYSQL_USER, MYSQL_PASSWORD | Specify the username and password to create a new user. The user is granted superuser privileges on the database specified in the MYSQL_DATABASE variable. Both the user name and password must be set if either is set. | No |
+| MYSQL_ALLOW_EMPTY_PASSWORD | Specifies whether the "root" user is permitted to have an empty password. | No |
+
+Other than the MYSQL_ROOT_PASSWORD enviroment variable, all the other variables are optional, but whe shall run a MySQL instance container using all the enviroment variables. We shall run the docker run command using the following parameters.
+
+| __Command Parameter__ | __Value__ |
+|---|---|
+| MYSQL_ROOT_PASSWORD |  '' |
+| MYSQL_DATABASE | mysqldb|
+| MYSQL_USER, MYSQL_PASSWORD | mysql, mysql |
+| MYSQL_ALLOW_EMPTY_PASSWORD  | yes |
+| -v | /mysql/data:/var/lib/mysql |
+| --name | mysqldb |
+| -d |  |
+
+The enviroment variables are specified with `-e`. Run the following docker run command to start a MySQL instance in a Docker container.
+```docker
+sudo docker run -v /mysql/data:/var/lib/mysql --name mysqldb -e MYSQL_DATABASE='mysqldb' -e MYSQL_USER='mysql' -e MYSQL_PASSWORD='mysql' -e MYSQL_ALLOW_EMPTY_PASSWORD='yes' -e MYSQL_ROOT_PASSWORD='' -d mysql
+```
+
+Run the following command to list the Docker containers that are running.
+```docker
+sudo docker ps
+```
+
+
+
 ## Setting the Database tu Use
 ## Creating a Database Table
 ## Adding Table Data

@@ -630,3 +630,6 @@ ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: N
 ```
 
 ## Listing Docker Container Log
+```docker
+sudo doeker logs -f mysqldb
+```

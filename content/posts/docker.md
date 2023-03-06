@@ -560,6 +560,10 @@ Add data to the Catalog tanle with the folloeing INSERT statement
 INSERT INTO Catalog VALUES('1','Oracle Magazine','Oracle Publishing','November December 2013','Engineering as a Service','David A. Kelly');
 ```
 ## Querying A Table
+```sql
+SELECT * FROM Catalog;
+```
+
 ## Listing Databases and Tables
 ## Existing TTY Terminal 
 ## Starting Another MySQL Server Instance

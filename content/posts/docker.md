@@ -674,6 +674,10 @@ sudo docker logs -f mongodb
 ```
 
 ## Starting an Interactive Terminal
+Start an interactive terminal(tty) using the following command
+```docker
+sudo docker exec -it mongodb bash
+```
 ## Starting a Mongo Shell
 ## Creating a Database
 ## Creating a Collection

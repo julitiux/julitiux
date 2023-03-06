@@ -648,6 +648,31 @@ sudo docker images
 ```
 
 ## Starting MongoDB
+MongoDB stores data in the /data/db directory in the Docker container by default. A directory could be mounted from the underlying host system to the container running the MongoDB database. Create a directory `/data`
+```shell
+sudo mkdir -p /data
+```
+
+In my case, I make the directory from /Users/user/dockerRegisters/mongoDB/data and complement the command like this way.
+```docker
+docker run -it -v /Users/user/dockerRegisters/mongoDB/data/:/data --name mongodb -d mongo
+```
+
+List the running Docker container
+```docker
+sudo docker ps
+```
+
+The MongoDB port could also be specified explicity using the -p port
+```docker
+docker run -it -v /Users/user/dockerRegisters/mongoDB/data/:/data -p 27017:27017 --name mongodb -d mongo
+```
+
+Verify the logs.
+```docker
+sudo docker logs -f mongodb
+```
+
 ## Starting an Interactive Terminal
 ## Starting a Mongo Shell
 ## Creating a Database

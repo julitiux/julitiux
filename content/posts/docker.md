@@ -490,7 +490,7 @@ List the Docker images with the following command.
 sudo docker images
 ```
 
-## Starting MySQL CLI Shell
+## Starting MySQL Server
 
 In this section we shall run MySQL database in a Docker container, MySQL uses the `/var/lib/mysql` directory by default for storing data, but another directory may also be used. We shall use the `/mysql/data` directory for storing MySQL data. Create the `/mysql/data` directory and set its permissions to global (777).
 
@@ -529,6 +529,8 @@ Run the following command to list the Docker containers that are running.
 ```docker
 sudo docker ps
 ```
+
+## Starting MySQL CLI Shell
 
 
 

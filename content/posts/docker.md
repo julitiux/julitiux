@@ -633,3 +633,23 @@ ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: N
 ```docker
 sudo doeker logs -f mysqldb
 ```
+
+# Chapter 5
+
+## Setting the Enviroment
+## Starting MongoDB
+## Starting an Interactive Terminal
+## Starting a Mongo Shell
+## Creating a Database
+## Creating a Collection
+## Creating a Document
+## Finding Documents
+## Adding Another Document
+## Dropping a Collection
+## Updating a Document
+## Querying a Single Document
+## Querying All the Documents
+## Making a Backup of the Data
+## Stopping and Restarting the MongoDB Database
+## Removing Documents
+## Exiting Mongo Shell

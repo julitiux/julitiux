@@ -595,4 +595,38 @@ sudo docker stop 6a9205d835fe
 By this task remove the prevous container because the book prefers do a new following task.
 
 ## Starting Another MySQL Server Instance
+Having removed the `mysqldb` container, create the container again with the docker run command. We shall create the new `mysqldb` container differently. Specify different enviroment variables for the second run of the docker run command. Specify only the required enviroment variable MYSQL_ROOT_PASSWORDand set its value to mysql.
+```docker
+sudo docker run --name mysqldb -r MYSQL_ROOT_PASSWORD=mysql -d mysql
+```
+
+Then, start the interactive shell with the following command.
+```docker
+sudo docker exec -it 113458c31ce5 bash
+```
+
+Login to the MySQL CLI with the following command in the interactive shell
+```shell
+mysql -u root -p mysql
+```
+
+Then, specify the password for the `root` user, which is mysql.
+
+The mysql command may also be issued as follows.
+```shell
+mysql -u root -p
+```
+
+Specify the password for the `mysql` user.
+
+The following mysql command does not start a MySQL CLI
+```shell
+root@113458c31ce5:/# mysql -u root
+```
+
+The following error ir generated
+```shell
+ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
+```
+
 ## Listing Docker Container Log

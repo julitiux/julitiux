@@ -565,6 +565,9 @@ SELECT * FROM Catalog;
 ```
 
 ## Listing Databases and Tables
+```sql
+show databases;
+```
 ## Existing TTY Terminal 
 ## Starting Another MySQL Server Instance
 ## Listing Docker Container Log

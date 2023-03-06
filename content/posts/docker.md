@@ -542,6 +542,12 @@ sudo docker exec -it mysqldb bash
 ```
 
 ## Setting the Database tu Use
+Set the database with the `use` command. The `test` database is not provided by the MySQL database started in a Docker container by default
+```shell
+mysql> use test
+ERROR 1049 (42000): Unknow database 'test'
+```
+
 ## Creating a Database Table
 ## Adding Table Data
 ## Querying A Table

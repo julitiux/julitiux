@@ -684,6 +684,21 @@ To start the MongoDB shell, run the following command.
 mongo
 ```
 
+The MongoDB shell may also be started on a specific host and port as follows.
+```docker
+mongo -host localhost -port 27017
+```
+
+Alternatively. only one of the host or the port may be specified to start the MongoDBC shell
+```docker
+mongo -port 27017
+```
+
+Another form of specifying the host and port is host:port. For example, start the MongoDB shell and connect localhost:27017 with the following command.
+```docker
+mongo localhost:27017
+```
+
 ## Creating a Database
 ## Creating a Collection
 ## Creating a Document

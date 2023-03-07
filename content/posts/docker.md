@@ -794,6 +794,11 @@ db.catalog.findOne(
 ```
 
 ## Dropping a Collection
+The `db.collection.drop()` method drops or removes a collection
+```shell
+db.catalog.drop()
+```
+
 ## Updating a Document
 ## Querying a Single Document
 ## Querying All the Documents

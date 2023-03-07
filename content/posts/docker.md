@@ -727,6 +727,16 @@ catalogo
 ```
 
 ## Creating a Collection
+Create a capped collection `catalog_capped` by setting the capped option field to true. A capped collection is a fixed size collection that keeps track of the insertion order while adding and getting a document, and as a result provides high throughput.
+```shell
+db.createCollection("catalog_capped", {capped: true, autoIndexId: true, size: 64 * 1024, max: 1000} )
+```
+
+A capped collection may also be created using the `db.runCommand` command. Create another capped collection called `catalog_capped_2` using the `db.runCommand` command.
+```shell
+db.runCommand( { create: "catalog_capped_2", capped: true, size: 64 * 1024, max: 1000 } )
+```
+
 ## Creating a Document
 ## Finding Documents
 ## Adding Another Document

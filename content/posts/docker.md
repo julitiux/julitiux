@@ -799,6 +799,28 @@ The `db.collection.drop()` method drops or removes a collection
 db.catalog.drop()
 ```
 
+## Adding a Batch of Documents
+Previously, we added a single document at a time. Next we shall add a batch a documents.
+
+Add an array of documents using the db.catalog.insert() method invocation with the doc1 and doc2 being the same as earlier . the writeConcern option specifies the guarantee MongoDB provides and a value of "majority" implies that the `insert()` method does not return till the write has been propagated to the majority of the nodes. Setting the ordered option to true adds the documents in the order specifies.
+```shell
+db.catalog.insert([doc1, doc2],  { writeConcern: { w: "majority", wtimeout: 5000 }, ordered:true })
+```
+
+The full syntaxis of the insert method is made use of in the proceding methos invocation and is as follows.
+```shell
+db.collection.insert(
+   <document or array of documents>,
+   {
+     writeConcern: <document>,
+     ordered: <boolean>
+   }
+)
+```
+
+The first parameter is a single document or an array of documents. The second parameter is a document with fields writeConcern and ordered. The writeConcern specifies the write concern or the guarantee that MongoDB provides on the success of an insert. The ordered parameter is set to true, which implies that the documents are added in the order specified and if an error occurs with one of the documents none of the documents are added.
+
+
 ## Updating a Document
 ## Querying a Single Document
 ## Querying All the Documents

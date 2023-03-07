@@ -721,9 +721,8 @@ The show dbs command does not list the `mongodb` database before the `catalog` c
 
 List the collections in the mongodb database with the following command.
 ```shell
-> show collections
-catalogo
->
+show collections
+> catalogo
 ```
 
 ## Creating a Collection
@@ -738,6 +737,27 @@ db.runCommand( { create: "catalog_capped_2", capped: true, size: 64 * 1024, max:
 ```
 
 ## Creating a Document
+We shall add documents to a MongoDB collection. Initially collection es empty. We run the mongo shell method `db.<collection>.count()` to count the documents in the catalog collection. Substitute <collection> with the collection name `catalog`
+```shell
+db.catalog.count()
+```
+
+We shall add a document to the catalog collection. Create a JSON document structure with field catalogId, journal, published, edition, title and author.
+```shell
+doc1 = {"catalogId" : "catalog1", "journal" : 'Oracle Magazine', "publisher" : 'Oracle Publishing', "edition" : 'November December 2013',"title" : 'Engineering as a Service',"author" : 'David A. Kelly'}
+```
+
+Add the document to the catalog collection using `db.<xollection>.insert()` method.
+```shell
+db.catalog.insert(doc1)
+> WriteResult({ "nInserted" : 1 })
+```
+
+Output the document count again.
+```shell
+db.catalog.count()
+```
+
 ## Finding Documents
 ## Adding Another Document
 ## Dropping a Collection

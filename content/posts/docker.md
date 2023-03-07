@@ -759,7 +759,24 @@ db.catalog.count()
 ```
 
 ## Finding Documents
+The db.collection.find(query, projection) method is used to find document/s. The query parameter of type document specifies selection criteria using query operators. The projecttion parameter also of type document specifies selection the field to return. Both the parameters are optional. To select all documents do not specify any args or specify an empty document {}.
+
+By example, find all documents in the catalog collections
+```shell
+db.catalog.find()
+```
+
 ## Adding Another Document
+Similarly, create a the JSON structure for another document. The same document may be added again if the _id is unique. In the JSON include the _id field as an explicit field/attribute. The _id field value must be an object of type ObjectId and not a string literal.
+```shell
+doc2 = {"_id": ObjectId("507f191e810c19729de860ea"), "catalogId" : "catalog1", "journal" : 'Oracle Magazine', "publisher" : 'Oracle Publishing', "edition" : 'November December 2013',"title" : 'Engineering as a Service',"author" : 'David A. Kelly'};
+```
+
+Add the document using the db.<collection>.insert() method.
+```shell
+db.catalog.insert(doc2)
+```
+
 ## Dropping a Collection
 ## Updating a Document
 ## Querying a Single Document

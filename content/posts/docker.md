@@ -777,6 +777,22 @@ Add the document using the db.<collection>.insert() method.
 db.catalog.insert(doc2)
 ```
 
+## Querying a Single Document
+The db.<collection>.findOne() method is used to find a single document.
+```shell
+db.catalog.findOne()
+```
+
+The db.collection.findOne(query, projection) method also takes two args both of type document and both optional. The query parameter specifies the query selection criteria and the projection parameter specifies the fields to select.
+
+Bye example select the editionm title and author fileds and specify the query document as {}
+```shell
+db.catalog.findOne(
+    {},
+    {edition: 1, title: 1, author: 1  }
+)
+```
+
 ## Dropping a Collection
 ## Updating a Document
 ## Querying a Single Document

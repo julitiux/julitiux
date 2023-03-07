@@ -679,6 +679,11 @@ Start an interactive terminal(tty) using the following command
 sudo docker exec -it mongodb bash
 ```
 ## Starting a Mongo Shell
+To start the MongoDB shell, run the following command.
+```shell
+mongo
+```
+
 ## Creating a Database
 ## Creating a Collection
 ## Creating a Document

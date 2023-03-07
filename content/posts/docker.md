@@ -700,6 +700,32 @@ mongo localhost:27017
 ```
 
 ## Creating a Database
+List the databases from the MongoDB shell with the following command help method (also called command helper)
+```shell
+show dbs
+```
+
+A new database is created implicity when the database name is set to the database to be created. Set the database to `mongodb`
+```shell
+use mongodb
+```
+
+the show gbs command help method does not list the mongodb database till the database is used. Use the `db.createCollection()` method to create a collection called `catalog`. Subsequently run the show dbs coammand again.
+```shell
+show dbs
+db.createCollection('catalog')
+show dbs
+```
+
+The show dbs command does not list the `mongodb` database before the `catalog` collection is created, but lists the `mongodb` database after the collection has been created.
+
+List the collections in the mongodb database with the following command.
+```shell
+> show collections
+catalogo
+>
+```
+
 ## Creating a Collection
 ## Creating a Document
 ## Finding Documents

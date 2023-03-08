@@ -843,7 +843,11 @@ db.catalog.save(doc1,{ writeConcern: { w: "majority", wtimeout: 5000 } })
 
 The document gets saved by updating an existing document. The nMatched is 1 and nUpserted is 0, and nModified is 1 in the WriteResult object returned. The nUpserted filed refers to the number of new documents added in contrast to modifying an existing document.
 
-
+## Outputting Documents as JSON
+The db.collections.find(query, projection) method returns a cursor over the documents that are selected by the query. Invoke the `forEach(printjson)` method on the cursor to output teh document as formatted JSON
+```shell
+db.catalog,find().forEach(printjson)
+```
 
 ## Querying a Single Document
 ## Querying All the Documents

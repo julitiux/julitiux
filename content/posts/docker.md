@@ -820,8 +820,31 @@ db.collection.insert(
 
 The first parameter is a single document or an array of documents. The second parameter is a document with fields writeConcern and ordered. The writeConcern specifies the write concern or the guarantee that MongoDB provides on the success of an insert. The ordered parameter is set to true, which implies that the documents are added in the order specified and if an error occurs with one of the documents none of the documents are added.
 
-
 ## Updating a Document
+The `db.collection.save()` method has the following syntax and updates a document if the document already exists, and ads a new document if the document does not exist.
+```shell
+db.collection.save(
+    <document>,
+    {
+        writeConcern: <document>
+    } 
+)
+```
+
+A document is identify by the unique _id of type ObjectId. Next, we shall update document with _id as ObjectId("6407cbb97d24c12d2d6f0b8a"). Create an update JSON document with some of the field values modifies.
+```shell
+doc1 = {"_id": ObjectId("507f191e810c19729de860ea"), "catalogId" : 'catalog1', "journal" : 'Oracle Magazine', "publisher" : 'Oracle Publishing', "edition" : '11-12-2013',"title" : 'Engineering as a Service',"author" : 'Kelly, David A.'}
+```
+
+Saving the document using the `db.collection.save()` method in the catalog collection.
+```shell
+db.catalog.save(doc1,{ writeConcern: { w: "majority", wtimeout: 5000 } })
+```
+
+The document gets saved by updating an existing document. The nMatched is 1 and nUpserted is 0, and nModified is 1 in the WriteResult object returned. The nUpserted filed refers to the number of new documents added in contrast to modifying an existing document.
+
+
+
 ## Querying a Single Document
 ## Querying All the Documents
 ## Making a Backup of the Data

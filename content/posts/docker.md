@@ -882,6 +882,26 @@ Query the documents in the catalog collections.
 db.catalog.find()
 ```
 
-## Stopping and Restarting the MongoDB Database
 ## Removing Documents
+The `db.collection.remove` method is used to remove document/s and has the following syntax
+```shell
+db.collection.remove(
+    <query>,
+    <justOne>
+)
+```
+
+by example
+```shell
+db.catalog.remove({ _id: ObjectId("6407cbb97d24c12d2d6f0b8a") })
+```
+
+The nRemoved in the WriteResult is 1 indicating that one document got removed. Run the `db.catalog.find()` method before and after the `db.catalog.remove()` method invocation. Before the `db.catalog.remove()` method is invoked, two documents get listed, and afterward only one document gets listed
+
+To remove all documents, provide an empty document {} to the `db.catalog.remove()` method invocation.
+```shell
+db.catalog.remove({})
+```
+
+
 ## Exiting Mongo Shell

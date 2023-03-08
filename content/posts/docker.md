@@ -849,9 +849,39 @@ The db.collections.find(query, projection) method returns a cursor over the docu
 db.catalog,find().forEach(printjson)
 ```
 
-## Querying a Single Document
-## Querying All the Documents
 ## Making a Backup of the Data
+The mongodump utility is used for creating a binary export of the data in a database, The mongorestore utility is used in conjuntion with mongodump to restore a database from backup. The mongorestore utility either creates a new database instance or adds to an existing database.
+
+Run the following `mongodump` command to export the test database ot the /data/ backup directory
+```shell
+mongodump --db test --out /data/backup
+```
+
+Run the following `mongorestore` command to restore the exported data from /data/backup/test to the `testrestore` database.
+```shell
+mongorestore --db testrestore /data/backup/test
+```
+
+Connect to the MongoDB shell with the following command
+```shell
+mongo localhost:27017/testrestore
+```
+
+List the database with the following command
+```shell
+show dbs
+```
+
+Set the database name as mongodb
+```shell
+show collections
+```
+
+Query the documents in the catalog collections.
+```shell
+db.catalog.find()
+```
+
 ## Stopping and Restarting the MongoDB Database
 ## Removing Documents
 ## Exiting Mongo Shell

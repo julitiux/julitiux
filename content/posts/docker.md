@@ -903,5 +903,40 @@ To remove all documents, provide an empty document {} to the `db.catalog.remove(
 db.catalog.remove({})
 ```
 
+## Stopping and Restarting the MongoDB Database
+The Docker container running the MongoDB instance may be atopped with the `docker stop` command
+```docker
+sudo docker stop
+```
 
-## Exiting Mongo Shell
+List the running Docker containers with the following command
+```docker
+sudo docker ps
+```
+
+Start the Docker container again with the `docker start` command
+```docker
+sudo docker start mongo
+```
+
+Run the following command again to list the running containers
+```docker
+sudo docker ps
+```
+
+Start de interactive terminal with the following command in which the container ID is used instead if the container name
+```docker
+sudo docker exec -it 0fd1254f07db bash
+```
+
+Start the MongoDB shell with the mongo command in the interactive shell
+```shell
+mongo
+```
+
+Set the database to local and list the collections with the show collections command. subsequently set the database to mongodb and list the collections.
+```shell
+use mongodb
+show collections
+db.catalog.find()
+```

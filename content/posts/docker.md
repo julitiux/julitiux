@@ -940,3 +940,6 @@ use mongodb
 show collections
 db.catalog.find()
 ```
+
+## Exiting the Mongo Shell
+The exit the interactive terminal use the `exit` command and exit the MongoDB shell with the `exit` command

@@ -3550,3 +3550,35 @@ object Game {
 >>    }
 }
 ```
+
+Your welcome message does not print, because __Game__ has not been initialized. And __Game__ has not been initialized because it has not been referenced yet.
+
+Add __play__ to __Game__ and call it from __main__. When you call a function defined in an object declaration, you call it using the name of the object in which it is defined - not on an instance of a class, as you do for other class functions.
+
+### Listing 15.3 Calling a function defined on an object declaration (Game.kt)
+```kotlin
+fun main(args: Array<String>) {
+    ...
+    // Player status
+    printPlayerStatus(player)
+    Game.play()
+}
+
+private fun printPlayerStatus(player: Player) {
+    println("(Aura: ${player.auraColor()}) " +
+            "(Blessed: ${if (player.isBlessed) "YES" else "NO"})")
+    println("${player.name} ${player.formatHealthStatus()}")
+}
+
+object Game {
+    init {
+        println("Welcome, adventurer.")
+    }
+    
+>>    fun play() {
+>>        while (true) {
+>>            // Play NyetHack
+>>        }
+>>    }
+}
+```

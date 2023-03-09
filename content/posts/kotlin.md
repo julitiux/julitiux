@@ -3500,3 +3500,32 @@ fun printIsSourceOfBlessings(any: Any) {
 ```
 
 The __as__ operator denotes a type cast. This cast says, "Treat any as if it were of type __Room__ for the purpose of this expression".
+
+# 15. Objects
+
+This chapter introduces _object declarations_ as well as other types of classes: _nested classes_, _data classes_ and _enum classes_.
+
+## The object keyword
+If you need to hold on to a single instance with state is consistent throughout the time that your program is running, consider defining a _singleton_. With the object keyword, you specify thta a class will be limited to a single instance - a singleton. The first time you access an object, it is instantiated for you. That same instance will persist as long as your program is running, and each subsequent access will then return original instance.
+
+There are three ways to use the object keyword: _object declarations_, _objects expressions_ and _companion objects_
+
+## Objects declarations
+Objects declarations are useful for organization and state management, especially when you need to maintain some state consistently theroughout the lifespam of your program.
+
+### Listing 15.1 Declaring Game object (Game.kt)
+```kotlin
+fun main(args: Array<String>) {
+... 
+}
+
+private fun printPlayerStatus(player: Player) {
+    println("(Aura: ${player.auraColor()}) " +
+            "(Blessed: ${if (player.isBlessed) "YES" else "NO"})")
+    println("${player.name} ${player.formatHealthStatus()}")
+}
+
+>>object Game {
+
+>>}
+```

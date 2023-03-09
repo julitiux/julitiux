@@ -3515,17 +3515,38 @@ Objects declarations are useful for organization and state management, especiall
 
 ### Listing 15.1 Declaring Game object (Game.kt)
 ```kotlin
+    fun main(args: Array<String>) {
+        ... 
+    }
+
+    private fun printPlayerStatus(player: Player) {
+        println("(Aura: ${player.auraColor()}) " +
+                "(Blessed: ${if (player.isBlessed) "YES" else "NO"})")
+        println("${player.name} ${player.formatHealthStatus()}")
+    }
+
+>>  object Game {
+>>  }
+```
+
+The main function in Game.kt should now serve exclisively to kick off gameplay. All game logic will be encapsulated in the __Game__ object, of which there will be only one instance.
+
+Beacause an object declaration is instantiated for you, you do not add a custom with code to be called at initialization. Instead, you need an initializer block for any code that you want to be called when your object is initialized. Add one to the Game object with a greeting to be printed to the console when the object in instantiated.
+
+### Listing 15.2 Adding an init block to Game (Game.kt)
+```kotlin
 fun main(args: Array<String>) {
 ... 
 }
-
 private fun printPlayerStatus(player: Player) {
     println("(Aura: ${player.auraColor()}) " +
             "(Blessed: ${if (player.isBlessed) "YES" else "NO"})")
     println("${player.name} ${player.formatHealthStatus()}")
 }
 
->>object Game {
-
->>}
+object Game {
+>>    init {
+>>        println("Welcome, adventurer.")
+>>    }
+}
 ```

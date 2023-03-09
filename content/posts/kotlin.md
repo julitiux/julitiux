@@ -3665,3 +3665,27 @@ object Game {
     } 
 }
 ```
+
+If you were to run Game.kt, it would loop indefinitely, as there is nothing to stop the loop. The last step for the game loop, at least for now
+
+### Listing 15.6 Accepting user input (Game.kt)
+```kotlin
+...
+object Game {
+    ...
+    fun play() {
+        while (true) {
+            println(currentRoom.description())
+            println(currentRoom.load())
+    
+            // Player status
+            printPlayerStatus(player)
+    
+>>          print("> Enter your command: ")
+>>          println("Last command: ${readLine()}")
+        } 
+    }
+... 
+}
+
+```

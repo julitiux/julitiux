@@ -3582,3 +3582,48 @@ object Game {
 >>    }
 }
 ```
+
+### Listing 15.4 Encapsulating properties and functions within the object declaration (Game.kt)
+```kotlin
+fun main(args: Array<String>) {
+<<  val player = Player("Madrigal")
+<<  player.castFireball()
+
+<<  var currentRoom: Room = TownSquare()
+    println(currentRoom.description())
+    println(currentRoom.load())
+    
+    // Player status
+    printPlayerStatus(player)
+    Game.play()
+}
+
+<<  private fun printPlayerStatus(player: Player) {
+<<      println("(Aura: ${player.auraColor()}) " +
+<<              "(Blessed: ${if (player.isBlessed) "YES" else "NO"})")
+<<      println("${player.name} ${player.formatHealthStatus()}")
+<<  }
+
+    object Game {
+>>      private val player = Player("Madrigal")
+>>      private var currentRoom: Room = TownSquare()
+  
+        init {
+            println("Welcome, adventurer.")
+>>          player.castFireball()
+        }
+
+    fun play() {
+        while (true) {
+            // Play NyetHack
+        }
+    }
+
+>>    private fun printPlayerStatus(player: Player) {
+>>        println("(Aura: ${player.auraColor()}) " +
+>>                "(Blessed: ${if (player.isBlessed) "YES" else "NO"})")
+>>        println("${player.name} ${player.formatHealthStatus()}")
+>>    }
+
+}
+```

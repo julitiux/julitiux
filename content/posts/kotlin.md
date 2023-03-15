@@ -3714,3 +3714,21 @@ __PremadeWorldMap__ has compaion object with one function called __load__
 And no matter how many times __PremadeWorldMap__ in instantiated, there will only ever be one instnace of its companion object.
 
 Understanding the differences in how and when object declarations, object expressions, and companion objects are instantiated is key in understanding when to use each of them effectively.
+
+## Nested Classes
+Not all classes defined within other classes are declared without a name. You can also use the class keyword to define a named class _nested_ inside of another class.
+
+Create a private class within the __Game__ object to provide this abstraction.
+
+### Listing 15.7 Defining a nested class (Game.kt)
+```kotlin
+...
+object Game {
+    ...
+        private class GameInput(arg: String?) {
+            private val input = arg ?: ""
+            val command = input.split(" ")[0]
+            val argument = input.split(" ").getOrElse(1, { "" })
+    }
+}
+```kotlin

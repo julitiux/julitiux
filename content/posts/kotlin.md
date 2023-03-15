@@ -3817,3 +3817,12 @@ class Player(_name: String,
 ... 
 }
 ```
+
+Any provides default implementations for all of these functions, but, as you have before, they are often not very reader friendly. Data classes procide implementations for these functions that may work better for yo project. In this section, we will talk through two of those functions and some of the other benefits of using data classes to represent data in your codebase.
+
+* toString
+* equals
+* copy
+```kotlin
+    val mortalPlayer = player.copy(isImmortal = false)
+```

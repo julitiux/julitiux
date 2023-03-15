@@ -3790,3 +3790,12 @@ object Game {
 ```
 
 Run Game.tk
+
+## Data classes
+A data classes designed specifically for holding data, and they come with some powerful data manupulationbenefits.
+```kotlin
+Listing 15.11 Defining a data class (Navigation.kt)
+data class Coordinate(val x: Int, val y: Int) {
+    val isInBounds = x >= 0 && y >= 0
+}
+```

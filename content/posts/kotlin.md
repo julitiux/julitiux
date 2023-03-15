@@ -3768,3 +3768,25 @@ object Game {
     }
 }
 ```
+
+### Listing 15.10 Using __GameInput__ (Game.kt)
+```kotlin
+...
+object Game {
+    ...
+    fun play() {
+        while (true) {
+            println(currentRoom.description())
+            println(currentRoom.load())
+            // Player status
+            printPlayerStatus(player)
+            print("> Enter your command: ")
+<<          println("Last command: ${readLine()}")
+>>          println(GameInput(readLine()).processCommand())
+        } 
+    }
+    ... 
+}
+```
+
+Run Game.tk

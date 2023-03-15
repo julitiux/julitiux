@@ -3689,3 +3689,27 @@ object Game {
 }
 
 ```
+
+## Companion objects
+If you would like to the initialization of an object a class instancem there is another option for you: a __companion object__. A __companion object__ es declared within another class declaration using the companion modifies. A class can have no more than more companion object.
+
+There are two case in which a companion object will be initialized, First, a companion obect is initialized when its enclosing class is initialized. this makes it a good place for singleton data that has a contextual connection to a class definition. Second, a companion object is initialized when one of its properties or function is accessed directly
+
+By example.
+```kotlin
+class PremadeWorldMap {
+    ...
+    companion object {
+        private const val MAPS_FILEPATH = "nyethack.maps"
+        fun load() = File(MAPS_FILEPATH).readBytes()
+    }
+}
+```
+
+__PremadeWorldMap__ has compaion object with one function called __load__
+```kotlin
+    PremadeWorldMap.load()
+```
+
+And no matter how many times __PremadeWorldMap__ in instantiated, there will only ever be one instnace of its companion object.
+

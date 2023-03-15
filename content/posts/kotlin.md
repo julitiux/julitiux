@@ -3749,3 +3749,22 @@ object Game {
     } 
 }
 ```
+
+### Listing 15.9 Defining the __processCommand__ function (Game.kt)
+```kotlin
+...
+object Game {
+    ...
+    private class GameInput(arg: String?) {
+        private val input = arg ?: ""
+        val command = input.split(" ")[0]
+        val argument = input.split(" ").getOrElse(1, { "" })
+
+>>      fun processCommand() = when (command.toLowerCase()) {
+>>          else -> commandNotFound()
+>>      }
+
+        private fun commandNotFound() = "I'm not quite sure what you're trying to do!"
+    }
+}
+```

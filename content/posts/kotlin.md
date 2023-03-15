@@ -3731,4 +3731,6 @@ object Game {
             val argument = input.split(" ").getOrElse(1, { "" })
     }
 }
-```kotlin
+```
+
+The __GameInput__ class is only relevant to __Game__; it does not need to be accessed from anywhere else in NyeHack, Making __GameInput__ a private, nested class means that GameInput can be used __Game__ but does not clutter the rest of your API.

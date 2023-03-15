@@ -3799,3 +3799,21 @@ data class Coordinate(val x: Int, val y: Int) {
     val isInBounds = x >= 0 && y >= 0
 }
 ```
+
+### Listing 15.12 Tracking player position (Player.kt)
+```kotlin
+class Player(_name: String,
+             var healthPoints: Int = 100,
+             val isBlessed: Boolean,
+             private val isImmortal: Boolean) {
+    var name = _name
+        get() = "${field.capitalize()} of $hometown"
+        private set(value) {
+            field = value.trim()
+        }
+    
+    val hometown by lazy { selectHometown() }
+    var currentPosition = Coordinate(0, 0)
+... 
+}
+```

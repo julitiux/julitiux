@@ -3734,3 +3734,18 @@ object Game {
 ```
 
 The __GameInput__ class is only relevant to __Game__; it does not need to be accessed from anywhere else in NyeHack, Making __GameInput__ a private, nested class means that GameInput can be used __Game__ but does not clutter the rest of your API.
+
+### Listing 15.8 Defining a function in a nested class (Game.kt)
+```kotlin
+...
+object Game {
+    ...
+    private class GameInput(arg: String?) {
+        private val input = arg ?: ""
+        val command = input.split(" ")[0]
+        val argument = input.split(" ").getOrElse(1, { "" })
+    
+>>      private fun commandNotFound() = "I'm not quite sure what you're trying to do!"
+    } 
+}
+```

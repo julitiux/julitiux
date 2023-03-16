@@ -3849,3 +3849,20 @@ However, there are also some limitations and requirements on data classes.
 * must have a primary constructor with at least one parameter.
 * require their primary constructor parameters to be marked wither `val` or `var`
 * cannot be abstract, open, sealed, or inner.
+
+## Enumerated Classes
+_Enumerated classes_, or "enums", are specual type of class useful for defining a collection od constants, known as _enumerated types_
+
+### Listing 15.13 Defining an enum (Navigation.kt)
+```kotlin
+enum class Direction {
+    NORTH,
+    EAST,
+    SOUTH,
+    WEST
+}
+
+data class Coordinate(val x: Int, val y: Int) {
+    val isInBounds = x >= 0 && y >= 0
+}
+```

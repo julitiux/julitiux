@@ -3826,3 +3826,26 @@ Any provides default implementations for all of these functions, but, as you hav
 ```kotlin
     val mortalPlayer = player.copy(isImmortal = false)
 ```
+
+## Destructuring declaration
+Another bemefit if data classes is that they automatically enable your class's data to be destrcutured.
+
+The example of destructuring you have seen up to this point have involved things like the list output from split.
+
+Under the hood, destructuring depend on the declaration of functions with names like __component1__, __component2__, etc., each declared for some piece of data that you would like to return. Data classes automatically add these functions for you each property defined in their primary constructor.
+
+There is nothing magic about a class supporting destructoring; a data class simply does tje extra work required to make the class "destructurable" for you. You can make any class support destructuring by adding component operator functions to it, like so
+```kotlin
+class PlayerScore(val experience: Int, val level:Int ){
+        operator fun component1() = experience
+        operator fun component2() = level
+    }
+
+    val (experience, level) = PlayerScore(1250, 5)
+```
+
+However, there are also some limitations and requirements on data classes.
+
+* must have a primary constructor with at least one parameter.
+* require their primary constructor parameters to be marked wither `val` or `var`
+* cannot be abstract, open, sealed, or inner.

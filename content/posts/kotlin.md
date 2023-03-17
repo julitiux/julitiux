@@ -3944,3 +3944,15 @@ data class Coordinate(val x: Int, val y: Int) {
     operator fun plus(other: Coordinate) = Coordinate(x + other.x, y + other.y)
 }
 ```
+
+Come commonly used operators you can override.
+### Table 15.1 Common operators
+| Operator | Function name | Purpose |
+|---|---|---|
+| + | __plus__ | Adds an object to another |
+| += | __plussAssign__ | Adds an object to another and assign the result to the first |
+| == | __equals__ | Returns true if two objects are equal, false otherwise |
+| > | __compareTo__ | Returns true if the object on the lefthand side is greaterthan the object on the righthand side, false otherwise |
+| [] | __get__ | Returns the element in a collection at a give index |
+| .. | __rangeTo__ | Creates a range object |
+| in | __contains__ | Returs true if an object exists within a collection |

@@ -3956,3 +3956,19 @@ Come commonly used operators you can override.
 | [] | __get__ | Returns the element in a collection at a give index |
 | .. | __rangeTo__ | Creates a range object |
 | in | __contains__ | Returs true if an object exists within a collection |
+
+## Aditional, exploring the world of NyetHack
+
+### Listing 15.18 Defining a world map in NyetHack (Game.kt)
+```kotlin
+...
+object Game {
+    private val player = Player("Madrigal")
+    private var currentRoom: Room = TownSquare()
+
+>>  private var worldMap = listOf(
+>>      listOf(currentRoom, Room("Tavern"), Room("Back Room")),
+>>      listOf(Room("Long Corridor"), Room("Generic Room")))
+    ...
+}
+```

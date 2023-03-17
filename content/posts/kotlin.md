@@ -3890,8 +3890,8 @@ enum class Direction(private val coordinate: Coordinate) {
     SOUTH(Coordinate(0, 1)),
     WEST(Coordinate(-1, 0));
 
-    fun updateCoordinate(playerCoordinate: Coordinate) =
-            Coordinate(playerCoordinate.x + coordinate.x, playerCoordinate.y + coordinate.y)
+>>  fun updateCoordinate(playerCoordinate: Coordinate) =
+>>          Coordinate(playerCoordinate.x + coordinate.x, playerCoordinate.y + coordinate.y)
 }
 
 
@@ -3899,4 +3899,48 @@ data class Coordinate(val x: Int, val y: Int) {
     val isInBounds = x >= 0 && y >= 0
 }
 
+```
+
+## Operator Overloading
+When you want to use built-in operators with your custom types, you have to override the operators functions to tell the compiler how ti implement them for you type. This is known as _operator overloading_
+
+### Listing15.16 Overloadingtheplusoperator(Navigation.kt)
+```kotlin
+enum class Direction(private val coordinate: Coordinate) {
+    NORTH(Coordinate(0, -1)),
+    EAST(Coordinate(1, 0)),
+    SOUTH(Coordinate(0, 1)),
+    WEST(Coordinate(-1, 0));
+
+    fun updateCoordinate(playerCoordinate: Coordinate) =
+            Coordinate(playerCoordinate.x + coordinate.x, playerCoordinate.y + coordinate.y)
+}
+
+
+data class Coordinate(val x: Int, val y: Int) {
+    val isInBounds = x >= 0 && y >= 0
+>>  operator fun plus(other: Coordinate) = Coordinate(x + other.x, y + other.y)
+}
+```
+
+Now , you can simply use the addition operator `(x)` to add two Coordinate instances together.
+
+### Listing 15.17 Using an overloaded operator (Navigation.kt)
+```kotlin
+enum class Direction(private val coordinate: Coordinate) {
+    NORTH(Coordinate(0, -1)),
+    EAST(Coordinate(1, 0)),
+    SOUTH(Coordinate(0, 1)),
+    WEST(Coordinate(-1, 0));
+
+    fun updateCoordinate(playerCoordinate: Coordinate) =
+<<      Coordinate(playerCoordinate.x + coordinate.x, playerCoordinate.y + coordinate.y) 
+>>      coordinate + playerCoordinate
+
+}
+
+data class Coordinate(val x: Int, val y: Int) {
+    val isInBounds = x >= 0 && y >= 0
+    operator fun plus(other: Coordinate) = Coordinate(x + other.x, y + other.y)
+}
 ```

@@ -4037,6 +4037,27 @@ interface Fightable {
     val diceCount: Int
     val diceSides: Int
     val damageRoll: Int
+
     fun attack(opponent: Fightable): Int
 }
 ```
+Your interface declaration defines  things that are common to eny entity.
+
+## Implementing an Interface
+To use an interface, we say that you "implemnt" it on a class. There two parts to this: First, you declare that the class implements the interface. Then, you must ensure that the class provides implementations for all the properties and functions specified in the interface
+
+Use the `:` operator to implemnt an interface.
+
+### Listing 16.2 Implementing an interface (Player.kt)
+```kotlin
+class Player(_name: String,
+>>  override var healthPoints: Int = 100,
+    var isBlessed: Boolean = false,
+>>  private var isImmortal: Boolean) : Fightable {
+    
+    ... 
+    
+    }
+```
+
+When you add the interface to the main class, IntelliJ indicates that functions and properties are missing.

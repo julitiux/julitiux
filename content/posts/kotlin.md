@@ -4098,3 +4098,17 @@ class Player(_name: String,
 ## Default Implementations
 We said several times now that interface focus on the what and not the how. You can, however provide a default implementation for property getters and functions in an interface. Classes that implement the interface then have option of using the default of defining their own implementation.
 
+### Listing 16.4 Defining a default getter implementation (Creature.kt)
+```kotlin
+interface Fightable {
+    var healthPoints: Int
+    val diceCount: Int
+    val diceSides: Int
+    val damageRoll: Int
+        get() = (0 until diceCount).map {
+            Random().nextInt(diceSides + 1)
+        }.sum()
+        
+    fun attack(opponent: Fightable): Int
+}
+```

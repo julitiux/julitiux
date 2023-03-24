@@ -4094,3 +4094,7 @@ class Player(_name: String,
     ... 
 }
 ```
+
+## Default Implementations
+We said several times now that interface focus on the what and not the how. You can, however provide a default implementation for property getters and functions in an interface. Classes that implement the interface then have option of using the default of defining their own implementation.
+

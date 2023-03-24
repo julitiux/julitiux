@@ -4061,3 +4061,34 @@ class Player(_name: String,
 ```
 
 When you add the interface to the main class, IntelliJ indicates that functions and properties are missing.
+
+### Listing 16.3 Stubbing out an interface implementation (Player.kt)
+```kotlin
+class Player(_name: String,
+            override var healthPoints: Int = 100,
+            var isBlessed: Boolean = false,
+            private var isImmortal: Boolean) : Fightable {
+            
+        override val diceCount: Int = 3
+            get() = TODO("not implemented")
+            //To change initializer of created properties use //File | Settings | File Templates.
+
+        override val diceSides: Int = 6
+            get() = TODO("not implemented")
+            //To change initializer of created properties use //File | Settings | File Templates.
+    
+        override fun attack(opponent: Fightable): Int {
+            TODO("not implemented")
+            //To change body of created functions use
+            //File | Settings | File Templates.
+            val damageDealt = if (isBlessed) {
+                damageRoll * 2
+            } else {
+                damageRoll 
+            }
+            opponent.healthPoints -= damageDealt
+            return damageDealt
+        }
+    ... 
+}
+```

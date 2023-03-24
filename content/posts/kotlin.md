@@ -4022,3 +4022,8 @@ object Game {
     }
 }
 ```
+
+# 16. Interfaces and Abstract Classes
+
+an interface allows you to specify common properties and beahvior that are supported by a subset of classes in your program - without being required to specify how they will be implemented. This capability - the _what_ without _the how_ - is useful when inheritance is not the right relationship for classes in a program. Using an interface, a group of classes can have properties or functions in common without sharing a superclass or sublcasing one other.
+

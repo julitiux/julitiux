@@ -4210,7 +4210,7 @@ open class Room(val name: String) {
 }
 ```
 
-### Listing16.9 Defining the __fight__ function(Game.kt)
+### Listing 16.9 Defining the __fight__ function(Game.kt)
 ```kotlin
 ...
 object Game {
@@ -4225,6 +4225,35 @@ object Game {
             "Combat complete."
         } ?: "There's nothing here to fight."
 
+    private class GameInput(arg: String?) {
+        ... 
+    }
+}
+```
+
+### Listing 16.10 Defining the __slay__ function (Game.kt)
+```kotlin
+...
+object Game {
+    ...
+    
+    private fun fight() = ...
+    
+    private fun slay(monster: Monster) {
+        println("${monster.name} did ${monster.attack(player)} damage!")
+        println("${player.name} did ${player.attack(monster)} damage!")
+
+        if (player.healthPoints <= 0) {
+            println(">>>> You have been defeated! Thanks for playing. <<<<")
+            exitProcess(0)
+        }
+
+        if (monster.healthPoints <= 0) {
+            println(">>>> ${monster.name} has been defeated! <<<<")
+            currentRoom.monster = null
+        }
+    }
+    
     private class GameInput(arg: String?) {
         ... 
     }

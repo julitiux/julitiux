@@ -4169,3 +4169,26 @@ abstract class Monster(val name: String,
 >>                 healthPoints: Int = 30) : Monster(name, description, healthPoints) {
 }
 ```
+
+
+### Listing 16.7 Implementing properties in the subclass of an abstract class (Creature.kt)
+```kotlin
+interface Fightable {
+    ... 
+}
+
+abstract class Monster(val name: String,
+                       val description: String,
+                       override var healthPoints: Int) : Fightable {
+    ...
+}
+
+class Goblin(name: String = "Goblin",
+             description: String = "A nasty-looking goblin",
+             healthPoints: Int = 30) : Monster(name, description, healthPoints) {
+    
+    override val diceCount = 2
+    override val diceSides = 8
+    
+}
+```

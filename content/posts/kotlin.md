@@ -4112,3 +4112,12 @@ interface Fightable {
     fun attack(opponent: Fightable): Int
 }
 ```
+
+## Abstract Classes
+Abstract classes provide another way to enforce structure in your classes. An abstract class is never instantiated. Its purpose is to provide function implementations throughinheritance to subclasses that are instantiated.
+
+An abstract class is defined by prepending the abstract keyword to a class definition. In addition to function implementations, abstract classes can include _abstract functions_ - function declarations without implementations.
+
+
+
+

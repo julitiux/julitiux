@@ -4259,3 +4259,31 @@ object Game {
     }
 }
 ```
+
+Call slay from fight.
+### Listing 16.11 Calling the slay function (Game.kt)
+```kotlin
+
+...
+object Game {
+    ...
+    
+    private fun move(directionInput: String) = ...
+
+    private fun fight() = currentRoom.monster?.let {
+        while (player.healthPoints > 0 && it.healthPoints > 0) {
+            slay(it)
+            Thread.sleep(1000)
+        }
+        "Combat complete."
+    } ?: "There's nothing here to fight."
+
+    private fun slay(monster: Monster) {
+        ... 
+    }
+
+    private class GameInput(arg: String?) {
+        ... 
+    }
+}
+```

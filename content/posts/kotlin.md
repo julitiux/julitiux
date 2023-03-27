@@ -4119,5 +4119,29 @@ Abstract classes provide another way to enforce structure in your classes. An ab
 An abstract class is defined by prepending the abstract keyword to a class definition. In addition to function implementations, abstract classes can include _abstract functions_ - function declarations without implementations.
 
 
+### Listing 16.5 Defining an abstract class (Creature.kt)
+```kotlin
+interface Fightable {
+    var healthPoints: Int
+    val diceCount: Int
+    val diceSides: Int
+    val damageRoll: Int
+        get() = (0 until diceCount).map {
+            Random().nextInt(diceSides + 1)
+        }.sum()
+    
+    fun attack(opponent: Fightable): Int
+}
 
+>>    abstract class Monster(val name: String,
+>>                           val description: String,
+>>                           override var healthPoints: Int) : Fightable {
+>>
+>>        override fun attack(opponent: Fightable): Int {
+>>            val damageDealt = damageRoll
+>>            opponent.healthPoints -= damageDealt
+>>            return damageDealt
+>>        } 
 
+}
+```

@@ -4189,6 +4189,23 @@ class Goblin(name: String = "Goblin",
     
     override val diceCount = 2
     override val diceSides = 8
-    
+
+}
+```
+
+## Combat in NyetHack
+Add a monster proeprty of nullable type __Monter?__to the __Room__ class, and initialize it by assigning it a __Goblin__. Update __Room's__ description to let the player know whether the room has a monster to fight.
+
+### Listing 16.8 Adding a monster to each room (Room.kt)
+```kotlin
+open class Room(val name: String) {
+    protected open val dangerLevel = 5 
+>>  var monster: Monster? = Goblin()
+
+    fun description() = "Room: $name\n" + 
+                        "Danger level: $dangerLevel\n" + 
+>>                      "Creature: ${monster?.description ?: "none."}" 
+
+    open fun load() = "Nothing much to see here..."
 }
 ```

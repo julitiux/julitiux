@@ -4209,3 +4209,24 @@ open class Room(val name: String) {
     open fun load() = "Nothing much to see here..."
 }
 ```
+
+### Listing16.9 Defining the __fight__ function(Game.kt)
+```kotlin
+...
+object Game {
+    ...
+
+    private fun move(directionInput: String) = ...
+    
+    private fun fight() = currentRoom.monster?.let {
+            while (player.healthPoints > 0 && it.healthPoints > 0) {
+                Thread.sleep(1000)
+            }
+            "Combat complete."
+        } ?: "There's nothing here to fight."
+
+    private class GameInput(arg: String?) {
+        ... 
+    }
+}
+```

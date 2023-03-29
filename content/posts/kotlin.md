@@ -4426,6 +4426,28 @@ class LootBox<T>(item: T) {
 
 Here, you add a new generic type parameter to the function R, short for the "return", since the generic type parameter will be used for fetch's return type. You place the generic type parameter in diamond braces directly before the function name: `fun <R> fetch`. __fetch__ returns a value of type `R?`, anullable version of R.
 
+You also specify that the lootModFunction (via its function type declaration, (T) -> R ) accepts an argument of type T and returns a result of type R. Try out the new __fetch__ function that you defined - this time, apssing a loot-modification function as an argument.
+
+### Listing 17.7 Passing the loot-modification function as an argument (Generics.kt)
+```kotlin
+...
+fun main(args: Array<String>) {
+    val lootBoxOne: LootBox<Fedora> = LootBox(Fedora("a generic-looking fedora", 15))
+    val lootBoxTwo: LootBox<Coin> = LootBox(Coin(15))
+   
+    lootBoxOne.open = true
+    lootBoxOne.fetch()?.run {
+        println("You retrieve $name from the box!")
+    }
+   
+>>  val coin = lootBoxOne.fetch() {
+>>      Coin(it.value * 3)
+>>  }
+
+>>  coin?.let { println(it.value) }
+}
+```
+
 
 
 

@@ -4483,8 +4483,8 @@ class LootBox<T : Loot>(item: T) {
 ...
 ```
 
-
-
+## vararg an get
+you __LootBox__ can now hold any kind of __Loot__, but it cannot hold more that one item at a time. What if you want to hols multiple items of Loot in you __LootBox__?
 
 
 

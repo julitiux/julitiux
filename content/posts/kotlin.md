@@ -4346,5 +4346,11 @@ fun main(args: Array<String>) {
 }
 ```
 
+Notice thr type signature for each LootBox variable:
+```kotlin
+val lootBoxOne: LootBox<Fedora> = LootBox(Fedora("a generic-looking fedora", 15))
+val lootBoxTwo: LootBox<Coin> = LootBox(Coin(15))
+```
 
+The diamond braces on the type signature for the variable show what type of loot a particular __LootBox__ instance is capable of holding.
 

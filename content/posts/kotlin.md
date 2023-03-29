@@ -4483,10 +4483,18 @@ class LootBox<T : Loot>(item: T) {
 ...
 ```
 
-## vararg an get
+## vararg and get
 you __LootBox__ can now hold any kind of __Loot__, but it cannot hold more that one item at a time. What if you want to hols multiple items of Loot in you __LootBox__?
 
+To do so, modify __lootBox__'s primary constructor with the vararg keyword, which allows a variable number of arguments to be passed to the constructor.
 
+### Listing 17.10 Adding vararg (Generics.kt)
+```kotlin
+class LootBox<T : Loot>(vararg item: T) {
+    ... 
+}
+...
+```kotlin
 
 
 

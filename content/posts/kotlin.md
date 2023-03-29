@@ -4308,3 +4308,22 @@ object Game {
     }
 }
 ```
+
+# 17. Generics
+List can hold any type because of _generics_, a type system feature that allows both functions and types to work types that are not yet known to you of the compiler.
+
+Generics greatly expand the reusability of your class definitions, because they allow your definitions to work with many types.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

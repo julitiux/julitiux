@@ -4315,7 +4315,16 @@ List can hold any type because of _generics_, a type system feature that allows 
 Generics greatly expand the reusability of your class definitions, because they allow your definitions to work with many types.
 
 
+## Defining Generic Types
+A _generic type_ is a class that accepts an input of any type in its constructor.
 
+
+### Listing 17.1 Creating a generic type (Generics.kt)
+```kotlin
+class LootBox<T>(item: T) {
+    private var loot: T = item
+}
+```
 
 
 

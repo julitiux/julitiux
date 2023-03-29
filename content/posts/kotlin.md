@@ -4326,14 +4326,25 @@ class LootBox<T>(item: T) {
 }
 ```
 
-You define the __LootBox__ class an make it generic by specifying a generic type parameter for use with the class, written as `T` abd specified within diamon braces (< >) like other type parameters. The generic type parameter, `T`, is a placeholder for the item's type
+You define the __LootBox__ class an make it generic by specifying a generic type parameter for use with the class, written as `T` abd specified within diamon braces (< >) like other type parameters. The generic type parameter, `T`, is a placeholder for the item's type.
 
 
+Note that the generic type parameter is usually represented with a single leyyer T, short for "type" though any letter or word can be used. The book suggest generally stick with T, since it is what is commonly used in other lenguages that support generics and is therefore teh most readable choice.
 
+### Listing 17.2 Defining loot boxes (Generics.kt)
+```kotlin
+class LootBox<T>(item: T) {
+    private var loot: T = item
+}
 
+class Fedora(val name: String, val value: Int)
+class Coin(val value: Int)
 
-
-
+fun main(args: Array<String>) {
+    val lootBoxOne: LootBox<Fedora> = LootBox(Fedora("a generic-looking fedora", 15))
+    val lootBoxTwo: LootBox<Coin> = LootBox(Coin(15))
+}
+```
 
 
 

@@ -4424,6 +4424,7 @@ class LootBox<T>(item: T) {
 ...
 ```
 
+Here, you add a new generic type parameter to the function R, short for the "return", since the generic type parameter will be used for fetch's return type. You place the generic type parameter in diamond braces directly before the function name: `fun <R> fetch`. __fetch__ returns a value of type `R?`, anullable version of R.
 
 
 

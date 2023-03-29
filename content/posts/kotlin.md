@@ -4354,3 +4354,30 @@ val lootBoxTwo: LootBox<Coin> = LootBox(Coin(15))
 
 The diamond braces on the type signature for the variable show what type of loot a particular __LootBox__ instance is capable of holding.
 
+## Generic Functions.
+Generic type parameters also work with functions. That is good news, since there is currently no way for a player to retrieve loot from a loot box.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

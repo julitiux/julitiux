@@ -4448,7 +4448,31 @@ fun main(args: Array<String>) {
 }
 ```
 
+## Generic Constraints 
+What if you wanted to ensure that the loot box was only used to hold loot, and not something else? You can specify a generic type constraint to enforce exactly that.
 
+### Listing 17.8 Adding a superclass (Generics.kt)
+```kotlin
+class LootBox<T>(item: T) {
+
+    var open = false
+    private var loot: T = item
+
+    fun fetch(): T? {
+        return loot.takeIf { open }
+    }
+
+    fun <R> fetch(lootModFunction: (T) -> R): R? {
+        return lootModFunction(loot).takeIf { open }
+    }
+
+}
+>>  open class Loot(val value: Int)
+
+>>  class Fedora(val name: String, val value: Int) : Loot(value)
+>>  class Coin(val value: Int) : Loot(value)
+...
+```
 
 
 

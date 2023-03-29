@@ -4406,7 +4406,23 @@ fun main(args: Array<String>) {
 ## Multiple Generic Type Paramters.
 A generic function or type can also support multiple generic type parameters, Suppose you want a second __fetch__ function that accepts a loot-modification function, allowing you to convert the loot to a some other new type, perhaps a coin, when you fetch it. The value of the coin returned depends on the value of the original loot - and a lootModFunction higher-order function that us passed to __fetch__ will determinate that.
 
+### Listing 17.6 Using multiple generic type parameters (Generics.kt)
+```kotlin
+class LootBox<T>(item: T) {
 
+    var open = false
+    private var loot: T = item
+
+    fun fetch(): T? {
+        return loot.takeIf { open }
+    }
+
+    fun <R> fetch(lootModFunction: (T) -> R): R? {
+        return lootModFunction(loot).takeIf { open }
+    }
+} 
+...
+```
 
 
 

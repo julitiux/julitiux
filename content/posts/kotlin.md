@@ -4370,8 +4370,21 @@ class LootBox<T>(item: T) {
 }
 ```
 
+Here you define a generic function, __fetch__, that return T - the generic type parameter specified on the __LootBox__ class, which is a placeholder for the type of item.
 
-
+### Listing 17.4 Testing the generic fetch function (Generics.kt)
+```kotlin
+...
+fun main(args: Array<String>) {
+    
+    val lootBoxOne: LootBox<Fedora> = LootBox(Fedora("a generic-looking fedora", 15))
+    val lootBoxTwo: LootBox<Coin> = LootBox(Coin(15))
+    
+    lootBoxOne.fetch()?.run {
+        println("You retrieve $name from the box!")
+    }
+}
+```
 
 
 

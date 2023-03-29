@@ -4326,6 +4326,7 @@ class LootBox<T>(item: T) {
 }
 ```
 
+You define the __LootBox__ class an make it generic by specifying a generic type parameter for use with the class, written as `T` abd specified within diamon braces (< >) like other type parameters. The generic type parameter, `T`, is a placeholder for the item's type
 
 
 

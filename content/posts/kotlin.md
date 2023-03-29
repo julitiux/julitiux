@@ -4473,8 +4473,15 @@ class LootBox<T>(item: T) {
 >>  class Coin(val value: Int) : Loot(value)
 ...
 ```
+Now, add a generic type constraint to LootBox's generic type paramter to allow only descendants of the Loot class to be used with __LootBox__
 
-
+### Listing 17.9 Constraining the generic parameter to __Loot__ only (Generics.kt)
+```kotlin
+class LootBox<T : Loot>(item: T) {
+    ... 
+}
+...
+```
 
 
 

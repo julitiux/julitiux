@@ -4651,6 +4651,18 @@ class Barrel<inout T>(val item: T)
 ...
 ```
 
+### Listing 17.23 Reversing the assignment (Variance.kt)
+```kotlin
+...
+fun main(args: Array<String>) {
+    var fedoraBarrel: Barrel<Fedora> = Barrel(Fedora("a generic-looking fedora", 15))
+    var lootBarrel: Barrel<Loot> = Barrel(Coin(15))
+
+<<  lootBarrel = fedoraBarrel
+>>  fedoraBarrel = lootBarrel
+<<  val myFedora: Fedora = lootBarrel.item
+}
+```
 
 
 

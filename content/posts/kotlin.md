@@ -4523,6 +4523,7 @@ Try out the new and improved  __LootBox__ in __main__. Pass another fedora into 
 ...
 fun main(args: Array<String>) {
 val lootBoxOne: LootBox<Fedora> = LootBox(Fedora("a generic-looking fedora", 15), Fedora("a dazzling magenta fedora", 25))
+    
     val lootBoxTwo: LootBox<Coin> = LootBox(Coin(15))
 lootBoxOne.open = true lootBoxOne.fetch(1)?.run {
         println("You retrieve $name from the box!")
@@ -4533,6 +4534,53 @@ val coin = lootBoxOne.fetch(0) {
     coin?.let { println(it.value) }
 }
 ```
+
+Another way to provide index access to the loot array is to have __LootBox__ implement an operator function: the `get` function, which enables the `[]` operator.
+
+Update __LootBox__ to include a __get__ operator implementation.
+
+### Listing 17.13 Adding a get operator to __LootBox__ (Generics.kt)
+```kotlin
+class LootBox<T : Loot>(vararg item: T) {
+   var open = false
+   private var loot: Array<out T> = item
+   
+   operator fun get(index: Int): T? = loot[index].takeIf { open }
+
+   fun fetch(item: Int): T? {
+       return loot[item].takeIf { open }
+   }
+   
+   fun <R> fetch(item: Int, lootModFunction: (T) -> R): R? {
+       return lootModFunction(loot[item]).takeIf { open }
+   }
+} 
+...
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

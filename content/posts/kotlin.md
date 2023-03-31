@@ -4645,6 +4645,11 @@ fun main(args: Array<String>) {
 }
 ```
 
+### Listing 17.22 Marking Barrel within (Variance.kt) 
+```kotlin
+class Barrel<inout T>(val item: T)
+...
+```
 
 
 

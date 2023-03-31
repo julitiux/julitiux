@@ -4558,6 +4558,19 @@ class LootBox<T : Loot>(vararg item: T) {
 ...
 ```
 
+Now use the new __get__ operator in your __main__ function
+
+### Listing 17.14 Using get (Generics.kt)
+```kotlin
+...
+fun main(args: Array<String>) {
+    ...
+    coin?.let { println(it.value) }
+   
+>>  val fedora = lootBoxOne[1]
+>>  fedora?.let { println(it.name) }
+}
+```
 
 
 

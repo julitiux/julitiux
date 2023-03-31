@@ -4625,14 +4625,25 @@ fun main(args: Array<String>) {
 }
 ```
 
-### Listing 17.20 Addingout(Variance.kt) 
+### Listing 17.20 Adding out (Variance.kt) 
 ```kotlin
 class Barrel<out T>(varval item: T)
 ...
-
 ```
 
+### Listing 17.21 Changing the assignment (Variance.kt)
+```kotlin
+class Barrel<out T>(val item: T)
+fun main(args: Array<String>) {
+    var fedoraBarrel: Barrel<Fedora> = Barrel(Fedora("a generic-looking fedora", 15))
+    var lootBarrel: Barrel<Loot> = Barrel(Coin(15))
 
+    lootBarrel = fedoraBarrel
+<<  lootBarrel.item = Coin(15)
+<<  val myFedora: Fedora = fedoraBarrel.item
+>>  val myFedora: Fedora = lootBarrel.item 
+}
+```
 
 
 

@@ -4572,7 +4572,13 @@ fun main(args: Array<String>) {
 }
 ```
 
+## __in__ and __out__
+To further customize your generic type parameter. Kotlin provides the keywords `in` and `out`
 
+### Listing 17.15 Defining Barrel (Variance.kt) 
+```kotlin
+class Barrel<T>(var item: T)
+```
 
 
 

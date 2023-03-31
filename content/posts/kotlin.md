@@ -4580,9 +4580,14 @@ To further customize your generic type parameter. Kotlin provides the keywords `
 class Barrel<T>(var item: T)
 ```
 
-
-
-
+### Listing 17.16 Defining Barrels in main (Variance.kt)
+```kotlin
+class Barrel<T>(var item: T)
+fun main(args: Array<String>) {
+    var fedoraBarrel: Barrel<Fedora> = Barrel(Fedora("a generic-looking fedora", 15))
+    var lootBarrel: Barrel<Loot> = Barrel(Coin(15))
+}
+```
 
 
 

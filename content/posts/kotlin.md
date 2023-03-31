@@ -4625,8 +4625,12 @@ fun main(args: Array<String>) {
 }
 ```
 
+### Listing 17.20 Addingout(Variance.kt) 
+```kotlin
+class Barrel<out T>(varval item: T)
+...
 
-
+```
 
 
 

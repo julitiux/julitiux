@@ -4514,7 +4514,25 @@ class LootBox<T : Loot>(vararg item: T) {
 ...
 ```
 
+Notice the `out` keyword thta you add for the new loot variable's type signature. The out keyword is required here because it is part of the return type for any cariable marked as `vararg`. 
 
+Try out the new and improved  __LootBox__ in __main__. Pass another fedora into the loot box.
+
+### Listing 17.12 Testing the new LootBox (Generics.kt)
+```kotlin
+...
+fun main(args: Array<String>) {
+val lootBoxOne: LootBox<Fedora> = LootBox(Fedora("a generic-looking fedora", 15), Fedora("a dazzling magenta fedora", 25))
+    val lootBoxTwo: LootBox<Coin> = LootBox(Coin(15))
+lootBoxOne.open = true lootBoxOne.fetch(1)?.run {
+        println("You retrieve $name from the box!")
+    }
+val coin = lootBoxOne.fetch(0) {
+        Coin(it.value * 3)
+    }
+    coin?.let { println(it.value) }
+}
+```
 
 
 

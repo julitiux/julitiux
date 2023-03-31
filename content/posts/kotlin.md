@@ -4494,7 +4494,25 @@ class LootBox<T : Loot>(vararg item: T) {
     ... 
 }
 ...
+```
+
+Now that you have added  the `vararg` keyword to __LootBot__, its item cariable will be treated as an Array of elements instead of a single element when it is initialized, and __LootBox__ can accpet multiple items passed into the contructor.
+
+### Listing 17.11 Indexing into the loot array (Generics.kt)
 ```kotlin
+class LootBox<T : Loot>(vararg item: T) {
+    var open = false
+    private var loot: TArray<out T> = item
+
+    fun fetch(item: Int): T? {
+        return loot[item].takeIf { open } 
+    }
+    
+    fun <R> fetch(item: Int, lootModFunction: (T) -> R): R? {
+        return lootModFunction(loot[item]).takeIf { open } }
+    } 
+...
+```
 
 
 

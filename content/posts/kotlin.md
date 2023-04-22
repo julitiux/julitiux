@@ -4671,6 +4671,29 @@ Extensions are an alternative to the sharing bahavior of inheritance.
 
 The Kotlin standard library frequently uses extensions.
 
+## Defining Extensions Functions.
+My first extensions allows you to add a specified amount of enthusiasm to any String.
+
+### Listing 18.1 Addiing an extension to String (Extensions.kt)
+```kotlin
+fun String.addEnthusiasm(amount: Int = 1) = this + "!".repeat(amount)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

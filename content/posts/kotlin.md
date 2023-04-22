@@ -4664,8 +4664,12 @@ fun main(args: Array<String>) {
 }
 ```
 
-cambio
+# 18. Extensions
+__Extensions__ allow you to add functionality to a type without directly modifying the type's definition. You can use extensions with your own types and also types you do not control, like __List__, __Strings__ and other types from the Kotlin standard library.
 
+Extensions are an alternative to the sharing bahavior of inheritance.
+
+The Kotlin standard library frequently uses extensions.
 
 
 

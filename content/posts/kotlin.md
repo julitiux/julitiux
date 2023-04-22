@@ -4679,6 +4679,18 @@ My first extensions allows you to add a specified amount of enthusiasm to any St
 fun String.addEnthusiasm(amount: Int = 1) = this + "!".repeat(amount)
 ```
 
+When you specify an extension function, you also specify the type the extensions adds functionality to, known as the __receiver type__. For the _addEnthusiasm_ function, the receiver type you specified us String.
+
+__addEnthusiasm's__ function body is a single-expression function that returns a new string: the contents of this plus 1 or more exclamations points, based on the argument passed to amount. The _this_ keyword refers to the receiver instance the extension function was called on a String instance, in this case.
+
+### Listing 18.2 Calling the new extension on a String receiver instance (Extensions.kt)
+```kotlin
+fun String.addEnthusiasm(amount: Int = 1) = this + "!".repeat(amount)
+
+fun main(args: Array<String>) {
+    println("Madrigal has left the building".addEnthusiasm())
+}
+```
 
 
 

@@ -4693,6 +4693,19 @@ fun main(args: Array<String>) {
 ```
 
 
+## Defining an extension on a superclass
+Extension do not rely on inheritance, but they can be combined with inheritance to expand their scope. Define an extension on the Any type called __easyPrint__
+
+### Listing 18.3 Extending Any (Extensions.kt)
+```Kotlin
+fun String.addEnthusiasm(amount: Int = 1) = this + "!".repeat(amount) 
+
+fun Any.easyPrint() = println(this)
+
+fun main(args: Array<String>) {
+    "Madrigal has left the building".addEnthusiasm().easyPrint() 
+}
+```
 
 
 

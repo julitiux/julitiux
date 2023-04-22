@@ -4707,7 +4707,19 @@ fun main(args: Array<String>) {
 }
 ```
 
+Since you added the extension for the any type, it is also available for use with other subtyes. Call the extension on an `Int` after the `String` 
 
+### Listing 18.4 __easyPrint__ is available on all subtypes (Extensions.kt)
+```kotlin
+fun String.addEnthusiasm(amount: Int = 1) = this + "!".repeat(amount)
+
+fun Any.easyPrint() = println(this)
+
+fun main(args: Array<String>) {
+    "Madrigal has left the building".addEnthusiasm().easyPrint()
+    42.easyPrint()
+}
+```
 
 
 

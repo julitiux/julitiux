@@ -4763,8 +4763,20 @@ fun <T> T.easyPrint(): T {
     println(this)
     return this 
 }
-
 ...
+```
+
+## Extension Properties
+In addition to adding functionality to a type by specifying extension functions, you can also define extensions properties. Add another extension to String in Extensions.kt, this time an extension property that counts a strings' vowels:
+
+### Listing 18.8 Adding an extension property (Extensions.kt)
+```kotlin
+val String.numVowels
+    get() = count { "aeiou".contains(it) }
+
+fun String.addEnthusiasm(amount: Int = 1) = this + "!".repeat(amount)
+...
+
 ```
 
 

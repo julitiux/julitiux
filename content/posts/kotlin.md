@@ -4881,10 +4881,16 @@ private fun <T> Iterable<T>.random(): T = this.shuffled().first()
             placeOrder(uniquePatrons.random(), menuList.random())
             orderCount++
         }
+        
         displayPatronBalances()
 }
 ...
 ```
 
 
+### Listing 18.14 Adding the __random__ extension to IterableExt.kt (IterableExt.kt)
+```kotlin
+package com.bignerdranch.nyethack.extensions
 
+fun <T> Iterable<T>.random(): T = this.shuffled().first()
+```

@@ -4825,10 +4825,40 @@ null printWithDefault "Default string"  // With infix
 null.printWithDefault("Default string") // Without infix 
 ```
 
+## Extracting to Extensions 
+Applying what I have learned to refine NyeHack.
 
+Tavern.kt contains duplicate chains of logic called onseveral collections: `shuffled().first()`
+```kotlin
+    ...
+    (0..9).forEach {
+        val first = patronList.shuffled().first()
+        val last = lastName.shuffled().first()
+    }
 
+    uniquePatrons.forEach {
+        patronGold[it] = 6.0
+    }
 
+    var orderCount = 0
+    while (orderCount <= 9) {
+        placeOrder(uniquePatrons.shuffled().first(),
+                menuList.shuffled().first())
+        orderCount++
+    ...
+```
 
+### Lisintg 18.11 Adding a private __random__ extension (Tavern.kt)
+```kotlin
+val patronGold = mutableMapOf<String, Double>()
+
+private fun <T> Iterable<T>.random(): T = this.shuffled().first()
+
+fun main(args: Array<String>) {
+    ... 
+}
+...
+```
 
 
 

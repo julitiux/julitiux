@@ -4734,10 +4734,38 @@ fun Any.easyPrint() : Any {
 
 ```
 
+Now, try calling the easyPrint function two times: once before addEnthusiasm and once afteward
 
+### Listing 18.6 Calling easyPrint twice (Extensions.kt)
+```kotlin
+fun String.addEnthusiasm(amount: Int = 1) = this + "!".repeat(amount)
 
+fun Any.easyPrint(): Any {
+    println(this)
+    return this 
+}
 
+fun main(args: Array<String>) {
+    "Madrigal has left the building".easyPrint().addEnthusiasm().easyPrint()
+    42.easyPrint()
+}
+```
 
+The code does not compile. The first easyPrint call was allowed, buy addEnthisiasm was not. The easyPrint function returns the String it was called on, but uses Any to represent it. addEnthusiasm is only available on String, so it cannot be called on the return from easyPrint.
+
+To solv this, you can make the extension generic.
+
+### Listing 18.7 Making easyPrint generic (Extensions.kt)
+```kotlin
+fun String.addEnthusiasm(amount: Int = 1) = this + "!".repeat(amount)
+
+fun <T> T.easyPrint(): T {
+    println(this)
+    return this 
+}
+
+...
+```
 
 
 

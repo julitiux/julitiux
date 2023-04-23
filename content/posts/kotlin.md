@@ -4887,10 +4887,30 @@ private fun <T> Iterable<T>.random(): T = this.shuffled().first()
 ...
 ```
 
-
 ### Listing 18.14 Adding the __random__ extension to IterableExt.kt (IterableExt.kt)
 ```kotlin
 package com.bignerdranch.nyethack.extensions
 
 fun <T> Iterable<T>.random(): T = this.shuffled().first()
 ```
+
+### Listing 18.15 Using random in selectHometown (Player.kt)
+```kotlin
+...
+private fun selectHometown() = File("data/towns.txt")
+    .readText() 
+    .split("\n") 
+    .random()
+...
+```
+
+
+
+
+
+
+
+
+
+
+

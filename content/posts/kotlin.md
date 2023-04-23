@@ -4859,7 +4859,32 @@ fun main(args: Array<String>) {
 }
 ...
 ```
+Now replace the old calls to shuffled().first() with a call to the extension function __random__
 
+### Listing 18.12 Using the __random__ extension (Tavern.kt)
+```kotlin
+...
+private fun <T> Iterable<T>.random(): T = this.shuffled().first()
+    fun main(args: Array<String>) {
+        ...
+        (0..9).forEach {
+            val first = patronList.random()
+            val last = lastName.random() 
+        }
+
+        uniquePatrons.forEach {
+            patronGold[it] = 6.0
+        }
+
+        var orderCount = 0
+        while (orderCount <= 9) {
+            placeOrder(uniquePatrons.random(), menuList.random())
+            orderCount++
+        }
+        displayPatronBalances()
+}
+...
+```
 
 
 

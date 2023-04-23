@@ -4904,7 +4904,18 @@ private fun selectHometown() = File("data/towns.txt")
 ...
 ```
 
+## Renaming an Extension
 
+### Listing 18.16 The as operator (Taver.kt)
+```kotlin
+import com.bignerdranch.nyethack.extensions.random as randomizer 
+...
+private fun selectHometown() = File("data/towns.txt")
+    .readText() 
+    .split("\n") 
+    .randomizer()
+...
+```
 
 
 

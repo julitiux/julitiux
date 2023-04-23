@@ -4721,7 +4721,18 @@ fun main(args: Array<String>) {
 }
 ```
 
+## Generic Extension Functions
 
+### Listing 18.5 Making __easyPring__ chainable (Extesions.kt)
+```kotlin
+fun String.addEnthusiasm(amount: Int = 1) = this + "!".repeat(amount)
+
+fun Any.easyPrint() : Any { 
+    println(this)
+    return this 
+}
+
+```
 
 
 

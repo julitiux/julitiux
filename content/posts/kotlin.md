@@ -4797,6 +4797,33 @@ fun main(args: Array<String>) {
 }
 ```
 
+## Extensions on Nullable Types
+An extension can also be defined for use with nullable type. Defining an extension on a nullable type allows you to deal with the possibility of the value begin null within the body of extensions function, rather than at the call site.
+
+Add an extension for nullable Strings in Extensions.kt and test it out in the main function:
+
+### Lisintg 18.10 Adding an extension on a nullable type (Extensions.kt)
+```kotlin
+infix fun String?.printWithdDefault(default: String) = println(this ?: default)
+
+fun main(args: Array<String>) {
+    "Madrigal has left the building".easyPrint().addEnthusiasm().easyPrint()
+    42.easyPrint()
+    "How many vowels?".numVowels.easyPrint()
+
+    val nullableString: String? = null
+    nullableString printWithDefault "Default String"
+}
+```
+
+The `infix` keyword available for both extension and class functions that have a single argument, allows for the cleaner syntax you see in the function call.
+
+If a function is defined with `infix` , you can omit the dow between the receiver and the function call as well the parentheses around the argument.
+
+```kotlin
+null printWithDefault "Default string"  // With infix 
+null.printWithDefault("Default string") // Without infix 
+```
 
 
 

@@ -4932,5 +4932,32 @@ Two commonly used transforms are __map__ and __flatMap__
 
 The __map__ transforms functions iteratoes throught the collection it is called on and applies its transformer function to each element. The result is a collection with the same number of elements as the input collections.
 
+### Listing 19.1 Converting a list of animals to babies - eith tails (REPL)
+```kotlin
+val animals = listOf("zebra", "giraffe", "elephant", "rat")
+val babies = animals
+    .map{ animal -> "A baby $animal"}
+    .map{ baby -> "$baby, with the cutest little tail ever!"}
+println (babies)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

@@ -4917,7 +4917,8 @@ private fun selectHometown() = File("data/towns.txt")
 ...
 ```
 
-
+# 19. Functional Programming Basics
+For the last several chapters. you have been learning about and working with the object-oriented programming paradigm. Another prominent programming paradigm is _functional programming_, developed in the 1950s based on the mathematical abstraction lambda calculus. While functional programming languages have generally been more common in academia than in commercial software the principles of the approach are useful in any language.
 
 
 

@@ -4920,7 +4920,10 @@ private fun selectHometown() = File("data/towns.txt")
 # 19. Functional Programming Basics
 For the last several chapters. you have been learning about and working with the object-oriented programming paradigm. Another prominent programming paradigm is _functional programming_, developed in the 1950s based on the mathematical abstraction lambda calculus. While functional programming languages have generally been more common in academia than in commercial software the principles of the approach are useful in any language.
 
+The functional programming style relies on data that is returned from a small number of higher-order functions (functions that accpet or return another function) designed specifically to work on collections, and it favors with higher-order functions (which accpet functions as parameters and return functions as their result) and functions types (which enable you to define functions as values) already.
 
+## Function Categories
+There are three nroad categories of functions that compose a functional program: _transforms_, _filters_ and _combines_. Each category is designed to work on collection data structures to yield a final result. Functions in functional programming are also designed to be _composable_, meaning that simple functions can be combined to build complex behavior.
 
 
 

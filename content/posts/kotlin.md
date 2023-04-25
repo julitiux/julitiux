@@ -4941,6 +4941,13 @@ val babies = animals
 println (babies)
 ```
 
+In the REPL, print the value of animals, the original list, to see that it has not changed
+
+### Listing 19.2 Original collection not modified (REPL)
+```kotlin
+print(animals)
+>>    "zebra", "giraffe", "elephant", "rat"
+```
 
 
 

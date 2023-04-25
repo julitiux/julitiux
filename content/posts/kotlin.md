@@ -4949,6 +4949,18 @@ print(animals)
 >>    "zebra", "giraffe", "elephant", "rat"
 ```
 
+### Listing 19.3 Before and after mapping: same number of itmes, different types (REPL)
+```kotlin
+val tenDollarWords = listOf("auspicious", "avuncular", "obviate")
+val tenDollarLegths = tenDollarWords.map { it. length }
+print(tenDollarLegths)
+>>  [10, 9, 7]
+tenDollarWords.size
+>>  3
+tenDollarLegths.size
+>>  3
+```
+
 
 
 

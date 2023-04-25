@@ -4925,7 +4925,12 @@ The functional programming style relies on data that is returned from a small nu
 ## Function Categories
 There are three nroad categories of functions that compose a functional program: _transforms_, _filters_ and _combines_. Each category is designed to work on collection data structures to yield a final result. Functions in functional programming are also designed to be _composable_, meaning that simple functions can be combined to build complex behavior.
 
+## Transforms
+A _transform function_ works on the contents of a collection by walking through the collections and transforming eache item with a _transformer function_ provided as an argument. the transform function then returns a copy of the modified collection, and execution proceeds to the next function in the chain.
 
+Two commonly used transforms are __map__ and __flatMap__
+
+The __map__ transforms functions iteratoes throught the collection it is called on and applies its transformer function to each element. The result is a collection with the same number of elements as the input collections.
 
 
 

@@ -4970,6 +4970,14 @@ listOf(listOf(1,2,3), listOf(4,5,6)).flatMap{ it }
 ## Filters
 The second category of functions in functional programing is filters. A _filter function_ accpets a predicate function that checks each element a collection against a condition and returns either true or false. If the prediacte return true, the element is added to the new collection that the filter returns. If the predicate returns false, the element is excluded from the new collections.
 
+### Listing 19.5 Filtering and flattening (REPL)
+```kotlin
+val itemsOfManyColors = listOf(listOf("red apple", "green apple", "blue apple"), listOf("red fish", "blue fish"), listOf("yellow banana", "teal banana"))
+
+var redItems = itemsOfManyColors.flatMap { it.filter { it.contains("red") } }
+print(redItems)
+>>  [red apple, red fish]
+```
 
 
 

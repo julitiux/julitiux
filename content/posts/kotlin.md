@@ -4967,6 +4967,9 @@ listOf(listOf(1,2,3), listOf(4,5,6)).flatMap{ it }
 >>  [1, 2, 3, 4, 5, 6]
 ```
 
+## Filters
+The second category of functions in functional programing is filters. A _filter function_ accpets a predicate function that checks each element a collection against a condition and returns either true or false. If the prediacte return true, the element is added to the new collection that the filter returns. If the predicate returns false, the element is excluded from the new collections.
+
 
 
 

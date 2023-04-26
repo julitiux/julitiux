@@ -4961,8 +4961,11 @@ tenDollarLegths.size
 >>  3
 ```
 
-
-
+### Listing 19.4 Flattening two list (REPL)
+```kotlin
+listOf(listOf(1,2,3), listOf(4,5,6)).flatMap{ it }
+>>  [1, 2, 3, 4, 5, 6]
+```
 
 
 

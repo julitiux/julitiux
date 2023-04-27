@@ -5009,10 +5009,19 @@ At first glance, the imperative version here may look like it accomplishes the t
 
 2. The result from functional operations are added to accumulator variables automatically, reduciong the risk of bugs.
 
-3. New operations are trivially easy to add to the functional chain, since all functional operators work with the iterable you are performing work on
+3. New operations are trivially easy to add to the functional chain, since all functional operators work with the iterable you are performing work on.
 
+## Sequences
+These collection types are all know as _eager collections_. When an instance of any of these types is created, all the values it contains are added to the collection and can be accessed.
 
+There is another flavor of collection: _lazy collections_. You learned about lazy initialization, in wich a variable is not initialized until it is first accessed. Lazy collection types, similar to lazy initialization of other types, provide better performance - specifically when working with very large collections - because their variables are produced only as needed.
 
+With a sequences, you define a function that is referred to each time a new value is requested, called an _iterator function_. One way to define a sequence and its iterator is by using a seuqnce builder function provided by kotlin __generateSequence__, __generateSequence__ accepts an initial seed value, the starting place for the sequence. When the sequence is acted on by a function , __generateSequence__ calls an iterator you specify that determines the nex value to produce.
+
+```kotlin
+generateSequence(0) { it + 1 }
+    .onEach { println("The Count says: $it, ah ah ah!") }
+```
 
 
 

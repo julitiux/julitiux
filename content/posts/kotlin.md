@@ -4983,7 +4983,11 @@ print(redItems)
 ```kotlin
 val numbers = listOf(7, 4, 8, 4, 3, 22, 18, 11)
 val primes = numbers.filter { number -> (2 until number).map {number % it}.none { it == 0}}
+println( primes )
 ```
+
+## Combines
+The third category of functions used in functional programming is _combines_. Combining functions take different collections and merge the, into a new one. 
 
 
 

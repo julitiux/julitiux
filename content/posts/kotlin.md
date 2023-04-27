@@ -5002,6 +5002,14 @@ println(employeeShirtSizes)
 >>  {Denny=large, Claudette=x-large, Peter=medium}
 ```
 
+## Why functional Programming?
+At first glance, the imperative version here may look like it accomplishes the task in rouggly the same number of lines as the functional version.
+
+1. "Accumulator" variables are defined implicity, reducing the number of stateful variables to keep tracj of.
+
+2. The result from functional operations are added to accumulator variables automatically, reduciong the risk of bugs.
+
+3. New operations are trivially easy to add to the functional chain, since all functional operators work with the iterable you are performing work on
 
 
 

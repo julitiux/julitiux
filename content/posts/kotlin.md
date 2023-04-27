@@ -4989,6 +4989,18 @@ println( primes )
 ## Combines
 The third category of functions used in functional programming is _combines_. Combining functions take different collections and merge the, into a new one. 
 
+### Listing 19.7 Combining two collections, functional style (REPL)
+```kotlin
+val employees = listOf("Denny", "Claudette", "Peter")
+val shirtSize = listOf("large", "x-large", "medium")
+val employeeShirtSizes = employees.zip(shirtSize).toMap()
+
+println(employeeShirtSizes["Denny"])
+>>  large
+
+println(employeeShirtSizes)
+>>  {Denny=large, Claudette=x-large, Peter=medium}
+```
 
 
 

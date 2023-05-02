@@ -5190,7 +5190,7 @@ fun main(args: Array<String>) {
 ## Getters, Setters, and Interoperability
 Kotlin and Java handle class-level variables quite differently. Java uses fileds and typically gates access via accessor and mutator methods. Kotlin, as you have seen, features propertiesm which restrict access to backing filed and may automatically expose accessors and mutators.
 
-### Listing 20.14Declaring a field in Java (Jhava.java)
+### Listing 20.14 Declaring a field in Java (Jhava.java)
 ```kotlin
 public class Jhava {
 
@@ -5212,7 +5212,29 @@ public class Jhava {
 }
 ```
 
+### Listing 20.15 Exposing a greeting in java (Jhava.java)
+```kotlin
+public class Jhava {
 
+    private int hitPoints = 52489112;
+>>  private String greeting = "BLARGH";
+    ...
+    @NotNull
+    public String utterGreeting() {
+        return greeting; 
+    }
+    
+    ...
+    
+>>  public String getGreeting() {
+>>      return greeting;
+>>  }
+  
+>>  public void setGreeting(String greeting) {
+>>      this.greeting = greeting;
+>>  }
+}
+```
 
 
 

@@ -5236,6 +5236,18 @@ public class Jhava {
 }
 ```
 
+### Listing 20.16 Setting a Java field from kotlin (Hrto.kt)
+```kotlin
+fun main(args: Array<String>) {
+    ...
+    val adversaryHitPoints: Int = adversary.hitPoints
+    println(adversaryHitPoints.dec())
+    println(adversaryHitPoints.javaClass)
+ 
+>>  adversary.greeting = "Hello, Hero."
+>>  println(adversary.utterGreeting())
+}
+```
 
 
 

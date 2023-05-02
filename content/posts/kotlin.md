@@ -5276,13 +5276,20 @@ public class Jhava {
     }
 
     ... 
-    
+
 }
 ```
 
-
-
-
+### Listing 20.19 Referencing a top-level Kotlin function from java (Jhava.kt)
+```kotlin
+public class Jhava {
+    ...
+    public static void main(String[] args) {
+>>      System.out.println(HeroKt.makeProclamation());
+    }
+    ... 
+}
+```
 
 
 

@@ -5026,7 +5026,17 @@ generateSequence(0) { it + 1 }
 # 20. Java Interoperability
 Full interoperability with Java means that kotlin files and Java files can exits in teh same project, side by sid. You can invoke Java methods from Kotlin and Kotlin function from Java. This means can use existing Java libraries from Kotlin, incliding the Android framework.
 
+## Interoperation with a Java Class
+Start by declaring the Jhava class and giving it a method called utterGreeting that returns a String.
 
+### Listing 20.1 Declaring a class and method in Java (Jhava.java)
+```kotlin
+public class Jhava{
+    public String utterGreeting(){
+        return "BLARGH"
+    }
+}
+```
 
 
 

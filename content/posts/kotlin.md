@@ -5070,6 +5070,18 @@ public class Jhava {
 }
 ```
 
+Calling this methos from Hero.kt
+
+### Listing 20.5 Printing the friendship level (Hero.kt)
+```kotlin
+fun main(args: Array<String>) {
+    val adversary = Jhava()
+    println(adversary.utterGreeting())
+ 
+ >> val friendshipLevel = adversary.determineFriendshipLevel()
+ >> println(friendshipLevel.toLowerCase())
+}
+```
 
 
 

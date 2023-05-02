@@ -5055,7 +5055,20 @@ fun main(args: Array<String>) {
 }
 ```
 
+## Interoperability and Nullity
 
+### Listing 20.4 Returning null from a  java method (Jhava.java)
+```kotlin
+public class Jhava {
+    public String utterGreeting() {
+        return "BLARGH";
+    }
+
+>>  public String determineFriendshipLevel() {
+>>      return null;
+>>  }
+}
+```
 
 
 

@@ -5141,6 +5141,26 @@ public class Jhava {
 
 You will need to import the annotation `com.sun.istack.internal.NotNull`
 
+## Type Mapping
+Kotlin's types often correspond one to one with Java types. A String in Kotlin is a String when compiled down to Java. This means that a String returned from Java methods can be used in the same way in Kotlin as a String explicity declared in Kotlin. Some type mappings that are not one to one between Kotlin and Java.
+
+### Listing 20.10 Declaring an int in Java (Jhava.java)
+```kotlin
+public class Jhava {
+    
+    public int hitPoints = 52489112;
+    
+    @NotNull
+    public String utterGreeting() {
+        return "BLARGH";
+    }
+    
+    @Nullable
+    public String determineFriendshipLevel() {
+        return null;
+    }
+}
+```
 
 
 

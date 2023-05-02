@@ -5038,6 +5038,15 @@ public class Jhava{
 }
 ```
 
+Now, in Hero.kt, create a main function. In it declare an adversary val, and instance of Jhava.
+
+### Listing 20.2 Declaring a main function and Jhava adersary in kotlin (Hero.kt)
+```kotlin
+fun main(args: Array<String>) {
+    val adversary = Jhava()
+}
+```
+
 
 
 

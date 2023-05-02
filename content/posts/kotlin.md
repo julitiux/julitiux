@@ -5176,6 +5176,16 @@ fun main(args: Array<String>) {
 
 ```
 
+Now that you have a reference to this integer, you can invoke functions on it. Call a function on adversary]HitPoiints and print out the result
+
+### Listing 20.12 Referencing a Java filed from Kotlin (Hero.kt)
+```kotlin
+fun main(args: Array<String>) {
+    ...
+    val adversaryHitPoints: Int = adversary.hitPoints
+    println(adversaryHitPoints.dec())
+}
+```
 
 
 

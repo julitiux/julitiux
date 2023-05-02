@@ -5263,6 +5263,23 @@ fun main(args: Array<String>) {
 fun makeProclamation() = "Greetings, beast!"
 ```
 
+You will need a way to invoke this function from Java, so add a main method to Jhava.
+
+### Listing 20.18 Defining a main methos in java (Jhava.java)
+```kotlin 
+public class Jhava {
+    private int hitPoints = 52489112;
+    private String greeting = "BLARGH";
+
+    public static void main(String[] args) {
+
+    }
+
+    ... 
+    
+}
+```
+
 
 
 

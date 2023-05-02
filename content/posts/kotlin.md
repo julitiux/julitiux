@@ -5083,6 +5083,19 @@ fun main(args: Array<String>) {
 }
 ```
 
+### Listing 20.6 Specifying that a return value will possibly be null (Jhava.java)
+```kotlin
+public class Jhava {
+    public String utterGreeting() {
+        return "BLARGH";
+    }
+    
+    @Nullable
+    public String determineFriendshipLevel() {
+        return null;
+    }
+}
+```
 
 
 

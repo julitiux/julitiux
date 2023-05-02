@@ -5315,6 +5315,19 @@ public class Jhava {
 }
 ```
 
+Another importan JVM annotation is `@JvmOverloads`. Kotlin's default paramters empower you to replace verbose, repetitive method overloading with a streamlined approach to providing options in your API.
+
+Add a new function called bandOverFood to Hero.kt
+
+### Listing 20.22 Adding a funtion with default parameters (Hero.kt)
+```kotlin
+...
+fun makeProclamation() = "Greetings, beast!"
+
+fun handOverFood(leftHand: String = "berries", rightHand: String = "beef") {
+    println("Mmmm... you hand over some delicious $leftHand and $rightHand.")
+}
+```
 
 
 

@@ -5293,7 +5293,7 @@ public class Jhava {
 
 If you would like Hero.kt and Jhava.java to interoperate a bit more fluidly, you can change the name of the generated class with the @JvmName annotation.
 
-### Listing 20.20 Specifying compiled class name using JvmName (Hero.kt) 
+### Listing 20.20 Specifying compiled class name using JvmName (Hero.kt)
 ```kotlin
 >>  @file:JvmName("Hero")
 
@@ -5302,6 +5302,18 @@ If you would like Hero.kt and Jhava.java to interoperate a bit more fluidly, you
     }
 ```
 
+Now, in Jhava, you can reference the makePlocamation function more cleanly
+
+### Listing 20.21 Referencing a renamed top-level Kotlin function from Java (Jhava.java)
+```kotlin
+public class Jhava {
+    ...
+    public static void main(String[] args) {
+        System.out.println(Hero.makeProclamation()); 
+    }
+    ... 
+}
+```
 
 
 

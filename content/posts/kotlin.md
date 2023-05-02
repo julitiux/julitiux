@@ -5249,6 +5249,20 @@ fun main(args: Array<String>) {
 }
 ```
 
+You can use assigment syntaxis to mutate a Java field, rather calling its associated setter
+
+## Beyond Classes
+Kotlin affords developers greater flexibility with respect to the format of the code that they write. A kotlin file can include classes, functions and variables.
+
+### Listing 20.17 Declaring a top-level function in kotlin (Kotlin.kt)
+```kotlin
+fun main(args: Array<String>) {
+    ... 
+}
+
+fun makeProclamation() = "Greetings, beast!"
+```
+
 
 
 

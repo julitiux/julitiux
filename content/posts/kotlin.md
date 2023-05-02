@@ -5096,6 +5096,66 @@ public class Jhava {
     }
 }
 ```
+ You will nedd to import org.jetbrains.annotations.Nullable
+
+ @Nullable warns the consumer of this API that the method can return null (not thta it __must__ return null).
+
+### Listing 20.7 Handling nullability with the safe call operator (Hero.kt)
+```kotlin
+fun main(args: Array<String>) {
+    val adversary = Jhava()
+    println(adversary.utterGreeting())
+    
+    val friendshipLevel = adversary.determineFriendshipLevel()
+    println(friendshipLevel?.toLowerCase()) 
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

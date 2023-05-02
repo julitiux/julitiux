@@ -5047,6 +5047,14 @@ fun main(args: Array<String>) {
 }
 ```
 
+### Listing 20.3 Invoking a java method in kotlin (Hero.kt)
+```kotlin
+fun main(args: Array<String>) {
+    val adversary = Jhava()
+>>  println(adversary.utterGreeting())
+}
+```
+
 
 
 

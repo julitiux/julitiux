@@ -5122,6 +5122,24 @@ fun main(args: Array<String>) {
 }
 ```
 
+You used @Nullable to signify that a method could return null. You can specify that a value will definitely not be null using the @NotNull annotation. This annotations is nice, because it means that the consumer of this API does not need to worry that the value returned could be null.
+
+### Listing 20.9 Specifying that a return value will not be null (Jhava.java)
+```kotlin
+public class Jhava {
+    @NotNull
+    public String utterGreeting() {
+        return "BLARGH";
+    }
+
+    @Nullable
+    public String determineFriendshipLevel() {
+        return null;
+    }
+}
+```
+
+You will need to import the annotation `com.sun.istack.internal.NotNull`
 
 
 

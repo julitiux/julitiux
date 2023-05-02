@@ -5023,6 +5023,10 @@ generateSequence(0) { it + 1 }
     .onEach { println("The Count says: $it, ah ah ah!") }
 ```
 
+# 20. Java Interoperability
+Full interoperability with Java means that kotlin files and Java files can exits in teh same project, side by sid. You can invoke Java methods from Kotlin and Kotlin function from Java. This means can use existing Java libraries from Kotlin, incliding the Android framework.
+
+
 
 
 

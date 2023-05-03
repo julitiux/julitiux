@@ -5373,7 +5373,18 @@ fun makeProclamation() = "Greetings, beast!"
 ...
 ```
 
+### Listing 20.26 Declaring the Spellbook class (Hero.kt)
+```kotlin
+...
+@JvmOverloads
+fun handOverFood(leftHand: String = "berries", rightHand: String = "beef") {
+    println("Mmmm... you hand over some delicious $leftHand and $rightHand.")
+}
 
+class Spellbook {
+    val spells = listOf("Magic Ms. L", "Lay on Hans")
+}
+```
 
 
 

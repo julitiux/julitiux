@@ -5386,6 +5386,21 @@ class Spellbook {
 }
 ```
 
+You can apply the @JvmField annotation to a Kotlin property to expose its backing field to Java consumers and avoid the need for a getter methos. Apply `JVMField` to spells to expose it directly to Jhava.
+
+### Listing 20.27 Applying the @JvmField annotation (Hero.kt)
+```kotlin
+...
+@JvmOverloads
+fun handOverFood(leftHand: String = "berries", rightHand: String = "beef") {
+    println("Mmmm... you hand over some delicious $leftHand and $rightHand.")
+}
+
+class Spellbook {
+    @JvmField
+    val spells = listOf("Magic Ms. L", "Lay on Hans")
+}
+```
 
 
 

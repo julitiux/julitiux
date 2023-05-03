@@ -5443,7 +5443,7 @@ Now attempt to access MAX_SPELL_COUNT from Jhava's main method using Java'static
 ```kotlin
 public static void main(String[] args) {
     System.out.println(Hero.makeProclamation());
-    
+
     System.out.println("Spells:");
     Spellbook spellbook = new Spellbook();
     for (String spell : spellbook.spells) {
@@ -5454,6 +5454,20 @@ public static void main(String[] args) {
 } ...
 ```
 
+### Listing 20.31 Adding the @JvmField annotation to the memeber of a companion object (Hero.kt)
+```kotlin
+...
+class Spellbook {
+    @JvmField
+    val spells = listOf("Magic Ms. L", "Lay on Hans")
+    
+    companion object {
+        @JvmField
+        val MAX_SPELL_COUNT = 10
+    }
+}
+
+```
 
 
 

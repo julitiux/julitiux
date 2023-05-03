@@ -5356,7 +5356,22 @@ fun handOverFood(leftHand: String = "berries", rightHand: String = "beef") {
 }
 ```
 
+To test.
 
+### Listing 20.25 Testing out offerFood (Hero.kt)
+```kotlin
+@file:JvmName("Hero")
+fun main(args: Array<String>) {
+    ...
+    adversary.greeting = "Hello, Hero."
+    println(adversary.utterGreeting())
+    
+    adversary.offerFood()
+}
+
+fun makeProclamation() = "Greetings, beast!"
+...
+```
 
 
 

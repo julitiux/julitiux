@@ -5329,6 +5329,21 @@ fun handOverFood(leftHand: String = "berries", rightHand: String = "beef") {
 }
 ```
 
+As you will see in a moment, the @JvmOverloads annotation triggers the generation of the three a method called offerFood to Jhava.java that exposes a way for a Hero to offer food to a Jhava
+
+### Listing 20.23 Only one method signature (Jhava.java)
+```kotlin
+public class Jhava {
+    ...
+    public void setGreeting(String greeting) {
+        this.greeting = greeting;
+    }
+    
+    public void offerFood() {
+        Hero.handOverFood("pizza");
+    }
+}
+```
 
 
 

@@ -5424,6 +5424,44 @@ public String utterGreeting() {
 ...
 ```
 
+### Listing 20.29 Adding a companion object to Spellbook (Hero.kt)
+```kotlin
+...
+class Spellbook {
+    @JvmField
+    val spells = listOf("Magic Ms. L", "Lay on Hans")
+ 
+    companion object {
+        val MAX_SPELL_COUNT = 10
+    }
+}
+```
+
+Now attempt to access MAX_SPELL_COUNT from Jhava's main method using Java'static acces syntax
+
+### Listing 20.30 Accessing a static value in Java (Jhava.java)
+```kotlin
+public static void main(String[] args) {
+    System.out.println(Hero.makeProclamation());
+    
+    System.out.println("Spells:");
+    Spellbook spellbook = new Spellbook();
+    for (String spell : spellbook.spells) {
+        System.out.println(spell);
+    }
+    
+    System.out.println("Max spell count: " + Spellbook.MAX_SPELL_COUNT);
+} ...
+```
+
+
+
+
+
+
+
+
+
 
 
 

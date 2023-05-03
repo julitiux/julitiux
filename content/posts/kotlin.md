@@ -5402,8 +5402,27 @@ class Spellbook {
 }
 ```
 
+Now, in Jhava.java's main method, you can access spells derectly to print out each spell:
 
+### Listing 20.28 Accessing a Kotlin field directly in java (Jhava.java)
+```kotlin
+...
+public static void main(String[] args) {
+    System.out.println(Hero.makeProclamation());
 
+    System.out.println("Spells:");
+    Spellbook spellbook = new Spellbook();
+    for (String spell : spellbook.spells) {
+        System.out.println(spell);
+    }
+}
+
+@NotNull
+public String utterGreeting() {
+    return greeting;
+}
+...
+```
 
 
 

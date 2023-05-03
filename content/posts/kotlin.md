@@ -5338,13 +5338,23 @@ public class Jhava {
     public void setGreeting(String greeting) {
         this.greeting = greeting;
     }
-    
+
     public void offerFood() {
         Hero.handOverFood("pizza");
     }
 }
 ```
 
+### Listing 20.24 Adding @JvmOverloads (Hero.kt)
+```kotlin
+...
+fun makeProclamation() = "Greetings, beast!"
+
+@JvmOverloads
+fun handOverFood(leftHand: String = "berries", rightHand: String = "beef") {
+    println("Mmmm... you hand over some delicious $leftHand and $rightHand.")
+}
+```
 
 
 

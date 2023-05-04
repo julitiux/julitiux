@@ -146,7 +146,7 @@ Anything to the right of // is included in the comment and is ignored by the com
 
 ### Listing 3.2 Modifying healthPoints (Game.kt)
 ```kotlin
-fun main(args: Array<String>) { 
+fun main(args: Array<String>) {
     val name = "Madrigal"
 <<  var healthPoints = 100
 >>  var healthPoints = 89
@@ -245,7 +245,7 @@ fun main(args: Array<String>) {
     } else {
         println("NONE")
     }
-    ... 
+    ...
 }
 ```
 
@@ -285,13 +285,13 @@ fun main(args: Array<String>) {
 ```kotlin
 ...
 // Aura
-val auraVisible = isBlessed && healthPoints > 50 || isImmortal 
+val auraVisible = isBlessed && healthPoints > 50 || isImmortal
 <<  if (auraVisible) {
 <<      println("GREEN")
 <<  } else {
 <<      println("NONE")
 <<  }
->>  val auraColor = if (auraVisible) "GREEN" else "NONE" 
+>>  val auraColor = if (auraVisible) "GREEN" else "NONE"
 >>  println(auraColor)
 ...
 ```
@@ -344,7 +344,7 @@ val faction = when (race) {
 	"human" -> "Free people of the Rolling Hills"
 }
 ```
-First, a val is declared, race. Next, a second val is declared: faction, whose value isdetermined with a when expression. The expression checks tha value of race against each of the values on the lefthand side of the -> operator (called the arrow), and when it finds a match it assigns faction the value on the righthand side. (-> is used differently in other langaujes -- and, is has other uses in Kotlin, as you will see later) 
+First, a val is declared, race. Next, a second val is declared: faction, whose value isdetermined with a when expression. The expression checks tha value of race against each of the values on the lefthand side of the -> operator (called the arrow), and when it finds a match it assigns faction the value on the righthand side. (-> is used differently in other langaujes -- and, is has other uses in Kotlin, as you will see later)
 
 A practical rule of thumb is that a when expression should replace an if/else expression if your code includes an else if branch.
 
@@ -418,8 +418,8 @@ Kotlin also allow you to evaluate an expression within a string and _interpolate
 fun main(args: Array<String>) {
     ...
     // Aura
-    val auraVisible = isBlessed && healthPoints > 50 || isImmortal 
-    val auraColor = if (auraVisible) "GREEN" else "NONE" 
+    val auraVisible = isBlessed && healthPoints > 50 || isImmortal
+    val auraColor = if (auraVisible) "GREEN" else "NONE"
 <<  print(auraColor)
     ...
     // Player status
@@ -463,7 +463,7 @@ private
 // function declatartion keyword
 fun
 
-// function name 
+// function name
 formatHealthStatus
 
 // function parameters
@@ -543,7 +543,7 @@ fun main(args: Array<String>) {
 
 <<  castFireball(5)
 >>  castFireball()
-} 
+}
 ...
 ```
 
@@ -579,7 +579,7 @@ fun main(args: Array<String>) {
 Not all functions return a value. Some use side effects instead to do their work, like modifying the state of a variable or calling other functions that yield system output.
 
 ```kotlin
-private fun castFireball(numFireballs: Int = 2) = 
+private fun castFireball(numFireballs: Int = 2) =
     println("A glass of Fireball springs into existence. (x$numFireballs)")
 ```
 
@@ -670,7 +670,7 @@ fun main(args: Array<String>) {
 ```kotlin
     fun greetingFunction():   String
                         v       v
-                        () -> String 
+                        () -> String
 ```
 A function type definition consists of two parts: the function's parameters, in parentheses, followed by its return type, delimited by the arrow (->), as show in Figure 5.1
 
@@ -772,7 +772,7 @@ fun main(args: Array<String>) {
 >>  fun runSimulation(playerName: String, greetingFunction: (String, Int) -> String) {
 >>      val numBuildings = (1..3).shuffled().last()   // Randomly selects 1, 2, or 3
 >>      println(greetingFunction(playerName, numBuildings))
->>  } 
+>>  }
 ```
 
 ## Shorthand syntaxis
@@ -852,7 +852,7 @@ inline fun runSimulation(playerName: String,
         costPrinter(numBuildings)
         println(greetingFunction(playerName, numBuildings))
     }
-    
+
     fun printConstructionCost(numBuildings: Int) {
         val cost = 500
         println("construction cost: ${cost * numBuildings}")
@@ -869,7 +869,7 @@ fun main(args: Array<String>) {
         val currentYear = 2018
         println("Adding $numBuildings houses")
         "Welcome to SimVillage, $playerName! (copyright $currentYear)"
-    } 
+    }
 }
 ...
 ```
@@ -909,7 +909,7 @@ fun main(args: Array<String>) {
 >>        numBuildings += 1
 >>        println("Adding $numBuildings $structureType")
 >>        "Welcome to SimVillage, $playerName! (copyright $currentYear)"
->>    } 
+>>    }
 >>}
 ```
 
@@ -949,21 +949,21 @@ This means that assigning beverage to a null value will indeed compile
 
 ### Listing 6.3 Reassigning a variable to null (Tavern.kt)
 ```kotlin
-fun main(args: Array<String>) { 
-    var beverage = readLine() 
+fun main(args: Array<String>) {
+    var beverage = readLine()
 >>  beverage = null
-    
+
     println(beverage)
 }
 ```
 
 ### Listing 6.4 Restoring service (Tavern.kt)
 ```kotlin
-fun main(args: Array<String>) { 
-    var beverage = readLine() 
+fun main(args: Array<String>) {
+    var beverage = readLine()
 <<  beverage = null
 >>  // beverage = null
-   
+
     println(beverage)
 }
 ```
@@ -986,7 +986,7 @@ fun main(args: Array<String>) {
 <<  var beverage = readLine()
 >>  var beverage = readLine().capitalize()
 //   beverage = null
-    
+
     println(beverage)
 }
 ```
@@ -1068,7 +1068,7 @@ fun main(args: Array<String>) {
 >>  } else {
 >>      println("I can't do that without crashing - beverage was null!")
 >>  }
-  
+
     println(beverage)
 
 }
@@ -1155,7 +1155,7 @@ You have now seen how to use the throw operator  to signal that an exception has
 ### Listing 6.14 Defining a custom exception (SwordJuggler.kt)
 ```kotlin
   fun main(args: Array<String>) {
-  ...   
+  ...
   }
   fun proficiencyCheck(swordsJuggling: Int?) {
       swordsJuggling ?: throw IllegalStateException("Player cannot juggle swords")
@@ -1168,7 +1168,7 @@ You have now seen how to use the throw operator  to signal that an exception has
 ### Listing 6.15 Throwing a custom exception (SwordJuggler.kt)
 ```kotlin
     fun main(args: Array<String>) {
-        ... 
+        ...
     }
     fun proficiencyCheck(swordsJuggling: Int?) {
 <<      swordsJuggling ?: throw IllegalStateException("Player cannot juggle swords")
@@ -1194,7 +1194,7 @@ fun main(args: Array<String>) {
 >>      proficiencyCheck(swordsJuggling)
 >>      swordsJuggling = swordsJuggling!!.plus(1)
 >>  } catch (e: Exception) {
->>      println(e) 
+>>      println(e)
 >>  }
     println("You juggle $swordsJuggling swords!")
 }
@@ -1225,7 +1225,7 @@ fun main(args: Array<String>) {
         proficiencyCheck(swordsJuggling)
         swordsJuggling = swordsJuggling!!.plus(1)
     } catch (e: Exception) {
-        println(e) 
+        println(e)
     }
     println("You juggle $swordsJuggling swords!")
 
@@ -1298,7 +1298,7 @@ The list of sdiferents escapes sequences (consisting of \ abd the character bein
 
 ## split
 
-Creates a series of substrings using a delimiter you provide. Accepts a delimiter character to look for and retuns a list of the resulting substrings with the delimiter omitted, in this case , split, returns a list of strings in the order it found them. You use indices in square brackets. 
+Creates a series of substrings using a delimiter you provide. Accepts a delimiter character to look for and retuns a list of the resulting substrings with the delimiter omitted, in this case , split, returns a list of strings in the order it found them. You use indices in square brackets.
 
 
 ### Listing7.2 Passing tavern data to placeOrder (Tavern.kt)
@@ -1306,12 +1306,12 @@ Creates a series of substrings using a delimiter you provide. Accepts a delimite
 const val TAVERN_NAME = "Taernyl's Folly"
 
 fun main(args: Array<String>) {
-    placeOrder("shandy,Dragon's Breath,5.91") 
+    placeOrder("shandy,Dragon's Breath,5.91")
 }
 
 private fun placeOrder(menuData: String) {
     val indexOfApostrophe = TAVERN_NAME.indexOf('\'')
-    val tavernMaster = TAVERN_NAME.substring(0 until indexOfApostrophe) 
+    val tavernMaster = TAVERN_NAME.substring(0 until indexOfApostrophe)
     println("Madrigal speaks with $tavernMaster about their order.")
 }
 ```
@@ -1379,7 +1379,7 @@ fun main(args: Array<String>) {
 >>            "o" -> "0"
 >>            "u" -> "|_|"
 >>            else -> it.value
->>        } 
+>>        }
 >>    }
 
 private fun placeOrder(menuData: String) {
@@ -1401,11 +1401,11 @@ You checked the _structural equality_ of name and "Dragon's Breath" using the st
 
 There is another way to check the equality of two variables: _comparing referential equality_, wich means checking that two variables share the same reference to a type instance - in other words, that two variables point to same object on the heap. Referential equality is checked using ===.
 
-Referential comparison is not usually what you want. You generally donot care whether strings are different instances, only that they have the same characters in the same sequences 
+Referential comparison is not usually what you want. You generally donot care whether strings are different instances, only that they have the same characters in the same sequences
 
 # 8. Numbers
 
-Kotlin has a variety of types for dealing with numbers and numeric computations. Multiple types are available for each of two main varieties of numbers that Kotlin can work with: whole-number integers and numbers with decimals. 
+Kotlin has a variety of types for dealing with numbers and numeric computations. Multiple types are available for each of two main varieties of numbers that Kotlin can work with: whole-number integers and numbers with decimals.
 
 ## Numeric Types
 
@@ -1454,7 +1454,7 @@ private fun placeOrder(menuData: String) {
     val indexOfApostrophe = TAVERN_NAME.indexOf('\'')
     val tavernMaster = TAVERN_NAME.substring(0 until indexOfApostrophe)
     println("Madrigal speaks with $tavernMaster about their order.")
- 
+
     val (type, name, price) = menuData.split(',')
     val message = "Madrigal buys a $name ($type) for $price."
     println(message)
@@ -1472,27 +1472,27 @@ private fun placeOrder(menuData: String) {
 
 ## Decimal numbers
 
-Numeric calues with decimal places are represented with the Float od Double type. 
+Numeric calues with decimal places are represented with the Float od Double type.
 
-### Listing 8.2 Passing the price information (Tavern.kt) 
+### Listing 8.2 Passing the price information (Tavern.kt)
 ```kotlin
 const val TAVERN_NAME = "Taernyl's Folly"
 ...
-fun performPurchase(price: Double) { 
+fun performPurchase(price: Double) {
     displayBalance()
 >>  println("Purchasing item for $price")
-} 
+}
 ...
 
 private fun placeOrder(menuData: String) {
     ...
-    
+
     val (type, name, price) = menuData.split(',')
     val message = "Madrigal buys a $name ($type) for $price."
     println(message)
-    
+
     performPurchase(price)
-    ... 
+    ...
 }
 ```
 
@@ -1500,7 +1500,7 @@ private fun placeOrder(menuData: String) {
 
 Kotlin includes functions that convert strings to different types - including numbers. Some of the most commonly used of these conversion functions are:
 
-* toFloat 
+* toFloat
 * toDouble
 * toDoubleOrNull
 * toIntOrNull
@@ -1522,13 +1522,13 @@ private fun placeOrder(menuData: String) {
     val indexOfApostrophe = TAVERN_NAME.indexOf('\'')
     val tavernMaster = TAVERN_NAME.substring(0 until indexOfApostrophe)
     println("Madrigal speaks with $tavernMaster about their order.")
-    
+
     val (type, name, price) = menuData.split(',')
     val message = "Madrigal buys a $name ($type) for $price."
     println(message)
-    
+
     performPurchase(price.toDouble())
-    ... 
+    ...
 }
 ```
 
@@ -1539,18 +1539,18 @@ private fun placeOrder(menuData: String) {
 ...
 fun performPurchase(price: Double) {
     displayBalance()
->>  val totalPurse = playerGold + (playerSilver / 100.0) 
->>  println("Total purse: $totalPurse") 
+>>  val totalPurse = playerGold + (playerSilver / 100.0)
+>>  println("Total purse: $totalPurse")
     println("Purchasing item for $price")
 
 >>  val remainingBalance = totalPurse - price
-} 
+}
 ...
 ```
 
 ## Formatting a Double
 
-Rather than working with 4.1899999999999995 pieces of goldm you will round the value up to 4.19. String's __format__ function can be used to round a double to a precision that you define. 
+Rather than working with 4.1899999999999995 pieces of goldm you will round the value up to 4.19. String's __format__ function can be used to round a double to a precision that you define.
 
 ### Listing 8.5 Formatting a double (Tavern.kt)
 ```kotlin
@@ -1560,7 +1560,7 @@ fun performPurchase(price: Double) {
     val totalPurse = playerGold + (playerSilver / 100.0)
     println("Total purse: $totalPurse")
     println("Purchasing item for $price")
-    
+
     val remainingBalance = totalPurse - price
 >>  println("Remaining balance: ${"%.2f".format(remainingBalance)}")
 } ...
@@ -1568,7 +1568,7 @@ fun performPurchase(price: Double) {
 
 The gold remaining the purse is interpolated into the string using $, as you have seen before, But wht follows the $ is not simply the name of the variable - it is an expression in curly braces. Within th braces is a call to __format__with remainingBalance passed in as the argument.
 
-The call to __format__ also specifies a format string "%.2f". A format string uses a special sequences if characters to define how you want to format data. The particular format string you defined specifies that you want to round the floating point number up to the second decimal place. Then you pass the value or values to format as an argument to the __format__ function. 
+The call to __format__ also specifies a format string "%.2f". A format string uses a special sequences if characters to define how you want to format data. The particular format string you defined specifies that you want to round the floating point number up to the second decimal place. Then you pass the value or values to format as an argument to the __format__ function.
 
 ## Converting a Double to an Int
 
@@ -1601,7 +1601,7 @@ fun performPurchase(price: Double) {
 
 Here you use the _modulus operator_ (%, also known as the _remainder operator_), which finds the remainder when one number is divided by another.
 
-Kotlin includes functions for performing operations on the binary representations of valuem called bitwise operations - including operations you may be familiar from other languages, suchs as Java 
+Kotlin includes functions for performing operations on the binary representations of valuem called bitwise operations - including operations you may be familiar from other languages, suchs as Java
 
 ### Table 8.2 Binary operations
 
@@ -1813,7 +1813,7 @@ Working with a group of related values is an essential part of many programs. Fo
 
 Lists hold an ordered collection of values and allow duplicate values.
 
-__listOf__ function returns a read-only list (more on that shortly) populated with the elements you provide for the argument 
+__listOf__ function returns a read-only list (more on that shortly) populated with the elements you provide for the argument
 
 ### Listing 10.1 Creating a list of patrons (Tavern.kt) import kotlin.math.roundToInt
 ```kotlin
@@ -1826,7 +1826,7 @@ const val TAVERN_NAME = "Taernyl's Folly"
     fun main(args: Array<String>) {
         placeOrder("shandy,Dragon's Breath,5.91")
 >>      println(patronList)
-    } 
+    }
 ...
 ```
 
@@ -1853,7 +1853,7 @@ IntelliJ warns you that the integer does not conform to the expected type, Strin
 
 Recall from you work with the split function in Chapter 7 that you can access any element of a list using the element's index and the [] operator.
 
-### Listing 10.4 Accessing the first patron (Tavern.kt) 
+### Listing 10.4 Accessing the first patron (Tavern.kt)
 ```kotlin
 imports kotlin.math.roundToInt
 const val TAVERN_NAME = "Taernyl's Folly"
@@ -1862,11 +1862,11 @@ const val TAVERN_NAME = "Taernyl's Folly"
     var playerSilver = 10
  << val patronList: List<String> = listOf("Eli", "Mordoc", "Sophie")
  >> val patronList = listOf("Eli", "Mordoc", "Sophie")
-    
+
     fun main(args: Array<String>) {
         placeOrder("shandy,Dragon's Breath,5.91")
-        
-        println(patronList[0]) 
+
+        println(patronList[0])
     }
 
 ...
@@ -1935,7 +1935,7 @@ fun main(args: Array<String>) {
 >>  } else {
 >>      println("The tavern master says: Nay, they departed hours ago.")
 >>  }
-    
+
     placeOrder("shandy,Dragon's Breath,5.91")
 }
 ...
@@ -1959,11 +1959,11 @@ fun main(args: Array<String>) {
 >>  patronList.remove("Eli")
 >>  patronList.add("Alex")
 >>  println(patronList)
-} 
+}
 ...
 ```
 
-### Listing 10.11 Adding another Alex (Tavern.kt) 
+### Listing 10.11 Adding another Alex (Tavern.kt)
 ```kotlin
 ...
 val patronList = mutableListOf("Eli", "Mordoc", "Sophie")
@@ -1971,12 +1971,12 @@ fun main(args: Array<String>) {
     ...
     placeOrder("shandy,Dragon's Breath,5.91")
 
-    println(patronList) 
-    patronList.remove("Eli") 
-    patronList.add("Alex") 
->>  patronList.add(0, "Alex") 
     println(patronList)
-} 
+    patronList.remove("Eli")
+    patronList.add("Alex")
+>>  patronList.add(0, "Alex")
+    println(patronList)
+}
 ...
 ```
 
@@ -1987,17 +1987,17 @@ Run Tavern.kt again. You will see the following printed:
 [Alex, Mordoc, Sophie, Alex]
 ```
 
-### Listing 10.12 Modifying a mutable list using the set operator (Tavern.kt) 
+### Listing 10.12 Modifying a mutable list using the set operator (Tavern.kt)
 ...
 val patronList = mutableListOf("Eli", "Mordoc", "Sophie")
 fun main(args: Array<String>) {
     ...
     placeOrder("shandy,Dragon's Breath,5.91")
-    println(patronList) 
-    patronList.remove("Eli") 
-    patronList.add("Alex") 
-    patronList.add(0, "Alex") 
->>  patronList[0] = "Alexis" 
+    println(patronList)
+    patronList.remove("Eli")
+    patronList.add("Alex")
+    patronList.add(0, "Alex")
+>>  patronList[0] = "Alexis"
     println(patronList)
 } ...
 
@@ -2014,7 +2014,7 @@ Table 10.1 Mutable list mutator funtions
 
 | Function | Description | Example(s) |
 |---|---|---|
-| []= (set operator) | Sets the value at the inex, throws an exception if the index does not exists | val patronList = mutableListOf("Eli", "Mordoc", "Sophie") -- patronList[4] = "Reggie" -- _IndexOutOfBoundsException_ |  
+| []= (set operator) | Sets the value at the inex, throws an exception if the index does not exists | val patronList = mutableListOf("Eli", "Mordoc", "Sophie") -- patronList[4] = "Reggie" -- _IndexOutOfBoundsException_ |
 | __add__ | Adds an element to the end of the list, resizing it by one element | val patronList = mutableListOf("Eli", "Mordoc", "Sophie") -- patronList.add("Reggie") -- [Eli, Mordoc, Sophie, Reggie] -- patronList.size -- 4 |
 | __add__ (at index) | Adds an element to the list at a particular index, resizing the list by one element. Throwns an exception if the index does not exist. | val patronList = mutableListOf("Eli", "Mordoc","Sophie") -- patronList.add(0, "Reggie") -- [Reggie, Eli, Mordoc, Sophie] -- patronList.add(5, "Sophie") -- IndexOutOfBoundsException |
 | __addAll__ | Adds all of another collection with contents of the same type to the list | val patronList = mutableListOf("Eli", "Mordoc","Sophie") -- patronList.addAll(listOf("Reginald", "Alex")) -- [Eli, Mordoc, Sophie, Reginald, Alex] |
@@ -2048,7 +2048,7 @@ fun main(args: Array<String>) {
 >>  for (patron in patronList) {
 >>      println("Good evening, $patron")
 >>  }
-} 
+}
 ...
 ```
 
@@ -2062,16 +2062,16 @@ The __forEach__ function trsverses each element in teh list  -- one by one, from
 fun main(args: Array<String>) {
     ...
     placeOrder("shandy,Dragon's Breath,5.91")
-   
+
 <<  for (patron in patronList) {
 <<      println("Good evening, $patron")
 <<  }
-   
+
 >>  patronList.forEach { patron ->
 >>      println("Good evening, $patron")
 >>  }
 
-} 
+}
 ...
 ```
 
@@ -2086,9 +2086,9 @@ fun main(args: Array<String>) {
     ...
     placeOrder("shandy,Dragon's Breath,5.91")
     patronList.forEachIndexed { index, patron ->
-        println("Good evening, $patron - you're #${index + 1} in line.") 
+        println("Good evening, $patron - you're #${index + 1} in line.")
     }
-} 
+}
 ...
 ```
 
@@ -2100,7 +2100,7 @@ The __forEach__ and __forEachIndexed__ functions are also available on certain o
 ```kotlin
 >>  import java.io.File
     ...
-    val patronList = mutableListOf("Eli", "Mordoc", "Sophie") 
+    val patronList = mutableListOf("Eli", "Mordoc", "Sophie")
 >>  val menuList = File("data/tavern-menu-items.txt")
 >>                     .readText()
 >>                     .split("\n")
@@ -2116,12 +2116,12 @@ fun main(args: Array<String>) {
         println("Good evening, $patron - you're #${index + 1} in line.")
         placeOrder(patron, "shandy,Dragon's Breath,5.91")
     }
-    
+
 >>  menuList.forEachIndexed { index, data ->
 >>      println("$index : $data")
 >>  }
 
-} 
+}
 ...
 ```
 
@@ -2150,14 +2150,14 @@ Just as you can create a list using the __listOf__ function, you can create a Se
 
 ### Listing 10.20 Creating a set (REPL)
 ```kotlin
-val planets = setOf("Mercury", "Venus", "Earth") 
+val planets = setOf("Mercury", "Venus", "Earth")
 planets
 ["Mercury", "Venus", "Earth"]
 ```
 
 ### Listing 10.21 Trying to create a set with a duplicate (REPL)
 ```kotlin
-val planets = setOf("Mercury", "Venus", "Earth", "Earth") 
+val planets = setOf("Mercury", "Venus", "Earth", "Earth")
 planets
 ["Mercury", "Venus", "Earth"]
 ```
@@ -2174,7 +2174,7 @@ Set does not index its contests - meaning it provides no built-in [] operator to
 
 ### Listing 10.23 Finding the third planet (REPL)
 ```kotlin
-val planets = setOf("Mercury", "Venus", "Earth") 
+val planets = setOf("Mercury", "Venus", "Earth")
 planets.elementAt(2)
 Earth
 ```
@@ -2184,8 +2184,8 @@ Earth
 ### Listing 10.24 Generating 10 random patrons (Tavern.kt)
 ```kotlin
 ...
-    val patronList = mutableListOf("Eli", "Mordoc", "Sophie") 
->>  val lastName = listOf("Ironfoot", "Fernsworth", "Baggins") 
+    val patronList = mutableListOf("Eli", "Mordoc", "Sophie")
+>>  val lastName = listOf("Ironfoot", "Fernsworth", "Baggins")
     val menuList = File("data/tavern-menu-items.txt")
                                     .readText()
                                     .split("\n")
@@ -2205,14 +2205,14 @@ fun main(args: Array<String>) {
 >>        val name = "$first $last"
 >>        println(name)
 }
-} 
+}
 ...
 ```
 
 ### Listing 10.25 Ensuring uniqueness using a set (Tavern.kt)
 ```kotlin
 ...
-    val lastName = listOf("Ironfoot", "Fernsworth", "Baggins") 
+    val lastName = listOf("Ironfoot", "Fernsworth", "Baggins")
 >>  val uniquePatrons = mutableSetOf<String>()
     val menuList = File("data/tavern-menu-items.txt")
                                     .readText()
@@ -2225,7 +2225,7 @@ fun main(args: Array<String>) {
 >>  uniquePatrons += name
 }
 >>  println(uniquePatrons)
-} 
+}
 ...
 ```
 
@@ -2243,7 +2243,7 @@ Table 10.2 Mutable set mutator functions
 
 ## While Loops.
 
-A while loop's logic is "While some condition is truem execute the code in this block". 
+A while loop's logic is "While some condition is truem execute the code in this block".
 
 ### Listing 10.26 Unique patrons placing random orders (Tavern.kt)
 ```kotlin
@@ -2258,10 +2258,10 @@ fun main(args: Array<String>) {
 >>              menuList.shuffled().first())
 >>      orderCount++
 >>  }
-} 
+}
 ...
 ```
-The _increment operator_ (++) adds 1 to the calue of orderCount during each iteration. 
+The _increment operator_ (++) adds 1 to the calue of orderCount during each iteration.
 
 A while loop requires you to maintain your own counter manager its state. You start with an orderCount calue of 0 and increment time that you loop. white loops are more flexible than for loops in that they can represent state that is not purely based on iteration.
 
@@ -2317,7 +2317,7 @@ Like list and sets, maps are created using functions: __mapOf__ and __mutableMap
                                     .readText()
                                     .split("\n")
 >>  val patronGold = mapOf("Eli" to 10.5, "Mordoc" to 8.0, "Sophie" to 5.5)
-    
+
     fun main(args: Array<String>) {
         ...
         println(uniquePatrons)
@@ -2328,7 +2328,7 @@ Like list and sets, maps are created using functions: __mapOf__ and __mutableMap
             orderCount++
         }
 >>  println(patronGold)
-} 
+}
 ...
 ```
 
@@ -2366,7 +2366,7 @@ You acceess a value in a map using its key. For the partronGold map, you will us
 fun main(args: Array<String>) {
     ...
     println(uniquePatrons)
-    
+
     var orderCount = 0
     while (orderCount <= 9) {
         placeOrder(uniquePatrons.shuffled().first(),
@@ -2428,7 +2428,7 @@ fun main(args: Array<String>) {
 <<      println(patronGold["Eli"])
 <<      println(patronGold["Mordoc"])
 <<      println(patronGold["Sophie"])
-} 
+}
 ...
 ```
 
@@ -2456,7 +2456,7 @@ const val TAVERN_NAME: String = "Taernyl's Folly"
 
 <<  var playerGold = 10
 <<  var playerSilver = 10
-    val patronList = mutableListOf("Eli", "Mordoc", "Sophie") 
+    val patronList = mutableListOf("Eli", "Mordoc", "Sophie")
     ...
 
 <<  fun performPurchase(price: Double) {
@@ -2472,20 +2472,20 @@ const val TAVERN_NAME: String = "Taernyl's Folly"
 <<      playerSilver = remainingSilver
 <<      displayBalance()
 <<  }
-    
+
 <<  private fun displayBalance() {
 <<      println("Player's purse balance: Gold: $playerGold , Silver: $playerSilver")
 <<  }
-    
+
 >>  fun performPurchase(price: Double, patronName: String) {
 >>      val totalPurse = patronGold.getValue(patronName)
 >>      patronGold[patronName] = totalPurse - price
 >>  }
-    
+
     private fun toDragonSpeak(phrase: String) =
         ...
     }
-    
+
     private fun placeOrder(patronName: String, menuData: String) {
         ...
     println(message)
@@ -2493,7 +2493,7 @@ const val TAVERN_NAME: String = "Taernyl's Folly"
 >>      performPurchase(price.toDouble(), patronName)
 
         val phrase = if (name == "Dragon's Breath") {
-        ... 
+        ...
         }
     ...
 ```
@@ -2538,7 +2538,7 @@ The object-oriented programming paradigm has been around since the 1960s and con
 
 A class can be deined in its own file or alongside other elements, like functions or variables
 
-###Listing 12.1 Defining the Playerclass (Player.kt) 
+###Listing 12.1 Defining the Playerclass (Player.kt)
 ```kotlin
 class Player
 ```
@@ -2560,11 +2560,11 @@ fun main(args: Array<String>) {
 
     // Aura
     val auraColor = auraColor(isBlessed, healthPoints, isImmortal)
-    
+
     // Player status
     val healthStatus = formatHealthStatus(healthPoints, isBlessed)
     printPlayerStatus(auraColor, isBlessed, name, healthStatus)
-   
+
     castFireball()
 }
 ...
@@ -2581,7 +2581,7 @@ Class definition can be specify two types of content: _behavior_ and _data_
 ### Listing 12.3 Defining a class function (Player.kt)
 ```kotlin
 class Player {
-    fun castFireball(numFireballs: Int = 2) = println("A glass of Fireball springs into existence. (x$numFireballs)") 
+    fun castFireball(numFireballs: Int = 2) = println("A glass of Fireball springs into existence. (x$numFireballs)")
 }
 ```
 
@@ -2593,7 +2593,7 @@ fun main(args: Array<String>) {
     var healthPoints = 89
     val isBlessed = true
     val isImmortal = false
-    
+
     val player = Player()
 >>  player.castFireball()
 
@@ -2628,7 +2628,7 @@ Encapsulation says that a class should selectively expose funtions and propertie
 
 Class function definitions describe the behavior associated with a class, Data definitions, better known as _class properties_, are the attribbutes required to represent the specific state or characteristics of a class.
 
-### Listing 12.5 Defining the name property (Player.kt) 
+### Listing 12.5 Defining the name property (Player.kt)
 ```kotlin
 class Player {
 >>  val name = "madrigal"
@@ -2637,13 +2637,13 @@ class Player {
 }
 ```
 
-### Listing 12.7 Resolving the reference to Player’s name property (Game.kt) 
+### Listing 12.7 Resolving the reference to Player’s name property (Game.kt)
 ```kotlin
 fun main(args: Array<String>) {
 ...
     // Player status
-<<  printPlayerStatus(auraColor, isBlessed, player, healthStatus) 
->>  printPlayerStatus(auraColor, isBlessed, player.name, healthStatus) 
+<<  printPlayerStatus(auraColor, isBlessed, player, healthStatus)
+>>  printPlayerStatus(auraColor, isBlessed, player.name, healthStatus)
 }
 ...
 ```
@@ -2657,7 +2657,7 @@ For eache property you define, kotlin will generate a _field_, a _getter_, and, 
 class Player {
     val name = "madrigal"
 >>      get() = field.capitalize()
-    
+
     fun castFireball(numFireballs: Int = 2) =
             println("A glass of Fireball springs into existence. (x$numFireballs)")
 
@@ -2688,11 +2688,11 @@ The peroperties provide fine-grained control around reading and modifying data t
 ```kotlin
 class Player {
     var name = "madrigal"
-    get() = field.capitalize() 
+    get() = field.capitalize()
     private set(value) {
         field = value.trim()
     }
-    
+
     fun castFireball(numFireballs: Int = 2) =
             println("A glass of Fireball springs into existence. (x$numFireballs)")
 }
@@ -2712,12 +2712,12 @@ class Dice() {
 
 ### Listing 12.14 Accessing the computed property (REPL)
 ```kotlin
-val myD6 = Dice() 
-myD6.rolledValue 
-6 
-myD6.rolledValue 
-1 
-myD6.rolledValue 
+val myD6 = Dice()
+myD6.rolledValue
+6
+myD6.rolledValue
+1
+myD6.rolledValue
 4
 ```
 
@@ -2733,7 +2733,7 @@ class Player {
 >>  var healthPoints = 89
 >>  val isBlessed = true
 >>  val isImmortal = false
-    
+
     fun castFireball(numFireballs: Int = 2) =
             println("A glass of Fireball springs into existence. (x$numFireballs)")
 }
@@ -2747,7 +2747,7 @@ class Player {
         private set(value) {
             field = value.trim()
         }
-    
+
     var healthPoints = 89
     val isBlessed = true
 >>  private val isImmortal = false
@@ -2776,7 +2776,7 @@ class Player {
 >>      val auraColor = if (auraVisible) "GREEN" else "NONE"
 >>      return auraColor
 >>  }
-    
+
 >>  private fun formatHealthStatus(healthPoints: Int, isBlessed: Boolean) =
 >>          when (healthPoints) {
 >>              100 -> "is in excellent condition!"
@@ -2789,7 +2789,7 @@ class Player {
 >>              in 15..74 -> "looks pretty hurt."
 >>              else -> "is in awful condition!"
 >>          }
-    
+
     fun castFireball(numFireballs: Int = 2) =
             println("A glass of Fireball springs into existence. (x$numFireballs)")
 }
@@ -2806,7 +2806,7 @@ class Player {
     var healthPoints = 89
     val isBlessed = true
     private val isImmortal = false
-    
+
 <<  private fun auraColor(isBlessed: Boolean, healthPoints: Int, isImmortal: Boolean): String {
 >>  private fun auraColor(): String {
         val auraVisible = isBlessed && healthPoints > 50 || isImmortal
@@ -2841,21 +2841,21 @@ class Player {
         private set(value) {
             field = value.trim()
         }
-    
+
     var healthPoints = 89
     val isBlessed = true
     private val isImmortal = false
-    
+
 <<  private fun auraColor(): String {
 >>  fun auraColor(): String {
         ...
     }
-    
+
 <<  private fun formatHealthStatus() = when (healthPoints) {
 >>  fun formatHealthStatus() = when (healthPoints) {
         ...
     }
-    
+
     fun castFireball(numFireballs: Int = 2) =
             println("A glass of Fireball springs into existence. (x$numFireballs)")
 }
@@ -2870,19 +2870,19 @@ fun main(args: Array<String>) {
     // Aura
 <<  val auraColor = player.auraColor(isBlessed, healthPoints, isImmortal)
 >>  val auraColor = player.auraColor()
-    
+
     // Player status
-<<  val healthStatus = formatHealthStatus(healthPoints, isBlessed) 
+<<  val healthStatus = formatHealthStatus(healthPoints, isBlessed)
 <<    printPlayerStatus(playerauraColor, isBlessed, player.name, healthStatus)
 >>    printPlayerStatus(player)
-    
+
     // Aura
-<<  player.auraColor(isBlessed, healthPoints, isImmortal) 
->>  player.auraColor() 
+<<  player.auraColor(isBlessed, healthPoints, isImmortal)
+>>  player.auraColor()
 }
 
-<<private fun printPlayerStatus(player: PlayerauraColor: String, isBlessed: Boolean, name: String,healthStatus: String) { 
->>private fun printPlayerStatus(player: Player) { 
+<<private fun printPlayerStatus(player: PlayerauraColor: String, isBlessed: Boolean, name: String,healthStatus: String) {
+>>private fun printPlayerStatus(player: Player) {
     println("(Aura: ${player.auraColor()}) " +
             "(Blessed: ${if (player.isBlessed) "YES" else "NO"})")
     println("${player.name} ${player.formatHealthStatus()}")
@@ -2992,7 +2992,7 @@ fun main(args: Array<String>){
 }
 ```
 
-You can also use a secondary constructor to define initialization logic - code that will run when your class is instantied. 
+You can also use a secondary constructor to define initialization logic - code that will run when your class is instantied.
 
 ### Listing  13.6 Adding logic to a secondary constructor (Player.kt)
 ```kotlin
@@ -3238,7 +3238,7 @@ class Player(_name: String,
         }
 <<  val hometown = selectHometown()
 >>  val hometown by lazy { selectHometown() }
-    
+
     ...
     private fun selectHometown() = File("towns.txt")
             .readText()
@@ -3293,16 +3293,16 @@ Add open keyword to __Room__ so that can be subclassed
 
 ### Listing 14.3 Making the Room class open for subclassing (Room.kt)
 ```kotlin
-open class Room(val name: String) { 
+open class Room(val name: String) {
     fun description() = "Room: $name"
 
     fun load() = "Nothing much to see here..."
 }
 ```
 
-### Listing 14.4 Declaring the TownSquare class (Room.kt) 
+### Listing 14.4 Declaring the TownSquare class (Room.kt)
 ```kotlin
-open class Room(val name: String) { 
+open class Room(val name: String) {
     fun description() = "Room: $name"
 
     fun load() = "Nothing much to see here..."
@@ -3332,7 +3332,7 @@ class TownSquare : Room("Town Square") {
 ```kotlin
 open class Room(val name: String) {
     fun description() = "Room: $name"
-    open fun load() = "Nothing much to see here..." 
+    open fun load() = "Nothing much to see here..."
 }
 
 class TownSquare : Room("Town Square") {
@@ -3346,10 +3346,10 @@ Protected visibility is a third option the restricts visibility to the class in 
 ```kotlin
 open class Room(val name: String) {
 >>  protected open val dangerLevel = 5
-    
-    fun description() = "Room: $name\n" + 
+
+    fun description() = "Room: $name\n" +
 >>                      "Danger level: $dangerLevel"
-    
+
     open fun load() = "Nothing much to see here..."
 }
 
@@ -3361,24 +3361,24 @@ This scenario is perfect for the _protected_ keyword: you want to expose a prope
 
 You can reference a class's superclass using the __super__ keyword. From therem you have access to any public or protected properties or functions, including, in this case, _dangerLevel_.
 
-### Listing 14.8 Overriding dangerLevel (Room.kt) 
+### Listing 14.8 Overriding dangerLevel (Room.kt)
 ```kotlin
 open class Room(val name: String) {
     protected open val dangerLevel = 5
-    
+
     fun description() = "Room: $name\n" +
             "Danger level: $dangerLevel"
-    
+
     open fun load() = "Nothing much to see here..."
 }
 class TownSquare : Room("Town Square") {
 >>  override val dangerLevel = super.dangerLevel - 3
-    
+
     override fun load() = "The villagers rally and cheer as you enter!"
 }
 ```
 
-### Listing 14.9 Adding a new property and function to a subclass (Room.kt) 
+### Listing 14.9 Adding a new property and function to a subclass (Room.kt)
 ```kotlin
 open class Room(val name: String) {
     protected open val dangerLevel = 5
@@ -3388,11 +3388,11 @@ open class Room(val name: String) {
 }
 
 class TownSquare : Room("Town Square") {
-    override val dangerLevel = super.dangerLevel - 3 
+    override val dangerLevel = super.dangerLevel - 3
 >>  private var bellSound = "GWONG"
-    
-    override fun load() = "The villagers rally and cheer as you enter!\n${ringBell()}" 
-    
+
+    override fun load() = "The villagers rally and cheer as you enter!\n${ringBell()}"
+
 >>  private fun ringBell() = "The bell tower announces your arrival. $bellSound"
 }
 ```
@@ -3404,10 +3404,10 @@ fun main(args: Array<String>) {
     player.castFireball()
 
 <<  var currentRoom: Room = Room("Foyer")
->>  var currentRoom: Room = TownSquare() 
-    println(currentRoom.description()) 
+>>  var currentRoom: Room = TownSquare()
+    println(currentRoom.description())
     println(currentRoom.load())
-    
+
     // Player status
     printPlayerStatus(player)
 }
@@ -3417,7 +3417,7 @@ fun main(args: Array<String>) {
 Polymorphism is a strategy for simplifying the structure of your program. It allows you to reuse functions for common sets of features across groups of classes and also to customize the behavior for unique needs of a class.
 
 
-### Listing 14.11 Declaring a function to be final (Room.kt) 
+### Listing 14.11 Declaring a function to be final (Room.kt)
 ```kotlin
 open class Room(val name: String) {
     protected open val dangerLevel = 5
@@ -3428,12 +3428,12 @@ open class Room(val name: String) {
     open fun load() = "Nothing much to see here..."
 }
 
->>open class TownSquare : Room("Town Square") { 
+>>open class TownSquare : Room("Town Square") {
     override val dangerLevel = super.dangerLevel - 3 private var bellSound = "GWONG"
 
 >>  final override fun load() =
         "The villagers rally and cheer as you enter!\n${ringBell()}"
-    
+
     private fun ringBell() = "The bell tower announces your arrival. $bellSound"
 }
 ```
@@ -3516,7 +3516,7 @@ Objects declarations are useful for organization and state management, especiall
 ### Listing 15.1 Declaring Game object (Game.kt)
 ```kotlin
     fun main(args: Array<String>) {
-        ... 
+        ...
     }
 
     private fun printPlayerStatus(player: Player) {
@@ -3536,7 +3536,7 @@ Beacause an object declaration is instantiated for you, you do not add a custom 
 ### Listing 15.2 Adding an init block to Game (Game.kt)
 ```kotlin
 fun main(args: Array<String>) {
-... 
+...
 }
 private fun printPlayerStatus(player: Player) {
     println("(Aura: ${player.auraColor()}) " +
@@ -3574,7 +3574,7 @@ object Game {
     init {
         println("Welcome, adventurer.")
     }
-    
+
 >>    fun play() {
 >>        while (true) {
 >>            // Play NyetHack
@@ -3592,7 +3592,7 @@ fun main(args: Array<String>) {
 <<  var currentRoom: Room = TownSquare()
     println(currentRoom.description())
     println(currentRoom.load())
-    
+
     // Player status
     printPlayerStatus(player)
     Game.play()
@@ -3607,7 +3607,7 @@ fun main(args: Array<String>) {
     object Game {
 >>      private val player = Player("Madrigal")
 >>      private var currentRoom: Room = TownSquare()
-  
+
         init {
             println("Welcome, adventurer.")
 >>          player.castFireball()
@@ -3642,12 +3642,12 @@ fun main(args: Array<String>) {
 object Game {
     private val player = Player("Madrigal")
     private var currentRoom: Room = TownSquare()
-    
+
     init {
         println("Welcome, adventurer.")
         player.castFireball()
     }
-    
+
     fun play() {
         while (true) {
 <<          // Play NyetHack
@@ -3655,14 +3655,14 @@ object Game {
 >>          println(currentRoom.load())
 >>          // Player status
 >>          printPlayerStatus(player)
-        } 
+        }
     }
 
     private fun printPlayerStatus(player: Player) {
         println("(Aura: ${player.auraColor()}) " +
                 "(Blessed: ${if (player.isBlessed) "YES" else "NO"})")
         println("${player.name} ${player.formatHealthStatus()}")
-    } 
+    }
 }
 ```
 
@@ -3677,15 +3677,15 @@ object Game {
         while (true) {
             println(currentRoom.description())
             println(currentRoom.load())
-    
+
             // Player status
             printPlayerStatus(player)
-    
+
 >>          print("> Enter your command: ")
 >>          println("Last command: ${readLine()}")
-        } 
+        }
     }
-... 
+...
 }
 
 ```
@@ -3744,9 +3744,9 @@ object Game {
         private val input = arg ?: ""
         val command = input.split(" ")[0]
         val argument = input.split(" ").getOrElse(1, { "" })
-    
+
 >>      private fun commandNotFound() = "I'm not quite sure what you're trying to do!"
-    } 
+    }
 }
 ```
 
@@ -3783,9 +3783,9 @@ object Game {
             print("> Enter your command: ")
 <<          println("Last command: ${readLine()}")
 >>          println(GameInput(readLine()).processCommand())
-        } 
+        }
     }
-    ... 
+    ...
 }
 ```
 
@@ -3811,10 +3811,10 @@ class Player(_name: String,
         private set(value) {
             field = value.trim()
         }
-    
+
     val hometown by lazy { selectHometown() }
     var currentPosition = Coordinate(0, 0)
-... 
+...
 }
 ```
 
@@ -3869,11 +3869,11 @@ data class Coordinate(val x: Int, val y: Int) {
 
 ### Listing 15.14 Defining an enum constructor (Navigation.kt)
 ```kotlin
-enum class Direction(private val coordinate: Coordinate) { 
+enum class Direction(private val coordinate: Coordinate) {
     NORTH(Coordinate(0, -1)),
     EAST(Coordinate(1, 0)),
     SOUTH(Coordinate(0, 1)),
-    WEST(Coordinate(-1, 0)) 
+    WEST(Coordinate(-1, 0))
 }
 
 data class Coordinate(val x: Int, val y: Int) {
@@ -3934,7 +3934,7 @@ enum class Direction(private val coordinate: Coordinate) {
     WEST(Coordinate(-1, 0));
 
     fun updateCoordinate(playerCoordinate: Coordinate) =
-<<      Coordinate(playerCoordinate.x + coordinate.x, playerCoordinate.y + coordinate.y) 
+<<      Coordinate(playerCoordinate.x + coordinate.x, playerCoordinate.y + coordinate.y)
 >>      coordinate + playerCoordinate
 
 }
@@ -3979,7 +3979,7 @@ object Game {
 object Game {
     private var currentRoom: Room = TownSquare()
     private val player = Player("Madrigal")
-    
+
     private var worldMap = listOf(
         listOf(currentRoom, Room("Tavern"), Room("Back Room")),
         listOf(Room("Long Corridor"), Room("Generic Room")))
@@ -3992,7 +3992,7 @@ object Game {
             if (!newPosition.isInBounds) {
                 throw IllegalStateException("$direction is out of bounds.")
             }
-    
+
             val newRoom = worldMap[newPosition.y][newPosition.x]
             player.currentPosition = newPosition
             currentRoom = newRoom
@@ -4054,9 +4054,9 @@ class Player(_name: String,
 >>  override var healthPoints: Int = 100,
     var isBlessed: Boolean = false,
 >>  private var isImmortal: Boolean) : Fightable {
-    
-    ... 
-    
+
+    ...
+
     }
 ```
 
@@ -4068,17 +4068,17 @@ class Player(_name: String,
             override var healthPoints: Int = 100,
             var isBlessed: Boolean = false,
             private var isImmortal: Boolean) : Fightable {
-            
+
         override val diceCount: Int = 3
 <<          get() = TODO("not implemented")
-<<          //To change initializer of created properties use 
+<<          //To change initializer of created properties use
 <<          //File | Settings | File Templates.
 
         override val diceSides: Int = 6
 <<          get() = TODO("not implemented")
-<<          //To change initializer of created properties use 
+<<          //To change initializer of created properties use
 <<          //File | Settings | File Templates.
-    
+
         override fun attack(opponent: Fightable): Int {
 <<          TODO("not implemented")
 <<          //To change body of created functions use
@@ -4086,12 +4086,12 @@ class Player(_name: String,
 >>          val damageDealt = if (isBlessed) {
 >>              damageRoll * 2
 >>          } else {
->>              damageRoll 
+>>              damageRoll
 >>          }
 >>          opponent.healthPoints -= damageDealt
 >>          return damageDealt
 >>      }
-    ... 
+    ...
 }
 ```
 
@@ -4108,7 +4108,7 @@ interface Fightable {
         get() = (0 until diceCount).map {
             Random().nextInt(diceSides + 1)
         }.sum()
-        
+
     fun attack(opponent: Fightable): Int
 }
 ```
@@ -4129,7 +4129,7 @@ interface Fightable {
         get() = (0 until diceCount).map {
             Random().nextInt(diceSides + 1)
         }.sum()
-    
+
     fun attack(opponent: Fightable): Int
 }
 
@@ -4141,7 +4141,7 @@ interface Fightable {
 >>            val damageDealt = damageRoll
 >>            opponent.healthPoints -= damageDealt
 >>            return damageDealt
->>        } 
+>>        }
 
 }
 ```
@@ -4149,7 +4149,7 @@ interface Fightable {
 ### Listing 16.6 Subclassing an abstract class (Creature.kt)
 ```kotlin
 interface Fightable {
-    ... 
+    ...
 }
 
 abstract class Monster(val name: String,
@@ -4160,7 +4160,7 @@ abstract class Monster(val name: String,
         val damageDealt = damageRoll
         opponent.healthPoints -= damageDealt
         return damageDealt
-    } 
+    }
 
 }
 
@@ -4174,7 +4174,7 @@ abstract class Monster(val name: String,
 ### Listing 16.7 Implementing properties in the subclass of an abstract class (Creature.kt)
 ```kotlin
 interface Fightable {
-    ... 
+    ...
 }
 
 abstract class Monster(val name: String,
@@ -4186,7 +4186,7 @@ abstract class Monster(val name: String,
 class Goblin(name: String = "Goblin",
              description: String = "A nasty-looking goblin",
              healthPoints: Int = 30) : Monster(name, description, healthPoints) {
-    
+
     override val diceCount = 2
     override val diceSides = 8
 
@@ -4199,12 +4199,12 @@ Add a monster proeprty of nullable type __Monter?__to the __Room__ class, and in
 ### Listing 16.8 Adding a monster to each room (Room.kt)
 ```kotlin
 open class Room(val name: String) {
-    protected open val dangerLevel = 5 
+    protected open val dangerLevel = 5
 >>  var monster: Monster? = Goblin()
 
-    fun description() = "Room: $name\n" + 
-                        "Danger level: $dangerLevel\n" + 
->>                      "Creature: ${monster?.description ?: "none."}" 
+    fun description() = "Room: $name\n" +
+                        "Danger level: $dangerLevel\n" +
+>>                      "Creature: ${monster?.description ?: "none."}"
 
     open fun load() = "Nothing much to see here..."
 }
@@ -4217,7 +4217,7 @@ object Game {
     ...
 
     private fun move(directionInput: String) = ...
-    
+
     private fun fight() = currentRoom.monster?.let {
             while (player.healthPoints > 0 && it.healthPoints > 0) {
                 Thread.sleep(1000)
@@ -4226,7 +4226,7 @@ object Game {
         } ?: "There's nothing here to fight."
 
     private class GameInput(arg: String?) {
-        ... 
+        ...
     }
 }
 ```
@@ -4236,9 +4236,9 @@ object Game {
 ...
 object Game {
     ...
-    
+
     private fun fight() = ...
-    
+
     private fun slay(monster: Monster) {
         println("${monster.name} did ${monster.attack(player)} damage!")
         println("${player.name} did ${player.attack(monster)} damage!")
@@ -4253,9 +4253,9 @@ object Game {
             currentRoom.monster = null
         }
     }
-    
+
     private class GameInput(arg: String?) {
-        ... 
+        ...
     }
 }
 ```
@@ -4267,7 +4267,7 @@ Call slay from fight.
 ...
 object Game {
     ...
-    
+
     private fun move(directionInput: String) = ...
 
     private fun fight() = currentRoom.monster?.let {
@@ -4279,11 +4279,11 @@ object Game {
     } ?: "There's nothing here to fight."
 
     private fun slay(monster: Monster) {
-        ... 
+        ...
     }
 
     private class GameInput(arg: String?) {
-        ... 
+        ...
     }
 }
 ```
@@ -4297,7 +4297,7 @@ object Game {
         private val input = arg ?: ""
         val command = input.split(" ")[0]
         val argument = input.split(" ").getOrElse(1, { "" })
-   
+
         fun processCommand() = when (command.toLowerCase()) {
 >>          "fight" -> fight()
             "move" -> move(argument)
@@ -4360,10 +4360,10 @@ Generic type parameters also work with functions. That is good news, since there
 ### Listing 17.3 Adding a __fetch__ function (Generics.kt)
 ```kotlin
 class LootBox<T>(item: T) {
-    
+
     var open = false
     private var loot: T = item
-    
+
     fun fetch(): T? {
        return loot.takeIf { open }
     }
@@ -4376,10 +4376,10 @@ Here you define a generic function, __fetch__, that return T - the generic type 
 ```kotlin
 ...
 fun main(args: Array<String>) {
-    
+
     val lootBoxOne: LootBox<Fedora> = LootBox(Fedora("a generic-looking fedora", 15))
     val lootBoxTwo: LootBox<Coin> = LootBox(Coin(15))
-    
+
     lootBoxOne.fetch()?.run {
         println("You retrieve $name from the box!")
     }
@@ -4390,12 +4390,12 @@ fun main(args: Array<String>) {
 ```kotlin
 ...
 fun main(args: Array<String>) {
-    
+
     val lootBoxOne: LootBox<Fedora> = LootBox(Fedora("a generic-looking fedora", 15))
     val lootBoxTwo: LootBox<Coin> = LootBox(Coin(15))
-    
+
 >>  lootBoxOne.open = true
-    
+
     lootBoxOne.fetch()?.run {
         println("You retrieve a $name from the box!")
     }
@@ -4420,7 +4420,7 @@ class LootBox<T>(item: T) {
     fun <R> fetch(lootModFunction: (T) -> R): R? {
         return lootModFunction(loot).takeIf { open }
     }
-} 
+}
 ...
 ```
 
@@ -4434,12 +4434,12 @@ You also specify that the lootModFunction (via its function type declaration, (T
 fun main(args: Array<String>) {
     val lootBoxOne: LootBox<Fedora> = LootBox(Fedora("a generic-looking fedora", 15))
     val lootBoxTwo: LootBox<Coin> = LootBox(Coin(15))
-   
+
     lootBoxOne.open = true
     lootBoxOne.fetch()?.run {
         println("You retrieve $name from the box!")
     }
-   
+
 >>  val coin = lootBoxOne.fetch() {
 >>      Coin(it.value * 3)
 >>  }
@@ -4448,7 +4448,7 @@ fun main(args: Array<String>) {
 }
 ```
 
-## Generic Constraints 
+## Generic Constraints
 What if you wanted to ensure that the loot box was only used to hold loot, and not something else? You can specify a generic type constraint to enforce exactly that.
 
 ### Listing 17.8 Adding a superclass (Generics.kt)
@@ -4478,7 +4478,7 @@ Now, add a generic type constraint to LootBox's generic type paramter to allow o
 ### Listing 17.9 Constraining the generic parameter to __Loot__ only (Generics.kt)
 ```kotlin
 class LootBox<T : Loot>(item: T) {
-    ... 
+    ...
 }
 ...
 ```
@@ -4491,7 +4491,7 @@ To do so, modify __lootBox__'s primary constructor with the vararg keyword, whic
 ### Listing 17.10 Adding vararg (Generics.kt)
 ```kotlin
 class LootBox<T : Loot>(vararg item: T) {
-    ... 
+    ...
 }
 ...
 ```
@@ -4505,16 +4505,16 @@ class LootBox<T : Loot>(vararg item: T) {
     private var loot: TArray<out T> = item
 
     fun fetch(item: Int): T? {
-        return loot[item].takeIf { open } 
+        return loot[item].takeIf { open }
     }
-    
+
     fun <R> fetch(item: Int, lootModFunction: (T) -> R): R? {
         return lootModFunction(loot[item]).takeIf { open } }
-    } 
+    }
 ...
 ```
 
-Notice the `out` keyword thta you add for the new loot variable's type signature. The out keyword is required here because it is part of the return type for any cariable marked as `vararg`. 
+Notice the `out` keyword thta you add for the new loot variable's type signature. The out keyword is required here because it is part of the return type for any cariable marked as `vararg`.
 
 Try out the new and improved  __LootBox__ in __main__. Pass another fedora into the loot box.
 
@@ -4523,7 +4523,7 @@ Try out the new and improved  __LootBox__ in __main__. Pass another fedora into 
 ...
 fun main(args: Array<String>) {
 val lootBoxOne: LootBox<Fedora> = LootBox(Fedora("a generic-looking fedora", 15), Fedora("a dazzling magenta fedora", 25))
-    
+
     val lootBoxTwo: LootBox<Coin> = LootBox(Coin(15))
 lootBoxOne.open = true lootBoxOne.fetch(1)?.run {
         println("You retrieve $name from the box!")
@@ -4544,17 +4544,17 @@ Update __LootBox__ to include a __get__ operator implementation.
 class LootBox<T : Loot>(vararg item: T) {
    var open = false
    private var loot: Array<out T> = item
-   
+
    operator fun get(index: Int): T? = loot[index].takeIf { open }
 
    fun fetch(item: Int): T? {
        return loot[item].takeIf { open }
    }
-   
+
    fun <R> fetch(item: Int, lootModFunction: (T) -> R): R? {
        return lootModFunction(loot[item]).takeIf { open }
    }
-} 
+}
 ...
 ```
 
@@ -4566,7 +4566,7 @@ Now use the new __get__ operator in your __main__ function
 fun main(args: Array<String>) {
     ...
     coin?.let { println(it.value) }
-   
+
 >>  val fedora = lootBoxOne[1]
 >>  fedora?.let { println(it.name) }
 }
@@ -4575,7 +4575,7 @@ fun main(args: Array<String>) {
 ## __in__ and __out__
 To further customize your generic type parameter. Kotlin provides the keywords `in` and `out`
 
-### Listing 17.15 Defining Barrel (Variance.kt) 
+### Listing 17.15 Defining Barrel (Variance.kt)
 ```kotlin
 class Barrel<T>(var item: T)
 ```
@@ -4595,7 +4595,7 @@ class Barrel<T>(var item: T)
 fun main(args: Array<String>) {
     var fedoraBarrel: Barrel<Fedora> = Barrel(Fedora("a generic-looking fedora", 15))
     var lootBarrel: Barrel<Loot> = Barrel(Coin(15))
-    
+
 >>  lootBarrel = fedoraBarrel
 }
 ```
@@ -4606,7 +4606,7 @@ class Barrel<T>(var item: T)
 fun main(args: Array<String>) {
     var fedoraBarrel: Barrel<Fedora> = Barrel(Fedora("a generic-looking fedora", 15))
     var lootBarrel: Barrel<Loot> = Barrel(Coin(15))
-   
+
     lootBarrel = fedoraBarrel
 >>  lootBarrel.item = Coin(15)
 }
@@ -4618,14 +4618,14 @@ class Barrel<T>(var item: T)
 fun main(args: Array<String>) {
     var fedoraBarrel: Barrel<Fedora> = Barrel(Fedora("a generic-looking fedora", 15))
     var lootBarrel: Barrel<Loot> = Barrel(Coin(15))
-    
-    lootBarrel = fedoraBarrel 
+
+    lootBarrel = fedoraBarrel
     lootBarrel.item = Coin(15)
 >>  val myFedora: Fedora = fedoraBarrel.item
 }
 ```
 
-### Listing 17.20 Adding out (Variance.kt) 
+### Listing 17.20 Adding out (Variance.kt)
 ```kotlin
 class Barrel<out T>(varval item: T)
 ...
@@ -4641,11 +4641,11 @@ fun main(args: Array<String>) {
     lootBarrel = fedoraBarrel
 <<  lootBarrel.item = Coin(15)
 <<  val myFedora: Fedora = fedoraBarrel.item
->>  val myFedora: Fedora = lootBarrel.item 
+>>  val myFedora: Fedora = lootBarrel.item
 }
 ```
 
-### Listing 17.22 Marking Barrel within (Variance.kt) 
+### Listing 17.22 Marking Barrel within (Variance.kt)
 ```kotlin
 class Barrel<inout T>(val item: T)
 ...
@@ -4698,16 +4698,16 @@ Extension do not rely on inheritance, but they can be combined with inheritance 
 
 ### Listing 18.3 Extending Any (Extensions.kt)
 ```Kotlin
-fun String.addEnthusiasm(amount: Int = 1) = this + "!".repeat(amount) 
+fun String.addEnthusiasm(amount: Int = 1) = this + "!".repeat(amount)
 
 fun Any.easyPrint() = println(this)
 
 fun main(args: Array<String>) {
-    "Madrigal has left the building".addEnthusiasm().easyPrint() 
+    "Madrigal has left the building".addEnthusiasm().easyPrint()
 }
 ```
 
-Since you added the extension for the any type, it is also available for use with other subtyes. Call the extension on an `Int` after the `String` 
+Since you added the extension for the any type, it is also available for use with other subtyes. Call the extension on an `Int` after the `String`
 
 ### Listing 18.4 __easyPrint__ is available on all subtypes (Extensions.kt)
 ```kotlin
@@ -4727,9 +4727,9 @@ fun main(args: Array<String>) {
 ```kotlin
 fun String.addEnthusiasm(amount: Int = 1) = this + "!".repeat(amount)
 
-fun Any.easyPrint() : Any { 
+fun Any.easyPrint() : Any {
     println(this)
-    return this 
+    return this
 }
 
 ```
@@ -4742,7 +4742,7 @@ fun String.addEnthusiasm(amount: Int = 1) = this + "!".repeat(amount)
 
 fun Any.easyPrint(): Any {
     println(this)
-    return this 
+    return this
 }
 
 fun main(args: Array<String>) {
@@ -4761,7 +4761,7 @@ fun String.addEnthusiasm(amount: Int = 1) = this + "!".repeat(amount)
 
 fun <T> T.easyPrint(): T {
     println(this)
-    return this 
+    return this
 }
 ...
 ```
@@ -4788,7 +4788,7 @@ fun String.addEnthusiasm(amount: Int = 1) = this + "!".repeat(amount)
 
 fun <T> T.easyPrint(): T {
     println(this)
-    return this 
+    return this
 }
 
 fun main(args: Array<String>) {
@@ -4821,11 +4821,11 @@ The `infix` keyword available for both extension and class functions that have a
 If a function is defined with `infix` , you can omit the dow between the receiver and the function call as well the parentheses around the argument.
 
 ```kotlin
-null printWithDefault "Default string"  // With infix 
-null.printWithDefault("Default string") // Without infix 
+null printWithDefault "Default string"  // With infix
+null.printWithDefault("Default string") // Without infix
 ```
 
-## Extracting to Extensions 
+## Extracting to Extensions
 Applying what I have learned to refine NyeHack.
 
 Tavern.kt contains duplicate chains of logic called onseveral collections: `shuffled().first()`
@@ -4855,7 +4855,7 @@ val patronGold = mutableMapOf<String, Double>()
 private fun <T> Iterable<T>.random(): T = this.shuffled().first()
 
 fun main(args: Array<String>) {
-    ... 
+    ...
 }
 ...
 ```
@@ -4869,7 +4869,7 @@ private fun <T> Iterable<T>.random(): T = this.shuffled().first()
         ...
         (0..9).forEach {
             val first = patronList.random()
-            val last = lastName.random() 
+            val last = lastName.random()
         }
 
         uniquePatrons.forEach {
@@ -4881,7 +4881,7 @@ private fun <T> Iterable<T>.random(): T = this.shuffled().first()
             placeOrder(uniquePatrons.random(), menuList.random())
             orderCount++
         }
-        
+
         displayPatronBalances()
 }
 ...
@@ -4898,8 +4898,8 @@ fun <T> Iterable<T>.random(): T = this.shuffled().first()
 ```kotlin
 ...
 private fun selectHometown() = File("data/towns.txt")
-    .readText() 
-    .split("\n") 
+    .readText()
+    .split("\n")
     .random()
 ...
 ```
@@ -4908,11 +4908,11 @@ private fun selectHometown() = File("data/towns.txt")
 
 ### Listing 18.16 The as operator (Taver.kt)
 ```kotlin
-import com.bignerdranch.nyethack.extensions.random as randomizer 
+import com.bignerdranch.nyethack.extensions.random as randomizer
 ...
 private fun selectHometown() = File("data/towns.txt")
-    .readText() 
-    .split("\n") 
+    .readText()
+    .split("\n")
     .randomizer()
 ...
 ```
@@ -4987,7 +4987,7 @@ println( primes )
 ```
 
 ## Combines
-The third category of functions used in functional programming is _combines_. Combining functions take different collections and merge the, into a new one. 
+The third category of functions used in functional programming is _combines_. Combining functions take different collections and merge the, into a new one.
 
 ### Listing 19.7 Combining two collections, functional style (REPL)
 ```kotlin
@@ -5077,7 +5077,7 @@ Calling this methos from Hero.kt
 fun main(args: Array<String>) {
     val adversary = Jhava()
     println(adversary.utterGreeting())
- 
+
  >> val friendshipLevel = adversary.determineFriendshipLevel()
  >> println(friendshipLevel.toLowerCase())
 }
@@ -5089,7 +5089,7 @@ public class Jhava {
     public String utterGreeting() {
         return "BLARGH";
     }
-    
+
     @Nullable
     public String determineFriendshipLevel() {
         return null;
@@ -5105,9 +5105,9 @@ public class Jhava {
 fun main(args: Array<String>) {
     val adversary = Jhava()
     println(adversary.utterGreeting())
-    
+
     val friendshipLevel = adversary.determineFriendshipLevel()
-    println(friendshipLevel?.toLowerCase()) 
+    println(friendshipLevel?.toLowerCase())
 }
 ```
 
@@ -5118,7 +5118,7 @@ fun main(args: Array<String>) {
     println(adversary.utterGreeting())
 
     val friendshipLevel = adversary.determineFriendshipLevel()
-    println(friendshipLevel?.toLowerCase() ?: "It's complicated.") 
+    println(friendshipLevel?.toLowerCase() ?: "It's complicated.")
 }
 ```
 
@@ -5147,14 +5147,14 @@ Kotlin's types often correspond one to one with Java types. A String in Kotlin i
 ### Listing 20.10 Declaring an int in Java (Jhava.java)
 ```kotlin
 public class Jhava {
-    
+
     public int hitPoints = 52489112;
-    
+
     @NotNull
     public String utterGreeting() {
         return "BLARGH";
     }
-    
+
     @Nullable
     public String determineFriendshipLevel() {
         return null;
@@ -5167,10 +5167,10 @@ public class Jhava {
 fun main(args: Array<String>) {
     val adversary = Jhava()
     println(adversary.utterGreeting())
-    
+
     val friendshipLevel = adversary.determineFriendshipLevel()\
     println(friendshipLevel?.toLowerCase() ?: "It's complicated.")
-    
+
     val adversaryHitPoints: Int = adversary.hitPoints
 }
 
@@ -5221,15 +5221,15 @@ public class Jhava {
     ...
     @NotNull
     public String utterGreeting() {
-        return greeting; 
+        return greeting;
     }
-    
+
     ...
-    
+
 >>  public String getGreeting() {
 >>      return greeting;
 >>  }
-  
+
 >>  public void setGreeting(String greeting) {
 >>      this.greeting = greeting;
 >>  }
@@ -5243,7 +5243,7 @@ fun main(args: Array<String>) {
     val adversaryHitPoints: Int = adversary.hitPoints
     println(adversaryHitPoints.dec())
     println(adversaryHitPoints.javaClass)
- 
+
 >>  adversary.greeting = "Hello, Hero."
 >>  println(adversary.utterGreeting())
 }
@@ -5257,7 +5257,7 @@ Kotlin affords developers greater flexibility with respect to the format of the 
 ### Listing 20.17 Declaring a top-level function in kotlin (Kotlin.kt)
 ```kotlin
 fun main(args: Array<String>) {
-    ... 
+    ...
 }
 
 fun makeProclamation() = "Greetings, beast!"
@@ -5266,7 +5266,7 @@ fun makeProclamation() = "Greetings, beast!"
 You will need a way to invoke this function from Java, so add a main method to Jhava.
 
 ### Listing 20.18 Defining a main methos in java (Jhava.java)
-```kotlin 
+```kotlin
 public class Jhava {
     private int hitPoints = 52489112;
     private String greeting = "BLARGH";
@@ -5275,7 +5275,7 @@ public class Jhava {
 
     }
 
-    ... 
+    ...
 
 }
 ```
@@ -5287,7 +5287,7 @@ public class Jhava {
     public static void main(String[] args) {
 >>      System.out.println(HeroKt.makeProclamation());
     }
-    ... 
+    ...
 }
 ```
 
@@ -5298,7 +5298,7 @@ If you would like Hero.kt and Jhava.java to interoperate a bit more fluidly, you
 >>  @file:JvmName("Hero")
 
     fun main(args: Array<String>) {
-        ... 
+        ...
     }
 ```
 
@@ -5309,9 +5309,9 @@ Now, in Jhava, you can reference the makePlocamation function more cleanly
 public class Jhava {
     ...
     public static void main(String[] args) {
-        System.out.println(Hero.makeProclamation()); 
+        System.out.println(Hero.makeProclamation());
     }
-    ... 
+    ...
 }
 ```
 
@@ -5365,7 +5365,7 @@ fun main(args: Array<String>) {
     ...
     adversary.greeting = "Hello, Hero."
     println(adversary.utterGreeting())
-    
+
     adversary.offerFood()
 }
 
@@ -5430,7 +5430,7 @@ public String utterGreeting() {
 class Spellbook {
     @JvmField
     val spells = listOf("Magic Ms. L", "Lay on Hans")
- 
+
     companion object {
         val MAX_SPELL_COUNT = 10
     }
@@ -5449,7 +5449,7 @@ public static void main(String[] args) {
     for (String spell : spellbook.spells) {
         System.out.println(spell);
     }
-    
+
     System.out.println("Max spell count: " + Spellbook.MAX_SPELL_COUNT);
 } ...
 ```
@@ -5460,13 +5460,12 @@ public static void main(String[] args) {
 class Spellbook {
     @JvmField
     val spells = listOf("Magic Ms. L", "Lay on Hans")
-    
+
     companion object {
         @JvmField
         val MAX_SPELL_COUNT = 10
     }
 }
-
 ```
 
 

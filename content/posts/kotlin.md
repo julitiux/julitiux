@@ -5486,6 +5486,27 @@ class Spellbook {
     }
 }
 ```
+Now, invoke gteSpellbookGreeting in Jhava.java
+
+### Listing 20.33 Invoking a static method in java (Jhava.java)
+```kotlin
+...
+public static void main(String[] args) {
+    System.out.println(Hero.makeProclamation());
+
+    System.out.println("Spells:");
+    Spellbook spellbook = new Spellbook();
+    for (String spell : spellbook.spells) {
+        System.out.println(spell);
+    }
+
+    System.out.println("Max spell count: " + Spellbook.MAX_SPELL_COUNT);
+
+    Spellbook.getSpellbookGreeting();
+}
+...
+```
+
 
 
 

@@ -22,4 +22,6 @@ In this mode you can access press the `:` key. This mode you can add different c
 In this mode you can access press the `v` key. In this mode, you can select text whit the cursor and you can apply commands just for drive it.
 
 5. Select
+In this mode you can acces press the `Ctrl-G`. Has a similar behavior to the visual mode, except that when writing we will not carry out commands.
+
 6. Ex

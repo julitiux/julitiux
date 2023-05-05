@@ -70,8 +70,30 @@ Change what is inside the quotes
 ```code
 ci" - change inside quote
 ```
+Change anything up to 'foo'
+```code
+c/foo - change search foo
+```
 Change everything up to the letter X
 ```code
 ctX - change till X
 ```
 
+When we have finished editing the file, in `normal` mode:
+
+__save__
+```code
+:w
+```
+__exit__
+```code
+:q
+```
+__save and exit__
+```code
+:wq
+```
+__exit without save the changes__
+```code
+:q!
+```

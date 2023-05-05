@@ -5631,6 +5631,25 @@ public class Jhava {
 }
 ```
 
+You will be need to import `kotlin.Unit`; be sure to choose the option from the Kotlin standard library. Even you will also need to import `kotlin.jvm.functions.Function1`
+
+The function type is of type `Function<String, Unit>`, `Function1` is the vase type because transaltor has exactly one parameter. String and Unit are used as type parameters because the type of translato's paramter is String and it returns the Kotlin type Unit.
+
+There are 23 of these `Function` interfaces, ranging from `Function0` to `Function22`
+
+### Listing 20.42 Calling a function type in java (Jhava.java)
+```kotlin
+public class Jhava {
+    ...
+    public static void main(String[] args) {
+        ...
+        Function1<String, Unit> translator = Hero.getTranslator();
+        translator.invoke("TRUCE");
+    }
+}
+```
+
+
 
 
 

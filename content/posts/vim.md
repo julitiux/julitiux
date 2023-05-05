@@ -38,3 +38,11 @@ Verbs
 * c - change
 * d - delete
 * y - yank, copy
+
+Modifier
+* i - inside
+* a - around
+* t - till
+* f - find
+* / - search
+

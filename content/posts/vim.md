@@ -13,6 +13,8 @@ draft: false
 Vim start in normal mode, this is the central mode. You can change to another modes beginning in normal mode. Press the `Esc` key always turn normal mode.
 
 2. Insert
+In this mode you can add text. You can add text press the `i` key. There are another commands that turn the insert mode..
+
 3. Command
 4. Visual
 5. Select

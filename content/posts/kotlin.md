@@ -5606,7 +5606,7 @@ class Spellbook {
 ## Function Types in Java
 Function types and anonymous functions are novel inclusion in the Kotlin programming languages that provide a streamlined syntax for communication between componentes. Their concise syntax is made possible vie the -> operator, nut lambdas are not supported in versions of Java prior to Java 8.
 
-## Listing 20.40 Defining the translator function type (Hero.kt)
+### Listing 20.40 Defining the translator function type (Hero.kt)
 ```kotlin
 fun main(args: Array<String>) {
     ...
@@ -5618,7 +5618,18 @@ val translator = { utterance: String ->
 
 fun makeProclamation() = "Greetings, beast!"
 ```
+### Listing 20.41  Storing a function type in a variable in Java (Jhava.java)
+```kotlin
+public class Jhava {
+    ...
+    public static void main(String[] args) {
+        ...
+        Spellbook.getSpellbookGreeting();
 
+        Function1<String, Unit> translator = Hero.getTranslator();
+    }
+}
+```
 
 
 

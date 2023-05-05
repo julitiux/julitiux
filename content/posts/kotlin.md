@@ -5603,6 +5603,8 @@ class Spellbook {
     ...
 }
 ```
+## Function Types in Java
+Function types and anonymous functions are novel inclusion in the Kotlin programming languages that provide a streamlined syntax for communication between componentes. Their concise syntax is made possible vie the -> operator, nut lambdas are not supported in versions of Java prior to Java 8.
 
 
 

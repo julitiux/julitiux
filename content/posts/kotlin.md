@@ -5503,8 +5503,25 @@ public static void main(String[] args) {
     System.out.println("Max spell count: " + Spellbook.MAX_SPELL_COUNT);
 
     Spellbook.getSpellbookGreeting();
+} ...
+```
+
+Although statics do not exist in kotlin, many commonly used patters compile down to static variables and methods. Employing the @JvmStatic annotation gives you great controlhow Java developers interface with your code.
+
+## Exceptions and Interoperability
+
+### Listing 20.34 Throwing an exception in java (Jhava.java)
+```kotlin
+public class Jhava {
+    ...
+    public void offerFood() {
+        Hero.handOverFood("pizza");
+    }
+
+    public void extendHandInFriendship() throws Exception {
+        throw new Exception();
+    }
 }
-...
 ```
 
 

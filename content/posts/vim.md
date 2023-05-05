@@ -62,7 +62,16 @@ Delete the word where the cursor is
 ```code
 diw - delete inside word
 ```
-Change the sentense you are in
+Change the sentense you are on
 ```code
 cis - change inside sentence
 ```
+Change what is inside the quotes
+```code
+ci" - change inside quote
+```
+Change everything up to the letter X
+```code
+ctX - change till X
+```
+

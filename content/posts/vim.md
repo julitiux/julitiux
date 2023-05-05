@@ -19,5 +19,7 @@ In this mode you can add text. You can add text press the `i` key. There are ano
 In this mode you can access press the `:` key. This mode you can add different commands like save, open, find, replace words with regrex between Files.
 
 4. Visual
+In this mode you can access press the `v` key. In this mode, you can select text whit the cursor and you can apply commands just for drive it.
+
 5. Select
 6. Ex

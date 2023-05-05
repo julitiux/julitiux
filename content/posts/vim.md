@@ -46,3 +46,9 @@ Modifier
 * f - find
 * / - search
 
+Onjects
+* w - word
+* s - sentence
+* p - paragraph
+* b - block
+* t - tag (html)

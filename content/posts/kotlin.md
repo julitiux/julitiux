@@ -5559,6 +5559,25 @@ fun makeProclamation() = "Greetings, beast!"
 ...
 ```
 
+### Listing 20.37 Throwing an unchecked excpetion (Hero.kt)
+```kotlin
+...
+@JvmOverloads
+fun handOverFood(leftHand: String = "berries", rightHand: String = "beef") {
+    println("Mmmm... you hand over some delicious $leftHand and $rightHand.")
+}
+
+fun acceptApology() {
+    throw IOException()
+}
+
+class Spellbook {
+    ...
+}
+```
+
+You will need to import java.io.IOException.
+
 
 
 

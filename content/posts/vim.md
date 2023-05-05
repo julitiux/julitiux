@@ -34,7 +34,7 @@ Using vim is a different experience than usgin any other code editor. You have t
 `verb - modifier - object`
 
 Verbs
-* v - visula
+* v - visual
 * c - change
 * d - delete
 * y - yank, copy
@@ -46,9 +46,23 @@ Modifier
 * f - find
 * / - search
 
-Onjects
+Objects
 * w - word
 * s - sentence
 * p - paragraph
 * b - block
 * t - tag (html)
+
+## Let's talk vim
+Now that we are in normal mode we can talk to vim.
+
+You don't press everything at once you do it letter by letter.
+
+Delete the word where the cursor is
+```code
+diw - delete inside word
+```
+Change the sentense you are in
+```code
+cis - change inside sentence
+```

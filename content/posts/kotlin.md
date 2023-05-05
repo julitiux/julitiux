@@ -5591,7 +5591,18 @@ public class Jhava {
     }
 }
 ```
+### Listing 20.39 Using the @Throws annotation (Hero.kt)
+```kotlin
+...
+@Throws(IOException::class)
+fun acceptApology() {
+    throw IOException()
+}
 
+class Spellbook {
+    ...
+}
+```
 
 
 

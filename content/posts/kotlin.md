@@ -5540,6 +5540,26 @@ fun makeProclamation() = "Greetings, beast!"
 ...
 ```
 
+## Listing 20.36 Handling exceptions using try/catch (Hero.kt)
+```kotlin
+@file:JvmName("Hero")
+
+fun main(args: Array<String>) {
+    ...
+    adversary.offerFood()
+
+    try {
+        adversary.extendHandInFriendship()
+    } catch (e: Exception) {
+        println("Begone, foul beast!")
+    }
+}
+
+fun makeProclamation() = "Greetings, beast!"
+...
+```
+
+
 
 
 

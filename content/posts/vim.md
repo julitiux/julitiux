@@ -25,3 +25,4 @@ In this mode you can access press the `v` key. In this mode, you can select text
 In this mode you can acces press the `Ctrl-G`. Has a similar behavior to the visual mode, except that when writing we will not carry out commands.
 
 6. Ex
+This mode is similar to command mode, with the difference that after executing it does not return to normal mode. Tou enter by press `Q` key and exit

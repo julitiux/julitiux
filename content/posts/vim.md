@@ -16,6 +16,8 @@ Vim start in normal mode, this is the central mode. You can change to another mo
 In this mode you can add text. You can add text press the `i` key. There are another commands that turn the insert mode..
 
 3. Command
+In this mode you can access press the `:` key. This mode you can add different commands like save, open, find, replace words with regrex between Files.
+
 4. Visual
 5. Select
 6. Ex

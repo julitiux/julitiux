@@ -5576,7 +5576,21 @@ class Spellbook {
 }
 ```
 
-You will need to import java.io.IOException.
+You will need to import java.io.IOException and call accept Apology from Jhava.java
+
+### Listing 20.38 Throwing an exception in java (Jhava.java)
+```kotlin
+public class Jhava {
+    ...
+    public void apologize() {
+        try {
+            Hero.acceptApology();
+        } catch (IOException e) {
+            System.out.println("Caught!");
+        }
+    }
+}
+```
 
 
 

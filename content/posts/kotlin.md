@@ -5649,6 +5649,10 @@ public class Jhava {
 }
 ```
 
+While function types are useful in Kotlinm be mindful of how theu are represented in Java. The concise, fluid syntaxis that you have grown fond of in Kotlin is quite different when called from Java.
+
+Interoperability between Kotlin and Java is the foundation of Kotlin's growth trajectory. It provides Kotlin with the ability to leverage existing frameworks, such as Android, and to interface with legacy codebases, giving you a path to gradually introduce Kotlin in your projects.
+
 
 
 

@@ -5523,6 +5523,22 @@ public class Jhava {
     }
 }
 ```
+Invoke the method in Hero.kt
+
+### Listing 20.35 Invoking a method that throws and exception (Hero.kt)
+```kotlin
+@file:JvmName("Hero")
+
+fun main(args: Array<String>) {
+    ...
+    adversary.offerFood()
+
+    adversary.extendHandInFriendship()
+}
+
+fun makeProclamation() = "Greetings, beast!"
+...
+```
 
 
 

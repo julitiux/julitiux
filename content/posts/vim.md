@@ -97,3 +97,10 @@ __exit without save the changes__
 ```code
 :q!
 ```
+
+2. Edit the vim style
+Create a file and add the next command:
+
+```code
+set nocompatible filetype plugin on syntax on
+```

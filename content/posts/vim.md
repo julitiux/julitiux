@@ -148,9 +148,13 @@ u
 Ctrl-R
 ```
 ## Essential commands.
-### First line
+### first line of document
 ```code
 gg
+```
+### last line of document
+```code
+G
 ```
 
 

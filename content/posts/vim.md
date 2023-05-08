@@ -172,3 +172,11 @@ e / E
 ```code
 w / W
 ```
+### begin of the word
+```code
+b / B
+```
+### begin and end of the sentence
+```code
+{ - }
+```

@@ -180,3 +180,7 @@ b / B
 ```code
 { - }
 ```
+### yank, copy
+```code
+y
+```

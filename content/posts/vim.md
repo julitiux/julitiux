@@ -188,3 +188,11 @@ y
 ```code
 p
 ```
+### find
+```code
+f / F
+```
+### till
+```code
+t / T
+```

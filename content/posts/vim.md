@@ -148,6 +148,14 @@ u
 Ctrl-R
 ```
 ## Essential commands.
+### First line
+```code
+gg
+```
+
+
+
+
 ### end to the word
 ```code
 e / E

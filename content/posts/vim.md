@@ -143,3 +143,8 @@ Normal mode is a rest state.
 u
 ```
 
+### redo
+```code
+Ctrl-R
+```
+

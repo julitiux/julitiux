@@ -109,3 +109,8 @@ The command:
 dd - its used to delete a line.
 ```
 later, press the dot command, you can keep the same behavior from delete a line. This is the function of dot command; repeat the behavior of the las command.
+
+## Indent a line
+```code
+>>
+```

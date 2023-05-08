@@ -164,9 +164,6 @@ G
 ```code
 $
 ```
-
-
-
 ### end to the word
 ```code
 e / E

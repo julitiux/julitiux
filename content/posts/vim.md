@@ -196,3 +196,11 @@ f / F
 ```code
 t / T
 ```
+### add a number
+```code
+Ctrl-a
+```
+### rest a number
+```code
+Ctrl-x
+```

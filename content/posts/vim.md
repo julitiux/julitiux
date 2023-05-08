@@ -147,4 +147,8 @@ u
 ```code
 Ctrl-R
 ```
-
+## Essential commands.
+### end to the word
+```code
+e / E
+```

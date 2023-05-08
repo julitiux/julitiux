@@ -152,3 +152,7 @@ Ctrl-R
 ```code
 e / E
 ```
+### end to the word
+```code
+w / W
+```

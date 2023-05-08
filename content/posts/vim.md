@@ -160,7 +160,10 @@ G
 ```code
 0
 ```
-
+### ending of the sentence
+```code
+$
+```
 
 
 

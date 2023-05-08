@@ -98,6 +98,14 @@ __exit without save the changes__
 :q!
 ```
 
-2. Edit the vim style
+# 2. Edit the vim style
 First, create a file `.vimrc`
 
+## Know the power of the dot command
+The dot command allow us repeat the last change.
+
+The command:
+```code
+dd - its used to delete a line.
+```
+later, press the dot command, you can keep the same behavior from delete a line. This is the function of dot command; repeat the behavior of the las command.

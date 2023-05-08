@@ -102,15 +102,18 @@ __exit without save the changes__
 First, create a file `.vimrc`
 
 ## Know the power of the dot command
-The dot command allow us repeat the last change.
-
-The command:
+### dot command
 ```code
-dd - its used to delete a line.
+.
 ```
-later, press the dot command, you can keep the same behavior from delete a line. This is the function of dot command; repeat the behavior of the las command.
+The dot command allow us repeat the last change. Later, press the dot command, you can keep the same behavior from delete a line. This is the function of dot command; repeat the behavior of the las command.
 
-## Indent a line
+### Delete a line
+```code
+dd
+```
+
+### Indent a line
 ```code
 >>
 ```

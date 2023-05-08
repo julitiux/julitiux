@@ -184,3 +184,7 @@ b / B
 ```code
 y
 ```
+### paste
+```code
+p
+```

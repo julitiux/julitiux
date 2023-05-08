@@ -132,3 +132,9 @@ A
 ```code
 <esc>
 ```
+
+# 3. Normal mode.
+Normal mode is a rest state.
+
+## Regulate how you undo your changes.
+

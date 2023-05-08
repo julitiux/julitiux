@@ -138,3 +138,8 @@ Normal mode is a rest state.
 
 ## Regulate how you undo your changes.
 
+### undo
+```code
+u
+```
+

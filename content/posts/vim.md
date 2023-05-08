@@ -106,7 +106,7 @@ First, create a file `.vimrc`
 ```code
 .
 ```
-The dot command allow us repeat the last change. Later, press the dot command, you can keep the same behavior from delete a line. This is the function of dot command; repeat the behavior of the las command.
+The dot command allow us repeat the last change. Press the dot command, you can keep the same behavior from delete a line.
 
 ### Delete a line
 ```code
@@ -116,4 +116,19 @@ dd
 ### Indent a line
 ```code
 >>
+```
+
+### Go to the end of the line without edit
+```code
+$
+```
+
+### Go to the end of the line with edit
+```code
+A
+```
+
+### Exit the insert mode to normal pressing the <esc> key
+```code
+<esc>
 ```

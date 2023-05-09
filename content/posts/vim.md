@@ -212,4 +212,7 @@ Ctrl-x
 ```code
 daw
 ```
-
+### Center the content where the cursor is present.
+```code
+zz
+```

@@ -224,3 +224,7 @@ Ctrl-v{code}
 ```code
 ga
 ```
+### Insert special character decimal (insert mode)
+```code
+Ctrl-v u[code]
+```

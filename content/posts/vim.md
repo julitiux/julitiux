@@ -237,4 +237,11 @@ R
 ```code
 r
 ```
-
+### Delete a character and kept in insert mode
+```code
+s
+```
+### fix the capitalization of a character
+```code
+option-ñ
+```

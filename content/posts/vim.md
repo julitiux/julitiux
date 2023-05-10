@@ -218,7 +218,7 @@ zz
 ## Insert special characters
 ### insert special chatacter (insert mode)
 ```code
-Ctrl-v{code}
+Ctrl-v {code}
 ```
 ### how to know the code of special caracter
 ```code
@@ -226,5 +226,10 @@ ga
 ```
 ### Insert special character decimal (insert mode)
 ```code
-Ctrl-v u[code]
+Ctrl-v u{code}
+```
+## Overwrite text with replace mode
+### Replace the following characters until you press <esc>
+```code
+R
 ```

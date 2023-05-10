@@ -207,7 +207,6 @@ Ctrl-x
 
 # 4. Insert mode
 ## Make corrections instantly from Insert mode
-
 ### Delete around word
 ```code
 daw
@@ -215,4 +214,13 @@ daw
 ### Center the content where the cursor is present.
 ```code
 zz
+```
+## Insert special characters
+### insert special chatacter (insert mode)
+```code
+Ctrl-v{code}
+```
+### how to know the code of special caracter
+```code
+ga
 ```

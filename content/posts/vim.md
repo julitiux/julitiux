@@ -245,3 +245,6 @@ s
 ```code
 option-ñ
 ```
+
+# 5. visual mode
+The visual mode resembles the text selection in other code editors. But in this case we eill select text and execute actions on it.

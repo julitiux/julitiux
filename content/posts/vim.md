@@ -233,3 +233,8 @@ Ctrl-v u{code}
 ```code
 R
 ```
+### Replace just a caracters
+```code
+r
+```
+

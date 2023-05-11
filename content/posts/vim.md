@@ -258,3 +258,8 @@ The visula mode has three variants of selections:
 ```code
 v
 ```
+In visual mode you can use the command for to seleect the text like:
+### in visual mode. find until letter
+```code
+f{letter}
+```

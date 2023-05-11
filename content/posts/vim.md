@@ -272,3 +272,7 @@ f{letter}
 ```code
 c
 ```
+### visual-lineal mode
+```code
+Ctrl-v
+```

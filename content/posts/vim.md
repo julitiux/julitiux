@@ -268,3 +268,7 @@ f{letter}
 ```code
 ; / ,
 ```
+### replace all the text selected and deleted it, on visual mode
+```code
+c
+```

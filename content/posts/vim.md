@@ -301,11 +301,14 @@ In command mode you can access `find mode`, this mode is specialized in searches
 /
 ```
 some commands.
-###
+
+### delete the specified lines
 ```code
+:[range]d[elete]
 ```
-###
+### copy lines
 ```code
+:[range]y[ank]
 ```
 ###
 ```code

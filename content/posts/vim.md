@@ -288,3 +288,7 @@ U
 ```code
 u
 ```
+### convert text to uppercase/lowercase (in visual mode)
+```code
+~
+```

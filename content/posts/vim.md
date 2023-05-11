@@ -248,3 +248,13 @@ option-ñ
 
 # 5. visual mode
 The visual mode resembles the text selection in other code editors. But in this case we eill select text and execute actions on it.
+
+The visula mode has three variants of selections:
+* by characteres and words
+* by complete lines
+* by rectangular blocks of text
+
+### to enter the visual mode
+```code
+v
+```

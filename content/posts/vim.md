@@ -276,3 +276,7 @@ c
 ```code
 V
 ```
+### visual-block mode
+```code
+Ctrl-v
+```

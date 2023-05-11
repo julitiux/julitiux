@@ -292,3 +292,6 @@ u
 ```code
 ~
 ```
+
+# 6. command mode
+The fundamental is know is that to enter vim's command mode have to press `:`

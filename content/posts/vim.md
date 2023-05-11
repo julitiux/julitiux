@@ -284,3 +284,7 @@ Ctrl-v
 ```code
 U
 ```
+### convert text to lowercase (in visual mode)
+```code
+u
+```

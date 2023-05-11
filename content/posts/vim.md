@@ -274,5 +274,5 @@ c
 ```
 ### visual-lineal mode
 ```code
-Ctrl-v
+V
 ```

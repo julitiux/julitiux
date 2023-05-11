@@ -280,3 +280,7 @@ V
 ```code
 Ctrl-v
 ```
+### convert text to uppercase (in visual mode)
+```code
+U
+```

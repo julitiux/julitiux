@@ -263,3 +263,8 @@ In visual mode you can use the command for to seleect the text like:
 ```code
 f{letter}
 ```
+
+### repeat the `find`
+```code
+; / ,
+```

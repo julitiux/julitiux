@@ -295,3 +295,57 @@ u
 
 # 6. command mode
 The fundamental is know is that to enter vim's command mode have to press `:`
+
+In command mode you can access `find mode`, this mode is specialized in searches
+```code
+/
+```
+some commands.
+###
+```code
+```
+###
+```code
+```
+###
+```code
+```
+###
+```code
+```
+###
+```code
+```
+###
+```code
+```
+###
+```code
+```
+###
+```code
+```
+###
+```code
+```
+###
+```code
+```
+###
+```code
+```
+###
+```code
+```
+###
+```code
+```
+###
+```code
+```
+###
+```code
+```
+###
+```code
+```

@@ -408,12 +408,13 @@ V
 G
 :'<,'> norm .
 ```
-### move current line before line 1
+### move current line after line 1
 ```code
 :.,m0
 ```
-###
+### copy the line 4 before to line 9
 ```code
+:4t9
 ```
 ###
 ```code

@@ -428,9 +428,7 @@ G
 ```code
 :![command's shell]
 ```
-###
+### repeat the last command in normal mode
 ```code
-```
-###
-```code
+@:
 ```

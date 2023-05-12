@@ -382,12 +382,13 @@ some commands.
 ```
 
 ## Perfect for practicing ranges
-### show the line 5
+### show the line five
 ```code
 :5p
 ```
-###
+### show the content of lines between two and ten
 ```code
+:2,10p
 ```
 ###
 ```code

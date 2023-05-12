@@ -338,8 +338,9 @@ some commands.
 ```code
 :[range]s[ubstitute]/{pattern}/{string}/[flags]
 ```
-###
+### execute a command on the each specified line that matches the seach {pattern}
 ```code
+:[range]g[lobal]/{pattern}/[command]
 ```
 ###
 ```code

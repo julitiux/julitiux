@@ -416,8 +416,9 @@ G
 ```code
 :4t9
 ```
-###
+### replace the word `Madrid` by `Bilbao` in the whole file
 ```code
+:%s/Madrid/Bilbao
 ```
 ###
 ```code

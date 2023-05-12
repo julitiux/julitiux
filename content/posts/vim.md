@@ -330,8 +330,9 @@ some commands.
 ```code
 :[range]j[oin]
 ```
-###
+### Execute commands in the normal mode on the specified lines
 ```code
+:[range]norm[al]{command}
 ```
 ###
 ```code

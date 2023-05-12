@@ -362,10 +362,11 @@ some commands.
 ```
 ### previous line of the first line
 ```code
-:0
+:1
 ```
-###
+### line where the cursos is located
 ```code
+:.
 ```
 ###
 ```code

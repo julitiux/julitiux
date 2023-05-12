@@ -360,8 +360,9 @@ some commands.
 ```code
 :$
 ```
-###
+### previous line of the first line
 ```code
+:0
 ```
 ###
 ```code

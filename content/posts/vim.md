@@ -334,8 +334,9 @@ some commands.
 ```code
 :[range]norm[al]{command}
 ```
-###
+### Replace occurrences of {pattern} with {string} on each specified line
 ```code
+:[range]s[ubstitute]/{pattern}/{string}/[flags]
 ```
 ###
 ```code

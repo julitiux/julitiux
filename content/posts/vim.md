@@ -424,8 +424,9 @@ G
 ```code
 :shell
 ```
-###
+### execute a command in the shell
 ```code
+:![command's shell]
 ```
 ###
 ```code

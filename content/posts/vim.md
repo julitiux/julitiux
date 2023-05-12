@@ -316,14 +316,15 @@ some commands.
 ```
 ### copy lines below the address
 ```code
-:[range]m[ove]{direction}
+:[range]c[opy]{direction}
 ```
 ### copy lines below the addres with :t
 ```code
 :t
 ```
-###
+### move specified lines in the chosen direction.
 ```code
+:[range]m[ove]{direction}
 ```
 ###
 ```code

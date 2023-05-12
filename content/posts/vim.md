@@ -394,12 +394,7 @@ some commands.
 ```code
 :.,+3p
 ```
-###
+### show the current visual selection
 ```code
-```
-###
-```code
-```
-###
-```code
+:'<,'>p
 ```

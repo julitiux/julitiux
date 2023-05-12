@@ -330,11 +330,11 @@ some commands.
 ```code
 :[range]j[oin]
 ```
-### Execute commands in the normal mode on the specified lines
+### execute commands in the normal mode on the specified lines
 ```code
 :[range]norm[al]{command}
 ```
-### Replace occurrences of {pattern} with {string} on each specified line
+### replace occurrences of {pattern} with {string} on each specified line
 ```code
 :[range]s[ubstitute]/{pattern}/{string}/[flags]
 ```
@@ -342,8 +342,9 @@ some commands.
 ```code
 :[range]g[lobal]/{pattern}/[command]
 ```
-###
+### show us the range, just for practicing
 ```code
+:[range]p[rint]
 ```
 ###
 ```code

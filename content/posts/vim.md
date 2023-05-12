@@ -318,8 +318,9 @@ some commands.
 ```code
 :[range]m[ove]{direction}
 ```
-###
+### copy lines below the addres with :t
 ```code
+:t
 ```
 ###
 ```code

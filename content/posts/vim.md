@@ -390,8 +390,9 @@ some commands.
 ```code
 :2,10p
 ```
-###
+### show the current line and three more down
 ```code
+:.,+3p
 ```
 ###
 ```code

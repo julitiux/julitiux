@@ -408,3 +408,25 @@ V
 G
 :'<,'> norm .
 ```
+### move current line before line 1
+```code
+:.,m0
+```
+###
+```code
+```
+###
+```code
+```
+###
+```code
+```
+###
+```code
+```
+###
+```code
+```
+###
+```code
+```

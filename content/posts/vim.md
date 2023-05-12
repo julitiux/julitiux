@@ -376,8 +376,9 @@ some commands.
 ```code
 :'<,'>
 ```
-###
+### the whole file
 ```code
+:%
 ```
 ###
 ```code

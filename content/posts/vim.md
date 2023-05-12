@@ -372,8 +372,9 @@ some commands.
 ```code
 :'m
 ```
-###
+### if we select some lines in visual mode and press `:` the next range will be created
 ```code
+:'<,'>
 ```
 ###
 ```code

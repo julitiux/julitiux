@@ -368,8 +368,9 @@ some commands.
 ```code
 :.
 ```
-###
+### line containing the mark
 ```code
+:'m
 ```
 ###
 ```code

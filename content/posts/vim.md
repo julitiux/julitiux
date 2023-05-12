@@ -356,8 +356,9 @@ some commands.
 ```code
 :1
 ```
-###
+### last line of file
 ```code
+:$
 ```
 ###
 ```code

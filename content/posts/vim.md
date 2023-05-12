@@ -346,18 +346,7 @@ some commands.
 ```code
 :[range]p[rint]
 ```
-###
+### detail information of each command
 ```code
-```
-###
-```code
-```
-###
-```code
-```
-###
-```code
-```
-###
-```code
+:h
 ```

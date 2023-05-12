@@ -326,8 +326,9 @@ some commands.
 ```code
 :[range]m[ove]{direction}
 ```
-###
+### join lines
 ```code
+:[range]j[oin]
 ```
 ###
 ```code

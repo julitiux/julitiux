@@ -310,11 +310,13 @@ some commands.
 ```code
 :[range]y[ank]
 ```
-###
+### paste lines
 ```code
+:[line]put
 ```
-###
+### copy lines below the address
 ```code
+:[range]m[ove]{direction}
 ```
 ###
 ```code

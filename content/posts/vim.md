@@ -398,3 +398,13 @@ some commands.
 ```code
 :'<,'>p
 ```
+
+## Now some exercies
+### put semicolon in the whole file
+```code
+A;<esc> (normal mode)
+gg
+V
+G
+:'<,'> norm .
+```

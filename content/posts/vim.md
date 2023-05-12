@@ -420,8 +420,9 @@ G
 ```code
 :%s/Madrid/Bilbao
 ```
-###
+### execute a command in the shell, exit to return to vim
 ```code
+:shell
 ```
 ###
 ```code

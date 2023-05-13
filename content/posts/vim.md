@@ -440,5 +440,9 @@ A file is saved on disk while a buffer is saved on memory
 ```code
 :ls
 ```
-`#` previous buffer
-`%` current buffer
+- `#` previous buffer
+- `%` current buffer
+### open the next buffer
+```code
+:bn[ext]
+```

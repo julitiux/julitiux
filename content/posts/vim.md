@@ -432,3 +432,7 @@ G
 ```code
 @:
 ```
+# 7. Edit multiple files
+## Buffer's list
+A file is saved on disk while a buffer is saved on memory
+

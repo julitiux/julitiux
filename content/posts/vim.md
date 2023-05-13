@@ -462,3 +462,7 @@ A file is saved on disk while a buffer is saved on memory
 ```code
 bd[elete] [buffer]
 ```
+### show a list using arguments
+```code
+:args **/*.md
+```

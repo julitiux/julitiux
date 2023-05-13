@@ -474,3 +474,7 @@ bd[elete] [buffer]
 ```code
 :w[rite]a[all]
 ```
+### exit all files without save
+```code
+:!q[uit]a[all]
+```

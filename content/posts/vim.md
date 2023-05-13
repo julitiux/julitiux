@@ -454,3 +454,7 @@ A file is saved on disk while a buffer is saved on memory
 ```code
 :bf[irst]
 ```
+### open last buffer
+```code
+:bl[ast]
+```

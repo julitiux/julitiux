@@ -446,3 +446,7 @@ A file is saved on disk while a buffer is saved on memory
 ```code
 :bn[ext]
 ```
+### open the previous buffer
+```code
+:bp[revious]
+```

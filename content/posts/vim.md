@@ -458,3 +458,7 @@ A file is saved on disk while a buffer is saved on memory
 ```code
 :bl[ast]
 ```
+### remove buffer from list, does not remove file
+```code
+bd[elete] [buffer]
+```

@@ -442,11 +442,15 @@ A file is saved on disk while a buffer is saved on memory
 ```
 - `#` previous buffer
 - `%` current buffer
-### open the next buffer
+### open next buffer
 ```code
 :bn[ext]
 ```
-### open the previous buffer
+### open previous buffer
 ```code
 :bp[revious]
+```
+### open first buffer
+```code
+:bf[irst]
 ```

@@ -470,3 +470,7 @@ bd[elete] [buffer]
 ```code
 :argdo [command]
 ```
+### save all files
+```code
+:w[rite]a[all]
+```

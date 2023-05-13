@@ -436,3 +436,7 @@ G
 ## Buffer's list
 A file is saved on disk while a buffer is saved on memory
 
+### show us a list of buffers
+```code
+:ls
+```

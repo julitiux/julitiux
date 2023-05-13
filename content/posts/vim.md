@@ -466,3 +466,7 @@ bd[elete] [buffer]
 ```code
 :args **/*.md
 ```
+### allow us execute a command on all the buffers in the list at once
+```code
+:argdo [command]
+```

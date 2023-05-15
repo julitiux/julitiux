@@ -482,3 +482,7 @@ bd[elete] [buffer]
 # 8. Panels and tabs
 ## Panels
  Vim called windows, when open vim, it has only one panel but we can split it both horizontally and vertically
+### divide the panel horizontally
+```code
+:sp[lit] {file}
+```

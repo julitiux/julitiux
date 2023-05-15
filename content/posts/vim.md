@@ -486,3 +486,7 @@ bd[elete] [buffer]
 ```code
 :sp[lit] {file}
 ```
+### divide the panel vertically
+```code
+:vsp[lit] {file}
+```

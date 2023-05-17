@@ -490,3 +490,9 @@ bd[elete] [buffer]
 ```code
 :vsp[lit] {file}
 ```
+## Moving between panels
+### Move between panels
+```code
+<Ctrl-w> w
+```
+

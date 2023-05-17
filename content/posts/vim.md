@@ -516,3 +516,8 @@ bd[elete] [buffer]
 <Ctrl-w> c
 :cl[ose]
 ```
+### keep the panel active and closing the other one
+```code
+<Ctrl-w> o
+:on[ly]
+```

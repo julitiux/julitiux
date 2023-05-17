@@ -521,3 +521,7 @@ bd[elete] [buffer]
 <Ctrl-w> o
 :on[ly]
 ```
+### equalize the height and width of the panels
+```code
+<Ctrl-w> =
+```

@@ -499,3 +499,7 @@ bd[elete] [buffer]
 ```code
 <Ctrl-w> left
 ```
+### go to down panel
+```code
+<Ctrl-w> down
+```

@@ -533,3 +533,8 @@ bd[elete] [buffer]
 ```code
 <Ctrl-w> |
 ```
+## Tabs
+### open a new tab
+```code
+:tabnew
+```

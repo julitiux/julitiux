@@ -511,3 +511,8 @@ bd[elete] [buffer]
 ```code
 <Ctrl-w> rigth
 ```
+### close a panel
+```code
+<Ctrl-w> c
+:cl[ose]
+```

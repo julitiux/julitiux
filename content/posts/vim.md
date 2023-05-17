@@ -546,4 +546,7 @@ bd[elete] [buffer]
 ```code
 :windo lcd {path}
 ```
-
+### move the current panel to a new tab
+```code
+<Ctrl-w> T
+```

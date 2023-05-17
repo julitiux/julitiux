@@ -503,3 +503,7 @@ bd[elete] [buffer]
 ```code
 <Ctrl-w> down
 ```
+### go to up panel
+```code
+<Ctrl-w> up
+```

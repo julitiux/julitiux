@@ -538,3 +538,7 @@ bd[elete] [buffer]
 ```code
 :tabnew
 ```
+### change the path (the forlder) where the panel points to.
+```code
+:lcd {path}
+```

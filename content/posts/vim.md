@@ -529,3 +529,7 @@ bd[elete] [buffer]
 ```code
 <Ctrl-w> _
 ```
+### maximize the width of the active panel
+```code
+<Ctrl-w> |
+```

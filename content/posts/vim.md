@@ -542,3 +542,8 @@ bd[elete] [buffer]
 ```code
 :lcd {path}
 ```
+### change the path where all the panels in a tab point to.
+```code
+:windo lcd {path}
+```
+

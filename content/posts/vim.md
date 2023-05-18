@@ -574,3 +574,7 @@ bd[elete] [buffer]
 ```code
 :tabn[ext]
 ```
+### previous tab
+```code
+:tabp[revious]
+```

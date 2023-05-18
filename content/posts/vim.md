@@ -566,3 +566,7 @@ bd[elete] [buffer]
 ```code
 :tabn[ext] {N}
 ```
+### go to tab {N}
+```code
+:tabn[ext] {N} gt
+```

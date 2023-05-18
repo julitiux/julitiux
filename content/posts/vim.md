@@ -550,3 +550,7 @@ bd[elete] [buffer]
 ```code
 <Ctrl-w> T
 ```
+### open a file in a new tab
+```code
+:tabe[dit] {file}
+```

@@ -582,3 +582,7 @@ bd[elete] [buffer]
 ```code
 :tabmove {N}
 ```
+### help about tabs
+```code
+:h tabpage
+```

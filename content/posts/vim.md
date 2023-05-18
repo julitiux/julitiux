@@ -558,3 +558,7 @@ bd[elete] [buffer]
 ```code
 :tabc[lose]
 ```
+### close all tabs except the active one
+```code
+:tabo[only]
+```

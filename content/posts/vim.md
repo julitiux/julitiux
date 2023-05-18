@@ -578,3 +578,7 @@ bd[elete] [buffer]
 ```code
 :tabp[revious]
 ```
+### move tab {N}
+```code
+:tabmove {N}
+```

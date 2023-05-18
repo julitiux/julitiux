@@ -554,3 +554,7 @@ bd[elete] [buffer]
 ```code
 :tabe[dit] {file}
 ```
+### close a tab
+```code
+:tabc[lose]
+```

@@ -562,3 +562,7 @@ bd[elete] [buffer]
 ```code
 :tabo[only]
 ```
+### go to tab {N}
+```code
+:tabn[ext] {N}
+```

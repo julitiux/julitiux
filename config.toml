@@ -1,73 +1,28 @@
 baseURL = "https://julitiux.github.io/"
 languageCode = "en-us"
 title = "Blogs"
-theme = "cayman-hugo-theme"
-
-# Google analytics
-googleAnalytics = "UA-123456789-1"
-
-# Disqus comments
-disqusShortname = "yourdiscussshortname"
-
-# Syntax highlighting
-pygmentsCodefences = true
-pygmentsStyle = "pygments"
-
-[taxonomies]
-  tag = "tags"
-
-[permalinks]
-  post = "/:filename/"
+theme = "paper"
 
 [params]
-  # Header text, can be markdown
-  project_name = "Julito's Blog"
-  project_tagline = "Try it again. ..."
+  # color style
+  color = "gray"                                    # linen, wheat, gray, light
 
-  # Date format for post list and single pages
-  # For more date formats see https://gohugo.io/functions/format/
-  #cdateFormat = "02 01 2006"
-  dateformat      = "Jan 2, 2006"
-  dateformShort   = "Jan 2"
-  dateformNum     = "2006-01-02"
-  dateformNumTime = "2006-01-02 15:04 -0700"
+  # header social icons
+  twitter = "julitiux"                               # twitter.com/YOUR_TWITTER_ID
+  github = "julitiux"                                # github.com/YOUR_GITHUB_ID
+  instagram = "julitiux"                             # instagram.com/YOUR_INSTAGRAM_ID
+  # mastodon = "YOUR_MASTODON_LINK"                  # e.g. 'https://mastodon.instance/@xxx'
+  # rss = true                                       # show rss icon
 
-  # Footer text, can be markdown
-  footer = "Made with [Hugo](https://gohugo.io/). Themed by [Cayman](https://github.com/zwbetz-gh/cayman-hugo-theme). Deployed to [Netlify](https://www.netlify.com/)."
+  # home page profile
+  avatar = "GRAVATAR_EMAIL"                          # gravatar email or image url
+  name = "Julitiux"
+  bio = "Make it work, make right, make it fast."
 
-  # If true, the CSS/JS for Katex math typesetting are enabled
-  katex = true
 
-  # Breakpoints
-  large_breakpoint = "64em"
-  medium_breakpoint = "42em"
-
-  # Header colors
-  header_heading_color = "#fff"
-  header_background_color = "#159957"
-  header_background_color_secondary = "#155799"
-
-  # Text colors
-  section_headings_color = "#159957"
-  body_text_color = "#606c71"
-  body_link_color = "#1e6bb8"
-  blockquote_text_color = "#819198"
-
-  # Code colors
-  code_background_color = "#f3f6fa"
-  code_text_color = "#567482"
-
-  # Border colors
-  border_color = "#dce6f0"
-  table_border_color = "#e9ebec"
-  hr_border_color = "#eff0f1"
-
-[menu]
-  [[menu.nav]]
-    name = "Blogs"
-    url = "/"
-    weight = 1
-  [[menu.nav]]
-    name = "About"
-    url = "/about/"
-    weight = 3
+  # misc
+  disableHLJS = true                                 # disable highlight.js
+  monoDarkIcon = true                                # show monochrome dark mode icon
+  gravatarCdn = "https://cdn.v2ex.com/gravatar/"     # e.g. 'https://cdn.v2ex.com/gravatar/'
+  # graphCommentId = "YOUR_GRAPH_COMMENT_ID"         # use graph comment (disqus alternative)
+  math = true                                        # enable KaTex math typesetting globally

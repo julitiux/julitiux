@@ -620,3 +620,7 @@ k
 ```code
 gg
 ```
+### go to the end of the file
+```code
+G
+```

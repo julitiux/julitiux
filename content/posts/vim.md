@@ -609,3 +609,10 @@ k
 0
 ```
 ### go to beginning of the paragraph
+```code
+{
+```
+### go to the end of the paragraph
+```code
+}
+```

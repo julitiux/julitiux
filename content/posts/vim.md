@@ -595,3 +595,8 @@ noremap <down> <nop>
 noremap <left> <nop>
 noremap <right> <nop>
 ```
+## motions
+### down a line
+```code
+j
+```

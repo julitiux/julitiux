@@ -586,3 +586,12 @@ bd[elete] [buffer]
 ```code
 :h tabpage
 ```
+
+# 9. How to move quickly through files
+## disable arrow keys
+```code
+noremap <up> <nop>
+noremap <down> <nop>
+noremap <left> <nop>
+noremap <right> <nop>
+```

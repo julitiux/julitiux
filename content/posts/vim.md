@@ -604,7 +604,8 @@ j
 ```code
 k
 ```
-### go to beggining of the line
+### go to beginning of the line
 ```code
 0
 ```
+### go to beginning of the paragraph

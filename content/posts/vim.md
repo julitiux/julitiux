@@ -656,3 +656,11 @@ t/{character}
 ```code
 T/{character}
 ```
+### repeat last search character
+```code
+;
+```
+### repeat last search character ((reverse)
+```code
+,
+```

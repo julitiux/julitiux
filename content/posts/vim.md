@@ -604,3 +604,7 @@ j
 ```code
 k
 ```
+### go to beggining of the line
+```code
+0
+```

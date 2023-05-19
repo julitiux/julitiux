@@ -640,3 +640,19 @@ e
 ```code
 b
 ```
+### find any character
+```code
+f/{character}
+```
+### find any character (reverse)
+```code
+F/{character}
+```
+### go forward and stop one column before the character
+```code
+t/{character}
+```
+### go forward and stop one column before the character (reverse)
+```code
+T/{character}
+```

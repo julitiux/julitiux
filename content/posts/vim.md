@@ -636,3 +636,7 @@ w
 ```code
 e
 ```
+### go back to the beginning of the current or previous word
+```code
+b
+```

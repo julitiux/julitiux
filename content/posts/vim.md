@@ -600,3 +600,7 @@ noremap <right> <nop>
 ```code
 j
 ```
+### up a line
+```code
+k
+```

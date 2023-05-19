@@ -608,6 +608,10 @@ k
 ```code
 0
 ```
+### go to end of the line
+```code
+$
+```
 ### go to beginning of the paragraph
 ```code
 {

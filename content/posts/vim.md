@@ -628,3 +628,11 @@ gg
 ```code
 G
 ```
+### go to the beginning of the next word
+```code
+w
+```
+### go to the end of the next word
+```code
+e
+```

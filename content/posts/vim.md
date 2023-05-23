@@ -666,3 +666,10 @@ T/{character}
 ```
 
 # 10. How to move quickly through files 2
+## make accurate selections
+This commands you are going execute from normal mode is thta they are proceded by v (visual selection), c (change text) or d (delete text)
+
+### visual around )
+```code
+va)
+```

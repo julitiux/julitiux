@@ -689,8 +689,9 @@ i}
 ```code
 a]
 ```
-### v/c/d
+### v/c/d inside ]
 ```code
+i]
 ```
 ### v/c/d
 ```code

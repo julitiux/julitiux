@@ -729,8 +729,9 @@ at
 ```code
 it
 ```
-### v/c/d
+### v/c/d around word
 ```code
+aw
 ```
 ### v/c/d
 ```code

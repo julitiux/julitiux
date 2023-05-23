@@ -733,8 +733,9 @@ it
 ```code
 aw
 ```
-### v/c/d
+### v/c/d inside word
 ```code
+iw
 ```
 ### v/c/d
 ```code

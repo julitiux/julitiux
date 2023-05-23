@@ -745,8 +745,9 @@ iW
 ```code
 aW
 ```
-### v/c/d
+### v/c/d inside phrase
 ```code
+is
 ```
 ### v/c/d
 ```code

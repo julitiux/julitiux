@@ -587,7 +587,7 @@ bd[elete] [buffer]
 :h tabpage
 ```
 
-# 9. How to move quickly through files
+# 9. How to move quickly through files 1
 ## disable arrow keys
 ```code
 noremap <up> <nop>
@@ -664,3 +664,5 @@ T/{character}
 ```code
 ,
 ```
+
+# 10. How to move quickly through files 2

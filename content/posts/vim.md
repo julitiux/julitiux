@@ -737,8 +737,9 @@ aw
 ```code
 iw
 ```
-### v/c/d
+### v/c/d inside WORD
 ```code
+iW
 ```
 ### v/c/d
 ```code

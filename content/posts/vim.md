@@ -669,7 +669,48 @@ T/{character}
 ## make accurate selections
 This commands you are going execute from normal mode is thta they are proceded by v (visual selection), c (change text) or d (delete text)
 
-### visual around )
+### v/c/d around )
 ```code
-va)
+a)
+```
+### v/c/d inside )
+```code
+i)
+```
+### v/c/d around key
+```code
+a}
+```
+### v/c/d
+```code
+```
+### v/c/d
+```code
+```
+### v/c/d
+```code
+```
+### v/c/d
+```code
+```
+### v/c/d
+```code
+```
+### v/c/d
+```code
+```
+### v/c/d
+```code
+```
+### v/c/d
+```code
+```
+### v/c/d
+```code
+```
+### v/c/d
+```code
+```
+### v/c/d
+```code
 ```

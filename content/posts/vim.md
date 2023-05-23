@@ -725,8 +725,9 @@ a`
 ```code
 at
 ```
-### v/c/d
+### v/c/d inside tag HTML
 ```code
+it
 ```
 ### v/c/d
 ```code

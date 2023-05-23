@@ -741,8 +741,9 @@ iw
 ```code
 iW
 ```
-### v/c/d
+### v/c/d around WORD
 ```code
+aW
 ```
 ### v/c/d
 ```code

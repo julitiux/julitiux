@@ -787,3 +787,7 @@ m{a-zA-Z}}
 ```code
 `[
 ```
+### go to the end position of the last change or copy
+```code
+`]
+```

@@ -771,7 +771,11 @@ m{a-zA-Z}}
 ```code
 `{letter of mark}
 ```
-### before the last jump in the current file
+### go to the position before the last jump in the current file
 ```
 ``
+```
+### go to the last change
+```code
+`.
 ```

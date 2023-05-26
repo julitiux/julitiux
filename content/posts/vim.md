@@ -827,3 +827,7 @@ To access register's vim is simple, just specify the register like this
 "ap
 ```
 copy and paste the content of the register `a`
+### access the content deleted
+```code
+""
+```

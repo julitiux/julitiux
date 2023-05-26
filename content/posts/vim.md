@@ -817,3 +817,8 @@ To access register's vim is simple, just specify the register like this
 ```code
 "{register}
 ```
+
+### use the register `a` and copy a word like this
+```code
+"ayiw
+```

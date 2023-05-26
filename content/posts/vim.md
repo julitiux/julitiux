@@ -822,3 +822,8 @@ To access register's vim is simple, just specify the register like this
 ```code
 "ayiw
 ```
+### to acces the register has to do this:
+```code
+"ap
+```
+copy and paste the content of the register `a`

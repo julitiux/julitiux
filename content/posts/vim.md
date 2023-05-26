@@ -831,3 +831,9 @@ copy and paste the content of the register `a`
 ```code
 ""
 ```
+## Other registers
+### the black hole register
+```code
+#_
+```
+### the system clipboard

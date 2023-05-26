@@ -812,3 +812,8 @@ There are 9 types of registers:
 7. The selection and drop registers "\*, "+ and "~
 8. The black hole register "_
 9. Last search pattern register "/
+
+To access register's vim is simple, just specify the register like this
+```code
+"{register}
+```

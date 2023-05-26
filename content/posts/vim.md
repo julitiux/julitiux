@@ -837,3 +837,6 @@ copy and paste the content of the register `a`
 #_
 ```
 ### the system clipboard
+```code
+"+ / "*
+```

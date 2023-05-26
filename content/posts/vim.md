@@ -799,3 +799,16 @@ m{a-zA-Z}}
 ```code
 `>
 ```
+
+# 11. Registers.
+
+There are 9 types of registers:
+1. The unnamed register ""
+2. 10 numbered register "0 to "9
+3. The small delete register "-
+4. 26 named registers "a to "z or "A to "Z
+5. 4 read-only registers ":, "., "% and "#
+6. The expression register "=
+7. The selection and drop registers "\*, "+ and "~
+8. The black hole register "_
+9. Last search pattern register "/

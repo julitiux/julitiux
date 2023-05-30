@@ -857,3 +857,7 @@ q
 ```code
 q{letter's register}
 ```
+### execute a macro
+```code
+@{letter's register}
+```

@@ -880,3 +880,6 @@ let i+=1
 ```code
 <ctrl-r>=i
 ```
+
+## tricks
+### for macros use commands like `A` and `I` just for normalize the position of cursor

@@ -883,3 +883,4 @@ let i+=1
 
 ## tricks
 ### for macros use commands like `A` and `I` just for normalize the position of cursor
+### to repeat a macro just we have will use `@@` as many times as we want

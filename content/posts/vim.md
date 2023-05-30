@@ -861,3 +861,9 @@ q{letter's register}
 ```code
 @{letter's register}
 ```
+
+## variables
+### declare a variable
+```code
+:let {variable}={number}
+```

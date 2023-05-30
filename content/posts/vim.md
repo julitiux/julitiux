@@ -885,3 +885,4 @@ let i+=1
 ### for macros use commands like `A` and `I` just for normalize the position of cursor
 ### to repeat a macro just we have will use `@@` as many times as we want
 ### to see the contents of our macro, we can use the `:reg a` command
+### to edit a macro saved in the registry, we can paste its content with `:put a` and when we have edited it yo our linking, copy it back to registry with, for example, "ay$

@@ -840,3 +840,8 @@ copy and paste the content of the register `a`
 ```code
 "+ / "*
 ```
+
+# 12. Thre power of macros
+
+## Record and execute a macro
+Macros start recording as soon as we press the `q` key and assign a record to it. To stop recording we will press `q` again.

@@ -853,3 +853,7 @@ q
 ```code
 q
 ```
+### start to record a macro with register
+```code
+q{letter's register}
+```

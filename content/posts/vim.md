@@ -849,3 +849,7 @@ Macros start recording as soon as we press the `q` key and assign a record to it
 ```code
 q
 ```
+### end to record a macro
+```code
+q
+```

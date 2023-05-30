@@ -866,4 +866,17 @@ q{letter's register}
 ### declare a variable
 ```code
 :let {variable}={number}
+:ley i=1
+```
+### you can modify the variable even inside the macro
+```code
+let i+=1
+```
+### execute a macro in parallel (visual mode)
+```code
+:'<,'> normal @{letter's macro}
+```
+### lets paste the content of variable (insert mode)
+```code
+<ctrl-r>=i
 ```

@@ -887,3 +887,12 @@ let i+=1
 * to see the contents of our macro, we can use the `:reg a` command
 * to edit a macro saved in the registry, we can paste its content with `:put a` and when we have edited it yo our linking, copy it back to registry with, for example, "ay$
 * to execute a macro on all open buffers `:argdo normal @a`
+
+# 13. Patterns
+
+## search
+### to search forward
+```code
+/{enter the text to search for}
+```
+

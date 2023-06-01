@@ -905,3 +905,7 @@ If you do not want Vim to take capital letters into account, we will put the fol
 ```code
 set ignorecase
 ```
+* `hola` find (with _ignorecase_) Hola hola HoLA
+* `hola` find (without _ignorecase_) hola
+* `holac` find (dont matter default option) hola Hola HoLa
+* `holaC` find (dont matter default option) hola

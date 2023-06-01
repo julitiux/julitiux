@@ -899,4 +899,9 @@ let i+=1
 ```code
 ?{enter the text to search for}
 ```
+for both cases you can press the key `n` for the next search or press the key `N` for the back search
 
+If you do not want Vim to take capital letters into account, we will put the following in our `.vimrc`
+```code
+set ignorecase
+```

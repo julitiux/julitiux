@@ -895,4 +895,8 @@ let i+=1
 ```code
 /{enter the text to search for}
 ```
+### to search back
+```code
+?{enter the text to search for}
+```
 

@@ -909,3 +909,8 @@ set ignorecase
 * `hola` find (without _ignorecase_) hola
 * `holac` find (dont matter default option) hola Hola HoLa
 * `holaC` find (dont matter default option) hola
+
+Take capital letters into account if we include it in our search
+```code
+set smartcase
+```

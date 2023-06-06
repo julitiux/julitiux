@@ -980,7 +980,7 @@ t:
 
 In this text
 ```text
-Line 1 CDMX Mexico
+Line 1 Mexico Mexico
 Line 2 Tlaxcala Tlaxcala
 Line 3 Monterrey MTY
 Line 4 Monterrey Monterrey
@@ -995,6 +995,9 @@ Line 4 Monterrey Monterrey
 ```
 ### will replace the first match of all lines in the file
 ```code
-:%s/CDMX/Mexico/
+:%s/Mexico/CDMX/
 ```
-
+### will replace all matches in the file
+```code
+:%s/Mexico/CDMX/g
+```

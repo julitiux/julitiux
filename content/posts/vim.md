@@ -1001,3 +1001,7 @@ Line 4 Monterrey Monterrey
 ```code
 :%s/Mexico/CDMX/g
 ```
+### It will ask us for confirmation to replace each match
+```code
+:%s/Mexico/CDMX/gc
+```

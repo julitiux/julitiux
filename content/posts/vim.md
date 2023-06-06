@@ -968,3 +968,7 @@ t:
 ```code
 &:
 ```
+### use the substitution command {string} above
+```code
+~:
+```

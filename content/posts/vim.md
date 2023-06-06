@@ -976,3 +976,17 @@ t:
 ```code
 ={vim script}:
 ```
+## Let's start with practice
+
+In this text
+```text
+Line 1 CDMX Mexico
+Line 2 Tlaxcala Tlaxcala
+Line 3 Monterrey MTY
+Line 4 Monterrey Monterrey
+```
+### over the line; will replace the first Mexico
+```code
+:s/Mexico/CDMX
+```
+

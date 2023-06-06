@@ -964,3 +964,7 @@ t:
 ```code
 :
 ```
+### insert the entire search pattern
+```code
+&:
+```

@@ -989,4 +989,8 @@ Line 4 Monterrey Monterrey
 ```code
 :s/Mexico/CDMX
 ```
+### over the line; will replace all matches in the same line
+```code
+:s/Mexico/CDMX/g
+```
 

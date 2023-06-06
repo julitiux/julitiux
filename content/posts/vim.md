@@ -914,3 +914,11 @@ Take capital letters into account if we include it in our search
 ```code
 set smartcase
 ```
+
+# 14. Substitutions
+## The replace command
+The replace command has the following structure
+```code
+:[range]s[ubstitute]/{pattern}/{string}/[flags]
+```
+

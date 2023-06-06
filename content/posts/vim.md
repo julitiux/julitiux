@@ -960,3 +960,7 @@ t:
 ```code
 2:
 ```
+### insert the entire search pattern
+```code
+:
+```

@@ -948,3 +948,7 @@ r:
 ```code
 t:
 ```
+### insert a `,` since it is a character that is used as a special it needs to be preceded by a `.`
+```code
+\:
+```

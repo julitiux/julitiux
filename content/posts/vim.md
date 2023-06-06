@@ -939,3 +939,8 @@ n:
 &:
 ```
 
+## Special characteres that we can use as replacement
+### insert a carriage return
+```code
+r:
+```

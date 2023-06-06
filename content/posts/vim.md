@@ -930,3 +930,8 @@ g:
 ```code
 c:
 ```
+### confirms us of the number of cases that would be affected
+```code
+n:
+```
+

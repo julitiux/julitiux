@@ -993,4 +993,8 @@ Line 4 Monterrey Monterrey
 ```code
 :s/Mexico/CDMX/g
 ```
+### will replace the first match of all lines in the file
+```code
+:%s/CDMX/Mexico/
+```
 

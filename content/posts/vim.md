@@ -921,4 +921,8 @@ The replace command has the following structure
 ```code
 :[range]s[ubstitute]/{pattern}/{string}/[flags]
 ```
-
+These are a few useful flags
+### makes the replace command act globally
+```code
+g:
+```

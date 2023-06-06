@@ -934,4 +934,8 @@ c:
 ```code
 n:
 ```
+### reuse the flags from the previous command
+```code
+&:
+```
 

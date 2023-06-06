@@ -926,3 +926,7 @@ These are a few useful flags
 ```code
 g:
 ```
+### confirm every change
+```code
+c:
+```

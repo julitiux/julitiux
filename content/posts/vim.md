@@ -972,3 +972,7 @@ t:
 ```code
 ~:
 ```
+### evaluates an expression {vim script} and uses the result as the {string} to replace
+```code
+={vim script}:
+```

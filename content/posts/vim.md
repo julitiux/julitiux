@@ -1032,3 +1032,7 @@ Vim has several options for autocompletion and that autocompletion is always don
 ```code
 <Ctrl-n><Ctrl-p>
 ```
+### search a list of words in the buffer (in the current file)
+```code
+<Ctrl-x><Ctrl-n>
+°``

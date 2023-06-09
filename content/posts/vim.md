@@ -1052,3 +1052,7 @@ Vim has several options for autocompletion and that autocompletion is always don
 ```code
 <Ctrl-x><Ctrl-l>
 ```
+### autompletion for file or folder names
+```code
+<Ctrl-x><Ctrl-f>
+```

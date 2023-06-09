@@ -1009,7 +1009,18 @@ Line 4 Monterrey Monterrey
 # 15. Global commands
 The command `:global` allow us to execute an Ex command on the lines that match the pattern that we indicate.
 
-This is yours structure as follows
+The structure of `:global` command as follows
 ```code
 :[range] global[!] /{pattern}/ [cmd]
+```
+
+* The range of this command by default is the entire file, is important make the differents between other commands like :delete
+* `{patter}` is the search pattern
+* [cmd] is the command to execute. if you dont declare nothing, will use the command :print by default.
+* [!] the command will act on the lines that do not match the pattern. The command it could be same with the next sintaxis `:vglobal`
+
+## Examples to execute the `:global` command
+### get the content of HTML tags
+```code
+:g/re/d
 ```

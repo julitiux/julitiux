@@ -1056,3 +1056,7 @@ Vim has several options for autocompletion and that autocompletion is always don
 ```code
 <Ctrl-x><Ctrl-f>
 ```
+### code-based hints, such as CSS properties
+```code
+<Ctrl-x><Ctrl-o>
+```

@@ -1005,3 +1005,11 @@ Line 4 Monterrey Monterrey
 ```code
 :%s/Mexico/CDMX/gc
 ```
+
+# 15. Global commands
+The command `:global` allow us to execute an Ex command on the lines that match the pattern that we indicate.
+
+This is yours structure as follows
+```code
+:[range] global[!] /{pattern}/ [cmd]
+```

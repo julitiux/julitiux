@@ -1048,3 +1048,7 @@ Vim has several options for autocompletion and that autocompletion is always don
 ```code
 <Ctrl-x><Ctrl-k>
 ```
+### autocompletion of complete lines
+```code
+<Ctrl-x><Ctrl-l>
+```

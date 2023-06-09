@@ -1024,3 +1024,11 @@ The structure of `:global` command as follows
 ```code
 :g/re/d
 ```
+
+# 16. Autocomplete
+Vim has several options for autocompletion and that autocompletion is always done in insert mode. To activate the different autocomplete options we have the following keyboard shorcuts.
+
+### Vim's autocompletion is triggered by the above keyboard shorcut by
+```code
+<Ctrl-n><Ctrl-p>
+```

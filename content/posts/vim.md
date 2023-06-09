@@ -1040,3 +1040,7 @@ Vim has several options for autocompletion and that autocompletion is always don
 ```code
 <Ctrl-x><Ctrl-i>
 ```
+### search words in the tags files. A tags file has an index of functionsm classes, or other types of structures. But this deserves a poster lates to undestand it.
+```code
+<Ctrl-x><Ctrl-]>
+```

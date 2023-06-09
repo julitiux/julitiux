@@ -4,8 +4,25 @@ date: 2023-05-05T14:10:47-06:00
 draft: false
 ---
 
+# [Introduction to Vim](#introduction-to-vim)
+# [Edit the vim style](#edit-the-vim-style)
+# [Normal mode](#normal-mode)
+# [Insert mode](#insert-mode)
+# [Visual mode](#visual-mode)
+# [Command mode](#command-mode)
+# [Edit multiple files](#edit-multiple-files)
+# [Panels and tabs](#panels-and-tabs)
+# [How to move quickly through files 1](#how-to-move-quickly-through-files-1)
+# [How to move quickly through files 2](#how-to-move-quickly-through-files-2)
+# [Registers](#registers)
+# [Three power of macros](#three-power-of-macros)
+# [Patterns](#patterns)
+# [Substitutions](#substitutions)
+# [Global commands](#global-commands)
+# [Autocomplete](#autocomplete)
 
-# 1. Introduction to Vim
+
+# Introduction to Vim
 
 ## Diferent mode of vim
 
@@ -98,7 +115,7 @@ __exit without save the changes__
 :q!
 ```
 
-# 2. Edit the vim style
+# Edit the vim style
 First, create a file `.vimrc`
 
 ## Know the power of the dot command
@@ -133,7 +150,7 @@ A
 <esc>
 ```
 
-# 3. Normal mode.
+# Normal mode
 Normal mode is a rest state.
 
 ## Regulate how you undo your changes.
@@ -205,7 +222,7 @@ Ctrl-a
 Ctrl-x
 ```
 
-# 4. Insert mode
+# Insert mode
 ## Make corrections instantly from Insert mode
 ### Delete around word
 ```code
@@ -246,7 +263,7 @@ s
 option-ñ
 ```
 
-# 5. visual mode
+# Visual mode
 The visual mode resembles the text selection in other code editors. But in this case we eill select text and execute actions on it.
 
 The visula mode has three variants of selections:
@@ -293,7 +310,7 @@ u
 ~
 ```
 
-# 6. command mode
+# Command mode
 The fundamental is know is that to enter vim's command mode have to press `:`
 
 In command mode you can access `find mode`, this mode is specialized in searches
@@ -432,7 +449,7 @@ G
 ```code
 @:
 ```
-# 7. Edit multiple files
+# Edit multiple files
 ## Buffer's list
 A file is saved on disk while a buffer is saved on memory
 
@@ -479,7 +496,7 @@ bd[elete] [buffer]
 :!q[uit]a[all]
 ```
 
-# 8. Panels and tabs
+# Panels and tabs
 ## Panels
  Vim called windows, when open vim, it has only one panel but we can split it both horizontally and vertically
 ### divide the panel horizontally
@@ -587,7 +604,7 @@ bd[elete] [buffer]
 :h tabpage
 ```
 
-# 9. How to move quickly through files 1
+# How to move quickly through files 1
 ## disable arrow keys
 ```code
 noremap <up> <nop>
@@ -665,7 +682,7 @@ T/{character}
 ,
 ```
 
-# 10. How to move quickly through files 2
+# How to move quickly through files 2
 ## make accurate selections
 This commands you are going execute from normal mode is thta they are proceded by v (visual selection), c (change text) or d (delete text)
 
@@ -800,7 +817,7 @@ m{a-zA-Z}}
 `>
 ```
 
-# 11. Registers.
+# Registers
 
 There are 9 types of registers:
 1. The unnamed register ""
@@ -841,7 +858,7 @@ copy and paste the content of the register `a`
 "+ / "*
 ```
 
-# 12. Thre power of macros
+# Three power of macros
 
 ## Record and execute a macro
 Macros start recording as soon as we press the `q` key and assign a record to it. To stop recording we will press `q` again.
@@ -888,7 +905,7 @@ let i+=1
 * to edit a macro saved in the registry, we can paste its content with `:put a` and when we have edited it yo our linking, copy it back to registry with, for example, "ay$
 * to execute a macro on all open buffers `:argdo normal @a`
 
-# 13. Patterns
+# Patterns
 
 ## search
 ### to search forward
@@ -915,7 +932,7 @@ Take capital letters into account if we include it in our search
 set smartcase
 ```
 
-# 14. Substitutions
+# Substitutions
 ## The replace command
 The replace command has the following structure
 ```code
@@ -1006,7 +1023,7 @@ Line 4 Monterrey Monterrey
 :%s/Mexico/CDMX/gc
 ```
 
-# 15. Global commands
+# Global commands
 The command `:global` allow us to execute an Ex command on the lines that match the pattern that we indicate.
 
 The structure of `:global` command as follows
@@ -1025,7 +1042,7 @@ The structure of `:global` command as follows
 :g/re/d
 ```
 
-# 16. Autocomplete
+# Autocomplete
 Vim has several options for autocompletion and that autocompletion is always done in insert mode. To activate the different autocomplete options we have the following keyboard shorcuts.
 
 ### Vim's autocompletion is triggered by the above keyboard shorcut by

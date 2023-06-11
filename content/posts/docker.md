@@ -3,12 +3,18 @@ title: "Docker"
 date: 2023-02-13T18:22:08-06:00
 draft: false
 ---
+# **INDEX**
+# [Chapter 1 Hello Docker](#chapter-1-hello-docker)
+# [Chapter 2 Installing Linux](#chapter-2-installing-linux)
+# [Chapter 3 Using Oracle Database](#chapter-3-using-oracle-database)
+# [Chapter 4 Using MySQL Database](#chapter-4-using-mysql-database)
+# [Chapter 5 Using MongoDB](#chapter-5-using-mongodb)
 
-# Chapter 1
+# Chapter 1 Hello Docker
 
 ## Setting the Environment
 ## Installing Docker on Red Hat 7
-## Uninstalling Docker 
+## Uninstalling Docker
 ## Installing a Specific Docker Version
 ## Installing Docker on Ubuntu
 ## Starting the Docker Service
@@ -62,8 +68,8 @@ A Docker container may be started in a detached mode (or background) or foregrou
 
 To start a container in detached mode set `-d=true` or just `-d`
 
-The default mode is the foreground mode in which the container starts in the foreground, and `stdin`, `stdout` and `stderr` streams are attached to the host command line console. 
- 
+The default mode is the foreground mode in which the container starts in the foreground, and `stdin`, `stdout` and `stderr` streams are attached to the host command line console.
+
 The `-name` option may be used to specify a name for the Docker container.
 
 The `-p` option used to specify a port the process running in the container.
@@ -84,7 +90,7 @@ The external port may also be listed using the docker port command.
 sudo docker port [CONTAINER ID | CONTAINER NAME]
 ```
 
-by example 
+by example
 ```docker
 sudo docker port 5c97f1633fb3
 ```
@@ -131,7 +137,7 @@ sudo docker rm helloapp
 sudo docker rmi [IMAGE NAME]
 ```
 
-by example 
+by example
 ```docker
 sudo docker rmi tutum/hello-world
 ```
@@ -158,7 +164,7 @@ Alternatively, a running Docker service may be restarted with the following comm
 sudo service docker restart
 ```
 
-# Chapter 2
+# Chapter 2 Installing Linux
 
 ## Setting the Enviroment
 
@@ -168,7 +174,7 @@ sudo docker pull oraclelinux
 # doesn't work
 ```
 
-To download the oraclelinux 7 version: 
+To download the oraclelinux 7 version:
 ```docker
 sudo docker pull oraclelinux:7
 ```
@@ -183,14 +189,14 @@ sudo docker images
 sudo docker run -d --name <container-name> <image-name>
 ```
 
-by example 
+by example
 ```docker
 sudo docker run -d --name oraclelinux6 oraclelinux:6
 ```
 
 The `-i` `-t` options if specified with the `-d` option do not start an interactive terminal or shell. Even though the -i and -t options are apecified, the container runs in deteached mode.
 
-In deteachd mode, the Docker container is detached from the STDIN, STDOUT and STDERR streams. the `-rm` option cannot be used in the detached mode. 
+In deteachd mode, the Docker container is detached from the STDIN, STDOUT and STDERR streams. the `-rm` option cannot be used in the detached mode.
 
 ## Running a Container in Foreground
 To run a Docker container in attached mode, omit the -d option
@@ -198,7 +204,7 @@ To run a Docker container in attached mode, omit the -d option
 sudo docker run <image-run>
 ```
 
-by example 
+by example
 ```docker
 sudo docker run -i -t --rm --name oraclelinux7 oraclelinux:7
 ```
@@ -334,7 +340,7 @@ by example
 sudo docker run -i -t --rm --name oraclelinux8.7 oraclelinux:8.7
 ```
 
-If a container process has already been started in detached mode using the `-d` option, the interactive terminal may be started with the following command syntax 
+If a container process has already been started in detached mode using the `-d` option, the interactive terminal may be started with the following command syntax
 ```docker
 docker exec -i -t <container> bash
 ```
@@ -380,7 +386,7 @@ sudo docker rm orcl7
 docker rm $(docker ps --filter status=exited -q)
 ```
 
-# Chapter 3
+# Chapter 3 Using Oracle Database
 
 ## Setting the Environment
 Download the oracleinanutshell/oracle-xe-11g Docker image
@@ -400,7 +406,7 @@ Start a Oracle Database instance in a Docker container with the docker `docker r
 docker run --name orcldb -d -p 8080:8080 -p 1521:1521 oracleinanutshell/oracle-xe-11g
 ```
 
-reponse 
+reponse
 ```docker
 WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
 6b865c22a80b8fb8a2f18d53e504252074edd8e02f7ad836eaa3cd628c13c9d1
@@ -468,7 +474,7 @@ adding data
 INSERT INTO OE.Catalog VALUES('1','Oracle Magazine','Oracle Publishing','November December 2013','Engineering as a Service','David A. Kelly');
 ```
 ## Removing Oracle Database
-To remove the container running the Oracle Database instance, run the following `docker rm` command 
+To remove the container running the Oracle Database instance, run the following `docker rm` command
 ```docker
 sudo docker rm 0a14ce7e70bf
 ```
@@ -478,7 +484,7 @@ To remove the Docker image oracleinanutshell/oracle-xe-11g, run the following co
 sudo docker rmi oracleinanutshell/oracle-xe-11g
 ```
 
-# Chapter 4
+# Chapter 4 Using MySQL Database
 
 ## Setting the Enviroment
 ```docker
@@ -568,7 +574,7 @@ SELECT * FROM Catalog;
 ```sql
 show databases;
 ```
-## Existing TTY Terminal 
+## Existing TTY Terminal
 ```shell
 mysql> exit
 Bye
@@ -634,7 +640,7 @@ ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: N
 sudo doeker logs -f mysqldb
 ```
 
-# Chapter 5
+# Chapter 5 Using MongoDB
 
 ## Setting the Enviroment
 Download the official Docker image for MongoDB datanase
@@ -827,7 +833,7 @@ db.collection.save(
     <document>,
     {
         writeConcern: <document>
-    } 
+    }
 )
 ```
 

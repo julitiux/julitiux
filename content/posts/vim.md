@@ -4,6 +4,7 @@ date: 2023-05-05T14:10:47-06:00
 draft: false
 ---
 
+# **INDEX**
 # [Introduction to Vim](#introduction-to-vim)
 # [Edit the vim style](#edit-the-vim-style)
 # [Normal mode](#normal-mode)

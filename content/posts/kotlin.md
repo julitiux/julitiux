@@ -5,10 +5,31 @@ draft: false
 ---
 
 # **INDEX**
+# [1. Your first kotlin application](#1-your-first-kotlin-application)
+# [2. Variables, Constants, and Types](#2-variables-constants-and-types)
+# [3. Conditionals](#3-conditionals)
+# [4. Functions](#4-functions)
+# [5. anonymous Functions and the Function Type](#5-anonymous-functions-and-the-function-type)
+# [6. Null safety and exceptions](#6-null-safety-and-exceptions)
+# [7. Strings](#7-strings)
+# [8. Numbers](#8-numbers)
+# [9. Starndard Functions](#9-starndard-functions)
+# [10. List and Sets](#10-list-and-sets)
+# [11. Maps](#11-maps)
+# [12. Defining Classes](#12-defining-classes)
+# [13. Initialization.](#13-initialization)
+# [14. Inhertance](#14-inhertance)
+# [15. Objects](#15-objects)
+# [16. Interfaces and Abstract Classes](#16-interfaces-and-abstract-classes)
+# [17. Generics](#17-generics)
+# [18. Extensions](#18-extensions)
+# [19. Functional Programming Basics](#19-functional-programming-basics)
+# [20. Java Interoperability](#20-java-interoperability)
+
 
 # 1. Your first kotlin application
 
-# 2. Variables, Constants, and Types.
+# 2. Variables, Constants, and Types
 
 You use _variables_ and _constants_ ti store values and pass data around in your application.
 
@@ -1797,7 +1818,7 @@ Table 9.1 Standard functions
 | takeUnless | Yes | No | Nullable version of receiver |
 
 
-# 10.List and Sets
+# 10. List and Sets
 
 Working with a group of related values is an essential part of many programs. For example, your program might manage list of books, travel destinations, menu items, or tavern patron check balances. _Collections_ allow you to coveniently work with those groups of values and pass them as arguments to functions.
 
@@ -2292,7 +2313,7 @@ Eli Baggins
 
 Set are useful for representing series of data where each element is unique.
 
-## 11. Maps
+# 11. Maps
 
 Where Map is defferent from List and Set is that its elements consist of key-value pairs that you define and instead of index-based access using an intenger, a map provides key-based acces using a type that you specify. Keys are unique and identify the values in the map; the values, on the other hand, do not need to be unique. In this way, Map shares another feature with Set; The keys of a mao are guaranteed to be unique, just like elements of a set.
 

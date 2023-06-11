@@ -603,7 +603,6 @@ printPlayerStatus(auraColor = "NONE",
 ```
 
 This optional syntax uses a _named function arguments_ and is an alternative way to provide arguments to a function. Using named arguments frees you to pass the argument to the function in whatever order you would like. For example, you could also call *printPlayerStatus like this:
-
 ```kotlin
 printPlayerStatus(healthStatus = status,
                   auraColor = "NONE",
@@ -1567,7 +1566,6 @@ fun performPurchase(price: Double) {
 ```
 
 The gold remaining the purse is interpolated into the string using $, as you have seen before, But wht follows the $ is not simply the name of the variable - it is an expression in curly braces. Within th braces is a call to __format__with remainingBalance passed in as the argument.
-
 The call to __format__ also specifies a format string "%.2f". A format string uses a special sequences if characters to define how you want to format data. The particular format string you defined specifies that you want to round the floating point number up to the second decimal place. Then you pass the value or values to format as an argument to the __format__ function.
 
 ## Converting a Double to an Int
@@ -1646,7 +1644,6 @@ val menuFile = File("menu-file.txt").apply{
 __apply__ allows you do to drop the variable name from every function call performed to configure the receiver. This is because __apply__ scopes each function call withon the lambda to the receiver it is called on.
 
 This behavior is sometimes referred to as __relative scoping__, because all the function calls within the lambda are now called relative to the receiver. Another way to say this us that they are __implicitly called_ on the receiver.
-
 ```kotlin
 val menuFile = File("menu-file.txt").apply {
         setReadable(true)  // Implicitly, menuFile.setReadable(true)
@@ -1753,9 +1750,7 @@ Sinse __also__ returns the receiver instead of the result of the lambda, you can
 ## __takeIf__
 
 __takeIf works a bit differently than the other standard functions: It evaluates a condition provided in a lambda, called a _predicate_, that returns either true or false depending on the conditions defines. If the condition evaluates as true, the receiver is returned from takeIf. If the condition is false, null is returned instead.
-
 Consider the following example, which reads a file and only if it is readable and writable.
-
 ```kotlin
 val fileContents = File("myfile.txt")
     .takeIf { it.canRead() && it.canWrite() }
@@ -1944,7 +1939,6 @@ fun main(args: Array<String>) {
 ## Changing a list's contens
 
 In kotlin, a modifiable list is known as a _mutable list_, and use the __mutableListOf__function to create one.
-
 ### Listing 10.10 Making the patron list mutable (Tavern.kt)
 ```kotlin
 ...
@@ -3092,9 +3086,7 @@ class Player(_name: String,
 ## Property initialization.
 
  So far, you have seen a property initialized in two ways  - either assigned to a value passed as an argument, or defined _inline_in a primary constructor.
-
  A property can (and must) be initialized with any value of its type, including function return values.
-
  ### Listing 13.9 Defining the hometown property (Player.kt)
  ```kotlin
  class Player(_name: String,
@@ -3221,10 +3213,7 @@ The _lateinit_ keywordfunctions as acontract that you make with yourself: "I tak
 Lazy initialization is implemented in kotlin using a mechanism known as a _delegate_. Delegate define templates for how a property is initialized.
 
 You use a delegate with the keyboard. The kotlin standard library includes some delegates that are alredy implemented for you, and __lazy__is one of them.
-
 Lazy initialization takes a lambda in wich you define any code that you wish to execute when your property is initialized.
-
-
 ### Listing 13.12 Lazily initializing hometown (Player.kt)
 ```kotlin
 class Player(_name: String,
@@ -5469,7 +5458,6 @@ class Spellbook {
 ```
 
 The `@JvmStatic` annotation works like `@JvmField to allow direct acces to functionsto the companion object.
-
 ### Listing 20.32 Using @JvmStatic on a function (Hero.kt)
 ```kotlin
 ...

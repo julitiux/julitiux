@@ -8,11 +8,10 @@ draft: false
 # **INDEX**
 
 
-# [Hello Lambda Expressions!](#hello-lambda-expression)
+# [Chapter 1 Hello Lambda Expressions!](#chapter-1-hello-lambda-expression)
 # [Chapter 2 Using Collections](#chapter-2-using-collections)
 
-
-# Hello Lambda Expression!
+# Chapter 1 Hello Lambda Expression!
 
 ## Change the Way You Think
 ### Cities.java

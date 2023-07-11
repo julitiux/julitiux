@@ -211,5 +211,42 @@ final long countComradesStartN =
   comrades.stream()
           .filter(startsWithN)
           .count();
+```
 
+## Using Lexical Scoping and Closures
+
+Let's pick the names that start with N or B fromt the friends collections of names. Continuing with the previous example, we may be tempted to write something like the following
+#### PickDifferentNames.java
+```java
+final Predicate<String> startsWithN = name -> name.startsWith("N");
+final Predicate<String> startsWithB = name -> name.startsWith("B");
+
+final long countFriendsStartN =
+  friends.stream()
+         .filter(startsWithN).count();
+
+final long countFriendsStartB =
+  friends.stream()
+         .filter(startsWithB).count();
+
+```
+
+## Removing Duplication with Lexical Scoping
+#### PickDifferentNames.java
+```java
+public static Predicate<String> checkIfStartsWith(final String letter) {
+  return name -> name.startsWith(letter);
+}
+```
+
+We can use the lambda expression returned by checkIfStartWith() in the call to filter() method:
+#### PickDifferentNames.java
+```java
+final long countFriendsStartN =
+    friends.stream()
+           .filter(checkIfStartsWith("N")).count();
+
+final long countFriendsStartB =
+    friends.stream()
+           .filter(checkIfStartsWith("B")).count();
 ```

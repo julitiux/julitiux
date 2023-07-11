@@ -147,3 +147,25 @@ friends.stream()
   .map(String::toUpperCase)
   .forEach(name -> System.out.println(name));
 ```
+## Finding Elements
+
+Let's pick the ones that start with the letter N
+#### PickElements.java
+```java
+final List<String> startsWithN = new ArrayList<String>();
+for(String name : friends) {
+  if(name.startsWith("N")) {
+    startsWithN.add(name);
+  }
+}
+```
+
+The method `filter()` is designed fot that purpose
+
+#### PickElements.java
+```java
+final List<String> startsWithN =
+  friends.stream()
+    .filter(name -> name.startsWith("N"))
+    .collect(Collectors.toList());
+```

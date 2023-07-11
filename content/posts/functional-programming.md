@@ -286,3 +286,49 @@ final long countFriendsStartB =
   friends.stream()
          .filter(startsWithLetter.apply("B")).count();
 ```
+
+## Picking an Element
+
+Let's create a method thta will look for an element that starts with a given letter, and print it:
+#### PickAElement.jaba
+```java
+public static void pickName(
+  final List<String> names, final String startingLetter) {
+  String foundName = null;
+  for(String name : names) {
+    if(name.startsWith(startingLetter)) {
+      foundName = name;
+      break;
+    }
+  }
+
+  System.out.print(String.format("A name starting with %s: ", startingLetter));
+
+  if(foundName != null) {
+    System.out.println(foundName);
+  } else {
+    System.out.println("No name found");
+  }
+}
+
+```
+
+Let's rethink the problem, We simply want to pick the first matching element and safty deal with the absence of sych an element.
+#### PickElementElegant.java
+```java
+public static void pickName(final List<String> names, final String startingLetter) {
+
+  final Optional<String> foundName =
+    names.stream()
+         .filter(name ->name.startsWith(startingLetter))
+         .findFirst();
+
+  System.out.println(String.format("A name starting with %s: %s", startingLetter, foundName.orElse("No name found")));
+}
+```
+
+The combination of the findFirst() method and the Optional class reduced our code and its smell quite a bit. We rather than providing an alternate value for the absent instance, we can ask Optional to run a vblock of code or a lambda only if a value is present, like so:
+#### PickElementElegant.java
+```java
+foundName.ifPresent(name -> System.out.println("Hello " + name));
+```

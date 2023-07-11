@@ -332,3 +332,26 @@ The combination of the findFirst() method and the Optional class reduced our cod
 ```java
 foundName.ifPresent(name -> System.out.println("Hello " + name));
 ```
+
+## Reducing a Collection to a Single Value
+
+Let's start with some basic operations and build up to something a bit more sophisticated,
+#### PickALongest.java
+```java
+System.out.println("Total number of characters in all names: " +
+  friends.stream()
+         .mapToInt(name -> name.length())
+         .sum());
+```
+
+We can use the reduce() method to compare two elements against each other and pass along the result for further comparison with the remaining elements in the collections.
+
+```java
+final Optional<String> aLongName =
+  friends.stream()
+         .reduce((name1, name2) ->
+            name1.length() >= name2.length() ? name1 : name2);
+
+  aLongName.ifPresent(name ->
+  System.out.println(String.format("A longest name: %s", name)));
+```

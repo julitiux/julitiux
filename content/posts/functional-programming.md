@@ -345,7 +345,7 @@ System.out.println("Total number of characters in all names: " +
 ```
 
 We can use the reduce() method to compare two elements against each other and pass along the result for further comparison with the remaining elements in the collections.
-
+#### PickALongest.java
 ```java
 final Optional<String> aLongName =
   friends.stream()
@@ -355,3 +355,51 @@ final Optional<String> aLongName =
   aLongName.ifPresent(name ->
   System.out.println(String.format("A longest name: %s", name)));
 ```
+
+If any name was longer than the given base, it would get picked up; otherwise the function would return the base value, Steve in this example. This version of reduce() does not return an Optional since if the collection is empty, the default will be returned; there's no concern of an absent of nonexistent value
+#### PickALongest.java
+```java
+final String steveOrLonger =
+  friends.stream()
+         .reduce("Steve", (name1, name2) ->
+            name1.length() >= name2.length() ? name1 : name2);
+```
+
+## Joining Elements.
+
+We have to iterate through the list and print each element. Since the Java 5 for construct is better than the archaic for loop:
+#### PrintList.java
+```java
+for(String name : friends) {
+  System.out.print(name + ", ");
+}
+
+System.out.println();
+```
+
+There's a stinking comma at the end (shall we blame it on Scott?)
+#### PrintList.java
+```java
+for(int i = 0; i < friends.size() - 1; i++) {
+  System.out.print(friends.get(i) + ", ");
+}
+
+if(friends.size() > 0)
+  System.out.println(friends.get(friends.size() - 1));
+```
+
+A StringJoiner class cleans up all that mess in Java 8 and the String class has an added convenience method join() to turn smelly code into a simple one-liner
+#### PrintList.java
+```java
+System.out.println(String.join(", ", friends));
+```
+The collect() method does the reduction but delegates the actual implementation or target to a collector
+#### PrintList.java
+```java
+System.out.println(
+  friends.stream()
+         .map(String::toUpperCase)
+         .collect(joining(", ")));
+```
+
+We invoked the collect() on the transformed list and provided it a collector returned by the joining() method, which is a static method on a Collectors utility class. A collector acts as a sink object to receive alements passed by the collect() method and store it in a desired format.

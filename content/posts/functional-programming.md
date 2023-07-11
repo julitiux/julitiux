@@ -169,3 +169,47 @@ final List<String> startsWithN =
     .filter(name -> name.startsWith("N"))
     .collect(Collectors.toList());
 ```
+
+## Reusing Lambda Expressions
+
+Suppose we have a few collections of names: friends, editors, comrades, and so on:
+
+```java
+final List<String> friends = Arrays.asList("Brian", "Nate", "Neal", "Raju", "Sara", "Scott");
+final List<String> editors = Arrays.asList("Brian", "Jackie", "John", "Mike");
+final List<String> comrades = Arrays.asList("Kate", "Ken", "Nick", "Paula", "Zach");
+```
+
+We want to filter out names that start with a certain letter. Let's first take a native approach to this using the filter() method
+```java
+final long countFriendsStartN =
+  friends.stream()
+         .filter(name -> name.startsWith("N")).count();
+final long countEditorsStartN =
+  editors.stream()
+         .filter(name -> name.startsWith("N")).count();
+final long countComradesStartN =
+  comrades.stream()
+          .filter(name -> name.startsWith("N")).count();
+```
+
+The filter() method the receiver of the lambda expression in the previous example, takes a reference to a java.util.function.Predicate functional interface
+
+#### PickElementsMultipleCollection.java
+```java
+final Predicate<String> startsWithN = name -> name.startsWith("N");
+
+final long countFriendsStartN =
+  friends.stream()
+         .filter(startsWithN)
+         .count();
+final long countEditorsStartN =
+  editors.stream()
+         .filter(startsWithN)
+         .count();
+final long countComradesStartN =
+  comrades.stream()
+          .filter(startsWithN)
+          .count();
+
+```

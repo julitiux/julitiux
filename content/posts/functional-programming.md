@@ -137,3 +137,13 @@ final List<String> uppercaseNames = new ArrayList<String>();
 friends.forEach(name -> uppercaseNames.add(name.toUpperCase()));
 System.out.println(uppercaseNames);
 ```
+
+## Using Method References
+
+With this feature, a short String::toUppercase can replace name -> name.toUppercase
+#### Transform.java
+```java
+friends.stream()
+  .map(String::toUpperCase)
+  .forEach(name -> System.out.println(name));
+```

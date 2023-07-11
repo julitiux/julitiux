@@ -250,3 +250,39 @@ final long countFriendsStartB =
     friends.stream()
            .filter(checkIfStartsWith("B")).count();
 ```
+
+## Refactoring to Narrow the Scope
+
+In the preceding (smelly) example we used a static method, but we don't want to pollute the class with static methods to cache each variable in the future. We can do that using a Functional interface.
+#### PickDifferentNames.java
+```java
+final Function<String, Predicate<String>> startsWithLetter =
+  (String letter) -> {
+    Predicate<String> checkStarts = (String name) -> name.startsWith(letter);
+    return checkStarts;
+};
+```
+This version is verbose compared to the static methos we saw earlier, but we'll refactor that soon to make it concise.
+#### PickDifferentNames.java
+```java
+final Function<String, Predicate<String>> startsWithLetter =
+  (String letter) -> (String name) -> name.startsWith(letter);
+```
+We reduce clutterm but we can take the conciseness up another notch by removing the types and letting the Java compiler inger the types based on the context.
+#### PickDifferentNames.java
+```java
+final Function<String, Predicate<String>> startsWithLetter =
+  letter -> name -> name.startsWith(letter);
+```
+I takes a bit of effort to get used to this concuse syntax.
+
+#### PickDifferentNames.java
+```java
+final long countFriendsStartN =
+  friends.stream()
+         .filter(startsWithLetter.apply("N")).count();
+
+final long countFriendsStartB =
+  friends.stream()
+         .filter(startsWithLetter.apply("B")).count();
+```

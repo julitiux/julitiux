@@ -313,3 +313,29 @@ then:
     1 * stop()
   }
 ```
+
+## Using `verifyAll` to assert multiple expecations together
+Normal exprectations fail the test on the first failed assertions. Sometimes it is helpful to collect these failures before failling the test more information, this behavior is also know as soft assertions
+```groovy
+def "offered PC matches preferred configuration"() {
+  when:
+    def pc = shop.buyPc()
+
+  then:
+    verifyAll(pc) {
+      vendor == "Sunny"
+      clockRate >= 2333
+      ram >= 406
+      os == "Linux"
+    }
+}
+```
+
+or can be used without a target
+```groovy
+expect:
+  verifyAll {
+    2 == 2
+    4 == 4
+  }
+```

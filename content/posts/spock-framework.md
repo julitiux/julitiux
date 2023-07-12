@@ -149,13 +149,13 @@ then:
 ```groovy
 def "HashMap accepts null key"() {
   given:
-  def map = new HashMap()
+    def map = new HashMap()
 
   when:
-  map.put(null, "elem")
+    map.put(null, "elem")
 
   then:
-  notThrown(NullPointerException)
+    notThrown(NullPointerException)
 }
 ```
 
@@ -165,18 +165,18 @@ Whereas conditions decribe an object's state, interactions describe how objects 
 ```groovy
 def "events are published to all subscribers"() {
   given:
-  def subscriber1 = Mock(Subscriber)
-  def subscriber2 = Mock(Subscriber)
-  def publisher = new Publisher()
-  publisher.add(subscriber1)
-  publisher.add(subscriber2)
+    def subscriber1 = Mock(Subscriber)
+    def subscriber2 = Mock(Subscriber)
+    def publisher = new Publisher()
+    publisher.add(subscriber1)
+    publisher.add(subscriber2)
 
   when:
-  publisher.fire("event")
+    publisher.fire("event")
 
   then:
-  1 * subscriber1.receive("event")
-  1 * subscriber2.receive("event")
+    1 * subscriber1.receive("event")
+    1 * subscriber2.receive("event")
 }
 ```
 
@@ -218,12 +218,12 @@ A `where` block always come last in a method, and may not be repeated. It is use
 ```groovy
 def "computing the maximum of two numbers"() {
   expect:
-  Math.max(a, b) == c
+    Math.max(a, b) == c
 
   where:
-  a << [5, 3]
-  b << [1, 9]
-  c << [5, 9]
+    a << [5, 3]
+    b << [1, 9]
+    c << [5, 9]
 }
 ```
 
@@ -232,13 +232,13 @@ Sometimes feature methods grow large and/or contains lots of duplicate code. In 
 ```groovy
 def "offered PC matches preferred configuration"() {
   when:
-  def pc = shop.buyPc()
+    def pc = shop.buyPc()
 
   then:
-  pc.vendor == "Sunny"
-  pc.clockRate >= 2333
-  pc.ram >= 4096
-  pc.os == "Linux"
+    pc.vendor == "Sunny"
+    pc.clockRate >= 2333
+    pc.ram >= 4096
+    pc.os == "Linux"
 }
 ```
 
@@ -246,10 +246,10 @@ If you happend to be a computer geek, you preferred PC configuration mught be ve
 ```groovy
 def "offered PC matches preferred configuration"() {
   when:
-  def pc = shop.buyPc()
+    def pc = shop.buyPc()
 
   then:
-  matchesPreferredConfiguration(pc)
+    matchesPreferredConfiguration(pc)
 }
 
 def matchesPreferredConfiguration(pc) {
@@ -280,3 +280,36 @@ void matchesPreferredConfiguration(pc) {
 }
 ```
 
+## Using `with` for expectations
+As an alternative to the above helper methods, you can use with(target, closure) method to interact on the object being verified.
+```groovy
+def "offered PC matches preferred configuration"() {
+  when:
+    def pc = shop.buyPc()
+
+  then:
+    with(pc) {
+      vendor == "Sunny"
+      clockRate >= 2333
+      ram >= 406
+      os == "Linux"
+    }
+```
+
+Unlike when you helper methods, there is no need for explicit assert statements for proper error reporting
+When verifying mocks, a `with` statement can also cut out verbose verification statements
+
+```groovy
+def service = Mock(Service) // has start(), stop(), and doWork() methods
+def app = new Application(service) // controls the lifecycle of the service
+
+when:
+  app.run()
+
+then:
+  with(service) {
+    1 * start()
+    1 * doWork()
+    1 * stop()
+  }
+```

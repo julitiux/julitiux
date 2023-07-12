@@ -226,3 +226,57 @@ def "computing the maximum of two numbers"() {
   c << [5, 9]
 }
 ```
+
+## Helper Methods
+Sometimes feature methods grow large and/or contains lots of duplicate code. In such case it can make sense to introduce one o more helper methods. Two good candidates for helper methods are setup/cleanup logic and complex condition
+```groovy
+def "offered PC matches preferred configuration"() {
+  when:
+  def pc = shop.buyPc()
+
+  then:
+  pc.vendor == "Sunny"
+  pc.clockRate >= 2333
+  pc.ram >= 4096
+  pc.os == "Linux"
+}
+```
+
+If you happend to be a computer geek, you preferred PC configuration mught be very detailed, ou you might want to compare offers from many different shops
+```groovy
+def "offered PC matches preferred configuration"() {
+  when:
+  def pc = shop.buyPc()
+
+  then:
+  matchesPreferredConfiguration(pc)
+}
+
+def matchesPreferredConfiguration(pc) {
+  pc.vendor == "Sunny"
+  && pc.clockRate >= 2333
+  && pc.ram >= 4096
+  && pc.os == "Linux"
+}
+```.
+
+The helper method matchesPreferredConfiguration() consists of a single boolean expression whose result is returned:
+
+```groovy
+Condition not satisfied:
+
+matchesPreferredConfiguration(pc)
+|                             |
+false                         ...
+```
+
+No very helpful. Fortunately, we can do better:
+```groovy
+void matchesPreferredConfiguration(pc) {
+  assert pc.vendor == "Sunny"
+  assert pc.clockRate >= 2333
+  assert pc.ram >= 4096
+  assert pc.os == "Linux"
+}
+```
+

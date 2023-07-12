@@ -339,3 +339,37 @@ expect:
     4 == 4
   }
 ```
+
+## Specifications as Documentations
+Well-written specifications are a valuable source of information. Especially for higher-level specifications targeting a wider audience than just developers, it makes sense to provide more information in natural languaje than just the names specifications and features. Therefore, Spock provides a way to attach textual descriptions to blocks.
+
+```groovy
+given: "open a database connection"
+// code goes here
+```
+
+Use the `and:` label to describe logically different parts of a block
+```groovy
+given: "open a database connection"
+// code goes here
+
+and: "seed the customer table"
+// code goes here
+
+and: "seed the product table"
+// code goes here
+```
+
+An and: label followed by a description can be inserted at any (top-level) position of a feature method, without altering the method’s semantics.
+
+In Behavior Driven Development, customer-facing features (called stories) are described in a given-when-then format. Spock directly supports this style of specification with the given: label:
+```groovy
+given: "an empty bank account"
+// ...
+
+when: "the account is credited \$10"
+// ...
+
+then: "the account's balance is \$10"
+// ...
+```

@@ -503,3 +503,59 @@ str.chars()
   .forEach(IterateString::printChar);
 ```
 
+## Implemening the Comparator Interface
+
+### Sorting with comparator
+```java
+// Person.java
+
+public class Person {
+  private final String name;
+  private final int age;
+
+  public Person(final String theName, final int theAge) {
+    name = theName;
+    age = theAge;
+  }
+
+  public String getName() { return name; }
+  public int getAge() { return age; }
+
+  public int ageDifference(final Person other) { return age - other.age; }
+
+  public String toString() {
+    return String.format("%s - %d", name, age);
+  }
+}
+```
+
+```java
+// Compare.java
+
+final List<Person> people = Arrays.asList(
+  new Person("John", 20),
+  new Person("Sara", 21),
+  new Person("Jane", 21),
+  new Person("Greg", 35));
+
+List<Person> ascendingAge =
+  people.stream()
+        .sorted((person1, person2) -> person1.ageDifference(person2))
+        .collect(toList());
+
+printPeople("Sorted in ascending order by age: ", ascendingAge);
+
+public static void printPeople(final String message, final List<Person> people) {
+  System.out.println(message);
+  people.forEach(System.out::println);
+}
+```
+
+Remplace the lambda expression in the previous call to the sorted() method with a short and sweet reference to the ageDifference() method
+```java
+// Compare.java
+
+people.stream()
+      .sorted(Person::ageDifference)
+      .collect(toList());
+```

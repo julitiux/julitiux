@@ -14,8 +14,9 @@ draft: false
 # Chapter 1 Hello Lambda Expression!
 
 ## Change the Way You Think
-#### Cities.java
 ```java
+// Cities.java
+
 boolean found = false;
 for(String city : cities) {
   if(city.equals("Chicago")) {
@@ -26,8 +27,9 @@ for(String city : cities) {
 ```
 
 ## A Better Way
-#### Cities.java
 ```java
+// Cities.java
+
 System.out.println("Found chicago?:" + cities.contains("Chicago"));
 ```
 
@@ -37,8 +39,9 @@ System.out.println("Found chicago?:" + cities.contains("Chicago"));
 final List<BigDecimal> prices = Arrays.asList(new BigDecimal("10"), new BigDecimal("30"), new BigDecimal("17"), new BigDecimal("20"), new BigDecimal("15"), new BigDecimal("18"), new BigDecimal("45"), new BigDecimal("12"));
 ```
 
-#### DiscountImperative.java
 ```java
+// DiscountImperative.java
+
 BigDecimal totalOfDiscountedPrices = BigDecimal.ZERO;
 
 for(BigDecimal price : prices) {
@@ -50,9 +53,9 @@ System.out.println("Total of discounted prices: " + totalOfDiscountedPrices);
 ```
 
 ## A Better Way, Again
-
-#### DiscountImperative.java
 ```java
+// DiscountImperative.java
+
 final BigDecimal totalOfDiscountedPrices = prices.stream()
   .filter(price -> price.compareTo(BigDecimal.valueOf(20)) > 0)
   .map(price -> price.multiply(BigDecimal.valueOf(0.9)))
@@ -69,16 +72,18 @@ Given a list
 ```java
 final List<String> friends = Arrays.asList("Brian", "Nate", "Neal", "Raju", "Sara", "Scott");
 ```
-#### Iteration.java
 ```java
+// Iteration.java
+
 for(int i = 0; i < friends.size(); i++) {
   System.out.println(friends.get(i));
 }
 ```
 
 This form of iteration uses the `Iterator` interface and calls into its `hasNext()` and `next()` methods
-#### Iteration.java
 ```java
+// Iteration.java
+
 for(String name : friends) {
   System.out.println(name);
 }
@@ -86,8 +91,9 @@ for(String name : friends) {
 
 Use the forEach() method with the all-too-familiar anonymous inner class syntaz
 
-#### Iteration.java
 ```java
+// Iteration.java
+
 friends.forEach(new Consumer<String>() {
   public void accept(final String name) {
     System.out.println(name);
@@ -96,25 +102,29 @@ friends.forEach(new Consumer<String>() {
 ```
 
 Remplacing the anonympus inner class with a lambda expression
-#### Iteration.java
 ```java
+// Iteration.java
+
 friends.forEach((final String name) -> System.out.println(name));
 ```
 Leaving tout the type id convenient, requires less effort, and is less noisy
-#### Iteration.java
 ```java
+// Iteration.java
+
 friends.forEach((name) -> System.out.println(name));
 ```
 
 Leve off the parentheses around the parameter if the parameter's type is inferred
-#### Iteration.java
 ```java
+// Iteration.java
+
 friends.forEach(name -> System.out.println(name));
 ```
 
 Using a _method reference_
-#### Iteration.java
 ```java
+// Iteration.java
+
 friends.forEach(System.out::println);
 ```
 
@@ -122,8 +132,9 @@ friends.forEach(System.out::println);
 
 Let's start by creating a new collection of uppercase names from the given collection
 
-#### Transform.java
 ```java
+// Transform.java
+
 final List<String> uppercaseNames = new ArrayList<String>();
 
 for(String name : friends) {
@@ -131,8 +142,9 @@ for(String name : friends) {
 }
 ```
 replacing the for loop by ferEach()
-#### Transform.java
 ```java
+// Transform.java
+
 final List<String> uppercaseNames = new ArrayList<String>();
 friends.forEach(name -> uppercaseNames.add(name.toUpperCase()));
 System.out.println(uppercaseNames);
@@ -141,8 +153,9 @@ System.out.println(uppercaseNames);
 ## Using Method References
 
 With this feature, a short String::toUppercase can replace name -> name.toUppercase
-#### Transform.java
 ```java
+// Transform.java
+
 friends.stream()
   .map(String::toUpperCase)
   .forEach(name -> System.out.println(name));
@@ -150,8 +163,9 @@ friends.stream()
 ## Finding Elements
 
 Let's pick the ones that start with the letter N
-#### PickElements.java
 ```java
+// PickElements.java
+
 final List<String> startsWithN = new ArrayList<String>();
 for(String name : friends) {
   if(name.startsWith("N")) {
@@ -162,8 +176,9 @@ for(String name : friends) {
 
 The method `filter()` is designed fot that purpose
 
-#### PickElements.java
 ```java
+// PickElements.java
+
 final List<String> startsWithN =
   friends.stream()
     .filter(name -> name.startsWith("N"))
@@ -195,8 +210,9 @@ final long countComradesStartN =
 
 The filter() method the receiver of the lambda expression in the previous example, takes a reference to a java.util.function.Predicate functional interface
 
-#### PickElementsMultipleCollection.java
 ```java
+// PickElementsMultipleCollection.java
+
 final Predicate<String> startsWithN = name -> name.startsWith("N");
 
 final long countFriendsStartN =
@@ -216,8 +232,9 @@ final long countComradesStartN =
 ## Using Lexical Scoping and Closures
 
 Let's pick the names that start with N or B fromt the friends collections of names. Continuing with the previous example, we may be tempted to write something like the following
-#### PickDifferentNames.java
 ```java
+// PickDifferentNames.java
+
 final Predicate<String> startsWithN = name -> name.startsWith("N");
 final Predicate<String> startsWithB = name -> name.startsWith("B");
 
@@ -232,16 +249,18 @@ final long countFriendsStartB =
 ```
 
 ## Removing Duplication with Lexical Scoping
-#### PickDifferentNames.java
 ```java
+// PickDifferentNames.java
+
 public static Predicate<String> checkIfStartsWith(final String letter) {
   return name -> name.startsWith(letter);
 }
 ```
 
 We can use the lambda expression returned by checkIfStartWith() in the call to filter() method:
-#### PickDifferentNames.java
 ```java
+// PickDifferentNames.java
+
 final long countFriendsStartN =
     friends.stream()
            .filter(checkIfStartsWith("N")).count();
@@ -254,8 +273,9 @@ final long countFriendsStartB =
 ## Refactoring to Narrow the Scope
 
 In the preceding (smelly) example we used a static method, but we don't want to pollute the class with static methods to cache each variable in the future. We can do that using a Functional interface.
-#### PickDifferentNames.java
 ```java
+// PickDifferentNames.java
+
 final Function<String, Predicate<String>> startsWithLetter =
   (String letter) -> {
     Predicate<String> checkStarts = (String name) -> name.startsWith(letter);
@@ -263,21 +283,24 @@ final Function<String, Predicate<String>> startsWithLetter =
 };
 ```
 This version is verbose compared to the static methos we saw earlier, but we'll refactor that soon to make it concise.
-#### PickDifferentNames.java
 ```java
+// PickDifferentNames.java
+
 final Function<String, Predicate<String>> startsWithLetter =
   (String letter) -> (String name) -> name.startsWith(letter);
 ```
 We reduce clutterm but we can take the conciseness up another notch by removing the types and letting the Java compiler inger the types based on the context.
-#### PickDifferentNames.java
 ```java
+// PickDifferentNames.java
+
 final Function<String, Predicate<String>> startsWithLetter =
   letter -> name -> name.startsWith(letter);
 ```
 I takes a bit of effort to get used to this concuse syntax.
 
-#### PickDifferentNames.java
 ```java
+// PickDifferentNames.java
+
 final long countFriendsStartN =
   friends.stream()
          .filter(startsWithLetter.apply("N")).count();
@@ -290,8 +313,9 @@ final long countFriendsStartB =
 ## Picking an Element
 
 Let's create a method thta will look for an element that starts with a given letter, and print it:
-#### PickAElement.jaba
 ```java
+// PickAElement.jaba
+
 public static void pickName(
   final List<String> names, final String startingLetter) {
   String foundName = null;
@@ -314,8 +338,9 @@ public static void pickName(
 ```
 
 Let's rethink the problem, We simply want to pick the first matching element and safty deal with the absence of sych an element.
-#### PickElementElegant.java
 ```java
+// PickElementElegant.java
+
 public static void pickName(final List<String> names, final String startingLetter) {
 
   final Optional<String> foundName =
@@ -328,16 +353,18 @@ public static void pickName(final List<String> names, final String startingLette
 ```
 
 The combination of the findFirst() method and the Optional class reduced our code and its smell quite a bit. We rather than providing an alternate value for the absent instance, we can ask Optional to run a vblock of code or a lambda only if a value is present, like so:
-#### PickElementElegant.java
 ```java
+// PickElementElegant.java
+
 foundName.ifPresent(name -> System.out.println("Hello " + name));
 ```
 
 ## Reducing a Collection to a Single Value
 
 Let's start with some basic operations and build up to something a bit more sophisticated,
-#### PickALongest.java
 ```java
+// PickALongest.java
+
 System.out.println("Total number of characters in all names: " +
   friends.stream()
          .mapToInt(name -> name.length())
@@ -345,8 +372,9 @@ System.out.println("Total number of characters in all names: " +
 ```
 
 We can use the reduce() method to compare two elements against each other and pass along the result for further comparison with the remaining elements in the collections.
-#### PickALongest.java
 ```java
+// PickALongest.java
+
 final Optional<String> aLongName =
   friends.stream()
          .reduce((name1, name2) ->
@@ -357,8 +385,9 @@ final Optional<String> aLongName =
 ```
 
 If any name was longer than the given base, it would get picked up; otherwise the function would return the base value, Steve in this example. This version of reduce() does not return an Optional since if the collection is empty, the default will be returned; there's no concern of an absent of nonexistent value
-#### PickALongest.java
 ```java
+// PickALongest.java
+
 final String steveOrLonger =
   friends.stream()
          .reduce("Steve", (name1, name2) ->
@@ -368,8 +397,9 @@ final String steveOrLonger =
 ## Joining Elements.
 
 We have to iterate through the list and print each element. Since the Java 5 for construct is better than the archaic for loop:
-#### PrintList.java
 ```java
+// PrintList.java
+
 for(String name : friends) {
   System.out.print(name + ", ");
 }
@@ -378,8 +408,9 @@ System.out.println();
 ```
 
 There's a stinking comma at the end (shall we blame it on Scott?)
-#### PrintList.java
 ```java
+// PrintList.java
+
 for(int i = 0; i < friends.size() - 1; i++) {
   System.out.print(friends.get(i) + ", ");
 }
@@ -389,13 +420,15 @@ if(friends.size() > 0)
 ```
 
 A StringJoiner class cleans up all that mess in Java 8 and the String class has an added convenience method join() to turn smelly code into a simple one-liner
-#### PrintList.java
 ```java
+// PrintList.java
+
 System.out.println(String.join(", ", friends));
 ```
 The collect() method does the reduction but delegates the actual implementation or target to a collector
-#### PrintList.java
 ```java
+// PrintList.java
+
 System.out.println(
   friends.stream()
          .map(String::toUpperCase)

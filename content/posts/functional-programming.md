@@ -654,3 +654,107 @@ printPeople("Sorted in ascending order by age and name: ",
         .sorted(comparing(byAge).thenComparing(byTheirName))
         .collect(toList()));
 ```
+
+## Using the collect Method and the Collectors Class
+Here's a version thta uses mutability and forEach()
+
+```java
+// OlderThan20.java
+
+List<Person> olderThan20 = new ArrayList<>();
+  people.stream()
+        .filter(person -> person.getAge() > 20)
+        .forEach(person -> olderThan20.add(person));
+
+System.out.println("People older than 20: " + olderThan20);
+```
+
+The collect() method takes a stream of elements and collects or gathers them into a result container. To do that, the method needs to know three things.
+
+* How to make a result container (for example, using the ArrayList::new method)
+* How to add a single element to a result container (for examplem using the ArrayList::add method)
+* How to merge one result elememt container into another (for example, using the ArrayList::addAll method)
+
+Lets provide these operations to the collect() method to gather teh results of a stream after a filter operation.
+```java
+// OlderThan20.java
+
+List<Person> olderThan20 =
+  people.stream()
+        .filter(person -> person.getAge() > 20)
+        .collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
+
+System.out.println("People older than 20: " + olderThan20);
+```
+
+This version of code produces the same result as the previous version; however, this version has many benefits.
+
+Now, lets modify the previous version to use this version of collect() method.
+
+```java
+// OlderThan20.java
+
+List<Person> olderThan20 =
+  people.stream()
+        .filter(person -> person.getAge() > 20)
+        .collect(Collectors.toList());
+
+System.out.println("People older than 20: " + olderThan20);
+```
+There are several methods on the addition to toList(), there is toSet(), to accumulate into a set, toMap() to gather into a key-value collection, and joinning() to concatenate the elements into a String. We can also join multiple combine operations using methods like mapping(), collectingAndThen(), minBy(), and groupingBy().
+```java
+// OlderThan20.java
+
+Map<Integer, List<Person>> peopleByAge =
+  people.stream()
+        .collect(Collectors.groupingBy(Person::getAge));
+
+System.out.println("Grouped by age: " + peopleByAge);
+```
+
+You can see the grouping in this output:
+```text
+Grouped by age: {35=[Greg - 35], 20=[John - 20], 21=[Sara - 21, Jane - 21]}
+```
+
+With as simple call to the collect() method are we are able to perform the grouping. The groupingBy() method akes a lambda expression or a method reference called the _classifier function_, that returns the value of the propertiy on which we want to do the grouping. Based on what we return from this function, it put the element in context into that bucket or group
+
+Continuing with the pervoius example, instead of creating a map of all Person objects by age, lets get only people's names, ordered by age
+```java
+// OlderThan20.java
+
+Map<Integer, List<String>> nameOfPeopleByAge =
+  people.stream()
+        .collect(
+          groupingBy(Person::getAge, mapping(Person::getName, toList())));
+
+System.out.println("People grouped by age: " + nameOfPeopleByAge);
+```
+
+In this version groupingBy() takes two paramters: the first is the age, which is the criteria to group by, and the second is a Collector, which is the result of a call to the mapping() function
+
+Lets look at the output from this code:
+```text
+People grouped by age: {35=[Greg], 20=[John], 21=[Sara, Jane]}
+```
+
+Lets look at one more conbination: lets group the names by their first character and then get the oldest person in each group.
+```java
+// OlderThan20.java
+
+Comparator<Person> byAge = Comparator.comparing(Person::getAge);
+
+Map<Character, Optional<Person>> oldestPersonOfEachLetter =
+  people.stream()
+        .collect(groupingBy(person -> person.getName().charAt(0),
+            reducing(BinaryOperator.maxBy(byAge))));
+
+System.out.println("Oldest person of each letter:");
+System.out.println(oldestPersonOfEachLetter);
+```
+We first group the names based on their first letter. For this, we pass a lambda expression as the first parameter to the groupingBy() method. From within this lambda expression we return the first character of the name for grouping purposes. The second parameter in this example, instead of mapping, performs a reduce operation. In each group, it reduces the elements to the oldest person, as decided by the maxBy() method. The syntax is a bit dense due to the combination of operations, but it reads like this: group by first character of name and reduce to the person with maximum age. Let’s look at the output, which lists the oldest person in each grouping of names that start with a given letter.
+
+```text
+Oldest person of each letter:
+{S=Optional[Sara - 21], G=Optional[Greg - 35], J=Optional[Jane - 21]}
+```

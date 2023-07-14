@@ -10,6 +10,7 @@ draft: false
 
 # [Chapter 1 Hello Lambda Expressions!](#chapter-1-hello-lambda-expression)
 # [Chapter 2 Using Collections](#chapter-2-using-collections)
+# [Chapter 3 Strings, Comparators, and Filters](#chapter-3-strings-comparators-and-filters)
 
 # Chapter 1 Hello Lambda Expression!
 
@@ -436,3 +437,69 @@ System.out.println(
 ```
 
 We invoked the collect() on the transformed list and provided it a collector returned by the joining() method, which is a static method on a Collectors utility class. A collector acts as a sink object to receive alements passed by the collect() method and store it in a desired format.
+
+# Chapter 3 Strings, Comparators, and Filters
+
+## Iterating a String
+
+```java
+// IterateString.java
+
+final String str = "w00t";
+
+str.chars()
+  .forEach(ch -> System.out.println(ch));
+```
+
+```java
+// IterateString.java
+
+final String str = "w00t";
+
+str.chars()
+  .forEach(System.out::println);
+```
+
+We write a convenience method
+```java
+// IterateString.java
+
+private static void printChar(int aChar) {
+  System.out.println((char)(aChar));
+}
+```
+We can use a reference to this convenience method to fix the output
+```java
+// IterateString.java
+
+tr.chars()
+   .forEach(IterateString::printChar);
+```
+
+If we want to process characters and not int from the start
+```java
+// IterateString.java
+
+str.chars()
+  .mapToObj(ch -> Character.valueOf((char)ch))
+  .forEach(System.out::println);
+```
+
+We can see the filtered digits in the next ouput
+```java
+// IterateString.java
+
+str.chars()
+  .filter(ch -> Character.isDigit(ch))
+  .forEach(ch -> printChar(ch));
+```
+
+Use reference to the references to the respective methods
+```java
+// IterateString.java
+
+str.chars()
+  .filter(Character::isDigit)
+  .forEach(IterateString::printChar);
+```
+

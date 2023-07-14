@@ -559,3 +559,68 @@ people.stream()
       .sorted(Person::ageDifference)
       .collect(toList());
 ```
+
+## Reusing a Comparator
+We got the people sorted in ascending order by age quite easily, and sorting then in descending order is just as easy
+```java
+// Compare.java
+
+printPeople("Sorted in descending order by age: ",
+  people.stream()
+    .sorted((person1, person2) -> person2.ageDifference(person1))
+    .collect(toList()));
+```
+
+Using a Comparator
+```java
+// Compare.java
+
+Comparator<Person> compareAscending = (person1, person2) -> person1.ageDifference(person2);
+Comparator<Person> compareDescending = compareAscending.reversed();
+```
+
+Let's use these two comparators in the code
+```java
+// Compare.java
+
+printPeople("Sorted in ascending order by age: ",
+  people.stream()
+        .sorted(compareAscending)
+        .collect(toList())
+);
+
+printPeople("Sorted in descending order by age: ",
+  people.stream()
+        .sorted(compareDescending)
+        .collect(toList())
+);
+```
+
+Now sorting by name
+```java
+// Compare.java
+
+printPeople("Sorted in ascending order by name: ",
+  people.stream()
+        .sorted((person1, person2) ->
+           person1.getName().compareTo(person2.getName()))
+        .collect(toList()));
+```
+
+Now lets pick the youngest person in the list
+```java
+// Compare.java
+
+people.stream()
+    .min(Person::ageDifference)
+    .ifPresent(youngest -> System.out.println("Youngest: " + youngest));
+```
+
+Now pick the oldest person in the list
+```java
+// Compare.java
+
+people.stream()
+    .max(Person::ageDifference)
+    .ifPresent(eldest -> System.out.println("Eldest: " + eldest));
+```

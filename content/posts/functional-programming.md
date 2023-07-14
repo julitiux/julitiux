@@ -624,3 +624,33 @@ people.stream()
     .max(Person::ageDifference)
     .ifPresent(eldest -> System.out.println("Eldest: " + eldest));
 ```
+
+## Multiple and Fluent Comparisons.
+
+Let's look at the new convenience methods added to the `Comparator` interface and use to compare with ease based multiple properties.
+
+
+```java
+// Compare.java
+
+final Function<Person, String> byName = person -> person.getName();
+
+people.stream()
+      .sorted(comparing(byName));
+```
+
+In the code we statically imported the comparing() method in the Comparator interface. The comparing() method uses the logic embedded in the provided lambda expression to create a Comparator. In other words, it´s a high-order function that takes in one function (Function) and returns another (Comparator)
+
+We can take this fluency further to make multiple comparisons.
+
+```java
+// Compare.java
+
+final Function<Person, Integer> byAge = person -> person.getAge();
+final Function<Person, String> byTheirName = person -> person.getName();
+
+printPeople("Sorted in ascending order by age and name: ",
+  people.stream()
+        .sorted(comparing(byAge).thenComparing(byTheirName))
+        .collect(toList()));
+```

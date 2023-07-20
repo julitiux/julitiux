@@ -779,3 +779,41 @@ Files.list(Paths.get("."))
   .forEach(System.out::println);
 ```
 
+## Listing select Files in a directory
+Java has long provided a variation of the list() method to cherry-pick filenames. This version of list() takes a FilenameFilter as its parameter. This interface has one method, accept(), that takes two parameters: File dir (representing the directory) and String name (representing a filename). We’d return a true from the accept() method to include the given filename in the list, and false otherwise. Let’s explore the options to implement this method.
+```java
+// ListSelectFiles.java
+
+final String[] files =
+  new File("fpij").list(new java.io.FilenameFilter() {
+    public boolean accept(final File dir, final String name) {
+      return name.endsWith(".java");
+    }
+  });
+System.out.println(files);
+```
+
+Lets use lambda expression to get a list of all java files in the same directory
+```java
+// ListSelectFiles.java
+
+Files.newDirectoryStream(
+         Paths.get("fpij"), path -> path.toString().endsWith(".java"))
+     .forEach(System.out::println);
+```
+
+Now, lets loot at an example of listing all hidden files in the curremt directory
+```java
+// ListHiddenFiles.java
+
+final File[] files = new File(".").listFiles(file -> file.isHidden());
+```
+
+We can further reduce the code here; rather passing a lambda expression, we can use a method reference to make teh code more concise.
+```java
+// ListHiddenFiles.java
+
+new File(".").listFiles(File::isHidden);
+```
+
+

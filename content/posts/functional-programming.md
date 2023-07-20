@@ -816,4 +816,39 @@ We can further reduce the code here; rather passing a lambda expression, we can 
 new File(".").listFiles(File::isHidden);
 ```
 
+## Listing Immediate Subdirectories Using flatMap
+Lets use the traditional for loop first to iterate over the files ina given directory
+```java
+// ListSubDirs.java
+
+public static void listTheHardWay() {
+  List<File> files = new ArrayList<>();
+
+  File[] filesInCurrentDir = new File(".").listFiles();
+  for(File file : filesInCurrentDir) {
+    File[] filesInSubDir = file.listFiles();
+    if(filesInSubDir != null) {
+      files.addAll(Arrays.asList(filesInSubDir));
+    } else {
+      files.add(file);
+    }
+  }
+
+  System.out.println("Count: " + files.size());
+}
+```
+
+Some directories (or files) may be empty and may not have children. In that case, we simply wrap a stream around the no-child directory or file element.
+```java
+// ListSubDirs.java
+
+public static void betterWay() {
+  List<File> files =
+    Stream.of(new File(".").listFiles())
+          .flatMap(file -> file.listFiles() == null ?
+              Stream.of(file) : Stream.of(file.listFiles()))
+          .collect(toList());
+  System.out.println("Count: " + files.size());
+}
+```
 

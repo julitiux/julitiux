@@ -758,3 +758,24 @@ We first group the names based on their first letter. For this, we pass a lambda
 Oldest person of each letter:
 {S=Optional[Sara - 21], G=Optional[Greg - 35], J=Optional[Jane - 21]}
 ```
+
+## Listing all files in a Directory
+Its pretty simple to use the File class list() method to list all filenames in a directory
+```java
+// ListFiles.java
+
+Files.list(Paths.get("."))
+  .forEach(System.out::println);
+```
+
+To list files in a different directory, we can replace "." with the full path of the directory we desire
+
+If we want only the subdirectories in teh current directory instead of a listing of all the files, we can use the filter() method:
+```java
+// ListDirs.java
+
+Files.list(Paths.get("."))
+  .filter(Files::isDirectory)
+  .forEach(System.out::println);
+```
+

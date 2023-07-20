@@ -852,3 +852,30 @@ public static void betterWay() {
 }
 ```
 
+## Watching a File Change
+Let's creae an example to watch for file changes in the current directory
+```java
+// WatchFileChange.java
+
+final Path path = Paths.get("."); final WatchService watchService =
+  path.getFileSystem()
+      .newWatchService();
+
+path.register(watchService, StandardWatchEventKinds.ENTRY_MODIFY);
+
+System.out.println("Report any file changed within next 1 minute...");
+```
+
+We’ve registered a WatchService to observe any change to the current directory. We can poll the watch service for any change to files in this directory, and it will notify us through a WatchKey. Once we gain access to the key, we can iterate though all the events to get the details of the file update. Since multiple files may change at once, a poll may return a collection of events rather than a single event. Let’s look at the code for polling and iterating.
+```java
+// WatchFileChange.java
+
+final WatchKey watchKey = watchService.poll(1, TimeUnit.MINUTES);
+
+if(watchKey != null) {
+  watchKey.pollEvents()
+          .stream()
+          .forEach(event ->
+            System.out.println(event.context()));
+}
+```

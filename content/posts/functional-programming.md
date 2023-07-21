@@ -883,4 +883,66 @@ if(watchKey != null) {
 
 # Chapter 4 Designing with Lambda Expressions
 
+## Separating Converns Using Lambda Expressions.
+
+### Exploring Design Concerns.
+The desing we first create will mex multiple concerns in one method, but we'll quickly refactor to make the method cohesive.
+
+```java
+// Asset.java
+
+public class Asset {
+  public enum AssetType { BOND, STOCK };
+  private final AssetType type;
+  private final int value;
+  public Asset(final AssetType assetType, final int assetValue) {
+    type = assetType;
+    value = assetValue;
+  }
+
+  public AssetType getType() { return type; }
+  public int getValue() { return value; } }
+```
+
+Asset is a simple JavaBean with two properties; type and value. Suppose we'ra asked to total the values of all the assets given--let's write a method for that in AssetUtils class
+
+```java
+// AssetUtil.java
+
+public static int totalAssetValues(final List<Asset> assets) {
+  return assets.stream()
+               .mapToInt(Asset::getValue)
+               .sum();
+}
+```
+We used the convenience of lambda expressions within this function. We transformed the List of Assets into a Stream.
+
+```java
+// AssetUtil.java
+
+final List<Asset> assets = Arrays.asList(
+  new Asset(Asset.AssetType.BOND, 1000),
+  new Asset(Asset.AssetType.BOND, 2000),
+  new Asset(Asset.AssetType.STOCK, 3000),
+  new Asset(Asset.AssetType.STOCK, 4000)
+);
+```
+
+Here's a call to the totalAssetValues() method using these assets.
+
+```java
+// AssetUtil.java
+
+System.out.println("Total of all assets: " + totalAssetValues(assets));
+```
+
+This code will report the total of all the gives assets, as we see in the output.
+
+```text
+Total of all assets: 10000
+```
+
+
+
+
 

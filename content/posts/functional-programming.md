@@ -11,6 +11,7 @@ draft: false
 # [Chapter 1 Hello Lambda Expressions!](#chapter-1-hello-lambda-expression)
 # [Chapter 2 Using Collections](#chapter-2-using-collections)
 # [Chapter 3 Strings, Comparators, and Filters](#chapter-3-strings-comparators-and-filters)
+# [Chapter 4 Designing with Lambda Expressions](#chapter-4-designing-with-lambda-expressions)
 
 # Chapter 1 Hello Lambda Expression!
 
@@ -879,3 +880,7 @@ if(watchKey != null) {
             System.out.println(event.context()));
 }
 ```
+
+# Chapter 4 Designing with Lambda Expressions
+
+

@@ -942,7 +942,47 @@ This code will report the total of all the gives assets, as we see in the output
 Total of all assets: 10000
 ```
 
+## Getting Entangled with the Converns.
 
+Imagine we’re asked to total only the bond assets. After a quick glance at the totalAssetValues() method, we realize it does almost everything we need. Why not copy and paste that code? After all, there’s a reason the integrated development environments have gone through the trouble to provide keyboard shortcuts for that, right?
 
+```java
+// AssetUtil.java
 
+public static int totalBondValues(final List<Asset> assets){
+  return assets.stream()
+               .mapToInt(asset ->
+                 asset.getType() == AssetType.BOND ? asset.getValue() : 0)
+               .sum();
+}
+```
+
+Now with Stock Values
+
+```java
+// AssetUtil.java
+
+public static int totalStockValues(final List<Asset> assets){
+  return assets.stream()
+               .mapToInt(asset ->
+                 asset.getType() == AssetType.STOCK ? asset.getValue() : 0)
+               .sum();
+}
+```
+
+Execute the methods
+
+```java
+// AssetUtil.java
+
+System.out.println("Total of bonds: " + totalBondValues(assets));
+System.out.println("Total of stocks: " + totalStockValues(assets));
+```
+
+The total give us the desire result
+
+```text
+Total of bonds: 3000
+Total of stocks: 7000
+```
 

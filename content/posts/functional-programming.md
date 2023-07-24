@@ -986,3 +986,40 @@ Total of bonds: 3000
 Total of stocks: 7000
 ```
 
+## Refactoring to Separeate a Key Concenrn.
+
+Let's refactor the three methods into one that takes a functional interface as a parameter
+
+```java
+// AssetUtilRefactored.java
+
+public static int totalAssetValues(final List<Asset> assets, final Predicate<Asset> assetSelector) {
+  return assets.stream()
+               .filter(assetSelector)
+               .mapToInt(Asset::getValue)
+               .sum();
+}
+```
+
+This refactored version of totalAssetValues() takes two paramters: the list of asset and a `Predicate` to evaluate whether an asset should be considered.
+
+Now, lets use this refactores version of totalAssetValues() to total the values of all the assets.
+
+```java
+// AssetUtilRefactored.java
+System.out.println("Total of all assets: " +
+  totalAssetValues(assets, asset -> true));
+```
+
+Next, reuse the function to compute the total of only bonds and then the total of only stocks. We'll pass different lambda expressions as the argument to the `totalAssetValues()` function.
+
+```java
+// AssetUtilRefactored.java
+
+System.out.println("Total of bonds: " +
+  totalAssetValues(assets, asset -> asset.getType() == AssetType.BOND));
+
+System.out.println("Total of stocks: " +
+  totalAssetValues(assets, asset -> asset.getType() == AssetType.STOCK));
+
+```

@@ -1168,3 +1168,61 @@ Without the temporary variable, it would be like this:
 ```text
 return next.apply(target.apply(input));
 ```
+
+Now let's write a setFilter() method that takes a varargs of Function; we can send zero or more filters to this functon. In addition, let's create the constructor for the camera
+
+```java
+// Camera.java
+
+public void setFilters(final Function<Color, Color>... filters) {
+  filter =
+    Stream.of(filters)
+          .reduce((filter, next) -> filter.compose(next))
+          .orElse(color -> color);
+}
+
+public Camera() { setFilters(); }
+```
+
+In the setFilters() methos we iterate through the filters and compose them into a chain using the compose() method. If no filter is given, then the reduce() method will return an Optional empty. In that case we provide a dummy filter as an argument to the orElse() method, and it simply returns the color that the filter would receive for processing. If we provide filters to the setFilters() method, the filter field will refer to the first filter—an instance of Function<Color, Color>—that’s at the head of a chain of filters.
+
+We provided a lambda expression as a parameter to the orElse() method of the Optional that the reduce() method returned. The Function interface has an identity() static method that does the same operation as the lambda expression we wrote. Instead of creating our own lambda expression, we can use a reference to that method instead. To do so, we need to change
+
+```text
+.orElse(color -> color);
+```
+
+to
+
+```text
+.orElseGet(Function::identity);
+```
+
+In addition to the setFilters() method we have a constructor that simply sets the filter to the dummy filter I mentioned previously.
+
+We’ll use it with no filters first, but we need a Camera instance to start. Let’s create one and assign it to a local variable camera.
+
+```java
+// Camera.java
+
+final Camera camera = new Camera();
+
+final Consumer<String> printCaptured = (filterInfo) ->
+  System.out.println(String.format("with %s: %s", filterInfo, camera.capture(new Color(200, 100, 200))));
+
+```
+
+To see the camera in action, we need a convenience function to print the capture() method’s results. Rather than creating a standalone static method, we created a lambda expression to stand in for an instance of the Consumer func- tional interface, right here within the main() method. We chose a Consumer because printing consumes the value and does not yield any results. This function will invoke capture() with the colors 200, 100, 200 for the red, green, and blue parts of color, respectively, and print the resulting filtered/processed output. Let’s ask the camera to capture the given colors.
+
+```java
+// Camera.java
+
+printCaptured.accept("no filter");
+```
+
+Since no filters are given, the captured color should be the same as the input;
+let’s verify that in the output.
+
+```text
+with no filter: java.awt.Color[r=200,g=100,b=200]
+```

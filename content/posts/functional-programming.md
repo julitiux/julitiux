@@ -1023,3 +1023,41 @@ System.out.println("Total of stocks: " +
   totalAssetValues(assets, asset -> asset.getType() == AssetType.STOCK));
 
 ```
+
+## Delegating Using Lambda Expressions
+
+We used lambda expressions and the strategy pattern to separate a concern from method, even can also use them to separate a concern from a class.
+
+### Creating a Delegate
+
+Rather than delegating part of the responsability to another class, we can delegate it to lambda expressions and method references.
+
+```java
+// CalculateNAV.java
+
+public class CalculateNAV {
+
+  public BigDecimal computeStockWorth(final String ticker, final int shares) {
+    return priceFinder.apply(ticker).multiply(BigDecimal.valueOf(shares));
+  }
+
+  //... other methods that use the priceFinder ...
+
+}
+```
+
+Now we need the `priceFinder`; we have to decide what kind of object it will be.
+
+```java
+// CalculateNAV.java
+
+private Function<String, BigDecimal> priceFinder;
+```
+
+Here's the constructor for the CalculateNAV class
+
+```java
+public CalculateNAV(final Function<String, BigDecimal> aPriceFinder) {
+  priceFinder = aPriceFinder;
+}
+```

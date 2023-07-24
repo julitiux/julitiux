@@ -1381,4 +1381,41 @@ mailer.send();
 
 First it's noisy; we had to repeat the mailer so many times. Second, at the end of the call, what do we do with the mailer instance? we can reuse it for another set of calls, or is it disposable?
 
+### Using method Chaining
+
+Rather tha repeating the reference, it would by great to continue a conversational state on a context object. We can archieve this using a simple _method chaining_ or _cascade method_ patter. In this pattern, rather than having void methods, we make each method return an instance. This returned object is often _this_, the object on which the method is invoked:
+
+```java
+// MailBuilder.java
+
+public class MailBuilder {
+  public MailBuilder from(final String address) { /*... */; return this; }
+  public MailBuilder to(final String address)   { /*... */; return this; }
+  public MailBuilder subject(final String line) { /*... */; return this; }
+  public MailBuilder body(final String message) { /*... */; return this; }
+  public void send() { System.out.println("sending..."); }
+
+//...
+}
+```
+
+The new interface will be ledd noisy to use; we get rid of the repetitive variable name and nicely chain the calls
+
+```java
+// MailBuilder.java
+
+new MailBuilder()
+  .from("build@agiledeveloper.com")
+  .to("venkats@agiledeveloper.com")
+  .subject("build notification")
+  .body("...it sucks less...")
+  .send();
+```
+
+We started with a MailBuilder instance and chained the calls to the functions in sequence to the instance that the previous call returned. The method chaining, or a train wreck as some like to call it, passed the state from one call to next as we moved through the chain.
+
+Even though this design reduced the nise, it has a few disadvantages. The new keyword sticks out, reducing the API's fluency and readability. The design does not prevent someone from storing the reference from new and then chaining from that reference. In the latter case, we’d still have the issue with object lifetime, the second smell I mentioned earlier. Also, there are a lot of corner cases.
+
+
+
 

@@ -1277,3 +1277,69 @@ With this filter combination, the input color goes through a series of transfor-
 ```text
 with brighter & darker filter: java.awt.Color[r=200,g=100,b=200]
 ```
+
+## A Peek into the default Methods.
+
+The Java compiler follows a few simple rules to resolve `default` methods.
+
+1. Subtypes automatically carry over the `default` methods from their supertypes.
+2. For interfaces that contribute a default method, the implementation in a subtype takes precedence over the one in supertypes.
+3. Implementations in classes, including abstract declarations, take prece- dence over all interface defaults.
+4. If there’s a conflict between two or more default method implementations, or there’s a default-abstract conflict between two interfaces, the inheriting class should disambiguate.
+
+```java
+public interface Fly {
+  default void takeOff() { System.out.println("Fly::takeOff"); }
+  default void land() { System.out.println("Fly::land"); }
+  default void turn() { System.out.println("Fly::turn"); }
+  default void cruise() { System.out.println("Fly::cruise"); }
+}
+
+public interface FastFly extends Fly {
+  default void takeOff() { System.out.println("FastFly::takeOff"); }
+}
+
+public interface Sail {
+  default void cruise() { System.out.println("Sail::cruise"); }
+  default void turn() { System.out.println("Sail::turn"); }
+}
+
+public class Vehicle {
+  public void turn() { System.out.println("Vehicle::turn"); }
+}
+```
+
+Now let's create a class that inherits these types.
+
+```java
+public class SeaPlane extends Vehicle implements FastFly, Sail {
+  private int altitude;
+  //...
+  public void cruise() {
+    System.out.print("SeaPlane::cruise currently cruise like: ");
+    if(altitude > 0)
+      FastFly.super.cruise();
+    else
+      Sail.super.cruise();
+  }
+}
+```
+
+To see the behavior of the default methods in action, let's create an instance of SeaPlane and invoke the methods on it.
+
+```java
+SeaPlane seaPlane = new SeaPlane();
+seaPlane.takeOff();
+seaPlane.turn();
+seaPlane.cruise();
+seaPlane.land();
+```
+
+We can now compare the output we got from the mental run of the code with the output from the run on the computer:
+
+```java
+FastFly::takeOff
+Vehicle::turn
+SeaPlane::cruise currently cruise like: Sail::cruise
+Fly::land
+```

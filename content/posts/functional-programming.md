@@ -1083,3 +1083,34 @@ public class CalculateNAVTest {
 ```
 
 Testing the code was quick; we easily stubbed away the dependency to the web sevice, which helped to rapidly and test code. But we can't call it done until we run it with a real web service.
+
+## Integrating with the Web Service
+
+Talking the real web service is almost as easy.
+
+```java
+// CalculateNAV.java
+
+final CalculateNAV calculateNav = new CalculateNAV(YahooFinance::getPrice);
+
+System.out.println(String.format("100 shares of Google worth: $%.2f", calculateNav.computeStockWorth("GOOG", 100)));
+```
+
+```java
+// YahooFinance.java
+
+public class YahooFinance {
+  public static BigDecimal getPrice(final String ticker) {
+    try {
+      final URL url = new URL("http://ichart.finance.yahoo.com/table.csv?s=" + ticker);
+      final BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
+
+      final String data = reader.lines().skip(1).findFirst().get();
+      final String[] dataItems = data.split(",");
+      return new BigDecimal(dataItems[dataItems.length - 1]);
+    } catch(Exception ex) {
+      throw new RuntimeException(ex);
+    }
+  }
+}
+```

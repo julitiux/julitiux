@@ -1258,3 +1258,22 @@ This should reduce the brightness of the input, as we can see in the output.
 ```text
 with darker filter: java.awt.Color[r=140,g=70,b=140]
 ```
+
+### Adding Multiple Filters
+
+The design is good so far; now let's mix to filters - a brighter one and a darker one - to see the effect of chaining
+
+```java
+// Camera.java
+
+camera.setFilters(Color::brighter, Color::darker);
+printCaptured.accept("brighter & darker filter");
+```
+
+We passed two method references to the setFilters() method—just essence, no ceremony. (We could’ve passed in lambda expressions instead of method ref- erences.) The two filters are now chained and the filter reference in the Camera instance is referring to the head of the chain. A call to the capture() method will now route the color processing through each of these filters.
+
+With this filter combination, the input color goes through a series of transfor- mations or filtering; first it passes through the bright filter, which brightens the shades, then it goes through the dark filter, which makes the colors darker again, as we can see from the output.
+
+```text
+with brighter & darker filter: java.awt.Color[r=200,g=100,b=200]
+```

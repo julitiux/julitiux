@@ -1062,7 +1062,7 @@ public CalculateNAV(final Function<String, BigDecimal> aPriceFinder) {
 }
 ```
 
-## Stubbing the Web Service
+### Stubbing the Web Service
 
 Create a unit test to try out our computeStockWorth() method, stubbing away the implementation of the apply method.
 
@@ -1081,3 +1081,5 @@ public class CalculateNAVTest {
   //...
 }
 ```
+
+Testing the code was quick; we easily stubbed away the dependency to the web sevice, which helped to rapidly and test code. But we can't call it done until we run it with a real web service.

@@ -1084,7 +1084,7 @@ public class CalculateNAVTest {
 
 Testing the code was quick; we easily stubbed away the dependency to the web sevice, which helped to rapidly and test code. But we can't call it done until we run it with a real web service.
 
-## Integrating with the Web Service
+### Integrating with the Web Service
 
 Talking the real web service is almost as easy.
 
@@ -1113,4 +1113,58 @@ public class YahooFinance {
     }
   }
 }
+```
+
+## Decorating Using Lambda Expressions
+
+### Designing Filters
+
+Adding filters to a camera is a good example of chaining behavior or responsabilities. We may start with no filters, then add a filter, and then a few more.
+
+```java
+// Camera.java
+
+@SuppressWarnings("unchecked")
+public class Camera {
+  private Function<Color, Color> filter;
+
+  public Color capture(final Color inputColor) {
+    final Color processedColor = filter.apply(inputColor);
+    //... more processing of color...
+    return processedColor;
+  }
+
+  //... other functions that use the filter ...
+}
+```
+
+The Camera has a field for the filter, a reference to an instance of Function (much like the delegation example we saw earlier). This filter function can receive a Color and return a processed Color.
+
+To achieve this flexibility, we’ll use a method that belongs to a special type called default methods, which is new to Java 8. In addition to abstract methods, interfaces can have methods with implementation, marked as default. These methods are automatically added to the classes that implement the interfaces. This was done as a trick in Java 8 to enhance existing classes with new methods without having to change each one of them. In addition, interfaces can have static methods.
+
+In addition to the apply() abstract method, the Function interface has a default method, compose(), to combine or chain multiple Functions. Within the lambda expression that stands in for a Function parameter, we can readily use this method.
+
+The compose() method can combine or chain two Functions together. Once we compose them, a call to apply() will hop through the chained Functions. Let’s take a quick look at how that works. Suppose we compose two Functions, target and next, like this:
+
+```text
+wrapper = target.compose(next);
+```
+
+Now let’s invoke the apply() method on the resulting wrapper.
+
+```text
+wrapper.apply(input);
+```
+
+The result of that call is the same as doing this:
+
+```text
+temp = target.apply(input);
+return next.apply(temp);
+```
+
+Without the temporary variable, it would be like this:
+
+```text
+return next.apply(target.apply(input));
 ```

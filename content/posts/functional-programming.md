@@ -1278,7 +1278,7 @@ With this filter combination, the input color goes through a series of transfor-
 with brighter & darker filter: java.awt.Color[r=200,g=100,b=200]
 ```
 
-## A Peek into the default Methods.
+### A Peek into the default Methods.
 
 The Java compiler follows a few simple rules to resolve `default` methods.
 
@@ -1343,3 +1343,42 @@ Vehicle::turn
 SeaPlane::cruise currently cruise like: Sail::cruise
 Fly::land
 ```
+
+### Creating Fluent Interfaces Using Lambda Expressions
+
+We can use these techniques to structure the APIof our classes, to make it more intuitive and fluent for programmers to use.
+
+### Starting with a Design
+
+Let's start with a simple Mailer class and evolve the design of this interface
+
+```java
+// Mailer.java
+
+public class Mailer {
+  public void from(final String address) { /*... */ }
+  public void to(final String address)   { /*... */ }
+  public void subject(final String line) { /*... */ }
+  public void body(final String message) { /*... */ }
+  public void send() { System.out.println("sending..."); }
+
+//...
+}
+```
+
+The class looks routine -- a brunch of voids methods. Let's use this class to configure and send out and email
+
+```java
+// Mailer.java
+
+Mailer mailer = new Mailer();
+mailer.from("build@agiledeveloper.com");
+mailer.to("venkats@agiledeveloper.com");
+mailer.subject("build notification");
+mailer.body("...your code sucks...");
+mailer.send();
+```
+
+First it's noisy; we had to repeat the mailer so many times. Second, at the end of the call, what do we do with the mailer instance? we can reuse it for another set of calls, or is it disposable?
+
+

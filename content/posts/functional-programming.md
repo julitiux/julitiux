@@ -1226,3 +1226,35 @@ let’s verify that in the output.
 ```text
 with no filter: java.awt.Color[r=200,g=100,b=200]
 ```
+
+### Adding a Filter
+
+Adding a filter is breeze; we simply have to pass the filter to the setFilters() methos. The filter can be a simple lambda expression or a method reference. We can use brighter() on the java.awt.Color class as a filter, so let’s simply pass a reference of this method to the setFilters() method.
+
+```java
+// Camera.java
+
+camera.setFilters(Color::brighter);
+printCaptured.accept("brighter filter");
+```
+
+Let’s look at the result of the capture() with this filter in place.
+
+```text
+with brighter filter: java.awt.Color[r=255,g=142,b=255]
+```
+
+The input color has been brightened. As we can see, the output RGB values are higher than the corresponding values in the input. Let’s quickly change the filter to a darker shade.
+
+```java
+// Camera.java
+
+camera.setFilters(Color::darker); i
+printCaptured.accept("darker filter");
+```
+
+This should reduce the brightness of the input, as we can see in the output.
+
+```text
+with darker filter: java.awt.Color[r=140,g=70,b=140]
+```

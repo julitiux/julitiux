@@ -426,3 +426,74 @@ class MathSpec extends Specification {
 ```
 
 In this code we have finished the test logic, but still need to supply the data values to be used. This is done in a `where`: block, which always comes at the end of the method. In the simplest (and most common) case, the `where`: block holds a _data table_
+
+## Data Tables
+
+Data tables are a convenient way to exercise a feature method with a fixed set of data values
+
+```groovy
+class MathSpec extends Specification {
+  def "maximum of two numbers"(int a, int b, int c) {
+    expect:
+    Math.max(a, b) == c
+
+    where:
+    a | b | c
+    1 | 3 | 3
+    7 | 4 | 7
+    0 | 0 | 0
+  }
+}
+```
+
+The data table must have at least two columns. A single-columns table can be written as:
+
+```groovy
+where:
+a | _
+1 | _
+7 | _
+0 | _
+```
+
+A sequence of two or more unsdescore can be used to split one wide data table into multiple narrower ones.
+
+```groovy
+where:
+a | _
+1 | _
+7 | _
+0 | _
+__
+
+b | c
+1 | 2
+3 | 4
+5 | 6
+```
+
+This is semantically exactly the same, just as one wider combined data table
+
+```groovy
+where:
+a | b | c
+1 | 1 | 2
+7 | 3 | 4
+0 | 5 | 6
+```
+
+The sequence of two or more underscores can be used anywhere in the where block. It will be ignored everywhere, except for in between two data tables, where it is used to separate the two data tables. This means that the separator can also be used as styling element in different ways. It can be used as separator line like shown in the next example
+
+```groovy
+where:
+_____
+a | _
+1 | _
+7 | _
+0 | _
+_____
+b | c
+1 | 2
+3 | 4
+5 | 6
+```

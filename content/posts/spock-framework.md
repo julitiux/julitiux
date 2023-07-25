@@ -497,3 +497,7 @@ b | c
 3 | 4
 5 | 6
 ```
+
+## Isolate Execution of Iterations
+
+Iteration are isolated from each other in the same wey as separate feature methods. Each iteartion get its own instance of the specification class, and the `setup` and `cleanup` methods will be before and after each iteration respectively.

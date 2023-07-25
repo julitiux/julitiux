@@ -1417,7 +1417,7 @@ We started with a MailBuilder instance and chained the calls to the functions in
 Even though this design reduced the nise, it has a few disadvantages. The new keyword sticks out, reducing the API's fluency and readability. The design does not prevent someone from storing the reference from new and then chaining from that reference. In the latter case, we’d still have the issue with object lifetime, the second smell I mentioned earlier. Also, there are a lot of corner cases.
 
 
-## Making the API Intuitive and Fluent
+### Making the API Intuitive and Fluent
 
 Let's evolve the design further. This time we'll combine the method-chaining approach with lambda expressions.
 
@@ -1457,3 +1457,58 @@ FluentMailer.send(mailer -> mailer
 ```
 
 The instance’s scope is fairly easy to see: we get it, work with it, and return it. For that reason, this is also called the loan pattern.
+
+### Dealing with Exceptions
+
+Java programmers are quite opinionated about checked exceptions. Irrespec- tive of how we feel about them, checked exceptions are here to stay and we have to deal with them.
+
+In the next example we create a lambda expression that invokes a method that potentially throws a checked exception. We take a list of path names and ask for their canonical path using the getCanonicalPath() method.
+
+```java
+public class HandleException {
+  public static void main(String[] args) throws IOException {
+    Stream.of("/usr", "/tmp")
+          .map(path -> new File(path).getCanonicalPath())
+          .forEach(System.out::println);
+    //Error, this code will not compile
+  }
+}
+```
+
+We’ve decorated the main() method with the throws clause. However, when we compile this code the Java compiler will report an error:
+
+```text
+... unreported exception IOException; must be caught or declared to be thrown
+         .map(path -> new File(path).getCanonicalPath())
+                                                      ^
+1 error
+```
+
+The error is directly from within the lambda expression passed to the map() method. This method expects as a parameter an implementation of the Function interface. The apply() method of the Function interface does not specify any checked exceptions. So, our lambda expression that stands in for the abstract method in this example is not permitted to throw any checked exceptions.
+
+We’re limited to two options here: we could either handle the exception right there within the lambda expression, or catch it and rethrow it as an unchecked exception. Let’s try the first option:
+
+```java
+Stream.of("/usr", "/tmp")
+      .map(path -> {
+        try {
+          return new File(path).getCanonicalPath();
+        } catch(IOException ex) {
+          return ex.getMessage();
+        }
+      })
+    .forEach(System.out::println);
+```
+
+In the previous example we were limited to the Function interface since the map() method relies on it. When we design our own higher-order functions based on our specific needs, we can more flexibly design the companion functional interfaces to go with it. For example, the next code shows a functional interface whose method specifies a checked exception using the throws clause.
+
+```java
+// UseInstance.java
+
+@FunctionalInterface
+public interface UseInstance<T, X extends Throwable> {
+  void accept(T instance) throws X;
+}
+```
+
+Any method that accepts a parameter of the UseInstance interface will expect and be ready to handle appropriate exceptions or propagate them

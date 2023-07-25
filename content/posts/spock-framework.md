@@ -501,3 +501,9 @@ b | c
 ## Isolate Execution of Iterations
 
 Iteration are isolated from each other in the same wey as separate feature methods. Each iteartion get its own instance of the specification class, and the `setup` and `cleanup` methods will be before and after each iteration respectively.
+
+## Sharing Objects between Iterations
+
+I order to share an Object between iterationsm it has to be keep in @Shared or static filed.
+
+> Only @Shared and static variables can be accessed from with a `where` block

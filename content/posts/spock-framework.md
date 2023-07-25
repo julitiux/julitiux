@@ -6,9 +6,15 @@ draft: false
 
 
 
+# **INDEX**
+# [Spock Primer](#spock-primer)
+# [Data Driven Testing](#data-driven-testing)
+
+
+
+
 
 # Spock Primer
-
 ## Imports
 
 ```groovy
@@ -382,3 +388,41 @@ As we have seen, Spock offers lots of functionality for writing specifications. 
 | @Ignore     | Ignores any feature method carrying this annotation |
 | @IgnoreRest | Any feature method carrying this annotations will be executed, all others will be ignored. Useful for quickly running just a single method |
 | @FailsWith  | Expects a feature method to complete abruptly. @FailsWith has two use cases: First, to document known bugs that cannot be resolved immediately. Second, to replace exception conditions in certain corner cases where the latter cannot be used (like specifying the behavior of exception conditions). In all other cases, exception conditions are preferable |
+
+
+
+# Data Driven Testing
+
+## Introduction
+
+Suppose we want to specify the bahavior of the MAth.max
+
+```groovy
+class MathSpec extends Specification {
+  def "maximum of two numbers"() {
+    expect:
+    // exercise math method for a few different inputs
+    Math.max(1, 3) == 3
+    Math.max(7, 4) == 7
+    Math.max(0, 0) == 0
+  }
+}
+```
+
+* Code and data are mixed and cannot easily be changed indenpendently
+* Data cannot easily be auto-generated or fetched from external sources
+* In order to exercise the same code multiple times, it either has to be duplicated or extracted into a separated method
+* In case of a failure, it may not be immediatly clear which input caused the failure
+* Exercising teh same code multiple times does not ebenfit from the same isolation as executing separate method does
+
+```groovy
+class MathSpec extends Specification {
+  def "maximum of two numbers"(int a, int b, int c) {
+    expect:
+    Math.max(a, b) == c
+    ...
+  }
+}
+```
+
+In this code we have finished the test logic, but still need to supply the data values to be used. This is done in a `where`: block, which always comes at the end of the method. In the simplest (and most common) case, the `where`: block holds a _data table_

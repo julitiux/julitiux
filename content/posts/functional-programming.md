@@ -1417,5 +1417,43 @@ We started with a MailBuilder instance and chained the calls to the functions in
 Even though this design reduced the nise, it has a few disadvantages. The new keyword sticks out, reducing the API's fluency and readability. The design does not prevent someone from storing the reference from new and then chaining from that reference. In the latter case, we’d still have the issue with object lifetime, the second smell I mentioned earlier. Also, there are a lot of corner cases.
 
 
+## Making the API Intuitive and Fluent
 
+Let's evolve the design further. This time we'll combine the method-chaining approach with lambda expressions.
 
+```java
+// FluentMailer.java
+
+public class FluentMailer {
+  private FluentMailer() {}
+
+  public FluentMailer from(final String address) { /*... */; return this; }
+  public FluentMailer to(final String address) { /*... */; return this; }
+  public FluentMailer subject(final String line) { /*... */; return this; }
+  public FluentMailer body(final String message) { /*... */; return this; }
+
+  public static void send(final Consumer<FluentMailer> block) {
+    final FluentMailer mailer = new FluentMailer();
+    block.accept(mailer);
+    System.out.println("sending...");
+  }
+
+//...
+}
+```
+
+Just like in the method-chaining version, all the nonterminal methods return the instance. In addition, in this version we made the constructor private. This will disallow direct object creation. We also made the terminal method, send(), a static method and it expects a Consumer as a parameter.
+
+Rather than creating an instance, users will now invoke send() and pass a block of code. The send() method will create an instance, yield it to the block, and, upon return, complete any required validations and perform its final send operations.
+
+```java
+// FluentMailer.java
+
+FluentMailer.send(mailer -> mailer
+    .from("build@agiledeveloper.com")
+    .to("venkats@agiledeveloper.com")
+    .subject("build notification")
+    .body("...much better..."));
+```
+
+The instance’s scope is fairly easy to see: we get it, work with it, and return it. For that reason, this is also called the loan pattern.

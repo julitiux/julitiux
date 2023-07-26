@@ -654,3 +654,47 @@ a << [1, 7, 0]
 b << [3, 4, 0]
 c << [3, 7, 0]
 ```
+
+## Multi-Variable Data Pipes
+
+If a data provider returns multiple values per iteration, it can be connected to multiple data variables simultaneously
+
+```groovy
+@Shared sql = Sql.newInstance("jdbc:h2:mem:", "org.h2.Driver")
+
+def "maximum of two numbers"() {
+  expect:
+  Math.max(a, b) == c
+
+  where:
+  [a, b, c] << sql.rows("select a, b, c from maxdata")
+}
+```
+
+Data can be ignored with an underscore `_`
+
+```groovy
+...
+where:
+[a, b, _, c] << sql.rows("select * from maxdata")
+```
+The multi-assignments can even be nested. The following example will generate these iterations:
+
+| a | b | c |
+| - | - | - |
+| ['a1', 'a2'] | 'b1' | 'c1' |
+| ['a2', 'a1'] | 'b1' | 'c1' |
+| ['a1', 'a2'] | 'b2' | 'c2' |
+| ['a2', 'a1'] | 'b2' | 'c2' |
+
+```groovy
+...
+where:
+[a, [b, _, c]] << [
+  ['a1', 'a2'].permutations(),
+  [
+    ['b1', 'd1', 'c1'],
+    ['b2', 'd2', 'c2']
+  ]
+].combinations()
+```

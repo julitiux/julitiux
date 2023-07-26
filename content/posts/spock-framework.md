@@ -570,3 +570,25 @@ class MathSpec extends Specification {
 }
 ```
 
+## Reporting of Failures
+
+Assume that our implementation of the max method has a flaw, and one of the iterations fails
+
+```text
+maximum of two numbers [a: 1, b: 3, c: 3, #0]   PASSED
+maximum of two numbers [a: 7, b: 4, c: 7, #1]   FAILED
+
+Condition not satisfied:
+
+Math.max(a, b) == c
+|    |   |  |  |  |
+|    |   7  4  |  7
+|    42        false
+class java.lang.Math
+
+maximum of two numbers [a: 0, b: 0, c: 0, #2]   PASSED
+```
+
+Iterations of a feature method are by default unrolled with a rich naming pattern. This pattern can also be configured as documented at Unrolled Iteration Names or the unrolling can be disabled
+
+

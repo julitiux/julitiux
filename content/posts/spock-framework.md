@@ -641,3 +641,16 @@ A feature will be unrolled
 * if the method is annotated with @Unroll
 * if the method is not annotated with @Rollup and the spec is annotated with @Unroll
 * if neither the method nor the spec is annotated with @Rollup and the configuration option unroll { unrollByDefault } is set to its default value true
+
+
+## Data Pipes
+
+A data pipe, indicated by the left-shift `<<` operator, connects a data variable to a _data prvider_. The data provider holds all values for the variable, one per iteration. This include objects of type Collection, Strings, Iterables and objects implementing the Iterable contract.
+
+```groovy
+...
+where:
+a << [1, 7, 0]
+b << [3, 4, 0]
+c << [3, 7, 0]
+```

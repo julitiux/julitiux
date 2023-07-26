@@ -591,4 +591,53 @@ maximum of two numbers [a: 0, b: 0, c: 0, #2]   PASSED
 
 Iterations of a feature method are by default unrolled with a rich naming pattern. This pattern can also be configured as documented at Unrolled Iteration Names or the unrolling can be disabled
 
+## Method Uprolling and Unrolling
 
+A method annoted with @Rollup will have its iteration not reportrd independently but only aggregated within the feature.
+
+```groovy
+@Rollup
+def "maximum of two numbers"() {
+...
+```
+
+Note that up- and unrolling has no effect on how the method gets executed; it is only an alternation in reporting. Depending on the execution environment, the output will look something like:
+
+```text
+maximum of two numbers   FAILED
+
+Condition not satisfied:
+
+Math.max(a, b) == c
+|    |   |  |  |  |
+|    |   7  4  |  7
+|    42        false
+class java.lang.Math
+```
+
+The @Rollup annotation can also be placed on a spec. This has the same effect as placing it on each data-driven feature method of the spec that does not have an @Unroll annotation.
+
+Alternatively the configuration file setting unrollByDefault in the unroll section can be set to false to roll up all features automatically unless they are annotated with @Unroll or are contained in an @Unrolled spec and thus reinstate the pre Spock 2.0 behavior where this was the default.
+
+```groovy
+//Disable Default Unrolling
+unroll {
+    unrollByDefault false
+}
+```
+
+It is illegal to annotate a spec or a feature with both the @Unroll and the @Rollup annotation and if detected this will cause an exception to be thrown.
+
+To summarize:
+
+A feature will be uprolled
+
+* if the method is annotated with @Rollup
+* if the method is not annotated with @Unroll and the spec is annotated with @Rollup
+* if neither the method nor the spec is annotated with @Unroll and the configuration option unroll { unrollByDefault } is set to false
+
+A feature will be unrolled
+
+* if the method is annotated with @Unroll
+* if the method is not annotated with @Rollup and the spec is annotated with @Unroll
+* if neither the method nor the spec is annotated with @Rollup and the configuration option unroll { unrollByDefault } is set to its default value true

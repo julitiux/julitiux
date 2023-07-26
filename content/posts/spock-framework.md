@@ -755,3 +755,47 @@ b = row.b
 c = row.c
 ```
 
+## Accessing Other Data Variables
+
+There are only two possibilities to access one data variable
+
+The first possibility are derived data variables like every data variable that is defined by a direct assignment can access all previously defined data variables, including the ones defined through data tables or data pipes:
+
+```groovy
+...
+where:
+a = 3
+b = Math.random() * 100
+c = a > b ? a : b
+```
+
+The second possibility is to access previous columns within data tables:
+
+```groovy
+...
+where:
+a | b
+3 | a + 1
+7 | a + 2
+0 | a + 3
+```
+
+This also includes columns in previous data tables in the same where block:
+
+```groovy
+...
+where:
+a | b
+3 | a + 1
+7 | a + 2
+0 | a + 3
+
+and:
+c = 1
+
+and:
+d     | e
+a * 2 | b * 2
+a * 3 | b * 3
+a * 4 | b * 4
+```

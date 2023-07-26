@@ -698,3 +698,35 @@ where:
   ]
 ].combinations()
 ```
+
+## Named deconstruction of data pipes
+
+Since Spock 2.2, multi variable data pipes can also be deconstructed from maps. This is useful when the data provider returns a map with named keys. Or, if you have long values that don’t fit well into a data-table, then using the maps makes it easier to read.
+
+```groovy
+...
+where:
+[a, b, c] << [
+  [
+    a: 1,
+    b: 3,
+    c: 5
+  ],
+  [
+    a: 2,
+    b: 4,
+    c: 6
+  ]
+]
+```
+
+You can use named deconstruction with nested data pipes, but only on the innermost nesting level.
+
+```groovy
+...
+where:
+[a, [b, c]] << [
+  [1, [b: 3, c: 5]],
+  [2, [c: 6, b: 4]]
+]
+```

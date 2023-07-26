@@ -507,3 +507,66 @@ Iteration are isolated from each other in the same wey as separate feature metho
 I order to share an Object between iterationsm it has to be keep in @Shared or static filed.
 
 > Only @Shared and static variables can be accessed from with a `where` block
+
+## Syntactic Variations
+
+The previous code can be tweaked in a few ways
+
+First, since the where block already declares all data variable, the method parameters can be omitted
+Second, inputs and matched by outputs can be separated with  a double pipe simbol `||` to visually set them apart
+
+```groovy
+class MathSpec extends Specification {
+  def "maximum of two numbers"() {
+    expect:
+    Math.max(a, b) == c
+
+    where:
+    a | b || c
+    1 | 3 || 3
+    7 | 4 || 7
+    0 | 0 || 0
+  }
+}
+```
+
+Even you can use double pipes
+
+```groovy
+class MathSpec extends Specification {
+  def "maximum of two numbers"() {
+    expect:
+    Math.max(a, b) == c
+
+    where:
+    a ; b ;; c
+    1 ; 3 ;; 3
+    7 ; 4 ;; 7
+    0 ; 0 ;; 0
+  }
+}
+```
+
+Pipes and semicolons as data column separator can not be mixed one table, if the column separator changes, this starts a new stand aline data table.
+
+```groovy
+class MathSpec extends Specification {
+  def "maximum of two numbers"() {
+    expect:
+    Math.max(a, b) == c
+    Math.max(d, e) == f
+
+    where:
+    a | b || c
+    1 | 3 || 3
+    7 | 4 || 7
+    0 | 0 || 0
+
+    d ; e ;; f
+    1 ; 3 ;; 3
+    7 ; 4 ;; 7
+    0 ; 0 ;; 0
+  }
+}
+```
+

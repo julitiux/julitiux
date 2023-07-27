@@ -877,3 +877,9 @@ class CoerceBazToBar {
   }
 }
 ```
+
+## Number of iterations
+
+The number of iterations depends on how much data is available. Successive executions of the same method can yield different numbers of iterations.
+
+

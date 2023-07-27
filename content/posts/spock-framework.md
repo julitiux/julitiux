@@ -885,3 +885,95 @@ The number of iterations depends on how much data is available. Successive execu
 ## Closing of Data Providers
 
 After all iterations have completed, the zero-argument close method is called on all data providers that have such a method.
+
+## Unrolled Iteration Names
+
+By default, the names of unrolled iteration are the name of the feature, plus the data variable and the iterations index. This will always produce unique names and should enable you to identify easily the falling data variable combination like this
+
+```groovy
+def "maximum of #a and #b is #c"() {
+...
+```
+
+This method name uses placeholders, denoted by a leading hash sign (#), to refer to data variables a, b, and c. In the output, the placeholders will be replaced with concrete values:
+
+```text
+maximum of 1 and 3 is 3   PASSED
+maximum of 7 and 4 is 7   FAILED
+
+Math.max(a, b) == c
+|    |   |  |  |  |
+|    |   7  4  |  7
+|    42        false
+class java.lang.Math
+
+maximum of 0 and 0 is 0   PASSED
+```
+
+An unrolled method name is similar to a Groovy GString.except for the following differences:
+
+* Expressions are denoted with # instead of $, and there is no equivalent for the ${...} syntax
+* Express only support property access and zero-arg methods calls.
+
+Given a class Person with properties name and age, and a data variable person of type Person, the following are valid method names:
+
+```groovy
+def "#person is #person.age years old"() {  // property access
+def "#person.name.toUpperCase()"() {        // zero-arg method call
+```
+
+Non-string values (like #person above) are converted to Strings according to Groovy semantics.
+
+The following are invalid method names:
+
+```groovy
+def "#person.name.split(' ')[1]" {  // cannot have method arguments
+def "#person.age / 2" {  // cannot use operators
+```
+
+Additionally, to the data variables the tokens #featureName and #iterationIndex are supported. The former does not make much sense inside an actual feature name.
+
+```groovy
+def "#person is #person.age years old [#iterationIndex]"() {
+...
+```
+
+will be reported as
+
+```text
+╷
+└─ Spock ✔
+   └─ PersonSpec ✔
+      └─ #person.name is #person.age years old [#iterationIndex] ✔
+         ├─ Fred is 38 years old [0] ✔
+         ├─ Wilma is 36 years old [1] ✔
+         └─ Pebbles is 5 years old [2] ✔
+```
+
+Alternatively, to specifying the unroll-pattern as method name, it can be given as parameter to the @Unroll annotation which takes precedence over the method name:
+
+```groovy
+@Unroll("#featureName[#iterationIndex] (#person.name is #person.age years old)")
+def "person age should be calculated properly"() {
+// ...
+```
+
+will reported as
+
+```text
+╷
+└─ Spock ✔
+   └─ PersonSpec ✔
+      └─ person age should be calculated properly ✔
+         ├─ person age should be calculated properly[0] (Fred is 38 years old) ✔
+         ├─ person age should be calculated properly[1] (Wilma is 36 years old) ✔
+         └─ person age should be calculated properly[2] (Pebbles is 5 years old) ✔
+```
+
+The advantage is, that you can have a descriptive method name for the whole feature, while having a separate template for each iteration. Furthermore, the feature method name is not filled with placeholders and thus better readable.
+
+If neither a parameter to the annotation is given, nor the method name contains a #, the configuration file setting defaultPattern in the unroll section is inspected. If it is set to a non-null string, this value is used as unroll-pattern. This could for example be set to
+
+* featureName to have all iterations reported with the same name, or
+* featureName[#iterationIndex] to have a simply indexed iteration name, or
+* iterationName if you make sure that in each data-driven feature you also set a data variable called iterationName that is then used for reporting

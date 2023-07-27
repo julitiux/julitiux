@@ -799,3 +799,29 @@ a * 2 | b * 2
 a * 3 | b * 3
 a * 4 | b * 4
 ```
+
+## Multi-Variable Assignment
+
+You can also assign to multiple variables in one expression, if you have some object Groovy can iterate over.
+
+```groovy
+@Shared sql = Sql.newInstance("jdbc:h2:mem:", "org.h2.Driver")
+
+def "maximum of two numbers multi-assignment"() {
+  expect:
+  Math.max(a, b) == c
+
+  where:
+  row << sql.rows("select a, b, c from maxdata")
+  (a, b, c) = row
+}
+```
+
+The data values thar aren't of intereset can be ignored with an underscore `_`
+
+```groovy
+...
+where:
+row << sql.rows("select * from maxdata")
+(a, b, _, c) = row
+```

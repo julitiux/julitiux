@@ -825,3 +825,55 @@ where:
 row << sql.rows("select * from maxdata")
 (a, b, _, c) = row
 ```
+
+## Combining Data Tables, Data Pipes and Variable Assigments
+
+```groovy
+...
+where:
+a | b
+1 | a + 1
+7 | a + 2
+0 | a + 3
+
+c << [3, 4, 0]
+
+d = a > c ? a : c
+```
+
+## Type Coercion for Data Variable Values
+
+Data variable values are coerced to the declared parameter type using type coercion. Due to that custom type conversions can be provided as extension module or with the help of the @Use extension on the specification (as it has no effect to the where: block if applied to a feature).
+
+```groovy
+def "type coercion for data variable values"(Integer i) {
+  expect:
+  i instanceof Integer
+  i == 10
+
+  where:
+  i = "10"
+}
+```
+
+and
+
+```groovy
+@Use(CoerceBazToBar)
+class Foo extends Specification {
+  def foo(Bar bar) {
+    expect:
+    bar == Bar.FOO
+
+    where:
+    bar = Baz.FOO
+  }
+}
+enum Bar { FOO, BAR }
+enum Baz { FOO, BAR }
+class CoerceBazToBar {
+  static Bar asType(Baz self, Class<Bar> clazz) {
+    return Bar.valueOf(self.name())
+  }
+}
+```

@@ -988,4 +988,49 @@ This is a list of special tokens
 * #dataVariablesWithIndex the same as #dataVariables but with an index at the end, eg x:1, y:2, z:3, #0
 
 
+## Configuration
 
+Set Default Unroll-Pattern
+
+```groovy
+unroll {
+    defaultPattern '#featureName[#iterationIndex]'
+}
+```
+
+Disable Unroll-pattern Expression Asserting
+```groovy
+unroll {
+    validateExpressions false
+}
+```
+
+Disable repetition of feature name in iterations
+```groovy
+unroll {
+    includeFeatureNameForIterations false
+}
+```
+
+With includeFeatureNameForIterations true
+
+```text
+╷
+└─ Spock ✔
+   └─ ASpec ✔
+      └─ really long and informative test name that doesn't have to be repeated ✔
+         ├─ really long and informative test name that doesn't have to be repeated [x: 1, y: a, #0] ✔
+         ├─ really long and informative test name that doesn't have to be repeated [x: 2, y: b, #1] ✔
+         └─ really long and informative test name that doesn't have to be repeated [x: 3, y: c, #2] ✔
+```
+
+With includeFeatureNameForIterations false
+
+```text
+└─ Spock ✔
+   └─ ASpec ✔
+      └─ really long and informative test name that doesn't have to be repeated ✔
+         ├─ x: 1, y: a, #0 ✔
+         ├─ x: 2, y: b, #1 ✔
+         └─ x: 3, y: c, #2 ✔
+```

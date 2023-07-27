@@ -882,4 +882,6 @@ class CoerceBazToBar {
 
 The number of iterations depends on how much data is available. Successive executions of the same method can yield different numbers of iterations.
 
+## Closing of Data Providers
 
+After all iterations have completed, the zero-argument close method is called on all data providers that have such a method.

@@ -977,3 +977,15 @@ If neither a parameter to the annotation is given, nor the method name contains 
 * featureName to have all iterations reported with the same name, or
 * featureName[#iterationIndex] to have a simply indexed iteration name, or
 * iterationName if you make sure that in each data-driven feature you also set a data variable called iterationName that is then used for reporting
+
+## Special Tokens
+
+This is a list of special tokens
+
+* #featureName is the name of the feature (mostly useful for the defaultPatter setting)
+* #iterationIndex is the current iteration index
+* #dataVariables lists all data varuables for this iteration, eg x:1, y:2, z:3
+* #dataVariablesWithIndex the same as #dataVariables but with an index at the end, eg x:1, y:2, z:3, #0
+
+
+

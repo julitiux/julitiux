@@ -1067,3 +1067,10 @@ def subscriber = Mock(Subscriber)
 def subscriber2 = Mock(Subscriber)
 ```
 
+Alternatively, the following Java-like syntaxis is supported:
+
+```groovy
+Subscriber subscriber = Mock()
+Subscriber subscriber2 = Mock()
+```
+

@@ -1060,5 +1060,10 @@ class PublisherSpec extends Specification {
 }
 ```
 
+## Creating Mock Objects
 
+```groovy
+def subscriber = Mock(Subscriber)
+def subscriber2 = Mock(Subscriber)
+```
 

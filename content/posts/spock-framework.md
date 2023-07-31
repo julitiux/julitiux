@@ -1093,3 +1093,24 @@ class PublisherSpec extends Specification {
     publisher.subscribers << subscriber2
   }
 ```
+
+## Mocking
+
+Mocking is the act of describing (mandatory) interactions between the objects under specification and its collaborators.
+
+```groovy
+def "should send messages to all subscribers"() {
+  when:
+  publisher.send("hello")
+
+  then:
+  1 * subscriber.receive("hello")
+  1 * subscriber2.receive("hello")
+}
+```
+
+> When the publisehd send a 'hello' message, then both subscribers receive that message exactly once
+
+When this feature methods gets run, all invocations on mock objects that occurs while executing the `when` block will be matched against the interactions described in the `then` block.
+
+If one of the interactions isn't satisfied, a (subclass of) `InteractionNotSatisfiedError` will be thrown.

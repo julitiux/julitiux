@@ -1114,3 +1114,23 @@ def "should send messages to all subscribers"() {
 When this feature methods gets run, all invocations on mock objects that occurs while executing the `when` block will be matched against the interactions described in the `then` block.
 
 If one of the interactions isn't satisfied, a (subclass of) `InteractionNotSatisfiedError` will be thrown.
+
+## Interactions
+
+While an insteraction looks similar to a regular method invocation, it is simply a way to express whicj method invocation are expected to occur. A good way og an interaction is as a regular expression that all incoming invocations on mock objects are matched against. Depending on the circumstances, the interaction may match zero, one, or multiple invocations.
+
+Let's take a closer look at the `then:`  block. It containt two _interactions_, each of which has four distinct parts:
+
+* cardinality
+* target constraint
+* method constraint
+* argument constraint
+
+```text
+1 * subscriber.receive("hello")
+|   |          |       |
+|   |          |       argument constraint
+|   |          method constraint
+|   target constraint
+cardinality
+```

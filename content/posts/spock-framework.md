@@ -1137,7 +1137,7 @@ cardinality
 
 ## Cardinality
 
-The cardinality of an interaction describes how often a method call is expected.
+The cardinality of an interaction describes how often a method call is expected
 
 ```groovy
 1 * subscriber.receive("hello")        // exactly one call
@@ -1147,4 +1147,13 @@ The cardinality of an interaction describes how often a method call is expected.
 (_..3) * subscriber.receive("hello")   // at most three calls
 _ * subscriber.receive("hello")        // any number of calls, including zero
                                        // (rarely needed; see 'Strict Mocking')
+```
+
+## Target Constraint
+
+The method contraint of an interaction describe which method is expected to be called
+
+```groovy
+1 * subscriber.receive("hello")         // a call to 'subscriber'
+1 * _.receive("hello")                  // a call to any mock object
 ```

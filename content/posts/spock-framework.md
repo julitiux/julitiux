@@ -1151,9 +1151,31 @@ _ * subscriber.receive("hello")        // any number of calls, including zero
 
 ## Target Constraint
 
-The method contraint of an interaction describe which method is expected to be called
+The target constraint of an interaction describes which mock object is expected to receive the method call
 
 ```groovy
 1 * subscriber.receive("hello")         // a call to 'subscriber'
 1 * _.receive("hello")                  // a call to any mock object
+```
+
+## Method Constraint
+
+The method constraint of an interaction describes which method is expected to be called
+
+```groovy
+1 * subscriber.receive("hello")         // a method named 'receive'
+1 * subscriber./r.*e/("hello")          // a method whose name matches the given regular expression
+                                        // (here: method name starts with 'r' and ends in 'e')
+```
+
+When expecting a call to a getter method, Groovy property syntax can be used instead of method syntax
+
+```groovy
+1 * subscriber.status                   // same as: 1 * subscriber.getStatus()
+```
+
+When expecting a call to a setter method, only method syntax can be used
+
+```groovy
+1 * subscriber.setStatus("ok")          // NOT: 1 * subscriber.status = "ok"
 ```

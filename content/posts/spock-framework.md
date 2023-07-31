@@ -9,6 +9,7 @@ draft: false
 # **INDEX**
 # [Spock Primer](#spock-primer)
 # [Data Driven Testing](#data-driven-testing)
+# [Interaction Based Testing](#interaction-based-testing)
 
 
 
@@ -1034,3 +1035,30 @@ With includeFeatureNameForIterations false
          ├─ x: 2, y: b, #1 ✔
          └─ x: 3, y: c, #2 ✔
 ```
+
+# Interaction Based Testing
+Interation-based hased testing is a design and testing technique that emerged in the Extreme Programming (XP) community in the early 2000's. Focusing on tje behavior of objects rather than their state, it explores hot the objects under specification interact, by the way of mthods calls. with their collaborators.
+
+Given this Groovy classes:
+
+```groovy
+class Publisher {
+  List<Subscriber> subscribers = []
+  int messageCount = 0
+  void send(String message){
+    subscribers*.receive(message)
+    messageCount++
+  }
+}
+
+interface Subscriber {
+  void receive(String message)
+}
+
+class PublisherSpec extends Specification {
+  Publisher publisher = new Publisher()
+}
+```
+
+
+

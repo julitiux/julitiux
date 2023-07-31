@@ -1074,3 +1074,7 @@ Subscriber subscriber = Mock()
 Subscriber subscriber2 = Mock()
 ```
 
+## Default Behavior of Mock Objects
+
+Initially, mock objects have no behavior. Calling methods on them is allowed but has no effect other than returning the default value for the method’s return type (false, 0, or null). An exception are the Object.equals, Object.hashCode, and Object.toString methods, which have the following default behavior: A mock object is only equal to itself, has a unique hash code, and a string representation that includes the name of the type it represents.
+

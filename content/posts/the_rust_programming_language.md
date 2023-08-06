@@ -13,12 +13,22 @@ draft: false
 ## Installing rustup on macOS
 
 ```shell
-$ curl https://sh.rustup.rs -sSf | sh
+curl https://sh.rustup.rs -sSf | sh
 ```
 
 Add on your .zshrc
 
 ```shell
 . "$HOME/.cargo/env"
+```
+
+## Updating and Unistalling
+
+```shell
+rustc update
+```
+
+```shell
+rustup self unistall
 ```
 

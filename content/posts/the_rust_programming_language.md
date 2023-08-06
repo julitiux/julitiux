@@ -75,3 +75,27 @@ cargo new hello_cargo
 cd hello_cargo
 ```
 
+## Building and Running a Cargo Project
+
+Build your project and create an executable.
+
+```shell
+cargo build
+```
+You can run the executable with this command
+
+```shell
+./target/debug/hello_cargo
+```
+
+Also use cargo run to compile the code and then run: the resulting executable all in one command:
+
+```shell
+cargo run
+```
+
+This command quickly checks your code to make sure it compiles but doesn't produce an executable
+
+```shell
+cargo check
+```

@@ -12,4 +12,4 @@
 	url = git@github.com:julitiux/learnKotlin.git
 [submodule "themes/paper"]
 	path = themes/paper
-	url = https://github.com/nanxiaobei/hugo-paper
+  url = git@github.com:nanxiaobei/hugo-paper.git

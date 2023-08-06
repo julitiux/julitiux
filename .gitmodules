@@ -7,6 +7,9 @@
 [submodule "code/python"]
 	path = code/python
 	url = git@github.com:julitiux/python_exercises.git
+[submodule "code/kotlin"]
+	path = code/kotlin
+	url = git@github.com:julitiux/learnKotlin.git
 [submodule "themes/paper"]
 	path = themes/paper
 	url = https://github.com/nanxiaobei/hugo-paper

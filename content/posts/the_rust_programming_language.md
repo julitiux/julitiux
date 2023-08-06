@@ -40,3 +40,22 @@ cd ~/projects
 mkdir hello_world
 cd hello_world
 ```
+
+## Writing and Running a Rust Program
+
+```rust
+fn main(){
+    println!("hello wolf");
+}
+```
+
+Go to the terminal and enter the following commands to compule and run the file
+
+```shell
+rustc main.rs
+./main
+```
+
+```text
+Hello wolf
+```

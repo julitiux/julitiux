@@ -57,5 +57,14 @@ rustc main.rs
 ```
 
 ```text
-Hello wolf
+hello wolf
 ```
+
+## Hello, Cargo!
+
+## Verify the instalation
+
+```shell
+cargo --version
+```
+

@@ -99,3 +99,11 @@ This command quickly checks your code to make sure it compiles but doesn't produ
 ```shell
 cargo check
 ```
+
+## Building for Release
+
+```shell
+cargo build --release
+```
+
+This command will create an executable in _target/release_ instead of _target/debug_

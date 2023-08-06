@@ -68,3 +68,10 @@ hello wolf
 cargo --version
 ```
 
+## Creating a Project with Cargo
+
+```shell
+cargo new hello_cargo
+cd hello_cargo
+```
+

@@ -32,3 +32,11 @@ rustc update
 rustup self unistall
 ```
 
+## Creating a Project Directory
+
+```shell
+mkdir ~/projects
+cd ~/projects
+mkdir hello_world
+cd hello_world
+```

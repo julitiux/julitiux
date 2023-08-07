@@ -1575,3 +1575,21 @@ final FileWriterExample writerExample = new FileWriterExample("peekaboo.txt");
 writerExample.writeStuff("peek-a-boo");
 writerExample.close();
 ```
+
+## Ensuring Cleanup
+
+We need to ensure the call to close() happens whether or not there's an exception. To achive this we can wrap the call in a finally block.
+
+```java
+// FileWriterExample
+final FileWriterExample writerExample = new FileWriterExample("peekaboo.txt");
+try {
+   writerExample.writeStuff("peek-a-boo");
+} finally {
+  writerExample.close();
+}
+```
+
+This version ensure resource cleanup even if an exception occurs in the code, but that's a lot of effort and the code is quite smelly. The automatic resource management (ARM) feature, introduced in Java 7, was designed to reduce such smells, as we'll see next.
+
+

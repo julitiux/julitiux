@@ -1555,4 +1555,23 @@ public static void main(final String[] args) throws IOException {
 
 We created an instance of the FileWriterExample class and invoked the writeStuff() method on it, but if we ran this code, we’d see that the peekaboo.txt file was created but it’s empty. The finalizer never ran; the JVM decided it wasn’t necessary as there was enough memory. As a result, the file was never closed, and the content we wrote was not flushed from memory.
 
+## Closing the Resource
 
+```java
+// FileWriterExample
+
+public void close() throws IOException {
+  writer.close();
+}
+```
+
+Let's make explicit use of this method if the main() method.
+
+```java
+// FileWriterExample
+
+final FileWriterExample writerExample = new FileWriterExample("peekaboo.txt");
+
+writerExample.writeStuff("peek-a-boo");
+writerExample.close();
+```

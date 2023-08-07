@@ -12,6 +12,7 @@ draft: false
 # [Chapter 2 Using Collections](#chapter-2-using-collections)
 # [Chapter 3 Strings, Comparators, and Filters](#chapter-3-strings-comparators-and-filters)
 # [Chapter 4 Designing with Lambda Expressions](#chapter-4-designing-with-lambda-expressions)
+# [Chapter 5 Working with Resources](#chapter-5-working-with-resources)
 
 # Chapter 1 Hello Lambda Expression!
 
@@ -1512,3 +1513,46 @@ public interface UseInstance<T, X extends Throwable> {
 ```
 
 Any method that accepts a parameter of the UseInstance interface will expect and be ready to handle appropriate exceptions or propagate them
+
+
+# Chapter 5 Working with Resources
+
+## Cleaning Up Resources
+
+## Peeking into the problem
+
+We're converned with external resource cleanup, so let's start with a simple example class that use a FileWriter to some messages
+
+```java
+// FileWriterExample.java
+
+public class FileWriterExample {
+  private final FileWriter writer;
+
+  public FileWriterExample(final String fileName) throws IOException {
+    writer = new FileWriter(fileName);
+  }
+  public void writeStuff(final String message) throws IOException {
+    writer.write(message);
+  }
+  public void finalize() throws IOException {
+    writer.close();
+  }
+  //...
+}
+```
+
+Let's write a main() method to use thiss class
+
+```java
+// FileWriterExample.java
+
+public static void main(final String[] args) throws IOException {
+  final FileWriterExample writerExample = new FileWriterExample("peekaboo.txt");
+  writerExample.writeStuff("peek-a-boo");
+}
+```
+
+We created an instance of the FileWriterExample class and invoked the writeStuff() method on it, but if we ran this code, we’d see that the peekaboo.txt file was created but it’s empty. The finalizer never ran; the JVM decided it wasn’t necessary as there was enough memory. As a result, the file was never closed, and the content we wrote was not flushed from memory.
+
+

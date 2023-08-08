@@ -1844,3 +1844,77 @@ public void ConciseExceptionTest() {
   assertThrows(RodCutterException.class, () -> rodCutter.maxProfit(0));
 }
 ```
+
+## Exercising the Tests
+
+```java
+// RodCutterTest.java
+
+@Test public void VerboseExceptionTest() {
+  rodCutter.setPrices(prices);
+  try {
+    rodCutter.maxProfit(0);
+    fail("Expected exception for zero length");
+  } catch(RodCutterException ex) {
+    assertTrue("expected", true);
+  }
+}
+
+@Test(expected = RodCutterException.class)
+public void TerseExceptionTest() {
+  rodCutter.setPrices(prices);
+  rodCutter.maxProfit(0);
+}
+
+@Test
+public void ConciseExceptionTest() {
+  rodCutter.setPrices(prices);
+  assertThrows(RodCutterException.class, () -> rodCutter.maxProfit(0));
+}
+```
+
+All these tests are checking whether the maxProfit() method throws an exception. Let’s implement minimal code in the RodCutter class to make the tests pass.
+
+```java
+// RodCutter.java
+
+public class RodCutter {
+  public void setPrices(final List<Integer> prices) {
+  }
+  public int maxProfit(final int length) {
+    if (length == 0) throw new RodCutterException();
+
+    return 0;
+  }
+}
+```
+
+The maxProfit() method throws an exception if the value of the length parameter is zero, which is exactly what the tests are checking for. Let’s look at the result of running the tests.
+
+```text
+...
+Time: ...
+
+OK (3 tests)
+```
+
+All the tests achieve the same goal, but the last concise version is better than the others; one change to the setPrice() method will show us why.
+
+```java
+// RodCutter.java
+
+public void setPrices(final List<Integer> prices) {
+  throw new RodCutterException();
+}
+```
+
+The setPrice() method, which is called in each of the tests, now abruptly throws the RodCutterException exception. Since the tests are expecting the method maxProfit() to throw a specific exception, any other behavior in the invoked code should trigger an alert. Good tests would fail now due to the code change we made; poor tests will quietly pass. Let’s run the tests to see how they perform.
+
+```text
+.E.E.
+Time: ...
+There were 2 errors:
+...
+```
+
+We saw how lambda expressions help us write tests that target specific methods for the expected exception, and that helps us create concise, easy- to-read, less error-prone tests.

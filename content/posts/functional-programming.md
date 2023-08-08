@@ -1771,4 +1771,24 @@ The methods are quite concise, and they use the static method runLocked() of the
 
 When Java 5 annotations were introduced, JUnit was quick to use them. Overall this has been a benefit, but one use in particular, the convenience of exception tests, leads to terse rather than concise code. Let’s understand the issues and then resolve them using—good guess—lambda expressions. We will see here that lambda expressions are not just another language feature; they alter the way we think and design applications.
 
+## Exception Test with try and catch
+
+Here’s the test for the maxProfit() method with try and catch to check for exceptions.
+
+```java
+// RodCutterTest.java
+
+@Test public void VerboseExceptionTest() {
+  rodCutter.setPrices(prices);
+  try {
+    rodCutter.maxProfit(0);
+    fail("Expected exception for zero length");
+  } catch(RodCutterException ex) {
+    assertTrue("expected", true);
+  }
+}
+```
+
+That’s quite verbose and it may take some effort to understand, but this code is quite specific about what’s expected to fail: the call to the maxProfit() method.
+
 

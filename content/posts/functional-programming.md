@@ -1806,3 +1806,41 @@ public void TerseExceptionTest() {
 ```
 
 The code is short but deceptive—it’s terse. It tells us that the test should pass if the exception RodCutterException is received, but it fails to ensure that the method that raised that exception is maxProfit(). If the setPrices() method threw that exception, due to some code change, then this test will continue to pass, but for the wrong reason. A good test should pass only for the right reasons —this test deceives us.
+
+## Using Lambda Expressions for Exception Tests
+
+Let’s use lambda expressions to look for exceptions. We’ll manually create the code for this in a TestHelper class, but if and when JUnit supports this natively we won’t have to write such a class.
+
+```java
+// TestHelper.java
+
+public class TestHelper {
+  public static <X extends Throwable> Throwable assertThrows(final Class<X> exceptionClass, final Runnable block) {
+
+    try {
+      block.run();
+    } catch(Throwable ex) {
+      if(exceptionClass.isInstance(ex))
+        return ex;
+    }
+
+    fail("Failed to throw expected exception ");
+    return null;
+
+  }
+}
+```
+
+In the TestHelper we wrote a static method assertThrows() that expects an exception class and a block of code to run. It exercises the block of code, and examines the exception the code throws. If no exception was thrown or if an exception other than the type given in the first parameter was received, the call will fail using the JUnit fail() method.
+
+We use this helper to create a concise test
+
+```java
+// RodCutterTest.java
+
+@Test
+public void ConciseExceptionTest() {
+  rodCutter.setPrices(prices);
+  assertThrows(RodCutterException.class, () -> rodCutter.maxProfit(0));
+}
+```

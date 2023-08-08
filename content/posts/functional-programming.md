@@ -1558,7 +1558,7 @@ We created an instance of the FileWriterExample class and invoked the writeStuff
 ## Closing the Resource
 
 ```java
-// FileWriterExample
+// FileWriterExample.java
 
 public void close() throws IOException {
   writer.close();
@@ -1568,7 +1568,7 @@ public void close() throws IOException {
 Let's make explicit use of this method if the main() method.
 
 ```java
-// FileWriterExample
+// FileWriterExample.java
 
 final FileWriterExample writerExample = new FileWriterExample("peekaboo.txt");
 
@@ -1581,7 +1581,7 @@ writerExample.close();
 We need to ensure the call to close() happens whether or not there's an exception. To achive this we can wrap the call in a finally block.
 
 ```java
-// FileWriterExample
+// FileWriterExample.java
 final FileWriterExample writerExample = new FileWriterExample("peekaboo.txt");
 try {
    writerExample.writeStuff("peek-a-boo");
@@ -1592,4 +1592,48 @@ try {
 
 This version ensure resource cleanup even if an exception occurs in the code, but that's a lot of effort and the code is quite smelly. The automatic resource management (ARM) feature, introduced in Java 7, was designed to reduce such smells, as we'll see next.
 
+## Using ARM
+
+ARM can reduce the verbority in the previous example. Rather than using both the try and finally blocks, we can use a special form of the try block with a recource attached to it.
+
+```java
+// FileWriterARM.java
+
+try(final FileWriterARM writerARM = new FileWriterARM("peekaboo.txt")) {
+  writerARM.writeStuff("peek-a-boo");
+
+  System.out.println("done with the resource...");
+}
+```
+
+We created an instance of the class FileWriterARM within the safe haven of the try-with-resources form and invoked the writeStuff() method within its block. When we leave the scope of the try block, the close() method is automatically called on the instance/resource managed by this try block. For this to work, the compiler requires the managed resource class to implement the AutoCloseable interface, which has just one method, close().
+
+```java
+// FileWriterARM.java
+
+public class FileWriterARM implements AutoCloseable {
+  private final FileWriter writer;
+
+  public FileWriterARM(final String fileName) throws IOException {
+    writer = new FileWriter(fileName);
+  }
+
+  public void writeStuff(final String message) throws IOException {
+    writer.write(message);
+  }
+
+  public void close() throws IOException {
+    System.out.println("close called automatically...");
+    writer.close();
+  }
+  //...
+}
+```
+
+Let's run the code an look at the peekaboo.txt file and the console for the code's output
+
+```text
+done with the resource...
+close called automatically...
+```
 

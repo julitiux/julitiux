@@ -1683,4 +1683,21 @@ public static void use(final String fileName, final UseInstance<FileWriterEAM, I
 
 In the use() method, we receive two parameters, fileName and a reference to an interface UserInstance (which we haven't defined yet). Within method we instantiate FileWriterEAM, and within the safe haven of the try and finally block we pass the instance to an accept() method of our soon-to-be-created interface. When the call returns, we invoke the close() method on the instance in the finally block. Instead of using this construct, we could user ARM within the use() method.In any case, the users of our class don't have to worry aboiut these details.
 
+## Using the Design for Instance Cleanup
+
+```java
+// FileWriterEAM.java
+
+FileWriterEAM.user("eam.txt", writerEAM -> writerEAM.writeStuff("sweet"));
+```
+
+In the example we use the given instance writerEAM for just one call within the lambda expression. If we have to perform more operations with it, we can send it off to other functions as an argument. We can also perform a few operations on it, right within the lambda expression, by using multiline syntax.
+
+```java
+FileWriterEAM.use("eam2.txt", writerEAM -> {
+  writerEAM.writeStuff("how");
+  writerEAM.writeStuff("sweet");
+});
+```
+
 

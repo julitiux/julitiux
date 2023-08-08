@@ -1662,3 +1662,25 @@ public class FileWriterEAM {
   //...
 }
 ```
+
+## Using Higher-Order Functions
+
+Since the programmers can't directly create an instance of FileWriterEAM, we need a factory method for them to use. Unlike the regular factory methods that create an instance and throw it across the fence, our method will yield it to users and wait for them to finish their work with it.
+
+```java
+// FileWriterEAM.java
+
+public static void use(final String fileName, final UseInstance<FileWriterEAM, IOException> block) throws IOException {
+
+  final FileWriterEAM writerEAM = new FileWriterEAM(fileName);
+  try {
+    block.accept(writerEAM);
+  } finally {
+     writerEAM.close();
+  }
+}
+```
+
+In the use() method, we receive two parameters, fileName and a reference to an interface UserInstance (which we haven't defined yet). Within method we instantiate FileWriterEAM, and within the safe haven of the try and finally block we pass the instance to an accept() method of our soon-to-be-created interface. When the call returns, we invoke the close() method on the instance in the finally block. Instead of using this construct, we could user ARM within the use() method.In any case, the users of our class don't have to worry aboiut these details.
+
+

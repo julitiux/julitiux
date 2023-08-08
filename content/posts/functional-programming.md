@@ -1637,3 +1637,28 @@ done with the resource...
 close called automatically...
 ```
 
+## Using Lambda Expressions to Clean Up Resources
+
+## Preparing the Class for Resource Cleanup
+
+The class FileWriterEAM, that encapsulates heavy resources that need timely cleanup. In this example we'll use the FileWriter to represent that resource. Let's make both the contructor and the close() methods private that'll grab the attention of programmers trying to use the class.
+
+```java
+// FileWriterEAM.java
+
+public class FileWriterEAM {
+  private final FileWriter writer;
+
+  private FileWriterEAM(final String fileName) throws IOException {
+    writer = new FileWriter(fileName);
+  }
+  private void close() throws IOException {
+    System.out.println("close called automatically...");
+    writer.close();
+  }
+  public void writeStuff(final String message) throws IOException {
+    writer.write(message);
+  }
+  //...
+}
+```

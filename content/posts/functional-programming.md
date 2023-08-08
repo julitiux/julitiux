@@ -1700,4 +1700,70 @@ FileWriterEAM.use("eam2.txt", writerEAM -> {
 });
 ```
 
+## Managing Locks
+
+Locks play a critical part in concurrent Java applications. In this section we'll use lambda expressions to gain finer control over locks and open the doors to unit-test the proper locking of critical sections.
+
+synchronized is an age-old keyword used to provide mutual exclusion. A synchronized block of code, such as synchronized { ... }, is a realization of the _execute around method pattern_
+
+```java
+// Loocking.java
+
+public class Locking {
+  Lock lock = new ReentrantLock(); //or mock
+
+  protected void setLock(final Lock mock) {
+    lock = mock;
+  }
+
+  public void doOp1() {
+    lock.lock();
+    try {
+      //...critical code...
+    } finally {
+      lock.unlock();
+    }
+  }
+  //...
+}
+```
+
+We’re using a Lock lock field to share the lock between methods of this class. However, the task of locking—for example, within the doOp1() method—leaves a lot to be desired. It’s verbose, error prone, and hard to maintain. Let’s turn to lambda expressions for help, and create a small class to manage the lock.
+
+```java
+// Locker.java
+
+public class Locker {
+  public static void runLocked(Lock lock, Runnable block) {
+    lock.lock();
+
+    try {
+      block.run();
+    } finally {
+      lock.unlock();
+    }
+  }
+}
+```
+
+This class absobrs the pain of working with the Lock interface so the rest of the code benefits. We can use the runLocked() method in code to wrap critical sections.
+
+```java
+// Locking.java
+
+public void doOp2() {
+  runLocked(lock, () -> {/*...critical code ... */});
+}
+
+public void doOp3() {
+  runLocked(lock, () -> {/*...critical code ... */});
+}
+
+public void doOp4() {
+  runLocked(lock, () -> {/*...critical code ... */});
+}
+```
+
+The methods are quite concise, and they use the static method runLocked() of the Locker helper class we created (we’d need an import static Locker.runLocked for this code to compile). Lambda expressions come to our assistance once more.
+
 

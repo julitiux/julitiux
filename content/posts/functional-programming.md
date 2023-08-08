@@ -1791,4 +1791,18 @@ Here’s the test for the maxProfit() method with try and catch to check for exc
 
 That’s quite verbose and it may take some effort to understand, but this code is quite specific about what’s expected to fail: the call to the maxProfit() method.
 
+## Exception Test Using Annotation
 
+Here we are tempted attack the verbosity with annotation
+
+```java
+// RodCutterTest.java
+
+@Test(expected = RodCutterException.class)
+public void TerseExceptionTest() {
+  rodCutter.setPrices(prices);
+  rodCutter.maxProfit(0);
+}
+```
+
+The code is short but deceptive—it’s terse. It tells us that the test should pass if the exception RodCutterException is received, but it fails to ensure that the method that raised that exception is maxProfit(). If the setPrices() method threw that exception, due to some code change, then this test will continue to pass, but for the wrong reason. A good test should pass only for the right reasons —this test deceives us.

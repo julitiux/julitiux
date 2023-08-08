@@ -1767,3 +1767,8 @@ public void doOp4() {
 The methods are quite concise, and they use the static method runLocked() of the Locker helper class we created (we’d need an import static Locker.runLocked for this code to compile). Lambda expressions come to our assistance once more.
 
 
+## Creating Concise Exception Tests
+
+When Java 5 annotations were introduced, JUnit was quick to use them. Overall this has been a benefit, but one use in particular, the convenience of exception tests, leads to terse rather than concise code. Let’s understand the issues and then resolve them using—good guess—lambda expressions. We will see here that lambda expressions are not just another language feature; they alter the way we think and design applications.
+
+

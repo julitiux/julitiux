@@ -1924,5 +1924,8 @@ We saw how lambda expressions help us write tests that target specific methods f
 
 In Java we often execute code eagerly. The arguments are evaluated right at the time of method calls. When executing code, we can gain in performance by being just a little lazy, Eager is simple, but lazy is efficient.
 
+## Delayed initialization
+
+In object-oriented programming we ensure that objects are well constructed before any methods calls. We, encapsule, ensure proper state transitions, and preserve the objects invariants. This works well most of the time, but when parts of an object's internals are heavyweight resources.
 
 

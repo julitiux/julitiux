@@ -1,5 +1,5 @@
 ---
-title: "Functional Programmingi in Java"
+title: "Functional Programming in Java"
 date: 2023-07-06T20:39:27-06:00
 draft: false
 ---
@@ -13,6 +13,7 @@ draft: false
 # [Chapter 3 Strings, Comparators, and Filters](#chapter-3-strings-comparators-and-filters)
 # [Chapter 4 Designing with Lambda Expressions](#chapter-4-designing-with-lambda-expressions)
 # [Chapter 5 Working with Resources](#chapter-5-working-with-resources)
+# [Chapter 6 Being Lazy](#chapter-6-being-lazy)
 
 # Chapter 1 Hello Lambda Expression!
 
@@ -1918,3 +1919,10 @@ There were 2 errors:
 ```
 
 We saw how lambda expressions help us write tests that target specific methods for the expected exception, and that helps us create concise, easy- to-read, less error-prone tests.
+
+# Chapter 6 Being Lazy
+
+In Java we often execute code eagerly. The arguments are evaluated right at the time of method calls. When executing code, we can gain in performance by being just a little lazy, Eager is simple, but lazy is efficient.
+
+
+

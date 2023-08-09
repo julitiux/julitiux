@@ -1986,4 +1986,19 @@ quite heavy
 quite heavy
 ```
 
+## Providing Thread Safety
 
+For an instance of HolderNaive, the dependent instance of Heavy is created on the first call to the getHeavy() method. On subsequent calls to this method, the already created instance will be returned. That’s exactly what we want, but there’s a catch.
+
+If two or more threads call the getHeavy() method at the same time, then we could end up with multiple Heavy instances, potentially one per thread. This side effect is undesirable.
+
+```java
+public synchronized Heavy getHeavy() {
+  if(heavy == null) {
+    heavy = new Heavy();
+  }
+
+  return heavy; }
+```
+
+We marked getHeavy() with the synchronized keyword to ensure mutual exclusion. If two or more threads call this method concurrently, due to mutual exclusion only one will be allowed to enter and the others will queue up for their turn. The first one to enter into the method will create the instance. When subse- quent threads enter this method they will see that the instance already exists, and will simply return it.

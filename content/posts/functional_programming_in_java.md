@@ -1,5 +1,5 @@
 ---
-title: "Functional Programming"
+title: "Functional Programmingi in Java"
 date: 2023-07-06T20:39:27-06:00
 draft: false
 ---

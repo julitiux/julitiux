@@ -1928,4 +1928,62 @@ In Java we often execute code eagerly. The arguments are evaluated right at the 
 
 In object-oriented programming we ensure that objects are well constructed before any methods calls. We, encapsule, ensure proper state transitions, and preserve the objects invariants. This works well most of the time, but when parts of an object's internals are heavyweight resources.
 
+## A Familiar Approach
+
+In the following example, we will craft a way to delay the creation of a heavy-weight instance
+
+```java
+// Heavy.java
+
+public class Heavy {
+  public Heavy() { System.out.println("Heavy created"); }
+
+  public String toString() { return "quite heavy"; }
+}
+```
+
+This class represents a hypothetical heavyweight resource. In this constructor we print a message to tell us when it's created. Let's use an instance of this class in the first trial version the _Holder_ class, named _HolderNaive_
+
+```java
+public class HolderNaive {
+  private Heavy heavy;
+
+  public HolderNaive() {
+    System.out.println("Holder created");
+  }
+
+  public Heavy getHeavy() {
+    if(heavy == null) {
+      heavy = new Heavy();
+    }
+
+    return heavy;
+  }
+
+//...
+```
+
+At first glance this code appears quite simple. We created a _null_ reference, _heavy_, and assigned it to a proper instance on the first call to the getheavy() method.
+
+Let's use this class to create an instance of HolderNaive and see if it postpones the creation of the Heacy instance.
+
+```java
+// HolderNaive.java
+
+final HolderNaive holder = new HolderNaive();
+System.out.println("deferring heavy creation...");
+System.out.println(holder.getHeavy());
+System.out.println(holder.getHeavy());
+```
+
+This is the code's output
+
+```text
+Holder created
+deferring heavy creation...
+Heavy created
+quite heavy
+quite heavy
+```
+
 

@@ -2059,3 +2059,11 @@ private synchronized Heavy createAndCacheHeavy() {
 We’ll mark this method synchronized so threads calling this method concurrently will be mutually exclusive. But within this method, on the first call we quickly replace the Supplier reference heavy with a direct supplier, HeavyFactory, that will return an instance of Heavy.
 
 The second concurrent thread to enter will again check if heavy is an instance of HeavyFactory, and will bypass the creation. It would simply return the same instance that first thread returned. Here we assume Heavy itself is thread safe, and we’re only focusing on the thread safety of Holder.
+
+## Lazy Evaluations
+
+Java already uses lazy execution when evaluation logical operations. For example, in fn1() || fn2(), the call fn2() is never performed if fn1() returns a _boolean false_
+
+While Java uses a lazy or normal order when evaluating logical operators., it uses eager or applicative order when evaluation method arguments. All the arguments to methods are fully evaluatd before a methos is invoked.
+
+

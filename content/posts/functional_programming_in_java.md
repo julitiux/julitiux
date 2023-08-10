@@ -2002,3 +2002,60 @@ public synchronized Heavy getHeavy() {
 ```
 
 We marked getHeavy() with the synchronized keyword to ensure mutual exclusion. If two or more threads call this method concurrently, due to mutual exclusion only one will be allowed to enter and the others will queue up for their turn. The first one to enter into the method will create the instance. When subse- quent threads enter this method they will see that the instance already exists, and will simply return it.
+
+## Adding a Level of Indirection
+
+The indirection we’ll add in this example comes from a Supplier<T> class. This is a functional interface in the JDK, with one abstract method named get() that returns an instance. In other words, this is a factory that keeps on giving without expecting anything as input.
+
+In the most rudimentary form a Supplier will return an instance
+
+```java
+Supplier<Heavy> supplier = () -> new Heavy();
+```
+
+Alternatively, we could use a constructor reference instead of the traditional new syntax to instantiate an instance
+
+```java
+Supplier<Heavy> supplier =  Heavy::new;
+```
+
+We took a look at what a _Supplier_ can do for us, we need something more than this simple form
+
+```java
+// Holder.java
+
+public class Holder {
+  private Supplier<Heavy> heavy = () -> createAndCacheHeavy();
+
+  public Holder() {
+    System.out.println("Holder created");
+  }
+
+  public Heavy getHeavy() {
+    return heavy.get();
+  }
+  //...
+}
+```
+
+The filed _heavy_ in this version is an instance of the Supplier<Heavy>. We assign it to a lambda expression and the Java compiler synthesize from it an instance with the expected get() method.
+
+```java
+private synchronized Heavy createAndCacheHeavy() {
+  class HeavyFactory implements Supplier<Heavy> {
+    private final Heavy heavyInstance = new Heavy();
+
+    public Heavy get() { return heavyInstance; }
+  }
+
+  if(!HeavyFactory.class.isInstance(heavy)) {
+    heavy = new HeavyFactory();
+  }
+
+  return heavy.get();
+}
+```
+
+We’ll mark this method synchronized so threads calling this method concurrently will be mutually exclusive. But within this method, on the first call we quickly replace the Supplier reference heavy with a direct supplier, HeavyFactory, that will return an instance of Heavy.
+
+The second concurrent thread to enter will again check if heavy is an instance of HeavyFactory, and will bypass the creation. It would simply return the same instance that first thread returned. Here we assume Heavy itself is thread safe, and we’re only focusing on the thread safety of Holder.

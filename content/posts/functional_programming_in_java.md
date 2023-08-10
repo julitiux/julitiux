@@ -2066,4 +2066,49 @@ Java already uses lazy execution when evaluation logical operations. For example
 
 While Java uses a lazy or normal order when evaluating logical operators., it uses eager or applicative order when evaluation method arguments. All the arguments to methods are fully evaluatd before a methos is invoked.
 
+ ## Starting with Eager Evaluation
+
+We call them eagerly and then alter the design to improve speed. Let's start with a method evaluate() that takes quite a bit of time and resources to run
+
+```java
+// Evaluation.java
+
+public class Evaluation {
+  public static boolean evaluate(final int value) {
+    System.out.println("evaluating ..." + value);
+    simulateTimeConsumingOp(2000);
+    return value > 100;
+  }
+  //...
+}
+```
+
+A call to evaluate() would take a couple of seconds to run, so we definitely want to postpone any unnecessary calls. Let's create a method, eagerEvaluator(), which is like almost any method we write in Java: all of its arguments will be evaluated before its call
+
+```java
+// Evaluation.java
+
+public static void eagerEvaluator(
+  final boolean input1, final boolean input2) {
+  System.out.println("eagerEvaluator called...");
+  System.out.println("accept?: " + (input1 && input2));
+}
+```
+
+The method takes two _boolean_ parameters. Within the method we perform a logical _and_ operations on the parameters. Sadly, it's too late to benefit from the lazy evaluation this operation automatically provides since the argument s are evaluated well before enter this method.
+
+Invoking eagerEvaluator()
+
+```java
+eagerEvaluator(evaluate(1), evaluate(2));
+```
+
+If we run this code we'll see both the calls to evaluate() execute well before we enter the eagerEvaluator() method
+
+```text
+evaluating ...1
+evaluating ...2
+eagerEvaluator called...
+accept?: false
+```
 

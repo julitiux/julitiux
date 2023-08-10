@@ -2112,3 +2112,36 @@ eagerEvaluator called...
 accept?: false
 ```
 
+## Designing for Lazy Evaluation
+
+If we know that some arguments may not be used during the execution of a method, we can design the method's interface to facilitate the delayed execution of some or all argument. The arguments can be evaluated on demand, like in this lazyEvaluator() method
+
+```java
+// Evaluation.java
+
+public static void lazyEvaluator(
+  final Supplier<Boolean> input1, final Supplier<Boolean> input2) {
+  System.out.println("lazyEvaluator called...");
+  System.out.println("accept?: " + (input1.get() && input2.get()));
+}
+```
+
+The logical and operation we use within the lazyEvaluator() method will invoke the get() methods only on demand.
+
+> If we pass two calls to evaluate() as arguments to the lazyEvaluator() method, the second will be evaluated only if the first call returned a boolean true
+
+```java
+// Evaluation.java
+
+lazyEvaluator(() -> evaluate(1), () -> evaluate(2));
+```
+
+Each Suppler makes a call to the evaluate() method, but not until the lazyEvaluator() method is invoked.
+
+```text
+lazyEvaluator called...
+evaluating ...1
+accept?: false
+```
+
+

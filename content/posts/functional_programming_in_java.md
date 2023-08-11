@@ -2196,4 +2196,35 @@ If the code were eager, the filter() method would have first gone through all do
 
 Both the filter() and map() methods are lazy to the bone. As the execu- tion goes through the chain, the filter() and map() methods store the lambda expressions and pass on a façade to the next call in the chain. The evaluations start only when findFirst(), a terminal operation, is called.
 
+## Peeking into the Laziness
 
+Writing the series of operations as a chain is the preferred and natural way in Java 8. But to really see that the lazy evaluations didn’t start until we reached the terminal operation, let’s break the chain from the previous code into steps.
+
+```java
+// LazyStreams.java
+
+Stream<String> namesWith3Letters =
+  names.stream()
+       .filter(name -> length(name) == 3)
+       .map(name -> toUpper(name));
+
+System.out.println("Stream created, filtered, mapped...");
+System.out.println("ready to call findFirst...");
+
+final String firstNameWith3Letters =
+  namesWith3Letters.findFirst().get();
+
+System.out.println(firstNameWith3Letters);
+```
+
+We transformed the collection into a stream, filtered the values, and then mapped the resulting collection. Then, separately, we called the terminal operation.
+
+```text
+Stream created, filtered, mapped...
+ready to call findFirst...
+getting length for Brad
+getting length for Kate
+getting length for Kim
+converting to uppercase: Kim
+KIM
+```

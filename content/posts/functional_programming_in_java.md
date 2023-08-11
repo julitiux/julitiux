@@ -2144,4 +2144,48 @@ evaluating ...1
 accept?: false
 ```
 
+## Leveraging the Laziness of Streams
 
+## Intermediate and Terminal Operations
+
+_Streams_ have two types of methods: _intermediate_ and _terminal_, which work together. Methods like _map()_ and _filter()_ are intermediate; calls to them return immediately and the lambda expressions provided to them are not evaluated right away.
+
+```java
+// Streams.java
+
+public class LazyStreams {
+  private static int length(final String name) {
+    System.out.println("getting length for " + name);
+    return name.length();
+  }
+
+  private static String toUpper(final String name ) {
+    System.out.println("converting to uppercase: " + name);
+    return name.toUpperCase();
+  }
+  //...
+}
+```
+
+The two helper methos simply print the paramters they receive before returning the expected result
+
+Now we wrote these methods to take a peek at the intermediate operations in the code we'll write next
+
+```java
+// LazyStream.java
+
+public static void main(final String[] args) {
+  List<String> names = Arrays.asList("Brad", "Kate", "Kim", "Jack", "Joe", "Mike", "Susan", "George", "Robert", "Julia", "Parker", "Benson");
+
+final String firstNameWith3Letters =
+  names.stream()
+       .filter(name -> length(name) == 3)
+       .map(name -> toUpper(name))
+       .findFirst()
+       .get();
+
+  System.out.println(firstNameWith3Letters);
+}
+```
+
+At first glance it appears the code is doing a lot of work transforming collections, but it's deceptively lazy

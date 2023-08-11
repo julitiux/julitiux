@@ -2228,3 +2228,9 @@ getting length for Kim
 converting to uppercase: Kim
 KIM
 ```
+
+## Creating infinite, Lazy Collections
+
+Infinite collections can make the code to create a growing series, like the Fibonacci numbers, clearer and easier to express. But from our experience in Java, we might think a series can’t be infinite due to practical memory limits.
+
+

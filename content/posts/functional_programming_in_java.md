@@ -2233,4 +2233,27 @@ KIM
 
 Infinite collections can make the code to create a growing series, like the Fibonacci numbers, clearer and easier to express. But from our experience in Java, we might think a series can’t be infinite due to practical memory limits.
 
+## A Desperate Attempt
 
+Use a series of prime numbers, 2, 3, 5, 7,... as an example to explore the concepts here
+
+```java
+// Primes.java
+
+public static boolean isPrime(final int number) {
+  return number > 1 && IntStream.rangeClosed(2, (int) Math.sqrt(number)).noneMatch(divisor -> number % divisor == 0);
+}
+```
+
+On our first attempt, we’ll use the isPrime() method to create a series of prime numbers starting at any given number.
+
+```java
+//don't try this at the office
+
+public static List<Integer> primes(final int number) {
+  if(isPrime(number))
+    return concat(number, primes(number + 1));
+  else
+    return primes(number + 1);
+}
+```

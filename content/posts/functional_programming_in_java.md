@@ -2257,3 +2257,42 @@ public static List<Integer> primes(final int number) {
     return primes(number + 1);
 }
 ```
+
+## Reaching for the Stars
+
+The Stream interface has a static method iterate() that can create an infinite Stream. It takes two parameters, a seed value to start the collection, and an instance of a UnaryOperator interface, which is the supplier of data in the collection. The Stream the iterate() method returns will postpone creating the elements until we ask for them using a terminating method. To get the first element, for example, we could call the findFirst() method. To get ten elements we could call the limit() method on the Stream, like so: limit(10).
+
+```java
+// Primes.java
+
+public class Primes {
+  private static int primeAfter(final int number) {
+    if(isPrime(number + 1))
+      return number + 1;
+    else
+      return primeAfter(number + 1);
+  }
+
+  public static List<Integer> primes(final int fromNumber, final int count) {
+    return Stream.iterate(primeAfter(fromNumber - 1), Primes::primeAfter)
+                 .limit(count)
+                 .collect(Collectos.<Integer>toList());
+  }
+  //...
+}
+```
+
+Let’s call the primes() method first to get ten primes starting at 1, and then five primes starting at 100.
+
+```java
+// Primes.java
+
+System.out.println("10 primes from 1: " + primes(1, 10));
+
+System.out.println("5 primes from 100: " + primes(100, 5));
+```
+
+```text
+10 primes from 1: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
+5 primes from 100: [101, 103, 107, 109, 113]
+```

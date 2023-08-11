@@ -2189,3 +2189,11 @@ final String firstNameWith3Letters =
 ```
 
 At first glance it appears the code is doing a lot of work transforming collections, but it's deceptively lazy
+
+## Method Evaluation Order
+
+If the code were eager, the filter() method would have first gone through all dozen names in the collection to create a list of two names, Kim and Joe, whose length is three (letters). The subsequent call to the map() method would have then evaluated the two names. The findFirst() method finally would have picked the first element of this reduced list.
+
+Both the filter() and map() methods are lazy to the bone. As the execu- tion goes through the chain, the filter() and map() methods store the lambda expressions and pass on a façade to the next call in the chain. The evaluations start only when findFirst(), a terminal operation, is called.
+
+

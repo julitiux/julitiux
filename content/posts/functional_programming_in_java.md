@@ -2410,3 +2410,31 @@ public class TailCalls {
   }
 }
 ```
+
+## Using the Tail-Recursive Function
+
+```java
+// Factorial.java
+
+System.out.println(factorialTailRec(1, 5).invoke());
+```
+
+We seed the factorialTailRec() with an initial factorial value, 1 and the number. The result of this call is a TailCall instance and we call the invoke() method on it. That call’s result should be the same as the unoptimized recursion version we saw earlier
+
+```text
+120
+```
+
+The previous version ran into a stack overflow. Let’s check this version’s fate
+
+```java
+// Factorial.java
+
+System.out.println(factorialTailRec(1, 20000).invoke());
+```
+
+```text
+0
+```
+
+The operation succeeded, but the patient died.

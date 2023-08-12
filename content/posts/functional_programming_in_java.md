@@ -14,6 +14,7 @@ draft: false
 # [Chapter 4 Designing with Lambda Expressions](#chapter-4-designing-with-lambda-expressions)
 # [Chapter 5 Working with Resources](#chapter-5-working-with-resources)
 # [Chapter 6 Being Lazy](#chapter-6-being-lazy)
+# [Chapter 7 Optimizing Recursions](#chapter-7-optimizing-recursions)
 
 # Chapter 1 Hello Lambda Expression!
 
@@ -2296,3 +2297,6 @@ System.out.println("5 primes from 100: " + primes(100, 5));
 10 primes from 1: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
 5 primes from 100: [101, 103, 107, 109, 113]
 ```
+
+
+# Chapter 7 Optimizing Recursions

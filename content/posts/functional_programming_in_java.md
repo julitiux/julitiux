@@ -2302,4 +2302,7 @@ System.out.println("5 primes from 100: " + primes(100, 5));
 
 In this chapter we'll look at the tail-call optimization (TCO) technique to make recursions feasible for large inputs.
 
+## Using Tail-Call Optimization
+
+the biggest hurdle to using recursion os the risk of stack overflow for problems with large inputs. The brillant TCO technique can remove that concern. Java does not directly support TCO at the compiler level, but we can use lambda expression. With this solution, sometimes called _trampoline calls_, we can enjoy the powe or recursion.
 

@@ -2306,3 +2306,44 @@ In this chapter we'll look at the tail-call optimization (TCO) technique to make
 
 the biggest hurdle to using recursion os the risk of stack overflow for problems with large inputs. The brillant TCO technique can remove that concern. Java does not directly support TCO at the compiler level, but we can use lambda expression. With this solution, sometimes called _trampoline calls_, we can enjoy the powe or recursion.
 
+## Starting with an Unoptimized Recursion
+
+We using the Factorial
+
+```java
+// Factorial.java
+
+public class Factorial {
+  public static int factorialRec(final int number) {
+    if(number == 1)
+      return number;
+    else
+      return number * factorialRec(number - 1);
+  }
+}
+```
+
+This recursion terminates when we reach down to the value of 1
+
+```java
+// Factorial.java
+System.out.println(factorialRec(5));
+```
+
+Let's try with a lager input value
+
+```java
+// Factorial.java
+
+try {
+  System.out.println(factorialRec(20000));
+} catch(StackOverflowError ex) {
+  System.out.println(ex);
+}
+```
+
+The output
+
+```text
+java.lang.StackOverflowError
+```

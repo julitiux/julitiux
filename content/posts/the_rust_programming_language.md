@@ -255,3 +255,18 @@ let y = 5
 
 println!("x = {} and y = {}", x, y)
 ```
+
+## Testing the First Part
+
+```shell
+cargo run
+Compiling guessing_game v0.1.0 (file:///projects/guessing_game)
+  Finished dev [unoptimized + debuginfo] target(s) in 1.50 secs
+    Running `target/debug/guessing_game`
+Guess the number!
+Please input your guess.
+6
+You guessed: 6
+```
+
+At this point, the first part of the game is done

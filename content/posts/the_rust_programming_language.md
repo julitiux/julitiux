@@ -222,3 +222,19 @@ We could have writtern this function call as std::io::stdin. The stdin function 
 The job of read_line is to take whatever the user tyes into stadard input and place that into a string.
 
 The & indicates that this argument is a _reference_
+
+## Handling Potential Failure with the Result Type
+
+The second part the method
+
+```rust
+.expect("Failed to read line");
+```
+
+read_line puts what the user types into the string we're passing it, but it also returns a value - in this case, an io::Result. Rust has a number of types named Result int its standard library: a generic Result as well as specific versions of submodules, such as io::Result
+
+The Result  types are _enumerations_, often referred to as _enums_
+
+For Result, the variants are *Ok* or *Err*
+
+The _Ok_ variant indicates the operation was successful, and inside _Ok_ is the successfully generated value. The Err variant means the operation failed, and Err contains information about how or why the operation failed.

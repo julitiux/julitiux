@@ -149,3 +149,37 @@ Compiling guessing_game v0.1.0 (file:///projects/guessing_game)
   Running `target/debug/guessing_game`
 Hello, world!
 ```
+
+## Processing a Guess
+
+The first part of the guessing game program will ask for user input
+
+```rust
+use std::io;
+
+fn main() {
+    println!("Guess the number!");
+
+    println!("Please input your guess.");
+
+    let mut guess = String::new();
+    io::stdin().read_line(&mut guess)
+        .expect("Failed to read line");
+
+    println!("You guessed: {}", guess);
+}
+```
+
+The io library comes from the stardard library, is known as std. Using the std::io library provides you with a number of useful features, including the ability to accept user input
+
+```rust
+use std::io;
+```
+
+This code is printing a prompt starting what the game is and requesting input from the user.
+
+```rust
+println!("Guess the number!");
+
+println!("Please input your guess.");
+```

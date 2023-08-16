@@ -231,10 +231,27 @@ The second part the method
 .expect("Failed to read line");
 ```
 
-read_line puts what the user types into the string we're passing it, but it also returns a value - in this case, an io::Result. Rust has a number of types named Result int its standard library: a generic Result as well as specific versions of submodules, such as io::Result
+Read_line puts what the user types into the string we're passing it, but it also returns a value - in this case, an io::Result. Rust has a number of types named Result int its standard library: a generic Result as well as specific versions of submodules, such as io::Result
 
 The Result  types are _enumerations_, often referred to as _enums_
 
 For Result, the variants are *Ok* or *Err*
 
 The _Ok_ variant indicates the operation was successful, and inside _Ok_ is the successfully generated value. The Err variant means the operation failed, and Err contains information about how or why the operation failed.
+
+## Printing Values with println! Placeholders.
+
+This line prints the string we saved the user's input in. The set of curly brackets, {}, is a placeholder: think of {}as little crab pincers that hold a values in place.
+
+```rust
+println!("You guessed: {}", guess);
+```
+
+Printing multiples values in one call to println!
+
+```rust
+let x = 5
+let y = 5
+
+println!("x = {} and y = {}", x, y)
+```

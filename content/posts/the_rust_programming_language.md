@@ -183,3 +183,42 @@ println!("Guess the number!");
 
 println!("Please input your guess.");
 ```
+
+## Storing Values with Variables
+
+We create a place to store the user input
+
+```rust
+let mut guess = String::new
+```
+
+The following example shows how to use mut before the variable name to make a variable mutable
+
+```rust
+let foo = 5; // immutable
+
+let mut bar = 5; // mutable
+```
+
+> The // syntax starts a comment that continues intul the end of the line. Rust ignores everything in comments.
+
+The :: syntax in the ::new line indicates that new is an _associated function_ of the String type.
+
+This new function creates a new, empty string.
+
+To summarize, the let mut guess = String::new(); has created a mutable variable that is currently bound to a new, empty instance of a String.
+
+Now we'll call the stdin function from the io module
+
+```rust
+io::stdin().read_line(&mut guess)
+    .expect("Failed to read line");
+```
+
+We could have writtern this function call as std::io::stdin. The stdin function returns an instance of std::io::Stdin, which is a type that represents a handle to the standard input for you terminal
+
+.read_line(&mut guess), calls the read_line method on the standard input handle to get input from the user. We're also passing one argument to read_line: &mut guess.
+
+The job of read_line is to take whatever the user tyes into stadard input and place that into a string.
+
+The & indicates that this argument is a _reference_

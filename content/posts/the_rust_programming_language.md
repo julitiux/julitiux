@@ -7,6 +7,7 @@ draft: false
 ## **INDEX**
 
 # [Chapter 1 Getting Started](#chapter-1-getting-started)
+# [Chapter 2 Programming a Guessing Game](#chapter-2-programming-a-guessing-game)
 
 # Chapter 1 Getting Started
 
@@ -107,3 +108,44 @@ cargo build --release
 ```
 
 This command will create an executable in _target/release_ instead of _target/debug_
+
+# Chapter 2 Programming a Guessing Game
+
+## Setting Up a New Project
+
+Using `cargo`
+
+```shell
+cargo new guessing_game
+cd guessing_game
+```
+
+Look at the generated `Cargo.toml` file
+
+```toml
+[package]
+name = "guessing_game"
+version = "0.1.0"
+authors = ["Your Name <you@example.com>"]
+edition = "2018"
+
+[dependencies]
+```
+
+src/main.rs
+
+```rust
+fn main() {
+    println!("Hello, world!");
+}
+```
+
+Compile and run it in the same step using the `cargo run` command
+
+```shell
+cargo run
+Compiling guessing_game v0.1.0 (file:///projects/guessing_game)
+ Finished dev [unoptimized + debuginfo] target(s) in 1.50 secs
+  Running `target/debug/guessing_game`
+Hello, world!
+```

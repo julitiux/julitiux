@@ -306,9 +306,27 @@ cargo build
 
 Cargo fetches the lastest versions of everything fromt he _registry_, which is a copy of data from [https://crates.io/](https://crates.io/). Crates.io is where people in the Rust ecosystem post their open source Rust projects for others to use.
 
-## Ensuring Reproducible Builds with the Cargo.lonk File
+## Ensuring Reproducible Builds with the Cargo.link File
 
 Cargo has a mechanism that ensures you can rebuild the same artifact every time you or anyone else builds your code: Cargo will use only the ver- sions of the dependencies you specified until you indicate otherwise. For example, what happens if next week version 0.3.15 of the rand crate comes out and contains an important bug fix but also contains a regression that will break your code?
 The answer to this problem is the Cargo.lock file, which was created the first time you ran cargo build and is now in your guessing_game directory. When you build a project for the first time, Cargo figures out all the ver- sions of the dependencies that fit the criteria and then writes them to the Cargo.lock file. When you build your project in the future, Cargo will see that the Cargo.lock file exists and use the versions specified there rather than doing all the work of figuring out versions again. This lets you have a reproducible build automatically. In other words, your project will remain at 0.3.14 until you explicitly upgrade, thanks to the Cargo.lock file.
+
+## Updating a Crate to Get a New Version
+
+When you _do_ want to update a crate, Cargo provides another command, **update**, which will ignore the _Cargo.lock_ file and figure out all the latest versions that fit your specifications in _Cargo.toml_. If that works, Cargo will write those versions to the _Cargo.lock_ file
+
+```shell
+cargo update
+   Updating registry `https://github.com/rust-lang/crates.io-index`
+   Updating rand v0.3.14 -> v0.3.15
+```
+
+If you want to use rand version 0.4.0 or any version in the 0.4.x series
+
+```toml
+[dependencies]
+
+rand = "0.4.0"
+```
 
 

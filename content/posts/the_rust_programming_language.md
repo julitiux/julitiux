@@ -329,4 +329,47 @@ If you want to use rand version 0.4.0 or any version in the 0.4.x series
 rand = "0.4.0"
 ```
 
+## Generation a Random Number
 
+After to add the rand crate to Cargo.toml, let's start using rand
+
+```rust
+use std::io;
+use rand::Rng;
+
+fn main() {
+
+    println!("Guess the number!");
+
+    let secret_number = rand::thread_rng().gen_range(1, 101);
+
+    println!("The secret number is: {}", secret_number);
+
+    println!("Please input your guess.");
+
+    let mut guess = String::new();
+
+    io::stdin().read_line(&mut guess)
+        .expect("Failed to read line");
+
+    println!("You guessed: {}", guess);
+}
+```
+
+The Rng trait defines methods that random number generators implement
+
+```rust
+use rand::Rng
+```
+
+The rand::thread_rng function will give us the particular random number generator that we're going to use
+
+Then we call the gen_range method on the random number generator
+
+The gen_range method takes two number as arguments and generates a random number between them, so we need to specify 1 and 101 to request a number between 1 and 100.
+
+```rust
+let secret_number = rand::thread_rng().gen_range(1, 101);
+
+println!("The secret number is: {}", secret_number);
+```

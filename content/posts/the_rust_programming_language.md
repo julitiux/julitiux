@@ -186,13 +186,13 @@ println!("Please input your guess.");
 
 ## Storing Values with Variables
 
-We create a place to store the user input
+We create a place to store the user input.
 
 ```rust
 let mut guess = String::new
 ```
 
-The following example shows how to use mut before the variable name to make a variable mutable
+The following example shows how to use mut before the variable name to make a variable mutable.
 
 ```rust
 let foo = 5; // immutable
@@ -208,14 +208,14 @@ This new function creates a new, empty string.
 
 To summarize, the let mut guess = String::new(); has created a mutable variable that is currently bound to a new, empty instance of a String.
 
-Now we'll call the stdin function from the io module
+Now we'll call the stdin function from the io module.
 
 ```rust
 io::stdin().read_line(&mut guess)
     .expect("Failed to read line");
 ```
 
-We could have writtern this function call as std::io::stdin. The stdin function returns an instance of std::io::Stdin, which is a type that represents a handle to the standard input for you terminal
+We could have writtern this function call as std::io::stdin. The stdin function returns an instance of std::io::Stdin, which is a type that represents a handle to the standard input for you terminal.
 
 .read_line(&mut guess), calls the read_line method on the standard input handle to get input from the user. We're also passing one argument to read_line: &mut guess.
 
@@ -225,17 +225,17 @@ The & indicates that this argument is a _reference_
 
 ## Handling Potential Failure with the Result Type
 
-The second part the method
+The second part the method.
 
 ```rust
 .expect("Failed to read line");
 ```
 
-Read_line puts what the user types into the string we're passing it, but it also returns a value - in this case, an io::Result. Rust has a number of types named Result int its standard library: a generic Result as well as specific versions of submodules, such as io::Result
+Read_line puts what the user types into the string we're passing it, but it also returns a value - in this case, an io::Result. Rust has a number of types named Result int its standard library: a generic Result as well as specific versions of submodules, such as io::Result.
 
-The Result  types are _enumerations_, often referred to as _enums_
+The Result  types are _enumerations_, often referred to as _enums_.
 
-For Result, the variants are *Ok* or *Err*
+For Result, the variants are *Ok* or *Err*.
 
 The _Ok_ variant indicates the operation was successful, and inside _Ok_ is the successfully generated value. The Err variant means the operation failed, and Err contains information about how or why the operation failed.
 
@@ -247,7 +247,7 @@ This line prints the string we saved the user's input in. The set of curly brack
 println!("You guessed: {}", guess);
 ```
 
-Printing multiples values in one call to println!
+Printing multiples values in one call to println!.
 
 ```rust
 let x = 5
@@ -269,7 +269,7 @@ Please input your guess.
 You guessed: 6
 ```
 
-At this point, the first part of the game is done
+At this point, the first part of the game is done.
 
 ## Generating a Secret Number
 
@@ -289,9 +289,9 @@ rand = "0.3.14"
 
 In the _Cargo.toml_ file, everything that follows a header is part of a section that continues until another section starts. The [dependencies] section is where you tell Cargo which external crates you project depends on and which version of those crate you require.
 
-Cargo understands Semantic Versioning; sometimes called _SemVer_
+Cargo understands Semantic Versioning; sometimes called _SemVer_.
 
-Now without changing any of the code, build the project
+Now without changing any of the code, build the project.
 
 ```shell
 cargo build
@@ -313,7 +313,7 @@ The answer to this problem is the Cargo.lock file, which was created the first t
 
 ## Updating a Crate to Get a New Version
 
-When you _do_ want to update a crate, Cargo provides another command, **update**, which will ignore the _Cargo.lock_ file and figure out all the latest versions that fit your specifications in _Cargo.toml_. If that works, Cargo will write those versions to the _Cargo.lock_ file
+When you _do_ want to update a crate, Cargo provides another command, **update**, which will ignore the _Cargo.lock_ file and figure out all the latest versions that fit your specifications in _Cargo.toml_. If that works, Cargo will write those versions to the _Cargo.lock_ file.
 
 ```shell
 cargo update
@@ -321,7 +321,7 @@ cargo update
    Updating rand v0.3.14 -> v0.3.15
 ```
 
-If you want to use rand version 0.4.0 or any version in the 0.4.x series
+If you want to use rand version 0.4.0 or any version in the 0.4.x series.
 
 ```toml
 [dependencies]
@@ -331,7 +331,7 @@ rand = "0.4.0"
 
 ## Generation a Random Number
 
-After to add the rand crate to Cargo.toml, let's start using rand
+After to add the rand crate to Cargo.toml, let's start using rand.
 
 ```rust
 use std::io;
@@ -356,15 +356,15 @@ fn main() {
 }
 ```
 
-The Rng trait defines methods that random number generators implement
+The Rng trait defines methods that random number generators implement.
 
 ```rust
 use rand::Rng
 ```
 
-The rand::thread_rng function will give us the particular random number generator that we're going to use
+The rand::thread_rng function will give us the particular random number generator that we're going to use.
 
-Then we call the gen_range method on the random number generator
+Then we call the gen_range method on the random number generator.
 
 The gen_range method takes two number as arguments and generates a random number between them, so we need to specify 1 and 101 to request a number between 1 and 100.
 
@@ -397,15 +397,15 @@ fn main() {
 }
 ```
 
-Bringing a type called std::cmp::Ordering into scope from the standard library. Like Result, Ordering is another enum, but the variants for Ordering are Less, Greater, and Equal
+Bringing a type called std::cmp::Ordering into scope from the standard library. Like Result, Ordering is another enum, but the variants for Ordering are Less, Greater, and Equal.
 
-These are the three outcomes that are possible when yoy compare two values
+These are the three outcomes that are possible when yoy compare two values.
 
 ```rust
 use std::cmp::Ordering;
 ```
 
-The cmp method compares two values and can be called on anything that can be compared. Here it's comparing the guess to the secret_number. Then it returns a variant of the Ordering enum. We use a match expression to decide what do next based on which variant of Ordering was returned from the call to cmp
+The cmp method compares two values and can be called on anything that can be compared. Here it's comparing the guess to the secret_number. Then it returns a variant of the Ordering enum. We use a match expression to decide what do next based on which variant of Ordering was returned from the call to cmp.
 
 ```rust
 match guess.cmp(&secret_number) {
@@ -484,7 +484,7 @@ Nice!
 
 ## Allowing Multiple Guesses with Looping
 
-The loop keyword creates an infinite loop
+The loop keyword creates an infinite loop.
 
 ```rust
 // --snip--
@@ -504,11 +504,11 @@ The loop keyword creates an infinite loop
 }
 ```
 
-The user could always interrupt the program by using the keyboard shortcut CTRL-C
+The user could always interrupt the program by using the keyboard shortcut CTRL-C.
 
 ## Quitting After a Correct Guess
 
-Let's program the game to quit when the user wins by adding a break statement
+Let's program the game to quit when the user wins by adding a break statement.
 
 ```rust
 // --snip--
@@ -525,4 +525,67 @@ Let's program the game to quit when the user wins by adding a break statement
 }
 ```
 
-Adding the break line after You Win! makes the program wxit the loop when the user guesses the secret number correctly
+Adding the break line after You Win! makes the program wxit the loop when the user guesses the secret number correctly.
+
+## Handling Invalid Input
+
+We make the game ignore a non-number so the user can continue guessing.
+
+```rust
+// --snip--
+
+io::stdin().read_line(&mut guess)
+    .expect("Failed to read line");
+
+let guess: u32 = match guess.trim().parse() {
+    Ok(num) => num,
+    Err(_) => continue,
+};
+
+println!("You guessed: {}", guess);
+
+// --snip--
+```
+
+Switching from an expect call to match expression is how you generally move from crashing on an error to handling the error. Remember that parse returns a Result type and Result is an enum that has the variants Ok or Err.
+
+The underscore, is a cathallvakue; in this example, we're saying we want to match all Err values, no matter what information the have inside them. So the program will execute the second arm's code, continue, which tells the program to go to the next iteration of the loop and ask for another guess.
+
+The final code
+
+```rust
+use std::io;
+use std::cmp::Ordering;
+use rand::Rng;
+
+fn main() {
+    println!("Guess the number!");
+
+    let secret_number = rand::thread_rng().gen_range(1, 101);
+
+    loop {
+        println!("Please input your guess.");
+
+        let mut guess = String::new();
+
+        io::stdin().read_line(&mut guess)
+            .expect("Failed to read line");
+
+        let guess: u32 = match guess.trim().parse() {
+            Ok(num) => num,
+            Err(_) => continue,
+        };
+
+        println!("You guessed: {}", guess);
+
+        match guess.cmp(&secret_number) {
+            Ordering::Less => println!("Too small!"),
+            Ordering::Greater => println!("Too big!"),
+            Ordering::Equal => {
+                println!("You win!");
+                break;
+            }
+        }
+    }
+}
+```

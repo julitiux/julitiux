@@ -373,3 +373,111 @@ let secret_number = rand::thread_rng().gen_range(1, 101);
 
 println!("The secret number is: {}", secret_number);
 ```
+
+## Comparing the Guess to the Secret Number
+
+Now we compare two numbers
+
+```rust
+use std::io;
+use std::cmp::Ordering;
+use rand::Rng;
+
+fn main() {
+
+    // --snip--
+
+    println!("You guessed: {}", guess);
+
+    match guess.cmp(&secret_number) {
+        Ordering::Less => println!("Too small!"),
+        Ordering::Greater => println!("Too big!"),
+        Ordering::Equal => println!("You win!"),
+    }
+}
+```
+
+Bringing a type called std::cmp::Ordering into scope from the standard library. Like Result, Ordering is another enum, but the variants for Ordering are Less, Greater, and Equal
+
+These are the three outcomes that are possible when yoy compare two values
+
+```rust
+use std::cmp::Ordering;
+```
+
+The cmp method compares two values and can be called on anything that can be compared. Here it's comparing the guess to the secret_number. Then it returns a variant of the Ordering enum. We use a match expression to decide what do next based on which variant of Ordering was returned from the call to cmp
+
+```rust
+match guess.cmp(&secret_number) {
+    Ordering::Less => println!("Too small!"),
+    Ordering::Greater => println!("Too big!"),
+    Ordering::Equal => println!("You win!"),
+}
+```
+
+A match expression is made uo of _arms_. An arm consists of a _pattern_ and the code should be run if the value given to the beginning of the match expression fits that arm's pattern.
+
+Building the code
+
+```shell
+cargo build
+ Compiling guessing_game v0.1.0 (file:///projects/guessing_game)
+error[E0308]: mismatched types
+  --> src/main.rs:23:21
+   |
+23 |     match guess.cmp(&secret_number) {
+   |                     ^^^^^^^^^^^^^^ expected struct `std::string::String`,
+found integral variable
+   |
+   = note: expected type `&std::string::String`
+   = note:    found type `&{integer}`
+
+error: aborting due to previous error
+Could not compile `guessing_game`.
+```
+Now the core of the error states that there are _mismatched types_. Rust has a string, static type system. Afew number types can have a value between 1 and 100: i32, a 32-bit number; u32, an unsigned 32-bit number; i64, a 64-bit number. Rust defaults to an i32, which is the type of secret_number. The reason for the error here is that Rust cannot compare a string and a number type.
+
+```rust
+// --snip--
+    let mut guess = String::new();
+
+    io::stdin().read_line(&mut guess)
+        .expect("Failed to read line");
+
+    let guess: u32 = guess.trim().parse()
+        .expect("Please type a number!");
+
+    println!("You guessed: {}", guess);
+
+    match guess.cmp(&secret_number) {
+        Ordering::Less => println!("Too small!"),
+        Ordering::Greater => println!("Too big!"),
+        Ordering::Equal => println!("You win!"),
+    }
+}
+```
+
+Rust allows us to _shadow_ the previous value of guess with a new one. The trim method on a String instance will eliminate any whitespace at the beginning and end.
+
+The parse method on strings parses a string into some kind of number.
+
+The colon (:) after guess tells Rust we’ll annotate the variable’s type.
+
+If parse can successfully convert the string to a num- ber, it will return the Ok variant of Result, and expect will return the number that we want from the Ok value.
+
+Let's run the program now!
+
+```rust
+cargo run
+Compiling guessing_game v0.1.0 (file:///projects/guessing_game)
+ Finished dev[unoptimized + debuginfo] target(s) in 1.50 secs
+  Running `target/debug/guessing_game`
+Guess the number!
+The secret number is: 58
+Please input your guess.
+  76
+You guessed: 76
+Too big!
+```
+
+Nice!

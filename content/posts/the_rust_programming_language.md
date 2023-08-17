@@ -270,3 +270,45 @@ You guessed: 6
 ```
 
 At this point, the first part of the game is done
+
+## Generating a Secret Number
+
+## Using a Grate to Get More Functionality
+
+The project we've benn building is a _binary crate_, which is an executable. The _rand_ crate us a _binary crate_, which contains code intended to be used in other programs.
+
+Cargo's use of external crates is where it really shines.
+
+```toml
+// Cargo.toml
+
+[dependencies]
+
+rand = "0.3.14"
+```
+
+In the _Cargo.toml_ file, everything that follows a header is part of a section that continues until another section starts. The [dependencies] section is where you tell Cargo which external crates you project depends on and which version of those crate you require.
+
+Cargo understands Semantic Versioning; sometimes called _SemVer_
+
+Now without changing any of the code, build the project
+
+```shell
+cargo build
+    Updating registry `https://github.com/rust-lang/crates.io-index`
+ Downloading rand v0.3.14
+ Downloading libc v0.2.14
+   Compiling libc v0.2.14
+   Compiling rand v0.3.14
+  Compiling guessing_game v0.1.0 (file:///projects/guessing_game)
+   Finished dev [unoptimized + debuginfo] target(s) in 1.50 secs
+```
+
+Cargo fetches the lastest versions of everything fromt he _registry_, which is a copy of data from [https://crates.io/](https://crates.io/). Crates.io is where people in the Rust ecosystem post their open source Rust projects for others to use.
+
+## Ensuring Reproducible Builds with the Cargo.lonk File
+
+Cargo has a mechanism that ensures you can rebuild the same artifact every time you or anyone else builds your code: Cargo will use only the ver- sions of the dependencies you specified until you indicate otherwise. For example, what happens if next week version 0.3.15 of the rand crate comes out and contains an important bug fix but also contains a regression that will break your code?
+The answer to this problem is the Cargo.lock file, which was created the first time you ran cargo build and is now in your guessing_game directory. When you build a project for the first time, Cargo figures out all the ver- sions of the dependencies that fit the criteria and then writes them to the Cargo.lock file. When you build your project in the future, Cargo will see that the Cargo.lock file exists and use the versions specified there rather than doing all the work of figuring out versions again. This lets you have a reproducible build automatically. In other words, your project will remain at 0.3.14 until you explicitly upgrade, thanks to the Cargo.lock file.
+
+

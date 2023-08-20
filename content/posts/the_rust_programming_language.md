@@ -8,6 +8,7 @@ draft: false
 
 # [Chapter 1 Getting Started](#chapter-1-getting-started)
 # [Chapter 2 Programming a Guessing Game](#chapter-2-programming-a-guessing-game)
+# [Chapter 3 Common Programming Concepts](#chapter-3-common-programming-concepts)
 
 # Chapter 1 Getting Started
 
@@ -589,3 +590,6 @@ fn main() {
     }
 }
 ```
+
+
+# Chapter 3 Common Programming Concepts

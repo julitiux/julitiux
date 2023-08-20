@@ -593,3 +593,17 @@ fn main() {
 
 
 # Chapter 3 Common Programming Concepts
+
+## Variables and Mutability
+
+By default variables are immutables, however you still have the option to make variables mutables.
+
+```rust
+fn main() {
+    //let x = 5;
+    let mut x = 5;
+    println!("The value of x is: {}", x);
+    x = 6;
+    println!("The value of x is: {}", x);
+}
+```

@@ -607,3 +607,16 @@ fn main() {
     println!("The value of x is: {}", x);
 }
 ```
+
+## Differeces Between Variables and Constants
+
+You are not allowed to use _mut_ with constants; they are always immutables.
+
+You declare constants using the _const_ keyword instead of the let keyword and the tyoe of the value must be annotated.
+
+Constants can be declared in any scope, including the global scope.
+
+```rust
+const MAX_POINTS: u32 = 10_000;
+```
+

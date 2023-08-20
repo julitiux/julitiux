@@ -620,3 +620,29 @@ Constants can be declared in any scope, including the global scope.
 const MAX_POINTS: u32 = 10_000;
 ```
 
+## Shadowing
+
+We can shadow a variable by using the same variable's name and repeating the use of the let keyword
+
+```rust
+fn main() {
+    let x = 5;
+    let x = x + 1;
+    let x = x * 2;
+    println!("The value of x is: {}", x);
+}
+```
+
+The big difference between mut and shadowing is that because we're effectively creating a new variable when we use keyword again, we can change the type of the value but reuse the same name.
+
+```rust
+// shadowing
+let spaces = "    ";
+let spaces = spaces.len();
+```
+
+```rust
+// mismatched types
+let mut spaces = "    ";
+spaces = spaces.len();
+```

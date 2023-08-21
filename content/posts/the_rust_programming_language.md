@@ -861,3 +861,29 @@ Hello, world!
 Another function.
 ```
 
+## Function Parameters
+
+Functions can also be defines to have _parameters_, which are special variables that are part of a function's signature. The concrete values are called _arguments_, but in casual conversation, people tend to use the words _parameter_ and _arguement_.
+
+```rust
+fn main() {
+    another_function(5);
+}
+
+fn another_function(x: i32) {
+    println!("The value of x is: {}", x);
+}
+```
+
+In function signatures, you must declare the type of each parameter. This is a deliberate decision in Rust design. When you want a function to have multiple parameters, separate the parameter declarations with comas.
+
+```rust
+fn main() {
+    another_function(5, 6);
+}
+
+fn another_function(x: i32, y: i32) {
+    println!("The value of x is: {}", x);
+    println!("The value of y is: {}", y);
+}
+```

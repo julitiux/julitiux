@@ -741,4 +741,37 @@ fn main() {
 
  ## Compound Types
 
-_Coumpound types_ can group multiple values into one type. Rust has two primitive compound types: tuples and arrays.e
+_Coumpound types_ can group multiple values into one type. Rust has two primitive compound types: tuples and arrays
+
+## The Tuple Type
+
+A tuple is a general way of grouping tohether some number of other values with a variety of types into one compound type. Tuples have a fixed length: once declared, they cannot grow or shrink in size.
+
+```rust
+fn main() {
+    let tup: (i32, f64, u8) = (500, 6.4, 1);
+}
+```
+
+The variable _tup_ binds to the entire tuple, because a tuple is considered a single compound element. To get the individual values out of a tuple, we can use pattern matching to destructure a tuple value.
+
+```rust
+fn main() {
+    let tup = (500, 6.4, 1);
+    let (x, y, z) = tup;
+    println!("The value of y is: {}", y);
+}
+```
+
+This is called _destructuring_, because it breaks the single tuple into three parts.
+
+In addition to destructuring throught patter matching, we can access a tuple element directly by using a period (.) followed by the index of the value we want to access
+
+```rust
+fn main() {
+    let x: (i32, f64, u8) = (500, 6.4, 1);
+    let five_hundred = x.0;
+    let six_point_four = x.1;
+    let one = x.2;
+}
+```

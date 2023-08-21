@@ -834,3 +834,30 @@ thread '<main>' panicked at 'index out of bounds: the len is 5 but the index
 is 10', src/main.rs:6
 note: Run with `RUST_BACKTRACE=1` for a backtrace.
 ```
+
+## Functions
+
+Functions are pervasive in Rust code. Rust code uses _snake case_ as the conventional atyle for function and variables names.
+
+```rust
+fn main() {
+    println!("Hello, world!");
+    another_function();
+}
+
+fn another_function() {
+    println!("Another function.");
+}
+```
+
+Function definition in Rust start with fn and have a set of parhentheses after the funtion name. You should be see the following output.
+
+```rust
+cargo run
+Compiling functions v0.1.0 (file:///projects/functions)
+ Finished dev [unoptimized + debuginfo] target(s) in 1.50 secs
+  Running `target/debug/functions`
+Hello, world!
+Another function.
+```
+

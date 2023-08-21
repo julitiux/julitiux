@@ -927,3 +927,34 @@ fn main() {
 The expressions do not include ending semicolons.
 
 If you add a semicolon to the end of an expression, you turn it into a statement, which will then not return a value.
+
+## Functions with Return Values.
+
+Functions can return values to the code that calls them. We don't name return values, but we do declare their type after an arrow ( -> ). In Rust, the return values of the function is synonymous with the value of the final expression in the block of the body of a function. You can return early from a function by using teh return keyword and specifying a value, but most functions return the last expression implicity
+
+```rust
+fn five() -> i32 {
+    5
+}
+
+fn main() {
+    let x = five();
+    println!("The value of x is: {}", x);
+}
+```
+
+There are no function calls, macros, or even let statements in the five function - just the number 5 by itself . That's a perfectly valid function in Rust.
+
+Let's look at another example
+
+```rust
+fn main() {
+    let x = plus_one(5);
+    println!("The value of x is: {}", x);
+}
+
+fn plus_one(x: i32) -> i32 {
+    x + 1
+}
+
+```

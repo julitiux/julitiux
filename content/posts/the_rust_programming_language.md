@@ -1182,3 +1182,44 @@ fn main() {
 }
 
 ```
+
+## Looping Through a Collection with for
+
+You could use the while construct to loop over the elements of a collection, such as an array.
+
+```rust
+fn main() {
+    let a = [10, 20, 30, 40, 50];
+    let mut index = 0;
+
+    while index < 5 {
+        println!("the value is: {}", a[index]);
+        index = index + 1;
+    }
+}
+```
+
+As a more concise alternative, you can use a for loop and execute some code for each item in a collection.
+
+```rust
+fn main() {
+    let a = [10, 20, 30, 40, 50];
+
+    for element in a.iter() {
+        println!("the value is: {}", element);
+    }
+}
+```
+
+Here's what the countdown would look like using a for loop and another method we've not yet talked about, rev, to reverse the range
+
+```rust
+fn main() {
+    for number in (1..4).rev() {
+        println!("{}!", number);
+    }
+    println!("LIFTOFF!!!");
+}
+```
+
+Rust is nicer, isn't it?

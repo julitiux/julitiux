@@ -646,3 +646,20 @@ let spaces = spaces.len();
 let mut spaces = "    ";
 spaces = spaces.len();
 ```
+
+## Data Types
+
+Keep in mind that Rust is a _statically typed_ language, which means that it must know the types of all variables at compile time. The compiles can usually infer what type we want to use based on the value and how we use it.
+
+If we don't add the type annotation, Rust will display the following error, which means the compiler needs more information from us to know whit type we want to use.
+
+```shell
+error[E0282]: type annotations needed
+  --> src/main.rs:2:9
+   |
+ 2 |     let guess = "42".parse().expect("Not a number!");
+   |         ^^^^^
+   |         |
+   |         cannot infer type for `_`
+   |         consider giving `guess` a type
+```

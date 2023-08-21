@@ -985,4 +985,8 @@ fn main() {
 }
 ```
 
+## Control Flow
+
+The most common contructs that let you control the flow of execution of Rust code are if expressions and loops.
+
 

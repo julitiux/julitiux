@@ -739,3 +739,6 @@ fn main() {
     let heart_eyed_cat = '😻'; }
 ```
 
+ ## Compound Types
+
+_Coumpound types_ can group multiple values into one type. Rust has two primitive compound types: tuples and arrays.e

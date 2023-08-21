@@ -1119,4 +1119,28 @@ It's often useful to execute a block of code more than once. For this task, Rust
 
 > Rust has three kinds of loops: loop, while, and for.
 
+## Repeating Code with loop
 
+The loop keyword tells Rust to execute a block of code over and over again forever or until you explicitly tell it to stop.
+
+```rust
+fn main() {
+    loop {
+        println!("again!");
+    }
+}
+```
+
+CTRL-C to interrupt. Try it
+
+```shell
+cargo run
+Compiling loops v0.1.0 (file:///projects/loops)
+    Finished dev [unoptimized + debuginfo] target(s) in 1.50 secs
+     Running `target/debug/loops`
+again!
+again!
+again!
+again!
+^Cagain!
+```

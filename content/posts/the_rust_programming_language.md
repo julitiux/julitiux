@@ -1164,3 +1164,21 @@ fn main() {
     println!("The result is {}", result);
 }
 ```
+
+## Conditional Loops with while
+
+While the condition is true, the loop runs. When the condition ceases to be true, the program calls break, stopping the loop.
+
+```rust
+fn main() {
+    let mut number = 3;
+
+    while number != 0  {
+        println!("{}!", number);
+        number = number - 1;
+    }
+
+    println!("LIFTOFF!!!");
+}
+
+```

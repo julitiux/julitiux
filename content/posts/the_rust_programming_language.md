@@ -716,3 +716,14 @@ fn main() {
     let remainder = 43 % 5;
 }
 ```
+
+## The Boolean Type
+
+A Boolean type in Rust has two possible values: _true_ and _false_
+
+```rust
+fn main() {
+    let t = true;
+    let f: bool = false; // with explicit type annotation
+}
+```

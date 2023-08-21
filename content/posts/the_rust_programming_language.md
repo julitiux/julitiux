@@ -741,7 +741,7 @@ fn main() {
 
  ## Compound Types
 
-_Coumpound types_ can group multiple values into one type. Rust has two primitive compound types: tuples and arrays
+_Coumpound types_ can group multiple values into one type. Rust has two primitive compound types: tuples and arrays.
 
 ## The Tuple Type
 
@@ -765,7 +765,7 @@ fn main() {
 
 This is called _destructuring_, because it breaks the single tuple into three parts.
 
-In addition to destructuring throught patter matching, we can access a tuple element directly by using a period (.) followed by the index of the value we want to access
+In addition to destructuring throught patter matching, we can access a tuple element directly by using a period (.) followed by the index of the value we want to access.
 
 ```rust
 fn main() {
@@ -774,4 +774,26 @@ fn main() {
     let six_point_four = x.1;
     let one = x.2;
 }
+```
+
+## The Array Type
+
+Another way to have a collection of multiple values is with an array. Unlike a tuple, every element of an array must have the same type. The values going into an array are written as a comma-separated list inside square brackets.
+
+```rust
+fn main() {
+    let a = [1, 2, 3, 4, 5];
+}
+```
+
+You would write an array's type by using square bracketsm and within the brackets include the type of each element, a semicolon, and then the number of elements.
+
+```rust
+let a: [i32; 5] = [1, 2, 3, 4, 5];
+```
+
+If you want to create an array that containts the same value for each element, you can specify the initial value, followed by a semicolon, and then the length of the array in square brackets.
+
+```rust
+let a = [3; 5];
 ```

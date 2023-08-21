@@ -683,4 +683,14 @@ An _integer_ is a number without a fractional component. Each variant in the Sig
 
 If you are unsure, Rust's defaults are generally good choices, and integer types default to i32: this types is generally the fastest, even on 64-bit systems.
 
+## Floating-Point Types
+
+Rust has two primitive types for _floating-point numbers_, which are numbers with decimal points: f32 and f64; wich are 32 bits and 64 bits in size, repectively. The default is f64 because on modern CPUs it's roughly the same speed as f32 but is capable or more precision.
+
+```rust
+fn main() {
+    let x = 2.0; // f64
+    let y: f32 = 3.0; // f32
+}
+```
 

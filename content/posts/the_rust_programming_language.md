@@ -989,4 +989,55 @@ fn main() {
 
 The most common contructs that let you control the flow of execution of Rust code are if expressions and loops.
 
+## If Expressions
+
+An if expression allows you to branch your code depending on condition. If this condition is met, run this block of code like this
+
+```rust
+fn main() {
+    let number = 3;
+
+    if number < 5 {
+        println!("condition was true");
+    } else {
+        println!("condition was false");
+    }
+}
+```
+
+It's also worth noting that the condition in this code _must_ be a bool. If the condition isn't a bool, we'll get an error
+
+```rust
+fn main() {
+    let number = 3;
+    if number {
+        println!("number was three");
+    }
+}
+```
+
+the error:
+
+```shell
+error[E0308]: mismatched types
+ --> src/main.rs:4:8
+  |
+4 |     if number {
+  |        ^^^^^^ expected bool, found integral variable
+  |
+  = note: expected type `bool`
+             found type `{integer}`
+```
+
+Fixing the error
+
+```rust
+fn main() {
+    let number = 3;
+    if number != 0 {
+        println!("number was something other than zero");
+    }
+}
+```
+
 

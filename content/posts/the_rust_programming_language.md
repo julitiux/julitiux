@@ -809,3 +809,28 @@ fn main() {
     let second = a[1];
 }
 ```
+
+## Invalid Array Element Access
+
+If you access an element of an array that is past the end of the array.
+
+```rust
+fn main() {
+    let a = [1, 2, 3, 4, 5];
+    let index = 10;
+    let element = a[index];
+    println!("The value of element is: {}", element);
+}
+```
+
+Running this code using cargo _run_ produces the following result
+
+```shell
+cargo run
+Compiling arrays v0.1.0 (file:///projects/arrays)
+ Finished dev [unoptimized + debuginfo] target(s) in 1.50 secs
+  Running `target/debug/arrays`
+thread '<main>' panicked at 'index out of bounds: the len is 5 but the index
+is 10', src/main.rs:6
+note: Run with `RUST_BACKTRACE=1` for a backtrace.
+```

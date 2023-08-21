@@ -667,3 +667,20 @@ error[E0282]: type annotations needed
 ## Scalar Types
 
 A scalar type represent a single value. Rust has four primary scalar types: integers, floating-point numbers, Booleans, and characters.
+
+## Integer Types
+
+An _integer_ is a number without a fractional component. Each variant in the Signed and Unsigned columns can be used to declare the type of an insteger value
+
+| Length | Signed | Unsigned |
+|---|---|---|
+| 8-bit | i8 | u8 |
+| 16-bit | i16 | u16 |
+| 32-bit | i32 | u32 |
+| 64-bit | i64 | u64 |
+| 128-bit | i128 | u128 |
+| arch | isize | usize |
+
+If you are unsure, Rust's defaults are generally good choices, and integer types default to i32: this types is generally the fastest, even on 64-bit systems.
+
+

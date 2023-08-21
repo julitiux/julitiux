@@ -727,3 +727,15 @@ fn main() {
     let f: bool = false; // with explicit type annotation
 }
 ```
+
+## The Character Type
+
+Rust supports letters too. That char literals are specified with single quotes, as opposed to string literals, which use doble quotes
+
+```rust
+fn main() {
+    let c = 'z';
+    let z = 'Ƶ';
+    let heart_eyed_cat = '😻'; }
+```
+

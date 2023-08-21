@@ -797,3 +797,15 @@ If you want to create an array that containts the same value for each element, y
 ```rust
 let a = [3; 5];
 ```
+
+## Accessing Array Elements
+
+An array is a single chunk of memory allocated on the stack. Tou can access elements of an array using indexing.
+
+```rust
+fn main() {
+    let a = [1, 2, 3, 4, 5];
+    let first = a[0];
+    let second = a[1];
+}
+```

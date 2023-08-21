@@ -1144,3 +1144,23 @@ again!
 again!
 ^Cagain!
 ```
+
+## Returning Values from Loops
+
+To do this, you can add the value you want returned after the break expression you use to stop the loop; that value will be returned out of the loop so you can use it.
+
+```rust
+fn main() {
+    let mut counter = 0;
+
+    let result = loop {
+        counter += 1;
+
+        if counter == 10 {
+            break counter * 2;
+        }
+    };
+
+    println!("The result is {}", result);
+}
+```

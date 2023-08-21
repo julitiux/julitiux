@@ -1112,3 +1112,11 @@ error[E0308]: if and else have incompatible types
   = note: expected type `{integer}`
              found type `&str`
 ```
+
+## Repetition with Loops
+
+It's often useful to execute a block of code more than once. For this task, Rust provides several _loops_
+
+> Rust has three kinds of loops: loop, while, and for.
+
+

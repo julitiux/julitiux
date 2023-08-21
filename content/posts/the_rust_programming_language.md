@@ -663,3 +663,7 @@ error[E0282]: type annotations needed
    |         cannot infer type for `_`
    |         consider giving `guess` a type
 ```
+
+## Scalar Types
+
+A scalar type represent a single value. Rust has four primary scalar types: integers, floating-point numbers, Booleans, and characters.

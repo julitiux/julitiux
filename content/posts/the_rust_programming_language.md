@@ -1060,3 +1060,55 @@ fn main() {
 ```
 
 this program will be check every if expression in turn and executes the first body for wich the condition holds true.
+
+## Using if in a let Statement
+
+Because ud is an expression, we can use it on the right side of a let statement.
+
+```rust
+fn main() {
+    let condition = true;
+
+    let number = if condition {
+        5
+    } else {
+        6
+    };
+
+    println!("The value of number is: {}", number);
+}
+```
+
+If the types are mismatched, as in the following example, we'll get an error
+
+```rust
+fn main() {
+    let condition = true;
+
+    let number = if condition {
+        5
+    } else {
+        "six"
+    };
+
+    println!("The value of number is: {}", number);
+}
+```
+
+The error
+
+```shell
+error[E0308]: if and else have incompatible types
+ --> src/main.rs:4:18
+  |
+4 |       let number = if condition {
+  |  __________________^
+5 | |         5
+6 | |     } else {
+7 | |         "six"
+8 | |     };
+  | |_____^ expected integral variable, found &str
+  |
+  = note: expected type `{integer}`
+             found type `&str`
+```

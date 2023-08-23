@@ -9,6 +9,7 @@ draft: false
 # [Chapter 1 Getting Started](#chapter-1-getting-started)
 # [Chapter 2 Programming a Guessing Game](#chapter-2-programming-a-guessing-game)
 # [Chapter 3 Common Programming Concepts](#chapter-3-common-programming-concepts)
+# [Chapter 4 Understanding Ownership](#chapter-4-understanding-ownership)
 
 # Chapter 1 Getting Started
 
@@ -1223,3 +1224,10 @@ fn main() {
 ```
 
 Rust is nicer, isn't it?
+
+
+# Chapter 4 Understanding Ownership
+
+Ownership is Rust's mos unique feature, and it enables Rust to meake memory safety guarantees without needing a garbage colector.
+
+

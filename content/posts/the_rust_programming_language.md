@@ -1270,3 +1270,31 @@ In other words, there are two important points in time here
 
 * When s comes _into scope_, it is valid.
 * It remains calid until it goes _out of scope_
+
+## The String Type
+
+To illustrate the rules of ownership, we need a data type that is more complex than the ones we covered in "Data Types.
+
+String literals are convenient, but they aren't suitables for every situation in which we may want to use text. One reason is that they're immutable. Another is that not every string value can be known when we write our code.
+
+For these situations, Rust has a second string type, String. This type is allocated on the heap and as such is able to store an amount of text that is unknown to us compile time. You can create a String from a string literal using the from function, like so
+
+```rust
+let s = String::from("hello");
+```
+
+The double colon (::) is an operator that allows us to namespace this particular from function under the String type rather using some sort of name like string_from
+
+This kind of string can be mutated
+
+```rust
+let mut s = String::from("hello");
+
+s.push_str(", worlf");  // push_str() appends a literal to a String
+
+println!("{}", s);      // this will print 'hello, wolf'
+```
+
+The difference is how these two types deal with memory.
+
+

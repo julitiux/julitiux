@@ -1241,3 +1241,11 @@ The memory is managed through a system of ownership with a set of rules that the
 Both the stack and the heap are parts of memory that are available to your code to use at runtime, but they are structured in different ways. The stack stores values in the order it gets them and removes the values in the opposite oder. This is referred to as _last in, first out_.
 
 The heap is less organized; when you put data on the heap, you request a certain amount of space. the operating system finds an empty spot in the heap that is big enough, marks it as being in use, and return a _pointer_, which is the address of that location. This process is called _allocating on the heap_ and is something abbreviated as just _allocating_
+
+## Ownership Rules
+
+* Eache value in Rust has a variable that's called it _owner_.
+* Ther can be only one owner at a time.
+* When the owner goes out of the scope, the value will be dropped.
+
+

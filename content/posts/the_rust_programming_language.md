@@ -1248,4 +1248,25 @@ The heap is less organized; when you put data on the heap, you request a certain
 * Ther can be only one owner at a time.
 * When the owner goes out of the scope, the value will be dropped.
 
+## Variable Scope
 
+A scope is the range within a program for which an item is valid. Let's say we have a variable that looks like this:
+
+```rust
+let s = "hello";
+```
+
+The variable is valid from the point at which it's declared until the end of the current _scope_
+
+```rust
+{                       // s is not valid here; it's not yet declared
+    let s = "hello";    // s is valid from this point forward
+
+    // do stuff with s
+}                       // this scope is now over, and s is no longer valid
+```
+
+In other words, there are two important points in time here
+
+* When s comes _into scope_, it is valid.
+* It remains calid until it goes _out of scope_

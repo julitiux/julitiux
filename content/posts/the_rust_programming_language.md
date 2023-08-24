@@ -1228,6 +1228,10 @@ Rust is nicer, isn't it?
 
 # Chapter 4 Understanding Ownership
 
-Ownership is Rust's mos unique feature, and it enables Rust to meake memory safety guarantees without needing a garbage colector.
+Ownership is Rust's most unique feature, and it enables Rust to make memory safety guarantees without needing a garbage collector.
 
+## What is Ownership?
 
+Rust's central feature is _ownership_. Although the feature is straighforward to explain, it has deep implications for the rest of the lenguaje.
+
+The memory is managed through a system of ownership with a set of rules that the compiler checks at compiler time. None of the ownership feature slow down your program while it's running.

@@ -1235,3 +1235,9 @@ Ownership is Rust's most unique feature, and it enables Rust to make memory safe
 Rust's central feature is _ownership_. Although the feature is straighforward to explain, it has deep implications for the rest of the lenguaje.
 
 The memory is managed through a system of ownership with a set of rules that the compiler checks at compiler time. None of the ownership feature slow down your program while it's running.
+
+## The Stack and the Heap
+
+Both the stack and the heap are parts of memory that are available to your code to use at runtime, but they are structured in different ways. The stack stores values in the order it gets them and removes the values in the opposite oder. This is referred to as _last in, first out_.
+
+The heap is less organized; when you put data on the heap, you request a certain amount of space. the operating system finds an empty spot in the heap that is big enough, marks it as being in use, and return a _pointer_, which is the address of that location. This process is called _allocating on the heap_ and is something abbreviated as just _allocating_

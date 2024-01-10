@@ -7,6 +7,7 @@ draft: false
 ## **INDEX**
 
 # [Chapter 1 Build a Testing Foundation](#chapter-1-build-a-testing-foundation)
+# [Chapter 2 Work with the Mockito API](#chapter-2-work-with-the-mockito-api)
 
 # Chapter 1 Build a Testing Foundation
 
@@ -255,3 +256,23 @@ class HelloMockitoTest {
     }
 }
 ```
+
+# Chapter 2 Work with the Mockito API
+
+## Selecting Out System to Test
+
+We need a class to test that includes a dependency, so we'll use the _PersonRepository_ interface
+
+```java
+// PersonRepository.java
+
+public interface PersonRepository {
+    Person save(Person person);
+    Optional<Person> findById(int id);
+    List<Person> findAll();
+    long count();
+    void delete(Person person);
+}
+```
+
+

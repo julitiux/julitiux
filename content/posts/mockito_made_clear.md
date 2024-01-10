@@ -107,31 +107,55 @@ public interface TranslationService {
 Into my build.gradle
 
 ```groovy
-// Using Gradle version catalogs -- see gradle/libs.versions.toml
 plugins {
     id 'java'
+    id 'org.springframework.boot' version '3.2.0'
+    id 'io.spring.dependency-management' version '1.1.4'
+    id "io.freefair.lombok" version "8.3"
 }
 
-group 'com.kousenit'
-version '1.0'
+group = 'com.learn_mockito'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    sourceCompatibility = '17'
+}
 
 repositories {
     mavenCentral()
 }
+
 dependencies {
-    // JUnit bundle (includes vintage engine)
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // Flyway
+    implementation 'org.flywaydb:flyway-core'
+
+    // Lombok
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    // Retrofit
+    implementation libs.retrofit.core
+    implementation libs.retrofit.gson
+
+    // Jackson JSON library
+    implementation libs.jackson
+
+    // Gson
+    implementation libs.gson
+
+    // Mockito
     testImplementation libs.bundles.junit
-
-    // Mockito bundle (inline and JUnit Jupiter engine)
     testImplementation libs.bundles.mockito
-
-    // AssertJ
     testImplementation libs.assertj
 }
 
 tasks.named('test') {
     useJUnitPlatform()
 }
+
 ```
 
 Note this file relies on the new Gradle Version Catalogs introduced in Gradle 7.4 which means the _gradle_ folder includes a file called _libs.version.toml_, with the following contents:
@@ -141,17 +165,30 @@ Note this file relies on the new Gradle Version Catalogs introduced in Gradle 7.
 assertj = "3.23.1"
 junit = "5.9.1"
 mockito = "4.9.0"
+gson = "2.10.1"
+retrofit = "2.9.0"
+jackson = "2.15.2"
 
 [libraries]
-assertj = { module = "org.assertj:assertj-core",version.ref = "assertj" }
-junit-jupiter = { module = "org.junit.jupiter:junit-jupiter",version.ref = "junit" }
-junit-vintage = { module = "org.junit.vintage:junit-vintage-engine",version.ref = "junit" }
-mockito-inline = { module = "org.mockito:mockito-inline",version.ref = "mockito" }
+assertj = { module = "org.assertj:assertj-core", version.ref = "assertj" }
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit" }
+junit-vintage = { module = "org.junit.vintage:junit-vintage-engine", version.ref = "junit" }
+mockito-inline = { module = "org.mockito:mockito-inline", version.ref = "mockito" }
 mockito-junit = { module = "org.mockito:mockito-junit-jupiter", version.ref = "mockito" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+retrofit-core = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+retrofit-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+jackson = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jackson" }
 
 [bundles]
-junit = ["junit-jupiter", "junit-vintage"]
-mockito = ["mockito-inline", "mockito-junit"]
+junit = [
+  "junit-jupiter",
+  "junit-vintage"
+]
+mockito = [
+  "mockito-inline",
+  "mockito-junit"
+]
 ```
 
 This file you should be put inside to _./gradle_ folder

@@ -102,4 +102,56 @@ public interface TranslationService {
     }
 }
 ```
+## Adding Mockito to the Project
 
+Into my build.gradle
+
+```groovy
+// Using Gradle version catalogs -- see gradle/libs.versions.toml
+plugins {
+    id 'java'
+}
+
+group 'com.kousenit'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+dependencies {
+    // JUnit bundle (includes vintage engine)
+    testImplementation libs.bundles.junit
+
+    // Mockito bundle (inline and JUnit Jupiter engine)
+    testImplementation libs.bundles.mockito
+
+    // AssertJ
+    testImplementation libs.assertj
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+```
+
+Note this file relies on the new Gradle Version Catalogs introduced in Gradle 7.4 which means the _gradle_ folder includes a file called _libs.version.toml_, with the following contents:
+
+```toml
+[versions]
+assertj = "3.23.1"
+junit = "5.9.1"
+mockito = "4.9.0"
+
+[libraries]
+assertj = { module = "org.assertj:assertj-core",version.ref = "assertj" }
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter",version.ref = "junit" }
+junit-vintage = { module = "org.junit.vintage:junit-vintage-engine",version.ref = "junit" }
+mockito-inline = { module = "org.mockito:mockito-inline",version.ref = "mockito" }
+mockito-junit = { module = "org.mockito:mockito-junit-jupiter", version.ref = "mockito" }
+
+[bundles]
+junit = ["junit-jupiter", "junit-vintage"]
+mockito = ["mockito-inline", "mockito-junit"]
+```
+
+This file you should be put inside to _./gradle_ folder

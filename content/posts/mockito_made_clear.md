@@ -367,3 +367,28 @@ private final List<Person> people = Arrays.asList(
         new Person(5, "Barbara", "Liskov", LocalDate.of(1939, Month.NOVEMBER, 7)));
 
 ```
+
+Implement test using Mock method
+
+```java
+@Test
+void getLastNames_usingMockMethod() {
+    // create a stub for the PersonRepository
+    PersonRepository mockRepo = new PersonService(mockRepo);
+
+    // Set the expectations on the mock...
+    when(mockRepo.findAll()).thenReturn(people);
+
+    // Inject the mock into the service
+    PersonService personService = new PersonService(mockRepo);
+
+    // Get the last names (this is the method to test)
+    List<String> lastNames = personService.getLastNames();
+
+    // Check that the last names are correct (using AssertJ)
+    assertThat(lastNames).contains("Borg", "Goldberg", "Hopper", "Liskov", "Lovelace");
+
+    // Verify that the service called findAll on the mockRepo exactly once
+    verify(mockRepo).findAll();
+}
+```

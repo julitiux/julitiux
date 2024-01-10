@@ -32,3 +32,46 @@ public class HelloMockito{
 }
 ```
 
+It's easy enough to create a JUnit 5 test
+
+```java
+import org.junit.jupiter.api.Test
+
+class HelloMockitoTest {
+    private HelloMockito helloMockito = new HelloMockito();
+
+    @Test
+    void greetPerson(){
+        String greeting = helloMockito.greet("World");
+        assertEquals("Hello, World, from Mockito!", greeting);
+    }
+}
+```
+
+HelloMockito doesn't have any dependencies, Mockito isn't needed at all.
+
+```java
+// HelloMockito.java
+
+public class HelloMockito {
+    private String greeting = "Hello, %s, from Mockito!";
+
+    // Dependencies
+    private final PersonRepository personRepository;
+    private final TranslationService translationService;
+
+    // Constructor to inject the dependencies
+    public HelloMockito(PersonRepository personRepository, TranslationService translationService) {
+        this.personRepository = personRepository;
+        this.translationService = translationService;
+    }
+
+    // Method we want to test
+    public String greet(int id, String sourceLang, String targetLang) {
+        Optional<Person> person = personRepository.findById(id);
+        String name = person.map(Person::getFirst).orElse("World");
+        return translationService.translate(String.format(greeting, name), sourceLang, targetLang);
+    }
+}
+
+```

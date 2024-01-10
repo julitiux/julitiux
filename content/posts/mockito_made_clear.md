@@ -372,3 +372,36 @@ The mock method in the _Mockito_ class has the following signature:
 ```java
 public class static <T> T mock(Class<T> classToMock)
 ```
+
+You tell Mockito which class or interface to mock, and Mockito returns the mock object:
+
+```java
+PersonRepository mockRepo = mock(PersonRepository.class)
+```
+
+That's easy enough. Mockito will generate a class that implements this onterface, where all the methods will return their default values.
+
+```java
+// PersonServiceTest.java
+
+@Test
+void defaultImplementations() {
+    PersonRepository mockRepo = mock(PersonRepository.class);
+    assertAll(
+            () -> assertNull(mockRepo.save(any(Person.class))),
+            () -> assertTrue(mockRepo.findById(anyInt()).isEmpty()),
+            () -> assertTrue(mockRepo.findAll().isEmpty()),
+            () -> assertEquals(0, mockRepo.count())
+    );
+}
+```
+
+The mock returns a _null_ for the save method, empty _Optional_ instances for tge two finder methods, and 0 for _count_. The delete method already returns _void_, so the mock doesn't change that and therefore doesn't need to be tested.
+
+
+Hopefully,, you'll find the process intuitive, It does include two steps that can get tedious, because they'll appear in every test we write:
+
+|. We need to create the mock every time, and
+2. We need to inject the mock into the class under test every time.
+
+

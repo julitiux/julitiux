@@ -73,5 +73,33 @@ public class HelloMockito {
         return translationService.translate(String.format(greeting, name), sourceLang, targetLang);
     }
 }
-
 ```
+
+Two interfaces: PersonRepository.java and TranslationService.java
+
+```java
+// PersonRepository.java
+
+public interface PersonRepository {
+    Person save(Person person);
+    Optional<Person> findById(int id);
+    List<Person> findAll();
+
+    long count();
+    void delete(Person person);
+}
+```
+
+```java
+// TranslationService.java
+
+public interface TranslationService {
+    default String translate(String text,
+            String sourceLang,
+            String targetLang){
+
+        return text;
+    }
+}
+```
+

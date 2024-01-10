@@ -327,3 +327,34 @@ void getLastNames_usingMockMethod() {
     verify(mockRepo).findAll();
 }
 ```
+
+## Creating Mocks and Stubs
+
+Before we use Mockito, note that we could write out own stub implementation called _InMemoryPersonRepository_
+
+```java
+// InMemoyPersonRepository.java
+
+public class InMemoryPersonRepository implements PersonRepository {
+
+    private final List<Person> people = Collections.synchronizedList(new ArrayList<>());
+
+    @Override
+        public final Person save(Person person) {
+            synchronized (people) {
+                people.add(person);
+            }
+            return person;
+        }
+
+    @Override
+        public final void delete(Person person) {
+            synchronized (people) {
+                people.remove(person);
+            }
+
+        }
+    // ... other methods from PersonRepository ...
+}
+
+```

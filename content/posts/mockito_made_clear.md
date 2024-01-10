@@ -358,3 +358,17 @@ public class InMemoryPersonRepository implements PersonRepository {
 }
 
 ```
+
+You may have noticed the issues with this approach
+
+1. We have to implement all the methods in the interface, even though our test requires only one of them
+2. Wu have to maintain this class, so if our repository methods change, the stub will have to be updated as well
+3. If we want to test failure modes, validation, or exceptional cases, we'll need either additional classes or some logic that lets us choose those alternatives.
+
+### Using the mock Method
+
+The mock method in the _Mockito_ class has the following signature:
+
+```java
+public class static <T> T mock(Class<T> classToMock)
+```

@@ -404,4 +404,45 @@ Hopefully,, you'll find the process intuitive, It does include two steps that ca
 |. We need to create the mock every time, and
 2. We need to inject the mock into the class under test every time.
 
+### Using Annotations to Create the Mocks
+
+Mockito provides two annotations for mocks:
+
+1. @Mock
+2. @InjectMocks
+
+The combination of one or more attributes with @Mock and a single @InjectMocks on the class under test tells Mockito to create the necessary mocks and do its best inject them into the class under test.
+
+An example shows how to use the @Mock and @InjectMocks annotatíons on the attributes of the PersonServiceTest:
+
+```java
+// PersonServiceTest.java
+
+@ExtendWith(MockitoExtension.class)
+public class PersonServiceTest {
+    @Mock
+    private PersonRepository repository;
+
+    @InjectMocks
+    private PersonService service;
+
+}
+```
+
+Whenever you use annotations, you need to tell Mockito to process them. JUnit 5 uses the Mockito JUnit 5 Extension, which is the argument to the _@ExtendWith_ annotation on the test class. This extension initializes the mocks, and, as a side note, "handles strict stubbings". That means in your test you can mock only methods that your method under test actually calls.
+
+The test fro getLastNames is now simplified
+
+```java
+// PersonServiceTest.java
+
+@Test
+public void getLastNames_usingAnnotations() {
+    when(repository.findAll()).thenReturn(people);
+
+    assertThat(service.getLastNames())
+        .contains("Borg", "Goldberg", "Hopper", "Liskov", "Lovelace"); verify(repository).findAll();
+}
+```
+
 

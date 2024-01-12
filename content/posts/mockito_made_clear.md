@@ -454,3 +454,21 @@ One benefit of the annotation approach is that Mockito tries to inject the mocks
 3. Sets the fields directly.
 
 Remember, Mockito is not a dependency injection frmaworks; don't expect this shorthand utility to inject a complex graph of objects, be it mocks/spies or real objects.
+
+## Setting Expectations
+
+The Mockito-based example that mocked the PersonRepository and PersonService used the methods _when_ and _thenReturn_ to set the expectation on the _findAll_ method. Here's the signature for when:
+
+```java
+public static <T> OngoingStubbing<T> when(T methodCall)
+```
+
+The argument to _when_ is the declaration of an invocation of the method you want to call on the stub. The return type connect to the various _then_ methods, like _thenReturn_, _thenThrow_, or _thenAnswer_, which are normally chained to the output.
+
+There are a couple of overloads of the _thenReturn_ method:
+
+```java
+OngoingStubbing<T> thenReturn(T value)
+OngoingStubbing<T> thenReturn(T value, T... values)
+
+```

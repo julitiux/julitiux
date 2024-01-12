@@ -530,4 +530,21 @@ void findByIds_thenReturnWithMultipleArgs() {
     assertThat(personList).containsExactlyElementsOf(people);
 }
 ```
+ This version uses the anyInt _argument matcher_ as the parameter for findById. The anuInt methos is a static methos in the _ArgumentMatchers_ (plural) class, which represents, naturally enough, any integer.
 
+You can mix and match calls to thenReturnm thenThrows and theAnswer. The first call could return an instance, the second one could thrown an exception. the ehird could return an instance again, and so on.
+
+```java
+// PersonServiceTest.java
+
+@Test
+void testMultipleCalls() {
+    when(repository.findById(anyInt()))
+        .thenReturn(Optional.of(people.get(0)))
+        .thenThrow(new IllegalArgumentException("Person with id not found"))
+        .thenReturn(Optional.of(get(1)))
+        .thenReturn(Optional.empty));
+
+    // .. rest of test ...
+}
+```

@@ -511,3 +511,23 @@ void findByIds_explicitWhens() {
 }
 ```
 
+That's rather a mouthful. Fortunately, we can simplify the test like this:
+
+```java
+// PersonService.java
+
+@Test
+void findByIds_thenReturnWithMultipleArgs() {
+    when(repository.findById(anyInt())).thenReturn(
+            Optional.of(people.get(0)),
+            Optional.of(people.get(1)),
+            Optional.of(people.get(2)),
+            Optional.of(people.get(3)),
+            Optional.of(people.get(4)),
+            Optional.empty());
+
+    List<Person> personList = service.findByIds(0, 1, 2, 3, 4, 5);
+    assertThat(personList).containsExactlyElementsOf(people);
+}
+```
+

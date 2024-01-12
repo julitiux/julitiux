@@ -445,4 +445,12 @@ public void getLastNames_usingAnnotations() {
 }
 ```
 
+### Injecting the Mocks into the Class Under Test
 
+One benefit of the annotation approach is that Mockito tries to inject the mocks into the class under test for you. How does it do that, exctly?:
+
+1. Calls the largest contructor on the test class if takes teh right types of arguments.
+2. Calls setters methods of the proper type (and the proper name if there is more than one for a given type).
+3. Sets the fields directly.
+
+Remember, Mockito is not a dependency injection frmaworks; don't expect this shorthand utility to inject a complex graph of objects, be it mocks/spies or real objects.

@@ -470,5 +470,44 @@ There are a couple of overloads of the _thenReturn_ method:
 ```java
 OngoingStubbing<T> thenReturn(T value)
 OngoingStubbing<T> thenReturn(T value, T... values)
-
 ```
+
+For example, add another method to the PersonService called findByIds, which take a varag list og integer IDs and return a List<Person>
+
+```java
+// PersonService.java
+
+public List<Person> findByIds(int... ids) {
+    return Arrays.stream(ids)
+        .mapToObj(repository::findById)
+        .filter(Optional::isPresent)
+        .map(Optional::get)
+        .collect(Collectors.toList());
+}
+```
+
+To test this method on the service you need to tell the dependent _repository_ what to do when findById(int) is called:
+
+```java
+// PersonService.java
+
+@Test
+void findByIds_explicitWhens() {
+    when(repository.findById(0))
+        .thenReturn(Optional.of(people.get(0)));
+    when(repository.findById(1))
+        .thenReturn(Optional.of(people.get(1)));
+    when(repository.findById(2))
+        .thenReturn(Optional.of(people.get(2)));
+    when(repository.findById(3))
+        .thenReturn(Optional.of(people.get(3)));
+    when(repository.findById(4))
+        .thenReturn(Optional.of(people.get(4)));
+    when(repository.findById(5))
+        .thenReturn(Optional.empty());
+
+    List<Person> personList = service.findByIds(0, 1, 2, 3, 4, 5);
+    assertThat(personList).containsExactlyElementsOf(people);
+}
+```
+

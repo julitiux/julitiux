@@ -22,5 +22,20 @@ Mockito is a tool that helps you isolate particular componentsof software. You u
 > ### Spy
 > A _spy_ is an object that wraps the actual dependent objects, which allows you to track calls to that object by the class under test. A spy is similar to a mock, in that it records which methods were called, but a spy invokes those methods on the actual underlying object instead of on a stub.
 
+## Saying Hello to Mockito
+
+We look at the Mockito version in this section, explain what Mockito does and what it is for.
+
+For Java, the classic Hello, World!
+
+```java
+// HelloWorld.java
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+
 
 # Chapter 2 Work with the Mockito API

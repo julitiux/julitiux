@@ -36,6 +36,16 @@ public class HelloWorld {
     }
 }
 ```
+Let's modify this to make a class that welcomes the user with a simple String returned from a greet method
 
+```java
+//HelloMockito.java
+public class HelloMockito {
+    private String greeting = "Hello, %s, from Mockito!";
+    public String greet(String name) {
+        return String.format(greeting, name);
+    }
+}
+```
 
 # Chapter 2 Work with the Mockito API

@@ -35,3 +35,11 @@ git --version
 If you don't have it installed already, it will prompt you to install it.
 
 If you want a more up to date version, you can also install it via a binary installer. A macOS Git installer is maintained and available for download at the Git website, at [https://git-scm.com/download/mac](https://git-scm.com/download/mac).
+
+### Installing on Windows
+
+The are also a few ways to install Git on Windows.
+
+The most official build is available for download on the Git website: [https://git-scm.com/download/win](https://git-scm.com/download/win)
+
+To get an automated installation you can use the [Git Chocolatey package](https://community.chocolatey.org/packages/git)

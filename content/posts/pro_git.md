@@ -43,3 +43,20 @@ The are also a few ways to install Git on Windows.
 The most official build is available for download on the Git website: [https://git-scm.com/download/win](https://git-scm.com/download/win)
 
 To get an automated installation you can use the [Git Chocolatey package](https://community.chocolatey.org/packages/git)
+
+## First-Time Git Setup
+
+You should have to do these things only once on any given computer. You can also change them at any time by running through the commands again.
+
+### git config
+
+Thats lets get and set configuration variables that control all aspects of how Git looks and operates. The variables can be stored in three different places:
+
+> 1. `[path]/etc/gitconfig` file: Contains values applied to every user on the system and all their repositories. If you pass the option `--system` to `git config`, it reads and writes from this file specifically.
+
+> 2. `~/.gitconfig` or `~/.config/git/config` file: Values specific personally to you, the user. You can make Git read and write to this file specifically by passing the `--global` option, and this affects all of the repositories you work with on your system.
+
+> 3. `config` file in the Git directory (that is, .git/config) of whatever repository you are currently using: Specific to that single repositoy. You can force Git to read from and write to this dile with the `--local` option.
+
+Each level overrides values in the previous level, so values in `.git/config` trump those in `[path]/etc/gitcconfig`
+

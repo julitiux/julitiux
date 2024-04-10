@@ -23,3 +23,15 @@ If you are on a Debian-based distribution, such a Ubuntu, try _apt_
 ```terminal
 sudo apt install git-all
 ```
+
+### Installing on macOS
+
+The easiest is probably to install the Xcode Command Line Tools. On Mavericks (10.9) above you can do this simply by trying to run _git_ from the Terminal the very first time.
+
+```terminal
+git --version
+```
+
+If you don't have it installed already, it will prompt you to install it.
+
+If you want a more up to date version, you can also install it via a binary installer. A macOS Git installer is maintained and available for download at the Git website, at [https://git-scm.com/download/mac](https://git-scm.com/download/mac).

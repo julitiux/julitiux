@@ -60,3 +60,17 @@ Thats lets get and set configuration variables that control all aspects of how G
 
 Each level overrides values in the previous level, so values in `.git/config` trump those in `[path]/etc/gitcconfig`
 
+You can view all of you settings and where they are coming from using:
+
+```terminal
+git config --list --show-origin
+```
+
+### Your Identity
+
+the first thing you shoul do when you install Git is set your user name and email address.
+
+```terminal
+git config --global user.name "Julio Ramirez"
+git config --global user.email rrodriguez.julio@gmail.com
+```

@@ -77,7 +77,7 @@ git config --global user.email rrodriguez.julio@gmail.com
 
 ### Your Editor
 
-If you want to user a different text editor, such as Emacs, you can di the following:
+If you want to user a different text editor, such as Emacs, you can do the following:
 
 ```terminal
 git config --global core.editor emacs
@@ -88,3 +88,35 @@ In the case of Notepad++
 ```terminal
 git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
 ```
+
+### Your default branch name
+
+To set main as the default branch name do:
+
+```terminal
+git config --global init.defaultBranch main
+```
+
+### Checking your Settings
+
+If you want to check your configuration settings do:
+
+```terminal
+git config --list
+```
+
+You may see keys more than once, because Git reads the same key from different files ([path]/etc/gitconfig and ~/.gitconfig, for example). In this case, Git uses the last value for each unique key it sees.
+
+You can also check what Git thinks a specifiv key's values typing:
+
+```terminal
+git config user.name
+```
+
+Even you can see the origin of property doing:
+
+```terminal
+git config --show-origin user.name
+```
+
+

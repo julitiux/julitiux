@@ -6,6 +6,7 @@ draft: false
 
 # **INDEX**
 # [Getting Started](#getting-started)
+# [Git Basics](#git-basics)
 
 # Getting Started
 
@@ -128,3 +129,5 @@ git help <verb>
 git <verb> --help
 man git-<verb>
 ```
+
+# Git Basics

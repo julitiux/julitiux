@@ -74,3 +74,17 @@ the first thing you shoul do when you install Git is set your user name and emai
 git config --global user.name "Julio Ramirez"
 git config --global user.email rrodriguez.julio@gmail.com
 ```
+
+### Your Editor
+
+If you want to user a different text editor, such as Emacs, you can di the following:
+
+```terminal
+git config --global core.editor emacs
+```
+
+In the case of Notepad++
+
+```terminal
+git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
+```

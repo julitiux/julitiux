@@ -119,4 +119,12 @@ Even you can see the origin of property doing:
 git config --show-origin user.name
 ```
 
+## Getting Help
 
+If you ever need help while using Git, do:
+
+```terminal
+git help <verb>
+git <verb> --help
+man git-<verb>
+```

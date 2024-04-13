@@ -155,3 +155,9 @@ git clone https://github.com/julitiux/julitiux.git julito
 ```terminal
 git status
 ```
+
+## Tracking new files
+
+```terminal
+git add <file>
+```

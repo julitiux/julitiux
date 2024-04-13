@@ -137,3 +137,15 @@ man git-<verb>
 ```terminal
 git init
 ```
+
+## Cloning an Existenting Repository
+
+```terminal
+git clone <url>
+```
+
+You can specify the new directory name as an aditional argument
+
+```terminal
+git clone https://github.com/julitiux/julitiux.git julito
+```

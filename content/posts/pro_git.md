@@ -173,3 +173,42 @@ or
 ```terminal
 git status --short
 ```
+
+## Ignoring files
+
+The rules for the patterns you can put in the .gitignore files are as follow:
+
+* Blank lines or lines stating with `#` are ignored.
+* Standard glob patterns work, and will be applied recursively throughout the entire working tree.
+* You can start patterns with a forward slash (`/`) to avoid recursivity
+* You can end patterns with a forward slash (`/`) to specify a directory.
+* You can negate a patter by starting it with an exclamation point (`!`).
+* An asterisk (`*`) matches zero or more characteres.
+* [`abc`] matches any character inside the brackets (in this case a, b, or c)
+* A question mark (`?`) matches a single character.
+* Brackets enclosing characters separated by a hyphen (`[0-9]`).
+* You can also use two asterisks to match nested directories; `a/**/z` would match a/z, a/b/z, a/b/c/z and so on.
+
+Here is an example `.gitignore` file
+
+```file
+# ignore all -a files
+*.a
+
+# but do track lib.a, even though you're ignoring .a files above
+!lib.a
+
+# only ignore the TODO file in the current directory, not subdir/TODO
+/TODO
+
+# ignore all files in any directory named build
+build/
+
+# ignore doc/notes.txt, but not doc/server/arch.txt
+doc/*.txt
+
+# ignore all .pdf files in the doc/ directory and any of its subdirectories
+doc/**/*.pdf
+```
+> GitHub maintains a fairly comprehensive list of good .gitignore.
+> https://github.com/github/gitignore

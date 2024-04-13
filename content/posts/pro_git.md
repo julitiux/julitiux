@@ -149,3 +149,9 @@ You can specify the new directory name as an aditional argument
 ```terminal
 git clone https://github.com/julitiux/julitiux.git julito
 ```
+
+## Checking the status of your files
+
+```terminal
+git status
+```

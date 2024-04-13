@@ -131,3 +131,9 @@ man git-<verb>
 ```
 
 # Git Basics
+
+## Initializing a Repository in an Existing Directory
+
+```terminal
+git init
+```

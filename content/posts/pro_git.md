@@ -161,3 +161,15 @@ git status
 ```terminal
 git add <file>
 ```
+
+## Short status
+
+```terminal
+git status -s
+```
+
+or
+
+```terminal
+git status --short
+```

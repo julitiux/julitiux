@@ -213,8 +213,22 @@ doc/**/*.pdf
 > GitHub maintains a fairly comprehensive list of good .gitignore.
 > https://github.com/github/gitignore
 
-## Viewing your staged and ubstaged changes
+## Viewing your staged and unstaged changes
+
+Show you the exact lines added and removed
 
 ```terminal
 git diff
+```
+
+If you want to see what you've staged that will go into your next commit
+
+```terminal
+git diff --staged
+```
+
+To see what you've staged so far (--staged and --cached are synonyms)
+
+```terminal
+git diff --cached
 ```

@@ -212,3 +212,9 @@ doc/**/*.pdf
 ```
 > GitHub maintains a fairly comprehensive list of good .gitignore.
 > https://github.com/github/gitignore
+
+## Viewing your staged and ubstaged changes
+
+```terminal
+git diff
+```

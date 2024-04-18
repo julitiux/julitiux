@@ -238,3 +238,19 @@ git diff --cached
 ```terminal
 git commit
 ```
+
+Alternatively, you can type your commit message inline with the `commit` command by specifying it after a `-m` flag
+
+```terminal
+git commit -m
+```
+
+## Skipping the staging area
+
+```terminal
+git commit -a -m
+```
+
+```terminal
+git commit -am
+```

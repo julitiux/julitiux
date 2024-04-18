@@ -232,3 +232,9 @@ To see what you've staged so far (--staged and --cached are synonyms)
 ```terminal
 git diff --cached
 ```
+
+## Committing your changes
+
+```terminal
+git commit
+```

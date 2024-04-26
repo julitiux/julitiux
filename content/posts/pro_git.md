@@ -264,3 +264,9 @@ git rm
 ```terminal
 git rm --cached
 ```
+
+You can pass files, directories, and file-glob patterns to:
+
+```terminal
+git rm log /\*.log
+```

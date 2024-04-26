@@ -255,4 +255,12 @@ git commit -a -m
 git commit -am
 ```
 
+## Removing files
 
+```terminal
+git rm
+```
+
+```terminal
+git rm --cached
+```

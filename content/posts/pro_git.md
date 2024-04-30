@@ -271,6 +271,12 @@ You can pass files, directories, and file-glob patterns to:
 git rm log /\*.log
 ```
 
+This command removes all files whose names end with a ~
+
+```terminal
+git rm \*~
+```
+
 ## Moving files
 
 ```terminal

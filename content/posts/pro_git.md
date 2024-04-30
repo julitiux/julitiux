@@ -315,3 +315,8 @@ git log --stat
 ```terminal
 git log --pretty=oneline
 ```
+
+### Option --pretty=short
+```terminal
+git log --pretty=short
+```

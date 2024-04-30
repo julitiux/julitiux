@@ -303,3 +303,9 @@ git log
 ```terminal
 git log -p -2
 ```
+
+### Options --stat
+
+```terminal
+git log --stat
+```

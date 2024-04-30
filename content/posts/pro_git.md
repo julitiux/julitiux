@@ -132,13 +132,15 @@ man git-<verb>
 
 # Git Basics
 
-## Initializing a Repository in an Existing Directory
+## Getting a Git repository
+
+### Initializing a Repository in an Existing Directory
 
 ```terminal
 git init
 ```
 
-## Cloning an Existenting Repository
+### Cloning an Existenting Repository
 
 ```terminal
 git clone <url>
@@ -150,19 +152,21 @@ You can specify the new directory name as an aditional argument
 git clone https://github.com/julitiux/julitiux.git julito
 ```
 
-## Checking the status of your files
+## Recording changes to the repository
+
+### Checking the status of your files
 
 ```terminal
 git status
 ```
 
-## Tracking new files
+### Tracking new files
 
 ```terminal
 git add <file>
 ```
 
-## Short status
+### Short status
 
 ```terminal
 git status -s
@@ -174,7 +178,7 @@ or
 git status --short
 ```
 
-## Ignoring files
+### Ignoring files
 
 The rules for the patterns you can put in the .gitignore files are as follow:
 
@@ -213,7 +217,7 @@ doc/**/*.pdf
 > GitHub maintains a fairly comprehensive list of good .gitignore.
 > https://github.com/github/gitignore
 
-## Viewing your staged and unstaged changes
+### Viewing your staged and unstaged changes
 
 Show you the exact lines added and removed
 
@@ -233,7 +237,7 @@ To see what you've staged so far (--staged and --cached are synonyms)
 git diff --cached
 ```
 
-## Committing your changes
+### Committing your changes
 
 ```terminal
 git commit
@@ -245,7 +249,7 @@ Alternatively, you can type your commit message inline with the `commit` command
 git commit -m
 ```
 
-## Skipping the staging area
+### Skipping the staging area
 
 ```terminal
 git commit -a -m
@@ -255,7 +259,7 @@ git commit -a -m
 git commit -am
 ```
 
-## Removing files
+### Removing files
 
 ```terminal
 git rm
@@ -277,7 +281,7 @@ This command removes all files whose names end with a ~
 git rm \*~
 ```
 
-## Moving files
+### Moving files
 
 ```terminal
 git mv file_from file_to
@@ -286,3 +290,12 @@ git mv file_from file_to
 ```terminal
 git mv README.md README
 ```
+
+## Viewing the commit history
+
+By default, with no argument, `git log` lists the commits made in that repository in reverse chronological order.
+
+```terminal
+git log
+```
+

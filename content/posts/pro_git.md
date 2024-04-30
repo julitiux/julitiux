@@ -327,3 +327,9 @@ git log --pretty=short
 ```terminal
 git --pretty=full
 ```
+
+### Option --pretty=fuller
+
+```terminal
+git --pretty=fuller
+```

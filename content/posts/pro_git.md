@@ -333,3 +333,9 @@ git --pretty=full
 ```terminal
 git --pretty=fuller
 ```
+
+### Option with format
+
+```terminal
+git log --pretty=format:"%h - %an, %ar : %s"
+```

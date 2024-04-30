@@ -270,3 +270,13 @@ You can pass files, directories, and file-glob patterns to:
 ```terminal
 git rm log /\*.log
 ```
+
+## Moving files
+
+```terminal
+git mv file_from file_to
+```
+
+```terminal
+git mv README.md README
+```

@@ -298,4 +298,8 @@ By default, with no argument, `git log` lists the commits made in that repositor
 ```terminal
 git log
 ```
+### Options -p or --patch
 
+```terminal
+git log -p -2
+```

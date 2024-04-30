@@ -317,6 +317,13 @@ git log --pretty=oneline
 ```
 
 ### Option --pretty=short
+
 ```terminal
 git log --pretty=short
+```
+
+### Option --pretty=full
+
+```terminal
+git --pretty=full
 ```

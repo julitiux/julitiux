@@ -359,3 +359,9 @@ git log --pretty=format:"%h - %an, %ar : %s"
 | %cd | Committer date |
 | %cr | Committer date, relative |
 | %s | Subject |
+
+### Option --graph
+
+```terminal
+git log --pretty=format:"%h %s" --graph
+```

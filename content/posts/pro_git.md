@@ -389,4 +389,8 @@ git log --pretty=format:"%h %s" --graph
 git log --since=2.weeks
 ```
 
+### Option -S
 
+```terminal
+git log -S function_name
+```

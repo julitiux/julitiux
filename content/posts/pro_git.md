@@ -339,3 +339,23 @@ git --pretty=fuller
 ```terminal
 git log --pretty=format:"%h - %an, %ar : %s"
 ```
+
+### Useful specifiers for git log --pretty=format
+
+| Specifier | Description of Output |
+|---|---|
+| %H | Commit hash |
+| %h | Abbreviated commit hash |
+| %T | Tree hash |
+| %t | Abbreviated tree hash |
+| %P | Parent hashes |
+| %p | Abbreviated parent hashes |
+| %an | Author name |
+| %ae | Author email |
+| %ad | Author date (format respect the --date=option) |
+| %ar | Author date, relative |
+| %cn | Committer name |
+| %ce | Committer email |
+| %cd | Committer date |
+| %cr | Committer date, relative |
+| %s | Subject |

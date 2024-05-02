@@ -412,3 +412,9 @@ git log -- path/to/file
 | --committer | Only show commits in which the committer entry matcher the specified string |
 | --grep | Only shiw commut with a commit message contraining the string |
 | -S | Only show commits adding or removing code matching the string |
+
+For example, if you want to see which commits modifying test files in the Git source code history were committed by Junio Humano in the month of Octuber 2008 and are not merge commits, you can run something like this:
+
+```terminal
+git log --pretty="%h - %s" --author='Junio C Hamano' --since"2008-10-01" --before="2008-11-01" --no-merges -- t/
+```

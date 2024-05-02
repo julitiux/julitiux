@@ -394,3 +394,21 @@ git log --since=2.weeks
 ```terminal
 git log -S function_name
 ```
+
+### Option -- path/to/file
+
+```terminal
+git log -- path/to/file
+```
+
+## Options to limit the output of git log
+
+| Option | Description |
+| --- | --- |
+| -<n> | Show only the last n commits |
+| --since, --after | Limit the commits to those made after the specified date |
+| --unitl, --before | Limit the commits to those made before the specified date |
+| --author | Only show commits in which the autor entry matcher the specified string |
+| --committer | Only show commits in which the committer entry matcher the specified string |
+| --grep | Only shiw commut with a commit message contraining the string |
+| -S | Only show commits adding or removing code matching the string |

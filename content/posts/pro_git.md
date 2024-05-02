@@ -380,3 +380,13 @@ git log --pretty=format:"%h %s" --graph
 | --graph | Display an ASCII graph of the branch and merge history beside the log output |
 | --pretty | Show commits it an alternative format. Option values include `oneline`, `short`, `full`, `fuller` and `format` (where you specify you own format) |
 | --online | Showrthand for --pretty=oneline --abbrev-commit used togheter |
+
+## Limiting log output
+
+### Option --since
+
+```terminal
+git log --since=2.weeks
+```
+
+

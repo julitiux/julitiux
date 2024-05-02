@@ -365,3 +365,18 @@ git log --pretty=format:"%h - %an, %ar : %s"
 ```terminal
 git log --pretty=format:"%h %s" --graph
 ```
+
+## Common options to git
+
+| Option | Description |
+| --- | --- |
+| -p | Show the patch introduced with each commit |
+| --stat | Show statistics for files modified in each commit |
+| --shorstats | Display only the changed/insertions/deletions line from the --stat command  |
+| --name-only | Show the list of files modified after the commit information |
+| --name-status | Show the list of files modified after the commmit information |
+| --abbrev-commit | Show only the first few character of the SHA-1 cheksum instead of all 40  |
+| --relative-date | Display the date in a relative format (for example, "2 weeks ago") instead of using the full date format |
+| --graph | Display an ASCII graph of the branch and merge history beside the log output |
+| --pretty | Show commits it an alternative format. Option values include `oneline`, `short`, `full`, `fuller` and `format` (where you specify you own format) |
+| --online | Showrthand for --pretty=oneline --abbrev-commit used togheter |

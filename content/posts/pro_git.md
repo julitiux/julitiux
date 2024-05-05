@@ -428,3 +428,9 @@ You can see your changes in a more cmompact way.
 git status -s
 git status --short
 ```
+
+If you want to see what you have staged that will go into your next commit.
+
+```terminal
+git diff --staged
+```

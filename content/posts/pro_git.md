@@ -7,7 +7,7 @@ draft: false
 # **INDEX**
 # [Getting Started](#getting-started)
 # [Git Basics](#git-basics)
-# [Best Command Ever!](#best-command-ever!)
+# [Best Command Ever](#best-command-ever)
 
 # Getting Started
 
@@ -420,9 +420,9 @@ For example, if you want to see which commits modifying test files in the Git so
 git log --pretty="%h - %s" --author='Junio C Hamano' --since"2008-10-01" --before="2008-11-01" --no-merges -- t/
 ```
 
-# Best Command Ever!
+# Best Command Ever
 
-You can see your changes in a more cmompact way.
+You can see your changes in a more compact way.
 
 ```terminal
 git status -s

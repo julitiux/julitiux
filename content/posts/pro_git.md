@@ -433,4 +433,5 @@ If you want to see what you have staged that will go into your next commit.
 
 ```terminal
 git diff --staged
+git diff --cached
 ```

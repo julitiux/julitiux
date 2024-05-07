@@ -441,3 +441,9 @@ This is particularly useful if you forgot to add something to your .gitignore.
 ```terminal
 git rm --cached <file>
 ```
+
+If you forget add a file in a commit --amend and you dont want keep the commit's text
+
+```terminal
+git commit --amend --online
+```

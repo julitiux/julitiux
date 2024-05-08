@@ -420,6 +420,37 @@ For example, if you want to see which commits modifying test files in the Git so
 git log --pretty="%h - %s" --author='Junio C Hamano' --since"2008-10-01" --before="2008-11-01" --no-merges -- t/
 ```
 
+## Undoing Things
+
+```terminal
+git commit --amend
+```
+
+If you commit and then realize you forgot to stage the changes in a file you wanted to add to this commit
+
+```terminal
+git commit -m "initial commit"
+git add fogotten_file
+git commit --amend
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Best Command Ever
 
 You can see your changes in a more compact way.

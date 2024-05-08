@@ -434,22 +434,12 @@ git add fogotten_file
 git commit --amend
 ```
 
+### Unstaging a staged file
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```terminal
+git reset HEAD <file>
+git restore <file>
+```
 
 # Best Command Ever
 

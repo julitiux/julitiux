@@ -447,3 +447,9 @@ If you forget add a file in a commit --amend and you dont want keep the commit's
 ```terminal
 git commit --amend --online
 ```
+
+Takes a string and shows only those commits that changed the number of occurences of that string
+
+```terminal
+git log -S function_name
+```

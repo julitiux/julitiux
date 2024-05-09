@@ -441,6 +441,13 @@ git reset HEAD <file>
 git restore <file>
 ```
 
+## Unmodifying a modified file
+
+```terminal
+git checkout <file staged>
+git co <file staged>
+```
+
 # Best Command Ever
 
 You can see your changes in a more compact way.

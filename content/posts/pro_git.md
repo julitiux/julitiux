@@ -470,6 +470,11 @@ If you have more than one remote, the command list then all
 git remote -v
 ```
 
+### Showing your remotes
+
+```terminal
+git remote -v
+```
 
 
 

@@ -456,6 +456,19 @@ git restore --staged <file>
 
 ## Working with remotes
 
+### Showing your remotes
+
+```term
+git remote
+```
+
+### Showing your remotes with options -v
+
+If you have more than one remote, the command list then all
+
+```terminal
+git remote -v
+```
 
 
 

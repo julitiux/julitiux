@@ -444,7 +444,7 @@ git restore <file>
 ## Unmodifying a modified file
 
 ```terminal
-git checkout <file staged>
+git checkout -- <file staged>
 git co <file staged>
 ```
 

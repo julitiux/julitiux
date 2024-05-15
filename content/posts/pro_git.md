@@ -476,6 +476,13 @@ git remote -v
 git remote -v
 ```
 
+### Adding remote repositories
+
+```terminal
+git remote add <shortname> <url>
+```
+
+
 
 
 

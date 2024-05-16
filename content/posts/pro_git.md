@@ -513,6 +513,14 @@ git remote remove <remote>
 git remote rm <remote>
 ```
 
+## Tagging
+
+### Listing your tags
+
+```terminal
+git tag
+```
+
 
 
 

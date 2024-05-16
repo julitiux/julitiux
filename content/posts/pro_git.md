@@ -482,9 +482,11 @@ git remote -v
 git remote add <shortname> <url>
 ```
 
+### Fetching your remotes
 
-
-
+```terminal
+git fetch <remote>
+```
 
 
 

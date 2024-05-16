@@ -541,6 +541,12 @@ Annotated tags, however, are stored as full objects in the Git database.There're
 git tag -a v1.4 -m "my version 1.4
 ```
 
+### git show tag
+
+```terminal
+git show  v1.4
+```
+
 
 
 

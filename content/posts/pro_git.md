@@ -494,6 +494,11 @@ git fetch <remote>
 git push origin <remote> <branch>
 ```
 
+### Inspecting a remote
+
+```terminal
+git remote show <remote>
+```
 
 
 

@@ -521,6 +521,12 @@ git remote rm <remote>
 git tag
 ```
 
+### Listing tags wildcards requires -l or --list option
+
+```terminal
+git tag -l "v1.8.5*"
+```
+
 
 
 

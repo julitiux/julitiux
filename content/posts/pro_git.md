@@ -488,6 +488,12 @@ git remote add <shortname> <url>
 git fetch <remote>
 ```
 
+### Pushing to your remotes
+
+```terminal
+git push origin <remote> <branch>
+```
+
 
 
 

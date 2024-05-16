@@ -535,6 +535,11 @@ A lightweight tag is very much like a branch tha doesn't change -- it's just a p
 
 Annotated tags, however, are stored as full objects in the Git database.There're checksummed; contain the tagger name, email, and date; have a tagging message; and can be signed and verified with GNU Privacy Guard
 
+### Annotated tags
+
+```terminal
+git tag -a v1.4 -m "my version 1.4
+```
 
 
 

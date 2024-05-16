@@ -500,6 +500,12 @@ git push origin <remote> <branch>
 git remote show <remote>
 ```
 
+### Renaming remotes
+
+```terminal
+git remote rename <instance1> <instance2>
+```
+
 
 
 

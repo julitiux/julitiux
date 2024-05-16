@@ -527,6 +527,13 @@ git tag
 git tag -l "v1.8.5*"
 ```
 
+### Creating tags
+
+Git supports two types of tags: _lightweight_ and _annotated_
+
+A lightweight tag is very much like a branch tha doesn't change -- it's just a pointer to a specific commmit.
+
+Annotated tags, however, are stored as full objects in the Git database.There're checksummed; contain the tagger name, email, and date; have a tagging message; and can be signed and verified with GNU Privacy Guard
 
 
 

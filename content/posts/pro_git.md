@@ -503,8 +503,20 @@ git remote show <remote>
 ### Renaming remotes
 
 ```terminal
-git remote rename <instance1> <instance2>
+git remote rename <remote_name_1> <rename_name_22>
 ```
+
+### Removing remotes
+
+```terminal
+git remote remove <remote>
+git remote rm <remote>
+```
+
+
+
+
+
 
 
 

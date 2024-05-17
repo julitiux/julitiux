@@ -559,6 +559,14 @@ git tag v1.4-lw
 git tag -a v1.2 9fceb02
 ```
 
+## Sharing tags
+
+```terminal
+git push origin v1.4
+```
+
+
+
 
 
 

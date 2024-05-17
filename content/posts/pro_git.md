@@ -573,6 +573,11 @@ If you have a lot of tags you want to push at once
 git push origin --tags
 ```
 
+## Deleting tags
+
+```terminal
+git tag -d <tag>
+```
 
 
 

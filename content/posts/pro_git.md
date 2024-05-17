@@ -597,6 +597,12 @@ git push origin --delete <tagname>
 git checkout <tagname>
 ```
 
+### Creating a new tag with a tag
+
+```terminal
+git checkout -b <tagname> <new_tagname>
+```
+
 
 
 

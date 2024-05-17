@@ -591,7 +591,11 @@ git push origin :<tagname>
 git push origin --delete <tagname>
 ```
 
+### Cheking out tags
 
+```terminal
+git checkout <tagname>
+```
 
 
 

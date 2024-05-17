@@ -565,6 +565,14 @@ git tag -a v1.2 9fceb02
 git push origin v1.4
 ```
 
+If you have a lot of tags you want to push at once
+
+### Sharing tags with option --tags
+
+```terminal
+git push origin --tags
+```
+
 
 
 

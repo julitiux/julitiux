@@ -579,6 +579,11 @@ git push origin --tags
 git tag -d <tag>
 ```
 
+## Deleting tags from remote servers
+
+```terminal
+git push origin :<tag>
+```
 
 
 

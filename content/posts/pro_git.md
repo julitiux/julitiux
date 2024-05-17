@@ -576,15 +576,20 @@ git push origin --tags
 ## Deleting tags
 
 ```terminal
-git tag -d <tag>
+git tag -d <tagname>
 ```
 
-## Deleting tags from remote servers
+### Deleting tags from remote servers
 
 ```terminal
-git push origin :<tag>
+git push origin :<tagname>
 ```
 
+### Deleting tags more intuitive way
+
+```terminal
+git push origin --delete <tagname>
+```
 
 
 

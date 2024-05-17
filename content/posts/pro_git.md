@@ -553,6 +553,12 @@ git show v1.4
 git tag v1.4-lw
 ```
 
+### Tagging later
+
+```terminal
+git tag -a v1.2 9fceb02
+```
+
 
 
 

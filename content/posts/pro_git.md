@@ -544,9 +544,14 @@ git tag -a v1.4 -m "my version 1.4
 ### git show tag
 
 ```terminal
-git show  v1.4
+git show v1.4
 ```
 
+### Lightweight tags
+
+```terminal
+git tag v1.4-lw
+```
 
 
 

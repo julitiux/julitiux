@@ -8,6 +8,7 @@ draft: false
 # [Getting Started](#getting-started)
 # [Git Basics](#git-basics)
 # [Best Command Ever](#best-command-ever)
+# [Git Branching](#git-branching)
 
 # Getting Started
 
@@ -643,6 +644,12 @@ commit 66938dae3329c7aebe598c2246a8e6af90d04646
       Test for current head
       Signed-off-by: Scott Chacon <schacon@example.com>
 ````
+
+
+this is a new begginig of implementation
+
+# Git Branching
+
 
 
 # Best Command Ever

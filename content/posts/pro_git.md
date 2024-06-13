@@ -650,7 +650,7 @@ this is a new begginig of implementation
 
 # Git Branching
 
-A commit is a 'blob'
+> The "master" branch in Git is not special branch. It is exactly like any other branch. The only reason nearly every repository has one is thta the `git init` command create it by default and most people don't bother to change it.
 
 
 

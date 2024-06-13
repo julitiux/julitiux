@@ -643,7 +643,7 @@ commit 66938dae3329c7aebe598c2246a8e6af90d04646
   Date:   Tue Aug 26 19:48:51 2008 +0800
       Test for current head
       Signed-off-by: Scott Chacon <schacon@example.com>
-````
+```
 
 
 this is a new begginig of implementation
@@ -656,6 +656,12 @@ this is a new begginig of implementation
 
 ```terminal
 git branch testing
+```
+
+### HEAD pointing to a branch
+
+```terminal
+git log --online --decorate
 ```
 
 # Best Command Ever

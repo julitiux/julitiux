@@ -650,6 +650,8 @@ this is a new begginig of implementation
 
 # Git Branching
 
+A commit is a 'blob'
+
 
 
 # Best Command Ever

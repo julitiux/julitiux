@@ -652,7 +652,11 @@ this is a new begginig of implementation
 
 > The "master" branch in Git is not special branch. It is exactly like any other branch. The only reason nearly every repository has one is thta the `git init` command create it by default and most people don't bother to change it.
 
+## Creating a new branch
 
+```terminal
+git branch testing
+```
 
 # Best Command Ever
 

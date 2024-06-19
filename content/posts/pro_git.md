@@ -673,7 +673,11 @@ git checkout <branch_name>
 ```terminal
 git co <branch_name>
 ```
+To show commit history for the desired branch you have to explicity specify it:
 
+```terminal
+git log <branch_name>
+```
 
 # Best Command Ever
 

@@ -664,6 +664,17 @@ git branch testing
 git log --online --decorate
 ```
 
+### Switching Branches
+
+```terminal
+git checkout <branch_name>
+```
+
+```terminal
+git co <branch_name>
+```
+
+
 # Best Command Ever
 
 You can see your changes in a more compact way.

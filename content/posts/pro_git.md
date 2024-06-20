@@ -685,6 +685,12 @@ Will print out the history of your commits, showing wher your branch pointer are
 git log --decorate --gecorate --graph --all
 ```
 
+Creating a new branch and switching to it at the same time
+
+```terminal
+git checkout -b <newBranchName>
+```
+
 # Best Command Ever
 
 You can see your changes in a more compact way.

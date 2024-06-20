@@ -679,6 +679,12 @@ To show commit history for the desired branch you have to explicity specify it:
 git log <branch_name>
 ```
 
+Will print out the history of your commits, showing wher your branch pointer are and how your history has diverged.
+
+```terminal
+git log --decorate --gecorate --graph --all
+```
+
 # Best Command Ever
 
 You can see your changes in a more compact way.

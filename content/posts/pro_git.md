@@ -682,7 +682,7 @@ git log <branch_name>
 Will print out the history of your commits, showing wher your branch pointer are and how your history has diverged.
 
 ```terminal
-git log --decorate --gecorate --graph --all
+git log --oneline --decorate --graph --all
 ```
 
 Creating a new branch and switching to it at the same time
@@ -691,6 +691,19 @@ Creating a new branch and switching to it at the same time
 git checkout -b <newBranchName>
 ```
 
+From Git version 2.23 onwards you can use `git switch` instead of `git checkout` to
+
+* Switch to an existing branch: 'git switch testing-branch'
+* Create a new branch and switch to it: 'git switch -c new-branch'. The -c flag stands for create, you can also use the full flag: '--create'
+* Return to your proviously checked out branch: 'git switch -'
+
+
+
+
+
+
+
+[//]: <> (This is the best command ever in Git)
 # Best Command Ever
 
 You can see your changes in a more compact way.

@@ -697,7 +697,9 @@ From Git version 2.23 onwards you can use `git switch` instead of `git checkout`
 * Create a new branch and switch to it: 'git switch -c new-branch'. The -c flag stands for create, you can also use the full flag: '--create'
 * Return to your proviously checked out branch: 'git switch -'
 
+## Basic branching and merging
 
+The phrase "fast-foward" is when you try to merge one commit with a commit that can be reached by following the first commit's history, Git simplifies things by moving the pointer forward because there is no divergent work to merge together -- this is called a "fast-forward".
 
 
 

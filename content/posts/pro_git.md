@@ -707,6 +707,30 @@ If ypu no longer need it, delete it.
 git branch -d <branch_name>
 ```
 
+## Basic merge conflicts
+
+Anything that has merge conflicts and hasn't been resolved is listed as unmerged. Git adds standard conflict-resolution markers to the files tha have conflicts, so you can open them manually and resolve those conflicts. Your file contains a section that looks something like this:
+
+```code
+<<<<<<< HEAD:index.html
+<div id="footer">contact : email.support@github.com</div>
+=======
+<div id="footer">
+ please contact us at support@github.com
+</div>
+>>>>>>> iss53:index.html
+```
+
+This means the version in 'HEAD' (your 'master' branch, because that was what you had checked out when you ran your merge command) is the top part of that block (everything above the '======='), while the version in your branch looks like everything in the bottom part. In order to resolve the conflict you have to either choose one side or the other or merge contents yourself. For instance, you might resolve this conflict by replacing the entire block with this:
+
+```terminal
+<div id="footer">
+please contact us at email.support@github.com
+</div>
+```
+
+
+
 
 
 [//]: <> (This is the best command ever in Git)

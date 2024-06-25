@@ -729,6 +729,29 @@ please contact us at email.support@github.com
 </div>
 ```
 
+If you want to use a graphical tool to resolve these issues, you can run:
+
+```terminal
+git mergetool
+```
+
+whichs fires up an appropiate visual merge tool and walks you through the conflicts
+
+```terminal
+$ git mergetool
+  This message is displayed because 'merge.tool' is not configured.
+  See 'git mergetool --tool-help' or 'git help config' for more details.
+  'git mergetool' will now attempt to use one of the following tools:
+  opendiff kdiff3 tkdiff xxdiff meld tortoisemerge gvimdiff diffuse diffmerge ecmerge
+  p4merge araxis bc3 codecompare vimdiff emerge
+  Merging:
+  index.html
+  Normal merge conflict for 'index.html':
+    {local}: modified file
+    {remote}: modified file
+  Hit return to start merge resolution tool (opendiff):
+
+```
 
 
 

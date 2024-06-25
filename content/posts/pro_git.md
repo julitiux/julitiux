@@ -701,7 +701,11 @@ From Git version 2.23 onwards you can use `git switch` instead of `git checkout`
 
 The phrase "fast-foward" is when you try to merge one commit with a commit that can be reached by following the first commit's history, Git simplifies things by moving the pointer forward because there is no divergent work to merge together -- this is called a "fast-forward".
 
+If ypu no longer need it, delete it.
 
+```terminal
+git branch -d <branch_name>
+```
 
 
 

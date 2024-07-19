@@ -753,7 +753,9 @@ $ git mergetool
 ```
 
 
-Add one line for test
+
+
+
 
 
 
@@ -781,7 +783,7 @@ This is particularly useful if you forgot to add something to your .gitignore.
 git rm --cached <file>
 ```
 
-If you forget add a file in a commit --amend and you dont want keep the commit's text
+If you forget add a file in a commit --amend and you dont want keep the commit's text. Remember confirm you commit with 'git add .' just for the command works
 
 ```terminal
 git commit --amend --online
@@ -791,4 +793,22 @@ Takes a string and shows only those commits that changed the number of occurence
 
 ```terminal
 git log -S function_name
+```
+
+Show the log in a line with graph step by step
+
+```terminal
+git log --oneline --decorate --graph --all
+```
+
+Show the last confirmations of changes over the branches.
+
+```terminal
+git branch -v
+```
+
+The command is used to establish the relationship between your local branch and a remote branch
+
+```terminal
+git branch --set-upstream-to=origin/<branch_name>
 ```

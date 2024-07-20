@@ -781,7 +781,19 @@ To see all the branches that contain work you have not yet merged in
 git branch --no-merged
 ```
 
+If you have work that is not merged in yet and trying to delete it with:
 
+```terminal
+git branch -d <branch_name>
+```
+
+appears something like this:
+
+```terminal
+$ git branch -d branch_name
+  error: The branch 'branch_name' is not fully merged.
+  If you are sure you want to delete it, run 'git branch -D branch_name'.
+```
 
 
 

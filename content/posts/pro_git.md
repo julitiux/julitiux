@@ -752,6 +752,37 @@ $ git mergetool
   Hit return to start merge resolution tool (opendiff):
 ```
 
+## Branching management
+
+If you run with no arguments, you get a simple listing of your current branches
+
+```terminal
+git branch
+git br
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

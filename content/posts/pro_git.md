@@ -761,6 +761,12 @@ git branch
 git br
 ```
 
+To see the last commit on each branch
+
+```terminal
+git branche -v
+```
+
 
 
 

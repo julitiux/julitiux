@@ -795,6 +795,12 @@ $ git branch -d branch_name
   If you are sure you want to delete it, run 'git branch -D branch_name'.
 ```
 
+If you want to delete the branch and lose that work, you can force it with '-D'
+
+```terminal
+git branch -D <branch_name>
+```
+
 
 
 

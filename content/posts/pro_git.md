@@ -767,6 +767,13 @@ To see the last commit on each branch
 git branche -v
 ```
 
+The useful '--merged' and '--no-merged' options can filter this list to branches that you have or have not yet merge into the branch you are currently on.
+
+To see branches are already merged into the branch you are on
+
+```terminal
+git branch --merged
+```
 
 
 

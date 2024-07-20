@@ -775,6 +775,11 @@ To see branches are already merged into the branch you are on
 git branch --merged
 ```
 
+To see all the branches that contain work you have not yet merged in
+
+```terminal
+git branch --no-merged
+```
 
 
 

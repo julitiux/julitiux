@@ -821,6 +821,16 @@ This replaces _bad-branch-name_ with _corrected-branch-name_, but his change is 
 git push --set-upstream origin corrected-branch-name
 ```
 
+Verying the rename branch
+
+```terminal
+$ git branch --all
+* corrected-branch-name
+    main
+    remotes/origin/bad-branch-name
+    remotes/origin/corrected-branch-name
+    remotes/origin/main
+```
 
 
 

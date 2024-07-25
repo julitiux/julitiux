@@ -809,6 +809,18 @@ You can always provide and additional argument to ask about the merge state with
 git branch --no-merged <branch_name>
 ```
 
+## Changing a branch name
+
+```terminal
+git branch --move bad-branch-name corrected-branch-name
+```
+
+This replaces _bad-branch-name_ with _corrected-branch-name_, but his change is only local for now. To let see the corrected branch on the remote, push it:
+
+```terminal
+git push --set-upstream origin corrected-branch-name
+```
+
 
 
 

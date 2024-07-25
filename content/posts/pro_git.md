@@ -832,6 +832,12 @@ $ git branch --all
     remotes/origin/main
 ```
 
+Deleting the remote branch
+
+```terminal
+git push origin --delete bad-branch-name
+```
+
 
 
 

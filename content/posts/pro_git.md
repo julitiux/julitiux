@@ -801,6 +801,14 @@ If you want to delete the branch and lose that work, you can force it with '-D'
 git branch -D <branch_name>
 ```
 
+The options described above '--merged' and '--no-merged' will, if not given a commit or branch name as an argument, show you what is, respectively, merged or not merged into your _current_ branch.
+
+You can always provide and additional argument to ask about the merge state with respect to some other branch without cheking that other branch out first.
+
+```terminal
+git branch --no-merged <branch_name>
+```
+
 
 
 

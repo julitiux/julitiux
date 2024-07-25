@@ -842,6 +842,36 @@ git push origin --delete bad-branch-name
 git push origin :bad-branch-name
 ```
 
+### Changing the master branch name
+
+Changin the name of a branch like master/main/mainline/default will break the integration, services, helper utilities and build/release scripts that your repository uses.
+
+```terminal
+git branch --move master main
+```
+
+push it
+
+```terminal
+git push --set-upstream origin main
+```
+
+Your local 'master' brahch is gone, as it's replaced with the 'main' branch. The main branch is pesented on the remote. However, the old 'master' branch is still present on the remote. Other collaborattors will continue to use the 'master' branch as the base of their work, until you make some futher changes.
+
+Now you have a few more tasks in front of you to complete the transition:
+
+* Any project that depend on this one will need to update their code and/or configuration.
+* Update any test-runner configuration files.
+* Adjust build and release scripts.
+* Redirect settings on you repo host for things like the repo's default branch, merge rules, and other things that match branch names.
+* Update references to the old branch in documentation.
+* Close or merge any pull request that target the old branch.
+
+After you have done all these tasks, and are certain the 'main' branch performs just as the 'master' branch, you can delete the 'maste'r branch.
+
+```terminal
+git push origin --delete master
+```
 
 
 

@@ -838,6 +838,10 @@ Deleting the remote branch
 git push origin --delete bad-branch-name
 ```
 
+```terminal
+git push origin :bad-branch-name
+```
+
 
 
 

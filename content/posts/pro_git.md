@@ -921,6 +921,11 @@ If you didn't want it to be called 'serverfix' on the remote, you could instead 
 git push origin serverfix:awesomebranch
 ```
 
+If you want your own 'serverfix'  branch that you can work on, you can base it off your remote tracking branch
+
+```terminal
+git checkout -b serverfix origin/serverfix
+```
 
 
 

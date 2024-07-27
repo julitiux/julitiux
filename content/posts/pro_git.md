@@ -882,7 +882,7 @@ gut ls-remote <remote>
 or
 
 ```terminal
-git remote show <origin>
+git remote show <remote>
 ```
 
 'origin' is not special.
@@ -898,6 +898,14 @@ or
 
 ```terminal
 git fetch
+```
+
+## Pushing
+
+This is a bit of a shortcut
+
+```terminal
+git push <remote> <branch>
 ```
 
 

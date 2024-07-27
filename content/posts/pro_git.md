@@ -965,6 +965,14 @@ instead of
 git merge origin/master
 ```
 
+## Pulling
+
+This is a command called 'git pull' which is essentially a 'git fetch' immediately followed by a 'git merge'
+
+```terminal
+git pull
+```
+
 
 
 

@@ -873,6 +873,18 @@ After you have done all these tasks, and are certain the 'main' branch performs 
 git push origin --delete master
 ```
 
+## Remote branches
+
+```terminal
+gut ls-remote <remote>
+```
+
+or
+
+```terminal
+git remote show <origin>
+```
+
 
 
 

@@ -951,6 +951,10 @@ or
 git branch --set-upstream-to <remote>/<branch_name>
 ```
 
+### Upstream shorthand
+
+
+
 
 
 
@@ -1023,4 +1027,16 @@ The command is used to establish the relationship between your local branch and 
 
 ```terminal
 git branch --set-upstream-to=origin/<branch_name>
+```
+
+If you already have a local branch and you want to set it to a remote  branch
+
+```terminal
+git branch -u <remote>/<branch_name>
+```
+
+or
+
+```terminal
+git branch --set-upstream-to <remote>/<branch_name>
 ```

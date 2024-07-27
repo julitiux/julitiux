@@ -927,6 +927,12 @@ If you want your own 'serverfix'  branch that you can work on, you can base it o
 git checkout -b serverfix origin/serverfix
 ```
 
+or use the next command, if you want to track branches on remotes
+
+```terminal
+git checkout --track <remote>/<branch_name>
+```
+
 
 
 

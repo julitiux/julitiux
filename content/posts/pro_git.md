@@ -907,7 +907,15 @@ This is a bit of a shortcut
 ```terminal
 git push <remote> <branch>
 ```
+ Like example
 
+```terminal
+git push origin serverfix
+```
+
+Git automatically expands the serverfix branchname out to refs/heads/serverfix:refs/heads/serverfix, which means: 'take my serverfix local branch and push it to update the remote's serverfix branch.
+
+'
 
 
 

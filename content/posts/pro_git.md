@@ -953,6 +953,17 @@ git branch --set-upstream-to <remote>/<branch_name>
 
 ### Upstream shorthand
 
+When you have a tracking branch set uo, you can reference its upstream branch with the @{upstream} or @{u} shrthand. So if you are on the 'master' branch and it is traking 'origin/master', you can say something like
+
+```terminal
+git merge @{u}
+```
+
+instead of
+
+```terminal
+git merge origin/master
+```
 
 
 

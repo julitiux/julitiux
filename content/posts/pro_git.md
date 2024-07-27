@@ -945,6 +945,12 @@ If you already have a local branch and want to set it to a remote branch you jus
 git branch -u <remote>/<branch_name>
 ```
 
+or
+
+```terminal
+git branch --set-upstream-to <remote>/<branch_name>
+```
+
 
 
 

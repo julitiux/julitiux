@@ -915,9 +915,11 @@ git push origin serverfix
 
 Git automatically expands the serverfix branchname out to refs/heads/serverfix:refs/heads/serverfix, which means: 'take my serverfix local branch and push it to update the remote's serverfix branch.
 
-'
+If you didn't want it to be called 'serverfix' on the remote, you could instead run 'git push origin serverfix:awesomebranch' to push your local 'serverfix' branch to the 'awesomebranch' branch on the remote projec
 
-
+```terminal
+git push origin serverfix:awesomebranch
+```
 
 
 

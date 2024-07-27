@@ -885,7 +885,8 @@ or
 git remote show <origin>
 ```
 
-
+'origin' is not special.
+Just like branch name 'master' does not have any special meaning in Git, neither does 'origin'. While 'master' is the default name for starting branch when run `git init` which is the only reason it's widely used 'origin' is the default name for a remote when you run 'git clone'. If you run 'git clone -o booyah' instead, the you will have 'booyah/master' as your default remote branch.
 
 
 

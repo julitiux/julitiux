@@ -973,6 +973,18 @@ This is a command called 'git pull' which is essentially a 'git fetch' immediate
 git pull
 ```
 
+## Deleting remote branches
+
+```terminal
+git push origin --delete <branch_name>
+```
+
+or
+
+```terminal
+git push <remote> :<branch_name>
+```
+
 
 
 

@@ -933,6 +933,17 @@ or use the next command, if you want to track branches on remotes
 git checkout --track <remote>/<branch_name>
 ```
 
+To set up a local branch with a different name than the remote branch
+
+```terminal
+git checkout --track <new_name_branch> <remote>/<branch_name>
+```
+
+If you already have a local branch and want to set it to a remote branch you just pulled down or want to change the upstrem branch you are tracking, you can use the '-u' or '--set-upstream-to' like this
+
+```terminal
+git branch -u <remote>/<branch_name>
+```
 
 
 

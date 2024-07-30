@@ -985,6 +985,12 @@ or
 git push <remote> :<branch_name>
 ```
 
+## Rebasing
+
+In git, there are two main ways to integrate changes from one branch into another: the _merge_ and the _rebase_
+
+
+
 
 
 

@@ -1013,7 +1013,9 @@ Take the 'client' branch, figure out the patches since it diverged the 'server' 
 git rebase --onto master server client
 ```
 
+## The perils of rebasing
 
+Do not rebase commits that exists outside your repository and that people may have based work on
 
 
 

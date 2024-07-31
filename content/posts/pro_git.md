@@ -1154,3 +1154,9 @@ At this point, you can go back to the 'master' branch and do a _fast-forward_ me
 git checkout master
 git merge experiment
 ```
+
+Rebasing with pull
+
+```terminal
+git pull --rebase
+```

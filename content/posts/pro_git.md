@@ -989,6 +989,35 @@ git push <remote> :<branch_name>
 
 In git, there are two main ways to integrate changes from one branch into another: the _merge_ and the _rebase_
 
+Steps to use _rebase_
+
+```terminal
+git checkout experiment
+git rebase master
+First, rewinding head to replay your work on top of it...
+Applying: added staged command
+```
+
+At this point, you can go back to the 'master' branch and do a _fast-forward_ merge
+
+```terminal
+git checkout master
+git merge experiment
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

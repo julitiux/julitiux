@@ -1040,6 +1040,12 @@ git fetch
 git rebase teamone/master
 ```
 
+If you are using 'git pull' and want to make '--rebase' the default, you can set the 'pull.rebase' config value with something like
+
+```terminal
+git config --global pull.rebase true
+```
+
 
 
 

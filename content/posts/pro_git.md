@@ -1025,6 +1025,22 @@ For instance, in the previous scenario, if instead of doing a merge when we are 
 git rebase teamone/master
 ```
 
+You can rebase using
+
+```terminal
+git pull --rebase
+```
+
+intead of a normal 'git pull'
+
+Or you could do it manually with a
+
+```terminal
+git fetch
+git rebase teamone/master
+```
+
+
 
 
 

@@ -1017,6 +1017,13 @@ git rebase --onto master server client
 
 Do not rebase commits that exists outside your repository and that people may have based work on
 
+## Rebase when you rebase
+
+For instance, in the previous scenario, if instead of doing a merge when we are at _Some pushes rebased commits, abandoning commits you have based your work on_ we run
+
+```terminal
+git rebase teamone/master
+```
 
 
 

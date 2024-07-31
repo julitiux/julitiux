@@ -1005,6 +1005,13 @@ git checkout master
 git merge experiment
 ```
 
+## More interesting rebases
+
+Take the 'client' branch, figure out the patches since it diverged the 'server' branch, and relay these patches in the 'client' branch as if it was directly off the 'master' branch instead
+
+```terminal
+git rebase --onto master server client
+```
 
 
 

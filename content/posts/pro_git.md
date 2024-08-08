@@ -1049,6 +1049,14 @@ git config --global pull.rebase true
 
 # Git on the server
 
+## The protocols
+
+* Local protocol
+* HTTP protocol
+    * Smart HTTP
+    * Dump HTTP
+* SSH protocol
+* Git protocol
 
 
 

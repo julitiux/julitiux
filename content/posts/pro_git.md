@@ -7,8 +7,9 @@ draft: false
 # **INDEX**
 # [Getting Started](#getting-started)
 # [Git Basics](#git-basics)
-# [Best Command Ever](#best-command-ever)
 # [Git Branching](#git-branching)
+# [Git on the server](#git-on-the-server)
+# [Best Command Ever](#best-command-ever)
 
 # Getting Started
 
@@ -1046,6 +1047,7 @@ If you are using 'git pull' and want to make '--rebase' the default, you can set
 git config --global pull.rebase true
 ```
 
+# Git on the server
 
 
 

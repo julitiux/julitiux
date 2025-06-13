@@ -11,3 +11,9 @@ draft: false
     - Diferenciar tipos comunes de arquitectura
     - Ver como se aplican en proyectos modernos
 
+## Documentación basada en vistas
+* _Vista Lógica;_ Muestra los componentes principales del sistema y sus relaciones.
+* _Vista de desarrollo:_ Detalla la organización del sistema desde el punto de vista del desarrollo, cómo están estructurados los módulos.
+* _Vista de procesos:_ Explica cómo interactúan los componentes en tiempo de ejecución.
+* _Vista física:_ Muestra la topología de los componentes del sistema en el hadware.
+

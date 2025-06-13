@@ -17,3 +17,13 @@ draft: false
 * _Vista de procesos:_ Explica cómo interactúan los componentes en tiempo de ejecución.
 * _Vista física:_ Muestra la topología de los componentes del sistema en el hadware.
 
+## Vista Lógica
+* _Proposito:_ La vista lógica muestra la estructura del sistema desde el punto de vista de los componentes de software principales y sus relaciones. Es útil para capturar el diseño de alto nivel del sistema.
+* _Pregunta clave:_
+    - ¿Cuáles son los componentes más importantes?
+    - ¿Cómo interactúan entre si?
+* _Audiencia:_ Principalmente desarrolladores y arquitectos de software, ya que les ayuda a entender cómo se descompone el sistema en apartes manejables y cómo estas partes colaboran entre si.
+
+* _Ejemplo:_ Un diagrama UML de clases que muestran módulos, clases, funciones, y sus relaciones. Podría usarse un diagrama de componentes a alto nivel.
+
+

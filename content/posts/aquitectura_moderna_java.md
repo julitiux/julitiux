@@ -26,4 +26,13 @@ draft: false
 
 * _Ejemplo:_ Un diagrama UML de clases que muestran módulos, clases, funciones, y sus relaciones. Podría usarse un diagrama de componentes a alto nivel.
 
+## Vista de Desarrollo (Vista de Implementación)
+* _Proposito:_ Esta vista describe la organizacion estática del sistema desde el punto de vista del equipo de desarrollo. Muestra como el código fuente está estructurado en paquetes, módulos o capas.
+* _Pregunta clave:_
+    - ¿Cómo se organiza el sistema a nivel de código?
+    - ¿Cómo están estructurados los módulos?
+    - ¿Qué equipos o personas son responsables de qué partes del sistema?
+* _Audiencia:_ Desarrolladores que necesitan entender cómo está organizado el sistema para trabajar en él y contribuir de manera efectiva
+* _Ejemplo:_ Diagramas de paquetes o estructura de carpetas y archivos en el código fuente.
+
 

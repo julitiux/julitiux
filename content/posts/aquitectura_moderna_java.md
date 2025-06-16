@@ -35,4 +35,14 @@ draft: false
 * _Audiencia:_ Desarrolladores que necesitan entender cómo está organizado el sistema para trabajar en él y contribuir de manera efectiva
 * _Ejemplo:_ Diagramas de paquetes o estructura de carpetas y archivos en el código fuente.
 
+## Vista de Procesos
+* _Proposito:_ Se enfoca en la interaccion dinámica de los componentes del sistema en tiempo de ejecución. Muestra cómo los diferentes componentes interactúan a través de procesos, hilos y mensajes
+* _Pregunta clave:_
+    - ¿Cómo interactúan los componentes del sistema en tiempo de ejecución?
+    - ¿Qué procesos se ejecutan en paralelo o secuencialmente?
+* _Audiencia:_ Arquitectos y desarrolladores interesados en cómo funciona el sistem en ejecución, especialmente para comprender problemas como el rendimiento y la escalabilidad
+* _Ejemplo:_ Diagramas de secuencia o diagramas de actividad que muestren flujos de control y colaboración entre los componentes en tiempo de ejecución
+
+
+
 

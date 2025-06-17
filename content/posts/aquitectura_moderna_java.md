@@ -43,6 +43,11 @@ draft: false
 * _Audiencia:_ Arquitectos y desarrolladores interesados en cómo funciona el sistem en ejecución, especialmente para comprender problemas como el rendimiento y la escalabilidad
 * _Ejemplo:_ Diagramas de secuencia o diagramas de actividad que muestren flujos de control y colaboración entre los componentes en tiempo de ejecución
 
-
-
-
+## Vista Física (Vista de Despliegue)
+* _Proposito:_ Representa la topologia de hardware donde se ejecuta el sistema. Esta vista describe cómo se mapean los componentes de software a los nodos físicos de la red (servidores, máquinas virtuales, etc)
+* _Pregunta clave:_
+    - ¿Dónde se ejecuta cada parte del sistema?
+    - ¿Cómo se distribuye el software en el hardware?
+    - ¿Que nodos, servidores o contenedores están involucrados en la ejecución del sistema?
+* _Audiencia:_ Ingenieros de infraestructura, administradores de sistema y arquitectos responsables del despliegue físico del Software
+* _Ejemplo:_ Diagramas de despliegue que muestran servidores, redes, dispositivos y como los componentes de software están destribuidos entre ellos

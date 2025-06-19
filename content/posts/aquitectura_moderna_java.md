@@ -51,3 +51,11 @@ draft: false
     - ¿Que nodos, servidores o contenedores están involucrados en la ejecución del sistema?
 * _Audiencia:_ Ingenieros de infraestructura, administradores de sistema y arquitectos responsables del despliegue físico del Software
 * _Ejemplo:_ Diagramas de despliegue que muestran servidores, redes, dispositivos y como los componentes de software están destribuidos entre ellos
+
+## Relación entre vistas.
+* La vista no son independientes entre si, De hecho, las vistas debes estar relacionadas y se consistenes entre si. Por ejemplo:
+    - Un componente descrito en la vista lógica debe estar reflejado de alguna manera en la vista de desarrollo (como un modulo o paquete).
+    - Los procesos descritos en la vista de procesos deben ejecutarse en los nodos descritos en la vista física.
+* Cada vista captura una parte de la arquitectura del sistema, y juntas proporcionan una imagen mas completa del sistema en conjunto.
+
+

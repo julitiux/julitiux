@@ -91,3 +91,11 @@ Por ejemplo:
     - _Alternativas:_ Describir las opciones que fueron consideradas pero no seleccionadas, así como las ventajas y desventajas de cada una.
     - _Implicaciones:_ Cómo estas decisiones impactan en la calidad de sistema, su escalabilidad, en rendimiento, seguridad, etc.
 * _Ejemplo:_ Documentar por qué se eligió una arquitectura de microservicios en lugar de una monolitica y como esa elección afecta la escalabilidad y el mantenimiento del sistema a largo plazo
+
+## Atribubtos de calidad
+* _Proposito:_ Uno de los elementoa más importantes que influye en las decisiones arquitectónicas son los atributos de calidad del sistema. Estos atributos no siempre se ven directamente en las vistas de arquitectura, pero deben ser explícitamente documentados.
+* _Contenido:_
+    - Especificar los atributos de calidad más importantes para el sistema
+    - Detallar cómo la arquitectura aborda esos atributos y qué decisiones se tomarin para optimizarlos
+    - Documentar cualquier compensación o compromiso realizado para lograr ciertos atributos de calidad a expensas de otros
+* _Ejemplo:_ En un sistema donde el rendimiento es crítico, se podría documentar cómo la arquitectura fue diseñada para minimizar la latencia, y qué decisiones se tomaron para balancear eso con la mantenibilidad del código

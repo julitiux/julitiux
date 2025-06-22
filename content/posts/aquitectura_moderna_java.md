@@ -68,3 +68,8 @@ Por ejemplo:
 * _Claridad:_ Descomponer el sistema en diferentes vistas ficilita la compresión de la arquitectura por parte de diferentes grupos de interés. Cada vista aborda preocupaciones espcificas y es legible para una audiencia particular.
 * _Modularidad:_ Permite a los equipos trabajar en diferentes partes de la arquitectura sin perder de vista el panorama completo.
 * _Facilita la comunicación:_ Las vistas proporcionan un lenguaje común
+
+## Documentación basada en vistas: Conclusión
+* En el enfoque basado en vistas propuesto en "Documenting Software Architecture" es una forma eficaz de documentar arquitecturas complejas.
+* Al dividir la arquitectura en varias vistas, es posible abordar diferentes preocupaciones de los interesados y crear una documentación que sea útil para todo equipo, desde desarrolladores hasta administradores de sistemas.
+

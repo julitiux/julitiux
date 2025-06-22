@@ -58,4 +58,13 @@ draft: false
     - Los procesos descritos en la vista de procesos deben ejecutarse en los nodos descritos en la vista física.
 * Cada vista captura una parte de la arquitectura del sistema, y juntas proporcionan una imagen mas completa del sistema en conjunto.
 
+## Personalización de vistas
+* Debe existir flexibilidad en cuanto a la creacion de vistas adicionales si el sistema lo requiere.
+Por ejemplo:
+    - _Vista de serguridad:_ Para sistemas que deben abordar requisitos de seguidad avanzados.
+    - _Vista de rendimiento:_ Si el rendimiento es una preocupación clave, se podría incluir una vista que muestre cómo las decisiones arquitetónicas afectan este atributo.
 
+## Beneficios del enfoque basado en vistas
+* _Claridad:_ Descomponer el sistema en diferentes vistas ficilita la compresión de la arquitectura por parte de diferentes grupos de interés. Cada vista aborda preocupaciones espcificas y es legible para una audiencia particular.
+* _Modularidad:_ Permite a los equipos trabajar en diferentes partes de la arquitectura sin perder de vista el panorama completo.
+* _Facilita la comunicación:_ Las vistas proporcionan un lenguaje común

@@ -73,3 +73,14 @@ Por ejemplo:
 * En el enfoque basado en vistas propuesto en "Documenting Software Architecture" es una forma eficaz de documentar arquitecturas complejas.
 * Al dividir la arquitectura en varias vistas, es posible abordar diferentes preocupaciones de los interesados y crear una documentación que sea útil para todo equipo, desde desarrolladores hasta administradores de sistemas.
 
+## Aspectos más allá de las vistas
+* Existen varios elementos adicionales que son importantes para documentar adecuadamente la arquitectura de un sistem:
+    - Tácticas y desiciones de diseño
+    - Requisitos de calidad
+    - Contexto arquitectónico
+    - Patrones arquitectónicos
+    - Evolución de la arquitectura
+    - Restricciones arquitectóicas
+    - Consideraciones de seguridad
+    - Riesgos y mitigaciones
+

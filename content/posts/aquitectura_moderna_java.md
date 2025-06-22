@@ -84,3 +84,10 @@ Por ejemplo:
     - Consideraciones de seguridad
     - Riesgos y mitigaciones
 
+## Tácticas y decisiones de diseño
+* _Propósito:_ Las desiciones arquitectónicas son las que determinan la estructura y comportamiento del sistema. Documentar las decisiones clave y las razones detrás de ellas permite que otros comprendan no solo que se hizo, sino por qué.
+* _Contenido:_
+    - _Justificación:_ Explicar las razones detrás de las elecciones arquitectónicas, como la eleccion de ciertos patrones, tecnologías o enfoques
+    - _Alternativas:_ Describir las opciones que fueron consideradas pero no seleccionadas, así como las ventajas y desventajas de cada una.
+    - _Implicaciones:_ Cómo estas decisiones impactan en la calidad de sistema, su escalabilidad, en rendimiento, seguridad, etc.
+* _Ejemplo:_ Documentar por qué se eligió una arquitectura de microservicios en lugar de una monolitica y como esa elección afecta la escalabilidad y el mantenimiento del sistema a largo plazo

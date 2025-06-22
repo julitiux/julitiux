@@ -99,3 +99,11 @@ Por ejemplo:
     - Detallar cómo la arquitectura aborda esos atributos y qué decisiones se tomarin para optimizarlos
     - Documentar cualquier compensación o compromiso realizado para lograr ciertos atributos de calidad a expensas de otros
 * _Ejemplo:_ En un sistema donde el rendimiento es crítico, se podría documentar cómo la arquitectura fue diseñada para minimizar la latencia, y qué decisiones se tomaron para balancear eso con la mantenibilidad del código
+
+## Contexto arquitectónico
+* _Proposito:_ Describe el entorno en que opera el sistema y cómo interactúa con otros sistemas o entidades externas. Es fundamental entender las dependencias externas del sistema y las interfaces con las que debe interactuar
+* _Contenido:_
+    - Definir los sistema externo con los que interactúa el sistema
+    - Describir los protocolos, APIs o interfaces utilizadas
+    - Explicar las limitaciones o dependencias que resultan de estas interacciones
+* _Ejemplo:_ Si un sistema depende de una API externa para recibir datos en tiempo real, la documentación debe describir esa dependencia, los mecanismos de comunicación y cualquier implicación en caso de fallo de esa API

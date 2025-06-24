@@ -151,3 +151,7 @@ Por ejemplo:
 * Tambien debe proporcionar un contexto mas profundo sobre las decisiones arquitectonicas, los atributos de calidad, las retricciones y otros factores importantes
 * Esto permite que la documentacion sea mas rica y util a lo largo del ciclo de la vida del sistema, ayudando a los equipos a comprender mejor el "por que" detras de la arquitectura y no solo el "que"
 
+## Documentación de estilos arquitectónicos
+* Es fundamental que este adecuadamente documentado el estilo o estilos elegidos para asegurar que todos los involucrados en el proyecto comprendan la estructura y las interacciones del sistema
+* Esto incluye no solo la descripcion de los componentes y sus relaciones, si no tambien los principios y las decisiones clave que motivaron la eleccion del estilo
+

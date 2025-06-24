@@ -123,4 +123,9 @@ Por ejemplo:
     - Describir el impacto de estos cambios en la calidad del sistema y en las futuras desiciones.
 * _Ejemplo:_ Un sistema que comienza como monolitico y luego migra a una arquitectura de microservicios debe documentar como y por que hizo esa transicion
 
-
+## Restricciones arquitetónicas
+* _Proposito:_ En cualquier proyecto de software, existen restricciones que limitan las opciones arquitectonicas. Estas pueden provenir de requisitos de negocio, limitaciones tecnicas o necesidades especificas del cliente.
+* _Contenido:_
+    - Documentar las restricciones impuestas en el diseño, ya sea por limitaciones de hardware, presupuesto, plazos o regulaciones.
+    - Explicar como esas restricciones influyeron en las decisiones de diseño
+* _Ejemplo:_ Si una aplicacion debe funcionar en dispositivos con recursos limitados, las restricciones de rendimiento y memoria se conviertan en factores clave que influiran en la arquitectura

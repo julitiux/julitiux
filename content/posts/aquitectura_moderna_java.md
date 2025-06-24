@@ -107,3 +107,11 @@ Por ejemplo:
     - Describir los protocolos, APIs o interfaces utilizadas
     - Explicar las limitaciones o dependencias que resultan de estas interacciones
 * _Ejemplo:_ Si un sistema depende de una API externa para recibir datos en tiempo real, la documentación debe describir esa dependencia, los mecanismos de comunicación y cualquier implicación en caso de fallo de esa API
+
+## Patrones arquitectonicos
+* _Proposito:_ Los patrones arquitectonicos son soluciones probadas a problemas comunes en el diseño de sistemas. Documentar los patrones utilizados proporciona a otros desarrolladores y arquitectos una vision mas clara de las decisiones estructurales generales del sistema.
+* _Contenido:_
+    - Describir los patrones arquitectonicos utilziados, como MVC, microservicios, arquitectura en capas, entre otros.
+    - Explicar por que se selecciono un patron en particular y como se implementa en el sistema
+* _Ejemplo:_ Documentar el uso de un patron de eventos y comandos (CQRS) en un sistema donde se requiere operaciones intensivas de lectura y explicar como se mejora el rendimiento en esas areas.
+

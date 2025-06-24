@@ -212,4 +212,10 @@ Por ejemplo:
     - Como las adaptaciones impactan la arquitectura general del sistema
 * _Ejemplo:_ En una arquitectura orientada a eventos, podria ser necesario personalizar el mecanismo de enrutamiento de eventos para ajustarse a requisitos espcificos de latencia o seguridad
 
+## Patrones comunes asociados al estilo
+* _Proposito:_ Muchos estilos arquitectonicos se asocian comunmente con ciertos patrones de diseño. Documentar estos patrones es importante para que los desarrolladores puedan aplicarlos de manera consistente en el sistema
+* _Contenido:_
+    - Patrones de diseño tipico asociados con el estilo arquitectonico
+    - Ejemplos de como se implementan estos patrones en el sistema
+* _Ejemplo:_ En una arquitectura en capas, los patrones tipicos incluyen el patron de "DAO" (Data Access Object) para la interaccion con la base de datos, o el patron "MVC" (Modelo Vista Controlador) en la capa de presentacion
 

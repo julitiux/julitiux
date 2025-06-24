@@ -138,3 +138,12 @@ Por ejemplo:
     - Explicar las decisiones tomadas para equilibrar la seguridad con otros atributos del sistema, como el rendimiento o la facilidad de uso
 * _Ejemplo:_ Documentar el uso de cifrado extremo a extremo para proteger la informacion sensible durante la transmision, y los mecanismo de autenticacion y autorizacion utilizados en el sistema
 
+## Riesgos y mitigaciones
+* _Proposito:_ Toda arquitectura conlleva riesgos, ya sean tecnicos, financieros o relacionados con la implementacion. Es importante documentar los riesgos identificados y como se planea mitigarlos
+* _Contenido:_
+    - Identificar los riesgos arquitectonicos mas importantes
+    - Describir las estrategias utilizadas para mitigar esos riesgos
+    - Explicar los posibles impactos si los riesgos no se mitigan adecuadamente
+* _Ejemplo:_ En un sistema distribuido, los riesgos de fallos en la comunicación entre microservicios pueden ser mitigados con el uso de circuit breakers y politicas de reintento
+
+

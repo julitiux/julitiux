@@ -115,3 +115,12 @@ Por ejemplo:
     - Explicar por que se selecciono un patron en particular y como se implementa en el sistema
 * _Ejemplo:_ Documentar el uso de un patron de eventos y comandos (CQRS) en un sistema donde se requiere operaciones intensivas de lectura y explicar como se mejora el rendimiento en esas areas.
 
+## Evolución de la arquitectura
+* _Proposito:_ Las arquitecturas de software suelen evolucionar con el tiempo, y es importante documentar como han cambiado o se espera que cambien a medida que el sistema crece o se adapta a nuevas necesidades.
+* _Contenido:_
+    - Documentar los cambios importantes en la arquitectura a lo largo del tiempo
+    - Explicar las razones detras de estos cambios
+    - Describir el impacto de estos cambios en la calidad del sistema y en las futuras desiciones.
+* _Ejemplo:_ Un sistema que comienza como monolitico y luego migra a una arquitectura de microservicios debe documentar como y por que hizo esa transicion
+
+

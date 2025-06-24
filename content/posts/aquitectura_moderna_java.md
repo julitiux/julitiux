@@ -181,3 +181,10 @@ Por ejemplo:
     - Responsabilidades de cada componente dentro de la estructura del sistema
 * _Ejemplo:_ En una arquitectura de microservicios, se documentan las microservicios individuales, como interactuan a traves de APIs, y como se gestionan aspectos como el descubrimiento de servicios y la orquestacion
 
+## Patrones de comunicación
+* _Proposito:_ Cada estilo arquitectonico tiene un conjunto de patrones de comunicación de define como los componentes interactuan entre si. Documentar estos patrones es crucial para comprender como los datos y las solicitudes fluyen a traves del sistema
+* _Contenido_
+    - Patrones de comunicación principales, como solicitudes sincronas, asincronia, mensajeria bada en eventos
+    - Tecnologias o protocolos utilizados para facilitar la comunicacion (HTTP, REST, gRPC, etc)
+* _Ejemplo:_ En una arquitectura orientada a eventos, se documenta como los eventos se publican y suscriben en un bus de eventosm y como los diferentes servicios reaccionan a esos eventos. OpenAPI, AsyncAPI
+

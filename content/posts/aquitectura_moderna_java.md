@@ -196,3 +196,20 @@ Por ejemplo:
     - Descripcion de los problemas que resuelve el estilo seleccionado
 * _Ejemplo:_ Si se eligio una arquitectura de microservicios, se puede explicar que flexibilidad para escalar individualmente los componentes del sistema fue clave para satisfacer los requisitos de escalabilidad del negocio
 
+## Limitaciones del estilo
+* _Proposito:_ Ningun estilo arquitectonico es perfecto para todos los casos. Cada uno tiene limitaciones que es importante decumentar para que los equipos comprendan los desafios potenciales a los que se enfrentanran al adoptar un estilo especifico
+* _Contenido:_
+    - Restricciones inherentes al estilo arquitectonico
+    - Desventajas o desafios tecnicos
+    - Situaciones en las que el estilo podria no ser adecuado
+* _Ejemplo:_ Para una arquitectura monolitica, las limitaciones decumentadas podrian incluir la dificultad para escalar horizontalmente y los problemas relacionados con el despliegue de grandes bases de codigo
+
+## Adaptaciones o personalizaciones del estilo
+* _Proposito:_ En algunos casos, un estilo arquitectonico necesita ser adaptado o personalizado para ajustarse mejor a los requisitos especificos del sistema. Documentar estas adaptaciones es esencial para que otros puedan entender como y por que se ha modificado el estilo
+* _Contenido:_
+    - Explicacion de las personalizaciones o modificaciones al estilo estandar
+    - Justificacion para esas personalizaciones
+    - Como las adaptaciones impactan la arquitectura general del sistema
+* _Ejemplo:_ En una arquitectura orientada a eventos, podria ser necesario personalizar el mecanismo de enrutamiento de eventos para ajustarse a requisitos espcificos de latencia o seguridad
+
+

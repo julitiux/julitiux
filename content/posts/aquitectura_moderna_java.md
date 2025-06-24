@@ -155,3 +155,14 @@ Por ejemplo:
 * Es fundamental que este adecuadamente documentado el estilo o estilos elegidos para asegurar que todos los involucrados en el proyecto comprendan la estructura y las interacciones del sistema
 * Esto incluye no solo la descripcion de los componentes y sus relaciones, si no tambien los principios y las decisiones clave que motivaron la eleccion del estilo
 
+## Componetes clave al documentar
+* Descrpcion del estilo
+* Estructura del sistema basada en el estilo
+* Patrones de comunicación
+* Razonamiento detras de la eleccion del estilo
+* Limitaciones del estilo
+* Adaptaciones o personalizaciones del estilo
+* Patrones comunes asociados al estilo
+* Consideraciones de calidad para el estilo
+
+

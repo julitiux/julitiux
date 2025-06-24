@@ -128,4 +128,13 @@ Por ejemplo:
 * _Contenido:_
     - Documentar las restricciones impuestas en el diseño, ya sea por limitaciones de hardware, presupuesto, plazos o regulaciones.
     - Explicar como esas restricciones influyeron en las decisiones de diseño
-* _Ejemplo:_ Si una aplicacion debe funcionar en dispositivos con recursos limitados, las restricciones de rendimiento y memoria se conviertan en factores clave que influiran en la arquitectura
+* _Ejemplo:_ Si una aplicacion debe funcionar en dispositivos con recursos limitados, las restricciones de rendimiento y memoria se conviertan en factores clave que influiran en la Arquitectura
+
+## Consideraciones de seguridad
+* _Proposito:_ En michos sistemas, la seguridad es un atributo fundamental. Es importante documentar como la arquitectura aborda los problemas de seguridad y como protege el sistem frente a amenazas
+* _Contenido:_
+    - Identificar las amenzas de seguidad mas importantes que enfrenta el sistema
+    - Describir las contramedidas arquitectonicas implementadas para mitigar esas amenazas
+    - Explicar las decisiones tomadas para equilibrar la seguridad con otros atributos del sistema, como el rendimiento o la facilidad de uso
+* _Ejemplo:_ Documentar el uso de cifrado extremo a extremo para proteger la informacion sensible durante la transmision, y los mecanismo de autenticacion y autorizacion utilizados en el sistema
+

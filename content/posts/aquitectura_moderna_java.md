@@ -188,3 +188,11 @@ Por ejemplo:
     - Tecnologias o protocolos utilizados para facilitar la comunicacion (HTTP, REST, gRPC, etc)
 * _Ejemplo:_ En una arquitectura orientada a eventos, se documenta como los eventos se publican y suscriben en un bus de eventosm y como los diferentes servicios reaccionan a esos eventos. OpenAPI, AsyncAPI
 
+## Razonamiento detras de la eleccion del estilo
+* _Proposito:_ Es fundamental documentar las razones por las cuales se eligio un estilo arquitectonico especifico. Esto proporciona contexto para las decisiones tomadas ya ayuda a futuros arquitectos y desarrolladores a entender por que el sistem es estructurado de esa manera.
+* _Contenido:_
+    - Ventajas del estilo arquitectonico elegido en comparacion con otras alternatitvas
+    - Requisitos del sistema que llevaron a elegir ese estilo
+    - Descripcion de los problemas que resuelve el estilo seleccionado
+* _Ejemplo:_ Si se eligio una arquitectura de microservicios, se puede explicar que flexibilidad para escalar individualmente los componentes del sistema fue clave para satisfacer los requisitos de escalabilidad del negocio
+

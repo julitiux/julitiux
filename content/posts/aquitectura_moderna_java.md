@@ -165,4 +165,11 @@ Por ejemplo:
 * Patrones comunes asociados al estilo
 * Consideraciones de calidad para el estilo
 
+## Descripcion del estilo
+* _Proposito:_ Explicar las caracteristicas del estilo, los tipos de sistemas para los que es mas adecuado y los problemas que aborda
+* _Contenido:_
+    - Definicion general del estilo
+    - Principales caracteristicas del estilo
+    - Ejemplos de sistemas que utilizan este estilo
+* _Ejemplo:_ Para una arquitectura en capas, se describe como el sistema se organiza en capas (capa de presentacion, capa logica, capa de datos) y como las capas interactúan entre si
 

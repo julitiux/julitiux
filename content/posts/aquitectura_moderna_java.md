@@ -146,4 +146,8 @@ Por ejemplo:
     - Explicar los posibles impactos si los riesgos no se mitigan adecuadamente
 * _Ejemplo:_ En un sistema distribuido, los riesgos de fallos en la comunicación entre microservicios pueden ser mitigados con el uso de circuit breakers y politicas de reintento
 
+## Mas alla de las vistas Conclusión
+* La documentacion de arquitectura no solo debe enfocarse en mostrar las estructuras y relaciones del sistema a traves de diferentes vistas
+* Tambien debe proporcionar un contexto mas profundo sobre las decisiones arquitectonicas, los atributos de calidad, las retricciones y otros factores importantes
+* Esto permite que la documentacion sea mas rica y util a lo largo del ciclo de la vida del sistema, ayudando a los equipos a comprender mejor el "por que" detras de la arquitectura y no solo el "que"
 

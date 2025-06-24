@@ -219,3 +219,9 @@ Por ejemplo:
     - Ejemplos de como se implementan estos patrones en el sistema
 * _Ejemplo:_ En una arquitectura en capas, los patrones tipicos incluyen el patron de "DAO" (Data Access Object) para la interaccion con la base de datos, o el patron "MVC" (Modelo Vista Controlador) en la capa de presentacion
 
+## Consideraciones de calidad para el estilo
+* _Proposito:_ Cada estilo arquitectonico tiene diferentes implicaciones para los atributos de calidad del sistema, como rendimiento, escalabilidad, mantenibilidad, etc. Documentar como el estilo afecta estos atributos ayuda a garantizar que el sistema cumpla con los requisitos de calidad.
+* _Contenido:_
+    - Impacto del estilo en los atributos de calidad, como seguridad, escalabilidad, rendimiento, etc
+    - Compromisos entre diferentes atributos de calidad que resultan del estilo arquitectonico
+* _Ejemplo:_ En una arquitectura de microservicios, se podrian documentar como la escalabilidad horizontal es mejoradam pero a costa de una mayor complejidad operativa y sobrecarga en la comunicacion (latencia)

@@ -173,3 +173,11 @@ Por ejemplo:
     - Ejemplos de sistemas que utilizan este estilo
 * _Ejemplo:_ Para una arquitectura en capas, se describe como el sistema se organiza en capas (capa de presentacion, capa logica, capa de datos) y como las capas interactúan entre si
 
+## Estructura del sistema bada en el estilo
+* _Proposito:_ Definir la estructura concreta del sistema de acuerdo con ese estilo. Esto implica documentar los componentes principales, sus responsabilidades y como interactúan
+* _Contenido:_
+    - Componetes principales del sistema
+    - Conexiones y relaciones entre esos componentes
+    - Responsabilidades de cada componente dentro de la estructura del sistema
+* _Ejemplo:_ En una arquitectura de microservicios, se documentan las microservicios individuales, como interactuan a traves de APIs, y como se gestionan aspectos como el descubrimiento de servicios y la orquestacion
+

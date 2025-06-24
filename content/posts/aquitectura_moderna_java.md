@@ -236,3 +236,10 @@ Por ejemplo:
 * Documentar las decisiones clave de diseño
 * Especificar los atributos de calidad del sistema
 * Evitar la redundancia innecesaria
+
+## Conoce a tu audiencia
+* _Proposito:_ La documentación de arquitectura es leida por una audiencia diversa que incluye desarrolladores, arquitectos, gerentes, partes interesadas no tecnicas e incluso clientes. Por lo tanto es esencial adaptar la escritura a las necesidades y el nivel de compresion de cada grupo
+* _Recomendaciones:_
+    - Identificar claramente quien sera el lector de cada parte de la documentación
+    - Proporcionar diferentes niveles de detalle segun el tipo de audiencia: por ejemplo, altos niveles de abstraccion para gerentes o clientes, y detalles tecnicos profundos para desarrolladores y arquitectos
+* _Ejemplo:_ Un diagrama de alto nivel de la arquitectura para un cliente que no este familiarizado con los detalles tecnicos puede ser suficiente para explicar como interactúan los componentes principales del sistema. Sin embargo, los desarrolladores necesitaran diagramas mas detallados con descripciones precisas de los modulos y como interactúan

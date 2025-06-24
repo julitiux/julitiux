@@ -225,3 +225,14 @@ Por ejemplo:
     - Impacto del estilo en los atributos de calidad, como seguridad, escalabilidad, rendimiento, etc
     - Compromisos entre diferentes atributos de calidad que resultan del estilo arquitectonico
 * _Ejemplo:_ En una arquitectura de microservicios, se podrian documentar como la escalabilidad horizontal es mejoradam pero a costa de una mayor complejidad operativa y sobrecarga en la comunicacion (latencia)
+
+## Aspectos clave de la Documentación
+* Conocer a la audiencia
+* Usar un lenguaje claro y conciso
+* Estructura coherente
+* Incluir diagramas visuales
+* Mantener la documentación actualizada
+* Proporcionar referencias cruzadas
+* Documentar las decisiones clave de diseño
+* Especificar los atributos de calidad del sistema
+* Evitar la redundancia innecesaria

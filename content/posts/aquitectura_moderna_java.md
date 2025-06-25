@@ -243,3 +243,13 @@ Por ejemplo:
     - Identificar claramente quien sera el lector de cada parte de la documentación
     - Proporcionar diferentes niveles de detalle segun el tipo de audiencia: por ejemplo, altos niveles de abstraccion para gerentes o clientes, y detalles tecnicos profundos para desarrolladores y arquitectos
 * _Ejemplo:_ Un diagrama de alto nivel de la arquitectura para un cliente que no este familiarizado con los detalles tecnicos puede ser suficiente para explicar como interactúan los componentes principales del sistema. Sin embargo, los desarrolladores necesitaran diagramas mas detallados con descripciones precisas de los modulos y como interactúan
+
+## Usa un lenguaje claro u conciso
+* _Proposito:_ La claridad es crucial en la documentación de arquitectura para evitar malentendidos. Un lengiaje impreciso o ambiguo puede generar confusion entre los lectores, lo que podria llevar a errores en la implementacion
+* _Recomendaciones:_
+    - Evitar jergas tecnicas innecesarias o complejidad excesiva, especialmente cuando no son necesarias para la comprension del concepto
+    - Ser directo en la explicacion de conceptos, evitando palabras o frases vagas
+    - Utilizar listas y tablas cuando sea apropiado para desglosar informacion compleja
+* _Ejemplo:_ En lugar de escribir "este componente maneja varias tareas importantes", se puede ser mas perciso con "este componente procesa solicitudes de autenticacion de usuarios y consultas de base de datos"
+
+

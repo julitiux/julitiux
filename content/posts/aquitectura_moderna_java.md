@@ -261,3 +261,12 @@ Por ejemplo:
     - Usar encabezados y subencabezados descriptivos que reflejen el contenido de cada seccion
 * _Ejemplo:_ Una buena estructura prodria empezar con una vision general de alto nivel, seguida de vistas especificas (logica, de desarrollo, de despliegue), y luego profundizar en las decisiones clave de diseño, patrones y tacticas utilizadas
 
+## Incluye diagramas visuales
+* _Proposito:_ Los diagramas y representaciones graficas ayudan a ilustrar conceptos arquitectonicos complejos de manera mas clara que solo texto. Los diagramas permiten a los lectores visualizar las interacciones entre los componentes del sistema y como se organiza la arquitectura
+* _Recomendaciones:_
+    - Usar diagramas consistentes, como diagramas de clase UML, diagramas de componentes o diagramas de despliegue, para ilustrar estructuras y relaciones
+    - Asegurarse de que los diagramas esten actualizados y alineados con las descripciones contextuales
+    - Proporcionar explicaciones textuales para cada diagrama, aclarando el contexto y los detalles clave
+* _Ejemplo:_ Incluir un diagrama de componentes que muestre como interactuan los microservicios en un sistema basado en microservicios, complementando con descripciones textuales de las responsabilidades de cada microservicio
+
+

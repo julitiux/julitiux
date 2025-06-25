@@ -252,4 +252,12 @@ Por ejemplo:
     - Utilizar listas y tablas cuando sea apropiado para desglosar informacion compleja
 * _Ejemplo:_ En lugar de escribir "este componente maneja varias tareas importantes", se puede ser mas perciso con "este componente procesa solicitudes de autenticacion de usuarios y consultas de base de datos"
 
+## Estructura coherente
+* _Proposito:_ Una buena estructura facilita que los lectores encuentren la informacion que necesitan. La organizacion logica de la documentacion ayuda a que esta sea mas accesible y facilita el mantenimiento a largo plazo
+* _Recomendacion:_
+    - Seguir un esquema de organizacion claro y consistente en todos los documentos
+    - Incluir una tabla de contenidos que permita a los lectores navegar facilmente por la documentacion
+    - Separar las secciones en bloques logicos, como introduccion, vistas arquitectonicas, decisiones clave, etc
+    - Usar encabezados y subencabezados descriptivos que reflejen el contenido de cada seccion
+* _Ejemplo:_ Una buena estructura prodria empezar con una vision general de alto nivel, seguida de vistas especificas (logica, de desarrollo, de despliegue), y luego profundizar en las decisiones clave de diseño, patrones y tacticas utilizadas
 

@@ -311,4 +311,15 @@ Por ejemplo:
 - Plantilla de atributos de calidad
 - Plantilla de riesgos y mitigaciones
 
+## Plantillas de vistas arquitectonicas
+* _Proposito:_ Estructura la documentacion de las diferentes vistas de la arquitectura, asegurando que cada vista este documentada de manera coherente
+* _Contenido:_
+    - Nombre de la vista: El nombre de la vista (por ejemplo, vista logica, vista de desarrollo)
+    - Proposito de la vista: Descripcion del objetivo de la vista y las preguntas que responde
+    - Elementos de la vista: Componente principales de la vista (modulos, servicios, nodos, etc)
+    - Relaciones entre elementos: Descripcion de como interactuan los componentes dentro de la vistas
+    - Diagramas: Diagramas que reprensentan visualmente la estructura o interaccion entre los componentes
+    - Decision arquitectonica: Las decisiones clave que afectan la estructura de esa vista
+    - Referencias cruzadas: Enlaces o referencias a otras vistas o decisiones arquitectonicas que afectan o complementan esta vista
+* _Ejemplo:_ Para la vista de desarrollo, esta plantilla incluiria la estructura de modulos y como se organiza en paquetes o subsistemas, junto con un diagrama que muestre esa organización
 

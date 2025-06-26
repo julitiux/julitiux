@@ -397,4 +397,10 @@ Por ejemplo:
     - Hojas de calculo: Google Sheets o Excel prodrian ser alternatitvas
 * _Ejemplo de uso:_ Crear tarjetas en Trello que representen riesgos arquitectonicos, asociando cada tarjeta con la estrategia de mitigacion correspondiente y manteniendo un seguimiento del estado del riesgo
 
+ ## Generadores automaticos de documentacion
+* _Proposito:_ Automatizar la generacion de documentacion a partir del codigo fuente o modelos arquitectonicos
+* _Herramientas recomendadas:_
+    - PlantUML: Permite generar diagramas UML a partir de descripciones textuales. Es util para mantener los diagramas actualizados automaticamente en funcion de los cambios en el codigo
+    - Swagger: Herramienta para la generacion automatica de documentacion de APIs RESTful
+* _Ejemplo de uso:_ User PlantUML para generar diagramas de clases automaticamente a partir de descripciones textuales en la documentacion
 

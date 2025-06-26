@@ -382,3 +382,10 @@ Por ejemplo:
     - GitHub Pages
 * _Ejemplo de uso:_ User Confluence para centralizar la documentacion arquitectonica, permitiendo que todos los equipos accedan y colaboren en ella facilmente
 
+## Sistemas de control de versiones (VCS)
+* _Proposito:_ Versionar y gestionar los cambios en la documentacion de arquitectura de la misma manera que se hace con el codigo fuente
+* _Herramientas recomendadas:_
+    - Git: Un sistema de control de versiones ampliamente utilizado que permite realizar seguimientos de los cambios en la documentacion    - GitHub: Pages o GitLab Pages: Permiten alojar documentacion en linea utilizando archivos Markdown versionados con Git
+* _Ejemplo de uso:_ Usar Git para versionar los documentos de arquitectura en formato Markdown y publicarlos automaticamente en un estatico utilizando GitHub Pages
+
+

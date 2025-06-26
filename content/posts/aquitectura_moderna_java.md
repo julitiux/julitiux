@@ -290,3 +290,10 @@ Por ejemplo:
     - Incluir informacion sobre como estas decisiones afectan a los atributos de calidad del sistema (rendimiento, escalabilidad, etc)
 * _Ejemplo:_ Si se decide utilizar una arquitectura basada en eventos en lugar de una arquitectura monolitica, documentar por que esta decision se tomo, que beneficio aporto y cuales fueron las limitaciones a considerar
 
+## Especifica los atributos de calidad del sistema
+* _Proposito:_ Los atributos de calidad, como el rendimiento, la escalabilidad, la seguridad y la mantenibilidad, son esenciales para la arquitectura de un sistema y debe ser documentado claramente
+* _Recomendacion:_
+    - Explicar como la arquitectura soporta los atributos de calidad clave
+    - Documentar cualquier compensación o sacrificio que se haya hecho en el diseño para priorizar ciertos atributos de calidad sobre otros
+* _Ejemplo:_ Si la arquitectura ha sido optimizada para escalabilidad, explicar como se logra esta escalabilidad, y si ha habido algun sacrificio en terminos de simplicidad o mantenibilidad
+

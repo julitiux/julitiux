@@ -283,3 +283,10 @@ Por ejemplo:
     - Incluir enlaces o referencias entre diferentes partes de la documentacion, como entre una vista logica y la vista de desarrollo, para que los lectores puedan conectar conceptos relacionados
 * _Ejemplo:_ Si se describe un componente en la vista logica, se puede proporcionar un enlace a la vista de desarrollo que muestra como se implementa ese componente en el codigo fuente
 
+## Documenta las decisiones clave de diseño
+* _Proposito:_ Las decisiones de diseño arquitectonico son criticas para comprender el por que detras de la arquitectura. Documentarlas de manera clara ayuda a los futuros desarrolladores y arquitectos a entender el contexto y las razones detras de la estructura actual del sistema
+* _Recomendacion:_
+    - Para cada decision importante, incluir detalled sobre la alternativa considerada, los pro y contras de cada opcion, y la razon final para la decision tomada
+    - Incluir informacion sobre como estas decisiones afectan a los atributos de calidad del sistema (rendimiento, escalabilidad, etc)
+* _Ejemplo:_ Si se decide utilizar una arquitectura basada en eventos en lugar de una arquitectura monolitica, documentar por que esta decision se tomo, que beneficio aporto y cuales fueron las limitaciones a considerar
+

@@ -388,4 +388,13 @@ Por ejemplo:
     - Git: Un sistema de control de versiones ampliamente utilizado que permite realizar seguimientos de los cambios en la documentacion    - GitHub: Pages o GitLab Pages: Permiten alojar documentacion en linea utilizando archivos Markdown versionados con Git
 * _Ejemplo de uso:_ Usar Git para versionar los documentos de arquitectura en formato Markdown y publicarlos automaticamente en un estatico utilizando GitHub Pages
 
+## Herramientas de gestion de riesgos
+* _Proposito:_ Gestionar los riesgos asociados a las decisiones arquitectonicas y las estrategias de mitigacion
+* _Herramientas recomendadas:_
+    - JIRA: Herramienta de gestion de proyectos que permiten registrar y hacer seguimiento de los riesgos
+    - Trello: Una herramienta visual para la gestion de proyectos y tareas que puede ser usada para documentar y rastrear riesgos arquitectonicos
+    - GitHub Issues: Usando etiquetas en los issues prodriamos gestionar Riesgos
+    - Hojas de calculo: Google Sheets o Excel prodrian ser alternatitvas
+* _Ejemplo de uso:_ Crear tarjetas en Trello que representen riesgos arquitectonicos, asociando cada tarjeta con la estrategia de mitigacion correspondiente y manteniendo un seguimiento del estado del riesgo
+
 

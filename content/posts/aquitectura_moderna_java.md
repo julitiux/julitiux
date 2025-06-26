@@ -297,3 +297,11 @@ Por ejemplo:
     - Documentar cualquier compensación o sacrificio que se haya hecho en el diseño para priorizar ciertos atributos de calidad sobre otros
 * _Ejemplo:_ Si la arquitectura ha sido optimizada para escalabilidad, explicar como se logra esta escalabilidad, y si ha habido algun sacrificio en terminos de simplicidad o mantenibilidad
 
+## Evita la redundancia innecesaria
+* _Proposito:_ La documentacion de arquitectura debe ser clara y eficiente. evitando la repeticion innecesaria que puede hacerla mas dificil de leer y mantener. Sin embargo, es importante saber cuando la redundancia es util, como cuando se necesita proporcionar contecto o explicaciones clave en multiples lugares
+* _Recomendacion:_
+    - Evitar duplicar informacion que ya se haya explicado claramente en otra parte del documento, utilizando referencias cruzadas cuando sea posible
+    - Repetir informacion solo cuando sea necesario para la claridad y la compresión en diferentes contexto
+* _Ejemplo:_ En lugar de repetir la descripcion de un componente en varias vistas, incluir una referencia a la vista correspondiente donde ya se haya explicado
+
+##

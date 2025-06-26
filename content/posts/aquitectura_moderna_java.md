@@ -371,3 +371,14 @@ Por ejemplo:
     - Memaid (http://mermaid.live/)
     - PlantUML (https://plantuml.com/)
 * _Ejemplo de uso:_ Crear un diagrama de componentes que muestre como los diferente modulos de un sistema de microservicios interactúan entre si
+
+## Herramientas de gestiona de documentación
+* _Proposito:_ Mantener y gestionar la documentacion arquitectonica, asegurando que este centralizada, accesible y versionada
+* _Herramientas recomendadas:_
+    - Confluence: Una plataforma de colaboración para documentar y compartir informacion tecnica dentro de los equipos
+    - Google Docs o Microsoft Word: Herramientas simples pero efectivas para crear y colocar en ducumentos de texto
+    - Docusaurus o MkDocs: Herramientas de documentacion que permiten generar sitios web de documentacion estatica a partir de archivos Markdown, utiles para documentaciones extensas y tecnicas
+    - Asciidoctor
+    - GitHub Pages
+* _Ejemplo de uso:_ User Confluence para centralizar la documentacion arquitectonica, permitiendo que todos los equipos accedan y colaboren en ella facilmente
+

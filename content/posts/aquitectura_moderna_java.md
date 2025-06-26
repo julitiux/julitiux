@@ -362,4 +362,12 @@ Por ejemplo:
 * Herramientas de gestion de riesgos
 * Generadores automaticos de documentacion
 
-
+## Herramientas de modelado de diagramas
+* _Proposito:_ Crear diagramas arquitectonicos, como diagramas UML, diagramas de componentes, diagramas de despliegue, entre otros. Se pueden generar visualmente o mediante codigo. Se recomienda usar una basada en codigo
+* _Recomendaciones visuales:_
+    - Draw.io: Una opcion gratuita y de codigo abierto para crear diagramas de arquitectura
+    - Enterprice Architect: Herramienta orientada a la creacion de modelos UML y diseño arquitectonico, utilizada en entornos empresariales
+* _Recomendaciones de basada en codigo_
+    - Memaid (http://mermaid.live/)
+    - PlantUML (https://plantuml.com/)
+* _Ejemplo de uso:_ Crear un diagrama de componentes que muestre como los diferente modulos de un sistema de microservicios interactúan entre si

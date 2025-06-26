@@ -277,3 +277,9 @@ Por ejemplo:
     - Utilizar sistemas de control de versiones para la documentacion, similar a como se gestionan los cambios en el codigo
 * _Ejemplo:_ Si un nuevo microservicio se añade al sistema, la documentación debe ser actualizada para incluir ese microservicio y explicar su funcion y como interactua con el resto del sistema
 
+## Proporciona referencias cruzadas
+* _Proposito:_ Dado que la documentacion arquitectonica cubre diferentes vistas y aspectos del sistema, es importante proporcionar referencias cruzadas entre las secciones para facilitar la navegacion y la compresion
+* _Recomendaciones:_
+    - Incluir enlaces o referencias entre diferentes partes de la documentacion, como entre una vista logica y la vista de desarrollo, para que los lectores puedan conectar conceptos relacionados
+* _Ejemplo:_ Si se describe un componente en la vista logica, se puede proporcionar un enlace a la vista de desarrollo que muestra como se implementa ese componente en el codigo fuente
+

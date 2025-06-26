@@ -335,3 +335,13 @@ Por ejemplo:
     - Responsable: Quien tomo la decision o que es responsable de ella
 * _Ejemplo:_ Una decision sobre si utilizar una arquitectura de microservicios o una monolitaca podria documentarse en esta plantilla, describiendo los pros y contras de cada enfoque y la Justificacion para elegir uno sobre el otro
 
+## Plantillas de atributos de calidad
+* _Proposito:_ Proporciona un formato estandarizado para documentar como la arquitectura satisface los atributos de calidad especificos, como la escalabilidad, rendimiento, seguidad, mantenibilidad, etc
+* _Contenido:_
+    - Descripcion del atributo de calidad: Explicacion del atributo de calidad especifico (por ejemplo, tiempo de respuesta o capacidad de recuperacion ante fallos)
+    - Requisitos del sistem relacionados: Que requisitos especificos del sistema estan relacionados con este atributo
+    - Decisiones arquitectonicas: Que decisiones de diseño apoyan la Implementaciónde este atributo de calidad
+    - Impacto en otras partes del sistema: Como esta consideracion afecta a otros atributos o partes del sistema
+    - Evidencia de cumplimiento: Pruebas o mecanismos implementados para asegurar que el sistema cumple con los requisitos de calidad establecidos
+* _Ejemplo:_ Para el atributo de escalabilidad, la plantilla documentaria como se han implementado mecanismos para escalar componentes especificos, por ejemplo, mediante el uso de microservicios o una arquitectura de eventos
+

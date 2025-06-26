@@ -416,4 +416,8 @@ Por ejemplo:
 * Haz que la documentacion sea modular y reutilizable
 * Utiliza una metodologia de documentacion iterativa
 
-
+## Puntos clave
+* Atributos de calidad
+    - Como identificarlos
+    - Administrarlos
+* Decisiones de diseño

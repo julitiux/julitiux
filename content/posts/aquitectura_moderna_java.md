@@ -355,3 +355,11 @@ Por ejemplo:
     - Estado: El estado actual del riesgo (activo, mitigado, pendiente)
 * _Ejemplo:_ Un riesgo de sobrecarga en la base de datos podria documentarse con estrategias de mitigacion como el uso de caches distribuidos o la implementacion de replicacion de base de datos
 
+## Herramientas para la documentacion
+* Herramientas de modelado de diagramas
+* Herramientas de gestion de documentación
+* Sistemas de control de version (VCS)
+* Herramientas de gestion de riesgos
+* Generadores automaticos de documentacion
+
+

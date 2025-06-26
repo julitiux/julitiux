@@ -304,4 +304,11 @@ Por ejemplo:
     - Repetir informacion solo cuando sea necesario para la claridad y la compresión en diferentes contexto
 * _Ejemplo:_ En lugar de repetir la descripcion de un componente en varias vistas, incluir una referencia a la vista correspondiente donde ya se haya explicado
 
-##
+## Plantillas para la documentación
+* Las plantillas son guias que estandarizan la manera en que se organiza la informacion en la documentacion. Usar plantillas ayuda a los arquitectos y equipos de desarrollo a asegurarse de que se cubren todos los aspectos relevantes de la arquitectura de manera clara y consistente
+- Plantilla de vistas arquitectonicas
+- Plantilla de decisiones arquitectonicas
+- Plantilla de atributos de calidad
+- Plantilla de riesgos y mitigaciones
+
+

@@ -345,3 +345,13 @@ Por ejemplo:
     - Evidencia de cumplimiento: Pruebas o mecanismos implementados para asegurar que el sistema cumple con los requisitos de calidad establecidos
 * _Ejemplo:_ Para el atributo de escalabilidad, la plantilla documentaria como se han implementado mecanismos para escalar componentes especificos, por ejemplo, mediante el uso de microservicios o una arquitectura de eventos
 
+## Plantilla de riesgos y mitigaciones
+* _Proposito:_ Ayuda a capturar y documentar los riesgos arquitectonicos y las estrategias utilizadas para mitigar dichos riesgos
+* _Contenido:_
+    - Descripcion del riesgo: Una explicacion del riesgo identificando en el diseño o la implementacion de la arquitectura
+    - Impacto potencial: Cual seria el efecto si el riesgo se materializa (por ejemplo, afectaria la seguridad, el rendimiento, etc)
+    - Probabilidad: Una estimacion de la probabilidad de que el riesgo ocurra
+    - Estrategia de mitigacion: Medidas para mitigar el riesgo o reducir su impacto
+    - Estado: El estado actual del riesgo (activo, mitigado, pendiente)
+* _Ejemplo:_ Un riesgo de sobrecarga en la base de datos podria documentarse con estrategias de mitigacion como el uso de caches distribuidos o la implementacion de replicacion de base de datos
+

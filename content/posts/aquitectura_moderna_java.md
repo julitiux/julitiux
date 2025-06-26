@@ -421,3 +421,13 @@ Por ejemplo:
     - Como identificarlos
     - Administrarlos
 * Decisiones de diseño
+
+## Identificar atributos de calidad
+* Comprender los objetivos del negocio
+* Analizar los casos de uso clave
+* Entrevistar a los stakeholders
+* Definir metricas claras
+* Revisar patrones arquitectonicos
+* Equilibrar compromisos (trade-offs)
+* Herramientas utiles
+

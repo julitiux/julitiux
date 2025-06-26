@@ -404,3 +404,16 @@ Por ejemplo:
     - Swagger: Herramienta para la generacion automatica de documentacion de APIs RESTful
 * _Ejemplo de uso:_ User PlantUML para generar diagramas de clases automaticamente a partir de descripciones textuales en la documentacion
 
+## Mejores practicas para la documentacion
+* Manten la documentacion ligera
+* Haz que la documentacion sea accesible y colaborativa
+* Actualiza la documentacion de manera continua
+* Incluye ejemplos y casos de uso reales
+* Prioriza las decisiones arquitectonicas clave
+* Documenta con diferentes niveles de abstraccion
+* Alinea la documentacion con los ciclos de vida de desarrollo
+* Incorpora pruebas y metricas de arquitectura
+* Haz que la documentacion sea modular y reutilizable
+* Utiliza una metodologia de documentacion iterativa
+
+

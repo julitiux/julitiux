@@ -267,6 +267,13 @@ Por ejemplo:
     - Usar diagramas consistentes, como diagramas de clase UML, diagramas de componentes o diagramas de despliegue, para ilustrar estructuras y relaciones
     - Asegurarse de que los diagramas esten actualizados y alineados con las descripciones contextuales
     - Proporcionar explicaciones textuales para cada diagrama, aclarando el contexto y los detalles clave
-* _Ejemplo:_ Incluir un diagrama de componentes que muestre como interactuan los microservicios en un sistema basado en microservicios, complementando con descripciones textuales de las responsabilidades de cada microservicio
+* _Ejemplo:_ Incluir un diagrama de componentes que muestre como interactuan los microservicios en un sistema basado en microservicios, complementando con descripciones textuales de las responsabilidades de cada microservicios
 
+## Mantener la documentacion actualizada
+* _Proposito:_ La documentacion arquitectonica pierde valor si no se mantiene actualizada con respecto a los cambios en el sistema. A medida que el sistema evoluciona, la documentancion debe reflejar las nuevas decisiones arquitectonicas, los cambios en los componentes y cualquier evolucion en la estructura general
+* _Recomendacion:_
+    - Definir procesos para la revision y actualizacion regular de la documentacion, especialmente despues de cambios, importantes en la arquitectura
+    - Asegurarse de que la documentación este alineada con el codigo actual, para evitar que los desarrolladores trabajen con informacion obsoleta
+    - Utilizar sistemas de control de versiones para la documentacion, similar a como se gestionan los cambios en el codigo
+* _Ejemplo:_ Si un nuevo microservicio se añade al sistema, la documentación debe ser actualizada para incluir ese microservicio y explicar su funcion y como interactua con el resto del sistema
 

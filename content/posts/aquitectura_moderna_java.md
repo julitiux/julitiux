@@ -323,3 +323,15 @@ Por ejemplo:
     - Referencias cruzadas: Enlaces o referencias a otras vistas o decisiones arquitectonicas que afectan o complementan esta vista
 * _Ejemplo:_ Para la vista de desarrollo, esta plantilla incluiria la estructura de modulos y como se organiza en paquetes o subsistemas, junto con un diagrama que muestre esa organización
 
+## Plantilla de decisiones arquitectonicas
+* _Proposito:_ Facilita la captura de las decisiones arquitectonicas clave, incluyendo las alternativas evaluadas, las razones para tomar una decision y su impacto en el sistema
+* _Contenido:_
+    - Titulo de la decision: Una descripcion concisa de la decision arquitectonica
+    - Contexto: Explicacion del problema que llevo a la decision y su contexto en el sistema
+    - Alternativas: Las diferentes opciones o enfoques que se consideraron
+    - Decision final: La opcion elegida y por que se selecciono
+    - Implicaciones: Los efectos de esta decision en otras partes del sistema, incluyendo posibles impactos en atributos de calidad (rendimiento, seguridad, escalabilidad, etc)
+    - Estado: Si la decision esta aprobada, pendiente o en revision
+    - Responsable: Quien tomo la decision o que es responsable de ella
+* _Ejemplo:_ Una decision sobre si utilizar una arquitectura de microservicios o una monolitaca podria documentarse en esta plantilla, describiendo los pros y contras de cada enfoque y la Justificacion para elegir uno sobre el otro
+

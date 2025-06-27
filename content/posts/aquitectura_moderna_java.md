@@ -512,5 +512,8 @@ Por ejemplo:
 * Escenario de seguridad
     - "La plataforma debe cumplir con las normativas de seguridad ISO 27001 y detectar de intrusion en tiempo real"
 
-
-
+## Resultados del ATAM
+* Riesgos identificados:
+    - Se identifican las areas de mayor riesgo para los atributos de calidad mas criticos
+* Mejoras propuestas:
+    - Se sugiere modificaciones para mitigar los riesgos y mejorar los Tradeoffs entra atributos de calidad

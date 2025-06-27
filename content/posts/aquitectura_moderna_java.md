@@ -437,4 +437,10 @@ Por ejemplo:
     - Disponibilidad: si el sistema debe estar accesible 24/7
     - Seguridad: si se manejan datos sensibles
 
+## Analizar los casos de uso clave
+* Revisa los casos de uso o los escenarios mas importantes del sistema, y determina que atributos de calidad son criticos para el exito
+* Cada caso de uso puede requerir diferentes atributos de calidad. Por ejemplo:
+    - Un sistema de transacciones bancarias puede requerir integridad y confiabilidad
+    - Una aplicacion en tiempo real puede necesitar baja latencia y alto rendimiento
+
 

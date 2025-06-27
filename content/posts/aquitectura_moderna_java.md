@@ -476,3 +476,13 @@ Por ejemplo:
     - El ATAM es un proceso estructurado para evaluar las decisiones de arquitectura de software, basado en atributos de calidad, como rendimiento, escalabilidad, seguridad, entre otros
 * Proposito
     - Identificar los compromisos (Tradeoffs) entre estos atributos, revelando riesgos potenciales y oportunidades de mejora
+
+## Proposito y Beneficios
+* Proposito
+    - Evaluar si una arquitectura puede satisfacer los requisitos de calidad de un sistema y ayudar a tomar decisiones informadas para mitigar riesgos
+* Beneficios
+    - Integracion temprana de riesgos y problemas en la arquitectura
+    - Balancear diferentes atributos de calidad
+    - Alinear las decisiones arquitectonicas con los objetivos del negocio
+    - Crear una documentacion clara para todas las partes interesadas
+

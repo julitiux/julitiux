@@ -541,3 +541,11 @@ Por ejemplo:
 * _Estado:_ Si la decision esta aprobada, propuesta, o si ha sido rechazada
 * _Fecha:_ Cuando se tomo la decision
 * _REferencia:_ Documentos o fuentes revelantes que influyeron de la decision
+
+## Beneficios de los ADRs
+* Decisiones centralizadas: Se consolidan las decisiones clave en un solo lugar
+* Documentacion ligera: Son faciles de escribir y mantener
+* Escalabilidad: Funciona bien en proyectos pequeños y grandes
+* Comunicacion efectiva: El equipo y las partes interesadas externas pueden estar al tanto del proceso de decision
+
+

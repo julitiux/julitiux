@@ -443,4 +443,10 @@ Por ejemplo:
     - Un sistema de transacciones bancarias puede requerir integridad y confiabilidad
     - Una aplicacion en tiempo real puede necesitar baja latencia y alto rendimiento
 
+## Entrevistar a los stakeholders
+* Los stakeholders (clientes, usuarios finales, equipo de desarrollo, equipo de operaciones) tienen diferentes expectativas
+* Realiza entrevistas para identificar sus prioridades en terminos de
+    - Mantenibilidad: ¿Que tan facil sera modificar el sistema en el futuro?
+    - Protabilidad: ¿Necesita el sistema ser desplegado en diferentes plataformas?
+    - Usabilidad: ¿El sistema debe ser intuitivo para los usuarios?
 

@@ -456,4 +456,8 @@ Por ejemplo:
     - Disponibilidad: El sistema debe estar operativo el 99.9% del tiempo
     - Seguridad: El sistema debe cumplir con las normativas X y Y
 
+## Definir patrones arquitectonicos
+* Con los atributos de calidad identificados puedes seleccionar patrones arquitectonicos que ayuden a cumplir con estos requisitos. Por ejemplo:
+    - Para escalabilidad, podrias usar una arquitectura basada en microservicios
+    - Para seguridad, podrias aplicar principios de arquitectura hexagonal, donde los mecanismos de seguridad estan desacoplados del nucleo de la logica de negocio
 

@@ -528,3 +528,9 @@ Por ejemplo:
 * _Origen:_ Introducido por Michael Nygard en su libre "Documenting Architecture Decisions" (2011)
 * _Proposito:_ Documentar y comunicar de manera clara la decisiones arquitectonicas clave
 
+## ¿Por que usar ADRs?
+* _Claridad y Transparencia:_ Facilita la comunicacion entre los miembros del equipo sobre por que se tomo una decision especifica
+* _Historial de decisiones:_ Fomenta discusiones informadas basadas en contexto
+* _Evolucion:_ Ayuda a comprender si las decisiones deben ser reevaluadas o modificadas a medidad que cambian los requisitos
+
+

@@ -517,3 +517,8 @@ Por ejemplo:
     - Se identifican las areas de mayor riesgo para los atributos de calidad mas criticos
 * Mejoras propuestas:
     - Se sugiere modificaciones para mitigar los riesgos y mejorar los Tradeoffs entra atributos de calidad
+
+## Conclusiones
+* ATAM es un metodo robusto para garantizar que las arquitecturas de software cumplan los requisitos de calidad, balanceando compromisos clave
+* Ayuda a alinear la arquitectura con las necesidades del negocio y las expectativas de los usuarios
+* Facilita la toma de decisiones informadas sobr cambios y mejoras arquitectonicas

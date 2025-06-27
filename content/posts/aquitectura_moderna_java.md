@@ -466,5 +466,9 @@ Por ejemplo:
 * Por ejemplo, mejorar la seguridad puede afectar la usabilidad o el rendimiento
 * Es importante equilibrar estos compromisos con los stakeholders, priorizando los mas criticos para el exito del sistema
 
+## Herramientas utiles
+* El uso de Herramientas de trabajo como ISO/IEC 25010 (calidad del software) puede ser de gran ayuda, ya que proporciona una lista detallada de atributos de calidad a considerar
+* Tambien, metodologias como ATAM (Architectura Tradeoff Analysis Method) ayudan a analizar y priorizar estos atributos
+* Identificar los atributos de calidad de un sistema es fundamental para tomar decisiones arquitectonicas que se alineen con las necesidades del negocio y las expectativas de los usuarios
 
 

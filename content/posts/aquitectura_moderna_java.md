@@ -450,3 +450,10 @@ Por ejemplo:
     - Protabilidad: ¿Necesita el sistema ser desplegado en diferentes plataformas?
     - Usabilidad: ¿El sistema debe ser intuitivo para los usuarios?
 
+## Definir metricas claras
+* Cada atributo de calidad debe tener una metrica cuantificable. Por ejemplo:
+    - Rendimiento: El sistema debe procesar X solicitudes por segundo
+    - Disponibilidad: El sistema debe estar operativo el 99.9% del tiempo
+    - Seguridad: El sistema debe cumplir con las normativas X y Y
+
+

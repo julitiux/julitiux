@@ -533,4 +533,11 @@ Por ejemplo:
 * _Historial de decisiones:_ Fomenta discusiones informadas basadas en contexto
 * _Evolucion:_ Ayuda a comprender si las decisiones deben ser reevaluadas o modificadas a medidad que cambian los requisitos
 
-
+## Estructura de un ADR
+* _Titulo:_ Describe la decision
+* _Contexto:_ Explica las circunstancias que llevaron a la necesidad de tomar una decision
+* _Decision:_ Resumen claro y conciso de la eleccion realizada
+* _Consecuencias:_ Efectos a corto o largo plazo, tanto positivos como negativos
+* _Estado:_ Si la decision esta aprobada, propuesta, o si ha sido rechazada
+* _Fecha:_ Cuando se tomo la decision
+* _REferencia:_ Documentos o fuentes revelantes que influyeron de la decision

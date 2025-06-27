@@ -461,3 +461,10 @@ Por ejemplo:
     - Para escalabilidad, podrias usar una arquitectura basada en microservicios
     - Para seguridad, podrias aplicar principios de arquitectura hexagonal, donde los mecanismos de seguridad estan desacoplados del nucleo de la logica de negocio
 
+## Equilibrar compromisos Trade-offs
+* A menudo, los atributos de calidad entran en conflicto entre si
+* Por ejemplo, mejorar la seguridad puede afectar la usabilidad o el rendimiento
+* Es importante equilibrar estos compromisos con los stakeholders, priorizando los mas criticos para el exito del sistema
+
+
+

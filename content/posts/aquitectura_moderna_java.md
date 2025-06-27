@@ -486,3 +486,17 @@ Por ejemplo:
     - Alinear las decisiones arquitectonicas con los objetivos del negocio
     - Crear una documentacion clara para todas las partes interesadas
 
+## Pasos del proceso ATAM
+* Introduccion al metodo:
+    - Se reune a todas las partes interesadas y se explican los objetivos y el proceso
+* Presentacion de la arquitectura
+    - El equipo de arquitectura describe la arquitectura propuesta
+* Identificacion de los atributos de calidad
+    - Se priorizan los atributos de calidad que son mas revelantes para el sistema
+* Escenarios de calidad
+    - Se desarrollan escenarios concretos que ejemplifiquen como se comportara el sistema bajo ciertas condiciones
+* Analisis de Tradeoffs
+    - Se identifican los compromisos entre diferentes atributos de calidad
+* Evaluacion de riesgos
+    - Se documentan los riesgos y oportunidades de mejora
+

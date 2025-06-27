@@ -471,4 +471,8 @@ Por ejemplo:
 * Tambien, metodologias como ATAM (Architectura Tradeoff Analysis Method) ayudan a analizar y priorizar estos atributos
 * Identificar los atributos de calidad de un sistema es fundamental para tomar decisiones arquitectonicas que se alineen con las necesidades del negocio y las expectativas de los usuarios
 
-
+## ¿Que es ATAM? Architecture Tradeoff Analysis Method
+* _Definicion:_
+    - El ATAM es un proceso estructurado para evaluar las decisiones de arquitectura de software, basado en atributos de calidad, como rendimiento, escalabilidad, seguridad, entre otros
+* Proposito
+    - Identificar los compromisos (Tradeoffs) entre estos atributos, revelando riesgos potenciales y oportunidades de mejora

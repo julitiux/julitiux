@@ -562,3 +562,10 @@ Por ejemplo:
 * _Estado:_ Aprobado
 * _Fecha:_ 01 de Octubre de 2024
 
+## Conclusiones
+* Los ADRs son una herramienta poderosa para documentar decisiones arquitectonicas
+* Aseguran que el equipo este alineado y que las decisiones tengan un registro claro y consultable
+* Ayudan a gestionar la complejidad a medida que el proyecto crece y evoluciona
+* Implementarlos como parte de tu flujo de trabajo mejora la transparencia y el entendimiento en el equipo
+
+

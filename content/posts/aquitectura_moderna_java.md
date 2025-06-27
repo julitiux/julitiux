@@ -568,4 +568,8 @@ Por ejemplo:
 * Ayudan a gestionar la complejidad a medida que el proyecto crece y evoluciona
 * Implementarlos como parte de tu flujo de trabajo mejora la transparencia y el entendimiento en el equipo
 
-
+## Herramientas para ADR
+* Simple editor o procesador de texto
+* Wiki o Confluence
+* MARD (Markdown Architectual Decision Records)
+    - https://adr.github.oi/

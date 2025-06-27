@@ -431,3 +431,10 @@ Por ejemplo:
 * Equilibrar compromisos (trade-offs)
 * Herramientas utiles
 
+## Comprender los objetivos del negocio
+* Lo primero es alinear la arquitectura con los objetivos del negocio. Preguntate: ¿Cuales son las prioridades y necesidades principales del cliente o negocio? Algunos ejemplos comunes son:
+    - Escalabilidad: si se espera que el sistema crezca
+    - Disponibilidad: si el sistema debe estar accesible 24/7
+    - Seguridad: si se manejan datos sensibles
+
+

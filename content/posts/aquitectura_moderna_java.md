@@ -548,4 +548,9 @@ Por ejemplo:
 * Escalabilidad: Funciona bien en proyectos pequeños y grandes
 * Comunicacion efectiva: El equipo y las partes interesadas externas pueden estar al tanto del proceso de decision
 
+## Buenas practicas
+* _Se conciso:_ Un ADRS debe ser breve y al grano
+* _Manten consistencia:_ Utiliza una estrucutura estandar para todos los ADRs
+* _Actualiza regularmente:_ Revisa las decisiones conforme evoluciona el proyecto
+* _Colaboracion:_ Involucra a todo el equipo en la redaccion y revision de ADRs
 

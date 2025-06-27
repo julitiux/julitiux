@@ -522,3 +522,9 @@ Por ejemplo:
 * ATAM es un metodo robusto para garantizar que las arquitecturas de software cumplan los requisitos de calidad, balanceando compromisos clave
 * Ayuda a alinear la arquitectura con las necesidades del negocio y las expectativas de los usuarios
 * Facilita la toma de decisiones informadas sobr cambios y mejoras arquitectonicas
+
+## ¿Que son los ADRs?
+* _Definicion:_ Una Architecture Decision Record (ADR) es un documento que captura una decision arquitectonicamente importante, junto con su contexto y las razones detras de ella
+* _Origen:_ Introducido por Michael Nygard en su libre "Documenting Architecture Decisions" (2011)
+* _Proposito:_ Documentar y comunicar de manera clara la decisiones arquitectonicas clave
+

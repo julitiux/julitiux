@@ -500,3 +500,17 @@ Por ejemplo:
 * Evaluacion de riesgos
     - Se documentan los riesgos y oportunidades de mejora
 
+## Ejemplos de analisis de Tradeoffs
+* Rendimiento vs. Seguridad
+    - Mejorar la seguridad puede reducir el rendimiento, ya que agregar mas controles o cifrado en el sistema puede hacerlo mas lento
+* Escalabilidad vs. Disponibilidad
+    - Incremetar la escalabilidad puede aumentar la complejidad y, potencialmente, reducir la disponibilidad en ciertos momentos de alta carga
+
+## Ejemplo de escenario de calidad
+* Escenario de rendimiento
+    - "El sistema debe manejar 10,000 solicitudes por segundo sin que la latencia supere los 100ms durantes picos de trafico"
+* Escenario de seguridad
+    - "La plataforma debe cumplir con las normativas de seguridad ISO 27001 y detectar de intrusion en tiempo real"
+
+
+

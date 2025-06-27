@@ -554,3 +554,11 @@ Por ejemplo:
 * _Actualiza regularmente:_ Revisa las decisiones conforme evoluciona el proyecto
 * _Colaboracion:_ Involucra a todo el equipo en la redaccion y revision de ADRs
 
+## Ejemplo de un ADR
+* _Titulo:_ Eleccion del Framework de Microservicios
+* _Contexto:_ Evaluamos varios frameworks para la Implementación de microservicios en nuestro sistema basado en Java
+* _Decision:_ Se selecciono Spring Boot debido a la robustez y la experiencia del equipo con el framework
+* _Consecuencias:_ Se espera un mayor velocidad de desarrollo, pero con un mayor uso de recursos en comparacion con opciones mas ligeras
+* _Estado:_ Aprobado
+* _Fecha:_ 01 de Octubre de 2024
+

@@ -584,3 +584,7 @@ Por ejemplo:
 * Definir cuando usar ADR
 * Revisiones periodicas
 * Etiqueta tus ADRs con IDs
+
+## Uso de plantillas estandarizadas
+* Una forma de asegurar consistencias y facilidad de uso es emplear una plantilla estandar para todos los ADRs
+    - https://adr.github.io/#existing-adr-templates [https://adr.github.io/#existing-adr-templates]

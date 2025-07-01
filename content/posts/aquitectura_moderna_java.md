@@ -573,3 +573,14 @@ Por ejemplo:
 * Wiki o Confluence
 * MARD (Markdown Architectual Decision Records)
     - https://adr.github.oi/
+
+# Modulo 4
+
+## Proceso de ADR
+* Uso de plantillas estandarizadas
+* Almacenamiento junto al codigo
+* Automatizacion con herramientas
+* Incluir ADR en las revisiones de codigo
+* Definir cuando usar ADR
+* Revisiones periodicas
+* Etiqueta tus ADRs con IDs

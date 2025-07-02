@@ -669,3 +669,8 @@ Por ejemplo:
 ## Usar reglas con ArchUnit
 * Puedes definir reglas especificas en ArchUnit que validen si el codigo cumple con las restricciones establecidas en tus ADRs
 * ArchUnit te permite escribir pruebas automatizadas en Java que pueden comprobar que ciertos patrones o restricciones arquitectonicas se respeten en el codigo fuente
+
+## Linting personalizado
+* Puedes implementar linters personalizados que analicen el codigo en busca de patrones que incumplan tus ADRs
+* Herramientas como SonarQube pueden configurarse para verificar reglas arquitectonicas personalizadas y generar alertas cuando el codigo no respeta una decision definida en un ADR
+* Ejemplo: si una ADR define que todas las dependencias de acceso a datos deben ser interfaces, puedes escribir una regla en SonarQube que valide esto y genere un error si no se cumple

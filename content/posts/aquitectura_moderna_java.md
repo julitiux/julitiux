@@ -660,3 +660,8 @@ Por ejemplo:
 * Verificacion en pipelines CI/CD
 * Generar alertas o abrir issues automaticamente
 * Documentacion vinculatoria
+
+## Integrar ADRs con las revisiones de codigo
+* Una de las formas mas simples de verificar el cumplimiento de ADRs es integrarlas en las revisiones de codigo. Antes de aprobar un pull request, se puede agregar un paso en el que el equipo revise si las decisiones tomadas en los ADRs se respeten
+* Puedes incluir checks manuales en tus pull request o en los comentarios, recordando al revisor que valide el cumplimiento de las decisiones arquitectonicas
+* GitHub Actions, GitLab CI, o Azure Pipelines pueden generar un recordatorio o incluso detener el flujo de trabajo si no se cumple una ADR relevante

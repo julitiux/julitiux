@@ -679,3 +679,7 @@ Por ejemplo:
 * Puedes convertir tus ADRs en documentacion viva, donde las decisiones se convierten en pruebas o verificaiones automatizadas dentro de tu pipeline de CI/CD
 * Algunas herramientas como ADR Manager o scripts personalizados puede integrarse con tu pipeline para validar si una nueva modificacion del codigo contradice una ADR. Esto se hace estableciendo tests que deben cumplirse para cada ADR, y si alguna falla, el pipeline puede detenerse
 
+## Verificacion en pipelines CI/CD
+* Si estas usando CI/CD (Continuos Integration/Continuos Deployment), puedes configurar un paso dentro del pipeline que verifique el cumplimiento de ADRs mediante herramientas como ArchUnit, SonarQube o scripts personalizados que revisen las decisiones arquitectonicas
+
+

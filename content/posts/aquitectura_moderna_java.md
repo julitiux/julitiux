@@ -623,6 +623,12 @@ Por ejemplo:
 * Esto facilita la referencia y el seguimiento
 * Por ejemplo, si decides cambiar el sistema de autenticacion en un microservicio, podrias referencias ese ADR en otros documentos o incluso commits
 
+## Ejemplo de flujo de trabajo
+1. _Nuevo cambios arquitectonico:_ Al proponer un cambio importante en la arquitectura, crea un nuevo ADR explicando el contexto y las alternativas
+2. _Revision del equipo:_ Revisa la propuesta con el equipo para obtener comentarios, y luego aprueba el ADR
+3. _Implicacion:_ Tras probar la decision, implementa el cambio en el codigo y marca el ADR como "implementado"
+4. _Documentacion continua:_ A medida que evolucionen las decisiones, actualiza los ADR o crea nuevos si cambian las circunstancias
+
 
 
 

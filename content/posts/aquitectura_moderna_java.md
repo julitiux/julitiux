@@ -643,3 +643,11 @@ Por ejemplo:
     - ADR Sync
 * Custom Solutions
 
+| Herramientas | Tipo | Ventajas | Recomendado para |
+| ----- | ----- | ----- | ----- |
+| adr-tools | CLI | Sencillo, ligero, facil de integrar | Proectos peuqeños / medianos |
+| Markdown manual | Manual | Total control y flexibilidad | equipos peuqeños |
+| ADR Manager | GUI/Web | Visual, facil de usar | Equipos que prefieren GUI |
+| Helmsman ADR | CLi + Integracion | Avanzado, integra con CI/CD | Equipos destribuidos/avanzados |
+| Confluence/Notion | SaaS | Colaboracion en tiempo real | Equipos grandes |
+| GitHub Action ADR | GitHub Action | Automatizacion con CI/CD | Equipos que usan GitHub |

@@ -614,5 +614,9 @@ Por ejemplo:
     - Si puede generar deuda tecnica futura o requerira compromisos importantes
     - Si es una decision dificil de revertir
 
+## Revisiones periodicas
+* Haz que las ADR sean parte de las reuniones de revision tecnica
+* Cada cierto tiempo, puedes revisar las decisiones previas para ver si siguen siendo relevantes o necesitan ser modificadas
+
 
 

@@ -629,6 +629,8 @@ Por ejemplo:
 3. _Implicacion:_ Tras probar la decision, implementa el cambio en el codigo y marca el ADR como "implementado"
 4. _Documentacion continua:_ A medida que evolucionen las decisiones, actualiza los ADR o crea nuevos si cambian las circunstancias
 
+## Amazon y ADR
+* https://docs.aws.amazon.com/prescriptive-guidance/latest/architectural-decision-records/adr-process.html
 
 
 

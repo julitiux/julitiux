@@ -632,5 +632,14 @@ Por ejemplo:
 ## Amazon y ADR
 * https://docs.aws.amazon.com/prescriptive-guidance/latest/architectural-decision-records/adr-process.html
 
-
+ ## Herramientas para ADR
+* ADR-Tools
+* Markdown como formato manual
+* ADR Manager
+* Helmsman ADR
+* Alternativas Cloud-Hosted
+* ADR GitHub Action
+    - ADR TOC
+    - ADR Sync
+* Custom Solutions
 

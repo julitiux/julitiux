@@ -665,3 +665,7 @@ Por ejemplo:
 * Una de las formas mas simples de verificar el cumplimiento de ADRs es integrarlas en las revisiones de codigo. Antes de aprobar un pull request, se puede agregar un paso en el que el equipo revise si las decisiones tomadas en los ADRs se respeten
 * Puedes incluir checks manuales en tus pull request o en los comentarios, recordando al revisor que valide el cumplimiento de las decisiones arquitectonicas
 * GitHub Actions, GitLab CI, o Azure Pipelines pueden generar un recordatorio o incluso detener el flujo de trabajo si no se cumple una ADR relevante
+
+## Usar reglas con ArchUnit
+* Puedes definir reglas especificas en ArchUnit que validen si el codigo cumple con las restricciones establecidas en tus ADRs
+* ArchUnit te permite escribir pruebas automatizadas en Java que pueden comprobar que ciertos patrones o restricciones arquitectonicas se respeten en el codigo fuente

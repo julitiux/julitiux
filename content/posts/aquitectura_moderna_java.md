@@ -651,3 +651,12 @@ Por ejemplo:
 | Helmsman ADR | CLi + Integracion | Avanzado, integra con CI/CD | Equipos destribuidos/avanzados |
 | Confluence/Notion | SaaS | Colaboracion en tiempo real | Equipos grandes |
 | GitHub Action ADR | GitHub Action | Automatizacion con CI/CD | Equipos que usan GitHub |
+
+## ¿Como verificar las decisiones?
+* Integrar ADRs con las revisiones de codigo (Code Revews)
+* Usar reglas con ArchUnit
+* Linting personalizado
+* Documentacion viva
+* Verificacion en pipelines CI/CD
+* Generar alertas o abrir issues automaticamente
+* Documentacion vinculatoria

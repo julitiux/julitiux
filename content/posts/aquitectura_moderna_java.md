@@ -523,6 +523,8 @@ Por ejemplo:
 * Ayuda a alinear la arquitectura con las necesidades del negocio y las expectativas de los usuarios
 * Facilita la toma de decisiones informadas sobr cambios y mejoras arquitectonicas
 
+# Modulo 3
+
 ## ¿Que son los ADRs?
 * _Definicion:_ Una Architecture Decision Record (ADR) es un documento que captura una decision arquitectonicamente importante, junto con su contexto y las razones detras de ella
 * _Origen:_ Introducido por Michael Nygard en su libre "Documenting Architecture Decisions" (2011)
@@ -587,4 +589,11 @@ Por ejemplo:
 
 ## Uso de plantillas estandarizadas
 * Una forma de asegurar consistencias y facilidad de uso es emplear una plantilla estandar para todos los ADRs
-    - https://adr.github.io/#existing-adr-templates [https://adr.github.io/#existing-adr-templates]
+    - https://adr.github.io/#existing-adr-templates
+
+## Almacenamiento junto al codigo
+* Puedes almacenar los ADRs en el repositorio del codigo para que esten accesibles a todo el equipo y queden versionados junto con el proyecto
+* Crear una carpeta llamada _docs/adr/_ o simplemente _adr/_ en la raiz del proyecto es una buena practica
+* De esta forma, cada decision estara vinculada al contexto del codigo que refleja esa arquitectura
+
+

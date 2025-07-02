@@ -605,5 +605,14 @@ Por ejemplo:
 * Cada vez que se haga una revision de codigo, ´puedes revisar o actualizar los ADR relacionados si la decision impacta en la arquitectura
 * De esta forma, mantienes la informacion al dia
 
+## Definir cuando usar ADR
+* Es importante definir con tu equipo cuando es necesario crear un ADR
+* No todas las decisiones tecnicas lo requieren
+* Aqui hay algunos criterios para saber cuando es recomendable crear uno
+    - Si la decision afecta signifcativamente la arquitectura del sistema
+    - Si implica un cambio en las tecnologias o patrones de diseño
+    - Si puede generar deuda tecnica futura o requerira compromisos importantes
+    - Si es una decision dificil de revertir
+
 
 

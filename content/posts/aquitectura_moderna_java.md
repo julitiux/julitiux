@@ -618,5 +618,11 @@ Por ejemplo:
 * Haz que las ADR sean parte de las reuniones de revision tecnica
 * Cada cierto tiempo, puedes revisar las decisiones previas para ver si siguen siendo relevantes o necesitan ser modificadas
 
+## Etiqueta tus ADRs con IDs
+* Es util numerar y dar un ID unico a cada ADR
+* Esto facilita la referencia y el seguimiento
+* Por ejemplo, si decides cambiar el sistema de autenticacion en un microservicio, podrias referencias ese ADR en otros documentos o incluso commits
+
+
 
 

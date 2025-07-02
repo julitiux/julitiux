@@ -596,4 +596,10 @@ Por ejemplo:
 * Crear una carpeta llamada _docs/adr/_ o simplemente _adr/_ en la raiz del proyecto es una buena practica
 * De esta forma, cada decision estara vinculada al contexto del codigo que refleja esa arquitectura
 
+## Automatizacion con herramientas
+* Existen herramientas que ayudan a crear y gestionar ADRs en proyectos de software
+* Una opcion es usar el plugin _adr-tools_ que automatiza la creacion de nuevos registros y garantiza que sigan un formato consistente
+* Si prefieres algo sencillo, con Git puedes versionar manualmente tus ADRs
+
+
 

@@ -601,5 +601,9 @@ Por ejemplo:
 * Una opcion es usar el plugin _adr-tools_ que automatiza la creacion de nuevos registros y garantiza que sigan un formato consistente
 * Si prefieres algo sencillo, con Git puedes versionar manualmente tus ADRs
 
+## Incluir ADR en las revisiones de codigo
+* Cada vez que se haga una revision de codigo, ´puedes revisar o actualizar los ADR relacionados si la decision impacta en la arquitectura
+* De esta forma, mantienes la informacion al dia
+
 
 

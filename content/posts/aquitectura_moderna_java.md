@@ -686,3 +686,6 @@ Por ejemplo:
 * Puedes configurar herramientas como GitHub Actions o GitLab CI para que, si aun ADR no se cumple, generen automaticamente una alerta o abran un issue en el repositorio
 * Ejemplo: Si una prueba de arquitectura (definida con ArchUnit) falla, puedes configurar tu pipeline para abrir un issue con el detalle de que ADR se ha incumplido
 
+## Documentacion vinculatoria
+* Su usa ADR Manager, puedes generar vinculos entre las decisiones y las implementaciones. Estas decisiones pueden integrarse en el ciclo de vida de desarrollo mediante alertas o anotaciones en el codigo fuente
+* Los ADR se pueden ligar a partes especificas del codigo (por ejemplo, componentes o clases) que deben respetar las decisiones

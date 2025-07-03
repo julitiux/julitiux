@@ -706,3 +706,11 @@ Por ejemplo:
 * Con ArchUnit, puedes verificar que tu arquitectura sigue ciertas reglas o principios definidos por ti mismo
 * Esto es particularmente util en aplicaciones que siguen patrones arquitectonicos como Clean Architecture, DDD o microservicios, donde se busca mantener el codigo bien organizado y modulas
 
+## Caracteristicas de ArchUnit
+* _Verificacion de dependencias:_ Puedes asegurarte de que ciertos paquetes o clases no dependan de otros
+* _Cumplimiento de capas:_ Verificar que las diferentes capas de tu aplicacion (por ejemplo, presentacion, dominio, infraestructura) esten correctamente separadas
+* _Validacion de convenciones:_ Asegurarte de que las clases sigan ciertos patrones de nombres o ubicaciones
+* _Comprobacion de herencia y anotaciones:_ Verificar que ciertas clases hereden de otras o tengan ciertas anotaciones
+* Integracion con Frameworks de testing como JUnit
+
+

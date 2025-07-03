@@ -701,3 +701,8 @@ Por ejemplo:
     - https://github.com/joelparkerhenderson/architecture-decision-record
     - https://domainanalysis.io/p/document-your-product-and-software?r=26tm44
 
+## ArchUnit
+* ArchUnit es una biblioteca para Java que te permite realizar pruebas automaticas sobre la arquitectura de un sistema
+* Con ArchUnit, puedes verificar que tu arquitectura sigue ciertas reglas o principios definidos por ti mismo
+* Esto es particularmente util en aplicaciones que siguen patrones arquitectonicos como Clean Architecture, DDD o microservicios, donde se busca mantener el codigo bien organizado y modulas
+

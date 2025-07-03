@@ -682,4 +682,7 @@ Por ejemplo:
 ## Verificacion en pipelines CI/CD
 * Si estas usando CI/CD (Continuos Integration/Continuos Deployment), puedes configurar un paso dentro del pipeline que verifique el cumplimiento de ADRs mediante herramientas como ArchUnit, SonarQube o scripts personalizados que revisen las decisiones arquitectonicas
 
+## Generar alertas o abrir issues automaticamente
+* Puedes configurar herramientas como GitHub Actions o GitLab CI para que, si aun ADR no se cumple, generen automaticamente una alerta o abran un issue en el repositorio
+* Ejemplo: Si una prueba de arquitectura (definida con ArchUnit) falla, puedes configurar tu pipeline para abrir un issue con el detalle de que ADR se ha incumplido
 

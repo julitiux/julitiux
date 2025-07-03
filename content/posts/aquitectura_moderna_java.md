@@ -689,3 +689,15 @@ Por ejemplo:
 ## Documentacion vinculatoria
 * Su usa ADR Manager, puedes generar vinculos entre las decisiones y las implementaciones. Estas decisiones pueden integrarse en el ciclo de vida de desarrollo mediante alertas o anotaciones en el codigo fuente
 * Los ADR se pueden ligar a partes especificas del codigo (por ejemplo, componentes o clases) que deben respetar las decisiones
+
+## Resumen
+* Automatizar el cumplimiento de ADRs es una forma poderosa de garantizar que las decisiones arquitectonicas sigan vigentes en todo el ciclo de vida de desarrollo
+* Algunas opciones incluyen:
+    - Usar ArchUnit para crear reglas espcificas en proyectos java
+    - Integrar verificaciones en CI/CD  con herramientas como SonarQube, GitHub Actions, o scripts personalizados
+    - Automatizar alertas o issues si una ADR no se cumple
+* Revisar
+    - https://www.ozimmer.ch/practices/2020/09/24/ASRTestECSADecisions.html
+    - https://github.com/joelparkerhenderson/architecture-decision-record
+    - https://domainanalysis.io/p/document-your-product-and-software?r=26tm44
+

@@ -726,4 +726,13 @@ ArchRuleDefinition.classes()
 ```
 * En Clean Architecture, podrias usar ArchUnit para asegurar que las capas internas (como dominio o casos de uso) no dependan de las capas externas (como infraestructura o la interfaz de usuario)
 
+## Revision codigo
+* Tener JDK minimo 17, deseable 23
+* Maven instalado, minimo 3.8, deseable 3.9.9
+* https://www.archunit.org/userguide/html/000_Index.html
+* Descomprimir el archivo _archunit.zip_ en cuaquier parte de tu filesystem
 
+## Ejercicio
+* Ejecutar los test con: _mvn verify_
+* Hacer fallar la prueba, agregando una clase en el paquete controller y que rompa la regla definida
+* Corregir la prueba

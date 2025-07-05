@@ -724,3 +724,6 @@ ArchRuleDefinition.classes()
         .resideInAnyPackage("..domain..","..application..")
     .check(importedClasses);
 ```
+* En Clean Architecture, podrias usar ArchUnit para asegurar que las capas internas (como dominio o casos de uso) no dependan de las capas externas (como infraestructura o la interfaz de usuario)
+
+

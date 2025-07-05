@@ -713,4 +713,14 @@ Por ejemplo:
 * _Comprobacion de herencia y anotaciones:_ Verificar que ciertas clases hereden de otras o tengan ciertas anotaciones
 * Integracion con Frameworks de testing como JUnit
 
+## Ejemplo
+```java
+JavaClasses importedClasses = new ClassFileImporter(). importPackages("com.miapp")
 
+ArchRuleDefinition.classes()
+    .that()
+        .resideInAPackage("...domain...")
+    .should().onlyHaveDependentClassesThat()
+        .resideInAnyPackage("..domain..","..application..")
+    .check(importedClasses);
+```

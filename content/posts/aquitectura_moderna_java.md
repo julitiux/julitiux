@@ -772,4 +772,11 @@ ArchRuleDefinition.classes()
 * Los modelos de diferentes contextos interactuan de manera controlada
 * Tecnicas como _Context Mapping_ y _Anti-Corruption Layer_ ayudan a gestionar esta interaccion
 
+## El enfoque estrategico
+* DDD no solo se centra en la estructura tecnica del software, sino tambien en las decisiones estrategicas
+* Impulsa un diseño que responde a las necesidades del negocio, optmizando el impacto del software en los resultados empresariales
+
+## Introduccion
+* DDD ayuda a gestionar la complejidad de los dominos empresariales avanzados
+* Al establecer un lenguaje comun y dividir el sistema en contextos delimitados premiten crear software mas alineado con los objeticos del negocio
 

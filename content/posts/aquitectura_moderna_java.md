@@ -801,6 +801,11 @@ ArchRuleDefinition.classes()
 * Proporciona una vision clara de como interactuan los contextos dentro del sistema
 * Identifica las zonas de integracion y las posibles fuentes de conflicto entre modelos
 
-
+## Context Map para un sistema de e-commerce
+* _Customer Management Context:_ Gestiona la informacion de los clientes, perfiles, historial de compras etc
+* _Order Management Context:_ Responsable de gestionar los pedidos, su creacion, procesamiento y estado
+* _Inventory Management Context:_ Controla el stock de productos, la disponibilidad en el almacen y las actualizaciones del inventario
+* _Billing Context:_ Encargado de la facturacion, pagos y cobros
+* _Shipping Context:_ Gestiona el envio de los productos, seguimiento de paquetes, y comunicacion con proveedores logisticos
 
 

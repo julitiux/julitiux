@@ -757,4 +757,7 @@ ArchRuleDefinition.classes()
 * _Desarrollador:_ transforma ese conocimiento en codigo
 * Colaboracion  continua entre ambos roles es esencial para el exito del modelo
 
-
+## Contexto Delimitado (Bounded Context)
+* Define los limites donde un modelo es aplicable
+* Cada Bounded Context tiene su propio modelo de domino
+* Evita conflictos entre modelos al establecer fronteras clara entre ellos

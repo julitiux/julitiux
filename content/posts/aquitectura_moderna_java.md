@@ -780,3 +780,7 @@ ArchRuleDefinition.classes()
 * DDD ayuda a gestionar la complejidad de los dominos empresariales avanzados
 * Al establecer un lenguaje comun y dividir el sistema en contextos delimitados premiten crear software mas alineado con los objeticos del negocio
 
+## ¿Que es un Contexto Delimitado?
+* Un _Bounded Context_ establece los limites donde un modelo de domino es valido
+* Cada contexto tiene su propio lenguaje ubicuo y logica de negocio
+* Ayuda a gestionar la complejidad del sistema, dividiendolo en partes manejables

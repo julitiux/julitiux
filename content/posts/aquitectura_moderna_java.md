@@ -767,3 +767,9 @@ ArchRuleDefinition.classes()
 * _Separacion de preocupaciones:_ Cada equipo puede trabajar en su contexto sin interferir con otros
 * _Claridad y mantenimiento:_ Los limites permiten gestionar mejor codigo y los cambios
 
+## Colaboracion entres contextos
+* Integracion  entre los contextos delimitados
+* Los modelos de diferentes contextos interactuan de manera controlada
+* Tecnicas como _Context Mapping_ y _Anti-Corruption Layer_ ayudan a gestionar esta interaccion
+
+

@@ -790,10 +790,17 @@ ArchRuleDefinition.classes()
 * Clara separacion de responsabilidades entre contextos
 * Facilita la colaboracion entre equipos, ya que cada uno trabaja en su propio contexto
 
-## RElacion entre contextos
+## Relacion entre contextos
 * Los Bounded Contexts pueden interacturar, pero deden hacerlo de manera controlada
 * Tecnicas clave para gestionar la interaccion entre contextos
     - _Context Maps:_ Mapa visual de las relaciones netre los diferentes contextos
     - _Anti-Corruption Layer:_ Barrera para proteger un contexto de la complejidad de otro
+
+## Mapa de Contextos (Context Map)
+* _Context Map:_ una herramienta que muestra las relaciones y dependencias entre distintos contextos
+* Proporciona una vision clara de como interactuan los contextos dentro del sistema
+* Identifica las zonas de integracion y las posibles fuentes de conflicto entre modelos
+
+
 
 

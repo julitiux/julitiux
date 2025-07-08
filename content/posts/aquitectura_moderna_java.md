@@ -752,5 +752,9 @@ ArchRuleDefinition.classes()
     - El modelo del software refleja fielmente las realidades del negocio
     - Enfocado en capturar las reglas y comportamientos esenciales del domino
 
+## Colaboracion con los expertos del Dominio
+* _Experto del dominio:_ persona con amplio conocimiento sobre el problema que se esta resolviendo
+* _Desarrollador:_ transforma ese conocimiento en codigo
+* Colaboracion  continua entre ambos roles es esencial para el exito del modelo
 
 

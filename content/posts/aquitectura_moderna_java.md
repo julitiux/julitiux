@@ -808,4 +808,13 @@ ArchRuleDefinition.classes()
 * _Billing Context:_ Encargado de la facturacion, pagos y cobros
 * _Shipping Context:_ Gestiona el envio de los productos, seguimiento de paquetes, y comunicacion con proveedores logisticos
 
-
+## Relaciones y patrones del Context Map
+* Customer Management -> Order Management: Relacion de _Customer/Supplier_
+    - Customer Management proporciona datos del cliente cuando se crea un pedido en Order Management
+    - Esta relacion indica que Order Management depende de Customer Management para obtener informacion actualizada del cliente
+* Order Management -> Inventory Management: Relacion de _Conformist_
+    - Order Management depende directamente del modelo de inventario de Inventory Management ara verificar si los productos estan en stock, aqui Oder Management acepta los terminos y modelo de datos que le dicta Inventory Management sin intentar cambiar o interferir en ese modelo
+* Oder Management -> Billing: Relacion de _Anti-Corruption Layer (ACL)_
+    - Oder Management necesita interactuar con Billing, pero los modelos internos de cada uno son diferentes. Para evitar que Order Management se "contamine" con el modelo de Billing, se crea una capa de anti-corruption que traduce y adapta los datos entre los dos contextos
+* Order Management -> Shipping: Relacion de _Publish Language_
+    - Order Management publica eventos de dominio cuando un pedido esta listo para ser enviado. Shipping escucha estos eventos para proceder con el proceso de envio. Ambos contextos utilizan un lenguaje de eventos compartido (por ejemplo, un "pedido listo para enviar") para facilitar esta comunicación

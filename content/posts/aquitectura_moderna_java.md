@@ -761,3 +761,9 @@ ArchRuleDefinition.classes()
 * Define los limites donde un modelo es aplicable
 * Cada Bounded Context tiene su propio modelo de domino
 * Evita conflictos entre modelos al establecer fronteras clara entre ellos
+
+## Beneficios de los Contextos Delimitados
+* _Escalabilidad:_ Los sistemas pueden dividirse en partes manejables y autonomas
+* _Separacion de preocupaciones:_ Cada equipo puede trabajar en su contexto sin interferir con otros
+* _Claridad y mantenimiento:_ Los limites permiten gestionar mejor codigo y los cambios
+

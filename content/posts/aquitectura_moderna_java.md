@@ -736,3 +736,21 @@ ArchRuleDefinition.classes()
 * Ejecutar los test con: _mvn verify_
 * Hacer fallar la prueba, agregando una clase en el paquete controller y que rompa la regla definida
 * Corregir la prueba
+
+# Modulo 5
+
+## ¿Que es el Domain-Driven-Design?
+* Domain-Driven Design (DDD) es una metodologia para desarrollar Software centrada en modelar y resolver problemas complejos del dominio del negocio
+* Pone enfasis en la colaboracion entre expertos del domino y desarrolladores
+* Enfoque clave: Crear un modelo de negocio basado en las necesaidades del negocio
+
+## Principios clave del DDD
+* Lenguaje Ubicuo (Ubiquitous Language):
+    - Un lenguaje compartido entre expertos del negocio y desarrolladores
+    - Mejora la comunicacion y elimina malentendidos entre el equipo tecnico y no tecnico
+* Modelar segun el domino:
+    - El modelo del software refleja fielmente las realidades del negocio
+    - Enfocado en capturar las reglas y comportamientos esenciales del domino
+
+
+

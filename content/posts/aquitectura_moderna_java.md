@@ -784,3 +784,16 @@ ArchRuleDefinition.classes()
 * Un _Bounded Context_ establece los limites donde un modelo de domino es valido
 * Cada contexto tiene su propio lenguaje ubicuo y logica de negocio
 * Ayuda a gestionar la complejidad del sistema, dividiendolo en partes manejables
+
+## ¿Por que son importantes los limites?
+* Los limites evitan que los modelos se mezclen y generen confusion
+* Clara separacion de responsabilidades entre contextos
+* Facilita la colaboracion entre equipos, ya que cada uno trabaja en su propio contexto
+
+## RElacion entre contextos
+* Los Bounded Contexts pueden interacturar, pero deden hacerlo de manera controlada
+* Tecnicas clave para gestionar la interaccion entre contextos
+    - _Context Maps:_ Mapa visual de las relaciones netre los diferentes contextos
+    - _Anti-Corruption Layer:_ Barrera para proteger un contexto de la complejidad de otro
+
+

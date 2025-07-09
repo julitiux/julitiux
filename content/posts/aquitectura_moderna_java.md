@@ -818,3 +818,17 @@ ArchRuleDefinition.classes()
     - Oder Management necesita interactuar con Billing, pero los modelos internos de cada uno son diferentes. Para evitar que Order Management se "contamine" con el modelo de Billing, se crea una capa de anti-corruption que traduce y adapta los datos entre los dos contextos
 * Order Management -> Shipping: Relacion de _Publish Language_
     - Order Management publica eventos de dominio cuando un pedido esta listo para ser enviado. Shipping escucha estos eventos para proceder con el proceso de envio. Ambos contextos utilizan un lenguaje de eventos compartido (por ejemplo, un "pedido listo para enviar") para facilitar esta comunicación
+
+## Tipos de relaciones
+* Las relaciones entre los diferentes Bounded Context son fundamentales para definir como interactúan y colaboran las distintas partes del sistema
+* Eric Evans y Vaughn Vernon describen varios tipos de relaciones entre contextos, y cada una define una forma particular de acoplamiento o interaccion
+    - Customer/Supplier
+    - Conformist
+    - Anti-Corruption Layer (ACL)
+    - Published Language
+    - Shared Kernel
+    - Separate Ways
+    - Partnership
+    - Open Host Service
+
+

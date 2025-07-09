@@ -831,4 +831,9 @@ ArchRuleDefinition.classes()
     - Partnership
     - Open Host Service
 
+## Customer/Supplier
+* Esta relacion indica que un contexto (el Supplier) proporciona datos o servicios que otro contexto (el Consumer) necesita para funcionar. En este caso, el Customer depende de los datos o servicios del Supplier, y el Supplier define las reglas o el contrato que debe seguir el Consumer
+* Ejemplo: En un sistema de e-commerce, el Orden Management necesita informacion del Customer Management para crear un pedido. Customer Management actua como el Supplier, y el Order Management es el Customer
+* Implicaciones: El Customer depende del Supplier para recibir datos y debe adaptarse al modelo y las politicas del Supplier. Sin embargo, los cambios en el Supplier pueden afectar al Consumer, por lo que debe haber una colaboracion entre equipos
+
 

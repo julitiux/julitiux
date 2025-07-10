@@ -850,3 +850,10 @@ ArchRuleDefinition.classes()
 * En una relacion Published Language, los contextos acuerdan utilizar un lenguaje compartido o estandar para intercambiar datos o eventos. Este lenguaje puede tomar la forma de mensajes de eventos o APIs bien definidas, lo que permite la comunicacion sin tener que conocer los detalles internos del otro contexto
 * Ejemplo: En un sistema de e-commerce, el Orden Management podria publicar un evento llamado "Order Shipped" que Shipping escucha para comenzar el proceso de envio. Ambos contextos se ponen de acuerdo en el formato de ese evento
 * Implicaciones: Este tipo de relacion reduce el acoplamiento entro los contextos, ya que dependen solo del lenguaje acordado (eventos o mensajes) y no de los detalles internos de cada uno
+
+## Shared Kernel
+* En esta relacion, dos contextos comparten una pequeña parte del modelo o codigo, generalmente en forma de librerias o modulos comunes. El Shared Kernel contiene componentes que ambos contextos necesitan y deben mantener en conjunto, lo que requiere una fuerte colaboracion entre equipos para garantizar que estos componentes compartidos sean consistenes
+* Ejemplo: Un sistema de pagos y un sistema de pedidos podria compartir un modulo que contiene logica de calculo de impuestos, que es necesaria para ambos. Esta logica compartida seria parte del Shared Kernel
+* Implicaciones: Los equipos deben colaborar estrechamente para mantener el Shared Kernel, lo que puede generar dependencias y complejidad adicional si no se gestiona bien
+
+

@@ -845,3 +845,8 @@ ArchRuleDefinition.classes()
 * Cuando dos contextos necesitan interactuar, pero tienen modelos muy diferentes, se puede utilizar una Anti-Corruption Layer. Esta capa actua como un intermediario que traduce y adapta las estructuras y comportamientos de un contexto al otro, evitando que uno "contamine" al otro
 * Ejemplo: El Order Management podria necesitar interactuar con un sistema de facturacion (Billing), pero sus modelos de datos son diferentes. Para evitar que el modelo de Billing afecte el diseño del Order Management, se implementa una ACL que traduce las interacciones entre ambos
 * Implicaciones: Esta capa agrega complejidad, pero permite mantener ambos contextos independientes y proteger sus modelos internos, evitando acoplamiento indeseados
+
+## Published Language
+* En una relacion Published Language, los contextos acuerdan utilizar un lenguaje compartido o estandar para intercambiar datos o eventos. Este lenguaje puede tomar la forma de mensajes de eventos o APIs bien definidas, lo que permite la comunicacion sin tener que conocer los detalles internos del otro contexto
+* Ejemplo: En un sistema de e-commerce, el Orden Management podria publicar un evento llamado "Order Shipped" que Shipping escucha para comenzar el proceso de envio. Ambos contextos se ponen de acuerdo en el formato de ese evento
+* Implicaciones: Este tipo de relacion reduce el acoplamiento entro los contextos, ya que dependen solo del lenguaje acordado (eventos o mensajes) y no de los detalles internos de cada uno

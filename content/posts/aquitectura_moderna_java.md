@@ -900,4 +900,7 @@ ArchRuleDefinition.classes()
 * Ejemplo:
     - Si en el negocio se habla de "pedido", la entidad en el codigo debe llamarse "Pedido" en lugar de usar terminos genericos como "Transaction" o "Order"
 
-
+## Colaboracion con los expertos del dominio
+* El lenguaje se desarrolla y refina a traves de conversaciones continuas con los expertos del dominio
+* Las discusiones sobre el dominio deben ser traducidas directamente en el modeli y codigo
+* Crea un ciclo de retroalimentacion entre el desarrollo y el entendimiento del dominio

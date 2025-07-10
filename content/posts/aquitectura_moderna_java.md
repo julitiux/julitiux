@@ -836,4 +836,8 @@ ArchRuleDefinition.classes()
 * Ejemplo: En un sistema de e-commerce, el Orden Management necesita informacion del Customer Management para crear un pedido. Customer Management actua como el Supplier, y el Order Management es el Customer
 * Implicaciones: El Customer depende del Supplier para recibir datos y debe adaptarse al modelo y las politicas del Supplier. Sin embargo, los cambios en el Supplier pueden afectar al Consumer, por lo que debe haber una colaboracion entre equipos
 
+## Conformist
+* En una relacion Conformist, un contexto depende de otro y acepta el modelo y reglas del tro contexto sin intentar imponer cambios o influir en su comportamiento. El contexto que se conforma debe adaptarse al modelo del contexto dominante
+* Ejemplo: El Order Management podria depender del Inventory Management para verificar la disponibilidad de productos. El Order Management acepta y usa el modelo de Inventory Management tal cual, sin intentar modificarlo
+* Implicaciones: El Conformist no tiene control sobre los cambios del otro contexto. Esto puede ser solucion rapida, pero tambien significa un fuerte acoplamiento y menos flexibilidad
 

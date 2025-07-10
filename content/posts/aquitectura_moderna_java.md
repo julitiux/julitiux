@@ -866,3 +866,9 @@ ArchRuleDefinition.classes()
 * Ejemplo: El Order Management y el Shipping pueden trabajar como socios igualitarios, ya que ambos necesitan coordinarse muy de cerca para garantizar que los pedidos se procesen y envien correctamente
 * Implicaciones: Los equipos necesitan una colaboracion constantem lo que puede resultar en una mayor coordinacion y mayor riesgo de acoplamiento, pero tambien una integracion mas fluida
 
+## Open Host Service (OHS)
+* Su proposito es exponer un servicio claro y accesible para que otros contextos puedan interactuar con un determinado contexto de manera controlada y predecible
+* Este patron permite que un contexto ofrezca su funcionalidad a otros contextos de forma publica, mediante una API o servicio, sin necesidad de que los detalles internos de su modelos de dominio sean expuestos
+* Ejemplo: Inventory Management expone un servicio que permite consultar el stock de productos, quizas con una API REST o mensajes en un sistema de eventos. Order Management y Shipping consumen este servicio para verificar si un producto esta disponible antes de procesar el pedido o proceder con el envio
+
+

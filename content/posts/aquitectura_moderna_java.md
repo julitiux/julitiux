@@ -871,4 +871,14 @@ ArchRuleDefinition.classes()
 * Este patron permite que un contexto ofrezca su funcionalidad a otros contextos de forma publica, mediante una API o servicio, sin necesidad de que los detalles internos de su modelos de dominio sean expuestos
 * Ejemplo: Inventory Management expone un servicio que permite consultar el stock de productos, quizas con una API REST o mensajes en un sistema de eventos. Order Management y Shipping consumen este servicio para verificar si un producto esta disponible antes de procesar el pedido o proceder con el envio
 
+## Modularidad y Contextos
+* Al dividir el sistema en contextos delimitados, se fomenta la modularidad
+* Cada modulo puede evolucionar de forma independiente, facilitando:
+    - Mantenibilidad
+    - Escalabilidad
+    - Independencia entre equipos de desarrollo
+* Los Bounded Context son esenciales para gestionar la complejidad de un sistema de dominio
+* Definen limites claros que mejoran la colaboracion, el diseño modular y la independencia entre los equipos
+* Tecnicas como Context Maps y Anti-Corruption Layer ayudan a mantener la coherencia y claridad en la integracion entre contextos
+
 

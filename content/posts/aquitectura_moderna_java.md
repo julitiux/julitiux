@@ -891,4 +891,13 @@ ArchRuleDefinition.classes()
 * Refuerza la colaboracion continua entre desarrolladores y expertos del dominio
 * Mejora la calidad del codigo ya que los terminos utilizados en el codigo reflejan con precision el model del negocio
 
+## Lenguaje Ubicuo en el codigo
+* El lenguaje ubicuo debe estar presente en todos los artefactos del software, incluyendo:
+    - Clases
+    - Metodos
+    - Nombres de variable
+    - Documentación
+* Ejemplo:
+    - Si en el negocio se habla de "pedido", la entidad en el codigo debe llamarse "Pedido" en lugar de usar terminos genericos como "Transaction" o "Order"
+
 

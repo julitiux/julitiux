@@ -856,4 +856,10 @@ ArchRuleDefinition.classes()
 * Ejemplo: Un sistema de pagos y un sistema de pedidos podria compartir un modulo que contiene logica de calculo de impuestos, que es necesaria para ambos. Esta logica compartida seria parte del Shared Kernel
 * Implicaciones: Los equipos deben colaborar estrechamente para mantener el Shared Kernel, lo que puede generar dependencias y complejidad adicional si no se gestiona bien
 
+## Separate Ways
+* Es una relacion de Separate Ways, los contextos no necesitan interactuar entre si, y cada uno es independientes. A veces, es mas eficiente que ciertos modulos sigan su propio camino y no interfieran de otros
+* Ejemplo: Un sistema de gestion de inventario y un sistema de marketing puede no necesitar comunicarse directamente, ya que gestionan funciones completamente diferentes
+* Implicaciones: Los contextos son completamente autonomos, lo que permite mayor flexibilidad y menos acoplamiento. Sin embargo, esto es util si realmente no hay necesidad de interaccion entre ellos
+
+
 

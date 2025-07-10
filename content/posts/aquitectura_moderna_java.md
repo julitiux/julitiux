@@ -881,4 +881,7 @@ ArchRuleDefinition.classes()
 * Definen limites claros que mejoran la colaboracion, el diseño modular y la independencia entre los equipos
 * Tecnicas como Context Maps y Anti-Corruption Layer ayudan a mantener la coherencia y claridad en la integracion entre contextos
 
-
+## ¿Que es el Lenguaje Ubicuo?
+* Es un lenguaje compartido entre expertos del dominio y desarrolladores
+* Evoluciona a medida que se profundiza en la compresion del modelo de dominio
+* Sirve como base para todo el desarrollo del software y la comunicacion dentro del equipo

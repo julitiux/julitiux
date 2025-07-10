@@ -861,5 +861,8 @@ ArchRuleDefinition.classes()
 * Ejemplo: Un sistema de gestion de inventario y un sistema de marketing puede no necesitar comunicarse directamente, ya que gestionan funciones completamente diferentes
 * Implicaciones: Los contextos son completamente autonomos, lo que permite mayor flexibilidad y menos acoplamiento. Sin embargo, esto es util si realmente no hay necesidad de interaccion entre ellos
 
-
+## Partnership
+* Es una relacion de Partnership, dos contextos trabajan muy estrechamente y de manera igualitaria para lograr un objetivo comun. Ambos contextos dependen del otro y los cambios en uno pueden afectar al otro. A diferencia de Customer/Supplier, aqui no hay contexto dominante
+* Ejemplo: El Order Management y el Shipping pueden trabajar como socios igualitarios, ya que ambos necesitan coordinarse muy de cerca para garantizar que los pedidos se procesen y envien correctamente
+* Implicaciones: Los equipos necesitan una colaboracion constantem lo que puede resultar en una mayor coordinacion y mayor riesgo de acoplamiento, pero tambien una integracion mas fluida
 

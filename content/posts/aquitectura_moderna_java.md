@@ -885,3 +885,10 @@ ArchRuleDefinition.classes()
 * Es un lenguaje compartido entre expertos del dominio y desarrolladores
 * Evoluciona a medida que se profundiza en la compresion del modelo de dominio
 * Sirve como base para todo el desarrollo del software y la comunicacion dentro del equipo
+
+## Importancia del Lenguaje Ubicuo
+* Evita malentendidos entre el equipo tecnico y los expertos del negocio
+* Refuerza la colaboracion continua entre desarrolladores y expertos del dominio
+* Mejora la calidad del codigo ya que los terminos utilizados en el codigo reflejan con precision el model del negocio
+
+

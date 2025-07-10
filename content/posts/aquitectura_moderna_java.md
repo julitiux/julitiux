@@ -841,3 +841,7 @@ ArchRuleDefinition.classes()
 * Ejemplo: El Order Management podria depender del Inventory Management para verificar la disponibilidad de productos. El Order Management acepta y usa el modelo de Inventory Management tal cual, sin intentar modificarlo
 * Implicaciones: El Conformist no tiene control sobre los cambios del otro contexto. Esto puede ser solucion rapida, pero tambien significa un fuerte acoplamiento y menos flexibilidad
 
+## Anti-Corruption Layer (ACL)
+* Cuando dos contextos necesitan interactuar, pero tienen modelos muy diferentes, se puede utilizar una Anti-Corruption Layer. Esta capa actua como un intermediario que traduce y adapta las estructuras y comportamientos de un contexto al otro, evitando que uno "contamine" al otro
+* Ejemplo: El Order Management podria necesitar interactuar con un sistema de facturacion (Billing), pero sus modelos de datos son diferentes. Para evitar que el modelo de Billing afecte el diseño del Order Management, se implementa una ACL que traduce las interacciones entre ambos
+* Implicaciones: Esta capa agrega complejidad, pero permite mantener ambos contextos independientes y proteger sus modelos internos, evitando acoplamiento indeseados

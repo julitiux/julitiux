@@ -904,3 +904,8 @@ ArchRuleDefinition.classes()
 * El lenguaje se desarrolla y refina a traves de conversaciones continuas con los expertos del dominio
 * Las discusiones sobre el dominio deben ser traducidas directamente en el modeli y codigo
 * Crea un ciclo de retroalimentacion entre el desarrollo y el entendimiento del dominio
+
+## Desarrollo Incremental del Lenguaje
+* El lenguaje ubicuo no es estatico, evoluciona conforme cambia la compresion del dominio
+* Las iteraciones en el desarrollo y la retroalimentacion del negocio permitan refinar tanto el lenguaje como el modelo
+* Un lenguaje bien definido puede ayudar a detectar inconsistencias en el modelo

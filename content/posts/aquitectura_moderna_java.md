@@ -917,3 +917,10 @@ ArchRuleDefinition.classes()
     - Registrar continuamente terminos, reglas y relaciones del dominio conforme surgen
 * Pruebas colaborativas:
     - Utilizar pruebas unitarias y test de aceptacion para reflejar el lengiaje y comportamiento esperado
+
+## Ventajas del Lenguaje Ubicuo
+* Cohesion del equipo: Todos los miembros del equipo, incluidos los no tecnicos, hablan del mismo idioma
+* Codigo legible: El codigo es mas facil de entender y mantener, ya que utiliza terminos precisos del negocio
+*Menos errores: Minimiza los malentendidos y descrepancias en la Implementación del modelo del negocio.
+
+

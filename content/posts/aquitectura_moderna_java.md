@@ -947,7 +947,10 @@ ArchRuleDefinition.classes()
 * Ejemplo:
     - Un agregado Pedido puede incluir entidades como Cliente y Linea de Pedido, asegurando que caulquier cambio en el pedido sea consistente en su conjunto
 
-
+ ## Raiz de Agregado
+* La raiz de agregado es la entidad principal que controla el acceso a los demas objetos dentro del agregado
+* Solo se puede acceder a la entidades internas a traves de la raiz
+* La raiz asegura la coherencia de los datos y las reglas de negocio
 
 
 

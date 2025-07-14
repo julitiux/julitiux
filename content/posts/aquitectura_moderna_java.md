@@ -909,3 +909,11 @@ ArchRuleDefinition.classes()
 * El lenguaje ubicuo no es estatico, evoluciona conforme cambia la compresion del dominio
 * Las iteraciones en el desarrollo y la retroalimentacion del negocio permitan refinar tanto el lenguaje como el modelo
 * Un lenguaje bien definido puede ayudar a detectar inconsistencias en el modelo
+
+## Tecnicas para desarrollar el lenguaje Ubicuo
+* Workshops de descrubrimiento:
+    - Sesiones colaborativas con expertos del domino para identificar y definir terminos clave
+* Documentacion activa:
+    - Registrar continuamente terminos, reglas y relaciones del dominio conforme surgen
+* Pruebas colaborativas:
+    - Utilizar pruebas unitarias y test de aceptacion para reflejar el lengiaje y comportamiento esperado

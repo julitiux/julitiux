@@ -934,6 +934,12 @@ ArchRuleDefinition.classes()
 * Objetos de Valor: No tiene identidad propia, se definen por sus atributos y son inmutables
 * Ejemplo: Direccion, Dinero, Fecha
 
+## ¿Que es un Agregado?
+* Un agregado es un conjunto de entidades y objetos de valor relacionados que se comportan como una unidad de consistencia
+* Garantiza la integridad de los datos al definir los limites dentro de los cuales las operaciones deben ser consistentes
+* Cada agregado tiene una raiz de agregado que actua como punto de entrada para todas las interacciones externas
+
+
 
 
 

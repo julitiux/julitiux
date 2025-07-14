@@ -928,6 +928,12 @@ ArchRuleDefinition.classes()
 * Refleja las reglas de negocio, los comportamientos y las relaciones entre los objetos del domino
 * Se contruye a traves de una colaboracion constante entre desarrolladores y expertos del dominio
 
+## Entidades y Valores
+* Entidades: Objetos que tienen una identidad unica dentro del sistem y persisten a lo largo del tiempo
+* Ejemplo: Cliente, Pedido, Factura
+* Objetos de Valor: No tiene identidad propia, se definen por sus atributos y son inmutables
+* Ejemplo: Direccion, Dinero, Fecha
+
 
 
 

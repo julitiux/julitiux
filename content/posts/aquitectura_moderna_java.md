@@ -921,6 +921,13 @@ ArchRuleDefinition.classes()
 ## Ventajas del Lenguaje Ubicuo
 * Cohesion del equipo: Todos los miembros del equipo, incluidos los no tecnicos, hablan del mismo idioma
 * Codigo legible: El codigo es mas facil de entender y mantener, ya que utiliza terminos precisos del negocio
-*Menos errores: Minimiza los malentendidos y descrepancias en la Implementación del modelo del negocio.
+* Menos errores: Minimiza los malentendidos y descrepancias en la Implementación del modelo del negocio.
+
+## ¿Que es un modelo de dominio?
+* Un modelo de dominio es una representacion conceptural del area de negocio que esta siendo implementada en el software
+* Refleja las reglas de negocio, los comportamientos y las relaciones entre los objetos del domino
+* Se contruye a traves de una colaboracion constante entre desarrolladores y expertos del dominio
+
+
 
 

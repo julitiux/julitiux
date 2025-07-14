@@ -939,6 +939,15 @@ ArchRuleDefinition.classes()
 * Garantiza la integridad de los datos al definir los limites dentro de los cuales las operaciones deben ser consistentes
 * Cada agregado tiene una raiz de agregado que actua como punto de entrada para todas las interacciones externas
 
+## Diseño de Agregados
+* Un agregado debe:
+    - Mantenerse lo mas pequeño posible
+    - Evitar la dependencia entre agregados
+    - Estar diseñado para que las operaciones puedan ser transaccionales dentro de sus limites
+* Ejemplo:
+    - Un agregado Pedido puede incluir entidades como Cliente y Linea de Pedido, asegurando que caulquier cambio en el pedido sea consistente en su conjunto
+
+
 
 
 

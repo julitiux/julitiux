@@ -984,4 +984,11 @@ ArchRuleDefinition.classes()
 * Actua como una coleccion en memoria de agregados, aunque en realidad interactua con la base de datos u otro sistema de persistencia
 * Proporciona acceso a los agregados sin exponer los detaller de como estan almacenados
 
+## Rol del Repositorio
+* Los repositorios permiten:
+    - Agregar nuevos agregados
+    - Recuperar agregados existentes por su identidad
+    - Eliminar Agregados
+    - Abstener la complejidad del sistema de persistencia subyacente (base de datosm APIs, etc)
+
 

@@ -1002,4 +1002,9 @@ ArchRuleDefinition.classes()
     - _findById(AggregateId id):_ recupera un agregado por su identidad
     - _delete(Aggregate aggregate):_ elimina un agregado
 
-
+## Relacion con la Persistencia
+* El repositorio abstrae la interaccion con la capa de persistencia, evitando que el codigo de dominio conozca detaller de como y donde se alamcenan los agregados
+* Puede estar respaldado por:
+    - Bases de datos relacionales (ORM como Hibernate)
+    - Base de datos NoSQL
+    - Sistemas de almacenamiento distribuido

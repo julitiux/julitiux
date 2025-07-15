@@ -1016,3 +1016,13 @@ ArchRuleDefinition.classes()
 * DAO (Data Access Object)
     - Operaciones mas granulares, enfocadas en entidades individuales o datos sin estructura
     - Mas tecnico, centrado en la persistencia de datos
+
+## Implementación del Repositorio
+* Al diseñar un repositorio, se debe:
+    - Asegurar que sea especifico del dominio (trabajar con agregadosm no con entidades aisladas)
+    - Encapsular las relgas de negocio que deben aplicarse al guardar y recuperar datos
+    - Mantenerlo independiente de la infraestructura especifica
+* Ejemplo
+    - Si usas JPA o Hibernate, el repositorio interactua con el EntityManager, pero ese detalle no debe estar expuesto al domino
+
+

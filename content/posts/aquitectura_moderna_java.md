@@ -1008,3 +1008,11 @@ ArchRuleDefinition.classes()
     - Bases de datos relacionales (ORM como Hibernate)
     - Base de datos NoSQL
     - Sistemas de almacenamiento distribuido
+
+## Patron Repositorio vs. DAO
+* Repositorio:
+    - Operaciones enfocadas en agregados completos
+    - Mas cercano al dominio del negocio
+* DAO (Data Access Object)
+    - Operaciones mas granulares, enfocadas en entidades individuales o datos sin estructura
+    - Mas tecnico, centrado en la persistencia de datos

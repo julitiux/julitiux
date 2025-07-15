@@ -991,4 +991,9 @@ ArchRuleDefinition.classes()
     - Eliminar Agregados
     - Abstener la complejidad del sistema de persistencia subyacente (base de datosm APIs, etc)
 
+## Interaccion con los Agregados
+* Los repositorios solo deben operar sobre agregados completos
+* Deben encapsular la logica de acceso a la base de datos y garantizar que los agregados recuperados sean consistentes
+* Mantienen la integridad de los datos entre las transaccion
+
 

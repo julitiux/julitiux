@@ -956,4 +956,13 @@ ArchRuleDefinition.classes()
 * Los agregados garantizan que las reglas de negocio dentro de sus limites se cumplan
 * La consistencia fuerte debe mantenerse dentro de los agregados, mientras que la consistencia eventual se puede permitir entre agregados, especialmente en sistemas distribuidos
 
+## Consejos para Diseñar Agregados
+* Manten los agregados pequeños:
+    - Limita el numero de entidades dentro de un agregado para reducir la complejidad y mejorar la escalabilidad
+* Revisa las transacciones:
+    - Un agregado debe permitir que las operaciones sean atomicas y consistentes dentro de sus limites
+* Distingue responsabilidades:
+    - Usa agregados para separar diferentes responsabilidades en el dominio, garantizando un modelo mas limpio y mantenible
+
+
 

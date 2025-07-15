@@ -973,3 +973,9 @@ ArchRuleDefinition.classes()
 
 ## Revisar Coodigo
 * agregados.zip
+
+## Agregados Conclusiones
+* Los agregados son esenciales para estructurar modelos de dominio complejos y asegurar la consistencia de los datos
+* El diseño correcto de los agregados permite crear sistemas escalables, modulares y alineados con las reglas del negocio
+* La raiz del agregado juega un papel en la proteccion de la integridad del domino
+

@@ -979,3 +979,9 @@ ArchRuleDefinition.classes()
 * El diseño correcto de los agregados permite crear sistemas escalables, modulares y alineados con las reglas del negocio
 * La raiz del agregado juega un papel en la proteccion de la integridad del domino
 
+## ¿Que es un Repositorio?
+* Un repositorio es una abstraccion que proporciona un mecanismo para almacenar y recuperar agregados
+* Actua como una coleccion en memoria de agregados, aunque en realidad interactua con la base de datos u otro sistema de persistencia
+* Proporciona acceso a los agregados sin exponer los detaller de como estan almacenados
+
+

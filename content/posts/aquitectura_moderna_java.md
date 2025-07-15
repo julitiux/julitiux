@@ -967,8 +967,9 @@ ArchRuleDefinition.classes()
 ## Ejemplo de Diseño de Agregado
 * Sistema de Comercio Electronico:
     - Agregado: Pedido
-    - Entidades internas: Clientem Linea de Pedido
+    - Entidades internas: Cliente Linea de Pedido
     - Objetos de valor: Direccion de Envio, Moneda
 * El agregado Pedido asegura que todas las operacion (agregar productos, modificar cliente, calcular precio) se realicen de manera coherente.
 
-
+## Revisar Coodigo
+* agregados.zip

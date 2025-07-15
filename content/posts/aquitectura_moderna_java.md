@@ -996,4 +996,10 @@ ArchRuleDefinition.classes()
 * Deben encapsular la logica de acceso a la base de datos y garantizar que los agregados recuperados sean consistentes
 * Mantienen la integridad de los datos entre las transaccion
 
+## Diseño de un Repositorio
+* Un repositorio suele implementar metodos como:
+    - _save(Aggregate aggregate):_ guarda un agregado
+    - _findById(AggregateId id):_ recupera un agregado por su identidad
+    - _delete(Aggregate aggregate):_ elimina un agregado
+
 

@@ -1025,4 +1025,14 @@ ArchRuleDefinition.classes()
 * Ejemplo
     - Si usas JPA o Hibernate, el repositorio interactua con el EntityManager, pero ese detalle no debe estar expuesto al domino
 
+## Repositorios y Consistencia
+* Los repositorios deben manejar la consistencia de los agregados, lo que incluye:
+    - Garantizar que los agregados sean recuperados en un estado consistente
+    - Aplicar las reglas de negocio pertinentes al persistir o eliminar agregado
+    - En sistemas distribuidos, puede ser necesario manejar la consistencia eventual
+
+
+
+
+
 

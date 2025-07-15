@@ -952,6 +952,8 @@ ArchRuleDefinition.classes()
 * Solo se puede acceder a la entidades internas a traves de la raiz
 * La raiz asegura la coherencia de los datos y las reglas de negocio
 
-
+## Regla de Consistencia
+* Los agregados garantizan que las reglas de negocio dentro de sus limites se cumplan
+* La consistencia fuerte debe mantenerse dentro de los agregados, mientras que la consistencia eventual se puede permitir entre agregados, especialmente en sistemas distribuidos
 
 

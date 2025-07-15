@@ -1031,6 +1031,11 @@ ArchRuleDefinition.classes()
     - Aplicar las reglas de negocio pertinentes al persistir o eliminar agregado
     - En sistemas distribuidos, puede ser necesario manejar la consistencia eventual
 
+## ¿Que son los Eventos de Dominio?
+* Los eventos de domino representan hechos que han ocurrido en el dominio del negocio
+* Son inmutables y describen cambios significativos en el estado del sistema
+* Ejemplo: "Pedido Creado", "Pago Aceptado", "Cliente Registrado"
+
 
 
 

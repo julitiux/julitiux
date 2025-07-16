@@ -1099,5 +1099,8 @@ ArchRuleDefinition.classes()
     - Agregados: Para garantizar que un agregado completo se construya correctamente, respetando todas las reglas de dominio
 * Las fabricas ayudan a proteger la consistencia y las reglas inmutables del modelo de dominio
 
-
+## Beneficios de Usar Fabricas
+* Encapsulacion: Las reglas y la complejidad de la creacion del objeto estan encapsuladas en la fabrica, no en el codigo cliente
+* Reduccion de errores: Evita la creacion incorrecta de objetos fuera de se un estado valido
+* Reutilizacion: Puedes reutilizar la logica de creacion en diferentes partes del sistema
 

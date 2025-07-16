@@ -1093,5 +1093,11 @@ ArchRuleDefinition.classes()
 * El proceso de construccion puede cambiar en el futuro y deseas encapsular ese cambio
 * Se debe garantizar que los objetos sean creados en un estado valido desde el inicio
 
+## Fabricas en el Contexto del DDD
+* En Domain-Driven Design, las fabricas son responsables en crear:
+    - Entidades: Cuando la creacion involucra logica compleja
+    - Agregados: Para garantizar que un agregado completo se construya correctamente, respetando todas las reglas de dominio
+* Las fabricas ayudan a proteger la consistencia y las reglas inmutables del modelo de dominio
+
 
 

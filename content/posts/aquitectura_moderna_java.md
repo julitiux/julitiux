@@ -1104,3 +1104,15 @@ ArchRuleDefinition.classes()
 * Reduccion de errores: Evita la creacion incorrecta de objetos fuera de se un estado valido
 * Reutilizacion: Puedes reutilizar la logica de creacion en diferentes partes del sistema
 
+## Ejemplo de una Fabrica para un Agregado
+```java
+public class PedidoFactory {
+    public Pedido crear(Cliente cliente, List<LineaPedido> lineas) {
+        // validaciones y logica de negocio
+        if(lineas.isEmpty()){
+            throw new IllegalArgumentException("El pedido debe tener al menos una liena");
+        }
+        return new Pedido(cliente, lineas);
+    }
+}
+```

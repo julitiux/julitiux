@@ -1067,4 +1067,9 @@ ArchRuleDefinition.classes()
     - Asincrono: Los eventos se envian a traves de un sistema de mensajeria y se procesan en un momento posterior
 * Infraestructura: Sistemas como RabbitMQ, Kafka o mensajeria interna pueden ser utilizados para manejar eventos asincronos
 
+## Consistencia y Eventualidad
+* Los eventos de dominio ayudan a manejar la consistencia eventual en sistemas distribuidos
+* Los sistemas que reaccionan a eventos pueden actualizarse de manera eventual, sin necesidad de una transaccion global
+* Ejemplo: Un sistema de inventario puede recibir un evento de PedidoCreado y ahustar sus cifras en un proceso separado
+
 

@@ -1082,4 +1082,9 @@ ArchRuleDefinition.classes()
 * Encapsula la logica necesaria para construir un agregado o una entidad, asegurando que se respeten las reglas de negocio
 * Facilita la creacion de objetos sin que el codigo cliente necesite conocer los detalles de su construccion
 
+## ¿Por que usar una Fabrica?
+* Simplificacion: Evita que los clientes del modelo de dominio tengan que preocuparse por la logica de creacion de objetos
+* Consistencia: Asegura que las reglas y restricciones de dominio se cumplan al crear objetos
+* Desacoplamiento: Separa la responsabilidad de crear objetos de otras partes del codigo promoviendo la cohesion
+
 

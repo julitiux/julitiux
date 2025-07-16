@@ -1141,5 +1141,11 @@ public class PedidoFactory {
     - La operacion afecta a multiples entidades o agregados
     - Quieres mantener el modelo de dominio limpio y cohesivo
 
+## Ejemplos de Servicios de Dominio
+* Calculo de Impuestos:
+    - La logica de calculo de impuestos puede involucrar multiples entidades (pedido, clientes, etc), pero no pertenece a una entidad especifica
+    - Encapsular este logica en un servicio mejora la cohesion
+* Transferencia de Dinero:
+    - La operacion de transferencia de dinero puede involucrar multiples cuentas (agregados) y necesita reglas de validacion y consistencia
 
 

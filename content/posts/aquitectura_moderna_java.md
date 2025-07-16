@@ -1036,8 +1036,7 @@ ArchRuleDefinition.classes()
 * Son inmutables y describen cambios significativos en el estado del sistema
 * Ejemplo: "Pedido Creado", "Pago Aceptado", "Cliente Registrado"
 
-
-
-
-
-
+## Beneficios de los Eventos de Dominio
+* _Desacoplamiento:_ Permiten que distintas partes del sistema reaccionen sin necesidad de estar fuertemente acopladas
+* _Rastreo del Estado:_ Los eventos del dominio proporcionan un historial detallado de los cambios del sistema
+* _Reactivo:_ Facilita un diseño orientado a eventos donde los cambios se propagan automaticamente

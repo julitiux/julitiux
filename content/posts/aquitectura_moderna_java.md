@@ -1077,4 +1077,9 @@ ArchRuleDefinition.classes()
 * Auditoria y Rastreo: Los eventos proporcionan un registro claro de lo que ha ocurridom util para auditorias
 * Resilencia: Al manejar los eventos de manera asincrona, los sistemas son menos propenso a fallos criticos debido a desacoplamiento
 
+## ¿Que es una Fabrica?
+* Una fabrica es un patron de diseño utilizado para la creacion de objetos complejos
+* Encapsula la logica necesaria para construir un agregado o una entidad, asegurando que se respeten las reglas de negocio
+* Facilita la creacion de objetos sin que el codigo cliente necesite conocer los detalles de su construccion
+
 

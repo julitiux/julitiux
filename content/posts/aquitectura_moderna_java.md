@@ -1124,3 +1124,9 @@ public class PedidoFactory {
 * Fabrica:
     - Util para la creacion de objetos o agregados
     - Ideal cuando hay logica de negocio o validaciones involucradas
+
+## ¿Que es un Servicio de Dominio?
+* Un Servicio de Dominio es un patron que encapsula logica de negocio que no pertenece a una entidad o un objeto de valor
+* Responde a preguntas del tipo "¿Donde coloco esta logica que no encaja naturalmente en ninguna entidad o valor?"
+* Representa operaciones que son parte del dominio que no tienen estado propio
+

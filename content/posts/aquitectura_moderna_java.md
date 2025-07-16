@@ -1116,3 +1116,11 @@ public class PedidoFactory {
     }
 }
 ```
+
+## Fabricas vs Constructores
+* Constructor:
+    - Adecuado para la creacion de objetos simples que no requieren validaciones complejas
+    - Se usa cuando la logica de creacion es trivial y no viola las reglas del dominio
+* Fabrica:
+    - Util para la creacion de objetos o agregados
+    - Ideal cuando hay logica de negocio o validaciones involucradas

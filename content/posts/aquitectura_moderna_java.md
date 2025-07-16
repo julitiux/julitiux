@@ -1040,3 +1040,16 @@ ArchRuleDefinition.classes()
 * _Desacoplamiento:_ Permiten que distintas partes del sistema reaccionen sin necesidad de estar fuertemente acopladas
 * _Rastreo del Estado:_ Los eventos del dominio proporcionan un historial detallado de los cambios del sistema
 * _Reactivo:_ Facilita un diseño orientado a eventos donde los cambios se propagan automaticamente
+
+## Eventos en el Modelo de Dominio
+* Los eventos son parte del lenguaje ubicuo y deben reflejar hechos del negocio, no detalles tecnicos
+* Se pueden utilizar para:
+    - Informar a otros agregados de cambios
+    - Sincronizar diferentes sistemas
+    - Disparar procesos asincronos, como notificaciones o integraciones
+
+## Estructura de un Evento de Dominio
+* Un evento de dominio tipicamente incluye:
+    - Nombre descriptiovo: Ejemplo, PedidoCreado
+    - Datos relevantes; Informacion sobre el hecho ocurrido, como el ID de pedido, fecha de creacion, monto total, etc.
+    - Momento del evento: Tiempo en que el evento ocurrio

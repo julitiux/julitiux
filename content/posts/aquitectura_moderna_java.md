@@ -1087,4 +1087,11 @@ ArchRuleDefinition.classes()
 * Consistencia: Asegura que las reglas y restricciones de dominio se cumplan al crear objetos
 * Desacoplamiento: Separa la responsabilidad de crear objetos de otras partes del codigo promoviendo la cohesion
 
+## ¿Cuando utilizar una Fabrica?
+* Utiliza una fabrica cuando:
+* La creacion del objeto es compleja y requiere de multiples pasos o validaciones
+* El proceso de construccion puede cambiar en el futuro y deseas encapsular ese cambio
+* Se debe garantizar que los objetos sean creados en un estado valido desde el inicio
+
+
 

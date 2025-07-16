@@ -1061,3 +1061,10 @@ ArchRuleDefinition.classes()
     - Puede ser publicado sincronicamente o asincronamente
 * Procesar el Evento: Otros componentes del sistema escuchan y reaccionan al evento (Enviar un email, actualizar inventario, etc)
 
+## Publicacion y Manejor de Eventos
+* Los eventos de dominio se pueden publicar de diferentes maneras:
+    - Sincrono: Los eventos se manejan en el mismo proceso y transaccion
+    - Asincrono: Los eventos se envian a traves de un sistema de mensajeria y se procesan en un momento posterior
+* Infraestructura: Sistemas como RabbitMQ, Kafka o mensajeria interna pueden ser utilizados para manejar eventos asincronos
+
+

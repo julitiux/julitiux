@@ -1130,3 +1130,9 @@ public class PedidoFactory {
 * Responde a preguntas del tipo "¿Donde coloco esta logica que no encaja naturalmente en ninguna entidad o valor?"
 * Representa operaciones que son parte del dominio que no tienen estado propio
 
+## Caracteristicas de un Servicio de Dominio
+* Sin estado: No guarda informacion persistente, solo ejecuta operaciones sobre otros objetos del dominio
+* Foco en el negocio: Representa acciones del dominio que involucran reglas de negocio
+* Logica compleja: Encapsula comportamientos que no pertenecen a una unica entidad o agragado
+
+

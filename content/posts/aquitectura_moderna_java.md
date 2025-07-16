@@ -1072,4 +1072,9 @@ ArchRuleDefinition.classes()
 * Los sistemas que reaccionan a eventos pueden actualizarse de manera eventual, sin necesidad de una transaccion global
 * Ejemplo: Un sistema de inventario puede recibir un evento de PedidoCreado y ahustar sus cifras en un proceso separado
 
+## Ventajas del Diseño Basado en Eventos
+* Escalabilidad; Los sistemas desacoplados y basados en eventos pueden escalar mas facilmente
+* Auditoria y Rastreo: Los eventos proporcionan un registro claro de lo que ha ocurridom util para auditorias
+* Resilencia: Al manejar los eventos de manera asincrona, los sistemas son menos propenso a fallos criticos debido a desacoplamiento
+
 

@@ -1053,3 +1053,11 @@ ArchRuleDefinition.classes()
     - Nombre descriptiovo: Ejemplo, PedidoCreado
     - Datos relevantes; Informacion sobre el hecho ocurrido, como el ID de pedido, fecha de creacion, monto total, etc.
     - Momento del evento: Tiempo en que el evento ocurrio
+
+## Implementación de Eventos de Dominio
+* Crear el Evento: Cuando ocurre una accion signifcativa, se genera el evento en el codigo
+    - Ejemplo: Al crear un nuevo pedido, se dispara un evento PedidoCreado
+* Publicar el Evento: El evento se publica y es procesado por los interesados en el
+    - Puede ser publicado sincronicamente o asincronamente
+* Procesar el Evento: Otros componentes del sistema escuchan y reaccionan al evento (Enviar un email, actualizar inventario, etc)
+

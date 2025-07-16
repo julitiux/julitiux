@@ -1135,4 +1135,11 @@ public class PedidoFactory {
 * Foco en el negocio: Representa acciones del dominio que involucran reglas de negocio
 * Logica compleja: Encapsula comportamientos que no pertenecen a una unica entidad o agragado
 
+## ¿Cuando usar un Servicio de Dominio?
+* Usar un servicio de dominio cuando:
+    - La logica no puede ser naturalmente asignada a una entidad o un objeto de valor
+    - La operacion afecta a multiples entidades o agregados
+    - Quieres mantener el modelo de dominio limpio y cohesivo
+
+
 

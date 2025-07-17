@@ -1245,7 +1245,12 @@ public class PaymentService {
 * Un modulo debe ser cohesivo, con responsabilidades claras y bien definidas
 
 ## ¿Por que usar Modulos?
-* Claridad y Organizacion: Ayudan a organizar grander modelos de dominio en partes manejables
-* Encapsulacion: Los modelos agrupan elementos relacionados y ocultan detaller innecesarios a otras partes del sistema
+* Claridad y Organizacion: Ayudan a organizar grandes modelos de dominio en partes manejables
+* Encapsulacion: Los modelos agrupan elementos relacionados y ocultan detalles innecesarios a otras partes del sistema
 * Mantenibilidad: Facilitan la evolucion del sistema, permitiendo que los modulos cambien de manera independiente
+
+## Diseño de Modulos
+* Cohesion: Todos los elementos dentro de un modulo deben estar estrechamente relacionados con el dominio que el modulo representa
+* Bajo Acoplamiento: Los modulos deben interactuar entre si a traves de interfaces bien definidas minimizando las dependencias
+* Lenguaje Ubicuo: Cada modulo debe seguir el lenguaje ubicuo del contexto delimitado al que pertenece
 

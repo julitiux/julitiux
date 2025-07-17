@@ -1271,3 +1271,10 @@ public class PaymentService {
 * Evitar Dependencias Ciclicas: Los modulos no deben depender unos de otros en un ciclo. Mantener las dependencias claras y dirigidas
 * Interfaces Claras: Define contratos claros entre los modulos para que interactuen sin necesidad de conocer detaller internos
 
+## Relacion entre Modulos y Contextos Delimitados
+* Los Bounded Contexts pueden contener varios modulos agrupando conceptos mas especificos dentro del contexto general del dominio
+* Cada modulo dentro de un contexto debe:
+    - Respetar los limites del contexto delimitado
+    - Seguir el lenguaje ubicuo definido por el contexto
+* El uso correcto de modulos dentro de contextos facilita la escala del sistema y reduce la complejidad global
+

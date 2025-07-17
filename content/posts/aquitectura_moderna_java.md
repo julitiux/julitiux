@@ -1258,3 +1258,11 @@ public class PaymentService {
 * Los modulos en DDD se utilizan para organizar las entidades, objetos de valor, agregados, repositorios y servicios de dominio en agrupaciones logicas
 * Permiten que los desarrolladores se enfoquen en partes especificas del dominio sin verse abrumados por la complejidad global del sistema
 
+## Modulos en un Sistema de e-commerce
+* Modulo Pedidos:
+    - Contiene entidades como Pedido, Linea de Pedido, y servicios relacionados con la gestion de pedidos
+* Modulo Inventario:
+    - Agrupa la logica relacionada con la gestion del inventario, como las entidades Producto, Almacen, y servicios del inventario
+* Modulo Pagos:
+    - Maneja todo relacionado con el procesamiento de pagos, como Pago, Metodo de Pago, y servicios de validacion de transacciones
+

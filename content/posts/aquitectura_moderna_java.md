@@ -1163,3 +1163,29 @@ public class PedidoFactory {
     - Delegar las reglas de negocio al dominio
     - Coordinar transacciones y flujos de trabajo
 
+## Ejemplo de un Application Service
+```java
+public class OrderApplicationService {
+    private final OrderRepository orderRepository;
+    private final PaymentService paymentService;
+
+    public OrderApplicationService (OrderRepository orderRepository, PaymentService paymentService) {
+        this.oderRepository = orderRepository;
+        this.paymentService = paymentService;
+    }
+
+    public void confirmOrder(UUID orderId) {
+        // Cargar el agregado (Order) desde el repositorio
+        Order order = orderRepository.findById(orderId);
+
+        // Validar y confirmar el pedido
+        order.confirmOrder();
+
+        // Procesar el pago usando un servicio externo
+        paymentService.processPayment(order);
+
+        // Guardar el agregado
+        orderRepository.save(order);
+    }
+}
+```

@@ -1197,3 +1197,15 @@ public class OrderApplicationService {
 * Responsabilidades:
     - Implementar logica de negocio que involucra varias entidades
     - Asegura que las operaciones que no pertenecen claramente a una entidad esten encapsuladas correctamente
+
+## Ejemplo de un Domain Service
+```java
+public static ShippingService {
+    public double calculateShippingCost(Order order, Address deliveryAddress) {
+        double baseCost = 5.0 // Costo base
+        double distanceFactor = deliveryAddress.distanceFromWarehouse();
+        // Calculo simplificado
+        return baseCost + distanceFactor * order.getTotalWeight();
+    }
+}
+```

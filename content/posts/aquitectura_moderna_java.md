@@ -1244,3 +1244,8 @@ public class PaymentService {
 * Se utiliza para organizar el modelo de dominio y mejorar la comprension, mantenibilidad y escalabilidad del sistema
 * Un modulo debe ser cohesivo, con responsabilidades claras y bien definidas
 
+## ¿Por que usar Modulos?
+* Claridad y Organizacion: Ayudan a organizar grander modelos de dominio en partes manejables
+* Encapsulacion: Los modelos agrupan elementos relacionados y ocultan detaller innecesarios a otras partes del sistema
+* Mantenibilidad: Facilitan la evolucion del sistema, permitiendo que los modulos cambien de manera independiente
+

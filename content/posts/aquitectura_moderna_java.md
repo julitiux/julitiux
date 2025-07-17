@@ -1232,6 +1232,9 @@ public class PaymentService {
         return Change.create(chargeParams);
     }
 }
-
 ```
 
+## Buenas Practicas para Servicios de Dominio
+* Mantenerlos sin estado; No deben almacenar informacion entre llamadasm asegurando que sea reutilizables y predecibles
+* Centrarse en una unica responsabilidad: Cada servicio debe tener una unica responsabilidad en el dominio, siguiendo el perincipio de responsabilidad unica (SRP)
+* Usar el lenguaje ubicuo: Nombre y metodos que reflejen claramente la logica del negocio en el lenguaje comun a los expertos del dominio

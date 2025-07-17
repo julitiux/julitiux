@@ -1278,3 +1278,9 @@ public class PaymentService {
     - Seguir el lenguaje ubicuo definido por el contexto
 * El uso correcto de modulos dentro de contextos facilita la escala del sistema y reduce la complejidad global
 
+## Modularidad y Escalabilidad
+* La modularidad permite
+    - Evolucion Independiente: Los modulos pueden evolucionar sin afectar a otras partes del sistema
+    - Pruebas Unitarias: Facilita las pruebas y validacion de cada parte de manera independiente
+    - Distribucion: En arquitecturas distribuidas, los modulos bien definidos pueden convertirse facilmente en microservicios
+

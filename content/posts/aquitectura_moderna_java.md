@@ -1218,5 +1218,20 @@ public static ShippingService {
     - Proporcionar servicios que no estan directamente relacionados con la logica de negocio
     - Acceso a base de datos, colas de mensajes, APIs externas, etc
 
+## Ejemplo de un Infrastructure Service
+```java
+public class PaymentService {
+    public void processPayment(Order order) {
+        // Logica para procesar el pago con uns sistema externo
+        System.out.println("Procesando pago para el pedido: " + order.getOrderId());
+        Map<String, Object> chargeParams = new HashMap<>();
+        chargeParams.put("amount", chargeRequest.getAmount());
+        chargeParams.put("currency", chargeRequest.getCurrency());
+        chargeParams.put("description", chargeRequest.getDescription());
+        chargeParams.put("source", chargeRequest.getStripeToken());
+        return Change.create(chargeParams);
+    }
+}
 
+```
 

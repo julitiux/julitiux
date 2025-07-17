@@ -1238,3 +1238,9 @@ public class PaymentService {
 * Mantenerlos sin estado; No deben almacenar informacion entre llamadasm asegurando que sea reutilizables y predecibles
 * Centrarse en una unica responsabilidad: Cada servicio debe tener una unica responsabilidad en el dominio, siguiendo el perincipio de responsabilidad unica (SRP)
 * Usar el lenguaje ubicuo: Nombre y metodos que reflejen claramente la logica del negocio en el lenguaje comun a los expertos del dominio
+
+## ¿Que es un Modulo en DDD?
+* Un modulo es una agrupacion logica de conceptos del dominio que estan relacionados entre si
+* Se utiliza para organizar el modelo de dominio y mejorar la comprension, mantenibilidad y escalabilidad del sistema
+* Un modulo debe ser cohesivo, con responsabilidades claras y bien definidas
+

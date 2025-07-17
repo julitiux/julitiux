@@ -1148,4 +1148,9 @@ public class PedidoFactory {
 * Transferencia de Dinero:
     - La operacion de transferencia de dinero puede involucrar multiples cuentas (agregados) y necesita reglas de validacion y consistencia
 
+## Tipode de Servicios en DDD
+* En DDD, generalmente encontramos tres tipos de servicios
+    - Application Services (Servicios de Aplicacion)
+    - Domain Services (Servicios de Dominio)
+    - Infraestructure Services (Servicios de Infraestructura)
 

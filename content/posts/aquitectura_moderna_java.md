@@ -1154,3 +1154,12 @@ public class PedidoFactory {
     - Domain Services (Servicios de Dominio)
     - Infraestructure Services (Servicios de Infraestructura)
 
+## Application Services (Servicios de Aplicacion)
+* Los Application Services son responsables de orquestar la logica de negocio, actuando como una capa entre la interfaz del usuario (o las APIs) y el dominio
+* No contienen logica de negocio; su principal tarea es coordinar las operaciones del dominio, a menudo interactuando con repositorios, entidades, y otros servicios de infraestructura
+* Responsabilidades:
+    - Orquestar los casos de uso de la aplicacion
+    - Interactuar con Respositorios y Domain Services
+    - Delegar las reglas de negocio al dominio
+    - Coordinar transacciones y flujos de trabajo
+

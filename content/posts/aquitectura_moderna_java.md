@@ -1189,3 +1189,11 @@ public class OrderApplicationService {
     }
 }
 ```
+
+## Domain Services (Servicios de Dominio)
+* Los Domain Services encapsulan logica de negocio que no pertenece naturalmente a una entidad o a un objeto de valor
+* Cuando una operacion involucra multiples entidades o conceptos que no pueden estar claramente asociados a una unica regla, se utiliza un servicio de dominio
+* Un Domain Service contiene reglas de negocio que no tienen un "hogar" natural en una entidad especifica
+* Responsabilidades:
+    - Implementar logica de negocio que involucra varias entidades
+    - Asegura que las operaciones que no pertenecen claramente a una entidad esten encapsuladas correctamente

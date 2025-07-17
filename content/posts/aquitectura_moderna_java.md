@@ -1209,3 +1209,14 @@ public static ShippingService {
     }
 }
 ```
+
+## Infraestructure Services (Servicios de Infraestructura)
+* Los Infrastructure Services se encargan de las operaciones relacionadas con la infraestructura, como la persistencia, la integracion con sistemas externos, y otras tareas que no pertenecen al dominio del negocio en si.
+* Estos servicios son usados tanto por los Application Services como por las entidades del dominio, pero su logica no forma parte del core del dominio
+* Responsabilidades:
+    - Manejar la interaccion con sistemas externos
+    - Proporcionar servicios que no estan directamente relacionados con la logica de negocio
+    - Acceso a base de datos, colas de mensajes, APIs externas, etc
+
+
+

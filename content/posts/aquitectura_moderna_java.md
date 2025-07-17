@@ -1266,3 +1266,8 @@ public class PaymentService {
 * Modulo Pagos:
     - Maneja todo relacionado con el procesamiento de pagos, como Pago, Metodo de Pago, y servicios de validacion de transacciones
 
+## Buenas practicas de Modularidad
+* Agrupar por Dominio de Negocio: Organiza los modulos segun los conceptos de negocio, no por aspecto tecnicos
+* Evitar Dependencias Ciclicas: Los modulos no deben depender unos de otros en un ciclo. Mantener las dependencias claras y dirigidas
+* Interfaces Claras: Define contratos claros entre los modulos para que interactuen sin necesidad de conocer detaller internos
+

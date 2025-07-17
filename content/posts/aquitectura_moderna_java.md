@@ -1254,3 +1254,7 @@ public class PaymentService {
 * Bajo Acoplamiento: Los modulos deben interactuar entre si a traves de interfaces bien definidas minimizando las dependencias
 * Lenguaje Ubicuo: Cada modulo debe seguir el lenguaje ubicuo del contexto delimitado al que pertenece
 
+## Modularidad en el Modelo del Dominio
+* Los modulos en DDD se utilizan para organizar las entidades, objetos de valor, agregados, repositorios y servicios de dominio en agrupaciones logicas
+* Permiten que los desarrolladores se enfoquen en partes especificas del dominio sin verse abrumados por la complejidad global del sistema
+

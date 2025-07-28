@@ -1292,3 +1292,12 @@ public class PaymentService {
 * Desafio en software empresarial de larga duracion: Evolución constante debido a cambios en los Requisitos
 * Importancia de la arquitectura y el diseño: Facilita la compresion del sistema y su modificacion
 * Brecha entre diseño arquitectonico y codigo: La Implementación dispersa de conceptos arquitectonicos puede llevar a un aumento de la complejidad y errores
+
+## Solucion Propuesta
+* _jMolecules:_ Un enfoque que permite a los desarrolladores expresar explicitamente patrones arquitectonicos en el codigo a traves de anotaciones e interfaces en Java
+* Beneficios:
+    - Comprensibilidad: El codigo refleja mejor los conceptos arquitectonicos
+    - Documentacion precisa: Generada automaticamente desde el codigo
+    - Verificacion de reglas: Asegura conformidad con los conceptos de diseño
+    - Reduccion de codigo boilerplate: Automatiza detalles tecnicos (p. ej., mapeo de persistencia)
+

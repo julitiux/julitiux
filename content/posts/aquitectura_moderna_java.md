@@ -1284,3 +1284,11 @@ public class PaymentService {
     - Pruebas Unitarias: Facilita las pruebas y validacion de cada parte de manera independiente
     - Distribucion: En arquitecturas distribuidas, los modulos bien definidos pueden convertirse facilmente en microservicios
 
+# Modulo 6
+
+# Modulo 7
+
+## Motivacion
+* Desafio en software empresarial de larga duracion: Evolución constante debido a cambios en los Requisitos
+* Importancia de la arquitectura y el diseño: Facilita la compresion del sistema y su modificacion
+* Brecha entre diseño arquitectonico y codigo: La Implementación dispersa de conceptos arquitectonicos puede llevar a un aumento de la complejidad y errores

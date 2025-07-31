@@ -1342,6 +1342,14 @@ class Order {
     - Basados en metadatos arquitectonicos presentes en el codigo
     - Correctos por definicion, ya que se derivan directamente del codigo
 
+## Reduccion de Biolerplate
+* Implementación tradicional:
+    - Anotaciones JPA y otras dependencias tecnicas
+* Con jMolecules:
+    - El codigo es mas limpio y directo manteniendo la semantica arquitectonica explicita
+
+
+
 
 
 

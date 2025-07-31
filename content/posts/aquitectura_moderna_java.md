@@ -1362,4 +1362,12 @@ class Order {
 * Permite escanear artefactos de software, definir reglas arquitectonicas y generar reportes sobre violaciones
 * Utiliza la base de datos de grafos Neo4j para modelar y consultar la estructura del software
 
+## Caracteristicas
+* Ecaneo de artefactos: Clases Java, XML, estructuras de base de datos
+* Uso de reglas personalizables en Cypher para validar dependencias y arquitecturas
+* Informes automaticos de violaciones arquitectonicas
+* Integracion con herramientas como Maven
+* Basado en Neo4j: Aprovecha el modelado grafico para consultas complejas
+
+
 

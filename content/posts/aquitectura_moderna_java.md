@@ -1369,5 +1369,12 @@ class Order {
 * Integracion con herramientas como Maven
 * Basado en Neo4j: Aprovecha el modelado grafico para consultas complejas
 
+## Reglas
+
+* Las reglas se expresan en el lenguaje Cypher de Neo4j, y permiten:
+    - Definir conceptos arquitectonicos (modeulos, capas, controladores, etc)
+    - Validar restricciones y dependencias entre clases y modulos
+    - Generar reportes automaticos en cada proceso de construccion
+
 
 

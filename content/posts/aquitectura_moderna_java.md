@@ -1353,7 +1353,11 @@ class Order {
 * Evitar la sobreingenieria: mantener el codigo simple y legible
 * Revisar regularmente la correspondencia entre el diseño del dominio y el codigo
 
-
+## jQAssistant
+* Your Software. Your Structures. Your Rules
+    - scan
+    - document
+    - validate
 
 
 

@@ -1376,5 +1376,11 @@ class Order {
     - Validar restricciones y dependencias entre clases y modulos
     - Generar reportes automaticos en cada proceso de construccion
 
+## Beneficios
+* Mantienen la integridad arquitectonica del software
+* Soporta refactorizacion hacia arquitecturas limpias o hexagonales
+* Ficilita la deteccion de violaciones arquitectonicas en etapas tempranas
+* Se integra facilmente con el flujo de desarrollo continuo
+
 
 

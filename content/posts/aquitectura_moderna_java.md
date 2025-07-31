@@ -1301,3 +1301,15 @@ public class PaymentService {
     - Verificacion de reglas: Asegura conformidad con los conceptos de diseño
     - Reduccion de codigo boilerplate: Automatiza detalles tecnicos (p. ej., mapeo de persistencia)
 
+## Conceptos Arquitectonicos
+* Bloques de construccion de DDD:
+    - Agregados
+    - Entidades
+    - Repositorios
+* Estilos arquitectonicos soportados:
+    - Arquitectura en capas
+    - Arquitectura onion
+    - CQRS (Common Query Responsability Segregation)
+    - Hexagonal
+* Anotaciones y tipos en jMolecules: Conectar codigo y arquitectura
+

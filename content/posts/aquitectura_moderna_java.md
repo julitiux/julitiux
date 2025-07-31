@@ -1318,4 +1318,21 @@ public class PaymentService {
 * Facilita la separacion clara de capas y responsabilidades
 * Ofrece componentes clave: Agregados, Entidades, Value Objects, Repositorios
 
+## Implementación de un Pedido (Order)
+* Desventaja tradicional: Codigo lleno de detalles tecnicos (JPA, JSON, etc)
+* Ventaja jMolecules: Elimina el codiog tecnico, dejando solo la logica de dominio
+
+```java
+@AggregateRoot
+class Order {
+    @Entity
+    class LineItem { ... }
+    @AggregateRoot
+    class Customer { ... }
+}
+```
+
+
+
+
 

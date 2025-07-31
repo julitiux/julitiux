@@ -1332,6 +1332,10 @@ class Order {
 }
 ```
 
+## Herramientas de Verificacion
+* ArchUnit y jQAssistant:
+    - Verifican que la implementacion respeten las reglas arquitectonicas del modelo
+    - Evitan errores en la proyeccion del diseño en el codigo
 
 
 

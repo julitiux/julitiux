@@ -1313,3 +1313,9 @@ public class PaymentService {
     - Hexagonal
 * Anotaciones y tipos en jMolecules: Conectar codigo y arquitectura
 
+## Arquitectura Limpia y jMolecules
+* jMolecules se alinea con Clean Architecture y DDD, entre otras...
+* Facilita la separacion clara de capas y responsabilidades
+* Ofrece componentes clave: Agregados, Entidades, Value Objects, Repositorios
+
+

@@ -1358,7 +1358,8 @@ class Order {
     - scan
     - document
     - validate
-
-
+* jQAssistant es una herramienta para el analisis y verificacion de arquitecturas de software
+* Permite escanear artefactos de software, definir reglas arquitectonicas y generar reportes sobre violaciones
+* Utiliza la base de datos de grafos Neo4j para modelar y consultar la estructura del software
 
 

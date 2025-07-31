@@ -1337,6 +1337,11 @@ class Order {
     - Verifican que la implementacion respeten las reglas arquitectonicas del modelo
     - Evitan errores en la proyeccion del diseño en el codigo
 
+## Documentación Automatica
+* Generacion de diagramas UML y Canvas del Modulo:
+    - Basados en metadatos arquitectonicos presentes en el codigo
+    - Correctos por definicion, ya que se derivan directamente del codigo
+
 
 
 

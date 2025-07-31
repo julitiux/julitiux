@@ -1348,6 +1348,11 @@ class Order {
 * Con jMolecules:
     - El codigo es mas limpio y directo manteniendo la semantica arquitectonica explicita
 
+## Objetivos
+* Separar claramente las capas de dominio, aplicacion e infraestructura
+* Evitar la sobreingenieria: mantener el codigo simple y legible
+* Revisar regularmente la correspondencia entre el diseño del dominio y el codigo
+
 
 
 

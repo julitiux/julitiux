@@ -1382,5 +1382,3 @@ class Order {
 * Ficilita la deteccion de violaciones arquitectonicas en etapas tempranas
 * Se integra facilmente con el flujo de desarrollo continuo
 
-
-

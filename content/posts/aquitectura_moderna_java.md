@@ -1414,4 +1414,9 @@ class Order {
     - Las dependencias siempre fluyen hacia el nucleo de la aplicacion
     - Los detalles de infraestructura, como bases de datos, interfaces de usuario o frameworks, estan en capas externas
 
+## Onion <> Hexagonal
+* Onion Architecture es muy similar en conpeto a la Arquitectura Hexagonal.
+* Aunque su enfoque visual y algunas particularidades en cuanto a terminos y capas pueden diferir
+* Mientras que la Hexagonal hablaa de "puertos y adaptadores", la Onion simplemente organiza las capas en circulos concetricos, con el dominio en el centro
+
 

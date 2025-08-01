@@ -1403,4 +1403,9 @@ class Order {
 * Arquitectura de Microservicios
 * Arquitectura Limpia
 
+## Arquitectura de Cebolla
+* La _Onion Architecture_ (Arquitectura de Cebolla) fue introducida por Jeffrey Palermo en 2008
+* Esta estrechamente relacionada con la Arquitectura Hexagonal y la Arquitectura Limpia
+* Su proposito es estructurar aplicaciones de forma que la logica de negocio este protegida de los detalles de infraestructura y de implementacion, creando una separacion clara entre capas
+
 

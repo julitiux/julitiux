@@ -1395,3 +1395,12 @@ class Order {
 * Arquitectura de Microservicios - Decada de 2010
 * Arquitectura Limpia (Clean Architecture) - 2010 en adelante
 
+## Estilos arquitecturales
+* Arquitectura Monolitica
+* Arquitectura Orientada a Eventos (Event-Driven Architecture)
+* Arquitectura Hexagonal (Ports and Adapters)
+* Arquitectura de Cebolla (Onion Architecture)
+* Arquitectura de Microservicios
+* Arquitectura Limpia
+
+

@@ -1382,3 +1382,16 @@ class Order {
 * Ficilita la deteccion de violaciones arquitectonicas en etapas tempranas
 * Se integra facilmente con el flujo de desarrollo continuo
 
+# Modulo 8
+
+## Estilos arquitecturales
+* Arquitectura en Capas (Layered Architecture) -  Decada de 1970
+* Arquitectura de Pizarra (Blackboard Architecture) - Decada de 1980
+* Arquitectura Monolitica - Decada de 1980 - 1990
+* Arquitectura Microkernel - Principios de 2000
+* Arquitectura Orientada a Eventos (Event-Driven Architecture) - 2000 en adelante
+* Arquitectura Hexagonal (Ports and Adapters) - Años 2005 - 2010
+* Arquitectura de Cebolla (Onion Architecture) por Jeffrey Palermo en 2008
+* Arquitectura de Microservicios - Decada de 2010
+* Arquitectura Limpia (Clean Architecture) - 2010 en adelante
+

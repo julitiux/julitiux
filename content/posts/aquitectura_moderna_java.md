@@ -1408,4 +1408,10 @@ class Order {
 * Esta estrechamente relacionada con la Arquitectura Hexagonal y la Arquitectura Limpia
 * Su proposito es estructurar aplicaciones de forma que la logica de negocio este protegida de los detalles de infraestructura y de implementacion, creando una separacion clara entre capas
 
+## Comparacion con otros estilos
+* Onion Architecture, Hexagonal Architecture y Clean Architecture comparten principios fundamentales:
+    - La logica de negocion (Domain) esta en el centro
+    - Las dependencias siempre fluyen hacia el nucleo de la aplicacion
+    - Los detalles de infraestructura, como bases de datos, interfaces de usuario o frameworks, estan en capas externas
+
 

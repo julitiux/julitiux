@@ -30,6 +30,9 @@ draft: false
 * Reduce la complejidad cognitiva del metodo * para que sea mas mantenible mi proyecto
 
 ## Agent
+* 'Fase 1' del ciclo de desarrollo con Copilot
+* Ideal para tareas complejas punta a punta
+* Trabajo sobre varios archivos y proyectos completos
 * Trabajo semi-autonomo
 * Interaccion indirecta con la Plataforma (prompt inicial)
 * Trabajo de flujos complejos e2e

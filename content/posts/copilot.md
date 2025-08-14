@@ -30,3 +30,8 @@ draft: false
 * Reduce la complejidad cognitiva del metodo * para que sea mas mantenible mi proyecto
 
 ## Agent
+* Trabajo semi-autonomo
+* Interaccion indirecta con la Plataforma (prompt inicial)
+* Trabajo de flujos complejos e2e
+* Disponible en IDE
+* Varios LLMs disponibles

@@ -38,3 +38,14 @@ draft: false
 * Trabajo de flujos complejos e2e
 * Disponible en IDE
 * Varios LLMs disponibles
+
+## Bases de Conocimiento
+* 'Fase 0' del ciclo de desarrollo con Copilot
+* Acelera la busqueda de informacion
+* Trabajo sobre repositorios completos
+* "Google" powered by Copilot
+* Explotacion de informacion  cargada en repositorios
+* Motor de busqueda para documentacion interna
+* Disponible en IDE y navegador
+* Varios LLMs disponibles
+

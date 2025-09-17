@@ -17,3 +17,6 @@ Una constante es un valor que no va a cambiar durante la ejecucion del programa.
 * Tiene que ser _public_
 * Tiene que ser _static_
 * La variable debe ser _final_
+
+## Enum
+Un Enum es una clase especial que nos va a permitir tener valores fijos y limitados que van a ser tratados como constantes.

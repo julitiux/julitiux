@@ -20,3 +20,6 @@ Una constante es un valor que no va a cambiar durante la ejecucion del programa.
 
 ## Enum
 Un Enum es una clase especial que nos va a permitir tener valores fijos y limitados que van a ser tratados como constantes.
+
+## Cuando usar el Scope Singleton
+Cuando el estado del objeto o la informacion del usuario no se esta guardando en la instancia, solo se usara pura logica de negocio; por ejemplo los servicios, daos, repositorios, donde el estado de datos se guarda en base de datos. Spring recomienda utilizar el scope _Singleton_ en el 90% de los escenarios, de otra forma si se guarde el estado en la instancia y es unico se usara _Prototype_.

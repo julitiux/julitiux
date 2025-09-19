@@ -27,3 +27,4 @@ Cuando el estado del objeto o la informacion del usuario no se esta guardando en
 ## Cuando usar el Scope Prototype
 Se utiliza cuando el estado de nuestro objeto no se puede compartir en un ambiente multihilo, tiene que se unico en todo el aplicativo. Un servicio que genera codigo OTP, passwords unicos para cada usuario.
 
+> Un OTP (One-Time Password) es una contraseña de un solo uso que se genera para validar la identidad de un usuario en un sistema

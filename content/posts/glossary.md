@@ -39,3 +39,6 @@ Ambos van a crear objetos y los van a guardar en el contenedor de Spring para se
 * Los _Beans_ tienen que estar en una clase de _Configuration_; por ejemplo usando las anotaciones _@SpringBootApplication_ o _@Configuration_
 * Los _Beans_ se usan para librerias externas, para clases que no tenemos explicitamente en el proyecto; WebMvcConfigurer, es una clase de SpringFramework, no es una clase nuestra.
 Los componentes se utilizan para nuestas clases y la forma de registrarlo es que Spring va a escanear, crear y guardar el objeto en el contenedor de Spring, pero se utiliza para mayormente clases nuestas
+
+## Que es un DTO
+Un DTO es un Data Transfer Object que te va ayudar a transportar informacion a lo largo de las placas de la aplicacion, estas capas son el controlador, la capa de servico y la persistencia.

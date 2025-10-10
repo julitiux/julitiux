@@ -42,3 +42,6 @@ Los componentes se utilizan para nuestas clases y la forma de registrarlo es que
 
 ## Que es un DTO
 Un DTO es un Data Transfer Object que te va ayudar a transportar informacion a lo largo de las placas de la aplicacion, estas capas son el controlador, la capa de servico y la persistencia.
+
+## Que es un Pojo
+Es una clase plana que no tiene logica de negocio.

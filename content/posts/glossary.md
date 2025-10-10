@@ -45,3 +45,6 @@ Un DTO es un Data Transfer Object que te va ayudar a transportar informacion a l
 
 ## Que es un Pojo
 Es una clase plana que no tiene logica de negocio.
+
+## Spring vs Spring Boot
+La diferencia principal entre Spring y SpringBoot es que Spring es el dramework base, toda configuracion es de forma manual y requiere mucho trabajo de configuracion; por otro lado SpringBoot es un todo listo para utilizarse, tiene configuraciones automaticas, un servidor embebido, desarrollas mas rapido y es menos codigo.

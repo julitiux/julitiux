@@ -65,6 +65,7 @@ public class SingletonClient {                       // 1.- Declarar la clase qu
         if(singleton == null) {                      // 5.- Si el objeto no existe vamos a crearlo
             singleton = new SingletonClient();
         }
+        return singleton;                            // 6.- Si el objeto ya existe, vamos a regresarlo
     }
 }
 ```

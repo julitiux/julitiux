@@ -48,3 +48,6 @@ Es una clase plana que no tiene logica de negocio.
 
 ## Spring vs Spring Boot
 La diferencia principal entre Spring y SpringBoot es que Spring es el dramework base, toda configuracion es de forma manual y requiere mucho trabajo de configuracion; por otro lado SpringBoot es un todo listo para utilizarse, tiene configuraciones automaticas, un servidor embebido, desarrollas mas rapido y es menos codigo.
+
+## Que es un controllador
+Es una clase que va a interceptar y aceptar peticiones del lado del cliente, un controlador habla HTTP; acepta la peticion, la procesa y la manda del lado del servicio, el servicio la regresa al controlador y el controlador la regresa en formato JSON, XML, HTML, texto incluso imagen.

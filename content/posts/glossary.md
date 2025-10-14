@@ -54,16 +54,16 @@ Es una clase que va a interceptar y aceptar peticiones del lado del cliente, un 
 
 ## Como declarar un Singleton
 ```java
-public class SingletonClass {                       // 1.- Declarar la clase que queremos hacer Singleton
+public class SingletonClient {                       // 1.- Declarar la clase que queremos hacer Singleton
 
-    private static SingletonClass singleton;        // 2.- Declarar una variable del mismo tipo que la clase, private y static
+    private static SingletonClient singleton;        // 2.- Declarar una variable del mismo tipo que la clase, private y static
 
-    private SingletonClass() {                      // 3.- Declarar un contructor private
-    }                                               //     Tareas y procesos en el contructor
+    private SingletonClient() {                      // 3.- Declarar un contructor private
+    }                                                //     Tareas y procesos en el contructor
 
-    public static SingletonClass getInstance() {    // 4.- Declarar un metodo para devolver la instancia
-        if(singleton == null) {                     // 5.- Si el objeto no existe vamos a crearlo
-            singleton = new SingletonClass();
+    public static SingletonClient getInstance() {    // 4.- Declarar un metodo para devolver la instancia
+        if(singleton == null) {                      // 5.- Si el objeto no existe vamos a crearlo
+            singleton = new SingletonClient();
         }
     }
 }

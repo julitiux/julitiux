@@ -69,4 +69,4 @@ public class SingletonClient {                       // 1.- Declarar la clase qu
     }
 }
 ```
-    uno
+    dos

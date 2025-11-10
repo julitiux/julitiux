@@ -70,3 +70,5 @@ public class SingletonClient {                       // 1.- Declarar la clase qu
 }
 ```
 
+## Cual es la capa mas importante de tu aplicativo
+La capa mas importante es la capa del Service; por que en el Service estan las validaciones, las reglas de negocio, la interaccion con otras capas, la interacion con la persistencia y con repositorios que es donde se van a guardar todos los datos, la informacion en base de datos. El Service procesa toda esta informacion, la devuelve al controlador y el controlador se la devuelve al cliente. El cliente puede ser una aplicacion movil, una plataforma web, inclusive postman.

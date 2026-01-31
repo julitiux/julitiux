@@ -75,3 +75,25 @@ La capa mas importante es la capa del Service; por que en el Service estan las v
 
 ## Que es un Record
 Un Record es la forma concisa e inmutable de crear clases Java que solamente van almacenar informacion, no puede ser modificada. Nos ahorrara los Getters, Setters, HashCode e Equals
+
+## SOLID
+### S - Single Responsability Principle
+Cada clase debe tener una sola responsabilidad
+
+Mal:
+´´´java
+class UserService {
+    void saveUser() {}
+    void sendMail() {}
+}
+´´´
+Bien:
+´´´java
+class UserService {
+    void saveUser() {}
+}
+
+class EmailService {
+    void sendMail() {}
+}
+´´´

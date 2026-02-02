@@ -139,3 +139,24 @@ interface FlyingBird extends Bird {
 }
 
 ´´´
+
+### I - Segregacion de interfaces
+Evita las interfaces grandes, pues pueden forzar la implementacion de metodos innecesarios
+
+Mal
+´´´java
+interface Worker {
+    void work();
+    void eat();
+}
+´´´
+Bien
+´´´java
+interface Workable {
+    void work();
+}
+
+interface Eatable {
+    void eat();
+}
+´´´

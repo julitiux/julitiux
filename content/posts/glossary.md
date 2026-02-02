@@ -97,3 +97,21 @@ class EmailService {
     void sendMail() {}
 }
 ´´´
+
+### O - Abieto-Cerrado
+Una clase debe estar abierta a la extension, pero cerrada a la modificacion.
+
+Mal
+´´´java
+if(type.equals("CARD")) {}
+if(type.equals("PAYPAL")) {}
+´´´
+Bien
+´´´java
+interface Payment {
+    void pay();
+}
+
+class CardPayment implements Payment {}
+class PaypalPayment implements Payment {}
+´´´

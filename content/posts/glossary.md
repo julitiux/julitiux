@@ -115,3 +115,27 @@ interface Payment {
 class CardPayment implements Payment {}
 class PaypalPayment implements Payment {}
 ´´´
+
+### L - Sustitucion de Liskov
+Los objetos de una subclase deben poder reemplazar a los objetos de su superclase sin alterar el programa.
+
+Mal
+´´´java
+class Bird {
+    void fly() {}
+}
+
+class Penguin extends Bird {
+    void fly() { throw new Exception(); }
+}
+´´´
+
+Bien
+´´´java
+interface Bird {}
+
+interface FlyingBird extends Bird {
+    void fly();
+}
+
+´´´

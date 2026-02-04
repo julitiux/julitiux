@@ -160,3 +160,23 @@ interface Eatable {
     void eat();
 }
 ´´´
+
+### D - Inversion de dependencias
+Los modulos de alto nivel no deben depender de los de bajo nivel sino que ambos deben depender de abstracciones
+
+Mal
+´´´java
+class OrderService {
+    private MySQLDatabase db = new MySQLDatabase();
+}
+´´´
+Bien
+´´´java
+class OrderService {
+    private final Database db;
+
+    OrderService(Database db) {
+        this.db = db;
+    }
+}
+´´´

@@ -192,5 +192,11 @@ La herencia permite que una clase herede atributos y metodos de otra.
 * La clase de la cual se hereda se llama clase padre o superclase
 Este enfoque favorece la reutilizacion de codigo y permite establecer relaciones jerarquicas entre las clases.
 
+## Polimorfismo
+El polimorfismo permite que un mismo metodo tenga distintos comportamientos segun el objeto que lo ejecute. Es decir, una misma accion puede realizarse de diferentes formaa.
+Ejemplo: una persona hispanohablante saluda diciendo "hola" mientras que otra de lengua inglesa saluda diciendo "Hello".
+En programacion esto se logra mediante la sobreescritura de metodos (@Override) la clase padre o la interface defina un metodo y la clase hila lo implementan segun su propio comportamiento.
+Esto permite un codigo mas flexible y facilita la extension del sistema sin modificar el codigo existente.
+
 # Hackerrank
 

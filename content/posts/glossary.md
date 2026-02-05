@@ -181,5 +181,10 @@ class OrderService {
 }
 ´´´
 
+## Encapsulamiento
+El encapsulamiento protege los datos de una clase y permite controlar como se accede y modifican. En Java se logra usando modificadores de acceso como _private_, _public_ y protected.
+De esta forma se evita modificaciones incorrectas, por ejemplo, que desde otra clase se pueda modificar el id de un usuario. Otras clases pueden acceder al dato si es necesario, pero no deberian poder modificarlo.
+El encapsulamiento hace que el codigo sea mas seguro y mantenible
+
 # Hackerrank
 

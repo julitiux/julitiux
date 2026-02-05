@@ -198,5 +198,11 @@ Ejemplo: una persona hispanohablante saluda diciendo "hola" mientras que otra de
 En programacion esto se logra mediante la sobreescritura de metodos (@Override) la clase padre o la interface defina un metodo y la clase hila lo implementan segun su propio comportamiento.
 Esto permite un codigo mas flexible y facilita la extension del sistema sin modificar el codigo existente.
 
+## Abstraccion
+La abstraccion permite ocultar la implementacion interna y mostrar solo lo esencial del comportamiento de un objeto
+Se logra mediante clases _abstractas_ e _interfaces_, que definen que metodos deben existsir, pero no como se implementan.
+De esta manera, las clases hijas pueden utilizar esos metodos sin conocer su funcionamiento interno, lo que reduce la complejidad del codigo
+Ademas, la logica comun se centraliza en la clase abstracta o en la interfaz, faiclitando el mantenimiento. Si se realiza una mejora o correccion, todas las clases hijas se benefician automaticamente, sin necesidad de modificarlas una por una.
+
 # Hackerrank
 

@@ -186,5 +186,11 @@ El encapsulamiento protege los datos de una clase y permite controlar como se ac
 De esta forma se evita modificaciones incorrectas, por ejemplo, que desde otra clase se pueda modificar el id de un usuario. Otras clases pueden acceder al dato si es necesario, pero no deberian poder modificarlo.
 El encapsulamiento hace que el codigo sea mas seguro y mantenible
 
+## Herencia
+La herencia permite que una clase herede atributos y metodos de otra.
+* La clase que hereda se llama clase hija o subclase
+* La clase de la cual se hereda se llama clase padre o superclase
+Este enfoque favorece la reutilizacion de codigo y permite establecer relaciones jerarquicas entre las clases.
+
 # Hackerrank
 

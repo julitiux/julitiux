@@ -403,3 +403,79 @@ public class Solution {
     }
 }
 ´´´
+
+## Java Static Initializer Block
+Static Initialization blocks are executed when the class is loaded, and you can initialize static variables in those blocks
+It's time to test you knowledge of Static Initialization blocks.
+You are given a class Solution with a main method. Complete the given code so that it outputs the are of a parallelogram with breath _B_ and height _H_. You should read the variables from the standard Input
+If _B_ <= 0 or _H_ <= 0, the output should be "java.lang.Exception: Breagth and height must be positive" whithout quotes
+
+### Input Format
+There are two lines of input. The first line contains _B_: the breadth of the parallelogram. The next, line contains _H_: the height of the parallelogram
+
+### Constraints
+
+* -100 <= _B_ <= 100
+* -100 <= _H_ <= 100
+
+### Output Format
+
+If both values are greater than zero, then the main method must output the area of the parallelogram. Otherwise, print "java.lang.Exception: Breadth and height must be positive" whithout quotes
+
+### Sample Input 1
+´´´terminal
+1
+3
+´´´
+
+### Sample Output
+´´´terminal
+e
+´´´
+
+### Sample Input 2
+´´´terminal
+-1
+2
+´´´
+
+### Sample Output 2
+´´´terminal
+java.lang.Exception: Breadth and height must be positive
+´´´
+
+### Code
+´´´java
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    static int B;
+    static int H;
+    static boolean flag = true;
+
+    static{
+
+        Scanner sc = new Scanner(System.in);
+        B = sc.nextInt();
+        H = sc.nextInt();
+        if(B < 0 || H < 0){
+            flag = false;
+            System.out.println("java.lang.Exception: Breadth and height must be positive");
+        }
+    }
+
+public static void main(String[] args){
+        if(flag){
+            int area=B*H;
+            System.out.print(area);
+        }
+
+    }//end of main
+
+}//end of class
+´´´

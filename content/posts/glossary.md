@@ -534,3 +534,119 @@ class DoNotTerminate {
     }
 }
 ´´´
+
+## Java Date and Time
+The Calendar class is an abstract class that provided methods for converting between a specific instant in time and a set of calendar fields such as YEAR, MONTHm DAY_OF_MONTH, HOUR, and so on, and for manipulating the calendar fields, such as getting the date of the next week.
+
+You are given a date, You just need to write the method, _getDay_, witch returns the day on that date. To simplify your task, we have rpovided a portion of the code in the editor.
+
+### Example
+month = 8
+day = 14
+year = 2017
+
+The method should return _MONDAY_ as the day on that date
+
+### Function description
+Complete the findDay function in the editor below
+findDay has the following parameters:
+
+* int: month
+* int: day
+* int: year
+
+### Returns
+* string: the day of the week in capital letters
+
+### Input Format
+A single line of input containing the space separated month, day and year, respectively, in _MM DD YYYY_ format
+
+### Constraints
+2000 < year < 3000
+
+### Sample Input
+08 05 2015
+
+### Sample Output
+WEDNESDAY
+
+### Explanation
+The day on August 5th 2015 was WEDNESDAY
+
+### Code
+´´´java
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+class Result {
+
+    /*
+     * Complete the 'findDay' function below.
+     *
+     * The function is expected to return a STRING.
+     * The function accepts following parameters:
+     *  1. INTEGER month
+     *  2. INTEGER day
+     *  3. INTEGER year
+     */
+
+    public static String findDay(int month, int day, int year) {
+        Calendar calendar = Calendar.getInstance();
+
+        System.out.println("month " + month);
+        System.out.println("day" + day);
+        System.out.println("year" + year);
+
+        calendar.set(Calendar.MONTH, month - 1);
+        calendar.set(Calendar.DAY_OF_MONTH, day);
+        calendar.set(Calendar.YEAR, year);
+
+        int deamonDay = calendar.get(Calendar.DAY_OF_WEEK);
+
+        System.out.println(deamonDay);
+
+        return dayOfweek(deamonDay);
+    }
+
+    private static String dayOfweek(int day){
+        switch(day){
+            case Calendar.SUNDAY: return "SUNDAY";
+            case Calendar.MONDAY: return "MONDAY";
+            case Calendar.TUESDAY: return "TUESDAY";
+            case Calendar.WEDNESDAY: return "WEDNESDAY";
+            case Calendar.THURSDAY: return "THURSDAY";
+            case Calendar.FRIDAY: return "FRIDAY";
+            case Calendar.SATURDAY: return "SATURDAY";
+            default: return "UNKNOW";
+        }
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        String[] firstMultipleInput = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
+
+        int month = Integer.parseInt(firstMultipleInput[0]);
+
+        int day = Integer.parseInt(firstMultipleInput[1]);
+
+        int year = Integer.parseInt(firstMultipleInput[2]);
+
+        String res = Result.findDay(month, day, year);
+
+        bufferedWriter.write(res);
+        bufferedWriter.newLine();
+
+        bufferedReader.close();
+        bufferedWriter.close();
+    }
+}
+´´´

@@ -81,14 +81,15 @@ Un Record es la forma concisa e inmutable de crear clases Java que solamente van
 Cada clase debe tener una sola responsabilidad
 
 Mal:
-´´´java
+```java
 class UserService {
     void saveUser() {}
     void sendMail() {}
 }
-´´´
+```
+
 Bien:
-´´´java
+```java
 class UserService {
     void saveUser() {}
 }
@@ -96,31 +97,31 @@ class UserService {
 class EmailService {
     void sendMail() {}
 }
-´´´
+```
 
 ### O - Abieto-Cerrado
 Una clase debe estar abierta a la extension, pero cerrada a la modificacion.
 
 Mal
-´´´java
+```java
 if(type.equals("CARD")) {}
 if(type.equals("PAYPAL")) {}
-´´´
+```
 Bien
-´´´java
+```java
 interface Payment {
     void pay();
 }
 
 class CardPayment implements Payment {}
 class PaypalPayment implements Payment {}
-´´´
+```
 
 ### L - Sustitucion de Liskov
 Los objetos de una subclase deben poder reemplazar a los objetos de su superclase sin alterar el programa.
 
 Mal
-´´´java
+```java
 class Bird {
     void fly() {}
 }
@@ -128,30 +129,31 @@ class Bird {
 class Penguin extends Bird {
     void fly() { throw new Exception(); }
 }
-´´´
+```
 
 Bien
-´´´java
+```java
 interface Bird {}
 
 interface FlyingBird extends Bird {
     void fly();
 }
 
-´´´
+```
 
 ### I - Segregacion de interfaces
 Evita las interfaces grandes, pues pueden forzar la implementacion de metodos innecesarios
 
-Mal
-´´´java
+Mal:
+```java
 interface Worker {
     void work();
     void eat();
 }
-´´´
-Bien
-´´´java
+```
+
+Bien:
+```java
 interface Workable {
     void work();
 }
@@ -159,19 +161,19 @@ interface Workable {
 interface Eatable {
     void eat();
 }
-´´´
+```
 
 ### D - Inversion de dependencias
 Los modulos de alto nivel no deben depender de los de bajo nivel sino que ambos deben depender de abstracciones
 
 Mal
-´´´java
+```java
 class OrderService {
     private MySQLDatabase db = new MySQLDatabase();
 }
-´´´
+```
 Bien
-´´´java
+```java
 class OrderService {
     private final Database db;
 
@@ -179,7 +181,7 @@ class OrderService {
         this.db = db;
     }
 }
-´´´
+```
 
 ## Encapsulamiento
 El encapsulamiento protege los datos de una clase y permite controlar como se accede y modifican. En Java se logra usando modificadores de acceso como _private_, _public_ y protected.
@@ -224,20 +226,20 @@ Each line i of the q subsequents lines contains three space-separated integers d
 For each query, print the corresponding series on a new linem Each series must be printed in order as a single line of n space-separated integers.
 
 ### Sample Input
-´´´
+```terminal
 2
 0 2 10
 5 3 5
-´´´
+```
 
 ### Sample Output
-´´´
+```terminal
 2 6 14 30 62 126 254 510 1022 2046
 8 14 26 50 98
-´´´
+```
 
 ### Code
-´´´java
+```java
 import java.util.*;
 import java.io.*;
 
@@ -264,7 +266,8 @@ class Solution{
         in.close();
     }
 }
-´´´
+```
+
 ## Java Datatypes
 Java has 8 primitive date types: char, boolean, byte, shot, int, long, float and double. For this exercise, we'll work with the primitives used to hold integer values (byte, short, int and long):
 
@@ -285,30 +288,30 @@ The first line contains an integer _T_. denoting the number of test cases. Each 
 ### Output format
 For each input variable _n_ and appropriate primitive _dataType_. you must determine if the given primitives are capable of storing it, if yes, then print:
 
-´´´terminal
+```terminal
 n can be fitted in:
 * datatype
-´´´
+```
 
 If there is more than one appropriate data type, print each one on its own line and order them by size (i.e.: _byte_ < _short_ < _int_ < _long_)
 If the number cannot be stored in one of the four aforementioned primitives, print the line:
 
-´´´terminal
+```terminal
 n can't be fitted anywhere.
-´´´
+```
 
 ### Sample Input
-´´´terminal
+```terminal
 5
 -150
 150000
 1500000000
 213333333333333333333333333333333333
 -100000000000000
-´´´
+```
 
 ### Sample Output
-´´´terminal
+```terminal
 -150 can be fitted in:
 * short
 * int
@@ -322,10 +325,10 @@ n can't be fitted anywhere.
 213333333333333333333333333333333333 can't be fitted anywhere.
 -100000000000000 can be fitted in:
 * long
-´´´
+```
 
 ### Code
-´´´java
+```java
 import java.util.*;
 import java.io.*;
 
@@ -353,7 +356,7 @@ class Solution{
         }
     }
 }
-´´´
+```
 
 ## Java End-of-file
 "In computing, End Of Line (commonly abbreviated EOF) is a condition in a computer operation system where no more data can be read from a data source"
@@ -368,21 +371,21 @@ Read some unknown _n_ lines of input from stdin(System.in) until you reach EOF: 
 For each line, print the line number, followed by a single space, and then the line content received as input
 
 ### Sample Input
-´´´terminal
+```terminal
 Hello world
 I am a file
 Read me until end-of-file.
-´´´
+```
 
 ### Sample Output
-´´´terminal
+```terminal
 1 Hello world
 2 I am a file
 3 Read me until end-of-file.
-´´´
+```
 
 ### Code
-´´´java
+```java
 import java.io.*;
 import java.util.*;
 import java.text.*;
@@ -402,7 +405,7 @@ public class Solution {
         }
     }
 }
-´´´
+```
 
 ## Java Static Initializer Block
 Static Initialization blocks are executed when the class is loaded, and you can initialize static variables in those blocks
@@ -423,29 +426,29 @@ There are two lines of input. The first line contains _B_: the breadth of the pa
 If both values are greater than zero, then the main method must output the area of the parallelogram. Otherwise, print "java.lang.Exception: Breadth and height must be positive" whithout quotes
 
 ### Sample Input 1
-´´´terminal
+```terminal
 1
 3
-´´´
+```
 
 ### Sample Output
-´´´terminal
+```terminal
 e
-´´´
+```
 
 ### Sample Input 2
-´´´terminal
+```terminal
 -1
 2
-´´´
+```
 
 ### Sample Output 2
-´´´terminal
+```terminal
 java.lang.Exception: Breadth and height must be positive
-´´´
+```
 
 ### Code
-´´´java
+```java
 import java.io.*;
 import java.util.*;
 import java.text.*;
@@ -478,7 +481,7 @@ public static void main(String[] args){
     }//end of main
 
 }//end of class
-´´´
+```
 
 ## Java int to String
 You given an integer _n_, you have to convert it into a string.
@@ -487,7 +490,7 @@ Please complete the partially completed code in the editor. If your code succefu
 _n_ can range between -100 to 100 inclusive.
 
 ### Code
-´´´java
+```java
 import java.util.*;
 import java.security.*;
 public class Solution {
@@ -533,7 +536,7 @@ class DoNotTerminate {
         System.setSecurityManager(securityManager);
     }
 }
-´´´
+```
 
 ## Java Date and Time
 The Calendar class is an abstract class that provided methods for converting between a specific instant in time and a set of calendar fields such as YEAR, MONTHm DAY_OF_MONTH, HOUR, and so on, and for manipulating the calendar fields, such as getting the date of the next week.
@@ -574,7 +577,7 @@ WEDNESDAY
 The day on August 5th 2015 was WEDNESDAY
 
 ### Code
-´´´java
+```java
 import java.io.*;
 import java.math.*;
 import java.security.*;
@@ -649,4 +652,4 @@ public class Solution {
         bufferedWriter.close();
     }
 }
-´´´
+```

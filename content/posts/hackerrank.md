@@ -451,3 +451,77 @@ public class Solution {
     }
 }
 ```
+
+## Java Currency Formatter
+Given a doble-precision number, _payment_, denoting an amount of money, use the NumberFormat class getCurrencyInstance method to convert _payment_ into the US, Indian, Chinese and French currency formatas. Then print the formatted values as follows:
+
+```terminal
+US: formattedPayment
+India: formattedPayment
+China: formattedPayment
+France: formattedPayment
+```
+
+where _formattedPayment_ is _payment_ formatted according to the appropriate Locale's currency
+_Note:_ India does not have built-in Locale, so you must construct one where the lenguage is en (i.e.. English)
+
+### Input Format
+A single double-precision number denoting _payment_
+
+### Constraints
+```terminal
+0 <= payment <= 10^9
+```
+
+### Output Format
+On the first line, print US: u where u is payment formatted for US currency.
+On the second line, print India: i where _i_ is payment formatted for Indian currency.
+On the third line, print China: c where _c_  is payment formatted for Chinese currency.
+On the fourth line, print France: f, where _f_ is payment formatted for French currency.
+
+### Sample Input
+```terminal
+12324.134
+```
+
+### Sample Output
+```terminal
+US: $12,324.13
+India: Rs.12,324.13
+China: ￥12,324.13
+France: 12 324,13 €
+```
+
+### Explanation
+Each line contains the value of payment formatted according to the four countries respective currencies.
+
+### Code
+```java
+import java.util.*;
+import java.text.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double payment = scanner.nextDouble();
+        scanner.close();
+
+        Locale us = Locale.US;
+        Locale india = new Locale("en", "IN");
+        Locale china = Locale.CHINA;
+        Locale france = Locale.FRANCE;
+
+        NumberFormat usFormat = NumberFormat.getCurrencyInstance(us);
+        NumberFormat indiaFormat = NumberFormat.getCurrencyInstance(india);
+        NumberFormat chinaFormat = NumberFormat.getCurrencyInstance(china);
+        NumberFormat franceFormat = NumberFormat.getCurrencyInstance(france);
+
+
+        System.out.println("US: " + usFormat.format(payment));
+        System.out.println("India: " + indiaFormat.format(payment));
+        System.out.println("China: " + chinaFormat.format(payment));
+        System.out.println("France: " + franceFormat.format(payment));
+    }
+}
+```

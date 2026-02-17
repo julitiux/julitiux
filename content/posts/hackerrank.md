@@ -881,3 +881,47 @@ In each line, Output the number located in y^th  position of x^th line. If there
 ERROR!
 ERROR!
 ```
+
+### Code
+```java
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+
+        Scanner sc = new Scanner(System.in);
+
+        int firstSize = sc.nextInt();
+
+        List<List<Integer>> list = new ArrayList<>();
+
+        for(int i = 0; i < firstSize ; i++){
+
+            int firstElement = sc.nextInt();
+            List<Integer> partList = new ArrayList<>();
+
+            for(int j = 0; j < firstElement; j ++){
+                partList.add(sc.nextInt());
+            }
+            list.add(partList);
+        }
+
+        int secondSize = sc.nextInt();
+        for(int i = 0; i < secondSize; i++) {
+
+            try{
+                System.out.println(list.get(sc.nextInt()-1).get(sc.nextInt()-1));
+            }catch(Exception e){
+                System.out.println("ERROR!");
+            }
+
+        }
+    }
+}
+```

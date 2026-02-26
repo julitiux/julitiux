@@ -1036,3 +1036,82 @@ public class Solution {
     }
 }
 ```
+
+## Java List
+The first line constains an integer _N_ (the initial number of elements in _L_) The second line contains an integer, _Q_ (the number of queries).
+
+The _2Q_ subsequent lines describe the queries, and each query is described over two lines:
+
+* If the first lines of a query contains the Spring Insert, then the second line constains two space separated integers _x, y_, and the value _y_ must be inserted into _L_ at index _x_.
+* If the first line of a query contains the String _Delete_, then the second line contains index _x_, whose element must be deleted from _L_.
+
+### Constraints
+* 1 <= N <= 4000
+* 1 <= Q <= 4000
+* Each element in is a 32-bit integers
+
+### Output Format
+```terminal
+5
+12 0 1 78 12
+2
+Insert
+5 23
+Delete
+0
+```
+
+### Sample Output
+```terminal
+0 1 78 12 23
+```
+
+### Code
+```java
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+
+        Scanner sc = new Scanner(System.in);
+
+        List<Integer> list = new ArrayList();
+        int sizeArray = sc.nextInt();
+
+        for(int i = 0; i<sizeArray; i++){
+            list.add(i, sc.nextInt());
+        }
+
+        int cicles = sc.nextInt();
+
+        for(int i = 0; i < cicles; i++){
+
+            sc.nextLine();
+            String action = sc.nextLine();
+
+            if(action.equals("Insert")){
+                list.add(sc.nextInt(), sc.nextInt());
+            }
+
+            if(action.equals("Delete")){
+                list.remove(sc.nextInt());
+            }
+
+        }
+
+        printList(list);
+    }
+
+    static void printList(List<Integer> list){
+        for(int number : list){
+            System.out.print(number + " ");
+        }
+    }
+}
+```

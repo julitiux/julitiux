@@ -1115,3 +1115,98 @@ public class Solution {
     }
 }
 ```
+
+## Java Map
+You are given a phone book that consist of people's names and their phone number. After that you will be given some person's name as query. For each query, print the phone number of that person.
+
+### Input Format
+The first line will have an integer _n_ denoting the number of entries in the phone book. Each entry consist of two lines: a name and the corresponding phone number.
+
+After these, there will be some queries. Each query will constain a person's name. Read the queries until end-of-line
+
+### Constraints
+A person's name consist of only lower-case English letters and it may be in the format 'first-name last-name' or in the format 'first-name' or in the format 'first-name'. Eache phone number has exactly 8 digits without any leading zeros.
+
+```terminal
+1 <= n <= 100000
+1 <= Query <= 100000
+```
+
+### Output Format
+For each case, print "Not Found" if the person has no entry in the phone book. Otherwise, print the person's name and phone number. See sample output for the exact format.
+
+To make the problem easier, we provided a portion of the core in the editor. You can either complete that code or write completely on your own.
+
+### Sample Input
+```terminal
+3
+uncle sam
+99912222
+tom
+11122222
+harry
+12299933
+uncle sam
+uncle tom
+harry
+```
+
+### Sample Output
+```temrinal
+uncle sam=99912222
+Not found
+harry=12299933
+```
+
+### Code
+```java
+//Complete this code or write your own from scratch
+import java.util.*;
+import java.io.*;
+
+class Solution{
+    public static void main(String []argh)
+    {
+        /*
+           Scanner in = new Scanner(System.in);
+           int n=in.nextInt();
+           in.nextLine();
+           for(int i=0;i<n;i++)
+           {
+           String name=in.nextLine();
+           int phone=in.nextInt();
+           in.nextLine();
+           }
+           while(in.hasNext())
+           {
+           String s=in.nextLine();
+           }
+         */
+
+        Scanner sc = new Scanner(System.in);
+        int cicle = sc.nextInt();
+
+        Map<String, String> map = new HashMap<>();
+
+        sc.nextLine();
+
+        for(int i = 0; i < cicle ; i ++){
+            map.put(sc.nextLine(), sc.nextLine());
+        }
+
+        String query;
+        String value;
+
+        for(int i = 0; i < cicle ; i ++){
+            query = sc.nextLine();
+            value = map.get(query);
+
+            if(value != null){
+                System.out.println(String.format("%s=%s", query, value));
+            } else {
+                System.out.println("Not found");
+            }
+        }
+    }
+}
+```

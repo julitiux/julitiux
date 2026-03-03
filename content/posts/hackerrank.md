@@ -1210,3 +1210,20 @@ class Solution{
     }
 }
 ```
+
+### Tip
+
+#### HashMap
+```java
+Map<String, Integer> edades = new HashMap<>();
+```
+
+#### LinkedHashMap (mantine orden)
+```java
+Map<String, Integer> edades = new LinkedHashMap<>();
+```
+
+#### TreeMap (ordena por clave)
+```java
+Map<String, Integer> edades = new TreeMap<>();
+```

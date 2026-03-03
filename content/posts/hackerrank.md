@@ -1197,7 +1197,7 @@ class Solution{
         String query;
         String value;
 
-        for(int i = 0; i < cicle ; i ++){
+        while(sc.hasNext()){
             query = sc.nextLine();
             value = map.get(query);
 

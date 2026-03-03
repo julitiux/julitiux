@@ -1227,3 +1227,87 @@ Map<String, Integer> edades = new LinkedHashMap<>();
 ```java
 Map<String, Integer> edades = new TreeMap<>();
 ```
+
+## Java Stack
+> In computer science, a stack or LIFO (last in, first out) is an abstract.
+
+A string contains only parentheses is balanced if the following is true:
+1. If it is an empty string
+2. if A and B are correct, AB is correct
+3. if A is correct (A) and (A) and (A) are also correct.
+
+Examples of some correctly balanced strings are: "{}()", "[{()}]", "({()})"
+Examples of some unbalanced strings are: "{}(", "({)}", "[[", "}{" etc.
+Given a string, determine if it is balanced or not.
+
+### Input Format
+There will be multiple lines in the input file, each having a siblle non-empty string. You should read input til end-of-file
+
+The part of the code that handles input operation is alredy provided in the editor
+
+### Output Format
+For each case, print 'true' if the string us balanced, 'false' Otherwise
+
+### Sample Input
+```terminal
+{}()
+({()})
+{}(
+[]
+```
+
+### Sample Output
+```terminal
+true
+true
+false
+true
+```
+
+### Code
+```java
+import java.util.*;
+class Solution{
+
+    public static void main(String []argh)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        while (sc.hasNext()) {
+            String input=sc.next();
+
+
+            Stack<Character> pila = new Stack<>();
+
+            for(char c : input.toCharArray()){
+
+                if(c == '(' || c == '[' || c == '{'){
+                    pila.push(c);
+                } else {
+
+                    if(pila.isEmpty()){
+                        System.out.println("false");
+                    }
+
+                    char p = pila.pop();
+
+                    if(c == ')' && p != '(')
+                        System.out.println("false");
+                    if(c == ']' && p != '[')
+                        System.out.println("false");
+                    if(c == '}' && p != '{')
+                        System.out.println("false");
+                }
+
+            }
+
+            if(pila.isEmpty())
+                System.out.println("true");
+            else
+                System.out.println("false");
+
+        }
+
+    }
+}
+```

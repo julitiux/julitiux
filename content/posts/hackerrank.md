@@ -1557,3 +1557,85 @@ public class Solution
     }
 }
 ```
+
+## Java Dequeue
+In computer science, a double-ended queue (dequeue, often abbreviated to deque, pronounced deck) is an abstract data type that generalizes a queue, for which elements can be added to or removed from either the front (head) or back (tail).
+
+Deque interfaces can be implemented using various types of collections such as LinkedList or ArrayDeque classes. For example, deque can be declared as:
+
+```java
+Deque deque = new LinkedList<>();
+```
+or
+```java
+Deque deque = new ArrayList<>();
+```
+
+In this problem, you are given _N_ integers. You need to find the maximum number of unique integers among all the possible contiguous subarrays of size _M_.
+
+Note: Time limit is 3 second for this problem.
+
+### Input Format
+The first line of input contains two integers _N_ and : _M_ representing the total number of integers and the size of the subarray, respectively. The next line contains _N_ space separated integers.
+
+### Constraints
+```terminal
+1 <= N <= 100000
+1 <= M <= 100000
+M <= N
+```
+
+The number in the array will range between [0, 10000000].
+
+### Output Format
+Print the maximum number of unique integers among all possible contiguous subarrays of size _M_.
+
+### Sample Input
+```terminal
+6 3
+5 3 5 2 3 2
+```
+
+### Sample Output
+```terminal
+3
+```
+
+### Code
+```java
+import java.util.*;
+public class test {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int m = in.nextInt();
+
+        Deque<Integer> deque = new ArrayDeque<>();
+        Map<Integer, Integer> map = new HashMap<>();
+
+        int max = 0;
+
+        for (int i = 0; i < n; i++) {
+            int num = in.nextInt();
+
+            deque.addLast(num);
+            map.put(num, map.getOrDefault(num, 0)+1 );
+
+            if(deque.size() > m){
+
+                int removed = deque.removeFirst();
+                map.put(removed, map.get(removed)-1);
+
+                if(map.get(removed) == 0){
+                    map.remove(removed);
+                }
+            }
+
+            max = Math.max(max, map.size());
+
+        }
+        System.out.println(max);
+    }
+}
+```
+

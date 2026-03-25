@@ -1753,3 +1753,183 @@ public class Solution {
     }
 }
 ```
+
+## Java Priority Queue
+In computer science, a priority queue is an abstract data type which is like a regular queue, but where additionally each element has a "priority" associated with it. In a priority queue, an element with high priority is served before an element with low priority.
+
+In this problem we will test your knowledge on Java Priority Queue.
+
+There are a number of student in a school who wait to be served. Two types of events. ENTER ans SERVED, va take place, which are described below.
+
+* ENTER: A student with some priority enters the queue to be served
+* SERVED: The student with the highest priority is served (removed) from the queue
+
+A uniqued id is assigned to each student entering the queue. The queue serves the students based on the following criteria (priority criteria):
+
+1. The student having the highest Cumulative Grade Point Average (CGPA) is served first.
+2. Any student having the same CGPA will be served by name in ascending case-sensitive alphabetical order.
+3. Any students having the same CGPA and name will be served in ascending order of the id.
+
+* The student class shouls implement:
+    * The constructor Student(int id, String name, double cgpa)
+    * The method int getId to return the id of the student
+    * The method String getName() to return the name of the student
+    * The method double getCGPA() to return the CGPA of the student
+
+* The Priorities class should implement the method List<Student> getStudents(List<String> events) to process all the given events and return all the students yet to be served in the priority order.
+
+### Input Format
+The first line contains an integer _n_, describing the total number of events. Each of the _n_ subsequents lines will be og the folliwing two forms:
+
+* ENTER name CGPA id: The student to be inserted into the priority queue
+* SERVED: The highest priority student in the queue was served
+
+The locked stub code in the editor reads the input are tests the correctness of the Student and Priorities classes implementation.
+
+### Constraints
+```terminal
+2 <= n <= 1000
+0 <= CGPA <= 4.00
+1 <= id <= 10^5
+2 <= |name| <= 30
+```
+
+### Output Format
+The locked stub code prints the names of the students yet to be served in the priority order, if there are no such studentm then the code prints EMPTY
+
+### Sample Input
+```terminal
+12
+ENTER John 3.75 50
+ENTER Mark 3.8 24
+ENTER Shafaet 3.7 35
+SERVED
+SERVED
+ENTER Samiha 3.85 36
+SERVED
+ENTER Ashley 3.9 42
+ENTER Maria 3.6 46
+ENTER Anik 3.95 49
+ENTER Dan 3.95 50
+SERVED
+```
+
+### Sample Output
+```terminal
+Dan
+Ashley
+Shafaet
+Maria
+```
+
+### Code
+```java
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.*;
+import java.io.*;
+
+
+/*
+ * Create the Student and Priorities classes here.
+ */
+
+class Student{
+
+    private int id;
+    private String name;
+    private double cgpa;
+
+    public Student(int id, String name, double cgpa){
+        this.id = id;
+        this.name = name;
+        this.cgpa = cgpa;
+    }
+
+    public int getId(){
+        return id;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public double getCGPA(){
+        return cgpa;
+    }
+}
+
+
+class Priorities{
+
+    public List<Student> getStudents(List<String> events){
+
+        PriorityQueue<Student> pq = new PriorityQueue<>(new Comparator<Student>(){
+
+                public int compare(Student a, Student b){
+
+                if(a.getCGPA() != b.getCGPA()){
+                return Double.compare(b.getCGPA(), a.getCGPA());
+                }
+
+                if(!a.getName().equals(b.getName())){
+                return a.getName().compareTo(b.getName());
+                }
+
+                return a.getId() - b.getId();
+
+                }
+                });
+
+        for(String e: events){
+            String[] parts = e.split(" ");
+
+            if(parts[0].equals("ENTER")){
+                String name = parts[1];
+                double cgpa = Double.parseDouble(parts[2]);
+                int id = Integer.parseInt(parts[3]);
+
+                pq.add(new Student(id, name, cgpa));
+            } else if (parts[0].equals("SERVED")){
+                pq.poll();
+            }
+        }
+
+        List<Student> result = new ArrayList<>();
+
+        while(!pq.isEmpty()){
+            result.add(pq.poll());
+        }
+
+        return result;
+
+    }
+}
+
+
+public class Solution {
+    private final static Scanner scan = new Scanner(System.in);
+    private final static Priorities priorities = new Priorities();
+
+    public static void main(String[] args) {
+        int totalEvents = Integer.parseInt(scan.nextLine());
+        List<String> events = new ArrayList<>();
+
+        while (totalEvents-- != 0) {
+            String event = scan.nextLine();
+            events.add(event);
+        }
+
+        List<Student> students = priorities.getStudents(events);
+
+        if (students.isEmpty()) {
+            System.out.println("EMPTY");
+        } else {
+            for (Student st: students) {
+                System.out.println(st.getName());
+            }
+        }
+    }
+}
+```

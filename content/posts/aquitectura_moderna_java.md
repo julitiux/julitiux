@@ -1428,3 +1428,7 @@ class Order {
 * Las capas estan organizadas como anillos concentricos alrededor de la logica central.
 * La analogia con una cebolla ayuda a visualizar como la loogica de negocio esta "protegida" por las capas externas.
 
+## Capa Dominio Central
+* En el centro esta el dominio (el "core" del sistema).
+* Que incluye las entidades y reglas de negocio.
+* Es la parte mas importante del sistema y no debe depender de nada externo, como bases de datos o interfaces de usuario.

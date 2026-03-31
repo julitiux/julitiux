@@ -1444,3 +1444,8 @@ class Order {
 * No se implementa logica de negocio, sino logica para orquestar los flujos de trabajo.
     * _Servicios de aplicacion_: Implementan casos de uso especificos y coordinan el flujo entre el dominio y las infraestructuras externas.
 
+## Capa de infraestructura
+* Esta capa contiene detalles tecnicos como la persistencia de datos (bases de datos), integracion con servicios externos (APIs, microservicios), envio de correos electronicos, etc.
+* La infraestructura debe ser facilmente reemplazable sin afectar el nucleo del dominio ni la logica de la aplicacion.
+    * _Adaptadores_: Pueden ser entradas (que inyectan informacion al sistema) o salidas (como el acceso a base de datos o mensajeria).
+

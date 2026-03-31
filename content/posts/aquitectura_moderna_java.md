@@ -1432,3 +1432,9 @@ class Order {
 * En el centro esta el dominio (el "core" del sistema).
 * Que incluye las entidades y reglas de negocio.
 * Es la parte mas importante del sistema y no debe depender de nada externo, como bases de datos o interfaces de usuario.
+
+## Capa Dominio Central
+* _Entidades_: Representan los objetos fundamentales con identidad y comportamiento.
+* _Agregados_: Agrupaciones de entidades con reglas de consistencia.
+* _Servicios de dominio_: Logica de negocio que no encaja dentro de una entidad o agregado.
+

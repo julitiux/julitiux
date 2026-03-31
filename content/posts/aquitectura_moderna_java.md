@@ -1420,10 +1420,11 @@ class Order {
 * Mientras que la Hexagonal hablaa de "puertos y adaptadores", la Onion simplemente organiza las capas en circulos concetricos, con el dominio en el centro
 
 ## Caracteristicas de Arquitectura de Cebolla
-
 * Se basan en capas concentricas, como el dominio (entidades y logica de negocio) en el centro.
 * El flujo de dependencias es hacia adentro, es decir, las capas externas dependen de las internas, pero no al reves.
 * Las interfaces y los casos de uso se colocan en capas intermedias, mientras que las capas externas manejan los detalles de la infraestructura como bases de datos, frameworks, y APIs externas.
 
-
+## Enfoque visual
+* Las capas estan organizadas como anillos concentricos alrededor de la logica central.
+* La analogia con una cebolla ayuda a visualizar como la loogica de negocio esta "protegida" por las capas externas.
 

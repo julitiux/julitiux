@@ -1438,3 +1438,9 @@ class Order {
 * _Agregados_: Agrupaciones de entidades con reglas de consistencia.
 * _Servicios de dominio_: Logica de negocio que no encaja dentro de una entidad o agregado.
 
+## Capa de aplicacion
+* Rodeando al dominio, esta capa contiene la logica de la aplicacion (casos de uso).
+* Se encarga de coordinar la interacciones entre el dominio y las capas externas, como la interfaz de usuario o el acceso a datos.
+* No se implementa logica de negocio, sino logica para orquestar los flujos de trabajo.
+    * _Servicios de aplicacion_: Implementan casos de uso especificos y coordinan el flujo entre el dominio y las infraestructuras externas.
+

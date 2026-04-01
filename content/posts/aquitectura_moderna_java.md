@@ -1454,3 +1454,8 @@ class Order {
     - WebAPIs
     - gRPC
     - CLI (Command Line Interface)
+
+## Ventajas
+* Independencia del dominio: La arquitectura de cebolla promueve que el dominio no dependa de detalles externos (infraestructura o interfaces de usuario), lo que permite una evolucion mas simple de la logica del negocio sin impacto en otras areas.
+* Testabilidad: Al desacoplar el dominio de otros componentes, es mas facil realizar pruebas unitarias, ya que el dominio puede ser testeado de manera independiente.
+* Mantenibilidad: La separacion de responsabilidades y el bajo acoplamiento facilitan el mantenimiento y la evolucion del sistema.

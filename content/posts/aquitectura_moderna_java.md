@@ -1449,3 +1449,8 @@ class Order {
 * La infraestructura debe ser facilmente reemplazable sin afectar el nucleo del dominio ni la logica de la aplicacion.
     * _Adaptadores_: Pueden ser entradas (que inyectan informacion al sistema) o salidas (como el acceso a base de datos o mensajeria).
 
+## Interfaz de usuario
+* Es la capa mas extensa y contiene la logica relacionada con la interaccion del usuario, como controladores HTTP, vistas y menajo de entrada/salida.
+    - WebAPIs
+    - gRPC
+    - CLI (Command Line Interface)

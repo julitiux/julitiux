@@ -1459,3 +1459,7 @@ class Order {
 * Independencia del dominio: La arquitectura de cebolla promueve que el dominio no dependa de detalles externos (infraestructura o interfaces de usuario), lo que permite una evolucion mas simple de la logica del negocio sin impacto en otras areas.
 * Testabilidad: Al desacoplar el dominio de otros componentes, es mas facil realizar pruebas unitarias, ya que el dominio puede ser testeado de manera independiente.
 * Mantenibilidad: La separacion de responsabilidades y el bajo acoplamiento facilitan el mantenimiento y la evolucion del sistema.
+
+## Comparacion con otros patrones
+* _Arquitectura limpia_: La arquitectura de cebolla y la aquitectura limpia son muy similares. Ambas se centran en mantener el dominio contral independiente de los detalles externos, aunque la arquitectura limpia a veces incluye una capa adicional de "entidades" puras, fuera del dominio de la aplicacion.
+* _Arquitectura hexagonal_: Tambien conocida como la arquitectura de puertos y adaptadores, es un concepto similar en cuanto al desacoplamento de dependencias externas. La diferencia principal es que la arquitectura hexagonal se enfoca mas explicitamente en la comunicacion a traves de puertos (interfaces) con adaptadores para conectarse a las tecnologías externas.

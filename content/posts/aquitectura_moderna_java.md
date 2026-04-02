@@ -1477,3 +1477,9 @@ class Order {
 * _Independencia de la UI_: Los detalles de la interfaz de usuario deben estar desacoplados de las reglas de negocio, lo que permite cambiar la interfaz sin afectar la logica de la aplicacion.
 * _Independencia de la base de datos_: El sistema no debe depender de ningun tipo especifico de base de datos o de acceso a los datos.
 * _Independencia de los agentes externo_: Cualquier sistema externo, como APIs o base de datos, debe estar en la capa mas externa del sistema.
+
+## Componentes principales de la Clean Architecture
+* _Entidades_: Representan las reglas de negocio de mas alto nivel. Son las mas estables y no dependen de nada mas.
+* _Casos de uso (Use Cases)_: Contiene la logica de la aplicacion. Describen las interacciones especificas entre las entidades y definen como se deben ejecutar las reglas de negocio en funcion de los requisitos.
+* _Interfaces de Entrada/Salida_: Proveen la conexion entre las capas internas y externas. En Clean Architecture, a menudo se utilizan adaptadores y puertos par que las capas externas interactuen con las capas internas sin acoplamiento directo.
+* _Capa externa (Frameworks y Drivers)_: Aqui es donde se encuentran los detalles tecnicos, como los controladores web, las bases de datos, y cualquier otro servicio externo. Estas partes deben ser lo mas facilmente reemplazables posibles.

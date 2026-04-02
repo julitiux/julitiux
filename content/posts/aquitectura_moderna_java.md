@@ -1463,3 +1463,10 @@ class Order {
 ## Comparacion con otros patrones
 * _Arquitectura limpia_: La arquitectura de cebolla y la aquitectura limpia son muy similares. Ambas se centran en mantener el dominio contral independiente de los detalles externos, aunque la arquitectura limpia a veces incluye una capa adicional de "entidades" puras, fuera del dominio de la aplicacion.
 * _Arquitectura hexagonal_: Tambien conocida como la arquitectura de puertos y adaptadores, es un concepto similar en cuanto al desacoplamento de dependencias externas. La diferencia principal es que la arquitectura hexagonal se enfoca mas explicitamente en la comunicacion a traves de puertos (interfaces) con adaptadores para conectarse a las tecnologías externas.
+
+# Modulo 9
+
+## Arquitectura Limpia
+* Estilo propuesto por Robert C. Martin ("Uncle Bob")
+* Tiene como objetivo crear sistemas que sean independientes de frameworks, faciles de probar, independientes de la UI y altamente mantenibles.
+* La idea principal es separar las preocupaciones del sistema en capas de manera que los detalles externos (como frameworks, bases de datos, UI) esten desacoplados del nucle de la aplicacion, lo que permite que el codigo sea mas modular, flexible y resistente al cambio.

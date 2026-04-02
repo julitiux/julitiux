@@ -1483,3 +1483,9 @@ class Order {
 * _Casos de uso (Use Cases)_: Contiene la logica de la aplicacion. Describen las interacciones especificas entre las entidades y definen como se deben ejecutar las reglas de negocio en funcion de los requisitos.
 * _Interfaces de Entrada/Salida_: Proveen la conexion entre las capas internas y externas. En Clean Architecture, a menudo se utilizan adaptadores y puertos par que las capas externas interactuen con las capas internas sin acoplamiento directo.
 * _Capa externa (Frameworks y Drivers)_: Aqui es donde se encuentran los detalles tecnicos, como los controladores web, las bases de datos, y cualquier otro servicio externo. Estas partes deben ser lo mas facilmente reemplazables posibles.
+
+## Organizacion en capas ("Circulo de la Clean Architecture")
+* _Capa de Entidades (Core Entities)_: Las reglas de negocio fundamentales
+* _Capa de Casos de Uso (Use Cases)_: Define el comportamiento especifico de la aplicacion.
+* _Capa de Interfaces_: Provee adaptadores para las capas externas (controladores, servicios externos).
+* _Capa de Infraestructura_: Contiene los detalles de implementacion, como frameworks y base de datos.

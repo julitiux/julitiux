@@ -1470,3 +1470,10 @@ class Order {
 * Estilo propuesto por Robert C. Martin ("Uncle Bob")
 * Tiene como objetivo crear sistemas que sean independientes de frameworks, faciles de probar, independientes de la UI y altamente mantenibles.
 * La idea principal es separar las preocupaciones del sistema en capas de manera que los detalles externos (como frameworks, bases de datos, UI) esten desacoplados del nucle de la aplicacion, lo que permite que el codigo sea mas modular, flexible y resistente al cambio.
+
+## Principios clave de la Clean Architecture
+* _Independencia de frameworks_: El sistema no debe depender de frameworks. Estos son herramientas, no la base de la arquitectura.
+* _Testibilidad_: Al separar las responsabilidades del sistema, cada parte del codigo debe ser facilmente testeable de manera independiente.
+* _Independencia de la UI_: Los detalles de la interfaz de usuario deben estar desacoplados de las reglas de negocio, lo que permite cambiar la interfaz sin afectar la logica de la aplicacion.
+* _Independencia de la base de datos_: El sistema no debe depender de ningun tipo especifico de base de datos o de acceso a los datos.
+* _Independencia de los agentes externo_: Cualquier sistema externo, como APIs o base de datos, debe estar en la capa mas externa del sistema.

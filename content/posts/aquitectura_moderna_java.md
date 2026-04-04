@@ -1489,3 +1489,9 @@ class Order {
 * _Capa de Casos de Uso (Use Cases)_: Define el comportamiento especifico de la aplicacion.
 * _Capa de Interfaces_: Provee adaptadores para las capas externas (controladores, servicios externos).
 * _Capa de Infraestructura_: Contiene los detalles de implementacion, como frameworks y base de datos.
+
+## Principios SOLID y Clean Architecture
+* Clean Architecture sigue de cerca los principios SOLID, promoviendo una arquitectura que es altamente mantenible y flexible
+* Clean Architecture busca crear un sistema que sea modular y faicl de mantener, donde los detalles tecnicos puedan ser reemplazados o cambiados sin impactar en el nucleo del sistema
+* Es especialmente util para proyectos a largo plazo, donde se espera que los requisitos cambien con el tiempo.
+

@@ -1495,3 +1495,8 @@ class Order {
 * Clean Architecture busca crear un sistema que sea modular y faicl de mantener, donde los detalles tecnicos puedan ser reemplazados o cambiados sin impactar en el nucleo del sistema
 * Es especialmente util para proyectos a largo plazo, donde se espera que los requisitos cambien con el tiempo.
 
+## Independencia de Frameworks
+* Este principio sostiene que ningun Framework externo debe dictar la estructura del sistema.
+* Los frameworks suelen ser herramientas poderosas que proporcionan caracteristicas como inyeccion de dependencias, controladores HTTP, ORM (Object-Relational Mapping), etc., pero no deberian ser la base de la arquitectura.
+    - _Problema que resuelve_: Si la arquitectura depende de un framework, es dificil cambiarlo en el futuro. Ademas, el codigo se vuelve dependiente de las caracteristicas especificas del framework, lo que lo hace menos flexible.
+    - _Aplicacion practica_: Utilizar el framework solo como una herramienta en la capa mas externa del sistema. Esto se logra con el uso de interfaces y adaptadores que aislen las dependencias del framework de la logica de negocio. Por ejemplo, en lugar de utilizar directamente un ORM en el codigo de negocio, se puede usar un repositorio o una abstraccion que permita cambiar la implementacion de acceso a datos en el futuro sin afectar el resto del sistema,

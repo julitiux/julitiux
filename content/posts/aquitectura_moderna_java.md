@@ -1500,3 +1500,10 @@ class Order {
 * Los frameworks suelen ser herramientas poderosas que proporcionan caracteristicas como inyeccion de dependencias, controladores HTTP, ORM (Object-Relational Mapping), etc., pero no deberian ser la base de la arquitectura.
     - _Problema que resuelve_: Si la arquitectura depende de un framework, es dificil cambiarlo en el futuro. Ademas, el codigo se vuelve dependiente de las caracteristicas especificas del framework, lo que lo hace menos flexible.
     - _Aplicacion practica_: Utilizar el framework solo como una herramienta en la capa mas externa del sistema. Esto se logra con el uso de interfaces y adaptadores que aislen las dependencias del framework de la logica de negocio. Por ejemplo, en lugar de utilizar directamente un ORM en el codigo de negocio, se puede usar un repositorio o una abstraccion que permita cambiar la implementacion de acceso a datos en el futuro sin afectar el resto del sistema,
+
+## Testibilidad
+* Uno de los objetivos principales de Clean Architecture es que el codigo sea facil de probar.
+* Esto se logra a traves de la separacion de responsabilidades y el desacoplamiento de las diferentes capas del sistema.
+    - _Problema que resuleve_: Un sistema que depende directamente de tecnologias externas (base de datos, APIs, frameworks) es dificil de probar. Las pruebas tienden a ser mas complejas y lentas, ya que necesitan interactuar con estas dependencias.
+    - _Aplicacion practica_: Al desacoplar el codigo de la logica de negocio de los detalles tecnicos, se pueden hacer pruebas unitarias con facilidad. Por ejemplo, al probar casos de uso o entidades, las dependencias externas pueden ser reemplazadas por objetos simulados (mocks), permitiendo probar la logica sin necesidad de una base de datos o API real.
+

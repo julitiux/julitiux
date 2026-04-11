@@ -1516,3 +1516,9 @@ class Order {
 * El acceso a la base de datos es un detalle de implementacion, no debe influir en la logica central de la aplicacion. La base de datos es solo un mecanismo para almacenar informacion y no debe afectar las reglas de negocio o los casos de uso.
     - _Problema que resuelve_: Si el sistema esta fuertemente acoplado a una base de datos especifica (por ejemplo, SQL vs NoSQL), puede ser muy dificil o costoso cambiar a otra tecnologia de base de datos en el futuro. Ademas, dificulta la reutilizacion de la logica de negocio en otros contextos.
     - _Aplicacion practica_: Los repositorios y adapatadores para acceso a datos deben ser implementaciones externas, desacopladas del nucleo de la aplicacion. Se utilizan interfaces para abstraer la forma en que se accede o manipulan los datos permitiendo cambiar la base de datos sin impactar las reglas de negocio.
+
+
+## Independencia de Agentes Externos
+* Cualquier agente externo, como servicios de terceros (APIs, servicios en la nube, etc.), debe estar en una capa externa y no afectar las reglas de negocio ni los casos de uso.
+    - _Problema que resuelve_: Si la logica de negocio depende directamente de un servicio externo, cualquier cambio en el servicio externo puede romper la funcionalidad de la aplicacion. Ademas, es dificil probar la logica sin conectarse al servicio real.
+    - _Aplicacion practica_: Se puede utilizar un patron como el de "puertos y adaptadores" (tambien conocido como arquitectura hexagonal) para interactuar con agentes externos. La aplicacion deberia definir puertos (interfaces) que representen las interacciones necesarias con estos servicios, y los adaptadores implementan estos puertos para interactuar con el servicio real o con una implementacion simulada en los test.

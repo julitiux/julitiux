@@ -1507,3 +1507,9 @@ class Order {
     - _Problema que resuleve_: Un sistema que depende directamente de tecnologias externas (base de datos, APIs, frameworks) es dificil de probar. Las pruebas tienden a ser mas complejas y lentas, ya que necesitan interactuar con estas dependencias.
     - _Aplicacion practica_: Al desacoplar el codigo de la logica de negocio de los detalles tecnicos, se pueden hacer pruebas unitarias con facilidad. Por ejemplo, al probar casos de uso o entidades, las dependencias externas pueden ser reemplazadas por objetos simulados (mocks), permitiendo probar la logica sin necesidad de una base de datos o API real.
 
+## Independencia de la interfaz de Usuario (UI)
+* La UI es un detalle tecnico que no debe influir en las reglas de negocio o la logica del sistema. El sistema debe funcionar independientemente de como se presente la informacion al usuario.
+
+    - _Problema que resuleve_: Las interfaces de usuario suelen cambiar mas frecuentemente que la logica de negocio, y si estan acopladas, cualquier cambio en la UI puede obligar a modificar la logica interna del sistema.
+    - _Aplicacion practica_: Clean Architecture coloca la UI en una de las capas mas externas, de modo que las capas de negocio no dependan de ella. Asi, puedes cambiar de un sistema web a una aplicacion movil sin necesidad de modificar el nucleo del sistema. Los controladores de UI simplemente actuan como "orquestadores" que traducen las interacciones del usuario a llamados a casos de uso, sin contener logica de negocio.
+

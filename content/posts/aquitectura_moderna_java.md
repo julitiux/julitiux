@@ -1522,3 +1522,14 @@ class Order {
 * Cualquier agente externo, como servicios de terceros (APIs, servicios en la nube, etc.), debe estar en una capa externa y no afectar las reglas de negocio ni los casos de uso.
     - _Problema que resuelve_: Si la logica de negocio depende directamente de un servicio externo, cualquier cambio en el servicio externo puede romper la funcionalidad de la aplicacion. Ademas, es dificil probar la logica sin conectarse al servicio real.
     - _Aplicacion practica_: Se puede utilizar un patron como el de "puertos y adaptadores" (tambien conocido como arquitectura hexagonal) para interactuar con agentes externos. La aplicacion deberia definir puertos (interfaces) que representen las interacciones necesarias con estos servicios, y los adaptadores implementan estos puertos para interactuar con el servicio real o con una implementacion simulada en los test.
+
+## Otras consideraciones clave
+1. Reversion de las Dependencias (Dependency Rule)
+    - Las dependencias solo pueden ir de capas exteriores a capas interiores. Las capas internas nunca deberian conocer detalles sobre las capas externas. Esto significa que los detalles de implementacion, como frameworks, bases de datos o sistemas de entrega, dependen del nucleo de la aplicacion, no al reves.
+
+2. Capas Circulares
+    - La Clean Architecture se suele visualizar en capas concentricas, donde cada circulo representa un nivel de abstraccion o responsabilidad.
+    - Entidades: El ciruclo mas interno, contiene las reglas de negocio generales.
+    - Casos de uso: Representa las reglas especificas de la aplicacion.
+    - Interfaces: Se ocupan de la presentacion de datos y la interaccion con el mundo externo.
+    - Infraestructura: El circulo mas externo que contiene frameworks, bases de datos, APIs, etc.

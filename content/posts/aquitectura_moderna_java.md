@@ -1509,7 +1509,10 @@ class Order {
 
 ## Independencia de la interfaz de Usuario (UI)
 * La UI es un detalle tecnico que no debe influir en las reglas de negocio o la logica del sistema. El sistema debe funcionar independientemente de como se presente la informacion al usuario.
-
     - _Problema que resuleve_: Las interfaces de usuario suelen cambiar mas frecuentemente que la logica de negocio, y si estan acopladas, cualquier cambio en la UI puede obligar a modificar la logica interna del sistema.
     - _Aplicacion practica_: Clean Architecture coloca la UI en una de las capas mas externas, de modo que las capas de negocio no dependan de ella. Asi, puedes cambiar de un sistema web a una aplicacion movil sin necesidad de modificar el nucleo del sistema. Los controladores de UI simplemente actuan como "orquestadores" que traducen las interacciones del usuario a llamados a casos de uso, sin contener logica de negocio.
 
+## Independencia de la Base de Datos
+* El acceso a la base de datos es un detalle de implementacion, no debe influir en la logica central de la aplicacion. La base de datos es solo un mecanismo para almacenar informacion y no debe afectar las reglas de negocio o los casos de uso.
+    - _Problema que resuelve_: Si el sistema esta fuertemente acoplado a una base de datos especifica (por ejemplo, SQL vs NoSQL), puede ser muy dificil o costoso cambiar a otra tecnologia de base de datos en el futuro. Ademas, dificulta la reutilizacion de la logica de negocio en otros contextos.
+    - _Aplicacion practica_: Los repositorios y adapatadores para acceso a datos deben ser implementaciones externas, desacopladas del nucleo de la aplicacion. Se utilizan interfaces para abstraer la forma en que se accede o manipulan los datos permitiendo cambiar la base de datos sin impactar las reglas de negocio.

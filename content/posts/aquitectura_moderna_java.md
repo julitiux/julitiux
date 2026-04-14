@@ -1536,4 +1536,12 @@ class Order {
 
 ## Capas en Clean Architecture
 * Cada capa tiene responsabilidades claras y esta diseñada para estar lo mas desacoplada posible de las otras capas.
-* Esto promueve una estructura modular y facilita el mantenimiento y la escalabilidad del software
+* Esto promueve una estructura modular y facilita el mantenimiento y la escalabilidad del Software
+
+## Entidades (Entities)
+* Las entidades representan el nucleo del dominio de negocio de la aplicacion. Son objetos que contienen las reglas mas fundamentales del negocio, las cuales son universales y aplican en cualquier contexto. Estas entidades no dependen de nada externo, ni de frameworksm bases de datos, UI, o cuaquier detalle de implementacion.
+* Funcion:
+    - Reglas de negocio de alto nivel: Las entidades encapsulan las invariantes del negocio. Por ejemplo, una entidad "Usuario" en una aplicacion de gestion de usuarios puede tener reglas como: "la edad minima del usuario debe ser 18 años"
+    - Independencia: Las entidades deben poder existir sin depender de la infraestructura o la tecnologia. Son completamente independientes.
+
+

@@ -1599,3 +1599,10 @@ public class CreateUserUseCase{
 * Funcion
     - _Implementacion de interfaces_: Los adaptadores que implementan las interfaces de los repositorios, servicios de email, controlladores, etc., estan aqui. Por ejemplo, si usas Spring para controlar el acceso a datos o HTTP, esa implementacion estara en esta capa.
     - _Cambio facil de tecnologias_: Esta capa puede cambiar facilmente sin afectar el nucleo del sistema. Puedes cambiar de una base de datos SQL a NoSQL, o de un sistema de correo electronico a otro, sin modificar la logica de negocio.
+
+## Ejemplo General de Flujo
+* Un controlador de API recibe una solicitud HTTP y la convierte en un objeto de dominio.
+* El caso de uso es invocado por el controlador y ejecuta la logica de negocio, interactuando con entidades y repositorios.
+* El caso de uso llama a un repositorio (un adaptador de salida) para guardar o recuperar datos.
+* El repositorio esta implementado en la capa de infraestructura (usando una tecnologia como JPA, JDBC, etc.).
+* El caso de uso puede invocar otros adaptadores, como un servicio de correo o un servicio externo.

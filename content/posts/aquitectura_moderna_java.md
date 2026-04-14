@@ -1593,3 +1593,9 @@ public class CreateUserUseCase{
 * Funcion:
     - _Interfaces de Entrada (Controllers)_: Estas son las clases que actuan como controladores de entrada a la aplicacion. Los controlladores reciben las solicitudes externas (de la UI o de la API REST, por ejemplo) y las traducen a comandos que lso casos de uso puedan procesar.
     - _Interfaces de Salida (Gateways)_: Representan los puertos para interactuar con recursos externos como bases de datos, servicios web etc. Los repositorios son un tipo de interfaz de salida.
+
+## Capa Externa (Frameworks y Drivers)
+* La capa externa es donde viven todos los detalles tecnicos de la aplicacion, como los frameworks web, bases de datos, sistemas de mensajeria, o servicios externos. Esta capa es la mas desacoplada posible de la logica de negocio, para que los detalles tecnicos puedan ser cambiados sin afectar el nucleo de la aplicacion.
+* Funcion
+    - _Implementacion de interfaces_: Los adaptadores que implementan las interfaces de los repositorios, servicios de email, controlladores, etc., estan aqui. Por ejemplo, si usas Spring para controlar el acceso a datos o HTTP, esa implementacion estara en esta capa.
+    - _Cambio facil de tecnologias_: Esta capa puede cambiar facilmente sin afectar el nucleo del sistema. Puedes cambiar de una base de datos SQL a NoSQL, o de un sistema de correo electronico a otro, sin modificar la logica de negocio.

@@ -1560,3 +1560,10 @@ public class User{
     }
 }
 ```
+
+## Casos de Uso (Use Cases)
+* Representan la logica de la aplicacion y describen como las entidades interactuan entre si para cumplir con los requisitos de la aplicacion. Un caso de uso es una accion que la aplicacion puede realizar, como "crear un usuario", "procesar una orden", o "validar un pago".
+* Funcion:
+    - Reglas de negocio especificas de la aplicacion: Los casos de uso coordinan las interacciones entre las entidades para implementa r funcionalidades de la aplicacion.
+    - Orquestacion: Actuan como "orquestadores" de las entidadesm coordinando las acciones sin que las entidades se conozcan entre si. Esto promuebe la separacion de responsabilidades.
+    - Ciclo de vida del caso de uso: Un caso de uso puede involucrar acciones como validar, interactuar con un repositorio para guardar o recuperar entidades, y manejar excepciones.

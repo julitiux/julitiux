@@ -1587,3 +1587,9 @@ public class CreateUserUseCase{
     }
 }
 ```
+
+## Interfaces de Entrara/Salida (Controllers, Presenters, Gatewys)
+* PErmiten que las capas internas con el mundo externo (interfaz de usuario, bases de datosm servicios externos, etc.). Las interfaces de entrada/salida se utilizan para desacoplar la logica de negocio de la infraestructura.
+* Funcion:
+    - _Interfaces de Entrada (Controllers)_: Estas son las clases que actuan como controladores de entrada a la aplicacion. Los controlladores reciben las solicitudes externas (de la UI o de la API REST, por ejemplo) y las traducen a comandos que lso casos de uso puedan procesar.
+    - _Interfaces de Salida (Gateways)_: Representan los puertos para interactuar con recursos externos como bases de datos, servicios web etc. Los repositorios son un tipo de interfaz de salida.

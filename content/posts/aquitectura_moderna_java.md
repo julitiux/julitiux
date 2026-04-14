@@ -1533,3 +1533,7 @@ class Order {
     - Casos de uso: Representa las reglas especificas de la aplicacion.
     - Interfaces: Se ocupan de la presentacion de datos y la interaccion con el mundo externo.
     - Infraestructura: El circulo mas externo que contiene frameworks, bases de datos, APIs, etc.
+
+## Capas en Clean Architecture
+* Cada capa tiene responsabilidades claras y esta diseñada para estar lo mas desacoplada posible de las otras capas.
+* Esto promueve una estructura modular y facilita el mantenimiento y la escalabilidad del software

@@ -1567,3 +1567,23 @@ public class User{
     - Reglas de negocio especificas de la aplicacion: Los casos de uso coordinan las interacciones entre las entidades para implementa r funcionalidades de la aplicacion.
     - Orquestacion: Actuan como "orquestadores" de las entidadesm coordinando las acciones sin que las entidades se conozcan entre si. Esto promuebe la separacion de responsabilidades.
     - Ciclo de vida del caso de uso: Un caso de uso puede involucrar acciones como validar, interactuar con un repositorio para guardar o recuperar entidades, y manejar excepciones.
+
+```java
+public class CreateUserUseCase{
+    private final UserRepository userRepository;
+    private final EmailService emailService;
+
+    public CreateUserUseCase(UserRepository userRepository, EmailService emailService){
+        this.userRepository = userRepository;
+        this.emailService = emailService;
+    }
+
+    public void execute(User user){
+        if(userRepository.existsByEmail(user.getEmail())){
+            throw new IllegalArgumentException("Email already exists");
+        }
+        userRepository.save(user);
+        emailService.sendWelcomeEmail(user.getEmail());
+    }
+}
+```

@@ -1544,4 +1544,19 @@ class Order {
     - Reglas de negocio de alto nivel: Las entidades encapsulan las invariantes del negocio. Por ejemplo, una entidad "Usuario" en una aplicacion de gestion de usuarios puede tener reglas como: "la edad minima del usuario debe ser 18 años"
     - Independencia: Las entidades deben poder existir sin depender de la infraestructura o la tecnologia. Son completamente independientes.
 
+```java
+public class User{
+    private String name;
+    private String email;
+    private int age;
 
+    public User(String name, String email, int age){
+        if(age < 18){
+            throw new IllegalArgumentException("Age must be 18 or older");
+         }
+        this.name = name;
+        this.email = email;
+        this.age = age;
+    }
+}
+```

@@ -1609,4 +1609,10 @@ public class CreateUserUseCase{
 
 # Modulo 10
 
+## Arquitectura Hexagonal
+
+* Tambien conocida como Arquitectura de Puertos y Adaptadores, e sun patron de diseño propuesto por Alistair Cockburn en 2005.
+* Su principal objetivo es hacer que las aplicaciones sean mas independientes de los detalles externos, como frameworks, bases de datos, servicios externos o interfaces de usuario, facilitando su mantenimiento y prueba.
+* La idea central es que la logica de negocio de una aplicacion este completamente desacoplada de su infraestructura.
+
 

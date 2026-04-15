@@ -1610,16 +1610,21 @@ public class CreateUserUseCase{
 # Modulo 10
 
 ## Arquitectura Hexagonal
-
 * Tambien conocida como Arquitectura de Puertos y Adaptadores, e sun patron de diseño propuesto por Alistair Cockburn en 2005.
 * Su principal objetivo es hacer que las aplicaciones sean mas independientes de los detalles externos, como frameworks, bases de datos, servicios externos o interfaces de usuario, facilitando su mantenimiento y prueba.
 * La idea central es que la logica de negocio de una aplicacion este completamente desacoplada de su infraestructura.
 
 ## Principios clave de la arquitectura hexagonal
-
 * Independencia de la logica del negocio
 * Puertos
 * Adaptadores
     - Entrada
     - Salida
 * Aislamiento
+
+## Concepto
+* El termino "arquitectura hexagonal" proviene de la representacion visual que propuso Alistair Cockburn.
+* Para ilustrar como una aplicacion interactua con sus dependencias externas mediante puertos y adaptadores.
+* En lugar de pensar en una arquitectura basada en capas (tradicionalmente apiladas en niveles como representacion, logica del negocio, y acceso a datos), visualices la aplicacion como un nucleo central rodeado de interfaces (puertos), conectadas a los adaptadores que manejan las interacciones externas.
+
+

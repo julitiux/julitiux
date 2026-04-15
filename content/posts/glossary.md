@@ -216,3 +216,8 @@ Several data streams can be processed by separate servers, witch decreases the l
 
 ## Kafka Brokers
 Kafka brokers are servers with special jobs to do: managing the load balancing, replication, and stream decoupling within the kafka cluster. How do they get these jobs done? Well, first of all, in order to start a kafka cluster, the developer authenticates to a boostrap server (or a few). These are the first servers in the cluster. Then, the brokers alse balance the load and handle replication, and those two features are key to kafka's speed, scalability, and stability. Kafka broker is an individual kafka server that store data and server client request Brokers within a cluster.
+
+## Producer
+* An Apache Kafka Producer is a client application that publishes (writes) events to a kafka cluster.
+
+13:07

@@ -1615,4 +1615,11 @@ public class CreateUserUseCase{
 * Su principal objetivo es hacer que las aplicaciones sean mas independientes de los detalles externos, como frameworks, bases de datos, servicios externos o interfaces de usuario, facilitando su mantenimiento y prueba.
 * La idea central es que la logica de negocio de una aplicacion este completamente desacoplada de su infraestructura.
 
+## Principios clave de la arquitectura hexagonal
 
+* Independencia de la logica del negocio
+* Puertos
+* Adaptadores
+    - Entrada
+    - Salida
+* Aislamiento

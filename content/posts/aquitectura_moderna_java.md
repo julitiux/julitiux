@@ -1606,3 +1606,7 @@ public class CreateUserUseCase{
 * El caso de uso llama a un repositorio (un adaptador de salida) para guardar o recuperar datos.
 * El repositorio esta implementado en la capa de infraestructura (usando una tecnologia como JPA, JDBC, etc.).
 * El caso de uso puede invocar otros adaptadores, como un servicio de correo o un servicio externo.
+
+# Modulo 10
+
+

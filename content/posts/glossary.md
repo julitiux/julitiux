@@ -213,3 +213,6 @@ Within the context of Kafka, a cluster is a group of brokers/servers working tog
 * scalability
 
 Several data streams can be processed by separate servers, witch decreases the latency of data delivery. Data is replicated across multiple servers, so if one fails, another server has the data backed up, ensuring stability - meaning data durability and availability. Kafka balances the load across multiple server to provide scalability.
+
+## Kafka Brokers
+Kafka brokers are servers with special jobs to do: managing the load balancing, replication, and stream decoupling within the kafka cluster. How do they get these jobs done? Well, first of all, in order to start a kafka cluster, the developer authenticates to a boostrap server (or a few). These are the first servers in the cluster. Then, the brokers alse balance the load and handle replication, and those two features are key to kafka's speed, scalability, and stability.

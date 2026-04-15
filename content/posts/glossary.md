@@ -205,3 +205,11 @@ La abstraccion permite ocultar la implementacion interna y mostrar solo lo esenc
 Se logra mediante clases _abstractas_ e _interfaces_, que definen que metodos deben existsir, pero no como se implementan.
 De esta manera, las clases hijas pueden utilizar esos metodos sin conocer su funcionamiento interno, lo que reduce la complejidad del codigo
 Ademas, la logica comun se centraliza en la clase abstracta o en la interfaz, faiclitando el mantenimiento. Si se realiza una mejora o correccion, todas las clases hijas se benefician automaticamente, sin necesidad de modificarlas una por una.
+
+## Kafka Cluster
+Within the context of Kafka, a cluster is a group of brokers/servers working together for three reasons:
+* speed (low latency)
+* durability
+* scalability
+
+Several data streams can be processed by separate servers, witch decreases the latency of data delivery. Data is replicated across multiple servers, so if one fails, another server has the data backed up, ensuring stability - meaning data durability and availability. Kafka balances the load across multiple server to provide scalability.

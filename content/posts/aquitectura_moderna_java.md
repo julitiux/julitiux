@@ -1642,4 +1642,7 @@ public class CreateUserUseCase{
 * Pueden ser entradas (para recivir comandos o datos) o salidas (para enviar respuestas o consultar datos).
 * Por ejemplo, en una aplicacion de comercio electronico, un puerto de entrada podria ser un servicio que gestiona ordenes, y un puerto de salida podria ser un repositorio de almacenamiento de datos.
 
-
+## Adaptadores
+* Los adaptadores implementan los puertos y conectan la aplicacion con el mundo exterior. Hay dos tipos de adaptadores:
+    - _Adpatadores de entrada_: Conectan la logica de negocio con los mecanismos de entrada, como API REST, una interfaz de usuario, o un sistema de mensajeria
+    - _Adpatadores de salida_: Conectan la logica de negocio con servicios externos, como una base de datos, sistemas de terceros o un repositorio de datos.

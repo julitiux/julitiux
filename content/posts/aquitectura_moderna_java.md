@@ -1651,3 +1651,9 @@ public class CreateUserUseCase{
 * El nucleo de la aplicacion no deberia tener conocimiento directo de como interactua con el exterior
 * Todos los detalles externos estan aislados detrasn de los adaptadores
 * Esto permite cambiar detalles tecnicos (como un framework web o la base de datos) sun modificar el nucleo de la aplicacion.
+
+## Beneficios de la arquitectura hexagonal
+* _Alta testabilidad_: Como los adaptadores estan desacoplados del nucleo de negocio, es mas facil escribir pruebas unitarias para la logica de negocio sin depender de servicios externos.
+* _Flexibilidad_: Puedes cambiar adaptadores externos sin afectar el nucleo de la aplicacion (por ejemplo, cambiar una base de datos o el metodo de acceso a datos).
+* _Escalabilidad_; Facilita la adopcion de nuevos canales de comunicacion, como agregar una nueva interfaz de usuario o conectarse a nuevos servicios externos sin modificar la logica principal.
+* _Independencia tecnologica_: La logica de negocio se puede desarrollar sin depender de un framework o tecnologia especifica, lo que tambien facilita la migracion a nuevos entornos.

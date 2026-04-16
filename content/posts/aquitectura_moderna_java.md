@@ -1646,3 +1646,8 @@ public class CreateUserUseCase{
 * Los adaptadores implementan los puertos y conectan la aplicacion con el mundo exterior. Hay dos tipos de adaptadores:
     - _Adpatadores de entrada_: Conectan la logica de negocio con los mecanismos de entrada, como API REST, una interfaz de usuario, o un sistema de mensajeria
     - _Adpatadores de salida_: Conectan la logica de negocio con servicios externos, como una base de datos, sistemas de terceros o un repositorio de datos.
+
+## Aislamiento
+* El nucleo de la aplicacion no deberia tener conocimiento directo de como interactua con el exterior
+* Todos los detalles externos estan aislados detrasn de los adaptadores
+* Esto permite cambiar detalles tecnicos (como un framework web o la base de datos) sun modificar el nucleo de la aplicacion.

@@ -1633,3 +1633,6 @@ public class CreateUserUseCase{
     - Los puertos esta representados como puntos de entrada y salida en los lados del hexagono. Cada puerto es una interfaz que define una interaccion con el mundo exterior.
     - Los adaptadores se conectan a los puertos para manejar detalles tecnicos (base de datos, sistemas externos, interfaces de usuario, etc.). Los adaptadores externos "se enchufan" a los puertos, proporcionando las implementaciones de esos puntos de interaccion.
 
+## Independencia de la logica del negocio
+* La parte mas importante de la aplicacion es su nucleo o dominio o logica de negocio.
+* Debe estar aislada de cualquier tecnologia o servicio externo (como bases de datos o interfaces de usuario).

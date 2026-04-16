@@ -1636,3 +1636,10 @@ public class CreateUserUseCase{
 ## Independencia de la logica del negocio
 * La parte mas importante de la aplicacion es su nucleo o dominio o logica de negocio.
 * Debe estar aislada de cualquier tecnologia o servicio externo (como bases de datos o interfaces de usuario).
+
+## Puertos
+* Interfaces que definen como los componentes externos interactuan con la aplicacion
+* Pueden ser entradas (para recivir comandos o datos) o salidas (para enviar respuestas o consultar datos).
+* Por ejemplo, en una aplicacion de comercio electronico, un puerto de entrada podria ser un servicio que gestiona ordenes, y un puerto de salida podria ser un repositorio de almacenamiento de datos.
+
+

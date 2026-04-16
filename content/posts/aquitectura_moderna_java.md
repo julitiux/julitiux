@@ -1627,4 +1627,9 @@ public class CreateUserUseCase{
 * Para ilustrar como una aplicacion interactua con sus dependencias externas mediante puertos y adaptadores.
 * En lugar de pensar en una arquitectura basada en capas (tradicionalmente apiladas en niveles como representacion, logica del negocio, y acceso a datos), visualices la aplicacion como un nucleo central rodeado de interfaces (puertos), conectadas a los adaptadores que manejan las interacciones externas.
 
+## Razon detras del nombre "hexagonal"
+* El nombre "hexagonal" surge porque Cockburn eligio una forma hexagonal como una metafora visual para representar el nucleo de la aplicacion, donde cada uno de los seis lados del hexagono es un punto de interaccion o "puerto". En un esquema tipico de arquitectura hexagonal:
+    - El nucleo de esta aplicacion (logica de negocio) esta en el centro del hexagono.
+    - Los puertos esta representados como puntos de entrada y salida en los lados del hexagono. Cada puerto es una interfaz que define una interaccion con el mundo exterior.
+    - Los adaptadores se conectan a los puertos para manejar detalles tecnicos (base de datos, sistemas externos, interfaces de usuario, etc.). Los adaptadores externos "se enchufan" a los puertos, proporcionando las implementaciones de esos puntos de interaccion.
 

@@ -1673,3 +1673,10 @@ public class CreateUserUseCase{
     - (Interfaces)
 * Adaptadores
     - (Implementaciones)
+
+## El Nucleo de la Aplicacion (Dominios de Negocio)
+* Corazon de la arquitectura, donde reside la logica de negocio y reglas del dominio. Esta complementando desacoplado de las tecnologías externas. Aqui es donde se utiliza el modelo del dominio, que puede estar estructurado usando patrones como Domain-Droven Design (DDD).
+    - _Entidads_: Representa los objetos de dominio, aquellos que tienen identidad y que persisten a lo largo del tiempo. Ejemplo: User, Order, Product.
+    - _Agregado_: Conjuntos de entidades que son tratadas como una unidad en la logica de negocio, asegurando la consistencia. Ejemplo: Un Order puede tener una lista de OrderItem.
+    - _Servicios de Dominio_: Son las operaciones complejas que no pertenecen a una unica entidad o valor. Se utilizan para implementar logica de negocio que afecta multiples entidades o agregados.
+* El nucleo de la aplicacion contiene interfaces que definen como otras capas interactuan con el. Estas interfaces se denominan Puertos.

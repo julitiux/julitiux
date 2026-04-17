@@ -1693,3 +1693,8 @@ public class CreateUserUseCase{
 * Los adaptadores son la implementacion concreta de los puertos, que conectan la aplicacion con el mundo exterior. Se dividen en dos tipos:
     - _Adaptadores de entrara_: Implementan los puertos de entrada. Son responsables de tomar las solicitudes desde la interfaz del usuario, controladores REST, interfaces graficas o cualquier otro mecanismo externo, y convertirlas en operaciones que el nucleo puede manejar. Ejemplo: un controlador REST que recibe una soliciud HTTP y delega la logica a un servicio de dominio.
     - _Adaptadores de salida_: Implementan los puertos de salida y permiten que la aplicacion interactue con sistemas externos. Estos dadaptadores pueden incluir repositorios de bases de datos, servicios de mensajeria, o conexiones a APIs externas.
+
+## Organizacion en Capas
+* La arquitectura hexagonal normalmente se organiza en capas, separando cada responsabilidad de manera clara:
+    - _Capa de Aplicacion_: Contiene la logica de negocio y las reglas del dominio. Aqui estan las entidades, agregados y servicios de dominio. Esta cape define los puertos, que son interfaces hacia el exterios.
+    - _Capa de Infraestructura_: Contiene adaptadores de entrada y salida que interactuan con frameworks, bases de datos y servicios externos. Esta capa implementa los puertos definidos por el nucleo de negocio. Ejemplo: controladores HTTP, repositorios JPA o conexiones a base de datos externas.

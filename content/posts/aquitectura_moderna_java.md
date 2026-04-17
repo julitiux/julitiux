@@ -1666,3 +1666,10 @@ public class CreateUserUseCase{
     - _Adaptador de salida_: Una implementacion de OrderRepository que usa JPA para realizar consultas a una base de datos relacional.
 * Esto hace que el nucleo de la aplicacion no dependa ni del framework web (como Spring) ni de la base de datos, facilitando los cambios o las pruebas unitarias.
 
+## Componentes de la Arquitectura Hexagonal
+* El Nucleo de la Aplicacion
+    - (Dominios del Negocio)
+* Puertos
+    - (Interfaces)
+* Adaptadores
+    - (Implementaciones)

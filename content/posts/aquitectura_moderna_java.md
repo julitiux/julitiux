@@ -1680,3 +1680,12 @@ public class CreateUserUseCase{
     - _Agregado_: Conjuntos de entidades que son tratadas como una unidad en la logica de negocio, asegurando la consistencia. Ejemplo: Un Order puede tener una lista de OrderItem.
     - _Servicios de Dominio_: Son las operaciones complejas que no pertenecen a una unica entidad o valor. Se utilizan para implementar logica de negocio que afecta multiples entidades o agregados.
 * El nucleo de la aplicacion contiene interfaces que definen como otras capas interactuan con el. Estas interfaces se denominan Puertos.
+
+## Puertos (Interfaces)
+* Los puertos representan las interfaces del nucleo de la aplicacion para la entrada y salida de datos. Se dividen en dos tipos:
+    - _Puertos de entrada_: Permiten a los clientes (adaptadores de entrada) interactura con la aplicacion, como APIs, UI, CLi, etc. Son como "puntos de entrada" para interactuar con la logica de negocio.
+    - _Puertos de salida_: Representan las dependencias externas que el nucleo de negocio necesita, como bases de datos, servicios de mensajeria, o APIs externas.
+* Ejemplos:
+    - Un puerto de entrada puede ser una interfaz OrderService que define los metodos para crear, actualizar o eliminar ordenes.
+    - Un puerto de salida puede ser un repositorio como OrderRepository que define metodos para almacenar o recuperar ordenes desde la base de datos.
+

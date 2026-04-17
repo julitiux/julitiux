@@ -1657,3 +1657,12 @@ public class CreateUserUseCase{
 * _Flexibilidad_: Puedes cambiar adaptadores externos sin afectar el nucleo de la aplicacion (por ejemplo, cambiar una base de datos o el metodo de acceso a datos).
 * _Escalabilidad_; Facilita la adopcion de nuevos canales de comunicacion, como agregar una nueva interfaz de usuario o conectarse a nuevos servicios externos sin modificar la logica principal.
 * _Independencia tecnologica_: La logica de negocio se puede desarrollar sin depender de un framework o tecnologia especifica, lo que tambien facilita la migracion a nuevos entornos.
+
+## Ejemplo en el contexto de una aplicacion Java moderna.
+* En un proyecto que ise arquitectura hexagonal en java, podrias tener:
+    - _Puerto de entrada_: Una interface OrderService que define operaciones relacionadas con ordenes
+    - _Adaptador de entrada_: Un controlador REST que implementa este puerto para interactuar con clientes a traves de HTTP
+    - _Puesto de salida_: Una interface OrderRepository que define como interacturar con la base de datos
+    - _Adaptador de salida_: Una implementacion de OrderRepository que usa JPA para realizar consultas a una base de datos relacional.
+* Esto hace que el nucleo de la aplicacion no dependa ni del framework web (como Spring) ni de la base de datos, facilitando los cambios o las pruebas unitarias.
+

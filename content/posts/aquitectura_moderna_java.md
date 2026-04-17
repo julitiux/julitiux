@@ -1689,3 +1689,7 @@ public class CreateUserUseCase{
     - Un puerto de entrada puede ser una interfaz OrderService que define los metodos para crear, actualizar o eliminar ordenes.
     - Un puerto de salida puede ser un repositorio como OrderRepository que define metodos para almacenar o recuperar ordenes desde la base de datos.
 
+## Adaptadores (Implementaciones)
+* Los adaptadores son la implementacion concreta de los puertos, que conectan la aplicacion con el mundo exterior. Se dividen en dos tipos:
+    - _Adaptadores de entrara_: Implementan los puertos de entrada. Son responsables de tomar las solicitudes desde la interfaz del usuario, controladores REST, interfaces graficas o cualquier otro mecanismo externo, y convertirlas en operaciones que el nucleo puede manejar. Ejemplo: un controlador REST que recibe una soliciud HTTP y delega la logica a un servicio de dominio.
+    - _Adaptadores de salida_: Implementan los puertos de salida y permiten que la aplicacion interactue con sistemas externos. Estos dadaptadores pueden incluir repositorios de bases de datos, servicios de mensajeria, o conexiones a APIs externas.

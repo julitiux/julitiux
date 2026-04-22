@@ -1750,3 +1750,13 @@ public class CreateUserUseCase{
     - _Totalmente desacoplados de las tecnologias_: Los puertos de entrada no deben depender de detalles tecnologicos como HTTP, bases de datos o detalles de frameworks. Son simples contratos que definen el comportamiento esperado.
     - _Interfaz clara_: Los puertos de entrada deben estar diseñados con interfaces bien definidas que encapsulen los casos de uso, de manera que los adaptadores de entrada (que implementan la interfaz) puedan conectarse sin afectar al nucleo de la aplicacion.
 
+## Ejemplo de Puerto de Entrada
+* En una aplicacion de comercio electronico se permite a los usuarios hacer pedidos
+* Un puertos de entrada seria un interfaz que define las operaciones que se pueden realizar sobre los perdidos, como createOrder(), cancelOrder(), etc.
+
+```java
+public interface OrderService {
+    void createOrder(CreateOrderCommand command);
+    void cancelOrder(OrderId orderId);
+}
+```

@@ -1727,4 +1727,6 @@ public class CreateUserUseCase{
 * _Complejidad inicial_: Para proyectos pequeños, la arquitectura hexagonal puede ser una sobrecarga innecesaria, Aunque es muy util para sistemas complejos, la separacion en puertos y adaptadores puede añadir complejidad en la fase inicial de desarrollo
 * _Curva de aprendizaje_: Implementar correctamente la arquitectura hexagonal requiere que el equipo este bien entrenado en el concepto de puerto y adaptadores, y como manejar dependencias inversas.
 
-
+## Comparacion con otras arquitecturas
+* _Arquitectura en Capas_: La arquitectura en capas suele tener una dependencia mas directa entre las capas, mientras que en la arquitectura hexagonal, las dependencias estan invertidas mediante interfaces (puertos)
+* _Arquitectura de Microservicios_: Aunque la arquitectura hexagonal es aplicable tanto en aplicaciones monoliticas como en microservicios, encaja muy bien en este ultimo escenario, ya que fomenta la independencia de los componentes (puertos y adaptadores son ideales para microservicios que pueden intercambiar implementaciones de adaptadores sin afectar a la logica del negocio)

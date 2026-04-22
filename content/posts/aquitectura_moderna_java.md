@@ -1743,3 +1743,10 @@ public class CreateUserUseCase{
     - Puertos de Entrada (Input Ports)
     - Puestos de Salida (Output Ports)
 
+## Puertos de Entrada (Input Ports)
+* Los puertos de entrada son interfaces que permiten a los clientes externos (interfaces de usuario, APIs REST, eventos de mensajeria, etc.) interactuar con la logica de negocio. Definen las acciones o casos de uso que la aplicacion ofrece.
+* Caracteristicas de los Puertos de Entrada:
+    - _Representan casos de uso o acciones de negocio_: Cada puerto de entrada define una operacion o conjunto de operaciones que forman parte de la logica de negocio. Esto puede incluir operaciones como "crear un pedido", "procesar un pago", o "actualizar un perfil de usuario"
+    - _Totalmente desacoplados de las tecnologias_: Los puertos de entrada no deben depender de detalles tecnologicos como HTTP, bases de datos o detalles de frameworks. Son simples contratos que definen el comportamiento esperado.
+    - _Interfaz clara_: Los puertos de entrada deben estar diseñados con interfaces bien definidas que encapsulen los casos de uso, de manera que los adaptadores de entrada (que implementan la interfaz) puedan conectarse sin afectar al nucleo de la aplicacion.
+

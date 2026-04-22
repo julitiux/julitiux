@@ -1713,3 +1713,8 @@ public class CreateUserUseCase{
     - jpaOrderRepository: Implementacion concreta del OrderRepository, que utiliza JPA para interactuar con una base de datos
     - NotificationServiceAdapter: Implementacion de un servicio externo de notificaciones que envia correos o SMS cuando se crea una orden
 
+## Beneficios de esta Estructura
+* _Aislamiento de dependencias_: Cambiar el sistema de almacenamiento (de una base de datos relacional a NoSQL, por ejemplo) no afecta el nucleo de la aplicacion, ya que solo necesitas cambiar el adaptador de salida, manteniendo la interfaz de repositorio intacta.
+* _Pruebas unitarias faciles_: Como el nucleo de la aplicacion esta desacoplado de la infraestructura externa, puedes probar la logica de negocio utilizando mocks o stubs para los adaptadores
+* _Facilidad de expansion_: Si en el futuro necesitas arreglar una nueva forma de interaccion (como API GraphQL o un interfaz CLI), puedes agregar nuevos adaptadores de entrada sin modificar la logica de negocio existente.
+* _Reutilizacion de logica de negocio_: Los mismos puertos de entrada pueden ser implementados por multiples adaptadores de entrada (REST, UI, mensajeria) permitiendo que multiples clientes intractuen con el mismo nucleo de la aplicacion.

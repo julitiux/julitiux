@@ -222,3 +222,6 @@ Kafka brokers are servers with special jobs to do: managing the load balancing, 
 
 ## Consumer
 * An Apache Kafka Consumer is a client application that subscribes to (reads and processes) events.
+
+## Kafka Topic
+A kafka topic is a logical channel or feed category to which records (messages) are published by producers and from which records are consumed by consumers. Topics serve as a way to organize and categorize the stream of messages within the Kafka messaging system.

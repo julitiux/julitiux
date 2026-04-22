@@ -1734,3 +1734,12 @@ public class CreateUserUseCase{
 ## Introduccion a Puertos
 * Los Puertos en la arquitectura hexagonal son intefaces que definen los puntos de interaccion entre el nucleo de la aplicacion (la logica de negocio) y el mundo exterior (como bases de datos, interfaces de usuario , servicios externos, etc.).
 * Son un componente crucial para garantizar el desacoplamiento entre la logica de negocio y las tecnologias externas, ya que permiten que el nucleo de la aplicacion se mantenga completamente independiente de los detalles de implementacion especificos.
+
+## ¿Que son los Puertos?
+* Los puertos son interfaces que actuan como "cotratos" que definen como los componentes externos deben interactuar con la logica de negocio de la aplicacion. En la arquitectura hexagonal, los puertos permiten:
+    - Recibir comandos o solicitudes desde el exterior (por ejemplo, desde una API o interfaz grafica)
+    - Enviar datos o invocar servicios externos (por ejemplo, interactuar con una base de datos o llamar a otro servicio)
+* Lospuertos se dividen en dos grandes categorias:
+    - Puertos de Entrada (Input Ports)
+    - Puestos de Salida (Output Ports)
+

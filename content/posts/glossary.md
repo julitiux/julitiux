@@ -225,3 +225,6 @@ Kafka brokers are servers with special jobs to do: managing the load balancing, 
 
 ## Kafka Topic
 A kafka topic is a logical channel or feed category to which records (messages) are published by producers and from which records are consumed by consumers. Topics serve as a way to organize and categorize the stream of messages within the Kafka messaging system.
+
+## Partitions
+In Apache Kafka, a partition is a basic unit of parallelism and scalability. It is a way of horizontally dividing a topic into multiple independently managed units. Each partition is a strictly ordered, immutable sequence of records, and it plays a crucial role in the distribution, parallel processing, and fault tolerance of data within a Kafka cluster.

@@ -228,3 +228,8 @@ A kafka topic is a logical channel or feed category to which records (messages) 
 
 ## Partitions
 In Apache Kafka, a partition is a basic unit of parallelism and scalability. It is a way of horizontally dividing a topic into multiple independently managed units. Each partition is a strictly ordered, immutable sequence of records, and it plays a crucial role in the distribution, parallel processing, and fault tolerance of data within a Kafka cluster.
+
+## Offset
+Offset is a sequence of ids given to messages as they arrive at a partition. Once the offset is assigned, it will never be changed. The first message gets an offset zero (0). The next message receives an offset one (1), and so on...
+
+

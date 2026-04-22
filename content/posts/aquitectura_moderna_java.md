@@ -1723,3 +1723,8 @@ public class CreateUserUseCase{
 * _Arquitectura en Capas_: La arquitectura hexagonal es una evolucion de la arquitectura en capas, pero con el proposito de eliminar las dependencias hacia tecnologias especificas en cada capa. En vez de tener una "capa de presentacion", "capa de negocio" y "capa de detos" estrictamente alineadas, el foco aqui esta en puertos y adaptadores que se comunican con el nucleo de la aplicacion de manera flexible
 * _Domain- Driven Design (DDD)_: La arquitectura hexagonal complementa muy bien a DDD, ya que facilita la separacion del modelo de dominio de las preocupaciones tecnologicas, Los servicios de dominio, entidades y agregados definidos en DDD encajan de forma natural en el nucleo de la arquitectura hexagonal.
 
+## Retos Potenciales
+* _Complejidad inicial_: Para proyectos pequeños, la arquitectura hexagonal puede ser una sobrecarga innecesaria, Aunque es muy util para sistemas complejos, la separacion en puertos y adaptadores puede añadir complejidad en la fase inicial de desarrollo
+* _Curva de aprendizaje_: Implementar correctamente la arquitectura hexagonal requiere que el equipo este bien entrenado en el concepto de puerto y adaptadores, y como manejar dependencias inversas.
+
+

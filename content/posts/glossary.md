@@ -220,4 +220,5 @@ Kafka brokers are servers with special jobs to do: managing the load balancing, 
 ## Producer
 * An Apache Kafka Producer is a client application that publishes (writes) events to a kafka cluster.
 
-13:07
+## Consumer
+* An Apache Kafka Consumer is a client application that subscribes to (reads and processes) events.

@@ -1730,3 +1730,7 @@ public class CreateUserUseCase{
 ## Comparacion con otras arquitecturas
 * _Arquitectura en Capas_: La arquitectura en capas suele tener una dependencia mas directa entre las capas, mientras que en la arquitectura hexagonal, las dependencias estan invertidas mediante interfaces (puertos)
 * _Arquitectura de Microservicios_: Aunque la arquitectura hexagonal es aplicable tanto en aplicaciones monoliticas como en microservicios, encaja muy bien en este ultimo escenario, ya que fomenta la independencia de los componentes (puertos y adaptadores son ideales para microservicios que pueden intercambiar implementaciones de adaptadores sin afectar a la logica del negocio)
+
+## Introduccion a Puertos
+* Los Puertos en la arquitectura hexagonal son intefaces que definen los puntos de interaccion entre el nucleo de la aplicacion (la logica de negocio) y el mundo exterior (como bases de datos, interfaces de usuario , servicios externos, etc.).
+* Son un componente crucial para garantizar el desacoplamiento entre la logica de negocio y las tecnologias externas, ya que permiten que el nucleo de la aplicacion se mantenga completamente independiente de los detalles de implementacion especificos.

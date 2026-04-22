@@ -1698,3 +1698,18 @@ public class CreateUserUseCase{
 * La arquitectura hexagonal normalmente se organiza en capas, separando cada responsabilidad de manera clara:
     - _Capa de Aplicacion_: Contiene la logica de negocio y las reglas del dominio. Aqui estan las entidades, agregados y servicios de dominio. Esta cape define los puertos, que son interfaces hacia el exterios.
     - _Capa de Infraestructura_: Contiene adaptadores de entrada y salida que interactuan con frameworks, bases de datos y servicios externos. Esta capa implementa los puertos definidos por el nucleo de negocio. Ejemplo: controladores HTTP, repositorios JPA o conexiones a base de datos externas.
+
+## Ejemplo Practico: Pedidos en una Tienda en Linea.
+* Capa de Aplicacion (Nucleo):
+    - Order: Entidad que representa una orden en el sistema
+    - OrderService: Interfaz (puerto de entrada) que define operaciones como createOrder, cancelOrder, etc
+    - OrderRepository: Interfaz (puerto de salida)que define como se almacenan o recuperan las ordenes.
+
+* Adaptadores de Entrada:
+    - OrderController: Un controlador REST que expone aun API HTTP para interactuar con las ordenes. Implementa el puerti de entrada OrderService.
+    - OrderEventListener: Un consumidor de eventos de mensajeria (por ejemplo, un adaptador que escucha eventos de Kafka o RabbitMQ)
+
+* Adaptadores de Salida
+    - jpaOrderRepository: Implementacion concreta del OrderRepository, que utiliza JPA para interactuar con una base de datos
+    - NotificationServiceAdapter: Implementacion de un servicio externo de notificaciones que envia correos o SMS cuando se crea una orden
+

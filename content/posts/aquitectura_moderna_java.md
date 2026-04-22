@@ -1718,3 +1718,8 @@ public class CreateUserUseCase{
 * _Pruebas unitarias faciles_: Como el nucleo de la aplicacion esta desacoplado de la infraestructura externa, puedes probar la logica de negocio utilizando mocks o stubs para los adaptadores
 * _Facilidad de expansion_: Si en el futuro necesitas arreglar una nueva forma de interaccion (como API GraphQL o un interfaz CLI), puedes agregar nuevos adaptadores de entrada sin modificar la logica de negocio existente.
 * _Reutilizacion de logica de negocio_: Los mismos puertos de entrada pueden ser implementados por multiples adaptadores de entrada (REST, UI, mensajeria) permitiendo que multiples clientes intractuen con el mismo nucleo de la aplicacion.
+
+## Relacion con otros Patrones
+* _Arquitectura en Capas_: La arquitectura hexagonal es una evolucion de la arquitectura en capas, pero con el proposito de eliminar las dependencias hacia tecnologias especificas en cada capa. En vez de tener una "capa de presentacion", "capa de negocio" y "capa de detos" estrictamente alineadas, el foco aqui esta en puertos y adaptadores que se comunican con el nucleo de la aplicacion de manera flexible
+* _Domain- Driven Design (DDD)_: La arquitectura hexagonal complementa muy bien a DDD, ya que facilita la separacion del modelo de dominio de las preocupaciones tecnologicas, Los servicios de dominio, entidades y agregados definidos en DDD encajan de forma natural en el nucleo de la arquitectura hexagonal.
+

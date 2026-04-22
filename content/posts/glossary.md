@@ -232,4 +232,7 @@ In Apache Kafka, a partition is a basic unit of parallelism and scalability. It 
 ## Offset
 Offset is a sequence of ids given to messages as they arrive at a partition. Once the offset is assigned, it will never be changed. The first message gets an offset zero (0). The next message receives an offset one (1), and so on...
 
+## Consumer Groups
+A consumer Groups contains one or more consumers working together to process messages.
+
 

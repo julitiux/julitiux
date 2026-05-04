@@ -1766,3 +1766,8 @@ public interface OrderService {
 * El metodo createOrder acepta un comando CreateOrderCommand que contiene todos los datos necesarios para crear un pedido.
 * El metodo cancelOrder recibe un identificador de pedido (OrderId) para cancelar un pedido existente.
 * Esto puerto de entrada no tiene conocimiento de como se invocara (a traves de una API REST, una UI grafica, un sistema de eventos, etc.). Simplemente define lo que el nucleo de la aplicacion es capaz de hacer.
+
+## Beneficios de los Puertos de Entrada
+* _Desacoplamiento_: Los puertos de entrada permiten desacoplar la logica de negocio de los detalles tecnologicos o de infraestructura, facilitando la capacidad de cambiar adaptadores sin modificar la logica central
+* _Claridad_: Los puertos de entrada definen claramente los casos de uso de la aplicacion, ayudando a los desarrolladores a entender las operaciones clave que la aplicacion afrece.
+* _Facilidad para las pruebas_: Dato que los puertos de entrada estan desacoplados de los detalles tecnologicos, es facil escribbir pruebas unitarias para estos casos de uso sin depender de frameworks o bases de datos.

@@ -1775,3 +1775,9 @@ public interface OrderService {
 ## Puertos de Salida (Output Ports)
 * Los puertos de salida son interfaces que definen como el nucleo de la aplicacion interactua con los servicios o sistemas externos.
 * Esto incluye cualquier dependencia que la logica de negocio pueda tener, como bases de datos, sistemas de mensajeria, servicios de pago, API de terceros, etc.
+
+## Caracteristicas de los Puertos de Salidas
+* _Describen dependencias externas_: Los puertos de salida definen los metodos que el nucleo de la aplicacion necesita para interactuar con el mundo exterior, como "almacenar un pedido en la base de datos", "enviar un correo de confirmacion", o "consultar la disponibilidad de inventario".
+* _Permiten cambiar tecnologias facilmente_: Como los puertos de salida son interfaces, la implementacion concreta (el adaptador de salida) puede cambiar sin afectar el nucleo. Esto significa que puedes cambiar de una base de datos relacional NoSQLm o de un servicio de mensajeria a otro, sin tocar la logica de negocio.
+* _Estan completamente desacoplados de la implementacion concreta_: Al igual que los puertos de entrada, los puertos de salida no tiene ninguna dependencia de frameworks o tecnologias especificas.
+

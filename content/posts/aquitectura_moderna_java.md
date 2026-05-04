@@ -1760,3 +1760,9 @@ public interface OrderService {
     void cancelOrder(OrderId orderId);
 }
 ```
+
+## Ejemplo
+* OrderService es un puerto de entrada que define los casos de uso de la aplicacion relacionados con los pedidos.
+* El metodo createOrder acepta un comando CreateOrderCommand que contiene todos los datos necesarios para crear un pedido.
+* El metodo cancelOrder recibe un identificador de pedido (OrderId) para cancelar un pedido existente.
+* Esto puerto de entrada no tiene conocimiento de como se invocara (a traves de una API REST, una UI grafica, un sistema de eventos, etc.). Simplemente define lo que el nucleo de la aplicacion es capaz de hacer.

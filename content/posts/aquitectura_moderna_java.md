@@ -1771,3 +1771,7 @@ public interface OrderService {
 * _Desacoplamiento_: Los puertos de entrada permiten desacoplar la logica de negocio de los detalles tecnologicos o de infraestructura, facilitando la capacidad de cambiar adaptadores sin modificar la logica central
 * _Claridad_: Los puertos de entrada definen claramente los casos de uso de la aplicacion, ayudando a los desarrolladores a entender las operaciones clave que la aplicacion afrece.
 * _Facilidad para las pruebas_: Dato que los puertos de entrada estan desacoplados de los detalles tecnologicos, es facil escribbir pruebas unitarias para estos casos de uso sin depender de frameworks o bases de datos.
+
+## Puertos de Salida (Output Ports)
+* Los puertos de salida son interfaces que definen como el nucleo de la aplicacion interactua con los servicios o sistemas externos.
+* Esto incluye cualquier dependencia que la logica de negocio pueda tener, como bases de datos, sistemas de mensajeria, servicios de pago, API de terceros, etc.

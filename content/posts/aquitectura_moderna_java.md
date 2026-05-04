@@ -1784,3 +1784,12 @@ public interface OrderService {
 ## Ejemplo de Puerto de Salida
 * Un puerto de salida podria ser un repositorio para almacenar los pedidos
 * Este puerto de salida seria simplemente una interfaz que define las operaciones que el nucleo necesita realizar sobre los pedidos, sin especificar como o donde se almacenaran.
+
+```java
+public interface OrderRepository {
+
+    void save(Order order);
+    Optional <Order> findById(OrderId id);
+
+}
+```

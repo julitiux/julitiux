@@ -1781,3 +1781,6 @@ public interface OrderService {
 * _Permiten cambiar tecnologias facilmente_: Como los puertos de salida son interfaces, la implementacion concreta (el adaptador de salida) puede cambiar sin afectar el nucleo. Esto significa que puedes cambiar de una base de datos relacional NoSQLm o de un servicio de mensajeria a otro, sin tocar la logica de negocio.
 * _Estan completamente desacoplados de la implementacion concreta_: Al igual que los puertos de entrada, los puertos de salida no tiene ninguna dependencia de frameworks o tecnologias especificas.
 
+## Ejemplo de Puerto de Salida
+* Un puerto de salida podria ser un repositorio para almacenar los pedidos
+* Este puerto de salida seria simplemente una interfaz que define las operaciones que el nucleo necesita realizar sobre los pedidos, sin especificar como o donde se almacenaran.

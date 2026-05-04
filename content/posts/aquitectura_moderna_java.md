@@ -1787,9 +1787,12 @@ public interface OrderService {
 
 ```java
 public interface OrderRepository {
-
     void save(Order order);
     Optional <Order> findById(OrderId id);
-
 }
 ```
+
+## Ejemplo
+* _OrderRepository_ es un puerto de salida que define las operaciones de alamacenamiento necesarias para el agregado _Order_.
+* _save()_ guarda una instancia de _Order_, y _findById()_ busca un pedido por su identificador.
+* Esta interfaz no tiene conocimiento de si la implementacion sera a traves de una base de datos relacional (como MySQL), una base de datos NoSQL (como MongoDB) o incluso almacenamiento en memoria para pruebas.

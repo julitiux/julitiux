@@ -1826,3 +1826,26 @@ public class OrderController {
     }
 }
 ```
+
+## Adaptadores de Salida
+* Implementan los puertos de salida y se encargan de traducir las solicitudes del nucleo a llamadas a sistemas externos como bases de datos o servicios externos.
+
+```java
+@Repository
+public class JpaOrderRepository implements OrderRepository{
+
+    @PersistenceContext
+    private EntityManager entityManager;
+
+    @Override
+    public void save(Order order){
+        entityManager.persist(order);
+    }
+
+    @Override
+    public Optional<Order> findById(OrderId id){
+        return Optional.ofNullable(EntityManager.find(Order.class, id));
+    }
+
+}
+```

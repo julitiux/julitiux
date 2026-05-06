@@ -1805,3 +1805,24 @@ public interface OrderRepository {
 ## Relacion entre Puertos y Adaptadores
 * Los puertos, tanto de entrada como de salida, son simplemente interfaces.
 * Los adaptadores son la implementaciones concretas de estas interfaces, encargadas de traducir las solicitudes del mundo exterior en algo que el nucleo de la aplicacion pueda procesar, o de converir las solicitudes del nucleo en llamdas a sistemas externos.
+
+## Adaptadores de Entrada
+* Implementan los puertos de entrada y se encargan de traducir las solicitudes de los clientes externos a una forma que la aplicacion entienda.
+
+```java
+@RestController
+public class OrderController {
+    private final OrderService orderService;
+
+    public OrderController(OrderService orderService){
+        this.orderService = orderService;
+    }
+
+    @PostMapping("/orders")
+    public ResponseEntity<Void> createOrder(@RequestBody CreateOrderRequest request){
+        CreateOrderCommand command = new CreateOrderCommand(request.getItems());
+        orderService.createOrder(command);
+        return ResponseEntity.status(HttpStatus.CREATED).build();
+    }
+}
+```

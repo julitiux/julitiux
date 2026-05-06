@@ -1796,3 +1796,9 @@ public interface OrderRepository {
 * _OrderRepository_ es un puerto de salida que define las operaciones de alamacenamiento necesarias para el agregado _Order_.
 * _save()_ guarda una instancia de _Order_, y _findById()_ busca un pedido por su identificador.
 * Esta interfaz no tiene conocimiento de si la implementacion sera a traves de una base de datos relacional (como MySQL), una base de datos NoSQL (como MongoDB) o incluso almacenamiento en memoria para pruebas.
+
+## Beneficios de los Puertos de Salida
+* _Flexibilidad_: Al definir interfaces para interactuar con el exterior, los puertos de salida permiten que cambies facilmente las tecnologias o frameworks subyacentes sin modificar el nucleo de la aplicacion
+* _Aislamiento de las tecnologias externas_: El nucleo de la aplicacion no tien que preocuparse por como se implementan los detalles externos, lo que facilita su testibilidad y mantenimiento.
+* _Pruebas unitarias y mocks_: Al definir dependencias a traves de interfaces, es facil sustituir las implementaciones reales por mocks en las pruebas, lo que mejora la capacidad de probar la logica de negocio de manera aislada.
+

@@ -1872,3 +1872,7 @@ public class JpaOrderRepository implements OrderRepository{
 * _Proposito_: Fue diseñada para desacoplar la logica de negocio de las dependencias externas, como bases de datos, servicios externos, y frameworks. El objetivo es que la logica de negocio sea independiente de las tecnologias con las que interactua.
 * _Metafora_: Visualiza la aplicacion como un nucleo rodeado de "puertos" que representan interfaces hacia el mundo exterior, con "adaptadores" que conectan esos puertos a tecnologias externas.
 
+## Origen y Proposito Arquitectura Limpia
+* _Propuesta por_: Robert C. Martin (Uncle Bob).
+* _Proposito_: La arquitectura limpia es un modelo para organizar sistemas de manera que los cambios sean faciles y la logica de negocio este completamente aislada de cualquier tecnologica externa. Esta diseñada para que las aplicaciones puedan ser modificadas sin tener que cambiar su nucleo de negocio.
+* _Metafora_: Visualiza la aplicacion en capas concentricas, donde el nucleo interno es la logica de negocio pura, y las capas externas son dependientes de las internas. El flujo de dependencias debe ir hacia el centro (dependencias invertidas).

@@ -1802,3 +1802,6 @@ public interface OrderRepository {
 * _Aislamiento de las tecnologias externas_: El nucleo de la aplicacion no tien que preocuparse por como se implementan los detalles externos, lo que facilita su testibilidad y mantenimiento.
 * _Pruebas unitarias y mocks_: Al definir dependencias a traves de interfaces, es facil sustituir las implementaciones reales por mocks en las pruebas, lo que mejora la capacidad de probar la logica de negocio de manera aislada.
 
+## Relacion entre Puertos y Adaptadores
+* Los puertos, tanto de entrada como de salida, son simplemente interfaces.
+* Los adaptadores son la implementaciones concretas de estas interfaces, encargadas de traducir las solicitudes del mundo exterior en algo que el nucleo de la aplicacion pueda procesar, o de converir las solicitudes del nucleo en llamdas a sistemas externos.

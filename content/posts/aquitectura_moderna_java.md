@@ -1856,3 +1856,10 @@ public class JpaOrderRepository implements OrderRepository{
 * _Mejora la testabilidad_: Al usar interfaces, es facil usar mocks en las pruebas, permitiendo que la logica de negocio sea probada en aislamiento sin preocuparse por las dependencias externas.
 * _Claridad y organizacion_: Los puertos clarifican cuales son las responsabilidades de la aplicacion y como interactua con el exterior, lo que facilita el mantenimiento y la evolucion del sistema.
 
+## Patrones adicionales
+* CQRS (Command Query Responsability Segregation)
+* Event Sourcing
+* Patron Repositorio
+* Publicacion de Eventos de Dominio
+* Inyeccion de Dependencias (DI).
+

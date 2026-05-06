@@ -1849,3 +1849,10 @@ public class JpaOrderRepository implements OrderRepository{
 
 }
 ```
+
+## Ventajas del uso de Puertos
+* _Desacoplamiento de tecnologias_; Como el nucleo de la aplicacion solo depende de interfaces (puertos), puedes cambiar las tecnologias (como bases de datos, servicios de mensajeria o frameworks web) sin tocar la logica central de la aplicacion.
+* _Flexibilidad y extensibilidad_: Puede agregar nuevos adaptadores (como un nuevo tipo de interfaz de usuario o un nuevo sistema de persistencia) sin modificar el nucleo de aplicacion. Solo necesitas crear una nueva implementacion del puerto correspondiente.
+* _Mejora la testabilidad_: Al usar interfaces, es facil usar mocks en las pruebas, permitiendo que la logica de negocio sea probada en aislamiento sin preocuparse por las dependencias externas.
+* _Claridad y organizacion_: Los puertos clarifican cuales son las responsabilidades de la aplicacion y como interactua con el exterior, lo que facilita el mantenimiento y la evolucion del sistema.
+

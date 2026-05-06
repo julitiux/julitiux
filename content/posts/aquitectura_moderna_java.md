@@ -1876,3 +1876,9 @@ public class JpaOrderRepository implements OrderRepository{
 * _Propuesta por_: Robert C. Martin (Uncle Bob).
 * _Proposito_: La arquitectura limpia es un modelo para organizar sistemas de manera que los cambios sean faciles y la logica de negocio este completamente aislada de cualquier tecnologica externa. Esta diseñada para que las aplicaciones puedan ser modificadas sin tener que cambiar su nucleo de negocio.
 * _Metafora_: Visualiza la aplicacion en capas concentricas, donde el nucleo interno es la logica de negocio pura, y las capas externas son dependientes de las internas. El flujo de dependencias debe ir hacia el centro (dependencias invertidas).
+
+## Estructura General Arquitectura Hexagonal
+* El nucleo de la aplicacion esta compuesto por la logica de negocio y las reglas del dominio
+* Los puertos (interfaces) se colocan entre el nucleo y los adaptadores. Los puertos pueden ser de entrada (para recibir solicitudes) o de salida (para interactuar con sistemas externos).
+* Los adaptadores implementan los puertos y se encargan de manejar los detalles tecnicos (como la persistencia de datos, el envio de notificaciones, etc.).
+* No tiene una organizacion estricta en capas, sino que organiza en torno al concepto de entradas y salidas a traves de los puertos.

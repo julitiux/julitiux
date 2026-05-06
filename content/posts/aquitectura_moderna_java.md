@@ -1863,3 +1863,9 @@ public class JpaOrderRepository implements OrderRepository{
 * Publicacion de Eventos de Dominio
 * Inyeccion de Dependencias (DI).
 
+## Limpia <> Hexagonal
+* La arquitectura hexagonal y la arquitectura limpia son patrones de diseño de software que comparten principios similares, como el desacoplamiento y la separacion de responsabilidades.
+* Se diferencian en algunos detalles y en la manera en que organizan los componentes. Ambos enfoques buscan crear aplicaciones mantenibes, testeables y flexibles, pero tienen enfoques ligeramente distintos en su implementacion.
+
+
+

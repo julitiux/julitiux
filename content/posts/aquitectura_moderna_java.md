@@ -1867,5 +1867,8 @@ public class JpaOrderRepository implements OrderRepository{
 * La arquitectura hexagonal y la arquitectura limpia son patrones de diseño de software que comparten principios similares, como el desacoplamiento y la separacion de responsabilidades.
 * Se diferencian en algunos detalles y en la manera en que organizan los componentes. Ambos enfoques buscan crear aplicaciones mantenibes, testeables y flexibles, pero tienen enfoques ligeramente distintos en su implementacion.
 
-
+## Origen y Proposito Arquitectura Hexagonal
+* _Propuesta por_: Alistair Cockburn
+* _Proposito_: Fue diseñada para desacoplar la logica de negocio de las dependencias externas, como bases de datos, servicios externos, y frameworks. El objetivo es que la logica de negocio sea independiente de las tecnologias con las que interactua.
+* _Metafora_: Visualiza la aplicacion como un nucleo rodeado de "puertos" que representan interfaces hacia el mundo exterior, con "adaptadores" que conectan esos puertos a tecnologias externas.
 

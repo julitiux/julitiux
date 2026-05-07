@@ -1891,4 +1891,9 @@ public class JpaOrderRepository implements OrderRepository{
     - Capa de infraestructura: Se encarga de los datalles tecnicos (como bases de datos, frameworks o servicios externos).
 * El principio clave es la inversion de dependencias: las capas externas dependen de las capas internas, pero no al reves. Por ejemplo, la capa de dominio no dependiente de la infraestructura ni de la tecnologia utilizada.
 
+## Similaridades
+* _Desacoplamiento de la logica de negocio_: Ambas tienen como objetivo mantener la logica de negocio desacoplada de la infraestructura y los detalles tecnicos. Esto permite que la logica de negocio no dependa de frameworks, bases de datos o interfaces externas.
+* _Foco en la testabilidad_: Ambas arquitecturas promueven que el nucleo de la aplicacion sea facilmente testeable, ya que esta desacoplado de las dependencias externas. Esto facilita las pruebas unitarias de la logica de negocio, sin necesidad de integrar servicios externos como bases de datos o APIs.
+* _Inversion de dependencias_: Ambos enfoques utilizan el principio de inversion de dependencias (Dependency Inversion Principle, DIP) para asegurar que las dependencias apunten hacia el nucleo de la aplicacion, no hacia las capas externas, Esto garantiza que las capas internas no dependan de deatalles de infraestructura.
+* _Uso de interfaces_: Tanto la arquitectura hexagonal como la limpia utilizan interfaces para definir como la logica de negocio interactua con el mundo exterior, permitiendo que los detalles de implementacion (base de datos, APIs externas, etc) puedan cambiar sin afectar la logica interna.
 

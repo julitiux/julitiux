@@ -1907,3 +1907,10 @@ public class JpaOrderRepository implements OrderRepository{
     - Sigue una organizacion mas estricta basada en capas, cada una con responsabilidades claramente definidas.
     - Enfoque jerarquico: Esta mas estructurada jerarquicamente y se basa en un enfoque de capas concentricas, lo que puede proporcionar una estructura mas clara en algunos casos.
 
+## Diferencias Flexibilidad en los puntos de entrada
+* Arquitectura Hexagonal:
+    - Mas flexible en cuanto a los puntos de intraccion. Puedes tener multiples puertos de entrada y puertos de salida, y puedes agregar nuevos adaptadores sin afectar la estructura del nucleo.
+    - Esta flexibilidad es particularmente util cuando se necesita interactuar con la aplicacion a traves de diferentes mecanismos (por ejemplo, API REST, eventos de mensajeria, interfaces graficas, etc.).
+* Arquitectura Limpia:
+    - La arauitectura limpia sigue un enfoque mas ordenado y jerarquico, donde los puntos de entrada estan mas controlados por las capas de casos de uso y adaptadores.
+    - Aunque tambien se puede tener flexibilidad en los puntos de interaccion, esta mas orientada hacia un enfoque de casos de uso definidos que se exponen a traves de interfaces especificas.

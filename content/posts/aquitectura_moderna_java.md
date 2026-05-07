@@ -1897,3 +1897,13 @@ public class JpaOrderRepository implements OrderRepository{
 * _Inversion de dependencias_: Ambos enfoques utilizan el principio de inversion de dependencias (Dependency Inversion Principle, DIP) para asegurar que las dependencias apunten hacia el nucleo de la aplicacion, no hacia las capas externas, Esto garantiza que las capas internas no dependan de deatalles de infraestructura.
 * _Uso de interfaces_: Tanto la arquitectura hexagonal como la limpia utilizan interfaces para definir como la logica de negocio interactua con el mundo exterior, permitiendo que los detalles de implementacion (base de datos, APIs externas, etc) puedan cambiar sin afectar la logica interna.
 
+## Diferencias Organizacion y Enfoque
+* Arquitectura Hexagonal:
+    - Esta mas centrada en el concepto de puertos y adaptadores. Los puertos son las interfaces que definen como se interactua con la aplicacion (tanto para recibir entradas como para emitir salidas).
+    - Los adaptadores son implementaciones de esos puertos, conectando la logica de negocio con sistemas externos (bases de datos, servicios web, etc.).
+    - Enfoque modular: No tiene una estructura estricta de capas, y su organizacion es mas flexible. Se enfoca en como se conectan los adaptadores a los puertos, lo que permite tener multiples puntos de interaccion con la aplicacion.
+* Arquitectura Limpia:
+    - Tiene una organizacion en capas concentricas, con una clara separacion entre la logica de negocio (casos de uso y dominio) y la infraestructura. El flujo de dependencias siempre apunta hacia adentro, desde las capas externas hacia las internas.
+    - Sigue una organizacion mas estricta basada en capas, cada una con responsabilidades claramente definidas.
+    - Enfoque jerarquico: Esta mas estructurada jerarquicamente y se basa en un enfoque de capas concentricas, lo que puede proporcionar una estructura mas clara en algunos casos.
+

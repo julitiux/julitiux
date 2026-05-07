@@ -1922,3 +1922,8 @@ public class JpaOrderRepository implements OrderRepository{
 ## ¿Cuando usar Arquitectura Hexagonal?
 * Es mas adecuada cuando tu aplicacion requiere multiples formas de interaccion con el mundo externo. Por ejemplo, si tu aplicacion puede ser invocada desde APIs REST, interfaces de usuario graficas, colas de mensajeria. etc., la arquitectura hexagonal te proporciona una forma clara de conectar esos puntos de entrada a traves de puertos y adaptadores.
 * Si buscas flexibilidad para conectar y desconectar adaptadores (como bases de datos, servicios externos o APIs), la arquitectura hexagonal facilita ese proceso mediante la separacion clara de las interfaces y las implementaciones.
+
+## ¿Cuando usar Arquitectura Limpia?
+* Si prefiere una estructura mas rigida y definida con capas claras que separan la logica de negocio de los detalles de infraestructura, la arquitectura limpia puede ser mas adecuada.
+* Es ideal para proyectos que buscan una organizacion jerarquica y que necesiten estructurarse con una separacion estricta entre los deferentes niveles (dominio, casos de uso, infraestructura).
+* Tambien es util cuando se trata de aplicaciones mas grandes que requieren una estructura clara y predecible.

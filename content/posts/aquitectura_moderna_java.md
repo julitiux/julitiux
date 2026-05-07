@@ -1914,3 +1914,7 @@ public class JpaOrderRepository implements OrderRepository{
 * Arquitectura Limpia:
     - La arauitectura limpia sigue un enfoque mas ordenado y jerarquico, donde los puntos de entrada estan mas controlados por las capas de casos de uso y adaptadores.
     - Aunque tambien se puede tener flexibilidad en los puntos de interaccion, esta mas orientada hacia un enfoque de casos de uso definidos que se exponen a traves de interfaces especificas.
+
+## Diferencias Enfoque Visual y Metaforico
+* Arquitectura Hexagonal: Se basa en la metafora del hexagono, que representa la idea de multiples puntos de entrada y salida (puertos), conectados por adaptadores. El nucleo no depende de como se recibe o envia la informacion.
+* Arquitectura Limpia: Visualiza la aplicacion como capas concentricas, donde el nucleo interno es la logica de negocio pura, y las capas externas son detalles tecnicos que dependen de las capas internas.

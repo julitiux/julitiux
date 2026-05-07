@@ -1918,3 +1918,7 @@ public class JpaOrderRepository implements OrderRepository{
 ## Diferencias Enfoque Visual y Metaforico
 * Arquitectura Hexagonal: Se basa en la metafora del hexagono, que representa la idea de multiples puntos de entrada y salida (puertos), conectados por adaptadores. El nucleo no depende de como se recibe o envia la informacion.
 * Arquitectura Limpia: Visualiza la aplicacion como capas concentricas, donde el nucleo interno es la logica de negocio pura, y las capas externas son detalles tecnicos que dependen de las capas internas.
+
+## ¿Cuando usar Arquitectura Hexagonal?
+* Es mas adecuada cuando tu aplicacion requiere multiples formas de interaccion con el mundo externo. Por ejemplo, si tu aplicacion puede ser invocada desde APIs REST, interfaces de usuario graficas, colas de mensajeria. etc., la arquitectura hexagonal te proporciona una forma clara de conectar esos puntos de entrada a traves de puertos y adaptadores.
+* Si buscas flexibilidad para conectar y desconectar adaptadores (como bases de datos, servicios externos o APIs), la arquitectura hexagonal facilita ese proceso mediante la separacion clara de las interfaces y las implementaciones.

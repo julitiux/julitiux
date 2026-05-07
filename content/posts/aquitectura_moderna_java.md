@@ -1882,3 +1882,13 @@ public class JpaOrderRepository implements OrderRepository{
 * Los puertos (interfaces) se colocan entre el nucleo y los adaptadores. Los puertos pueden ser de entrada (para recibir solicitudes) o de salida (para interactuar con sistemas externos).
 * Los adaptadores implementan los puertos y se encargan de manejar los detalles tecnicos (como la persistencia de datos, el envio de notificaciones, etc.).
 * No tiene una organizacion estricta en capas, sino que organiza en torno al concepto de entradas y salidas a traves de los puertos.
+
+## Estructura General Arquitectura Limpia
+* Capas Concentricas:
+    - Capa del dominio: Es el nucleo mas interno, que contiene las entidades del dominio y las reglas de negocio.
+    - Capa de casos de uso: Maneja los flujos especificos de la aplicacion (como crear un pedido, procesar un pago). Esta capa utiliza la capa de dominio, pero no tiene dependencias hacia afuera.
+    - Capa de interfaz (o adaptadores): Contiene las interfaces que exponen los casos de uso hacia el mundo exterior (controladores HTTP, interfaces graficas, etc.).
+    - Capa de infraestructura: Se encarga de los datalles tecnicos (como bases de datos, frameworks o servicios externos).
+* El principio clave es la inversion de dependencias: las capas externas dependen de las capas internas, pero no al reves. Por ejemplo, la capa de dominio no dependiente de la infraestructura ni de la tecnologia utilizada.
+
+

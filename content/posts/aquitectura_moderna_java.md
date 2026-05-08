@@ -1927,3 +1927,15 @@ public class JpaOrderRepository implements OrderRepository{
 * Si prefiere una estructura mas rigida y definida con capas claras que separan la logica de negocio de los detalles de infraestructura, la arquitectura limpia puede ser mas adecuada.
 * Es ideal para proyectos que buscan una organizacion jerarquica y que necesiten estructurarse con una separacion estricta entre los deferentes niveles (dominio, casos de uso, infraestructura).
 * Tambien es util cuando se trata de aplicaciones mas grandes que requieren una estructura clara y predecible.
+
+## Comparacion
+* En Arquitectura Hexagonal
+    - Nucleo: Define las entidades (Order, Customer) y las reglas de negocio (por ejemplo, como se calcula el total de un pedido)
+    - Puertos de Entrada: Interfaces que permiten recibir comando para crear pedidos (OrderService, CustomerService).
+    - Puertos de Salida: Interfaces que definen como interactuar con sistemas externos, como un repositorio para almacenar pedidos (OrderRepository) o un servicio de pagos (PaymentGateway).
+    - Adaptadores: Implementaciones concretas que conectan los puertos con la tecnologia externa (como una API REST que actua como adaptador de entrada, o una conexion a Stripe para procesar pagos como adaptador de salida).
+* En Arquitectura Limpia:
+    - Capa de Dominio: Contiene las entidades (Order, Customer) y las reglas de negocio.
+    - Capa de Casos de Uso: Maneja los casos de us como crear un pedido o cancelar un pedido.
+    - Capa de Interfaz (Adaptadores): Implementa las interfaces para exponer los casos de uso al mundo exterior (por ejemplo, un controlador REST que llama a los casos de uso).
+    - Capa de infraestructura: Maneja los detalles tecnicos como el almacenamiento de pedidos en bases de datos o la integracion con servicios de pagos.

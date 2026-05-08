@@ -1939,3 +1939,7 @@ public class JpaOrderRepository implements OrderRepository{
     - Capa de Casos de Uso: Maneja los casos de us como crear un pedido o cancelar un pedido.
     - Capa de Interfaz (Adaptadores): Implementa las interfaces para exponer los casos de uso al mundo exterior (por ejemplo, un controlador REST que llama a los casos de uso).
     - Capa de infraestructura: Maneja los detalles tecnicos como el almacenamiento de pedidos en bases de datos o la integracion con servicios de pagos.
+
+## Microservicios y Arquitectura Hexagonal
+* La arquitectura hexagonal y los microservicios son dos enfoques de diseño que comparten objetivos comunes como el desacoplamiento, la modularidad y la escalabilidad.
+* Aunque son conceptos distintos, pueden complementarse de manera muy eficaz.

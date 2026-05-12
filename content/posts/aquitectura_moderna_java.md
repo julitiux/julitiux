@@ -1943,3 +1943,10 @@ public class JpaOrderRepository implements OrderRepository{
 ## Microservicios y Arquitectura Hexagonal
 * La arquitectura hexagonal y los microservicios son dos enfoques de diseño que comparten objetivos comunes como el desacoplamiento, la modularidad y la escalabilidad.
 * Aunque son conceptos distintos, pueden complementarse de manera muy eficaz.
+
+## Diferencias y Propositos Arquitectura Hexagonal
+* _¨Proposito_: Se centra en el desacoplamiento interno de las aplicaciones. Su objetivo es separar la logica de negocio del resto de la infraestructura (bases de datos, interfaces de usuario, servicios externos, etc.). proporcionando interfaces claras (puertos) que permiten conectar adaptadores para interactuar con el nucleo de la aplicacion.
+* _Foco_: Se enfoca en el diseño interno de un sistema o componente individual para garantizar que las dependencias externas (como bases de datos o servicios externos) no afecten la logica central del dominio.
+* _Modularidad_: Cada componente o servicio de la aplicacion es autonomo y puede interactuar con el mundo externo a traves de adaptadores.
+
+

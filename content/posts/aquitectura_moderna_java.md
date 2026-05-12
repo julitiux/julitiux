@@ -1957,3 +1957,8 @@ public class JpaOrderRepository implements OrderRepository{
 ## Como se Relacionan
 * La arquitectura hexagonal es una patron de diseño que puede aplicarse de cada microservicio.
 * Dado que cada microservicio es una aplicacion autonoma y deve mantener sus propias dependencias y logica de negocio, la arquitectura hexagonal puede ayudar a estructurar la logica interna de cada microservicio, asegurando un desacoplamiento claro entre la logica de negocio y la infraestructura.
+
+## Modularidad
+* _Arquitectura Hexagonal_: Divide el codigo en capas internas (nucleo de negocio) y externas (adaptadores), separando claramente la logica de negocio de los detalles tecnicos.
+* _Microservicios_: Divide la aplicacion en multiples servicios autonomos que pueden ser desplegados de manera independiente, cada uno con su propio ciclo de vida.
+* _Relacion_: Cada microservicio puede seguir una arquitectura hexagonal internamente, asegurando que dentro de ese servicio la logica de negocio este desacoplada de los detalles tecnicos. Esto facilita que cada microservicio se mantenga modular y facil de probar o modificar.

@@ -1949,4 +1949,9 @@ public class JpaOrderRepository implements OrderRepository{
 * _Foco_: Se enfoca en el diseño interno de un sistema o componente individual para garantizar que las dependencias externas (como bases de datos o servicios externos) no afecten la logica central del dominio.
 * _Modularidad_: Cada componente o servicio de la aplicacion es autonomo y puede interactuar con el mundo externo a traves de adaptadores.
 
+## Diferencias y Propositos Microservicios
+* _Proposito_: Los microservicios son una forma de diseñar aplicaciones distribuidas, dividiendolas en servicios pequeños e independientes que interactuan entre si a traves de APIs. Cada microservicio tiene su propio ciclo de vida, puede ser desplegado de manera independiente, y es responsable de un conjunto de funcionalidades concretas.
+* _Foco_: Se enfoca en la separacion externa del sistema en multiples servicios distribuidos, donde cada servicio puede ser independiente a nivel de desarrollo, despliegue y escalabilidad.
+* _Escalabilidad_: Cada servicio puede escalarse de forma independiente, dependiendo de la carga de trabajo.
+
 

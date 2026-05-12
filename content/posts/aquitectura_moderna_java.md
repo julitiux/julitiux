@@ -1962,3 +1962,8 @@ public class JpaOrderRepository implements OrderRepository{
 * _Arquitectura Hexagonal_: Divide el codigo en capas internas (nucleo de negocio) y externas (adaptadores), separando claramente la logica de negocio de los detalles tecnicos.
 * _Microservicios_: Divide la aplicacion en multiples servicios autonomos que pueden ser desplegados de manera independiente, cada uno con su propio ciclo de vida.
 * _Relacion_: Cada microservicio puede seguir una arquitectura hexagonal internamente, asegurando que dentro de ese servicio la logica de negocio este desacoplada de los detalles tecnicos. Esto facilita que cada microservicio se mantenga modular y facil de probar o modificar.
+
+## Desacoplamiento
+* _Arquitectura Hexagonal_: Desacopla la logica de negocio de las dependencias externas mediante puertos y adaptadores. Por ejemplo los adaptadores para bases de datos, interfaces de usuario o APIs externas son intercambiables.
+* _Microservicios_: Desacopla los servicios entre si, lo que permite que cada servicio evolucione de forma independiente. Un microservicio puede cambiar su implementacion sin afectar a los demas, siempre que la API publica permanezca constante.
+* _Relacion_: El desacoplamiento en la arquitectura hexagonal permite que dentro de cada microservicio se pueda cambiar, por ejemplo, la tecnologia de base de datos o mensajeria, sin afectar la logica de negocio. Esto es especialmente util en sistemas de microservicios, donde los cambios en un servicio no deberian romper otros servicios.

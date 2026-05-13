@@ -1987,3 +1987,8 @@ public class JpaOrderRepository implements OrderRepository{
 ## Retos
 * _Complejidad en la Orquestacion_: Aunque cada microservicio sigue la arquitectura hexagonal, en sistemas con muchos microservicios puede ser dificil orquestar y manejar la interaccion entre ellos. Necesitara un sistema robusto de comunicacion (como REST,gRPC o evetos).
 * _Gestion de Datos Distribuidos_: En un sistema de microservicios, cada servicio puede tener su propia base de datos. Esto introduce retos para mantener la consistencia de los datos y las transacciones distribuidas, en un desafio comun en arquitecturas de microservicios.
+
+## Buenas Practicas
+* _Utiliza Mensajeria Asincrona cuando sea posible_: PAra evitar la alta dependencia entre microservicios, considera usar un enfoque basado en eventos o mensajeria asincrona.
+* _Evita Monolitos dentro de Microservicios_: Aunque tengas un microservicio, si no aplicas principios como la arquitectura hexagonal, puedes terminar con un "monolito dentro de un microservicio". Manten cada microservicio modular y desacoplado
+* _Limita las Responsabilidades_: Los microservicios deben ser pequeños y tener una unica responsabilidad. Su un microservicios comienza a crecer demasiado, probablemente es hora de dividirlo.

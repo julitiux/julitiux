@@ -1972,3 +1972,8 @@ public class JpaOrderRepository implements OrderRepository{
 * _Arquitectura Hexagonal_: Aunque la arquitectura hexagonal np aborda deirectamente la escalabilidad, si diseño desacoplado facilita que los componentes sean mas facil de probar y modificar, lo que puede ayudar a gestionar la carga dentro de una aplicacion monolitica.
 * _Microservicios_: Los microservicios permiten escalar cada servicio de manera independiente, segun sea necesario.
 * _Relacion_: La arquitectura hexagonal asegura que cada microservicio sea un componente autonomo y desacoplado de sus dependencias tecnologicas. Esto simplifica la escalabilidad de los microservicios, ya que pueden ser desplegados, replicados y escalados sin preocuparse por las dependencias internas que pudieran frenarlos.
+
+## Pruebas y Mantenimiento
+* _Arquitectura Hexagonal_: Facilita las pruebas unitarias y de integracion, ya que el nucleo de la aplicacion esta desacoplado de la infraestructura , lo que permite probar la logica de negocio de manera aislada.
+* _Microservicios_: Al tener servicios pequeños y enfocados, es mafacil probar y mantener cada servicio de forma independiente.
+* _Relacion_: La combinacion de microservicios y arquitectura hexagonal ofrece un entorno donde es facil escribir pruebas para cada microservicio de manera independiente. Los puertos y adaptadores en la arquitectura hexagonal permiten simular o mockear dependencias externas (como servicios de terceros o bases de datos) en cada microservicios, lo que mejora la capacidad de prueba.

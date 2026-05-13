@@ -1977,3 +1977,10 @@ public class JpaOrderRepository implements OrderRepository{
 * _Arquitectura Hexagonal_: Facilita las pruebas unitarias y de integracion, ya que el nucleo de la aplicacion esta desacoplado de la infraestructura , lo que permite probar la logica de negocio de manera aislada.
 * _Microservicios_: Al tener servicios pequeños y enfocados, es mafacil probar y mantener cada servicio de forma independiente.
 * _Relacion_: La combinacion de microservicios y arquitectura hexagonal ofrece un entorno donde es facil escribir pruebas para cada microservicio de manera independiente. Los puertos y adaptadores en la arquitectura hexagonal permiten simular o mockear dependencias externas (como servicios de terceros o bases de datos) en cada microservicios, lo que mejora la capacidad de prueba.
+
+## Ventajas de Combinar Hexagonal y Microservicios
+* _Despliegue Independiente_: Cada microservicio se puede desplegar de forma independiente. Al estar estructurados con una arquitectura hexagonal, cualquier cambio en las dependencias externas de un microservicios (como base de datos o un proveedor de pago) puede realiarse sin afectar a la logica de negocio o a otros servicios.
+* _Facilidad de Pruebas_: Con microservicios pequeños y siguiendo la arquitectura hexagonal, es mas facil hacer pruebas unitarias y de integracion en cada servicio. Puedes probar la logica de negocio aislada de cada microservicio simulando los adaptadores de entrada y salida.
+* _Evolucion Independiente_: Al desacoplar los servicios entre si, cada equipo puede evolucionar un microservicio sin tener que coordinar con otros equipos. Ademas, la arquitectura hexagonal asegura que los cambios tecnologicos internos no afecten a otros servicios.
+* _Manejo de Complejidad_: La arquitectura hexagonal permite gestionar la complejidad interna de cada microservicio de una manera limpia y organizada. Esto es crucial cuando tienes docenas de microservicios, ya que te asegura que cada uno sea manejable por separado.
+

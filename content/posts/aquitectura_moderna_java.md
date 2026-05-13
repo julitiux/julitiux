@@ -1984,3 +1984,6 @@ public class JpaOrderRepository implements OrderRepository{
 * _Evolucion Independiente_: Al desacoplar los servicios entre si, cada equipo puede evolucionar un microservicio sin tener que coordinar con otros equipos. Ademas, la arquitectura hexagonal asegura que los cambios tecnologicos internos no afecten a otros servicios.
 * _Manejo de Complejidad_: La arquitectura hexagonal permite gestionar la complejidad interna de cada microservicio de una manera limpia y organizada. Esto es crucial cuando tienes docenas de microservicios, ya que te asegura que cada uno sea manejable por separado.
 
+## Retos
+* _Complejidad en la Orquestacion_: Aunque cada microservicio sigue la arquitectura hexagonal, en sistemas con muchos microservicios puede ser dificil orquestar y manejar la interaccion entre ellos. Necesitara un sistema robusto de comunicacion (como REST,gRPC o evetos).
+* _Gestion de Datos Distribuidos_: En un sistema de microservicios, cada servicio puede tener su propia base de datos. Esto introduce retos para mantener la consistencia de los datos y las transacciones distribuidas, en un desafio comun en arquitecturas de microservicios.

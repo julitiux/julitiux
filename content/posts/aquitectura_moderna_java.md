@@ -1967,3 +1967,8 @@ public class JpaOrderRepository implements OrderRepository{
 * _Arquitectura Hexagonal_: Desacopla la logica de negocio de las dependencias externas mediante puertos y adaptadores. Por ejemplo los adaptadores para bases de datos, interfaces de usuario o APIs externas son intercambiables.
 * _Microservicios_: Desacopla los servicios entre si, lo que permite que cada servicio evolucione de forma independiente. Un microservicio puede cambiar su implementacion sin afectar a los demas, siempre que la API publica permanezca constante.
 * _Relacion_: El desacoplamiento en la arquitectura hexagonal permite que dentro de cada microservicio se pueda cambiar, por ejemplo, la tecnologia de base de datos o mensajeria, sin afectar la logica de negocio. Esto es especialmente util en sistemas de microservicios, donde los cambios en un servicio no deberian romper otros servicios.
+
+## Escalabilidad
+* _Arquitectura Hexagonal_: Aunque la arquitectura hexagonal np aborda deirectamente la escalabilidad, si diseño desacoplado facilita que los componentes sean mas facil de probar y modificar, lo que puede ayudar a gestionar la carga dentro de una aplicacion monolitica.
+* _Microservicios_: Los microservicios permiten escalar cada servicio de manera independiente, segun sea necesario.
+* _Relacion_: La arquitectura hexagonal asegura que cada microservicio sea un componente autonomo y desacoplado de sus dependencias tecnologicas. Esto simplifica la escalabilidad de los microservicios, ya que pueden ser desplegados, replicados y escalados sin preocuparse por las dependencias internas que pudieran frenarlos.

@@ -2023,3 +2023,8 @@ public class JpaOrderRepository implements OrderRepository{
 * Estos puertos permiten que el sistema envie notificaciones o mensajes a servicios de mensajeria, como emails, SMS o notificaciones push. Pueden utilizar servicios de terceros o infraestructura interna para enviar los mensajes.
 * _Ejemplo_: Un puerto de salida para enviar notificaciones.
 * _Implementacion_: Adaptador que usa servicios como Twilio, SendGrid, Firebase Cloud Messaging, etc.
+
+## Puertos de salida para colas de mensajeria y eventos-Publishers
+* En los sistemas orientados a eventos, es comun que el sistema necesite publicar eventos o mensajes a un sistema de colas o un bus de eventos (por ejemplo, Kafka, RabbitMQ, AWS SQS). Estos puertos de salida permiten que el sistema interactue con esas colas o buses de mensajes.
+* _Ejemplos_: Un puerto de salida para publicar eventos de pedido.
+* _Implementacion_: Adaptador para Kafka, RabbitMQ, etc.

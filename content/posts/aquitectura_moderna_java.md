@@ -2028,3 +2028,8 @@ public class JpaOrderRepository implements OrderRepository{
 * En los sistemas orientados a eventos, es comun que el sistema necesite publicar eventos o mensajes a un sistema de colas o un bus de eventos (por ejemplo, Kafka, RabbitMQ, AWS SQS). Estos puertos de salida permiten que el sistema interactue con esas colas o buses de mensajes.
 * _Ejemplos_: Un puerto de salida para publicar eventos de pedido.
 * _Implementacion_: Adaptador para Kafka, RabbitMQ, etc.
+
+## Puertos de salida para integracion con otros sistemas
+* Estos puertos de salida permiten que el sistema interactue con otros sistemas internos o externos a traves de integraciones (por ejemplo, ERP, CRM, microservicios dentro de la organizacion). La interfaz define como se imtercambian datos entre sistemas.
+* _Ejemplo_: Un puertos de salida para enviar informacion de inventario a un sistema ERP.
+* _Implementacion_: Adaptador que se comunica con otro sistema ERP a traves de REST, SOAP, o cualquier otro protocolo.

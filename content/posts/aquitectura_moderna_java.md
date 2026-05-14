@@ -2000,4 +2000,13 @@ public class JpaOrderRepository implements OrderRepository{
 * El dominio solo interactua con interfaces (puertos) y los adaptadores en las infraestructura implementan esas interfaces para conectar con servicios especificos.
 * Esto asegura que puedas cambiar facilmente de implementacion o proveedor sin afectar la logica de negocio.
 
+## Tipos de Puertos de Salida
+* _Persistencia_: Interactuar con bases de datos o almacenamiento persistente
+* _Servicios externos_: Conectar con APIs de terceros, como servicios de pago o geolocalizacion.
+* _Notificaciones_: Enviar notificaciones por email, SMS, push notifications, etc.
+* _Mensajeria/Colas de eventos_: Publicar eventos a sistemas de colas o buses de eventos.
+* _Integracion con otros sistemas_: Integrarse con otros sistemas internos o externos (ERP, CRM, etc.) Gateways es otra forma de decirles.
+* _Almacenamiento de archivos_: Guardar y recuperar archivos en servicios de almacenamiento.
+* _Cache_: Interactuar con sistema de cache como Redis.
+
 

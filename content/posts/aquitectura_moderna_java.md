@@ -2013,3 +2013,8 @@ public class JpaOrderRepository implements OrderRepository{
 * Estos puertos permiten que el sistema interactue con bases de datos o cualquier sistema de almacenamiento persistente. El puerto de salida define como se guardan, recuperan, actualizan o eliminan los datos sin especificar como se implementan estas operaciones (pueden ser bases de datos relacionales, NoSQL, archivos, etc.).
 * _Ejemplo_: Un puerto de salida para persistir pedidos en una base de datos.
 * _Implementacion_: Adaptador JPA, JDBC, MongoDB, etc.
+
+## Puertos de salida para servicos externos-Gateways
+* Este tipo de puerto define como el sistema interactua con APIs o servicios externos. Los servicios externos pueden ser APIs de terceros (por ejemplo, pasarelas de pago, servicios de geolocalizacion, servicios de clima, etc.). La interfaz del puerto define las operaciones necesarias, pero no sabe ni le importa como se implementan estas operaciones.
+* _Ejemplo_: Un puerto de salida para interactuar con una pasarela de pago.
+* _Implementacion_: Adaptador que usa Stripe, Paypal, etc.

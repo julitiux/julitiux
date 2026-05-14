@@ -2009,4 +2009,7 @@ public class JpaOrderRepository implements OrderRepository{
 * _Almacenamiento de archivos_: Guardar y recuperar archivos en servicios de almacenamiento.
 * _Cache_: Interactuar con sistema de cache como Redis.
 
-
+## Puertos de salida para persistencia
+* Estos puertos permiten que el sistema interactue con bases de datos o cualquier sistema de almacenamiento persistente. El puerto de salida define como se guardan, recuperan, actualizan o eliminan los datos sin especificar como se implementan estas operaciones (pueden ser bases de datos relacionales, NoSQL, archivos, etc.).
+* _Ejemplo_: Un puerto de salida para persistir pedidos en una base de datos.
+* _Implementacion_: Adaptador JPA, JDBC, MongoDB, etc.

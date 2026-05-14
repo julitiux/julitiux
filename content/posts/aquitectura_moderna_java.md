@@ -1992,3 +1992,6 @@ public class JpaOrderRepository implements OrderRepository{
 * _Utiliza Mensajeria Asincrona cuando sea posible_: PAra evitar la alta dependencia entre microservicios, considera usar un enfoque basado en eventos o mensajeria asincrona.
 * _Evita Monolitos dentro de Microservicios_: Aunque tengas un microservicio, si no aplicas principios como la arquitectura hexagonal, puedes terminar con un "monolito dentro de un microservicio". Manten cada microservicio modular y desacoplado
 * _Limita las Responsabilidades_: Los microservicios deben ser pequeños y tener una unica responsabilidad. Su un microservicios comienza a crecer demasiado, probablemente es hora de dividirlo.
+
+# Modulo 11
+

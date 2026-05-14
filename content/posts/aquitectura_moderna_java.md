@@ -2018,3 +2018,8 @@ public class JpaOrderRepository implements OrderRepository{
 * Este tipo de puerto define como el sistema interactua con APIs o servicios externos. Los servicios externos pueden ser APIs de terceros (por ejemplo, pasarelas de pago, servicios de geolocalizacion, servicios de clima, etc.). La interfaz del puerto define las operaciones necesarias, pero no sabe ni le importa como se implementan estas operaciones.
 * _Ejemplo_: Un puerto de salida para interactuar con una pasarela de pago.
 * _Implementacion_: Adaptador que usa Stripe, Paypal, etc.
+
+## Puertos de salida para notificaciones
+* Estos puertos permiten que el sistema envie notificaciones o mensajes a servicios de mensajeria, como emails, SMS o notificaciones push. Pueden utilizar servicios de terceros o infraestructura interna para enviar los mensajes.
+* _Ejemplo_: Un puerto de salida para enviar notificaciones.
+* _Implementacion_: Adaptador que usa servicios como Twilio, SendGrid, Firebase Cloud Messaging, etc.

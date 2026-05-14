@@ -1995,3 +1995,9 @@ public class JpaOrderRepository implements OrderRepository{
 
 # Modulo 11
 
+## Puertos de Salida en la Arquitectura Hexagonal
+* Los puertos de salida son fundamentales para mantener el nucleo de la aplicacion desacoplado de los detalles de implementacion
+* El dominio solo interactua con interfaces (puertos) y los adaptadores en las infraestructura implementan esas interfaces para conectar con servicios especificos.
+* Esto asegura que puedas cambiar facilmente de implementacion o proveedor sin afectar la logica de negocio.
+
+

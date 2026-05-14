@@ -2033,3 +2033,8 @@ public class JpaOrderRepository implements OrderRepository{
 * Estos puertos de salida permiten que el sistema interactue con otros sistemas internos o externos a traves de integraciones (por ejemplo, ERP, CRM, microservicios dentro de la organizacion). La interfaz define como se imtercambian datos entre sistemas.
 * _Ejemplo_: Un puertos de salida para enviar informacion de inventario a un sistema ERP.
 * _Implementacion_: Adaptador que se comunica con otro sistema ERP a traves de REST, SOAP, o cualquier otro protocolo.
+
+## Puertos de salida para almacenamiento de archivos
+* Estos puertos permiten que el sistema guarde o recupere archivos en un sistema de almacenamiento (como AWS S3, Google Cloud Storage, o un sistema de archivos local). Pueden definir operaciones como guardar, eliminar o recuperar archivos.
+* _Ejemplo_: Un puerto de salida para almacenar archivos en un servicio externo.
+* _Implementacion_: Adaptador que usa Amazon S3, Google Cloud Storage, un servidor FTP, etc.

@@ -2038,3 +2038,8 @@ public class JpaOrderRepository implements OrderRepository{
 * Estos puertos permiten que el sistema guarde o recupere archivos en un sistema de almacenamiento (como AWS S3, Google Cloud Storage, o un sistema de archivos local). Pueden definir operaciones como guardar, eliminar o recuperar archivos.
 * _Ejemplo_: Un puerto de salida para almacenar archivos en un servicio externo.
 * _Implementacion_: Adaptador que usa Amazon S3, Google Cloud Storage, un servidor FTP, etc.
+
+## Puertos de salida para almacenamiento de archivos
+* Estos puertos permiten que el sistema guarde o recupere archivos en sistema de almacenamiento (como AWS S3, Google Cloud Storage, o un sistema de archivos local). Puede definir operaciones como guardar, eliminar o recuperar archivos.
+* _Ejemplo_: Un puerto de salida para almacenar archivos en un servicio externo.
+* _Implementacion_: Adaptador que usa Amazon S3, Google Cloud Storage, un servidor FTP, etc.

@@ -2068,3 +2068,10 @@ public class JpaOrderRepository implements OrderRepository{
 * _Adaptadores_:
     - _REST API_: Controladores que exponen las operaciones del sistema a traves del HTTP (con frameworks como Spring)
     - _Websockets o gRPC_: Tambien pueden utilizarse en lugar de REST para intracciones en tiempo real o comunicaciones eficientes
+
+## Puertos de entrada para interfaces de sistemas externos
+* Estos puertos permiten que otros sistemas o aplicaciones (no usuarios finales) interactuen con el sistema. Los casos comunes son cuando tua plicacion debe ser consumida por servicios externos o integrar con otros sistemas.
+* _Ejemplo_: Servicios que manejan interacciones con otros sistemas, como APIs expuestas para integraciones con terceros
+* _Implementacion_: Los adaptadores aqui serian APIs expuestas especificamente para otros sistemas, como servios REST, SOAP, gRPC, o Webhooks
+* _Adaptadores_:
+    - APIs REST/gRPC/SOAP: Estas APIs son utilizadas por sistemas externos para interactuar con tu sistema

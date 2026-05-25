@@ -2043,3 +2043,8 @@ public class JpaOrderRepository implements OrderRepository{
 * Estos puertos permiten que el sistema guarde o recupere archivos en sistema de almacenamiento (como AWS S3, Google Cloud Storage, o un sistema de archivos local). Puede definir operaciones como guardar, eliminar o recuperar archivos.
 * _Ejemplo_: Un puerto de salida para almacenar archivos en un servicio externo.
 * _Implementacion_: Adaptador que usa Amazon S3, Google Cloud Storage, un servidor FTP, etc.
+
+## Puertos de salida caching
+* Este tipo de puerto permite que el sistema interactue con sistemas de cache externos, como Redis o Memcached, para guardar y recuperar datos temporalmente.
+* _Ejemplo_: Un puerto de salida para alamacenar datos en un sistema de cache
+* _Implementacion_: Adaptador para Redis, Memcached, etc.

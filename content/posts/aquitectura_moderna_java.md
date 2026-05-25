@@ -2048,3 +2048,8 @@ public class JpaOrderRepository implements OrderRepository{
 * Este tipo de puerto permite que el sistema interactue con sistemas de cache externos, como Redis o Memcached, para guardar y recuperar datos temporalmente.
 * _Ejemplo_: Un puerto de salida para alamacenar datos en un sistema de cache
 * _Implementacion_: Adaptador para Redis, Memcached, etc.
+
+## Puertos de Entrada en la Arquitectura Hexagonal
+* Los puertos de entrada son interfaces que permiten que los actores externos (como usuarios, sistemas externos o interfaces de usuario) interactuen con el nucleo de la aplicacion (la logica de negocio)
+* Los puertos de entrada se centran en definir como las solicitudes externas llegan al sistema, separando la logica de presentacion o el control de la logica de negocio.
+* Los adaptadores de entrada son implementaciones especificas que traducen esas interacciones (ya sea por HTTP, eventos o CLI) y las delegan a la logica de negocio del sistema. Esto asegura que el nucleo de la aplicacion este desacoplado de la manera en que se recibe la entrada, facilitando el cambio de interfaces sin alterar la logica de negocio.

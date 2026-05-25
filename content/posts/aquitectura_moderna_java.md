@@ -2060,3 +2060,11 @@ public class JpaOrderRepository implements OrderRepository{
 * _Tareas en segundo plano o batch_: Permiten ejecutar trabajos en segundo plano o tareas programadas, como procesamientos batch o con jobs
 * _Eventos de mensajeria_: Permiten que la aplicacion reciba y procese eventos desde un bus de eventos o un siste,a de colas (como Kafka o RabbitMQ)
 * _Comando CLI_: Permiten que la aplicacion sea controlada mediante la liena de comandos para ejecutar procesos o comandos especificos
+
+## Puertos de entrada para interfaces de usuario (UI)
+* Estos puertos permiten que los usuarios finales interactuen con la aplicacion a traves de interfacea de usuario, como aplicaciones web, moviles o de escritorio. La interfaz de usuario se comunica con la logica de negocio mediante estos puertos
+* _Ejemplo_: Servicios que manejan solicitudes HTTP desde un frontend
+* _Implementacion_: Los adaptadores serian controladores REST, controladores de vista (MVC) o controladores para aplicaciones moviles
+* _Adaptadores_:
+    - _REST API_: Controladores que exponen las operaciones del sistema a traves del HTTP (con frameworks como Spring)
+    - _Websockets o gRPC_: Tambien pueden utilizarse en lugar de REST para intracciones en tiempo real o comunicaciones eficientes

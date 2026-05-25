@@ -2053,3 +2053,10 @@ public class JpaOrderRepository implements OrderRepository{
 * Los puertos de entrada son interfaces que permiten que los actores externos (como usuarios, sistemas externos o interfaces de usuario) interactuen con el nucleo de la aplicacion (la logica de negocio)
 * Los puertos de entrada se centran en definir como las solicitudes externas llegan al sistema, separando la logica de presentacion o el control de la logica de negocio.
 * Los adaptadores de entrada son implementaciones especificas que traducen esas interacciones (ya sea por HTTP, eventos o CLI) y las delegan a la logica de negocio del sistema. Esto asegura que el nucleo de la aplicacion este desacoplado de la manera en que se recibe la entrada, facilitando el cambio de interfaces sin alterar la logica de negocio.
+
+## Tipos de puertos de entrada
+* _Interfaces de usuario (UI)_: Permiten que los usuarios interactuen con la logica de negocio (generalmente a traves de APIs REST, controladores web, etc)
+* _Interfaces de sistemas externos_: Permiten que otros sistemas o servicios externos interactuen con la logica de negocio (a traves de APIs, webhooks, etc.)
+* _Tareas en segundo plano o batch_: Permiten ejecutar trabajos en segundo plano o tareas programadas, como procesamientos batch o con jobs
+* _Eventos de mensajeria_: Permiten que la aplicacion reciba y procese eventos desde un bus de eventos o un siste,a de colas (como Kafka o RabbitMQ)
+* _Comando CLI_: Permiten que la aplicacion sea controlada mediante la liena de comandos para ejecutar procesos o comandos especificos

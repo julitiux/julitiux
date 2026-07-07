@@ -1988,35 +1988,23 @@ public class Solution {
         String B=sc.next();
         /* Enter your code here. Print output to STDOUT. */
 
-        System.out.println(countWors(A, B));
-
-        System.out.println(isLexicographically(A, B));
-
-        System.out.print(capitalizeFirstLetter(A));
-        System.out.print(" ");
-        System.out.print(capitalizeFirstLetter(B));
+        System.out.println(sumLengths(A, B));
+        System.out.println(isLexicographicallyGreater(A, B) ? "No" : "Yes");
+        System.out.println(capitalize(A) + " " + capitalize(B));
     }
 
-    public static String isLexicographically(String A, String B){
-        if(A.compareTo(B) <= 0)
-            return "No";
-        else
-            return "Yes";
+    public static boolean isLexicographicallyGreater(String A, String B){
+        return A.compareTo(B) <= 0;
     }
 
-    public static int countWors(String A, String B){
+    public static int sumLengths(String A, String B){
         return A.length() + B.length();
     }
 
-    public static String capitalizeFirstLetter(String string){
-
+    public static String capitalize(String string){
         String firstLetter = string.substring(0, 1).toUpperCase();
         String rest = string.substring(1);
-
-        StringBuffer sb = new StringBuffer();
-        sb.append(firstLetter);
-        sb.append(rest);
-        return sb.toString();
+        return firstLetter + rest;
     }
 }
 ```

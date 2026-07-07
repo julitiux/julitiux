@@ -1933,3 +1933,32 @@ public class Solution {
     }
 }
 ```
+
+## Java String Introduction
+A string es traditionally a sequence of character, either as a literal constant or as some kind of variable
+
+This exercise is to test your understanding of Java Strings. A sample String declaration:
+
+```Java
+String myString = "Hello World!";
+```
+
+The elements od a String are called characters. The number of characters in a String is called the length, and it can be retrived with the String.length() method.
+
+Given two strings of lowercase English letters A and B. perform the following operations:
+1. Sum the lenghts of A and B.
+2. Determine if A is lexicographically larger than B (i..e.: does B come before A in dictionary?)
+3. Capitalize the first letter in A and B and print them on a single line, separated by a space.
+
+### Input Format
+The first line contains a string A The second line constains another string B. The strings are comprised of only lowecase English letters.
+
+### Output Format
+There are three lines of output: For the first line, sum the lengths of A and B  For the second line, write Yes if A is lexicographically greater than B Otherwise print No instead. For the third line, capitalize the first letter in both A and B and print them on a single line, separated by a space.
+
+### Sample Input O
+```terminal
+hello
+java
+```
+

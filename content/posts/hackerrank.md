@@ -2008,3 +2008,53 @@ public class Solution {
     }
 }
 ```
+
+## Java Substring
+Given a string s, and two indices, start and end, print a substring consisting of all characters in the inclusive range from start to end-1. You'll find ths String class substring method helpful in completing this challenge.
+
+## Input Format
+The first line contains a single string denoting s. The second line contains two space-separated integers denoting the respective values of start and end.
+
+## Constraints
+* 1 <= |s| <= 100
+* 0 <= start <= end <= n
+* String s consists of English alphabetic letters (i.e. [a - zA - Z]) only
+
+## Output Format
+Print tge substring in the inclusive range from start to end - 1
+
+## Sample Input
+```terminal
+Helloworld
+3  7
+```
+
+## Sample Output
+```terminal
+lowo
+```
+
+## Code
+```java
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String s = in.next();
+        int start = in.nextInt();
+        int end = in.nextInt();
+
+        System.out.println(getSubString(s, start, end));
+    }
+
+    public static String getSubString(String s, int start, int end){
+        return s.substring(start, end);
+    }
+}
+```

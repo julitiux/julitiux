@@ -2069,36 +2069,23 @@ public class Solution {
 
     public static String getSmallestAndLargest(
             String s, int k) {
-        String smallest = "";
-        String largest = "";
+        String smallest = s.substring(0, k);
+        String largest = smallest;
 
         // Complete the function
         // 'smallest' must be the lexicographically smallest substring of length 'k'
         // 'largest' must be the lexicographically largest substring of length 'k'
 
+        for (int i = 1; i <= s.length() - k; i++) {
 
-        String element = "";
+            String current = s.substring(i, i + k);
 
-        for(int i=0; i <= s.length()-k; i++){
-
-            if(element.equals("")){
-                element = s.substring(i, k+i);
-                continue;
+            if (current.compareTo(smallest) < 0) {
+                smallest = current;
             }
 
-
-            if(smallest.equals(""))
-                smallest = element;
-
-            if(smallest.compareTo(s.substring(i, k+i)) > 0){
-                smallest = s.substring(i, k+i);
-            }
-
-            if(largest.equals(""))
-                largest = element;
-
-            if(largest.compareTo(s.substring(i, k+i)) < 0){
-                largest = s.substring(i, k+i);
+            if (current.compareTo(largest) > 0) {
+                largest = current;
             }
         }
 

@@ -2104,3 +2104,43 @@ public class Solution {
     }
 }
 ```
+
+## Java String Reverse
+A palindrome is a word, phrase, number, or other sequence of character which reads the same backwards of forward.
+Given a string A, print Yes if it is a palindrome, print no otherwise
+
+### Constraints
+* A will consist at most 50 lower case english letters.
+
+### Sample Input
+```terminal
+madam
+```
+
+### Sample Output
+```terminal
+Yes
+```
+
+### Code
+```java
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+
+        Scanner sc=new Scanner(System.in);
+        String A=sc.next();
+        /* Enter your code here. Print output to STDOUT. */
+
+        StringBuilder sb = new StringBuilder(A);
+
+        if(A.equals(sb.reverse().toString()))
+            System.out.println("Yes");
+        else
+            System.out.println("No");
+    }
+}
+```

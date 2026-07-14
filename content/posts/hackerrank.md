@@ -2135,12 +2135,11 @@ public class Solution {
         String A=sc.next();
         /* Enter your code here. Print output to STDOUT. */
 
-        StringBuilder sb = new StringBuilder(A);
+        String reverse = new StringBuilder(A)
+            .reverse()
+            .toString();
 
-        if(A.equals(sb.reverse().toString()))
-            System.out.println("Yes");
-        else
-            System.out.println("No");
+        System.out.println(A.equals(reverse) ? "Yes" : "No");
     }
 }
 ```

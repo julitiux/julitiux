@@ -34,3 +34,19 @@ List<String> nothingHere = Collections.emptyList();
 List<Integer> nothingHereToo = Collections.<Integer>emptyList();
 //Redundant Type Witness
 ```
+
+### typeinference/vsca/GenericsTypeWitness.java
+```java
+public class GenericsTypeWitness {
+    public <T> void process(Consumer <T> consumer){}
+    public static void display(int value) {}
+
+    public static void main(String[] args){
+        GenericsTypeWitness instance = new GenericsTypeWitness();
+
+        instance.process(input -> display(input)); //ERROR
+                                                   //error: incompatible types: Object cannot be converted to int
+    }
+}
+```
+

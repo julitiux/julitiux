@@ -20,3 +20,11 @@ draft: true
 * 24 Stream Gatherers
 
 # Chapter 2 - Using Type Inference
+
+## Generics and Type Witness
+
+### typeinference/vsca/GenericsTypeInference.java
+```java
+List<String> justOne = Collections.singletonList("howsy");
+List<String> nothingHere = Collections.emptyList();
+```

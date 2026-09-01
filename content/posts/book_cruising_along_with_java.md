@@ -54,3 +54,10 @@ public class GenericsTypeWitness {
 ```java
 instance.<Integer>process(input -> display(input));
 ```
+
+## Diamong Operatior Enhencements
+
+### typeinference/vsca/Diamond.java
+```java
+Map<String, List<Integer>> scores = new HashMap<String, List<Integer>>();
+```

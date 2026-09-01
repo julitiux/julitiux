@@ -28,3 +28,9 @@ draft: true
 List<String> justOne = Collections.singletonList("howsy");
 List<String> nothingHere = Collections.emptyList();
 ```
+
+### typeinference/vsca/GenericsTypeInference.java
+```java
+List<Integer> nothingHereToo = Collections.<Integer>emptyList();
+//Redundant Type Witness
+```

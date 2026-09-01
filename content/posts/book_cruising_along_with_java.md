@@ -38,7 +38,7 @@ List<Integer> nothingHereToo = Collections.<Integer>emptyList();
 ### typeinference/vsca/GenericsTypeWitness.java
 ```java
 public class GenericsTypeWitness {
-    public <T> void process(Consumer <T> consumer){}
+    public <T> void process(Consumer <T> consumer) {}
     public static void display(int value) {}
 
     public static void main(String[] args){
@@ -50,3 +50,7 @@ public class GenericsTypeWitness {
 }
 ```
 
+### typeinference/vsca/GenericsTypeWitness.java
+```java
+instance.<Integer>process(input -> display(input));
+```

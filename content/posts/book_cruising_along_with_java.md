@@ -18,3 +18,5 @@ draft: true
 * 21 Pattern matching for switch Record patterns
 * 22 Unnamed Variables and Patterns
 * 24 Stream Gatherers
+
+# Chapter 2 - Using Type Inference

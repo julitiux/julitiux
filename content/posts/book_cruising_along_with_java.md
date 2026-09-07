@@ -61,3 +61,8 @@ instance.<Integer>process(input -> display(input));
 ```java
 Map<String, List<Integer>> scores = new HashMap<String, List<Integer>>();
 ```
+
+### typeinference/vsca/Diamond.java
+```java
+Map<String, List<Integer>> scores = new HashMap<>();
+```

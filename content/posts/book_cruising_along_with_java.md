@@ -202,3 +202,14 @@ var jvmNamesByLength = jvmNamesByLength.stream()
 ```
 
 ## var:Not a Type nor a Keyword
+
+## typeinference/vsca/TypeInferred.java
+```Java
+public class TypeInferred {
+    public static void main(String[] args) {
+        var message = "hello  there";
+        var max = 1000;
+        var instance = new TypeInferred();
+    }
+}
+```

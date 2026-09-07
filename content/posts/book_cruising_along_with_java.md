@@ -121,3 +121,8 @@ languages.stream()
 ```java
 .sorted(comparing((String name) -> name.length()).reversed())
 ```
+
+### typeinference/vsca/LambdaTypeInferenceFall.java
+```java
+.sorted(comparing(String::length).reversed())
+```

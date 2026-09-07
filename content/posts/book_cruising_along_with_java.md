@@ -200,3 +200,5 @@ var namesByLength = languages.stream()
 var jvmNamesByLength = jvmNamesByLength.stream()
     .collect(groupingCriteria);
 ```
+
+## var:Not a Type nor a Keyword

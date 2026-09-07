@@ -66,3 +66,10 @@ Map<String, List<Integer>> scores = new HashMap<String, List<Integer>>();
 ```java
 Map<String, List<Integer>> scores = new HashMap<>();
 ```
+
+### typeinference/vsca/Diamond.java
+```java
+Map<String, List<Integer>> scores = new HashMap<>() {
+
+};
+```

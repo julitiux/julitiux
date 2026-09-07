@@ -95,3 +95,8 @@ number.forEach(number -> System.out.println(number * 2));
 ```java
 number.forEach((@NotNull number) -> System.out.println(number * 2)); //ERROR
 ```
+
+### typeinference/vsca/Lambda.java
+```java
+number.forEach((@NotNull var number) -> System.out.println(number * 2));
+```

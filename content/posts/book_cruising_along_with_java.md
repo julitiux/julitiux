@@ -213,3 +213,12 @@ public class TypeInferred {
     }
 }
 ```
+
+## typeinference/vsca/NotKeyWord.java
+```java
+var PI = Math.PI;
+String var = "please don't"; //Possible, but not a good idea
+//var var = "please don't"; //Also possible, buy avoid
+
+System.out.println(var); //prints: please don't
+```

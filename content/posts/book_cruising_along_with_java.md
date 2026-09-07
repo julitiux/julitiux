@@ -157,3 +157,21 @@ var scores = new HasMap<String, List<Integer>();
 ```java
 var numberOfCores = Runtime.getRuntime().availableProcessors();
 ```
+
+### Group of Languages
+```java
+List<String> languages =
+    List.of("C++", "C", "Erlang", "Elm", "Haskell", "Ruby", "Python");
+
+List<String> languages =
+    List.of("Java", "Kotlin", "Scala", "Groovy", "Clojure", "JRuby");
+
+Map<Integer, List<String> namesByLength = languages.stream()
+    .collect(groupingBy((String name) -> name.length(),
+    mapping((String name) -> name.toUpperCase(), toList())));
+
+Map<Integer, List<String>> jvmNamesByLength = jvmNamesByLength.stream()
+    .collect(groupingBy((String name) -> name.length(),
+    mapping((String name) -> name.toUpperCase(), toList())));
+```
+

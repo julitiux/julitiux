@@ -148,3 +148,7 @@ var message = "Hello there";
 HashMap<String, List<Integer>> scores = new HasMap<String, List<Integer>();
 ```
 
+### typeinference/vsca/OtherLocalVariable.java
+```java
+var scores = new HasMap<String, List<Integer>();
+```

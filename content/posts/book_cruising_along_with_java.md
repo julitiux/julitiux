@@ -126,3 +126,6 @@ languages.stream()
 ```java
 .sorted(comparing(String::length).reversed())
 ```
+
+## Local Variable Type Inference
+

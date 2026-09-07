@@ -100,3 +100,13 @@ number.forEach((@NotNull number) -> System.out.println(number * 2)); //ERROR
 ```java
 number.forEach((@NotNull var number) -> System.out.println(number * 2));
 ```
+
+### typeinference/vsca/LambdaTypeInferenceFall.java
+```java
+List<String> languages =
+List.of("Java", "Kotlin", "Scala", "Groovy", "Clojure", "JRuby");
+
+languages.stream()
+    .sorted(comparing(name -> name.length()))
+    .forEach(System:out:println);
+```

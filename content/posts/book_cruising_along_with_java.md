@@ -85,3 +85,9 @@ number.forEach((Integer number) -> System.out.println(number * 2));
 ```java
 number.forEach((number) -> System.out.println(number * 2));
 ```
+
+### typeinference/vsca/Lambda.java
+```java
+number.forEach(number -> System.out.println(number * 2));
+```
+

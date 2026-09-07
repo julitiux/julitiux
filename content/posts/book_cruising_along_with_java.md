@@ -142,3 +142,9 @@ public static void greet() {
 ```java
 var message = "Hello there";
 ```
+
+### typeinference/vsca/OtherLocalVariable.java
+```java
+HashMap<String, List<Integer>> scores = new HasMap<String, List<Integer>();
+```
+

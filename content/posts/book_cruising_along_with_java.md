@@ -76,4 +76,7 @@ Map<String, List<Integer>> scores = new HashMap<>() {
 
 ## Lambda Expressions Paramters Type Inference
 
-
+### typeinference/vsca/Lambda.java
+```java
+number.forEach((Integer number) -> System.out.println(number * 2));
+```

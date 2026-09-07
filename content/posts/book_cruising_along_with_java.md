@@ -175,3 +175,16 @@ Map<Integer, List<String>> jvmNamesByLength = jvmNamesByLength.stream()
     mapping((String name) -> name.toUpperCase(), toList())));
 ```
 
+### Group of Languages
+```java
+Collector<String, ?, Map<Integer, List<String>>> groupingCriteria =
+    groupingBy((String name) -> name.length(),
+    mapping((String name) -> name.toUpperCase(), toList()));
+
+Map<Integer, List<String> namesByLength = languages.stream()
+    .collect(groupingCriteria);
+
+Map<Integer, List<String>> jvmNamesByLength = jvmNamesByLength.stream()
+    .collect(groupingCriteria);
+```
+

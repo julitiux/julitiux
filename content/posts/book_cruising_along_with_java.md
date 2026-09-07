@@ -152,3 +152,8 @@ HashMap<String, List<Integer>> scores = new HasMap<String, List<Integer>();
 ```java
 var scores = new HasMap<String, List<Integer>();
 ```
+
+### Number of Cores
+```java
+var numberOfCores = Runtime.getRuntime().availableProcessors();
+```

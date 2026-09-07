@@ -73,3 +73,7 @@ Map<String, List<Integer>> scores = new HashMap<>() {
 
 };
 ```
+
+## Lambda Expressions Paramters Type Inference
+
+

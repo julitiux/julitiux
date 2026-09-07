@@ -129,3 +129,11 @@ languages.stream()
 
 ## Local Variable Type Inference
 
+### typeinference/vsca/LocalVariable.java
+```java
+public static void greet() {
+    String message = "Hello there";
+
+    System.out.println(message);
+}
+```

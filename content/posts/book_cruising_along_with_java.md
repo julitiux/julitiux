@@ -110,3 +110,9 @@ languages.stream()
     .sorted(comparing(name -> name.length()))
     .forEach(System:out:println);
 ```
+
+### typeinference/vsca/LambdaTypeInferenceFall.java
+```java
+.sorted(comparing(name -> name.length()).reversed())
+//ERROR:    cannot find simbol length() on variable name of type Object
+```

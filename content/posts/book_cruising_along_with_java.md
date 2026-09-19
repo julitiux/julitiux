@@ -222,3 +222,6 @@ String var = "please don't"; //Possible, but not a good idea
 
 System.out.println(var); //prints: please don't
 ```
+
+# Reducing Clutter with Text Blocks
+

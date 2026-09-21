@@ -286,3 +286,23 @@ String message = "The \'National Weather Service\' has issued a " +
 ```
 
 ## Smart Identations
+
+### textblock/vsca/SmartIndentation.java
+```java
+public class SmartIndentation {
+    public static String smartIndentation() {
+        var message = """
+            It is great
+            when compilers care about conventions
+            Makes our lives easier""";
+
+        return message;
+    }
+
+    public static void main(String[] args){
+        System.out.println("----------");
+        System.out.print(smartIndentation());
+        System.out.println("----------");
+    }
+}
+```

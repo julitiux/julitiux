@@ -284,3 +284,5 @@ String message = "The \'National Weather Service\' has issued a " +
     "Please \"\"\"stock up\"\"\" on the essentials you'll need " +
     "during\nthe adverse weather.\n\n\\Approved for general distribution\\";
 ```
+
+## Smart Identations

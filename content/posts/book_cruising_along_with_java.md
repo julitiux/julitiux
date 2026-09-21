@@ -287,21 +287,22 @@ String message = "The \'National Weather Service\' has issued a " +
 
 ## Smart Identations
 
-### textblock/vsca/SmartIndentation.java
+### textblock/vsca/PreserveIndentation.java
 ```java
-public class SmartIndentation {
-    public static String smartIndentation() {
+public class PreserveIndentation {
+    public static String preserveIndentation() {
         var message = """
-            It is great
-            when compilers care about conventions
-            Makes our lives easier""";
+            If you like
+                you can ask the indentations
+            to be preserved, unaltered, like in this example.
+            """;
 
         return message;
     }
 
     public static void main(String[] args){
         System.out.println("----------");
-        System.out.print(smartIndentation());
+        System.out.print(preserveIndentation());
         System.out.println("----------");
     }
 }

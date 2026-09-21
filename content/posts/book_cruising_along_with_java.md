@@ -261,3 +261,16 @@ public static String createMessage() {
     return message;
 }
 ```
+
+### textblocks/shoutput/runCreateMessageConcise.sh.ouput
+```terminal
+    public static java.lang.String createMessage();
+        Code:
+            0: ldc #7 // String Thank
+you for your purchase. We hope you had a pleasant
+experience.\n\nWe request that you take a few minutes to
+provide your feedback.\n\nPlease fill out the survey
+at https://survey.example.com\n\nIf you have any
+questions or comments, please click on the \"Support\"
+link\nat https://www.example.com.\n
+```

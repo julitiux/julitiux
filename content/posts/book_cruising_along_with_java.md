@@ -277,3 +277,10 @@ link\nat https://www.example.com.\n
 
 ## Embedding Strings
 
+### textblocks/vsca/Escapes.java
+```java
+String message = "The \'National Weather Service\' has issued a " +
+    "\"severe\" thunderstorm warning\nfor tomorrow. " +
+    "Please \"\"\"stock up\"\"\" on the essentials you'll need " +
+    "during\nthe adverse weather.\n\n\\Approved for general distribution\\";
+```

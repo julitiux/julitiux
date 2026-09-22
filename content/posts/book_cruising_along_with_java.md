@@ -340,3 +340,28 @@ public class SpecialEscapes {
 ```
 
 ## Creating XML Documents Using Text Blocks
+
+### textblocks/vsca/XML.java
+```java
+Map<String, String> authors = Map.of("Java", "Gosling", "Ruby", "Matsumoto", "JavaScript", "Eich");
+
+Map<String, Integer> years = Map.of("Java", 1995, "Ruby", 1996, "JavaScript", 1995);
+```
+
+### Target
+```xml
+<languages>
+    <language name="Java">
+        <author>Gosling</author>
+        <year>1995</year>
+    </language>
+    <language name="JavaScript">
+        <author>Eich</author>
+        <year>1995</year>
+    </language>
+    <language name="Ruby">
+        <author>Matsumoto</author>
+        <year>1996</year>
+    </language>
+</languages>
+```

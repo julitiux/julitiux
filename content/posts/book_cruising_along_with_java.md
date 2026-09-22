@@ -317,3 +317,20 @@ var message =
 ```
 
 ## Trailling Spaces and Special Escapes
+
+### textblocks/vsca/SpecialEscapes.java
+```java
+public class SpecialEscapes {
+    public static String SpecialEscapes() {
+        var message = """
+        This line has 3 spaces in the end
+        This one has too, but is preserved \s
+        This line is appended\
+        with the next
+            This is intentionally indented. """;
+
+        return message;
+    }
+
+}
+```

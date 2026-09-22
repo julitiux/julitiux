@@ -321,7 +321,7 @@ var message =
 ### textblocks/vsca/SpecialEscapes.java
 ```java
 public class SpecialEscapes {
-    public static String SpecialEscapes() {
+    public static String specialEscapes() {
         var message = """
         This line has 3 spaces in the end
         This one has too, but is preserved \s
@@ -330,6 +330,10 @@ public class SpecialEscapes {
             This is intentionally indented. """;
 
         return message;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(specialEscapes().replaceAll(" ", "~"));
     }
 
 }

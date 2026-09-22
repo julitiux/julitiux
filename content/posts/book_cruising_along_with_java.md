@@ -338,3 +338,5 @@ public class SpecialEscapes {
 
 }
 ```
+
+## Creating XML Documents Using Text Blocks

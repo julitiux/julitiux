@@ -308,10 +308,12 @@ public class PreserveIndentation {
 }
 ```
 
-## textblocks/vsca/IndentationError.java
+### textblocks/vsca/IndentationError.java
 ```java
 var message =
     The compiler can keep an eye
             on lines like this with
     indentation errors""";
 ```
+
+## Trailling Spaces and Special Escapes

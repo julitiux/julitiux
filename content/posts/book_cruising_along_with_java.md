@@ -366,7 +366,7 @@ Map<String, Integer> years = Map.of("Java", 1995, "Ruby", 1996, "JavaScript", 19
 </languages>
 ```
 
-textblocks/vsca/XML.java
+### textblocks/vsca/XML.java
 ```java
 String document = "<languages>\n";
 
@@ -387,5 +387,16 @@ var language = """
         <author>%s</author>
         <year>%d</year>
     </language>
-""".indent(2);
+    """.indent(2);
+
+var childElements = authors.keySet()
+    .stream()
+    .sorted()
+    .map(name -> language.formatted(name, authors.get(name), years.get(name)))
+    .collect(joining(""));
+
+return """
+    <languages>
+    %s\
+    </languages>""".formatted(childElements);
 ```

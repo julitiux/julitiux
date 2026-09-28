@@ -365,3 +365,17 @@ Map<String, Integer> years = Map.of("Java", 1995, "Ruby", 1996, "JavaScript", 19
     </language>
 </languages>
 ```
+
+textblocks/vsca/XML.java
+```java
+String document = "<languages>\n";
+
+for(String name : new TreeSet<String>(authors.keySet())) {
+    document += " <language name=\"" + name + "\">\n" +
+        " <author>" + authors.get(name) + "</author>\n" +
+        " <year>" + years.get(name) + "</year>\n";
+    document += " </language>\n";
+}
+
+document += "</languages>";
+```

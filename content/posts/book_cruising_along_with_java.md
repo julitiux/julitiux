@@ -379,3 +379,13 @@ for(String name : new TreeSet<String>(authors.keySet())) {
 
 document += "</languages>";
 ```
+
+### textblocks/vsca/XMLConcise.java
+```java
+var language = """
+    <language name="%s">
+        <author>%s</author>
+        <year>%d</year>
+    </language>
+""".indent(2);
+```

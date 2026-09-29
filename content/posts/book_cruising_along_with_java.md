@@ -431,3 +431,27 @@ return """
     ]
 }
 ```
+
+### textblocks/vsca/JSON.java
+```java
+var document = "{\n" +
+" \"languages\": [\n";
+
+boolean first = true;
+
+for(var name : new TreeSet<String>(authors.keySet())) {
+    if(!first) {
+        document += ",\n";
+    }
+
+    first = false;
+
+    document += " {\n \"language\": {\n" +
+        " \"name\": \"" + name + "\",\n" +
+        " \"author\": \"" + authors.get(name) + "\",\n" +
+        " \"year\": " + years.get(name) + "\n" +
+        " }\n }";
+}
+
+document += "\n ]\n}";
+```

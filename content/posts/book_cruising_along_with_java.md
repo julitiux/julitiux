@@ -400,3 +400,5 @@ return """
     %s\
     </languages>""".formatted(childElements);
 ```
+
+## Creating JSON Output Using Text Blocks

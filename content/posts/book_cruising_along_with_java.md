@@ -402,3 +402,32 @@ return """
 ```
 
 ## Creating JSON Output Using Text Blocks
+
+### Target
+```json
+{
+    "languages": [
+    {
+        "language": {
+            "name": "Java",
+            "author": "Gosling",
+            "year": 1995
+        }
+    },
+    {
+        "language": {
+            "name": "JavaScript",
+            "author": "Eich",
+            "year": 1995
+        }
+    },
+    {
+        "language": {
+            "name": "Ruby",
+            "author": "Matsumoto",
+            "year": 1996
+        }
+    }
+    ]
+}
+```

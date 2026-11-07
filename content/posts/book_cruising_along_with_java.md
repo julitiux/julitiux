@@ -42,15 +42,15 @@ List<Integer> nothingHereToo = Collections.<Integer>emptyList();
 
 ```java
 public class GenericsTypeWitness {
-    public <T> void process(Consumer <T> consumer) {}
-    public static void display(int value) {}
+  public <T> void process(Consumer <T> consumer) {}
+  public static void display(int value) {}
 
-    public static void main(String[] args){
-        GenericsTypeWitness instance = new GenericsTypeWitness();
+  public static void main(String[] args){
+    GenericsTypeWitness instance = new GenericsTypeWitness();
 
-        instance.process(input -> display(input)); //ERROR
-                                                   //error: incompatible types: Object cannot be converted to int
-    }
+      instance.process(input -> display(input)); //ERROR
+                                                 //error: incompatible types: Object cannot be converted to int
+  }
 }
 ```
 
@@ -121,8 +121,8 @@ List<String> languages =
 List.of("Java", "Kotlin", "Scala", "Groovy", "Clojure", "JRuby");
 
 languages.stream()
-    .sorted(comparing(name -> name.length()))
-    .forEach(System:out:println);
+  .sorted(comparing(name -> name.length()))
+  .forEach(System:out:println);
 ```
 
 ### typeinference/vsca/LambdaTypeInferenceFall.java
@@ -150,9 +150,9 @@ languages.stream()
 
 ```java
 public static void greet() {
-    String message = "Hello there";
+  String message = "Hello there";
 
-    System.out.println(message);
+  System.out.println(message);
 }
 ```
 
@@ -184,46 +184,46 @@ var numberOfCores = Runtime.getRuntime().availableProcessors();
 
 ```java
 List<String> languages =
-    List.of("C++", "C", "Erlang", "Elm", "Haskell", "Ruby", "Python");
+  List.of("C++", "C", "Erlang", "Elm", "Haskell", "Ruby", "Python");
 
 List<String> languages =
-    List.of("Java", "Kotlin", "Scala", "Groovy", "Clojure", "JRuby");
+  List.of("Java", "Kotlin", "Scala", "Groovy", "Clojure", "JRuby");
 
 Map<Integer, List<String> namesByLength = languages.stream()
-    .collect(groupingBy((String name) -> name.length(),
-    mapping((String name) -> name.toUpperCase(), toList())));
+  .collect(groupingBy((String name) -> name.length(),
+  mapping((String name) -> name.toUpperCase(), toList())));
 
 Map<Integer, List<String>> jvmNamesByLength = jvmNamesByLength.stream()
-    .collect(groupingBy((String name) -> name.length(),
-    mapping((String name) -> name.toUpperCase(), toList())));
+  .collect(groupingBy((String name) -> name.length(),
+  mapping((String name) -> name.toUpperCase(), toList())));
 ```
 
 ### Group of Languages
 
 ```java
 Collector<String, ?, Map<Integer, List<String>>> groupingCriteria =
-    groupingBy((String name) -> name.length(),
-    mapping((String name) -> name.toUpperCase(), toList()));
+  groupingBy((String name) -> name.length(),
+  mapping((String name) -> name.toUpperCase(), toList()));
 
 Map<Integer, List<String> namesByLength = languages.stream()
-    .collect(groupingCriteria);
+  .collect(groupingCriteria);
 
 Map<Integer, List<String>> jvmNamesByLength = jvmNamesByLength.stream()
-    .collect(groupingCriteria);
+  .collect(groupingCriteria);
 ```
 
 ### Group of Languages
 
 ```java
 var groupingCriteria =
-    groupingBy((String name) -> name.length(),
-    mapping((String name) -> name.toUpperCase(), toList()));
+  groupingBy((String name) -> name.length(),
+  mapping((String name) -> name.toUpperCase(), toList()));
 
 var namesByLength = languages.stream()
-    .collect(groupingCriteria);
+  .collect(groupingCriteria);
 
 var jvmNamesByLength = jvmNamesByLength.stream()
-    .collect(groupingCriteria);
+  .collect(groupingCriteria);
 ```
 
 ## var:Not a Type nor a Keyword
@@ -232,11 +232,11 @@ var jvmNamesByLength = jvmNamesByLength.stream()
 
 ```Java
 public class TypeInferred {
-    public static void main(String[] args) {
-        var message = "hello  there";
-        var max = 1000;
-        var instance = new TypeInferred();
-    }
+  public static void main(String[] args) {
+    var message = "hello  there";
+    var max = 1000;
+    var instance = new TypeInferred();
+  }
 }
 ```
 
@@ -259,16 +259,16 @@ System.out.println(var); //prints: please don't
 ```java
 public static String createMessage() {
 
-    String message = "Thank you for your purchase.";
-    message += " We hope you had a pleasant experience.\n\n";
-    message += "We request that you take a few minutes ";
-    message += "to provide your feedback.\n\n";
-    message += "Please fill out the survey at https://survey.example.com\n\n";
-    message += "If you have any questions or comments, ";
-    message += "please click on the \"Support\" link\n";
-    message += "at https://www.example.com.\n";
+  String message = "Thank you for your purchase.";
+  message += " We hope you had a pleasant experience.\n\n";
+  message += "We request that you take a few minutes ";
+  message += "to provide your feedback.\n\n";
+  message += "Please fill out the survey at https://survey.example.com\n\n";
+  message += "If you have any questions or comments, ";
+  message += "please click on the \"Support\" link\n";
+  message += "at https://www.example.com.\n";
 
-    return message;
+  return message;
 }
 ```
 
@@ -276,27 +276,27 @@ public static String createMessage() {
 
 ```java
 public static String createMessage() {
-    var message = """
-        Thank you for your purchase. We hope you had a pleasant experience.
+  var message = """
+    Thank you for your purchase. We hope you had a pleasant experience.
 
-        We request that you take a few minutes to provide your feedback.
+    We request that you take a few minutes to provide your feedback.
 
-        Please fill out the survey at https://survey.example.com
+    Please fill out the survey at https://survey.example.com
 
-        If you have any questions or comments, please click on the "Support" link
-        at https://www.example.com.
-        """;
+    If you have any questions or comments, please click on the "Support" link
+    at https://www.example.com.
+    """;
 
-    return message;
+  return message;
 }
 ```
 
 ### textblocks/shoutput/runCreateMessageConcise.sh.ouput
 
 ```terminal
-    public static java.lang.String createMessage();
-        Code:
-            0: ldc #7 // String Thank
+  public static java.lang.String createMessage();
+    Code:
+      0: ldc #7 // String Thank
 you for your purchase. We hope you had a pleasant
 experience.\n\nWe request that you take a few minutes to
 provide your feedback.\n\nPlease fill out the survey
@@ -311,9 +311,9 @@ link\nat https://www.example.com.\n
 
 ```java
 String message = "The \'National Weather Service\' has issued a " +
-    "\"severe\" thunderstorm warning\nfor tomorrow. " +
-    "Please \"\"\"stock up\"\"\" on the essentials you'll need " +
-    "during\nthe adverse weather.\n\n\\Approved for general distribution\\";
+  "\"severe\" thunderstorm warning\nfor tomorrow. " +
+  "Please \"\"\"stock up\"\"\" on the essentials you'll need " +
+  "during\nthe adverse weather.\n\n\\Approved for general distribution\\";
 ```
 
 ## Smart Identations
@@ -322,21 +322,21 @@ String message = "The \'National Weather Service\' has issued a " +
 
 ```java
 public class PreserveIndentation {
-    public static String preserveIndentation() {
-        var message = """
-            If you like
-                you can ask the indentations
-            to be preserved, unaltered, like in this example.
-            """;
+  public static String preserveIndentation() {
+    var message = """
+      If you like
+          you can ask the indentations
+      to be preserved, unaltered, like in this example.
+    """;
 
-        return message;
-    }
+    return message;
+  }
 
-    public static void main(String[] args){
-        System.out.println("----------");
-        System.out.print(preserveIndentation());
-        System.out.println("----------");
-    }
+  public static void main(String[] args){
+    System.out.println("----------");
+    System.out.print(preserveIndentation());
+    System.out.println("----------");
+  }
 }
 ```
 
@@ -344,9 +344,9 @@ public class PreserveIndentation {
 
 ```java
 var message =
-    The compiler can keep an eye
-            on lines like this with
-    indentation errors""";
+  The compiler can keep an eye
+          on lines like this with
+  indentation errors""";
 ```
 
 ## Trailling Spaces and Special Escapes
@@ -355,20 +355,20 @@ var message =
 
 ```java
 public class SpecialEscapes {
-    public static String specialEscapes() {
-        var message = """
-        This line has 3 spaces in the end
-        This one has too, but is preserved \s
-        This line is appended\
-        with the next
-            This is intentionally indented. """;
+  public static String specialEscapes() {
+    var message = """
+    This line has 3 spaces in the end
+    This one has too, but is preserved \s
+    This line is appended\
+    with the next
+      This is intentionally indented. """;
 
-        return message;
-    }
+    return message;
+  }
 
-    public static void main(String[] args) {
-        System.out.println(specialEscapes().replaceAll(" ", "~"));
-    }
+  public static void main(String[] args) {
+    System.out.println(specialEscapes().replaceAll(" ", "~"));
+  }
 
 }
 ```
@@ -387,18 +387,18 @@ Map<String, Integer> years = Map.of("Java", 1995, "Ruby", 1996, "JavaScript", 19
 
 ```xml
 <languages>
-    <language name="Java">
-        <author>Gosling</author>
-        <year>1995</year>
-    </language>
-    <language name="JavaScript">
-        <author>Eich</author>
-        <year>1995</year>
-    </language>
-    <language name="Ruby">
-        <author>Matsumoto</author>
-        <year>1996</year>
-    </language>
+  <language name="Java">
+    <author>Gosling</author>
+    <year>1995</year>
+  </language>
+  <language name="JavaScript">
+    <author>Eich</author>
+    <year>1995</year>
+  </language>
+  <language name="Ruby">
+    <author>Matsumoto</author>
+    <year>1996</year>
+  </language>
 </languages>
 ```
 
@@ -408,10 +408,10 @@ Map<String, Integer> years = Map.of("Java", 1995, "Ruby", 1996, "JavaScript", 19
 String document = "<languages>\n";
 
 for(String name : new TreeSet<String>(authors.keySet())) {
-    document += " <language name=\"" + name + "\">\n" +
-        " <author>" + authors.get(name) + "</author>\n" +
-        " <year>" + years.get(name) + "</year>\n";
-    document += " </language>\n";
+  document += " <language name=\"" + name + "\">\n" +
+    " <author>" + authors.get(name) + "</author>\n" +
+    " <year>" + years.get(name) + "</year>\n";
+  document += " </language>\n";
 }
 
 document += "</languages>";
@@ -421,22 +421,22 @@ document += "</languages>";
 
 ```java
 var language = """
-    <language name="%s">
-        <author>%s</author>
-        <year>%d</year>
-    </language>
-    """.indent(2);
+  <language name="%s">
+    <author>%s</author>
+    <year>%d</year>
+  </language>
+  """.indent(2);
 
 var childElements = authors.keySet()
-    .stream()
-    .sorted()
-    .map(name -> language.formatted(name, authors.get(name), years.get(name)))
-    .collect(joining(""));
+  .stream()
+  .sorted()
+  .map(name -> language.formatted(name, authors.get(name), years.get(name)))
+  .collect(joining(""));
 
 return """
-    <languages>
-    %s\
-    </languages>""".formatted(childElements);
+  <languages>
+  %s\
+  </languages>""".formatted(childElements);
 ```
 
 ## Creating JSON Output Using Text Blocks
@@ -480,17 +480,17 @@ var document = "{\n" +
 boolean first = true;
 
 for(var name : new TreeSet<String>(authors.keySet())) {
-    if(!first) {
-        document += ",\n";
-    }
+  if(!first) {
+    document += ",\n";
+  }
 
-    first = false;
+  first = false;
 
-    document += " {\n \"language\": {\n" +
-        " \"name\": \"" + name + "\",\n" +
-        " \"author\": \"" + authors.get(name) + "\",\n" +
-        " \"year\": " + years.get(name) + "\n" +
-        " }\n }";
+  document += " {\n \"language\": {\n" +
+    " \"name\": \"" + name + "\",\n" +
+    " \"author\": \"" + authors.get(name) + "\",\n" +
+    " \"year\": " + years.get(name) + "\n" +
+    " }\n }";
 }
 
 document += "\n ]\n}";

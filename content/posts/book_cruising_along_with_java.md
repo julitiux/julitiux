@@ -7,35 +7,39 @@ draft: false
 # Chapter 1 - The Evolution of Java
 
 ## Recent Changes to Java
-* 8 Functional programming capabilities
-* 9 Modularization
-* 10 Local variable inference
-* 11 Local variable syntax for lambda parameters
-* 14 switch expression
-* 15 Text blocks
-* 16 Pattern matching for instance Records
-* 17 Sealed classes
-* 21 Pattern matching for switch Record patterns
-* 22 Unnamed Variables and Patterns
-* 24 Stream Gatherers
+
+- 8 Functional programming capabilities
+- 9 Modularization
+- 10 Local variable inference
+- 11 Local variable syntax for lambda parameters
+- 14 switch expression
+- 15 Text blocks
+- 16 Pattern matching for instance Records
+- 17 Sealed classes
+- 21 Pattern matching for switch Record patterns
+- 22 Unnamed Variables and Patterns
+- 24 Stream Gatherers
 
 # Chapter 2 - Using Type Inference
 
 ## Generics and Type Witness
 
 ### typeinference/vsca/GenericsTypeInference.java
+
 ```java
 List<String> justOne = Collections.singletonList("howsy");
 List<String> nothingHere = Collections.emptyList();
 ```
 
 ### typeinference/vsca/GenericsTypeInference.java
+
 ```java
 List<Integer> nothingHereToo = Collections.<Integer>emptyList();
 //Redundant Type Witness
 ```
 
 ### typeinference/vsca/GenericsTypeWitness.java
+
 ```java
 public class GenericsTypeWitness {
     public <T> void process(Consumer <T> consumer) {}
@@ -51,6 +55,7 @@ public class GenericsTypeWitness {
 ```
 
 ### typeinference/vsca/GenericsTypeWitness.java
+
 ```java
 instance.<Integer>process(input -> display(input));
 ```
@@ -58,16 +63,19 @@ instance.<Integer>process(input -> display(input));
 ## Diamong Operatior Enhencements
 
 ### typeinference/vsca/Diamond.java
+
 ```java
 Map<String, List<Integer>> scores = new HashMap<String, List<Integer>>();
 ```
 
 ### typeinference/vsca/Diamond.java
+
 ```java
 Map<String, List<Integer>> scores = new HashMap<>();
 ```
 
 ### typeinference/vsca/Diamond.java
+
 ```java
 Map<String, List<Integer>> scores = new HashMap<>() {
 
@@ -77,31 +85,37 @@ Map<String, List<Integer>> scores = new HashMap<>() {
 ## Lambda Expressions Paramters Type Inference
 
 ### typeinference/vsca/Lambda.java
+
 ```java
 number.forEach((Integer number) -> System.out.println(number * 2));
 ```
 
 ### typeinference/vsca/Lambda.java
+
 ```java
 number.forEach((number) -> System.out.println(number * 2));
 ```
 
 ### typeinference/vsca/Lambda.java
+
 ```java
 number.forEach(number -> System.out.println(number * 2));
 ```
 
 ### typeinference/vsca/Lambda.java
+
 ```java
 number.forEach((@NotNull number) -> System.out.println(number * 2)); //ERROR
 ```
 
 ### typeinference/vsca/Lambda.java
+
 ```java
 number.forEach((@NotNull var number) -> System.out.println(number * 2));
 ```
 
 ### typeinference/vsca/LambdaTypeInferenceFall.java
+
 ```java
 List<String> languages =
 List.of("Java", "Kotlin", "Scala", "Groovy", "Clojure", "JRuby");
@@ -112,17 +126,20 @@ languages.stream()
 ```
 
 ### typeinference/vsca/LambdaTypeInferenceFall.java
+
 ```java
 .sorted(comparing(name -> name.length()).reversed())
 //ERROR:    cannot find simbol length() on variable name of type Object
 ```
 
 ### typeinference/vsca/LambdaTypeInferenceFall.java
+
 ```java
 .sorted(comparing((String name) -> name.length()).reversed())
 ```
 
 ### typeinference/vsca/LambdaTypeInferenceFall.java
+
 ```java
 .sorted(comparing(String::length).reversed())
 ```
@@ -130,6 +147,7 @@ languages.stream()
 ## Local Variable Type Inference
 
 ### typeinference/vsca/LocalVariable.java
+
 ```java
 public static void greet() {
     String message = "Hello there";
@@ -139,26 +157,31 @@ public static void greet() {
 ```
 
 ### typeinference/vsca/LocalVariable.java
+
 ```java
 var message = "Hello there";
 ```
 
 ### typeinference/vsca/OtherLocalVariable.java
+
 ```java
 HashMap<String, List<Integer>> scores = new HasMap<String, List<Integer>();
 ```
 
 ### typeinference/vsca/OtherLocalVariable.java
+
 ```java
 var scores = new HasMap<String, List<Integer>();
 ```
 
 ### Number of Cores
+
 ```java
 var numberOfCores = Runtime.getRuntime().availableProcessors();
 ```
 
 ### Group of Languages
+
 ```java
 List<String> languages =
     List.of("C++", "C", "Erlang", "Elm", "Haskell", "Ruby", "Python");
@@ -176,6 +199,7 @@ Map<Integer, List<String>> jvmNamesByLength = jvmNamesByLength.stream()
 ```
 
 ### Group of Languages
+
 ```java
 Collector<String, ?, Map<Integer, List<String>>> groupingCriteria =
     groupingBy((String name) -> name.length(),
@@ -189,6 +213,7 @@ Map<Integer, List<String>> jvmNamesByLength = jvmNamesByLength.stream()
 ```
 
 ### Group of Languages
+
 ```java
 var groupingCriteria =
     groupingBy((String name) -> name.length(),
@@ -204,6 +229,7 @@ var jvmNamesByLength = jvmNamesByLength.stream()
 ## var:Not a Type nor a Keyword
 
 ## typeinference/vsca/TypeInferred.java
+
 ```Java
 public class TypeInferred {
     public static void main(String[] args) {
@@ -215,6 +241,7 @@ public class TypeInferred {
 ```
 
 ## typeinference/vsca/NotKeyWord.java
+
 ```java
 var PI = Math.PI;
 String var = "please don't"; //Possible, but not a good idea
@@ -228,6 +255,7 @@ System.out.println(var); //prints: please don't
 ## From Noisy to Nice
 
 ### textblocks/vsca/CreateMessage.java
+
 ```java
 public static String createMessage() {
 
@@ -245,6 +273,7 @@ public static String createMessage() {
 ```
 
 ### textblocks/vsca/CreateMessageConcise.java
+
 ```java
 public static String createMessage() {
     var message = """
@@ -263,6 +292,7 @@ public static String createMessage() {
 ```
 
 ### textblocks/shoutput/runCreateMessageConcise.sh.ouput
+
 ```terminal
     public static java.lang.String createMessage();
         Code:
@@ -278,6 +308,7 @@ link\nat https://www.example.com.\n
 ## Embedding Strings
 
 ### textblocks/vsca/Escapes.java
+
 ```java
 String message = "The \'National Weather Service\' has issued a " +
     "\"severe\" thunderstorm warning\nfor tomorrow. " +
@@ -288,6 +319,7 @@ String message = "The \'National Weather Service\' has issued a " +
 ## Smart Identations
 
 ### textblock/vsca/PreserveIndentation.java
+
 ```java
 public class PreserveIndentation {
     public static String preserveIndentation() {
@@ -309,6 +341,7 @@ public class PreserveIndentation {
 ```
 
 ### textblocks/vsca/IndentationError.java
+
 ```java
 var message =
     The compiler can keep an eye
@@ -319,6 +352,7 @@ var message =
 ## Trailling Spaces and Special Escapes
 
 ### textblocks/vsca/SpecialEscapes.java
+
 ```java
 public class SpecialEscapes {
     public static String specialEscapes() {
@@ -342,6 +376,7 @@ public class SpecialEscapes {
 ## Creating XML Documents Using Text Blocks
 
 ### textblocks/vsca/XML.java
+
 ```java
 Map<String, String> authors = Map.of("Java", "Gosling", "Ruby", "Matsumoto", "JavaScript", "Eich");
 
@@ -349,6 +384,7 @@ Map<String, Integer> years = Map.of("Java", 1995, "Ruby", 1996, "JavaScript", 19
 ```
 
 ### Target
+
 ```xml
 <languages>
     <language name="Java">
@@ -367,6 +403,7 @@ Map<String, Integer> years = Map.of("Java", 1995, "Ruby", 1996, "JavaScript", 19
 ```
 
 ### textblocks/vsca/XML.java
+
 ```java
 String document = "<languages>\n";
 
@@ -381,6 +418,7 @@ document += "</languages>";
 ```
 
 ### textblocks/vsca/XMLConcise.java
+
 ```java
 var language = """
     <language name="%s">
@@ -404,35 +442,37 @@ return """
 ## Creating JSON Output Using Text Blocks
 
 ### Target
+
 ```json
 {
-    "languages": [
+  "languages": [
     {
-        "language": {
-            "name": "Java",
-            "author": "Gosling",
-            "year": 1995
-        }
+      "language": {
+        "name": "Java",
+        "author": "Gosling",
+        "year": 1995
+      }
     },
     {
-        "language": {
-            "name": "JavaScript",
-            "author": "Eich",
-            "year": 1995
-        }
+      "language": {
+        "name": "JavaScript",
+        "author": "Eich",
+        "year": 1995
+      }
     },
     {
-        "language": {
-            "name": "Ruby",
-            "author": "Matsumoto",
-            "year": 1996
-        }
+      "language": {
+        "name": "Ruby",
+        "author": "Matsumoto",
+        "year": 1996
+      }
     }
-    ]
+  ]
 }
 ```
 
 ### textblocks/vsca/JSON.java
+
 ```java
 var document = "{\n" +
 " \"languages\": [\n";

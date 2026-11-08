@@ -496,7 +496,7 @@ for(var name : new TreeSet<String>(authors.keySet())) {
 document += "\n ]\n}";
 ```
 
-### textblocks/vsca/JSON.java
+### textblocks/vsca/JSONConcise.java
 
 ```java
 var language =  """
@@ -522,4 +522,25 @@ return """
       %s
     ]
   }""".formatted(childElements);
+```
+
+# Chapter 4 Programming with Records
+
+## From Verbose to Succinct
+
+### The old way
+
+```java
+public class Location {
+  private final double latitude;
+  private final longitude;
+
+  public Location(double latitude, double longitude){
+    this.latitude = latitude;
+    this.longitude = longitude;
+  }
+
+  public double getLatitude() { return latitude; }
+  public double getLongitude() { return longitude; }
+}
 ```

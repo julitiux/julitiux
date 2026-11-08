@@ -550,3 +550,29 @@ public class Location {
 ```java
 public record Location(double latitude, double longitude) {}
 ```
+
+## Components, Fields, Getters, and Metadata.
+
+```java
+var lat = alcatraz.latitude();
+var lon = alcatraz.longitude();
+
+System.out.println(lat);
+System.out.println(lon);
+
+locations.stream()
+  .map(Location::latitude)
+  .forEach(System.oit::println);
+
+System.out.println("hello a record: " + "hello".getClass().isRecord());
+System.out.println("alcatraz a record: " + alcatraz.getClass().isRecord());
+
+for(RecordComponent component : alcatraz.getClass().getRecordComponents()) {
+  var name = component.getName();
+  var type = component.getType();
+
+  Object value = component.getAccessor().incoke(alcatraz);
+
+  System.out.println(type + " " + name + "has value " +vale);
+}
+```

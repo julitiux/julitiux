@@ -576,3 +576,39 @@ for(RecordComponent component : alcatraz.getClass().getRecordComponents()) {
   System.out.println(type + " " + name + "has value " +vale);
 }
 ```
+
+## Extend of Immutability
+
+```java
+var alcatraz = new Location(37.827, -122.423);
+alcatraz.lcatitude = 0,0;
+```
+
+This code will be met with a sterm error message from the compiler
+
+```terminal
+vsca/Location.java:8:
+  error: cannot assign a value to final variable latitude
+    alcatraz.latitude = 0.0;
+
+1 error
+```
+
+Let's take a closer look at this so we can avoid the mistake of assuming records guarantee immutability. Suppose we have a Server record that holds details about a server in a enterprise.
+
+```java
+public record Server(String id, StringBuilder name) { //Bad idea
+  public static void main(String[] args) {
+    var server1 = new Server("S1", new StringBuilder("app1"));
+
+    System.out.println(server1);
+
+    //Can't assign to server1.id
+    //Can't assign to server1.name
+
+    server1.name().append("-- production");
+
+    System.out.println(server1);
+  }
+}
+```

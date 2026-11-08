@@ -544,3 +544,9 @@ public class Location {
   public double getLongitude() { return longitude; }
 }
 ```
+
+### records/vsca/Location.java
+
+```java
+public record Location(double latitude, double longitude) {}
+```

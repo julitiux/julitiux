@@ -475,7 +475,7 @@ return """
 
 ```java
 var document = "{\n" +
-" \"languages\": [\n";
+  " \"languages\": [\n";
 
 boolean first = true;
 
@@ -494,4 +494,32 @@ for(var name : new TreeSet<String>(authors.keySet())) {
 }
 
 document += "\n ]\n}";
+```
+
+### textblocks/vsca/JSON.java
+
+```java
+var language =  """
+  {
+    "language": {
+      "name": "%s",
+      "author": "%s",
+      "year": "%d"
+    }
+
+  }""".indent(4);
+
+var childElements = authors.keySet()
+  .stream()
+  .sorted()
+  .map(name -> language.formatted(name, authors.get(name), years.get(name)))
+  .map(String::stripTrailing)
+  .collect(joining("," + System.lineSeparator()));
+
+return """
+  {
+    "languages": [
+      %s
+    ]
+  }""".formatted(childElements);
 ```

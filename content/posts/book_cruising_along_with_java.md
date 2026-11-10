@@ -638,3 +638,29 @@ System.out.println(location3.hashCode());
 System.out.println(location1.equal(location2));
 System.out.println(location1.equal(location3));
 ```
+
+## Implementing interfaces
+
+Records, being classes, are permitted to implement interfaces. What interfaces a record may implement is of course domain- and application-dependent. It may be hard to imagine why a record would implement interfaces like Runnable o Callable<T>. But it's conceivable that a record could implemnt interfaces that may provide consistency in data handling.
+
+```java
+public interface Json {
+  String generateJson();
+}
+```
+
+We can easily evolve the Location record to implement the json interface
+
+```java
+public record Location(double latitude, double longitude) implements Json {
+  @Override
+  public String generateJson() {
+    return """
+    {
+      "latitude": %g,
+      "longitude": %g
+    }
+    """.formatted(latitude, longitude);
+  }
+}
+```

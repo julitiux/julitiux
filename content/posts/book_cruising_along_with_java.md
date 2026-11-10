@@ -612,3 +612,29 @@ public record Server(String id, StringBuilder name) { //Bad idea
   }
 }
 ```
+
+## Built-in Methods
+
+When you define a redord in its most rudimentary form, you automatically get:
+
+- a constructor to initialize the fields for each of the components
+- getters for each of the components
+- a toString() method to display the values of each component
+- an equals() method for value based comparison
+- a hashCode() method that creates an appropriate hash code value for the redord instance based on the values in the components
+
+```java
+var location1 = new Location(40.6892, -74.0445);
+var location2 = new Location(40.6892, -74.0445);
+var location3 = new Location(27.9881, 86.9250);
+
+System.out.println(location1.latitude());
+System.out.println(location1); //using toString()
+
+System.out.println(location1.hashCode());
+System.out.println(location2.hashCode());
+System.out.println(location3.hashCode());
+
+System.out.println(location1.equal(location2));
+System.out.println(location1.equal(location3));
+```

@@ -723,3 +723,7 @@ public record Location(double latitude, double longitude) {
   }
 }
 ```
+
+## (local) Records as Tuples.
+
+A tuple is an immutable data structure of a finite ordered squence of elements.

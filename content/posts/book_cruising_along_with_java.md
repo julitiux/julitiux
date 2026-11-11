@@ -768,3 +768,7 @@ public static void printPricesOver500(List<String> tickers) {
     .forEach(System.out::println);
 }
 ```
+
+# Designing with Sealed Classes and Interfaces
+
+To facilitate such requirements Java has evolved to include sealed classes and sealed interfaces. An interface or a class marked as sealed clearly specifies what can be implemented or extended from it. This provided a way to close the hierarchy with only the desired memebers. Any attempt to extend the hierarchy further will result in a compilation error.

@@ -727,3 +727,44 @@ public record Location(double latitude, double longitude) {
 ## (local) Records as Tuples.
 
 A tuple is an immutable data structure of a finite ordered squence of elements.
+
+```java
+public Stocks {
+
+  public static void main(String[] ticker) {
+    return 200 + ticker.chars().sum();
+  }
+
+  public static void main(String[] args) {
+    var tickers = List.of("GOOG", "MSFT", "AMZN", "ORCL", "INTC");
+
+    printlPricesOver500(tickers);
+  }
+}
+```
+
+```java
+public static printlPricesOver500(List<String> tickers) {
+  tickers.stream()
+    .map(ticker -> simulatePrice(ticker))
+    .filter(price -> price > 500)
+    .forEach(System.out::println);
+```
+
+The overridden toString() method will be invoked automatically when forEach calls the println() method to print the instances.
+
+```java
+public static void printPricesOver500(List<String> tickers) {
+  record Stock(String ticker, int price) {
+    @Override
+    public String toString() {
+      return String.format("Ticker: %s Price: $%d", ticker, price);
+    }
+  }
+
+  ticker.stream()
+    .map(ticker -> new Stock(ticker, simulatePrice(ticker)))
+    .filter(stock -> stock.price() > 500)
+    .forEach(System.out::println);
+}
+```

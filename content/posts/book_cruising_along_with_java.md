@@ -664,3 +664,25 @@ public record Location(double latitude, double longitude) implements Json {
   }
 }
 ```
+
+## Restrictions for the Greater Good
+
+- Records aren't allowed from any classes or other records
+- Records can't serve as a base class
+
+## Considering a Custom Canonical Constructor?
+
+Java allows you to create a canonical constructor for Recordsm but also provides a newer compact constructor.
+
+```java
+public record Location(double latitude, double longitud) {
+  public Location(double latitude, double longitude) { //not preferrable
+    if(latitude < -90 || latitude > 90 || longitude < -180 || lomgitude > 180 ){
+        throw new RuntimeException("The location is out of this world");
+    }
+
+    this.latitude = Math.round(latitude * 100.0) / 100.0;
+    this.longitude = longitude;
+  }
+}
+```

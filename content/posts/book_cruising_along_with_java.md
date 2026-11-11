@@ -705,3 +705,21 @@ public record Location(double latitude, double longitude) {
 
 This makes the code more extensible and honors the Open-Closed Principle.
 Let's recap what we've done. You may write a compact constructor or a custom canonical constructor, but not both. If you only want to initialize fields and have no need to validate of transform datam then don't write either the compact constructor or the canonical constructor. The default constructor provided is adequate in this case. But if you need to write one, then write the compact constructor instead of the custom canonical constructor, as that's simplre, less verbose, less error-prone, and simply looks cool compared to the all-too-familiar constructor.
+
+## Creating a Custom Noncanonical Constructor
+
+```java
+public record Location(double latitude, double longitude) {
+  public Location {
+    if(latitude < -90 || latitude > 90 || longitude < -180 || longitude > 180 ){
+      throw new RuntimeException("The location is out of this world");
+    }
+  latitude = Math.round(latitude * 100.0) / 100.0;
+  }
+
+  public Location(String position) {
+    this(Double.parseDouble(position.split(":")[0]),
+    Double.parseDouble(position.split(":")[1]));
+  }
+}
+```

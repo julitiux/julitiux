@@ -772,3 +772,11 @@ public static void printPricesOver500(List<String> tickers) {
 # Designing with Sealed Classes and Interfaces
 
 To facilitate such requirements Java has evolved to include sealed classes and sealed interfaces. An interface or a class marked as sealed clearly specifies what can be implemented or extended from it. This provided a way to close the hierarchy with only the desired memebers. Any attempt to extend the hierarchy further will result in a compilation error.
+
+## Need for a Closed Hierarchy
+
+Like seaed classes, enums also provide the capability to create a closed hierarchy. "Should we choose an enum or sealed classes?" is a reasonable question.
+
+Prefer enum if you're designing a closed set og fixed predetermined constants, like the JDK's DayOfWeek enum. The values that are part of an enum share the same properties and methods.
+
+To close the hierarchy of classes that aren't part of a fixed set of constants use sealed. Unlike enums, sealed classes that are part of a closed hierarchy may have different methods and properties. You also have the flexibility to extend the hierarchy to multitple levels.

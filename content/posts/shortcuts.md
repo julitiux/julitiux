@@ -41,3 +41,16 @@ draft: false
 | &lt;leader&gt;fr | &lt;cmd&gt;Telescope oldfiles&lt;CR&gt;    | Fuzzy find recent files         |
 | &lt;leader&gt;fs | &lt;cmd&gt;Telescope live_grep&lt;CR&gt;   | Find string in cwd              |
 | &lt;leader&gt;fc | &lt;cmd&gt;Telescope grep_string&lt;CR&gt; | Find string under cursor in cwd |
+
+## Setup automated session manager
+
+| newest           | oldest                              | description                            |
+| ---------------- | ----------------------------------- | -------------------------------------- |
+| &lt;leader&gt;wr | &lt;cmd&gt;SessionRestore&lt;CR&gt; | Restore session for cwd                |
+| &lt;leader&gt;ws | &lt;cmd&gt;SessionSave&lt;CR&gt;    | Save session for auto session root dir |
+
+## Setup vim-maximizer
+
+| newest           | oldest                               | description               |
+| ---------------- | ------------------------------------ | ------------------------- |
+| &lt;leader&gt;sm | &lt;cmd&gt;MaximizerToggle&lt;CR&gt; | Maximize/minimize a split |

@@ -32,3 +32,12 @@ draft: false
 | &lt;leader&gt;ef | &lt;cmd&gt;NvimTreeFindFileToggle&lt;CR&gt; | Toggle file explorer on current file |
 | &lt;leader&gt;ec | &lt;cmd&gt;NvimTreeCollapse&lt;CR&gt;       | Collapse file explorer               |
 | &lt;leader&gt;er | &lt;cmd&gt;NvimTreeRefresh&lt;CR&gt;        | Refresh file exlorer                 |
+
+## Setup telescope fuzzy finder
+
+| newest           | oldest                                     | description                     |
+| ---------------- | ------------------------------------------ | ------------------------------- |
+| &lt;leader&gt;ff | &lt;cmd&gt;Telescope find_files&lt;CR&gt;  | Fuzzy find files in cwd         |
+| &lt;leader&gt;fr | &lt;cmd&gt;Telescope oldfiles&lt;CR&gt;    | Fuzzy find recent files         |
+| &lt;leader&gt;fs | &lt;cmd&gt;Telescope live_grep&lt;CR&gt;   | Find string in cwd              |
+| &lt;leader&gt;fc | &lt;cmd&gt;Telescope grep_string&lt;CR&gt; | Find string under cursor in cwd |

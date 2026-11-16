@@ -65,3 +65,12 @@ draft: false
 | &lt;leader&gt;gcc       | Comment a line          |
 | &lt;leader&gt;gcG       | Comment all document    |
 | &lt;leader&gt;gc_number | Commnet number of lines |
+
+## Setup substitution plugin
+
+| shortcut    | description               |
+| ----------- | ------------------------- |
+| NORMAL - s  | Substitute with motion    |
+| NORMAL - ss | Substitute line           |
+| NORMAL - S  | Substitute to end of line |
+| VISUAL - s  | Substitute in visual mode |

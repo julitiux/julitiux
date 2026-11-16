@@ -41,6 +41,7 @@ draft: false
 | &lt;leader&gt;fr | &lt;cmd&gt;Telescope oldfiles&lt;CR&gt;    | Fuzzy find recent files         |
 | &lt;leader&gt;fs | &lt;cmd&gt;Telescope live_grep&lt;CR&gt;   | Find string in cwd              |
 | &lt;leader&gt;fc | &lt;cmd&gt;Telescope grep_string&lt;CR&gt; | Find string under cursor in cwd |
+| &lt;leader&gt;ft | &lt;cmd&gt;TodoTelescope&lt;CR&gt;         | Find todos                      |
 
 ## Setup automated session manager
 

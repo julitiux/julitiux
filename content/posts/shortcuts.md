@@ -54,3 +54,13 @@ draft: false
 | newest           | oldest                               | description               |
 | ---------------- | ------------------------------------ | ------------------------- |
 | &lt;leader&gt;sm | &lt;cmd&gt;MaximizerToggle&lt;CR&gt; | Maximize/minimize a split |
+
+## Setup commenting plugin
+
+| shortcut                | description             |
+| ----------------------- | ----------------------- |
+| &lt;C-space&gt;         | Start to mark the text  |
+| :InspectTree            | Start highlight         |
+| &lt;leader&gt;gcc       | Comment a line          |
+| &lt;leader&gt;gcG       | Comment all document    |
+| &lt;leader&gt;gc_number | Commnet number of lines |

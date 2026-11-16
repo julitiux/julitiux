@@ -23,3 +23,12 @@ draft: false
 | &lt;leader&gt;tn | &lt;cmd&gt;tabn&lt;CR&gt;     | Open nex tab                   |
 | &lt;leader&gt;tp | &lt;cmd&gt;tabp&lt;CR&gt;     | Open previous tab              |
 | &lt;leader&gt;tf | &lt;cmd&gt;tabnew %&lt;CR&gt; | Open current buffer in new tab |
+
+## Setup nvim-tree file explorer
+
+| newest           | oldest                                      | description                          |
+| ---------------- | ------------------------------------------- | ------------------------------------ |
+| &lt;leader&gt;ee | &lt;cmd&gt;NvimTreeToggle&lt;CR&gt;         | Toggle file explorer                 |
+| &lt;leader&gt;ef | &lt;cmd&gt;NvimTreeFindFileToggle&lt;CR&gt; | Toggle file explorer on current file |
+| &lt;leader&gt;ec | &lt;cmd&gt;NvimTreeCollapse&lt;CR&gt;       | Collapse file explorer               |
+| &lt;leader&gt;er | &lt;cmd&gt;NvimTreeRefresh&lt;CR&gt;        | Refresh file exlorer                 |

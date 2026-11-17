@@ -109,3 +109,13 @@ draft: false
 | shortcuts        | description        |
 | ---------------- | ------------------ |
 | &lt;leader&gt;rs | Restart LSP server |
+
+## Setup trouble.nvim
+
+| shortcuts        | description                       |
+| ---------------- | --------------------------------- |
+| &lt;leader&gt;xw | Open workspace diagnostics        |
+| &lt;leader&gt;xd | Open current document diagnostics |
+| &lt;leader&gt;xq | Open Quickfix list                |
+| &lt;leader&gt;xl | Open Location List                |
+| &lt;leader&gt;xt | Open TODO comments                |

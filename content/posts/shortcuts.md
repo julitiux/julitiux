@@ -119,3 +119,9 @@ draft: false
 | &lt;leader&gt;xq | Open Quickfix list                |
 | &lt;leader&gt;xl | Open Location List                |
 | &lt;leader&gt;xt | Open TODO comments                |
+
+## Setup linting
+
+| shortcuts       | Column2                              |
+| --------------- | ------------------------------------ |
+| &lt;leader&gt;l | Trigger linting for the current file |

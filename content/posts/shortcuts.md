@@ -94,3 +94,12 @@ draft: false
 | ---------------- | --------------------------- |
 | &lt;leader&gt;ca | Show available code actions |
 | &lt;leader&gt;rn | Smart rename symbol         |
+
+### Diagnostics
+
+| Column1         | Column2                    |
+| --------------- | -------------------------- |
+| &lt;leader&gt;D | Show buffer diagnostics    |
+| &lt;leader&gt;d | Show line diagnostics      |
+| [d              | Go to previous diagnostics |
+| ]d              | Go to next diagnostics     |

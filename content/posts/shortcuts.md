@@ -79,7 +79,7 @@ draft: false
 
 ### Code Navigation
 
-| Shorcut | description                                        |
+| shorcut | description                                        |
 | ------- | -------------------------------------------------- |
 | gR      | Show LSP references                                |
 | gD      | Go to declaration                                  |
@@ -97,9 +97,15 @@ draft: false
 
 ### Diagnostics
 
-| Column1         | Column2                    |
+| shortcuts       | description                |
 | --------------- | -------------------------- |
 | &lt;leader&gt;D | Show buffer diagnostics    |
 | &lt;leader&gt;d | Show line diagnostics      |
 | [d              | Go to previous diagnostics |
 | ]d              | Go to next diagnostics     |
+
+### LSP Management
+
+| shortcuts        | description        |
+| ---------------- | ------------------ |
+| &lt;leader&gt;rs | Restart LSP server |

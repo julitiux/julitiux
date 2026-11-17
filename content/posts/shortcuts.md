@@ -87,3 +87,10 @@ draft: false
 | gi      | Show LSP implementations                           |
 | gt      | Show LSP type definitions                          |
 | K       | Show documentation for the symbol under the cursor |
+
+### Code Actions & Refactoring
+
+| shortcuts        | description                 |
+| ---------------- | --------------------------- |
+| &lt;leader&gt;ca | Show available code actions |
+| &lt;leader&gt;rn | Smart rename symbol         |

@@ -74,3 +74,16 @@ draft: false
 | NORMAL - ss | Substitute line           |
 | NORMAL - S  | Substitute to end of line |
 | VISUAL - s  | Substitute in visual mode |
+
+## LSP Shortcuts
+
+### Code Navigation
+
+| Shorcut | description                                        |
+| ------- | -------------------------------------------------- |
+| gR      | Show LSP references                                |
+| gD      | Go to declaration                                  |
+| gd      | Go to definition                                   |
+| gi      | Show LSP implementations                           |
+| gt      | Show LSP type definitions                          |
+| K       | Show documentation for the symbol under the cursor |

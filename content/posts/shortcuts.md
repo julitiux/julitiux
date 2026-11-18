@@ -134,3 +134,11 @@ draft: false
 | --------- | ------------------- |
 | ]h        | Go to next hunk     |
 | [h        | Go to previous hunk |
+
+### Git Actions
+
+| shortcuts        | description         |
+| ---------------- | ------------------- |
+| &lt;leader&gt;hs | Stage current hunk  |
+| &lt;leader&gt;hr | Reset current hunk  |
+| &lt;leader&gt;hS | Stage entire buffer |

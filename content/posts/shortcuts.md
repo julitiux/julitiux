@@ -125,3 +125,12 @@ draft: false
 | shortcuts       | Column2                              |
 | --------------- | ------------------------------------ |
 | &lt;leader&gt;l | Trigger linting for the current file |
+
+## Setup gitsigns plugin
+
+### Navigation
+
+| shortcuts | description         |
+| --------- | ------------------- |
+| ]h        | Go to next hunk     |
+| [h        | Go to previous hunk |

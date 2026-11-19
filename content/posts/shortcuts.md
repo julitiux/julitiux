@@ -164,3 +164,9 @@ draft: false
 | ---------------- | ------------------------------------------- |
 | &lt;leader&gt;hd | Diff current line                           |
 | &lt;leader&gt;hD | Diff current file against previous revision |
+
+### Text Objects
+
+| shortcuts | description                                             |
+| --------- | ------------------------------------------------------- |
+| ih        | Select current hunk (Visual and Operator-pending modes) |

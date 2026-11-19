@@ -170,3 +170,9 @@ draft: false
 | shortcuts | description                                             |
 | --------- | ------------------------------------------------------- |
 | ih        | Select current hunk (Visual and Operator-pending modes) |
+
+## Setup lazygit integration
+
+| shortcuts        | description   |
+| ---------------- | ------------- |
+| &lt;leader&gt;lg | Open lazy git |

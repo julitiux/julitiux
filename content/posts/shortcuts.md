@@ -150,3 +150,10 @@ draft: false
 | shortcuts        | description          |
 | ---------------- | -------------------- |
 | &lt;leader&gt;hp | Preview current hunk |
+
+### Git Blame
+
+| shortcuts        | description                      |
+| ---------------- | -------------------------------- |
+| &lt;leader&gt;hb | Show full blame for current line |
+| &lt;leader&gt;hB | Toggle current line blame        |

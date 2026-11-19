@@ -157,3 +157,10 @@ draft: false
 | ---------------- | -------------------------------- |
 | &lt;leader&gt;hb | Show full blame for current line |
 | &lt;leader&gt;hB | Toggle current line blame        |
+
+### Diff
+
+| shortcuts        | description                                 |
+| ---------------- | ------------------------------------------- |
+| &lt;leader&gt;hd | Diff current line                           |
+| &lt;leader&gt;hD | Diff current file against previous revision |

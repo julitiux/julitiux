@@ -142,3 +142,11 @@ draft: false
 | &lt;leader&gt;hs | Stage current hunk  |
 | &lt;leader&gt;hr | Reset current hunk  |
 | &lt;leader&gt;hS | Stage entire buffer |
+| &lt;leader&gt;hR | Reset entire buffer |
+| &lt;leader&gt;hu | Undo stage buffer   |
+
+### Preview
+
+| shortcuts        | description          |
+| ---------------- | -------------------- |
+| &lt;leader&gt;hp | Preview current hunk |

@@ -194,3 +194,12 @@ draft: false
 | -------- | ----------- |
 | alt - s  | focus west  |
 | alt - g  | focus east  |
+
+### Shortcuts for modifying the layout
+
+| shortcut        | description   |
+| --------------- | ------------- |
+| shift + alt - r | rotate        |
+| shift + att - y | mirror y-axis |
+| shift + att - x | mirror x-axis |
+| shift + att - t | toggle float  |

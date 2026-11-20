@@ -814,3 +814,37 @@ public class TrafficLightFactory {
   }
 }
 ```
+
+## Sealed realted metadata
+
+### sealed/ex1/dot/use/Examine.java
+
+```java
+package dot.use
+
+import dot.light.TraffictLight;
+import dot.light.TraffictLightFactory;
+
+public class Examine {
+  public static void printInfo(Class<? extends TraffictLight> klass) {
+    System.out.println(klass.getSimpleName());
+    System.out.println("Sealed?: " + klass.isSealed());
+
+    System.out.println("Permitted subclasses:");
+    var permittedSubClass = klass.getPermittedSubclasses();
+
+    if(permittedSubClass != null) {
+      for(var permitted : klass.getPermittedSubclasses()) {
+        System.out.println(permitted);
+      }
+    }
+  }
+
+  public static void main(String[] args) {
+    printInfo(TraffictLightFactory.createVertical().getClass());
+    System.out.println("--------");
+    printInfo(TraffictLightFactory.createHorizontal().getClass());
+    System.out.println(TrafficLight.class);
+  }
+}
+```

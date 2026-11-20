@@ -848,3 +848,25 @@ public class Examine {
   }
 }
 ```
+
+## Using the permits Clause
+
+### sealed/ex1/dot/RailroadLight.java
+
+```java
+package dot.ligths;
+
+final class RailroadLight extends TrafficLight {}
+```
+
+```java
+package dot.lights;
+
+public sealed abstract class TraffictLight
+  permits VerticalTrafficLight, HorizontalTrafficLight, RailroadLight {
+  public void turnRed() {}
+  public void turnYellow() {}
+  public void turnGreen() {}
+  //...
+}
+```

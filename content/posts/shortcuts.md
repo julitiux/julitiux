@@ -203,3 +203,10 @@ draft: false
 | shift + att - y | mirror y-axis |
 | shift + att - x | mirror x-axis |
 | shift + att - t | toggle float  |
+
+### Modifying Window size shortcuts
+
+| shortcut        | description     |
+| --------------- | --------------- |
+| shift + alt - m | zoom-fullscreen |
+| shift + alt - e | balance         |

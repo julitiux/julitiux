@@ -798,3 +798,19 @@ public sealed abstract class TrafficLight {
 final class VerticalTrafficLight extends TrafficLight {}
 final class HorizontalTrafficLight extends TrafficLight {}
 ```
+
+### sealed/ex1/dot/lights/TrafficLightFactory.java
+
+```java
+package dot.lights;
+
+public class TrafficLightFactory {
+  public static TrafficLight createVertical() {
+    return new VerticalTrafficLight();
+  }
+
+  public static TraffictLight createHorizontal() {
+    return new HorizontalTrafficLight();
+  }
+}
+```

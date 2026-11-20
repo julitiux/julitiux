@@ -187,3 +187,10 @@ draft: false
 | alt - k  | focus north |
 | alt - h  | focus west  |
 | alt - l  | focus east  |
+
+### Change focus between displays
+
+| shortcut | description |
+| -------- | ----------- |
+| alt - s  | focus west  |
+| alt - g  | focus east  |

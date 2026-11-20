@@ -176,3 +176,14 @@ draft: false
 | shortcuts        | description   |
 | ---------------- | ------------- |
 | &lt;leader&gt;lg | Open lazy git |
+
+## Keyboard shortcuts SKHD
+
+### Changing Focus Shortcuts
+
+| shortcut | description |
+| -------- | ----------- |
+| alt - j  | focus south |
+| alt - k  | focus north |
+| alt - h  | focus west  |
+| alt - l  | focus east  |

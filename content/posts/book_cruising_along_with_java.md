@@ -780,3 +780,21 @@ Like seaed classes, enums also provide the capability to create a closed hierarc
 Prefer enum if you're designing a closed set og fixed predetermined constants, like the JDK's DayOfWeek enum. The values that are part of an enum share the same properties and methods.
 
 To close the hierarchy of classes that aren't part of a fixed set of constants use sealed. Unlike enums, sealed classes that are part of a closed hierarchy may have different methods and properties. You also have the flexibility to extend the hierarchy to multitple levels.
+
+## Using sealed
+
+### sealed/ex1/dot/lights/TrafficLight.java
+
+```java
+package dot.lights;
+
+public sealed abstract class TrafficLight {
+  public void turnRed() {}
+  public void turnYellow() {}
+  public void turnGreen() {}
+  //...
+}
+
+final class VerticalTrafficLight extends TrafficLight {}
+final class HorizontalTrafficLight extends TrafficLight {}
+```

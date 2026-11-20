@@ -210,3 +210,11 @@ draft: false
 | --------------- | --------------- |
 | shift + alt - m | zoom-fullscreen |
 | shift + alt - e | balance         |
+
+### Stop/Start/Restart Yabai
+
+| shortcut       | description     |
+| -------------- | --------------- |
+| ctrl + alt - q | stop-service    |
+| ctrl + alt - s | start-service   |
+| ctrl + alt - r | restart-service |

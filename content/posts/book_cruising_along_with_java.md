@@ -950,3 +950,13 @@ final class WindPower implements GreenPower {
 ```java
 non-sealed interface ExperimentalPower extends PowerSource {}
 ```
+
+### sealed/ex1/dot/power/LaughterPower.java
+
+```java
+package dot.power;
+
+class LaughterPower implements ExperimentalPower {
+  public void drawEnergy() {}
+}
+```

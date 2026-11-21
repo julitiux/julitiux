@@ -870,3 +870,41 @@ public sealed abstract class TraffictLight
   //...
 }
 ```
+
+## Constraints on the subclasses
+
+### Packages of Subclasses
+
+```java
+package dot.lights.railway;
+
+import dot.lights.TrafficLight;
+
+public final class RailroadLight extends TrafficLight {}
+//this change will derail without modules
+```
+
+```java
+package dot.lights
+
+import dot.lights.railway.RailroadLight; // only line that was change
+
+public sealed abstra class TraffictLight
+  permits VerticalTrafficLight, HorizontalTrafficLight, RailroadLight {
+  public void turnRed() {}
+  public void turnYellow/() {}
+  public void turnGreen() {}
+  //...
+}
+
+final class VerticalTrafficLight extends TraffictLight {}
+final class HorizontalTrafficLight extends TraffictLight {}
+```
+
+```terminal
+dot/lights/TraffictLight.java:6: error: class TraffictLight in unnamed module cannot extend a sealed class in a different package permits VerticalTrafficLight, HorizontalTrafficLight, RailroadLight {
+
+1 error
+```
+
+When not using Java modules, a sealed class or interface and all its permitted subclasses are required to be in the same package, though they may be palced in different files.

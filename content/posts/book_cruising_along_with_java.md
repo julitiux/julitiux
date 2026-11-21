@@ -944,3 +944,9 @@ final class WindPower implements GreenPower {
   public void drawEnergy() {}
 }
 ```
+
+### sealed/ex1/dot/power/PowerSource.java
+
+```java
+non-sealed interface ExperimentalPower extends PowerSource {}
+```

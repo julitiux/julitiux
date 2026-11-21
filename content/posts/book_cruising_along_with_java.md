@@ -929,3 +929,18 @@ final class ElectricGrindSource implement PowerSource {
   public void drawEnergy() {}
 }
 ```
+
+### sealed/ex1/dot/power/PowerSource.java
+
+```java
+sealed interface GreenPower extends PowerSource
+  permits SolarPower, WindPower {}
+
+final class SolarPower implement GreenPower {
+  public void drawEnergy() {}
+}
+
+final class WindPower implements GreenPower {
+  public void drawEnergy() {}
+}
+```

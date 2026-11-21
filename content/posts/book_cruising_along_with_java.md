@@ -908,3 +908,16 @@ dot/lights/TraffictLight.java:6: error: class TraffictLight in unnamed module ca
 ```
 
 When not using Java modules, a sealed class or interface and all its permitted subclasses are required to be in the same package, though they may be palced in different files.
+
+## Declaration of subclasses
+
+```java
+package dot.power
+
+public sealed interface PoderSource {
+
+  public sealed interface PowerSource {
+    void drawEnergy();
+  }
+}
+```

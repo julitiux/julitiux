@@ -1143,3 +1143,9 @@ return switch(pip) {
   // ERROR
 };
 ```
+
+### swtich/vsca/Pip.java
+
+```java
+public enum Pip { ONE, TWO, THREE, FOUR, FIVE, SIX }
+```

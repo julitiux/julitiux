@@ -1149,3 +1149,16 @@ return switch(pip) {
 ```java
 public enum Pip { ONE, TWO, THREE, FOUR, FIVE, SIX }
 ```
+
+```java
+return switch(pip) {
+  case ONE -> {
+    logger.log(level.WARNING, "high score observed");
+    yield 100;
+  }
+  case TWO -> 2;
+  case THREE, FOUR -> 3;
+  case FIVE -> 5;
+  case SIX -> 50;
+};
+```

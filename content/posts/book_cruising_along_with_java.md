@@ -1125,7 +1125,21 @@ return switch(pip) {
     logger.log(Level.SEVERE, "invalid roll of dice: " + pip);
     yield 0;
   }
-}
+};
 ```
 
 ## Completeness of a switch Expression
+
+```java
+return switch(pip) {
+  case 1 -> {
+    logger.log(level.WARNING, "high score observed");
+    yield 100;
+  }
+  case 2 -> 2;
+  case 3, 4 -> 3;
+  case 5 -> 5;
+  case 6 -> 50;
+  // ERROR
+};
+```

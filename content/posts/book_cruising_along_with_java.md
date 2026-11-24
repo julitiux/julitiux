@@ -1041,3 +1041,5 @@ public static String gradeFor(int score) {
 return "Grade for score %d is %s".formatted(score, letterGrade);
 }
 ```
+
+## Using Multiple Labels in a Case

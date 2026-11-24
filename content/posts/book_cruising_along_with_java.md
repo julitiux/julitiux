@@ -1092,3 +1092,38 @@ return switch(pip) {
   default -> 0;
 };
 ```
+
+## Cases with Non-expressions
+
+```java
+case label1, label2, label3, ... -> expression;
+```
+
+of
+
+```java
+case label1, label2, label3, ... -> throw new RuntimeException(...);
+```
+
+```java
+case label1, label2, label3, ... ->
+  ...multiple lines of code...
+  ...multiple lines of code...
+```
+
+```java
+return switch(pip) {
+  case 1 -> {
+    logger.log(level.WARNING, "high score observed");
+    yield 100;
+  }
+  case 2 -> 2;
+  case 3, 4 -> 3;
+  case 5 -> 5;
+  case 6 -> 50;
+  default -> {
+    logger.log(Level.SEVERE, "invalid roll of dice: " + pip);
+    yield 0;
+  }
+}
+```

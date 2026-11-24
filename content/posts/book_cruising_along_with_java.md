@@ -1079,3 +1079,16 @@ public static int scoreForAPip(int pip) {
   };
 }
 ```
+
+### switch/vsca/DiceScoresMultiMatch.java
+
+```java
+return switch(pip) {
+  case 1 -> 100;
+  case 2 -> 2;
+  case 3, 4 -> 3;
+  case 5 -> 5;
+  case 6 -> 50;
+  default -> 0;
+};
+```

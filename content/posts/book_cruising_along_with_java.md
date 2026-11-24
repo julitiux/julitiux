@@ -962,3 +962,18 @@ class LaughterPower implements ExperimentalPower {
 ```
 
 # Switching to Switch Expression
+
+## From Statements to Expressions
+
+### switch/vsca/Grade.java
+
+```java
+public class Grade {
+  public static void main (String [] args) {
+    List.of(59, 64, 76, 82, 94, 100)
+      .stream()
+      .map(Grade::gradeFor)
+      .forEach(System.out::println)
+  }
+}
+```

@@ -1127,3 +1127,5 @@ return switch(pip) {
   }
 }
 ```
+
+## Completeness of a switch Expression

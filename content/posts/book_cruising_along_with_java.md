@@ -960,3 +960,5 @@ class LaughterPower implements ExperimentalPower {
   public void drawEnergy() {}
 }
 ```
+
+# Switching to Switch Expression

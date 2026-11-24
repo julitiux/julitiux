@@ -1063,3 +1063,19 @@ public class DiceScores {
   }
 }
 ```
+
+### switch/vsca/DiceScores.java
+
+```java
+public static int scoreForAPip(int pip) {
+  return switch(pip) {
+    case 1 -> 100;
+    case 2 -> 2;
+    case 3 -> 3;
+    case 4 -> 3;
+    case 5 -> 5;
+    case 6 -> 50;
+    default -> 0;
+  };
+}
+```

@@ -1043,3 +1043,23 @@ return "Grade for score %d is %s".formatted(score, letterGrade);
 ```
 
 ## Using Multiple Labels in a Case
+
+### switch/vsca/DiceScores.java
+
+```java
+public class DiceScores {
+  public static void main(String[] args) {
+    var rolls = List.of(3, 5, 3, 4, 6, 1);
+
+    var totalScore = rolls
+      .stream()
+      .mapToInt(DiceScores::scoreForAPip)
+      .sum();
+
+    var result = "Total score after rolling dice %d time is %d"
+      .formatted(roll.size(), totalScore);
+
+    System.out.println(result);
+  }
+}
+```

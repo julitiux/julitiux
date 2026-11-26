@@ -218,3 +218,18 @@ draft: false
 | ctrl + alt - q | stop-service    |
 | ctrl + alt - s | start-service   |
 | ctrl + alt - r | restart-service |
+
+## fzf (command line fuzzy finder)
+
+| example       | description                                      |
+| ------------- | ------------------------------------------------ |
+| ctrl-t        | look to files and directories                    |
+| ctrl-r        | look through command history                     |
+| Tab           | mark a result                                    |
+| shift + tab   | unmark a result                                  |
+| cd **tab      | open up fzf to find directory                    |
+| export **tab  | look for env variable to export                  |
+| unset **tab   | look for env variable to unset                   |
+| unalias **tab | look for alias to unalias                        |
+| ssh **tab     | look for recently visited host names             |
+| kill -9 **tab | look for files & directories to complete command |

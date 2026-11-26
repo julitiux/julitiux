@@ -221,7 +221,7 @@ draft: false
 
 ## fzf (command line fuzzy finder)
 
-| example       | description                                      |
+| keybind       | description                                      |
 | ------------- | ------------------------------------------------ |
 | ctrl-t        | look to files and directories                    |
 | ctrl-r        | look through command history                     |
@@ -233,3 +233,17 @@ draft: false
 | unalias **tab | look for alias to unalias                        |
 | ssh **tab     | look for recently visited host names             |
 | kill -9 **tab | look for files & directories to complete command |
+
+## Setup fzf-git
+
+| keybind | description                         |
+| ------- | ----------------------------------- |
+| ctrl-gf | look for git files with fzf         |
+| ctrl-gb | look for git branches with fzf      |
+| ctrl-gt | look for git tags with fzf          |
+| ctrl-gr | look for git remotes with fzf       |
+| ctrl-gh | look for git commit hashes with fzf |
+| ctrl-gs | look for git stashes with fzf       |
+| ctrl-gl | look for git reflogs with fzf       |
+| ctrl-gw | look for git worktrees with fzf     |
+| ctrl-ge | look for git for-each-ref with fzf  |

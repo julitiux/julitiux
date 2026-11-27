@@ -2315,3 +2315,25 @@ public class Solution {
     }
 }
 ```
+
+## Test HRank
+
+### Given the following code, what us the output?
+
+```java
+public class Main {
+  public static void main(String[] args) {
+
+    String mensaje1 = "WoW!";
+    String mensaje2 = new String("WoW!");
+
+    if (mensaje1 == mensaje2) {
+      System.out.println("iguales");
+    }
+
+    if (mensaje1.equals(mensaje2)) {
+      System.out.println("Realmente iguales");
+    }
+  }
+}
+```

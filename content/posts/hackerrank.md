@@ -7,23 +7,28 @@ draft: false
 # Hackerrank
 
 ## Java Loops II
+
 We use the integers a,b and n to create the following series:
 (a + 2^0 * b),(a + 2^0 * b + 2^1 * b),...,(a + 2^0 * b + 2^1 * b + ... + 2^n-1 * b)
 You are given q queries in the form of a, b and n. For each query, print the series corresponding to the given a,b and n values as a single line of n space-separated integers
 
 ### Input format
+
 The first line contains an integer q, detoning the number of queries.
 Each line i of the q subsequents lines contains three space-separated integers describing the respective ai, bi, and ni values for that query.
 
 ### Constraints
+
 0 <= q <= 500
 0 <= a,b <= 50
 1 <= n <= 15
 
 ### Output format
+
 For each query, print the corresponding series on a new linem Each series must be printed in order as a single line of n space-separated integers.
 
 ### Sample Input
+
 ```terminal
 2
 0 2 10
@@ -31,12 +36,14 @@ For each query, print the corresponding series on a new linem Each series must b
 ```
 
 ### Sample Output
+
 ```terminal
 2 6 14 30 62 126 254 510 1022 2046
 8 14 26 50 98
 ```
 
 ### Code
+
 ```java
 import java.util.*;
 import java.io.*;
@@ -67,23 +74,27 @@ class Solution{
 ```
 
 ## Java Datatypes
+
 Java has 8 primitive date types: char, boolean, byte, shot, int, long, float and double. For this exercise, we'll work with the primitives used to hold integer values (byte, short, int and long):
 
-* A byte is an 8-bit signed integer.
-* A short is a 16-bit signed integer.
-* An int is a 32-bit signed integer.
-* A long is a 64-bit signed integer.
+- A byte is an 8-bit signed integer.
+- A short is a 16-bit signed integer.
+- An int is a 32-bit signed integer.
+- A long is a 64-bit signed integer.
 
 Given a input integer, you most determine which primitive data types are capable of property storing that input.
 To get you started, a portion of the solution is provided for you in the editor.
 
 ### Reference
+
 https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html
 
 ### Input format
+
 The first line contains an integer _T_. denoting the number of test cases. Each test case, _T_, is comprised of a single line with an integer, _n_, which can be arbitrarily large or small
 
 ### Output format
+
 For each input variable _n_ and appropriate primitive _dataType_. you must determine if the given primitives are capable of storing it, if yes, then print:
 
 ```terminal
@@ -99,6 +110,7 @@ n can't be fitted anywhere.
 ```
 
 ### Sample Input
+
 ```terminal
 5
 -150
@@ -109,6 +121,7 @@ n can't be fitted anywhere.
 ```
 
 ### Sample Output
+
 ```terminal
 -150 can be fitted in:
 * short
@@ -126,6 +139,7 @@ n can't be fitted anywhere.
 ```
 
 ### Code
+
 ```java
 import java.util.*;
 import java.io.*;
@@ -157,18 +171,22 @@ class Solution{
 ```
 
 ## Java End-of-file
+
 "In computing, End Of Line (commonly abbreviated EOF) is a condition in a computer operation system where no more data can be read from a data source"
 The challenge here is to read _n_ lines of input until you reach EOF, the number and print all _n_ lines of content.
 
-*Hint:* Java's Scanner.hasNext() method is helpful for this problem.
+_Hint:_ Java's Scanner.hasNext() method is helpful for this problem.
 
 ### Input Format
+
 Read some unknown _n_ lines of input from stdin(System.in) until you reach EOF: each line of input contains a non-empty String.
 
 ### Output Format
+
 For each line, print the line number, followed by a single space, and then the line content received as input
 
 ### Sample Input
+
 ```terminal
 Hello world
 I am a file
@@ -176,6 +194,7 @@ Read me until end-of-file.
 ```
 
 ### Sample Output
+
 ```terminal
 1 Hello world
 2 I am a file
@@ -183,6 +202,7 @@ Read me until end-of-file.
 ```
 
 ### Code
+
 ```java
 import java.io.*;
 import java.util.*;
@@ -206,46 +226,53 @@ public class Solution {
 ```
 
 ## Java Static Initializer Block
+
 Static Initialization blocks are executed when the class is loaded, and you can initialize static variables in those blocks
 It's time to test you knowledge of Static Initialization blocks.
 You are given a class Solution with a main method. Complete the given code so that it outputs the are of a parallelogram with breath _B_ and height _H_. You should read the variables from the standard Input
 If _B_ <= 0 or _H_ <= 0, the output should be "java.lang.Exception: Breagth and height must be positive" whithout quotes
 
 ### Input Format
+
 There are two lines of input. The first line contains _B_: the breadth of the parallelogram. The next, line contains _H_: the height of the parallelogram
 
 ### Constraints
 
-* -100 <= _B_ <= 100
-* -100 <= _H_ <= 100
+- -100 <= _B_ <= 100
+- -100 <= _H_ <= 100
 
 ### Output Format
 
 If both values are greater than zero, then the main method must output the area of the parallelogram. Otherwise, print "java.lang.Exception: Breadth and height must be positive" whithout quotes
 
 ### Sample Input 1
+
 ```terminal
 1
 3
 ```
 
 ### Sample Output
+
 ```terminal
 e
 ```
 
 ### Sample Input 2
+
 ```terminal
 -1
 2
 ```
 
 ### Sample Output 2
+
 ```terminal
 java.lang.Exception: Breadth and height must be positive
 ```
 
 ### Code
+
 ```java
 import java.io.*;
 import java.util.*;
@@ -282,12 +309,14 @@ public static void main(String[] args){
 ```
 
 ## Java int to String
+
 You given an integer _n_, you have to convert it into a string.
 Please complete the partially completed code in the editor. If your code succefully converts _n_ into a string _s_ the code will print "Good job". Otherwise it will print "Wrong answer"
 
 _n_ can range between -100 to 100 inclusive.
 
 ### Code
+
 ```java
 import java.util.*;
 import java.security.*;
@@ -337,11 +366,13 @@ class DoNotTerminate {
 ```
 
 ## Java Date and Time
+
 The Calendar class is an abstract class that provided methods for converting between a specific instant in time and a set of calendar fields such as YEAR, MONTHm DAY_OF_MONTH, HOUR, and so on, and for manipulating the calendar fields, such as getting the date of the next week.
 
 You are given a date, You just need to write the method, _getDay_, witch returns the day on that date. To simplify your task, we have rpovided a portion of the code in the editor.
 
 ### Example
+
 month = 8
 day = 14
 year = 2017
@@ -349,32 +380,40 @@ year = 2017
 The method should return _MONDAY_ as the day on that date
 
 ### Function description
+
 Complete the findDay function in the editor below
 findDay has the following parameters:
 
-* int: month
-* int: day
-* int: year
+- int: month
+- int: day
+- int: year
 
 ### Returns
-* string: the day of the week in capital letters
+
+- string: the day of the week in capital letters
 
 ### Input Format
+
 A single line of input containing the space separated month, day and year, respectively, in _MM DD YYYY_ format
 
 ### Constraints
+
 2000 < year < 3000
 
 ### Sample Input
+
 08 05 2015
 
 ### Sample Output
+
 WEDNESDAY
 
 ### Explanation
+
 The day on August 5th 2015 was WEDNESDAY
 
 ### Code
+
 ```java
 import java.io.*;
 import java.math.*;
@@ -453,6 +492,7 @@ public class Solution {
 ```
 
 ## Java Currency Formatter
+
 Given a doble-precision number, _payment_, denoting an amount of money, use the NumberFormat class getCurrencyInstance method to convert _payment_ into the US, Indian, Chinese and French currency formatas. Then print the formatted values as follows:
 
 ```terminal
@@ -466,25 +506,30 @@ where _formattedPayment_ is _payment_ formatted according to the appropriate Loc
 _Note:_ India does not have built-in Locale, so you must construct one where the lenguage is en (i.e.. English)
 
 ### Input Format
+
 A single double-precision number denoting _payment_
 
 ### Constraints
+
 ```terminal
 0 <= payment <= 10^9
 ```
 
 ### Output Format
+
 On the first line, print US: u where u is payment formatted for US currency.
 On the second line, print India: i where _i_ is payment formatted for Indian currency.
-On the third line, print China: c where _c_  is payment formatted for Chinese currency.
+On the third line, print China: c where _c_ is payment formatted for Chinese currency.
 On the fourth line, print France: f, where _f_ is payment formatted for French currency.
 
 ### Sample Input
+
 ```terminal
 12324.134
 ```
 
 ### Sample Output
+
 ```terminal
 US: $12,324.13
 India: Rs.12,324.13
@@ -493,9 +538,11 @@ France: 12 324,13 €
 ```
 
 ### Explanation
+
 Each line contains the value of payment formatted according to the four countries respective currencies.
 
 ### Code
+
 ```java
 import java.util.*;
 import java.text.*;
@@ -529,6 +576,7 @@ public class Solution {
 # Data Structures
 
 ## Java 1D Array
+
 An array is a simple data structure used to store a collection of data in a contiguous block of memory. Eache element in the collection is accessed using an index, and the elements are easy to find because they're stored sequentially in memory.
 
 Because the collection of elements in an array is stored as a big block of data, we tipically use arrays when we know exactly how many pieces of data we're going to have. For example, you might use an array to store a list of student ID numbers, or the names of state capitals. To create an array of integers named _myArray_ that can hold four integer values, you would write the following code:
@@ -552,10 +600,11 @@ System.out.println(myArray[3]);
 The code above prints the value stored at index 3 of myArray, which is (the value we previously stored there). It's important to note that while Java initializes each cell of an array of integers with a 0, not all languages do this.
 
 ### Task
+
 The code in your editor does the following:
 
 1. Reads an integer from stdin and saves it to a variable, n, denoting some number of integers.
-2. Reads n integers corresponding to a0, a1,..., an-1  from stdin and saves each integer a to a variable, val.
+2. Reads n integers corresponding to a0, a1,..., an-1 from stdin and saves each integer a to a variable, val.
 3. Attempts to print each element of an array of integers named a.
 
 Write the following code in the unlocked portion of your editor:
@@ -566,12 +615,15 @@ Write the following code in the unlocked portion of your editor:
 Good luck!
 
 ### Input Format
+
 The first line contains a single integer, n, denoting the size of the array. Each line i of the n subsequent lines contains a single integer denoting the value of element ai.
 
 ### Output Format
+
 You are not responsible for printing any output to stdout. Locked code in the editor loops through array a and prints each sequential element on a new line.
 
 ### Sample input
+
 ```terminal
 5
 10
@@ -582,6 +634,7 @@ You are not responsible for printing any output to stdout. Locked code in the ed
 ```
 
 ### Sample Output
+
 ```terminal
 10
 20
@@ -591,9 +644,11 @@ You are not responsible for printing any output to stdout. Locked code in the ed
 ```
 
 ### Explanation
+
 When we save each integer to its corresponding index in a, we get a = [10, 20, 30, 40, 50]. The locked code prints each array element on a new line from left to right.
 
 ### Code
+
 ```java
 import java.io.*;
 import java.math.*;
@@ -645,7 +700,9 @@ public class Solution {
 ```
 
 ## Java 2D Array
+
 You are given 6 * 6 2D array. An hourglass in a array is a portion shaped like this:
+
 ```terminal
 a b c
   d
@@ -653,6 +710,7 @@ e f g
 ```
 
 For example, if we create an hourglassusing the number 1 whithin an array full of zeros, it may look like this:
+
 ```terminal
 1 1 1 0 0 0
 0 1 0 0 0 0
@@ -663,6 +721,7 @@ For example, if we create an hourglassusing the number 1 whithin an array full o
 ```
 
 Actually, there are many hourglasses in the array above. The three leftmost hourglasses are the following
+
 ```terminal
 1 1 1     1 1 0     1 0 0
   1         0         0
@@ -673,13 +732,16 @@ The sum of an hourglass is the sum of the all numbers within it. The sum for the
 In this problem you have to print the largest sum amoung all the hourglasses in the array
 
 ### Input Format
+
 There will be exactly 6 lines, each containing 6 integers separated by spaces.
 Each integer will be between -9 and 9 inclusive
 
 ### Output Format
+
 Print the answer to this problem on a single line.
 
 ### Sample Input
+
 ```terminal
 1 1 1 0 0 0
 0 1 0 0 0 0
@@ -690,11 +752,13 @@ Print the answer to this problem on a single line.
 ```
 
 ### Sample Output
+
 ```terminal
 19
 ```
 
 ### Explanation
+
 ```terminal
 2 4 4
   2
@@ -702,6 +766,7 @@ Print the answer to this problem on a single line.
 ```
 
 ### Code
+
 ```java
 import java.io.*;
 import java.math.*;
@@ -752,35 +817,42 @@ public class Solution {
 ```
 
 ## Java Subarray
-* A subarray of an n-element array is an array composed from a contiguous block of the original array's elements. For example, if array = [1,2,3], then the subarrays are [1], [2], [3], [1,2], [2,3], and [1,2,3]. Something like [1,3] would not be a subarray as it's not a contiguous subsection of the original array.
-* The sum of an array is the total sum of its elements.
-    * An array's sum is negative if the total sum of its elements is negative.
-    * An array's sum is positive if the total sum of its elements is positive.
+
+- A subarray of an n-element array is an array composed from a contiguous block of the original array's elements. For example, if array = [1,2,3], then the subarrays are [1], [2], [3], [1,2], [2,3], and [1,2,3]. Something like [1,3] would not be a subarray as it's not a contiguous subsection of the original array.
+- The sum of an array is the total sum of its elements.
+  - An array's sum is negative if the total sum of its elements is negative.
+  - An array's sum is positive if the total sum of its elements is positive.
 
 Given an array of n integers, find and prints its number of negative subarrays on a new line
 
 ### Input Format
+
 The first line contains a single integer, n, detoning the lenght of array A = [a0, a2,...,an-1]. The second line contains n space-separated integer describing each respective element ai. in array A
 
 ### Constraints
-* 1 <= n <= 100
-* -10^4 <= ai <= 10^4
+
+- 1 <= n <= 100
+- -10^4 <= ai <= 10^4
 
 ### Output Format
+
 Print the number of subarrays of A having negative sums
 
 ### Sample Input
+
 ```terminal
 5
 1 -2 4 -5 1
 ```
 
 ### Sample Output
+
 ```terminal
 9
 ```
 
 ### Explanation
+
 There are nine negative subarrays of A = [1,-2,4,-5,1]
 
 ```terminal
@@ -798,6 +870,7 @@ There are nine negative subarrays of A = [1,-2,4,-5,1]
 Thus, we print 9 on a new line.
 
 ### Code
+
 ```java
 import java.io.*;
 import java.util.*;
@@ -840,24 +913,30 @@ public class Solution {
 ```
 
 ## Java ArrayList
+
 Sometimes it's better use dinamic size arrays. Java's Arraylist can provide you this feature. Try to solve this problem using Arraylist.
 You are given _n_ lines. In each line there are zero or more integers. You need to answer a few queries where you need to tell the number located in y^th position of x^th line
 
 ### Input Format
+
 The first line has a integer _n_. In each of the next _n_ lines there will be an integer _d_ denoting number of integers on that line and then there will be _d_ space-separated integers. In the next line there will be an integer _q_ denoting number of queries. Each query will consist of two integers _x_ and _y_
+
 ### Constraints
-* 1 <= n <= 2000
-* 0 <= d <= 5000
-* 1 <= q <= 1000
-* 1 <= x <= n
+
+- 1 <= n <= 2000
+- 0 <= d <= 5000
+- 1 <= q <= 1000
+- 1 <= x <= n
 
 Each number will fit in signed integer
 Total number of integers in _n_ lines will not cross 10^5
 
 ### Output Format
-In each line, Output the number located in y^th  position of x^th line. If there is no such position, just print "ERROR!"
+
+In each line, Output the number located in y^th position of x^th line. If there is no such position, just print "ERROR!"
 
 ### Sample Input
+
 ```terminal
 5
 5 41 77 74 22 44
@@ -874,6 +953,7 @@ In each line, Output the number located in y^th  position of x^th line. If there
 ```
 
 ### Sample Output
+
 ```terminal
 74
 52
@@ -883,6 +963,7 @@ ERROR!
 ```
 
 ### Code
+
 ```java
 import java.io.*;
 import java.util.*;
@@ -927,31 +1008,35 @@ public class Solution {
 ```
 
 ## Java 1D Array (Part 2)
+
 Let's play a game on an array" You're standing at index 0 of an n-element array named game.
 
 From some index i (where 0 <= i <= n). you can perform one of the following moves:
 
-* Move Backward: if cell i -1 exists and contains a 0, you can walk back to cell i - 1.
-* Move Forward:
+- Move Backward: if cell i -1 exists and contains a 0, you can walk back to cell i - 1.
+- Move Forward:
 
-    * If cell i + 1 contains a zero, you can walk to cell i + 1
-    * If cell i + leap contains a zero, you can jump to cell i + leap
-    * If you're standing in cell n - 1 or the value of i + leap >= n you can walk or jump off the end of the array and win the game
+  - If cell i + 1 contains a zero, you can walk to cell i + 1
+  - If cell i + leap contains a zero, you can jump to cell i + leap
+  - If you're standing in cell n - 1 or the value of i + leap >= n you can walk or jump off the end of the array and win the game
 
 In other words, you can move from index i to index i + 1, i - 1, or i + leap as long as the destination index is a cell containing a 0. If the destination index is greater than n - 1, you win the game.
 
 ### Function Description
+
 Complete the canWin function in the edito below.
 
 canWin has the following parameters:
 
-* int leap: the size of the leap
-* int game[n]: the array to traverse
+- int leap: the size of the leap
+- int game[n]: the array to traverse
 
 ### Returns
-* boolean: true if the game can be won, otherwise false
+
+- boolean: true if the game can be won, otherwise false
 
 ### Input Format
+
 The first contains an integer, q denoting the number of queries (i.e. function calls).
 The 2 ° q subsequents lines describe each query over two lines:
 
@@ -959,12 +1044,14 @@ The 2 ° q subsequents lines describe each query over two lines:
 2. The second line contains n space-separated binary integers (i.e. zeroes and ones) describing the respective values of game0, game1,..., gamen-1
 
 ### Constraints
-* 1 <= q <= 5000
-* 2 <= n <= 100
-* 0 <= leap <= 100
-* It is guaranteed that the value of game[0] is always 0
+
+- 1 <= q <= 5000
+- 2 <= n <= 100
+- 0 <= leap <= 100
+- It is guaranteed that the value of game[0] is always 0
 
 ### Sample Input
+
 ```terminal
 STDN            Function
 ----            --------
@@ -980,6 +1067,7 @@ STDN            Function
 ```
 
 ### Sample Output
+
 ```terminal
 YES
 YES
@@ -988,6 +1076,7 @@ NO
 ```
 
 ### Code
+
 ```java
 import java.util.*;
 
@@ -1038,19 +1127,22 @@ public class Solution {
 ```
 
 ## Java List
+
 The first line constains an integer _N_ (the initial number of elements in _L_) The second line contains an integer, _Q_ (the number of queries).
 
 The _2Q_ subsequent lines describe the queries, and each query is described over two lines:
 
-* If the first lines of a query contains the Spring Insert, then the second line constains two space separated integers _x, y_, and the value _y_ must be inserted into _L_ at index _x_.
-* If the first line of a query contains the String _Delete_, then the second line contains index _x_, whose element must be deleted from _L_.
+- If the first lines of a query contains the Spring Insert, then the second line constains two space separated integers _x, y_, and the value _y_ must be inserted into _L_ at index _x_.
+- If the first line of a query contains the String _Delete_, then the second line contains index _x_, whose element must be deleted from _L_.
 
 ### Constraints
-* 1 <= N <= 4000
-* 1 <= Q <= 4000
-* Each element in is a 32-bit integers
+
+- 1 <= N <= 4000
+- 1 <= Q <= 4000
+- Each element in is a 32-bit integers
 
 ### Output Format
+
 ```terminal
 5
 12 0 1 78 12
@@ -1062,11 +1154,13 @@ Delete
 ```
 
 ### Sample Output
+
 ```terminal
 0 1 78 12 23
 ```
 
 ### Code
+
 ```java
 import java.io.*;
 import java.util.*;
@@ -1117,14 +1211,17 @@ public class Solution {
 ```
 
 ## Java Map
+
 You are given a phone book that consist of people's names and their phone number. After that you will be given some person's name as query. For each query, print the phone number of that person.
 
 ### Input Format
+
 The first line will have an integer _n_ denoting the number of entries in the phone book. Each entry consist of two lines: a name and the corresponding phone number.
 
 After these, there will be some queries. Each query will constain a person's name. Read the queries until end-of-line
 
 ### Constraints
+
 A person's name consist of only lower-case English letters and it may be in the format 'first-name last-name' or in the format 'first-name' or in the format 'first-name'. Eache phone number has exactly 8 digits without any leading zeros.
 
 ```terminal
@@ -1133,11 +1230,13 @@ A person's name consist of only lower-case English letters and it may be in the 
 ```
 
 ### Output Format
+
 For each case, print "Not Found" if the person has no entry in the phone book. Otherwise, print the person's name and phone number. See sample output for the exact format.
 
 To make the problem easier, we provided a portion of the core in the editor. You can either complete that code or write completely on your own.
 
 ### Sample Input
+
 ```terminal
 3
 uncle sam
@@ -1152,6 +1251,7 @@ harry
 ```
 
 ### Sample Output
+
 ```temrinal
 uncle sam=99912222
 Not found
@@ -1159,6 +1259,7 @@ harry=12299933
 ```
 
 ### Code
+
 ```java
 //Complete this code or write your own from scratch
 import java.util.*;
@@ -1214,24 +1315,29 @@ class Solution{
 ### Tip
 
 #### HashMap
+
 ```java
 Map<String, Integer> edades = new HashMap<>();
 ```
 
 #### LinkedHashMap (mantine orden)
+
 ```java
 Map<String, Integer> edades = new LinkedHashMap<>();
 ```
 
 #### TreeMap (ordena por clave)
+
 ```java
 Map<String, Integer> edades = new TreeMap<>();
 ```
 
 ## Java Stack
+
 > In computer science, a stack or LIFO (last in, first out) is an abstract.
 
 A string contains only parentheses is balanced if the following is true:
+
 1. If it is an empty string
 2. if A and B are correct, AB is correct
 3. if A is correct (A) and (A) and (A) are also correct.
@@ -1241,14 +1347,17 @@ Examples of some unbalanced strings are: "{}(", "({)}", "[[", "}{" etc.
 Given a string, determine if it is balanced or not.
 
 ### Input Format
+
 There will be multiple lines in the input file, each having a siblle non-empty string. You should read input til end-of-file
 
 The part of the code that handles input operation is alredy provided in the editor
 
 ### Output Format
+
 For each case, print 'true' if the string us balanced, 'false' Otherwise
 
 ### Sample Input
+
 ```terminal
 {}()
 ({()})
@@ -1257,6 +1366,7 @@ For each case, print 'true' if the string us balanced, 'false' Otherwise
 ```
 
 ### Sample Output
+
 ```terminal
 true
 true
@@ -1265,6 +1375,7 @@ true
 ```
 
 ### Code
+
 ```java
 import java.util.*;
 class Solution{
@@ -1313,11 +1424,13 @@ class Solution{
 ```
 
 ## Java Generics
+
 Generic methods are a very efficient way to handle multiple datatype using a single method. This problem will test you knowledge on Jave Generic methods.
 
 Let's say you have an integer array and a string array. You have to write a single method printArray that can print all the elements of both arrays. The method should be able to accept both integers arrays or string arrays
 
 You are gicen code in the editor. Complete the code so that it prints the following lines:
+
 ```terminal
 1
 2
@@ -1329,6 +1442,7 @@ World
 Do not use method overloading because your answer will not be accepted
 
 ### Code
+
 ```java
 import java.io.IOException;
 import java.lang.reflect.Method;
@@ -1367,6 +1481,7 @@ public class Solution {
 ```
 
 ## Java Comparator
+
 Comparators are used to compare two objects. In the challenge, you'll create a comparator and use it to sort an array.
 
 The Player class is provided for you in your editor. It has 3 fields: a _name_ String and a _score_ integer.
@@ -1374,6 +1489,7 @@ The Player class is provided for you in your editor. It has 3 fields: a _name_ S
 Given an array of _n_ Player objects, write a comparator that sorts them in order of decreasing score; if 2 or more players have the same score, sort the those players alphabetically by name. To do this, you must create a Checker class that implements the Comparator interface, then write an int compare(Player a, Player b) method implementing the Comparator.compare(T o1, T o2) method.
 
 ### Input Format
+
 Input from stdin is handled by the locked stub in the Solution class.
 
 The first line contains an integer. _n_ denoting the number of players.
@@ -1381,14 +1497,17 @@ The first line contains an integer. _n_ denoting the number of players.
 Each of the _n_ subsequents lines contains a player's _name_ and _score_, respectively.
 
 ### Constraints
-* 0 <= _score_ <= 1000
-* 2 players can have the same name
-* Player names consist of lowercase English letters
+
+- 0 <= _score_ <= 1000
+- 2 players can have the same name
+- Player names consist of lowercase English letters
 
 ### Output Format
+
 You are responsible for printing any output to stdout. The lcked stub code in Solution will create a Checker object, use it to sort the Player array, and print each sorted element
 
 ### Sample Inpu
+
 ```terminal
 5
 amy 100
@@ -1399,6 +1518,7 @@ aleksa 150
 ```
 
 ### Sample Output
+
 ```terminal
 aleksa 150
 amy 100
@@ -1408,6 +1528,7 @@ heraldo 50
 ```
 
 ### Code
+
 ```java
 import java.util.*;
 
@@ -1458,11 +1579,13 @@ class Solution {
 ```
 
 ## Java Sort
+
 You are given a list of student information: ID, FirstName, and CGPA. Your task is to rearrange them according to their CGPA in decreasing order. If two student have the same CGPA, then arrange them according to their first name in alphabetical order. If those two students also have the same first name, then order them according to their ID. No two students have the same ID.
 
 Hint: You can use comparators to sort a list of objects. See the oracle docs to learn about comparators.
 
 ### Input Format
+
 The first line of input contains an integer _N_, representing the total number of students. The next _N_ lines contains a list of student information in the following structure:
 
 ```terminal
@@ -1470,6 +1593,7 @@ ID Name CGPA
 ```
 
 ### Constraints
+
 ```terminal
 2 <= N <= 1000
 0 <= ID <= 100000
@@ -1480,9 +1604,11 @@ ID Name CGPA
 The name contains only lowercase English letters. The _ID_ contains only integer numbers without leading zeros. The CGPA will contain, at most, 2 digits after the decimal point.
 
 ### Output Format
+
 After rearranging the students according to the above rules, print the first name of each student on a separate line.
 
 ### Sample Format
+
 ```terminal
 5
 33 Rumpa 3.68
@@ -1493,6 +1619,7 @@ After rearranging the students according to the above rules, print the first nam
 ```
 
 ### Sample Output
+
 ```terminal
 Ashis
 Fahim
@@ -1502,6 +1629,7 @@ Rumpa
 ```
 
 ### Code
+
 ```java
 import java.util.*;
 
@@ -1559,6 +1687,7 @@ public class Solution
 ```
 
 ## Java Dequeue
+
 In computer science, a double-ended queue (dequeue, often abbreviated to deque, pronounced deck) is an abstract data type that generalizes a queue, for which elements can be added to or removed from either the front (head) or back (tail).
 
 Deque interfaces can be implemented using various types of collections such as LinkedList or ArrayDeque classes. For example, deque can be declared as:
@@ -1566,7 +1695,9 @@ Deque interfaces can be implemented using various types of collections such as L
 ```java
 Deque deque = new LinkedList<>();
 ```
+
 or
+
 ```java
 Deque deque = new ArrayList<>();
 ```
@@ -1576,9 +1707,11 @@ In this problem, you are given _N_ integers. You need to find the maximum number
 Note: Time limit is 3 second for this problem.
 
 ### Input Format
+
 The first line of input contains two integers _N_ and : _M_ representing the total number of integers and the size of the subarray, respectively. The next line contains _N_ space separated integers.
 
 ### Constraints
+
 ```terminal
 1 <= N <= 100000
 1 <= M <= 100000
@@ -1588,20 +1721,24 @@ M <= N
 The number in the array will range between [0, 10000000].
 
 ### Output Format
+
 Print the maximum number of unique integers among all possible contiguous subarrays of size _M_.
 
 ### Sample Input
+
 ```terminal
 6 3
 5 3 5 2 3 2
 ```
 
 ### Sample Output
+
 ```terminal
 3
 ```
 
 ### Code
+
 ```java
 import java.util.*;
 public class test {
@@ -1640,20 +1777,22 @@ public class test {
 ```
 
 ## Java BitSet
-Java's BitSet class implements a vector of bit values (i.e.: false() or  true()) that grows as needed, allowing us to easily manipulate bits while optimizing space (when compared to other collections). Any element having a bit value of 1 is called a set bit.
+
+Java's BitSet class implements a vector of bit values (i.e.: false() or true()) that grows as needed, allowing us to easily manipulate bits while optimizing space (when compared to other collections). Any element having a bit value of 1 is called a set bit.
 
 Given 2 BitSets, B1 and B2, of size N where all bits in both BitSets are initialized to 0, perform a series of M operations. After each operation, print the number of set bits in the respective BitSets as two space-separated integers on a new line.
 
 ### Input Format
+
 The first line contains 2 space-separated integers, N (the length of both BitSets B1 and B2) and M (the number of operations to perform), respectively.
 
 The M subsequent lines each contain an operation in one of the following forms:
 
-* AND <set> <set>
-* OR <set> <set>
-* XOR <set> <set>
-* FLIP <set>  <index>
-* SET <set>  <index>
+- AND <set> <set>
+- OR <set> <set>
+- XOR <set> <set>
+- FLIP <set> <index>
+- SET <set> <index>
 
 In the list above, <set> is the integer 1 or 2, where 1 denotes B1 and 2 denotes B2.
 <index> is an integer denoting a bit's index in the BitSet corresponding to <set>.
@@ -1667,13 +1806,16 @@ AND 2 1
 B2 is the left operand, and B1 is the right operand. This operation should assign the result of B2^B1 to B2.
 
 ### Constraints
-* 1 <= N <= 1000
-* 1 <= M <= 10000
+
+- 1 <= N <= 1000
+- 1 <= M <= 10000
 
 ### Output Format
+
 After each operation, print the respective number of set bits in BitSet B1 and BitSet B2 as 2 space-separated integers on a new line.
 
 ### Sample Input
+
 ```terminal
 5 4
 AND 1 2
@@ -1683,6 +1825,7 @@ OR 2 1
 ```
 
 ### Sample Output
+
 ```terminal
 0 0
 1 0
@@ -1691,6 +1834,7 @@ OR 2 1
 ```
 
 ### Code
+
 ```java
 import java.io.*;
 import java.util.*;
@@ -1755,14 +1899,15 @@ public class Solution {
 ```
 
 ## Java Priority Queue
+
 In computer science, a priority queue is an abstract data type which is like a regular queue, but where additionally each element has a "priority" associated with it. In a priority queue, an element with high priority is served before an element with low priority.
 
 In this problem we will test your knowledge on Java Priority Queue.
 
 There are a number of student in a school who wait to be served. Two types of events. ENTER ans SERVED, va take place, which are described below.
 
-* ENTER: A student with some priority enters the queue to be served
-* SERVED: The student with the highest priority is served (removed) from the queue
+- ENTER: A student with some priority enters the queue to be served
+- SERVED: The student with the highest priority is served (removed) from the queue
 
 A uniqued id is assigned to each student entering the queue. The queue serves the students based on the following criteria (priority criteria):
 
@@ -1770,23 +1915,25 @@ A uniqued id is assigned to each student entering the queue. The queue serves th
 2. Any student having the same CGPA will be served by name in ascending case-sensitive alphabetical order.
 3. Any students having the same CGPA and name will be served in ascending order of the id.
 
-* The student class shouls implement:
-    * The constructor Student(int id, String name, double cgpa)
-    * The method int getId to return the id of the student
-    * The method String getName() to return the name of the student
-    * The method double getCGPA() to return the CGPA of the student
+- The student class shouls implement:
+  - The constructor Student(int id, String name, double cgpa)
+  - The method int getId to return the id of the student
+  - The method String getName() to return the name of the student
+  - The method double getCGPA() to return the CGPA of the student
 
-* The Priorities class should implement the method List<Student> getStudents(List<String> events) to process all the given events and return all the students yet to be served in the priority order.
+- The Priorities class should implement the method List<Student> getStudents(List<String> events) to process all the given events and return all the students yet to be served in the priority order.
 
 ### Input Format
+
 The first line contains an integer _n_, describing the total number of events. Each of the _n_ subsequents lines will be og the folliwing two forms:
 
-* ENTER name CGPA id: The student to be inserted into the priority queue
-* SERVED: The highest priority student in the queue was served
+- ENTER name CGPA id: The student to be inserted into the priority queue
+- SERVED: The highest priority student in the queue was served
 
 The locked stub code in the editor reads the input are tests the correctness of the Student and Priorities classes implementation.
 
 ### Constraints
+
 ```terminal
 2 <= n <= 1000
 0 <= CGPA <= 4.00
@@ -1795,9 +1942,11 @@ The locked stub code in the editor reads the input are tests the correctness of 
 ```
 
 ### Output Format
+
 The locked stub code prints the names of the students yet to be served in the priority order, if there are no such studentm then the code prints EMPTY
 
 ### Sample Input
+
 ```terminal
 12
 ENTER John 3.75 50
@@ -1815,6 +1964,7 @@ SERVED
 ```
 
 ### Sample Output
+
 ```terminal
 Dan
 Ashley
@@ -1823,6 +1973,7 @@ Maria
 ```
 
 ### Code
+
 ```java
 import java.util.ArrayList;
 import java.util.List;
@@ -1935,6 +2086,7 @@ public class Solution {
 ```
 
 ## Java String Introduction
+
 A string es traditionally a sequence of character, either as a literal constant or as some kind of variable
 
 This exercise is to test your understanding of Java Strings. A sample String declaration:
@@ -1946,23 +2098,28 @@ String myString = "Hello World!";
 The elements od a String are called characters. The number of characters in a String is called the length, and it can be retrived with the String.length() method.
 
 Given two strings of lowercase English letters A and B. perform the following operations:
+
 1. Sum the lenghts of A and B.
 2. Determine if A is lexicographically larger than B (i..e.: does B come before A in dictionary?)
 3. Capitalize the first letter in A and B and print them on a single line, separated by a space.
 
 ### Input Format
+
 The first line contains a string A The second line constains another string B. The strings are comprised of only lowecase English letters.
 
 ### Output Format
-There are three lines of output: For the first line, sum the lengths of A and B  For the second line, write Yes if A is lexicographically greater than B Otherwise print No instead. For the third line, capitalize the first letter in both A and B and print them on a single line, separated by a space.
+
+There are three lines of output: For the first line, sum the lengths of A and B For the second line, write Yes if A is lexicographically greater than B Otherwise print No instead. For the third line, capitalize the first letter in both A and B and print them on a single line, separated by a space.
 
 ### Sample Input O
+
 ```terminal
 hello
 java
 ```
 
 ### Sample Output 0
+
 ```terminal
 9
 No
@@ -1970,11 +2127,13 @@ Hello Java
 ```
 
 ### Explanation 0
+
 String A is "hello" and B is "java". A has a length of 5, and B has a length of 4; the sum of their lengths is 9.
 When sorted alphabetically/lexicographically, "hello" precedes "java"; therefore, A is not greater than B and the answer is No.
 When you capitalize the first letter of both A and B and then print them separated by a space, you get "Hello Java".
 
 ### Code
+
 ```java
 import java.io.*;
 import java.util.*;
@@ -2010,31 +2169,38 @@ public class Solution {
 ```
 
 ## Java Substring
+
 Given a string s, and two indices, start and end, print a substring consisting of all characters in the inclusive range from start to end-1. You'll find ths String class substring method helpful in completing this challenge.
 
 ## Input Format
+
 The first line contains a single string denoting s. The second line contains two space-separated integers denoting the respective values of start and end.
 
 ## Constraints
-* 1 <= |s| <= 100
-* 0 <= start <= end <= n
-* String s consists of English alphabetic letters (i.e. [a - zA - Z]) only
+
+- 1 <= |s| <= 100
+- 0 <= start <= end <= n
+- String s consists of English alphabetic letters (i.e. [a - zA - Z]) only
 
 ## Output Format
+
 Print tge substring in the inclusive range from start to end - 1
 
 ## Sample Input
+
 ```terminal
 Helloworld
 3  7
 ```
 
 ## Sample Output
+
 ```terminal
 lowo
 ```
 
 ## Code
+
 ```java
 import java.io.*;
 import java.util.*;
@@ -2062,6 +2228,7 @@ public class Solution {
 ## Java Substring Comparisons
 
 ### Code
+
 ```java
 import java.util.Scanner;
 
@@ -2106,23 +2273,28 @@ public class Solution {
 ```
 
 ## Java String Reverse
+
 A palindrome is a word, phrase, number, or other sequence of character which reads the same backwards of forward.
 Given a string A, print Yes if it is a palindrome, print no otherwise
 
 ### Constraints
-* A will consist at most 50 lower case english letters.
+
+- A will consist at most 50 lower case english letters.
 
 ### Sample Input
+
 ```terminal
 madam
 ```
 
 ### Sample Output
+
 ```terminal
 Yes
 ```
 
 ### Code
+
 ```java
 import java.io.*;
 import java.util.*;

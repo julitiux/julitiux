@@ -2337,3 +2337,38 @@ public class Main {
   }
 }
 ```
+
+### output
+
+```terminal
+Realmente iguales
+```
+
+### What code should you enter in the space marked //TODO, so that the ouput of this
+
+```java
+class Mitad {
+  public int calculaMitad(int n1, int n2) {
+    return (n1 + n2)/2;
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+
+    int n1 = 22, n2 = 2, n3;
+
+    Mitad m = new Mitad();
+    n3 = m.calculaMitad(n1, n2);
+
+    System.out.println(n3);
+  }
+}
+```
+
+### output
+
+```terminal
+Mitad m = new Mitad();
+n3 = m.calculaMitad(n1, n2);
+```

@@ -2348,18 +2348,17 @@ Realmente iguales
 
 ```java
 class Mitad {
-  public int calculaMitad(int n1, int n2) {
-    return (n1 + n2)/2;
+  public int calculaMitad(int a, int b) {
+    return (a + b) / 2;
   }
 }
 
-public class Main {
+public class Calcula extends Mitad {
   public static void main(String[] args) {
+    int n1 = 22, n2 = 2;
 
-    int n1 = 22, n2 = 2, n3;
-
-    Mitad m = new Mitad();
-    n3 = m.calculaMitad(n1, n2);
+    Mitad m1 = new Calcula();
+    int n3  = m1.calculaMitad(n1, n2);
 
     System.out.println(n3);
   }
@@ -2369,6 +2368,6 @@ public class Main {
 ### output
 
 ```terminal
-Mitad m = new Mitad();
-n3 = m.calculaMitad(n1, n2);
+Mitad m1 = new Calcula();
+int n3 = m1.calculaMitad(n1, n2);
 ```
